@@ -255,7 +255,10 @@ if (activateState != ActivateState.DEACTIVATE)
 	else
 	{
 		if (vState == VerticalState.V_MOVE_FALLING)
-			vspd += grav;
+		{
+			if (vspd < maxGrav)
+				vspd += grav;
+		}
 		else
 		{
 			if (vState == VerticalState.V_ON_GROUND)

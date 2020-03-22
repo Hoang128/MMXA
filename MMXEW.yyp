@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "0b2bf3a6-dc7a-40dd-aed6-88f72ad7769f",
+            "Value": {
+                "id": "7dc05bae-9014-4cd1-b306-fe0bb172e98e",
+                "resourcePath": "shaders\\shd_pal_swapper\\shd_pal_swapper.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "0b5e404b-a646-49de-bf36-ae7ca7fd340f",
             "Value": {
                 "id": "a86a1e0d-2308-4b44-84d0-d10ce44b6ef5",
@@ -91,6 +99,14 @@
             "Value": {
                 "id": "4944a4be-53dc-4b66-be0f-38e8830c2dd7",
                 "resourcePath": "scripts\\scr_InitSpritePlayerHFormBase\\scr_InitSpritePlayerHFormBase.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "0d069b93-fa38-4104-be09-e62014bf290b",
+            "Value": {
+                "id": "573d20bc-1ff8-4519-9bce-c2241ef6b619",
+                "resourcePath": "scripts\\scr_PalSwapReset\\scr_PalSwapReset.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -252,6 +268,14 @@
                 "id": "b5f9a8a9-3772-4911-9737-e59a322696c9",
                 "resourcePath": "views\\582dafb6-fb42-4250-a860-2f454c591e8d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5921e6d7-32dd-4709-847d-725d982b7456",
+            "Value": {
+                "id": "b14760ef-d57f-4a29-a250-1de1c241989e",
+                "resourcePath": "scripts\\scr_PalSwapInitSystem\\scr_PalSwapInitSystem.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -439,6 +463,14 @@
             }
         },
         {
+            "Key": "95bd14cc-5023-4b88-8a91-2b4e24596c34",
+            "Value": {
+                "id": "647fcc7f-6f65-4ecf-9d99-c74ec81dd0e7",
+                "resourcePath": "views\\95bd14cc-5023-4b88-8a91-2b4e24596c34.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "96b38a97-c912-4078-9b42-e3da9a3e7077",
             "Value": {
                 "id": "364e7bac-9195-4f51-90ad-a6b58f1e8994",
@@ -519,6 +551,14 @@
             }
         },
         {
+            "Key": "b7d0e6b2-03f3-4860-97dd-a63104070941",
+            "Value": {
+                "id": "c4a7c741-3b92-4ebd-aed2-a8205ad4de18",
+                "resourcePath": "scripts\\scr_PalSwapSet\\scr_PalSwapSet.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b98093df-c5ec-4842-9317-ad50798e196f",
             "Value": {
                 "id": "97b710f3-53b0-4980-8cea-c583a3e29c3f",
@@ -595,6 +635,14 @@
             "Value": {
                 "id": "39245310-f004-46ba-a985-c672daf23192",
                 "resourcePath": "sprites\\spr_slopeR2\\spr_slopeR2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cc6367ee-4f95-427c-8671-3322453ed0ee",
+            "Value": {
+                "id": "8905e8cb-d4a8-469d-86a2-c9360cd186ff",
+                "resourcePath": "sprites\\spr_PalX\\spr_PalX.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -764,7 +812,10 @@
         "ce7ad6de-7731-482d-abef-afcbc40c78f6",
         "0c6ffadf-9bb7-4fab-a723-23218334728c",
         "bde8392f-6330-47e0-a68b-0e2e6195c91a",
-        "9a64ac67-4b58-4171-85d8-07252e052eea"
+        "9a64ac67-4b58-4171-85d8-07252e052eea",
+        "0d069b93-fa38-4104-be09-e62014bf290b",
+        "b7d0e6b2-03f3-4860-97dd-a63104070941",
+        "5921e6d7-32dd-4709-847d-725d982b7456"
     ],
     "tutorial": ""
 }
