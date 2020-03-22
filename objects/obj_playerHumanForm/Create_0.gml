@@ -5,7 +5,8 @@ event_inherited();
 
 //Initialize Parameter
 runSpd = 2;
-dashSpd = 5;
+dashSpdPhase1 = 2;
+dashSpdPhase2 = 5;
 maxDashTime = 30;
 jumpSpd = 7;
 grav = 0.3;
@@ -71,9 +72,11 @@ vState = VerticalState.V_MOVE_FALLING;
 //Inside Variable
 hspd = 0;
 vspd = 0;
-canAirDash = 1;
 hDir = 1;
+canAirDash = 1;
+dashPhase = 0;
 dashTime = 0;
+dashSpd = 0;
 
 //Initialize sprite
 sprStand = noone;

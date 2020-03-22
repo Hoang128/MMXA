@@ -415,6 +415,14 @@
             }
         },
         {
+            "Key": "85361aab-db1a-4204-8ff7-25c780913abc",
+            "Value": {
+                "id": "ed540fed-d04d-49b3-b26b-71f62e247cfe",
+                "resourcePath": "sprites\\sprite24\\sprite24.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "88c79835-749c-443e-b786-a803897fcbb5",
             "Value": {
                 "id": "c64a6262-3cf3-454f-a96c-7f42dea6f620",
@@ -716,6 +724,14 @@
                 "id": "9ebf6bd3-58be-4dc0-9581-5bbdd1987094",
                 "resourcePath": "sprites\\spr_slopeL1\\spr_slopeL1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e67b0d94-976c-4a8b-a8e3-2d9715e1434f",
+            "Value": {
+                "id": "1c9598b9-5c9e-4661-81a0-2062fd3a02d8",
+                "resourcePath": "objects\\obj_ShadowEffect\\obj_ShadowEffect.yy",
+                "resourceType": "GMObject"
             }
         },
         {

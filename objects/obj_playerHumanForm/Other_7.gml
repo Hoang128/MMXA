@@ -31,6 +31,7 @@ if (sprite_index == sprLand)
 
 if (sprite_index == sprDash1)
 {
+	dashPhase = 2;
 	sprite_index = sprDash2;
 	image_index = 0;
 }

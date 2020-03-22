@@ -6,7 +6,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	#region
 	if (activateState == ActivateState.ACTIVATE)
 	{
-		//Running
+		//Running----------------------------------------------------------------------------------------------
 		#region
 		var hMoveL = keyboard_check(global.keyLeft);
 		var hMoveR = keyboard_check(global.keyRight);
@@ -21,7 +21,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				if (!place_meeting(x + hDir, y, obj_block))
 				{
 					if (aState == ActionState.JUMPDASHING)
-						hspd = hMove * dashSpd;
+						hspd = hMove * dashSpdPhase2;
 					else
 					{
 						if (sprite_index == sprStand || sprite_index == sprLand || sprite_index == sprDash3)
@@ -91,7 +91,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		#endregion
 		
-		//Dashing
+		//Dashing----------------------------------------------------------------------------------------------
 		#region
 		//Start dash
 		if (keyboard_check_pressed(global.keyDash) && (!place_meeting(x + hDir, y, obj_block)))
@@ -107,8 +107,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							sprite_index = sprDash1;
 							image_index = 1;
 							
+							dashPhase = 1;
 							dashTime = maxDashTime;
-							hspd = dashSpd * hDir;
 							vspd = 0;
 							vState = VerticalState.V_MOVE_NONE;
 							hState = HorizontalState.H_MOVE_FORWARD;
@@ -121,8 +121,8 @@ if (activateState != ActivateState.DEACTIVATE)
 						sprite_index = sprDash1;
 						image_index = 0;
 						
+						dashPhase = 1;
 						dashTime = maxDashTime;
-						hspd = dashSpd * hDir;
 						hState = HorizontalState.H_MOVE_FORWARD;
 						aState = ActionState.DASHING;
 					}
@@ -133,7 +133,16 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Dash time decrease
 		if (aState == ActionState.DASHING)
 		{
+			hspd = dashSpd * hDir;
 			if (dashTime > 0) dashTime--;
+		}
+		
+		//Dash phase speed
+		switch dashPhase
+		{
+			case 1: dashSpd = dashSpdPhase1; break;
+			case 2: dashSpd = dashSpdPhase2; break;
+			default: dashSpd = 0; break;
 		}
 		
 		//End dash
@@ -147,12 +156,15 @@ if (activateState != ActivateState.DEACTIVATE)
 					sprite_index = sprJump3;
 					image_index = 0;
 					
+					dashPhase = 0;
 					vState = VerticalState.V_MOVE_FALLING;
 				}
 				else
 				{
 					sprite_index = sprDash3;
 					image_index = 0;
+					
+					dashPhase = 0;
 				}
 				aState = ActionState.IDLE;
 				hState = HorizontalState.H_MOVE_NONE;
@@ -160,7 +172,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		#endregion
 		
-		//Normal jumping
+		//Normal jumping----------------------------------------------------------------------------------------------
 		#region
 		//Start jump
 		if (keyboard_check_pressed(global.keyJump))
@@ -172,7 +184,9 @@ if (activateState != ActivateState.DEACTIVATE)
 				
 				vspd -= jumpSpd;
 				if (keyboard_check(global.keyDash))
+				{
 					aState = ActionState.JUMPDASHING;
+				}
 				else
 					aState = ActionState.IDLE;
 				vState = VerticalState.V_MOVE_FALLING;
@@ -246,6 +260,11 @@ if (activateState != ActivateState.DEACTIVATE)
 			vState = VerticalState.V_ON_GROUND;
 			if (aState == ActionState.JUMPDASHING)
 			{
+				if (dashPhase > 0)
+				{
+					dashSpd = 0;
+					dashPhase = 0;
+				}
 				aState = ActionState.IDLE;
 			}
 			if (!canAirDash)
@@ -257,7 +276,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (vState == VerticalState.V_MOVE_FALLING)
 		{
 			if (vspd < maxGrav)
-				vspd += grav;
+				vspd += grav * global.deltaTime;
 		}
 		else
 		{

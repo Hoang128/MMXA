@@ -11,8 +11,8 @@ switch argument0
 			case sprRunEnd: image_speed = 0.3; break;
 			case sprLand: image_speed = 0.5; break;
 			case sprDash1: image_speed = 0.5; break;
-			case sprDash2:
-			case sprDash3: image_speed = 0.6; break;
+			case sprDash2: image_speed = 0.6; break;
+			case sprDash3: image_speed = 0.4; break;
 			case sprJump1:
 			case sprJump3: image_speed = 0.2; break;
 			case sprJump2: 
