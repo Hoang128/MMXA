@@ -75,6 +75,7 @@ canAirDash = 1;
 hDir = 1;
 dashTime = 0;
 
+//Initialize sprite
 sprStand = noone;
 sprDying = noone;
 sprLand = noone;

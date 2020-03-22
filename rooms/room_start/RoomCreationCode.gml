@@ -66,3 +66,6 @@ for(i = 0; i <=4; i++)
 global.zCore[1] = ItemState.USING;
 global.zForm[1] = ItemState.USING;
 global.zSaber[1] = ItemState.USING;
+
+//Create Manager Object
+instance_create_depth(64, 96, -1000000, obj_gameManager);

@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
+//Initialize sprite
+
 scr_InitSpritePlayerHFormBase(obj_playerX);
 
 //Debug
