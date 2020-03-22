@@ -38,7 +38,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if (vState == VerticalState.V_ON_GROUND)
 					{
-						if (sprite_index == sprRun)
+						if (sprite_index == sprRun || sprite_index == sprRunStart)
 						{
 							sprite_index = sprRunEnd;
 							image_index = 0;
@@ -78,7 +78,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				if(aState != ActionState.DASHING)
 				{
-					if (sprite_index == sprRun)
+					if (sprite_index == sprRun || sprite_index == sprRunStart)
 					{
 						sprite_index = sprRunEnd;
 						image_index = 0;
