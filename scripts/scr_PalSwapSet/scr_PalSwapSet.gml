@@ -14,7 +14,7 @@ if(!argument[2])
     var UVs = sprite_get_uvs(_pal_sprite, 0);
     
     texture_set_stage(Pal_Texture, tex);
-    gpu_set_texfilter_ext(Pal_Texture, 1)
+    gpu_set_texfilter_ext(Pal_Texture, 0);
     
     var texel_x = texture_get_texel_width(tex);
     var texel_y = texture_get_texel_height(tex);
@@ -30,7 +30,7 @@ else
     var tex = surface_get_texture(_pal_sprite);
     
     texture_set_stage(Pal_Texture, tex);
-    gpu_set_texfilter_ext(Pal_Texture, 1)
+    gpu_set_texfilter_ext(Pal_Texture, 0);
     
     var texel_x = texture_get_texel_width(tex);
     var texel_y = texture_get_texel_height(tex);

@@ -47,6 +47,23 @@ if (activateState != ActivateState.DEACTIVATE)
 						hspd = 0;
 						hState = HorizontalState.H_MOVE_NONE;
 					}
+					else
+					{
+						if(weight != WeighType.MASSIVE)
+						{
+							if (atkState < AttackState.A_STRICT_ATTACK)
+							{
+								if ((aState != ActionState.SLIDING) && (canSlide))
+								{
+									sprite_index = sprSlide1;
+									image_index = 0;
+										
+									vState = VerticalState.V_MOVE_DOWN;
+									aState = ActionState.SLIDING;
+								}
+							}
+						}
+					}
 				}
 			}
 			else
@@ -86,6 +103,20 @@ if (activateState != ActivateState.DEACTIVATE)
 					
 					hspd = 0;
 					hState = HorizontalState.H_MOVE_NONE;
+				}
+			}
+			
+			//Stop slide
+			else
+			{
+				if (aState == ActionState.SLIDING)
+				{
+					sprite_index = sprJump3;
+					image_index = 0;
+
+					vspd = slideSpd / 2;
+					vState = VerticalState.V_MOVE_FALLING;
+					aState = ActionState.IDLE;
 				}
 			}
 		}
@@ -257,6 +288,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			sprite_index = sprLand;
 			image_index = 0;
 			
+			canSlide = 0;
 			vState = VerticalState.V_ON_GROUND;
 			if (aState == ActionState.JUMPDASHING)
 			{
@@ -275,18 +307,39 @@ if (activateState != ActivateState.DEACTIVATE)
 	{
 		if (vState == VerticalState.V_MOVE_FALLING)
 		{
+			
+			if (place_meeting(x, y + minSlideHeigh, obj_block)) canSlide = 0;
+			else
+			{
+				if ((!canSlide) && (vspd >= 0)) canSlide = 1;
+			}
 			if (vspd < maxGrav)
 				vspd += grav * global.deltaTime;
 		}
-		else
+		if (vState == VerticalState.V_ON_GROUND)
 		{
-			if (vState == VerticalState.V_ON_GROUND)
-			{
-				sprite_index = sprJump3;
-				image_index = 0;
+			sprite_index = sprJump3;
+			image_index = 0;
 			    
-				aState = ActionState.IDLE;
-				vState = VerticalState.V_MOVE_FALLING;
+			aState = ActionState.IDLE;
+			vState = VerticalState.V_MOVE_FALLING;
+		}
+		if (vState == VerticalState.V_MOVE_DOWN || vState == VerticalState.V_MOVE_UP)
+		{
+			if (aState == ActionState.SLIDING)
+			{
+				vspd = slideSpd;
+				
+				if ((place_meeting(x, y + minSlideHeigh, obj_block)) || (!place_meeting(x + hDir, y, obj_block)))
+				{
+					sprite_index = sprJump3;
+					image_index = 0;
+					
+					canSlide = 0;
+					vspd = slideSpd / 2;
+					aState = ActionState.IDLE;
+					vState = VerticalState.V_MOVE_FALLING;
+				}
 			}
 		}
 	}

@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "018fc119-e3a2-492d-9872-45555aa174fd",
+            "Value": {
+                "id": "0cf44a25-8911-44b8-891a-b21eb64208ec",
+                "resourcePath": "sprites\\spr_XSlide1\\spr_XSlide1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "01e4f990-a8ef-429d-8ddf-d541f29d1401",
             "Value": {
                 "id": "3ec54231-a5c8-466d-9983-63c6babe9cf3",
@@ -108,6 +116,14 @@
                 "id": "573d20bc-1ff8-4519-9bce-c2241ef6b619",
                 "resourcePath": "scripts\\scr_PalSwapReset\\scr_PalSwapReset.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "0d37031a-ac68-498d-b3a1-65c49034f7d5",
+            "Value": {
+                "id": "6b96e159-50b9-4a78-85d3-4a4f9cf216e3",
+                "resourcePath": "sprites\\spr_XSlide2\\spr_XSlide2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -412,14 +428,6 @@
                 "id": "1c526115-2607-415d-8ab6-d295e19177fb",
                 "resourcePath": "objects\\obj_gameManager\\obj_gameManager.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "85361aab-db1a-4204-8ff7-25c780913abc",
-            "Value": {
-                "id": "ed540fed-d04d-49b3-b26b-71f62e247cfe",
-                "resourcePath": "sprites\\sprite24\\sprite24.yy",
-                "resourceType": "GMSprite"
             }
         },
         {

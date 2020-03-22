@@ -95,6 +95,7 @@ else{
 				case ActionState.CLIMBING: str_aState = "CLIMBING" break;
 				case ActionState.SP_MOVE: str_aState = "SPECIAL MOVE" break;
 				case ActionState.JUMPDASHING: str_aState = "JUMP DASHING" break;
+				case ActionState.SLIDING: str_aState = "SLIDING" break;
 				default: str_aState = "NOT HAVE STATE ?"; break;
 			}
 
@@ -179,15 +180,15 @@ else{
 			yPlace += lineSpace;
 			
 			draw_set_color(debugTextColorB);
-			draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Dash phase = " + string(obj_playerHumanForm.dashPhase)));
+			draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Can slide = " + string(obj_playerHumanForm.canSlide)));
 			draw_set_color(debugTextColorF);
-			draw_text(xPlace,yPlace,string_hash_to_newline("Dash phase = " + string(obj_playerHumanForm.dashPhase)));
+			draw_text(xPlace,yPlace,string_hash_to_newline("Can slide = " + string(obj_playerHumanForm.canSlide)));
 			yPlace += lineSpace;
 			
 			draw_set_color(debugTextColorB);
-			draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Dash speed = " + string(obj_playerHumanForm.dashSpd)));
+			draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Slide speed = " + string(obj_playerHumanForm.slideSpd)));
 			draw_set_color(debugTextColorF);
-			draw_text(xPlace,yPlace,string_hash_to_newline("Dash speed = " + string(obj_playerHumanForm.dashSpd)));
+			draw_text(xPlace,yPlace,string_hash_to_newline("Slide speed = " + string(obj_playerHumanForm.slideSpd)));
 			yPlace += lineSpace;
 		}
 		#endregion

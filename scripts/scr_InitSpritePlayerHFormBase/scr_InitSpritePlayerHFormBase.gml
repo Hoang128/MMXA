@@ -16,6 +16,8 @@ switch argument0
 		sprJump2 = spr_XJump2;
 		sprJump3 = spr_XJump3;
 		sprJump4 = spr_XJump4;
+		sprSlide1 = spr_XSlide1;
+		sprSlide2 = spr_XSlide2;
 		#endregion
 	}
 	break;

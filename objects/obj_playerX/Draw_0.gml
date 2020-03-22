@@ -1,7 +1,7 @@
 /// @description Draw with palette
 
-scr_PalSwapSet(myPal,1,false);
+scr_PalSwapSet(myPal, 2, false);
 
-event_inherited();
+draw_self();
 
 scr_PalSwapReset();

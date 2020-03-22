@@ -11,6 +11,8 @@ maxDashTime = 30;
 jumpSpd = 7;
 grav = 0.3;
 maxGrav = 6;
+minSlideHeigh = 12;
+slideSpd = 2;
 
 //Initialize State
 enum ActionState
@@ -77,6 +79,7 @@ canAirDash = 1;
 dashPhase = 0;
 dashTime = 0;
 dashSpd = 0;
+canSlide = 0;
 
 //Initialize sprite
 sprStand = noone;
@@ -92,3 +95,5 @@ sprJump1 = noone;
 sprJump2 = noone;
 sprJump3 = noone;
 sprJump4 = noone;
+sprSlide1 = noone;
+sprSlide2 = noone;
