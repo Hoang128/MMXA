@@ -61,6 +61,11 @@ if instance_exists(obj_playerHumanForm)
 		default: str_vState = "NOT HAVE STATE ?"; break;
 	}
 	draw_set_color(c_black);
+	draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Log player datas "));
+	draw_set_color(c_white);
+	draw_text(xPlace,yPlace,string_hash_to_newline("Log player datas "));
+	yPlace += lineSpace;
+	draw_set_color(c_black);
 	draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Char direction = " + string(obj_playerHumanForm.hDir)));
 	draw_set_color(c_white);
 	draw_text(xPlace,yPlace,string_hash_to_newline("Char direction = " + string(obj_playerHumanForm.hDir)));
