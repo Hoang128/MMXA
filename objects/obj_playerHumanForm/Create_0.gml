@@ -8,11 +8,12 @@ runSpd = 2;
 dashSpdPhase1 = 2;
 dashSpdPhase2 = 5;
 maxDashTime = 30;
-jumpSpd = 7;
+jumpSpd = 6;
 grav = 0.3;
 maxGrav = 6;
 minSlideHeigh = 12;
 slideSpd = 2;
+shadowCreateTimeMax = 2;
 
 //Initialize State
 enum ActionState
@@ -69,6 +70,7 @@ weight = WeighType.MEDIUM;
 
 //For test
 activateState = ActivateState.ACTIVATE;
+aState = ActionState.IDLE;
 vState = VerticalState.V_MOVE_FALLING;
 
 //Inside Variable
@@ -80,6 +82,7 @@ dashPhase = 0;
 dashTime = 0;
 dashSpd = 0;
 canSlide = 0;
+shadowCreateTime = shadowCreateTimeMax;
 
 //Initialize sprite
 sprStand = noone;

@@ -1,4 +1,4 @@
-/// @description Step
+/// @description Move
 
 if (activateState != ActivateState.DEACTIVATE)
 {

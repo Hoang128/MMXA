@@ -1,6 +1,6 @@
 /// @description Draw with palette
 
-scr_PalSwapSet(myPal, 2, false);
+scr_PalSwapSet(myPal, 1, false);
 
 draw_self();
 

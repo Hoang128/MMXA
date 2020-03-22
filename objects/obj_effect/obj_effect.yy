@@ -1,10 +1,19 @@
 {
-    "id": "e67b0d94-976c-4a8b-a8e3-2d9715e1434f",
+    "id": "b879969a-7e4d-4329-b2a5-ada4daedac2e",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_ShadowEffect",
+    "name": "obj_effect",
     "eventList": [
-        
+        {
+            "id": "c6295fbb-84c9-4e36-a943-cc7568aca6a2",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "b879969a-7e4d-4329-b2a5-ada4daedac2e"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

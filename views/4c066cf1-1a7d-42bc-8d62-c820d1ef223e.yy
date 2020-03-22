@@ -4,7 +4,7 @@
     "mvc": "1.1",
     "name": "4c066cf1-1a7d-42bc-8d62-c820d1ef223e",
     "children": [
-        "cc6367ee-4f95-427c-8671-3322453ed0ee"
+        "973a1769-b0b3-4a64-839f-f0899106c81d"
     ],
     "filterType": "GMSprite",
     "folderName": "Unique",
