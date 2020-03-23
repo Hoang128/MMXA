@@ -96,6 +96,8 @@ else{
 				case ActionState.SP_MOVE: str_aState = "SPECIAL MOVE" break;
 				case ActionState.JUMPDASHING: str_aState = "JUMP DASHING" break;
 				case ActionState.SLIDING: str_aState = "SLIDING" break;
+				case ActionState.WALLKICK: str_aState = "WALL KICK" break;
+				case ActionState.DASHKICK: str_aState = "DASH KICK" break;
 				default: str_aState = "NOT HAVE STATE ?"; break;
 			}
 
@@ -112,7 +114,7 @@ else{
 			{
 				case HorizontalState.H_MOVE_NONE: str_hState = "NONE"; break;
 				case HorizontalState.H_MOVE_FORWARD: str_hState = "FOWARD"; break;
-				case HorizontalState.H_MOVE_BACKWARD: str_hState = "BACKWARD"; break;
+				case HorizontalState.H_MOVE_PASSIVE: str_hState = "PASSIVE"; break;
 				default: str_hState = "NOT HAVE STATE ?"; break;
 			}
 

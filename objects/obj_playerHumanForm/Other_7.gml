@@ -58,3 +58,8 @@ if (sprite_index == sprDuck3)
 	sprite_index = sprStand;
 	image_index = 0;
 }
+
+if (sprite_index == sprWallKick)
+{
+	image_index = 2;
+}

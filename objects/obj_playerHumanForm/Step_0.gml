@@ -23,19 +23,27 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if (!place_meeting(x + hDir, y, obj_block))
 					{
-						//Run
+						//Jump dash
 						if (aState == ActionState.JUMPDASHING)
-							hspd = hMove * dashSpdPhase2;
+						{
+							hspd = hDir * dashSpdPhase2;
+							hState = HorizontalState.H_MOVE_FORWARD;
+						}
+						
+						//Run
 						else
 						{
-							if (sprite_index == sprStand || sprite_index == sprLand || sprite_index == sprDash3)
+							if ((aState != ActionState.DASHKICK) && (aState != ActionState.WALLKICK))
 							{
-								sprite_index = sprRunStart;
-								image_index = 0;
+								if (sprite_index == sprStand || sprite_index == sprLand || sprite_index == sprDash3)
+								{
+									sprite_index = sprRunStart;
+									image_index = 0;
+								}
+								hspd = hDir * runSpd;
+								hState = HorizontalState.H_MOVE_FORWARD;
 							}
-							hspd = hMove * runSpd;
 						}
-						hState = HorizontalState.H_MOVE_FORWARD;
 					}
 					else
 					{
@@ -97,9 +105,9 @@ if (activateState != ActivateState.DEACTIVATE)
 		else
 		{
 			//Stop run
-			if(hState == HorizontalState.H_MOVE_FORWARD)
+			if (hState == HorizontalState.H_MOVE_FORWARD)
 			{
-				if(aState != ActionState.DASHING)
+				if (aState != ActionState.DASHING)
 				{
 					if (sprite_index == sprRun || sprite_index == sprRunStart)
 					{
@@ -255,12 +263,13 @@ if (activateState != ActivateState.DEACTIVATE)
 		
 		#endregion
 		
-		//Normal jumping---------------------------------------------------------------------------------------
+		//Default jumping---------------------------------------------------------------------------------------
 		#region
 		
 		//Start jump
 		if (keyboard_check_pressed(global.keyJump))
 		{
+			//Normal jump
 			if (vState == VerticalState.V_ON_GROUND)
 			{
 				sprite_index = sprJump1;
@@ -275,16 +284,53 @@ if (activateState != ActivateState.DEACTIVATE)
 					aState = ActionState.IDLE;
 				vState = VerticalState.V_MOVE_FALLING;
 			}
+			
+			//Wall kick
+			else
+			{
+				if ((aState == ActionState.SLIDING) || (place_meeting(x + hDir, y, obj_block) && canSlide))
+				{
+					//Dash kick
+					if ((aState != ActionState.DASHKICK) && keyboard_check(global.keyDash))
+					{
+						sprite_index = sprDashKick1;
+						image_index = 0;
+						
+						hspd = -hDir*hDashKickSpd;
+						vspd = -dashKickSpd;
+						dashKickTime = dashKickTimeMax;
+						canSlide = 0;
+						aState = ActionState.DASHKICK;
+					}
+					
+					//Wall kick
+					if ((aState != ActionState.WALLKICK) && !(keyboard_check(global.keyDash)))
+					{
+						sprite_index = sprWallKick;
+						image_index = 0;
+						
+						hspd = -hDir*hWallKickSpd;
+						vspd = -wallKickSpd;
+						wallKickTime = wallKickTimeMax;
+						canSlide = 0;
+						hState = HorizontalState.H_MOVE_PASSIVE;
+						vState = VerticalState.V_MOVE_UP;
+						aState = ActionState.WALLKICK;
+					}
+				}
+			}
 		}
 		
 		if (sprite_index == sprJump2 && vspd >= 0) 
 		{
+			if (aState == ActionState.WALLKICK)
+				aState = ActionState.IDLE;
 			sprite_index = sprJump3;
 			image_index = 0;
 		}
 		
 		//End jump
-		if (keyboard_check_released(global.keyJump))
+		if (keyboard_check_released(global.keyJump) && !(aState == ActionState.WALLKICK))
 		{
 			if (vState != VerticalState.V_ON_GROUND) 
 			{
@@ -306,7 +352,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	//Passive**************************************************************************************************
 	#region
 	
-	//Collision
+	//Collision------------------------------------------------------------------------------------------------
 	#region
 	//Horizontal
 	if (place_meeting(x + hspd, y, obj_block))
@@ -331,9 +377,9 @@ if (activateState != ActivateState.DEACTIVATE)
 	y += vspd * global.deltaTime;
 	#endregion
 	
-	//Gravity
+	//Gravity--------------------------------------------------------------------------------------------------
 	#region
-	if (place_meeting(x, y+1, obj_block))
+	if (place_meeting(x, y + 1, obj_block))
 	{
 		vspd = 0;
 		if (vState != VerticalState.V_ON_GROUND)
@@ -381,7 +427,10 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			if (aState == ActionState.SLIDING)
 			{
-				vspd = slideSpd;
+				if (sprite_index == sprSlide1)
+					vspd = 0;
+				if (sprite_index == sprSlide2)
+					vspd = slideSpd;
 				
 				if ((place_meeting(x, y + minSlideHeigh, obj_block)) || (!place_meeting(x + hDir, y, obj_block)))
 				{
@@ -396,6 +445,30 @@ if (activateState != ActivateState.DEACTIVATE)
 			}
 		}
 	}
+	#endregion
+	
+	//Wall kick------------------------------------------------------------------------------------------------
+	#region
+	
+	if (aState == ActionState.WALLKICK)
+	{
+		if (hState == HorizontalState.H_MOVE_PASSIVE)
+		{
+			if ((wallKickTime <= 0) || place_meeting(x, y - 1, obj_block))
+			{
+				sprite_index = sprJump2;
+				image_index = 0;
+			
+				hspd = 0;
+				canSlide = 1;
+				hState = HorizontalState.H_MOVE_NONE;
+				vState = VerticalState.V_MOVE_FALLING;
+				aState = ActionState.IDLE;
+			}
+			else if (wallKickTime > 0) wallKickTime -= global.deltaTime;
+		}
+	}
+	
 	#endregion
 	
 	#endregion

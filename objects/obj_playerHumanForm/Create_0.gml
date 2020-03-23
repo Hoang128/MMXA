@@ -4,15 +4,21 @@
 event_inherited();
 
 //Initialize Parameter
-runSpd = 2;
-dashSpdPhase1 = 2;
-dashSpdPhase2 = 5;
-maxDashTime = 30;
-jumpSpd = 6;
-grav = 0.3;
-maxGrav = 6;
-minSlideHeigh = 12;
-slideSpd = 2;
+runSpd = 2; //Run speed
+dashSpdPhase1 = 2; //Dash speed phase 1
+dashSpdPhase2 = 5; //Dash speed phase 2
+maxDashTime = 30; //Dash time
+jumpSpd = 6; //Jump speed
+grav = 0.3; //Gravity Accleration
+maxGrav = 6; //Max fall speed
+minSlideHeigh = 12; //minimum heigh from player to floor that player can slide
+slideSpd = 2; //Slide speed
+wallKickSpd = 4; //Wall kick heigh
+wallKickTimeMax = 6; //Wall kick time
+hWallKickSpd = 2; //Wall kick speed
+dashKickSpd = 6; //Dash kick heigh
+dashKickTimeMax = 6; //Dash kick time
+hDashKickSpd = 5; //Dash kick speed
 shadowCreateTimeMax = 2;
 
 //Initialize State
@@ -28,7 +34,9 @@ enum ActionState
 	CLIMBING,
 	SP_MOVE,
 	SLIDING,
-	DUCKING
+	DUCKING,
+	WALLKICK,
+	DASHKICK
 }
 
 enum VerticalState
@@ -44,7 +52,7 @@ enum HorizontalState
 {
 	H_MOVE_NONE,
 	H_MOVE_FORWARD,
-	H_MOVE_BACKWARD
+	H_MOVE_PASSIVE
 };
 
 enum AttackState
@@ -83,6 +91,8 @@ dashPhase = 0;
 dashTime = 0;
 dashSpd = 0;
 canSlide = 0;
+wallKickTime = 0;
+dashKickTime = 0;
 shadowCreateTime = shadowCreateTimeMax;
 
 //Initialize sprite
