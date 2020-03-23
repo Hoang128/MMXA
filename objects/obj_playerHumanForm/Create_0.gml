@@ -5,21 +5,23 @@ event_inherited();
 
 //Initialize Parameter
 runSpd = 2; //Run speed
-dashSpdPhase1 = 2; //Dash speed phase 1
-dashSpdPhase2 = 5; //Dash speed phase 2
+dashSpdPhase1 = 2; //Dash speed when start dash
+dashSpdPhase2 = 5; //Dash speed when dash
 maxDashTime = 30; //Dash time
 jumpSpd = 6; //Jump speed
 grav = 0.3; //Gravity Accleration
 maxGrav = 6; //Max fall speed
-minSlideHeigh = 12; //minimum heigh from player to floor that player can slide
+minSlideHeigh = 12; //Minimum heigh from player to floor that player can slide
+minWallKickRange = 4; //Minimum range from player to wall to perform wall/dash kick
 slideSpd = 2; //Slide speed
 wallKickSpd = 4; //Wall kick heigh
 wallKickTimeMax = 6; //Wall kick time
 hWallKickSpd = 2; //Wall kick speed
-dashKickSpd = 6; //Dash kick heigh
+dashKickSpd = 3.6; //Dash kick heigh
 dashKickTimeMax = 6; //Dash kick time
-hDashKickSpd = 5; //Dash kick speed
-shadowCreateTimeMax = 2;
+dashKickFlyTimeMax = 18;
+hDashKickSpd = 3.6; //Dash kick speed
+shadowCreateTimeMax = 2; //Frame number between create shadow frame
 
 //Initialize State
 enum ActionState
@@ -41,11 +43,11 @@ enum ActionState
 
 enum VerticalState
 {
-	V_MOVE_FALLING,
-	V_MOVE_UP,
-	V_MOVE_DOWN,
-	V_MOVE_NONE,
-	V_ON_GROUND
+	V_MOVE_FALLING, //Affect by Gravity
+	V_MOVE_UP, //Move up, not affect by gravity
+	V_MOVE_DOWN, //Move down, not affect by gravity
+	V_MOVE_NONE, //Do not change y position
+	V_ON_GROUND //On ground
 };
 
 enum HorizontalState
@@ -93,6 +95,7 @@ dashSpd = 0;
 canSlide = 0;
 wallKickTime = 0;
 dashKickTime = 0;
+dashKickFlyTime = 0;
 shadowCreateTime = shadowCreateTimeMax;
 
 //Initialize sprite

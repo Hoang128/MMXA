@@ -63,3 +63,9 @@ if (sprite_index == sprWallKick)
 {
 	image_index = 2;
 }
+
+if (sprite_index == sprDashKick1)
+{
+	sprite_index = sprDashKick2;
+	image_index = 0;
+}

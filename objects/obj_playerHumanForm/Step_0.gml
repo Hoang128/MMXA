@@ -2,6 +2,185 @@
 
 if (activateState != ActivateState.DEACTIVATE)
 {
+	//Passive**************************************************************************************************
+	#region
+	
+	//Collision------------------------------------------------------------------------------------------------
+	#region
+	//Horizontal
+	if (place_meeting(x + hspd, y, obj_block))
+	{
+		while(!place_meeting(x + sign(hspd), y, obj_block))
+		{
+			x += sign(hspd);
+		}
+		hspd = 0;
+	}
+	x += hspd * global.deltaTime;
+	
+	//Vertical
+	if (place_meeting(x, y + vspd, obj_block))
+	{
+		while(!place_meeting(x, y + sign(vspd), obj_block))
+		{
+			y += sign(vspd);
+		}
+		vspd = 0;
+	}
+	y += vspd * global.deltaTime;
+	#endregion
+	
+	//Gravity--------------------------------------------------------------------------------------------------
+	#region
+	if (place_meeting(x, y + 1, obj_block))
+	{
+		vspd = 0;
+		if (vState != VerticalState.V_ON_GROUND)
+		{
+			sprite_index = sprLand;
+			image_index = 0;
+			
+			canSlide = 0;
+			if (aState == ActionState.JUMPDASHING)
+			{
+				if (dashPhase > 0)
+				{
+					dashSpd = 0;
+					dashPhase = 0;
+				}
+			}
+			if (!canAirDash)
+				canAirDash = 1;
+			vState = VerticalState.V_ON_GROUND;
+			aState = ActionState.IDLE;
+		}
+	}
+	else
+	{
+		if (vState == VerticalState.V_MOVE_FALLING)
+		{
+			
+			if (place_meeting(x, y + minSlideHeigh, obj_block)) canSlide = 0;
+			else
+			{
+				if ((!canSlide) && (vspd >= 0)) canSlide = 1;
+			}
+			if (vspd < maxGrav)
+				vspd += grav * global.deltaTime;
+		}
+		if (vState == VerticalState.V_ON_GROUND)
+		{
+			sprite_index = sprJump3;
+			image_index = 0;
+			    
+			aState = ActionState.IDLE;
+			vState = VerticalState.V_MOVE_FALLING;
+		}
+		if (vState == VerticalState.V_MOVE_DOWN || vState == VerticalState.V_MOVE_UP)
+		{
+			if (aState == ActionState.SLIDING)
+			{
+				if (sprite_index == sprSlide1)
+					vspd = 0;
+				if (sprite_index == sprSlide2)
+					vspd = slideSpd;
+				
+				if ((place_meeting(x, y + minSlideHeigh, obj_block)) || (!place_meeting(x + hDir * minWallKickRange, y, obj_block)))
+				{
+					sprite_index = sprJump3;
+					image_index = 0;
+					
+					canSlide = 0;
+					vspd = slideSpd / 2;
+					aState = ActionState.IDLE;
+					vState = VerticalState.V_MOVE_FALLING;
+				}
+			}
+		}
+	}
+	#endregion
+	
+	//Wall kick && Dash kick-----------------------------------------------------------------------------------
+	#region
+	
+	if (aState == ActionState.DASHKICK)
+	{
+		if (dashKickFlyTime <= 0)
+		{
+			sprite_index = sprJump3;
+			image_index = 0;
+			
+			hState = HorizontalState.H_MOVE_NONE;
+			vState = VerticalState.V_MOVE_FALLING;
+			aState = ActionState.JUMPDASHING;
+		}
+		else
+		{
+			dashKickFlyTime -= global.deltaTime;
+		}
+		
+		if (hState == HorizontalState.H_MOVE_PASSIVE)
+		{
+			if (place_meeting(x, y - 1, obj_block))
+			{
+				sprite_index = sprJump2;
+				image_index = 0;
+				
+				hState = HorizontalState.H_MOVE_NONE;
+				vState = VerticalState.V_MOVE_FALLING;
+				aState = ActionState.JUMPDASHING;
+			}
+			if (dashKickTime <= 0)
+			{
+				var hMoveL = keyboard_check(global.keyLeft);
+				var hMoveR = keyboard_check(global.keyRight);
+		
+				var hMove = hMoveR - hMoveL;
+				
+				if (hMove * hDir <= 0)
+				{
+					if (sprite_index != sprJump2)
+					{
+						sprite_index = sprJump2;
+						image_index = 0;
+					}
+				}
+				
+				hspd = 0;
+				canSlide = 1;
+				hState = HorizontalState.H_MOVE_NONE;
+			}
+			else 
+			{
+				hDir = sign(hspd);
+				dashKickTime -= global.deltaTime;
+			}
+		}
+	}
+	
+	if (aState == ActionState.WALLKICK)
+	{
+		if (hState == HorizontalState.H_MOVE_PASSIVE)
+		{
+			if ((wallKickTime <= 0) || place_meeting(x, y - 1, obj_block))
+			{
+				sprite_index = sprJump2;
+				image_index = 0;
+
+				hspd = 0;
+				canSlide = 1;
+				hState = HorizontalState.H_MOVE_NONE;
+				vState = VerticalState.V_MOVE_FALLING;
+			}
+			else if (wallKickTime > 0) wallKickTime -= global.deltaTime;
+		}
+	}
+	
+	#endregion
+
+
+
+	#endregion
 	//Active***************************************************************************************************
 	#region
 	if (activateState == ActivateState.ACTIVATE)
@@ -18,7 +197,6 @@ if (activateState != ActivateState.DEACTIVATE)
 			//Normal run
 			if((aState != ActionState.DASHING) && (aState != ActionState.CLIMBING))
 			{
-				hDir = hMove;
 				if (aState != ActionState.DUCKING)
 				{
 					if (!place_meeting(x + hDir, y, obj_block))
@@ -26,27 +204,50 @@ if (activateState != ActivateState.DEACTIVATE)
 						//Jump dash
 						if (aState == ActionState.JUMPDASHING)
 						{
+							hDir = hMove;
 							hspd = hDir * dashSpdPhase2;
 							hState = HorizontalState.H_MOVE_FORWARD;
+						}
+						
+						//Wall kick
+						else if (aState == ActionState.WALLKICK)
+						{
+							if (hState != HorizontalState.H_MOVE_PASSIVE)
+							{
+								hDir = hMove;
+								hspd = hDir * runSpd;
+								hState = HorizontalState.H_MOVE_FORWARD;
+							}
+						}
+						
+						//Dash kick
+						else if (aState == ActionState.DASHKICK)
+						{
+							if (hState != HorizontalState.H_MOVE_PASSIVE)
+							{	
+								hDir = hMove;
+								hspd = hDir * dashSpdPhase2;
+								hState = HorizontalState.H_MOVE_FORWARD;
+							}
 						}
 						
 						//Run
 						else
 						{
-							if ((aState != ActionState.DASHKICK) && (aState != ActionState.WALLKICK))
+							hDir = hMove;
+							if (sprite_index == sprStand || sprite_index == sprLand || sprite_index == sprDash3)
 							{
-								if (sprite_index == sprStand || sprite_index == sprLand || sprite_index == sprDash3)
-								{
-									sprite_index = sprRunStart;
-									image_index = 0;
-								}
-								hspd = hDir * runSpd;
-								hState = HorizontalState.H_MOVE_FORWARD;
+								sprite_index = sprRunStart;
+								image_index = 0;
 							}
+							hspd = hDir * runSpd;
+							hState = HorizontalState.H_MOVE_FORWARD;
 						}
 					}
 					else
 					{
+						hDir = hMove;
+						
 						//Stop run if see wall
 						if (vState == VerticalState.V_ON_GROUND)
 						{
@@ -71,6 +272,7 @@ if (activateState != ActivateState.DEACTIVATE)
 										sprite_index = sprSlide1;
 										image_index = 0;
 										
+										if (!canAirDash) canAirDash = 1;
 										vState = VerticalState.V_MOVE_DOWN;
 										aState = ActionState.SLIDING;
 									}
@@ -270,6 +472,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (keyboard_check_pressed(global.keyJump))
 		{
 			//Normal jump
+			#region
+			
 			if (vState == VerticalState.V_ON_GROUND)
 			{
 				sprite_index = sprJump1;
@@ -285,7 +489,11 @@ if (activateState != ActivateState.DEACTIVATE)
 				vState = VerticalState.V_MOVE_FALLING;
 			}
 			
+			#endregion
+			
 			//Wall kick
+			#region
+			
 			else
 			{
 				if ((aState == ActionState.SLIDING) || (place_meeting(x + hDir, y, obj_block) && canSlide))
@@ -296,10 +504,16 @@ if (activateState != ActivateState.DEACTIVATE)
 						sprite_index = sprDashKick1;
 						image_index = 0;
 						
+						hspd = 0;
+						vspd = 0;
 						hspd = -hDir*hDashKickSpd;
 						vspd = -dashKickSpd;
+						hDir = sign(hspd);
+						dashKickFlyTime = dashKickFlyTimeMax;
 						dashKickTime = dashKickTimeMax;
 						canSlide = 0;
+						hState = HorizontalState.H_MOVE_PASSIVE;
+						vState = VerticalState.V_MOVE_UP;
 						aState = ActionState.DASHKICK;
 					}
 					
@@ -319,6 +533,8 @@ if (activateState != ActivateState.DEACTIVATE)
 					}
 				}
 			}
+			
+			#endregion
 		}
 		
 		if (sprite_index == sprJump2 && vspd >= 0) 
@@ -349,127 +565,4 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	#endregion
 	
-	//Passive**************************************************************************************************
-	#region
-	
-	//Collision------------------------------------------------------------------------------------------------
-	#region
-	//Horizontal
-	if (place_meeting(x + hspd, y, obj_block))
-	{
-		while(!place_meeting(x + sign(hspd), y, obj_block))
-		{
-			x += sign(hspd);
-		}
-		hspd = 0;
-	}
-	x += hspd * global.deltaTime;
-	
-	//Vertical
-	if (place_meeting(x, y + vspd, obj_block))
-	{
-		while(!place_meeting(x, y + sign(vspd), obj_block))
-		{
-			y += sign(vspd);
-		}
-		vspd = 0;
-	}
-	y += vspd * global.deltaTime;
-	#endregion
-	
-	//Gravity--------------------------------------------------------------------------------------------------
-	#region
-	if (place_meeting(x, y + 1, obj_block))
-	{
-		vspd = 0;
-		if (vState != VerticalState.V_ON_GROUND)
-		{
-			sprite_index = sprLand;
-			image_index = 0;
-			
-			canSlide = 0;
-			if (aState == ActionState.JUMPDASHING)
-			{
-				if (dashPhase > 0)
-				{
-					dashSpd = 0;
-					dashPhase = 0;
-				}
-			}
-			if (!canAirDash)
-				canAirDash = 1;
-			vState = VerticalState.V_ON_GROUND;
-			aState = ActionState.IDLE;
-		}
-	}
-	else
-	{
-		if (vState == VerticalState.V_MOVE_FALLING)
-		{
-			
-			if (place_meeting(x, y + minSlideHeigh, obj_block)) canSlide = 0;
-			else
-			{
-				if ((!canSlide) && (vspd >= 0)) canSlide = 1;
-			}
-			if (vspd < maxGrav)
-				vspd += grav * global.deltaTime;
-		}
-		if (vState == VerticalState.V_ON_GROUND)
-		{
-			sprite_index = sprJump3;
-			image_index = 0;
-			    
-			aState = ActionState.IDLE;
-			vState = VerticalState.V_MOVE_FALLING;
-		}
-		if (vState == VerticalState.V_MOVE_DOWN || vState == VerticalState.V_MOVE_UP)
-		{
-			if (aState == ActionState.SLIDING)
-			{
-				if (sprite_index == sprSlide1)
-					vspd = 0;
-				if (sprite_index == sprSlide2)
-					vspd = slideSpd;
-				
-				if ((place_meeting(x, y + minSlideHeigh, obj_block)) || (!place_meeting(x + hDir, y, obj_block)))
-				{
-					sprite_index = sprJump3;
-					image_index = 0;
-					
-					canSlide = 0;
-					vspd = slideSpd / 2;
-					aState = ActionState.IDLE;
-					vState = VerticalState.V_MOVE_FALLING;
-				}
-			}
-		}
-	}
-	#endregion
-	
-	//Wall kick------------------------------------------------------------------------------------------------
-	#region
-	
-	if (aState == ActionState.WALLKICK)
-	{
-		if (hState == HorizontalState.H_MOVE_PASSIVE)
-		{
-			if ((wallKickTime <= 0) || place_meeting(x, y - 1, obj_block))
-			{
-				sprite_index = sprJump2;
-				image_index = 0;
-			
-				hspd = 0;
-				canSlide = 1;
-				hState = HorizontalState.H_MOVE_NONE;
-				vState = VerticalState.V_MOVE_FALLING;
-				aState = ActionState.IDLE;
-			}
-			else if (wallKickTime > 0) wallKickTime -= global.deltaTime;
-		}
-	}
-	
-	#endregion
-	
-	#endregion
 }

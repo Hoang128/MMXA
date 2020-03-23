@@ -6,7 +6,7 @@
 
 if (weight != WeighType.MASSIVE)
 {
-	if ((aState == ActionState.DASHING) || (aState == ActionState.JUMPDASHING))
+	if ((aState == ActionState.DASHING) || (aState == ActionState.JUMPDASHING) || (aState == ActionState.DASHKICK))
 	{
 		if (shadowCreateTime > 0) shadowCreateTime -= global.deltaTime;
 		else

@@ -18,6 +18,9 @@ switch argument0
 			case sprJump2: 
 			case sprJump4: image_speed = 1; break;
 			case sprSlide1: image_speed = 0.3; break;
+			case sprWallKick: image_speed = 0.5; break;
+			case sprDashKick1: image_speed = 0.3; break;
+			case sprDashKick2: image_speed = 0.6; break;
 			default: image_speed = 0.5; break;
 		}
 		image_speed *= global.deltaTime;
