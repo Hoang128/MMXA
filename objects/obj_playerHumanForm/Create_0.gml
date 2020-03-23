@@ -27,7 +27,8 @@ enum ActionState
 	DYING,
 	CLIMBING,
 	SP_MOVE,
-	SLIDING
+	SLIDING,
+	DUCKING
 }
 
 enum VerticalState
@@ -98,5 +99,11 @@ sprJump1 = noone;
 sprJump2 = noone;
 sprJump3 = noone;
 sprJump4 = noone;
+sprDuck1 = noone;
+sprDuck2 = noone;
+sprDuck3 = noone;
 sprSlide1 = noone;
 sprSlide2 = noone;
+sprWallKick = noone;
+sprDashKick1 = noone;
+sprDashKick2 = noone;

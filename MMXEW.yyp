@@ -210,7 +210,7 @@
             "Key": "3d78c52e-7278-4b5f-b9ea-aa283132b7b4",
             "Value": {
                 "id": "747b1232-9c33-4092-9be3-b44b5319df52",
-                "resourcePath": "sprites\\sprXDuck3\\sprXDuck3.yy",
+                "resourcePath": "sprites\\spr_XDuck3\\spr_XDuck3.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -490,7 +490,7 @@
             "Key": "88ef65e3-23b7-48d5-8938-043374837ca0",
             "Value": {
                 "id": "877ef3e6-b6a1-4436-a9c4-0f889f65e9c3",
-                "resourcePath": "sprites\\sprXDuck1\\sprXDuck1.yy",
+                "resourcePath": "sprites\\spr_XDuck1\\spr_XDuck1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -538,7 +538,7 @@
             "Key": "947379c5-2f02-44c1-95e9-57c76c1639b2",
             "Value": {
                 "id": "c1413042-10d9-4336-b60d-e9fcfa0788ba",
-                "resourcePath": "sprites\\sprXDuck2\\sprXDuck2.yy",
+                "resourcePath": "sprites\\spr_XDuck2\\spr_XDuck2.yy",
                 "resourceType": "GMSprite"
             }
         },

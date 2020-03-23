@@ -5,9 +5,10 @@ if (activateState != ActivateState.DEACTIVATE)
 	//Active***************************************************************************************************
 	#region
 	if (activateState == ActivateState.ACTIVATE)
-	{
-		//Running----------------------------------------------------------------------------------------------
+	{	
+		//Key Left Right---------------------------------------------------------------------------------------
 		#region
+		
 		var hMoveL = keyboard_check(global.keyLeft);
 		var hMoveR = keyboard_check(global.keyRight);
 		
@@ -15,51 +16,56 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (hMove != 0)
 		{
 			//Normal run
-			if(aState != ActionState.DASHING && aState != ActionState.CLIMBING)
+			if((aState != ActionState.DASHING) && (aState != ActionState.CLIMBING))
 			{
 				hDir = hMove;
-				if (!place_meeting(x + hDir, y, obj_block))
+				if (aState != ActionState.DUCKING)
 				{
-					if (aState == ActionState.JUMPDASHING)
-						hspd = hMove * dashSpdPhase2;
-					else
+					if (!place_meeting(x + hDir, y, obj_block))
 					{
-						if (sprite_index == sprStand || sprite_index == sprLand || sprite_index == sprDash3)
+						//Run
+						if (aState == ActionState.JUMPDASHING)
+							hspd = hMove * dashSpdPhase2;
+						else
 						{
-							sprite_index = sprRunStart;
-							image_index = 0;
-						}
-					
-						hspd = hMove * runSpd;
-					}
-					hState = HorizontalState.H_MOVE_FORWARD;
-				}
-				else
-				{
-					if (vState == VerticalState.V_ON_GROUND)
-					{
-						if (sprite_index == sprRun || sprite_index == sprRunStart)
-						{
-							sprite_index = sprRunEnd;
-							image_index = 0;
-						}
-					
-						hspd = 0;
-						hState = HorizontalState.H_MOVE_NONE;
-					}
-					else
-					{
-						if(weight != WeighType.MASSIVE)
-						{
-							if (atkState < AttackState.A_STRICT_ATTACK)
+							if (sprite_index == sprStand || sprite_index == sprLand || sprite_index == sprDash3)
 							{
-								if ((aState != ActionState.SLIDING) && (canSlide))
+								sprite_index = sprRunStart;
+								image_index = 0;
+							}
+							hspd = hMove * runSpd;
+						}
+						hState = HorizontalState.H_MOVE_FORWARD;
+					}
+					else
+					{
+						//Stop run if see wall
+						if (vState == VerticalState.V_ON_GROUND)
+						{
+							if (sprite_index == sprRun || sprite_index == sprRunStart)
+							{
+								sprite_index = sprRunEnd;
+								image_index = 0;
+							}
+					
+							hspd = 0;
+							hState = HorizontalState.H_MOVE_NONE;
+						}
+						else
+						{
+							//Slide
+							if(weight != WeighType.MASSIVE)
+							{
+								if (atkState < AttackState.A_STRICT_ATTACK)
 								{
-									sprite_index = sprSlide1;
-									image_index = 0;
+									if ((aState != ActionState.SLIDING) && (canSlide))
+									{
+										sprite_index = sprSlide1;
+										image_index = 0;
 										
-									vState = VerticalState.V_MOVE_DOWN;
-									aState = ActionState.SLIDING;
+										vState = VerticalState.V_MOVE_DOWN;
+										aState = ActionState.SLIDING;
+									}
 								}
 							}
 						}
@@ -120,10 +126,55 @@ if (activateState != ActivateState.DEACTIVATE)
 				}
 			}
 		}
+		
+		#endregion
+		
+		//Key Down---------------------------------------------------------------------------------------------	
+		#region
+		
+		if (keyboard_check(global.keyDown))
+		{
+			//Duck
+			if (vState == VerticalState.V_ON_GROUND)
+			{
+				if (aState == ActionState.IDLE)
+				{
+					sprite_index = sprDuck1;
+					image_index = 0;
+				
+					hspd = 0;
+					hState = HorizontalState.H_MOVE_NONE;
+					aState = ActionState.DUCKING;
+				}
+			}
+		}
+		
+		if (keyboard_check_released(global.keyDown))
+		{
+			//Unduck
+			if (vState == VerticalState.V_ON_GROUND)
+			{
+				if (aState == ActionState.DUCKING)
+				{
+					sprite_index = sprDuck3;
+					if (sprite_index == sprDuck2)
+					{
+						image_index = 0;
+					}
+					if (sprite_index == sprDuck1)
+					{
+						image_index = 1;
+					}
+					aState = ActionState.IDLE;
+				}
+			}
+		}
+		
 		#endregion
 		
 		//Dashing----------------------------------------------------------------------------------------------
 		#region
+		
 		//Start dash
 		if (keyboard_check_pressed(global.keyDash) && (!place_meeting(x + hDir, y, obj_block)))
 		{
@@ -201,10 +252,12 @@ if (activateState != ActivateState.DEACTIVATE)
 				hState = HorizontalState.H_MOVE_NONE;
 			}
 		}
+		
 		#endregion
 		
-		//Normal jumping----------------------------------------------------------------------------------------------
+		//Normal jumping---------------------------------------------------------------------------------------
 		#region
+		
 		//Start jump
 		if (keyboard_check_pressed(global.keyJump))
 		{
@@ -289,7 +342,6 @@ if (activateState != ActivateState.DEACTIVATE)
 			image_index = 0;
 			
 			canSlide = 0;
-			vState = VerticalState.V_ON_GROUND;
 			if (aState == ActionState.JUMPDASHING)
 			{
 				if (dashPhase > 0)
@@ -297,10 +349,11 @@ if (activateState != ActivateState.DEACTIVATE)
 					dashSpd = 0;
 					dashPhase = 0;
 				}
-				aState = ActionState.IDLE;
 			}
 			if (!canAirDash)
 				canAirDash = 1;
+			vState = VerticalState.V_ON_GROUND;
+			aState = ActionState.IDLE;
 		}
 	}
 	else

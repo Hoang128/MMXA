@@ -47,3 +47,14 @@ if (sprite_index == sprSlide1)
 	sprite_index = sprSlide2;
 	image_index = 0;
 }
+
+if (sprite_index == sprDuck1)
+{
+	sprite_index = sprDuck2;
+}
+
+if (sprite_index == sprDuck3)
+{
+	sprite_index = sprStand;
+	image_index = 0;
+}
