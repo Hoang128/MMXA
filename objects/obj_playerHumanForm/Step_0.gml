@@ -14,7 +14,12 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			x += sign(hspd);
 		}
-		hspd = 0;
+		if (place_free(x + hspd, y - maxDisDetectSlopeAbove))
+		{
+			while (place_meeting(x + hspd, y, obj_block)) y--;
+		}
+		else
+			hspd = 0;
 	}
 	x += hspd * global.deltaTime;
 	
@@ -68,13 +73,38 @@ if (activateState != ActivateState.DEACTIVATE)
 			if (vspd < maxGrav)
 				vspd += grav * global.deltaTime;
 		}
+		if (vState == VerticalState.V_MOVE_NONE)
+		{
+			if (aState == ActionState.DASHING)
+			{
+				if (place_meeting(x, y + maxDisDetectSlopeAbove, obj_block))
+				{
+					while (!place_meeting(x, y + 1, obj_block))
+					{
+						y++;
+					}
+					canAirDash = 1;
+					vState = VerticalState.V_ON_GROUND;
+				}
+			}
+		}
 		if (vState == VerticalState.V_ON_GROUND)
 		{
-			sprite_index = sprJump3;
-			image_index = 0;
-			    
-			aState = ActionState.IDLE;
-			vState = VerticalState.V_MOVE_FALLING;
+			if (!place_meeting(x, y + maxDisDetectSlopeAbove, obj_block))
+			{
+				sprite_index = sprJump3;
+				image_index = 0;
+			
+				aState = ActionState.IDLE;
+				vState = VerticalState.V_MOVE_FALLING;
+			}
+			else
+			{
+				while (!place_meeting(x, y + 1, obj_block))
+				{
+					y++;
+				}
+			}
 		}
 		if (vState == VerticalState.V_MOVE_DOWN || vState == VerticalState.V_MOVE_UP)
 		{
@@ -199,7 +229,8 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				if (aState != ActionState.DUCKING)
 				{
-					if (!place_meeting(x + hDir, y, obj_block))
+					var wallIsAHead = (place_meeting(x + hDir, y, obj_block) && (!place_meeting(x + hDir, y, obj_slope)));
+					if (!wallIsAHead)
 					{
 						//Jump dash
 						if (aState == ActionState.JUMPDASHING)
@@ -386,9 +417,10 @@ if (activateState != ActivateState.DEACTIVATE)
 		#region
 		
 		//Start dash
-		if (keyboard_check_pressed(global.keyDash) && (!place_meeting(x + hDir, y, obj_block)))
+		var wallIsAHead = (place_meeting(x + hDir, y, obj_block) && (!place_meeting(x + hDir, y, obj_slope)));
+		if (keyboard_check_pressed(global.keyDash) && (!wallIsAHead))
 		{
-			if (aState != ActionState.CLIMBING && atkState != AttackState.A_STRICT_ATTACK)
+			if ((aState != ActionState.CLIMBING) && (atkState != AttackState.A_STRICT_ATTACK))
 			{
 				if (aState != ActionState.JUMPDASHING)
 				{
@@ -438,7 +470,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		
 		//End dash
-		if (keyboard_check_released(global.keyDash) || (dashTime == 0) || (place_meeting(x+hDir, y, obj_block)))
+		var wallIsAHead = ((place_meeting(x + hDir, y, obj_block)) && (!place_meeting(x + hDir, y, obj_slope)));
+		if (keyboard_check_released(global.keyDash) || (wallIsAHead) || (dashTime <= 0))
 		{
 			if (aState == ActionState.DASHING)
 			{
