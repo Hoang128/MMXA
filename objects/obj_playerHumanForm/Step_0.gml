@@ -21,7 +21,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		else
 			hspd = 0;
 	}
-	x += hspd * global.deltaTime;
+	x += hspd * global.deltaTime * myDeltaTime;
 	
 	//Vertical
 	if (place_meeting(x, y + vspd, obj_block))
@@ -32,7 +32,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		vspd = 0;
 	}
-	y += vspd * global.deltaTime;
+	y += vspd * global.deltaTime * myDeltaTime;
 	#endregion
 	
 	//Gravity--------------------------------------------------------------------------------------------------
@@ -71,7 +71,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				if ((!canSlide) && (vspd >= 0)) canSlide = 1;
 			}
 			if (vspd < maxGrav)
-				vspd += grav * global.deltaTime;
+				vspd += grav * global.deltaTime * myDeltaTime;
 		}
 		if (vState == VerticalState.V_MOVE_NONE)
 		{
@@ -146,7 +146,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		else
 		{
-			dashKickFlyTime -= global.deltaTime;
+			dashKickFlyTime -= global.deltaTime * myDeltaTime;
 		}
 		
 		if (hState == HorizontalState.H_MOVE_PASSIVE)
@@ -183,7 +183,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			else 
 			{
 				hDir = sign(hspd);
-				dashKickTime -= global.deltaTime;
+				dashKickTime -= global.deltaTime * myDeltaTime;
 			}
 		}
 	}
@@ -202,7 +202,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				hState = HorizontalState.H_MOVE_NONE;
 				vState = VerticalState.V_MOVE_FALLING;
 			}
-			else if (wallKickTime > 0) wallKickTime -= global.deltaTime;
+			else if (wallKickTime > 0) wallKickTime -= global.deltaTime * myDeltaTime;
 		}
 	}
 	

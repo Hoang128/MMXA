@@ -10,3 +10,5 @@ enum ActivateState
 }
 
 activateState = ActivateState.DEACTIVATE;
+
+myDeltaTime = 1;
