@@ -23,6 +23,7 @@ dashKickFlyTimeMax = 12; //Max dash kick fly time
 hDashKickSpd = 3.6; //Dash kick speed
 shadowCreateTimeMax = 2; //Frame number between create shadow frame
 maxDisDetectSlopeAbove = 4;//Distance to detect slope on the ground
+dynamicBlock = noone;
 
 //Initialize State
 enum ActionState

@@ -7,23 +7,32 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	//Collision------------------------------------------------------------------------------------------------
 	#region
+	
 	//Horizontal
+	#region
+	
 	if (place_meeting(x + hspd, y, obj_block))
 	{
 		while(!place_meeting(x + sign(hspd), y, obj_block))
 		{
 			x += sign(hspd);
 		}
-		if (place_free(x + hspd, y - maxDisDetectSlopeAbove))
+		if (!place_meeting(x + hspd, y - maxDisDetectSlopeAbove, obj_block))
 		{
 			while (place_meeting(x + hspd, y, obj_block)) y--;
 		}
 		else
 			hspd = 0;
 	}
+	
 	x += hspd * global.deltaTime * myDeltaTime;
 	
+	#endregion
+	
 	//Vertical
+	#region
+	
+	//Vertical collision with block
 	if (place_meeting(x, y + vspd, obj_block))
 	{
 		while(!place_meeting(x, y + sign(vspd), obj_block))
@@ -32,12 +41,32 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		vspd = 0;
 	}
+	
+	//Vertical collision with dynamic block (ladder, etc...)
+	if ((weight != WeighType.MASSIVE) && (instance_exists(obj_dynamicBlock)))
+	{
+		if ((dynamicBlock != noone) && (dynamicBlock.solid))
+		{
+			if (place_meeting(x, y + vspd, dynamicBlock))
+			{
+				while(!place_meeting(x, y + sign(vspd), dynamicBlock))
+				{
+					y += sign(vspd);
+				}
+				vspd = 0;
+			}
+		}
+	}
+	
 	y += vspd * global.deltaTime * myDeltaTime;
+	
+	#endregion
+	
 	#endregion
 	
 	//Gravity--------------------------------------------------------------------------------------------------
 	#region
-	if (place_meeting(x, y + 1, obj_block))
+	if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))
 	{
 		vspd = 0;
 		if (vState != VerticalState.V_ON_GROUND)
@@ -212,7 +241,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	//Active***************************************************************************************************
 	#region
 	if (activateState == ActivateState.ACTIVATE)
-	{	
+	{
 		//Key Left Right---------------------------------------------------------------------------------------
 		#region
 		
@@ -225,6 +254,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			//Normal run
 			if((aState != ActionState.DASHING) && (aState != ActionState.CLIMBING))
 			{
+				hDir = hMove;
 				if (aState != ActionState.DUCKING)
 				{
 					var wallIsAHead = (place_meeting(x + hDir, y, obj_block) && (!place_meeting(x + hDir, y, obj_slope)));
@@ -233,7 +263,6 @@ if (activateState != ActivateState.DEACTIVATE)
 						//Jump dash
 						if (aState == ActionState.JUMPDASHING)
 						{
-							hDir = hMove;
 							hspd = hDir * dashSpdPhase2;
 							hState = HorizontalState.H_MOVE_FORWARD;
 						}
@@ -243,10 +272,10 @@ if (activateState != ActivateState.DEACTIVATE)
 						{
 							if (hState != HorizontalState.H_MOVE_PASSIVE)
 							{
-								hDir = hMove;
 								hspd = hDir * runSpd;
 								hState = HorizontalState.H_MOVE_FORWARD;
 							}
+							//else hDir = sign(hspd);
 						}
 						
 						//Dash kick
@@ -254,16 +283,15 @@ if (activateState != ActivateState.DEACTIVATE)
 						{
 							if (hState != HorizontalState.H_MOVE_PASSIVE)
 							{	
-								hDir = hMove;
 								hspd = hDir * dashSpdPhase2;
 								hState = HorizontalState.H_MOVE_FORWARD;
 							}
+							else hDir = sign(hspd);
 						}
 						
 						//Run
 						else
 						{
-							hDir = hMove;
 							if (sprite_index == sprStand || sprite_index == sprLand || sprite_index == sprDash3)
 							{
 								sprite_index = sprRunStart;
@@ -310,7 +338,6 @@ if (activateState != ActivateState.DEACTIVATE)
 						}
 					}
 				}
-				else hDir = hMove;
 			}
 			else
 			//Cancel Dash by run
@@ -374,9 +401,9 @@ if (activateState != ActivateState.DEACTIVATE)
 		
 		if (keyboard_check(global.keyDown))
 		{
-			//Duck
 			if (vState == VerticalState.V_ON_GROUND)
 			{
+                //Duck
 				if (aState == ActionState.IDLE)
 				{
 					sprite_index = sprDuck1;
@@ -385,6 +412,27 @@ if (activateState != ActivateState.DEACTIVATE)
 					hspd = 0;
 					hState = HorizontalState.H_MOVE_NONE;
 					aState = ActionState.DUCKING;
+				}
+				if (keyboard_check_pressed(global.keyJump))
+				{
+					if ((atkState == AttackState.A_NORMAL_ATTACK) || (atkState == AttackState.A_NONE))
+					{
+						if ((dynamicBlock != noone) && (dynamicBlock.solid) && !place_meeting(x, y + 1, obj_block))
+						{
+							sprite_index = sprJump3;
+							image_index = 0;
+						
+							with(dynamicBlock)
+							{
+								solid = 0;
+								canSolid = 0;
+								dynamicBlock = noone;
+							}
+							vState = VerticalState.V_MOVE_FALLING;
+							aState = ActionState.IDLE;
+							atkState = AttackState.A_NONE;
+						}
+					}
 				}
 			}
 		}
