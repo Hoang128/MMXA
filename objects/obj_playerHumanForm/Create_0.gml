@@ -19,11 +19,10 @@ wallKickTimeMax = 6; //Wall kick time
 hWallKickSpd = 2; //Wall kick speed
 dashKickSpd = 3.6; //Dash kick heigh
 dashKickTimeMax = 6; //Dash kick time
-dashKickFlyTimeMax = 18;
+dashKickFlyTimeMax = 12; //Max dash kick fly time
 hDashKickSpd = 3.6; //Dash kick speed
 shadowCreateTimeMax = 2; //Frame number between create shadow frame
 maxDisDetectSlopeAbove = 4;//Distance to detect slope on the ground
-maxDisDetectSlopeAHead = 2;//Distance to detect slope ahead
 
 //Initialize State
 enum ActionState

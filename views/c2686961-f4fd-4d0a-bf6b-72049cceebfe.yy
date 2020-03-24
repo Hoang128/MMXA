@@ -9,8 +9,11 @@
         "06b8d29b-15cb-441d-ac3c-c343b1d15cd9",
         "b094d4d8-2562-40ec-9f89-2c75d85220f1",
         "e2c77dd1-561e-4c72-8edc-b89a20f2c513",
+        "49fb3218-ed99-44a1-bc70-b1ba0211b458",
+        "f5ac3b33-2c2f-44d2-8f12-3dfacca31e86",
+        "40e575e9-69a6-4366-8879-14157c513b6a",
         "01e4f990-a8ef-429d-8ddf-d541f29d1401",
-        "40e575e9-69a6-4366-8879-14157c513b6a"
+        "32e186fd-7dc1-47e2-be2e-3b745578fb63"
     ],
     "filterType": "GMObject",
     "folderName": "Stage",

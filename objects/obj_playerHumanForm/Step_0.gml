@@ -208,8 +208,6 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	#endregion
 
-
-
 	#endregion
 	//Active***************************************************************************************************
 	#region
@@ -312,6 +310,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						}
 					}
 				}
+				else hDir = hMove;
 			}
 			else
 			//Cancel Dash by run
@@ -370,7 +369,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		
 		#endregion
 		
-		//Key Down---------------------------------------------------------------------------------------------	
+		//Key Up Down------------------------------------------------------------------------------------------
 		#region
 		
 		if (keyboard_check(global.keyDown))
