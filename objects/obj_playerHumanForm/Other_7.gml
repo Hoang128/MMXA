@@ -69,3 +69,20 @@ if (sprite_index == sprDashKick1)
 	sprite_index = sprDashKick2;
 	image_index = 0;
 }
+
+if (isClimbing == 1)
+{
+	if (sprite_index == sprClimb3)
+	{	
+		sprite_index = sprStand;
+		image_index = 0;
+	}
+
+	if (sprite_index == sprClimb1)
+	{
+		isClimbing = 0;
+		
+		sprite_index = sprClimb2;
+		image_index = 0;
+	}
+}

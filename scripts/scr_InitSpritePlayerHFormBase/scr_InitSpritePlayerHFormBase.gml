@@ -24,6 +24,9 @@ switch argument0
 		sprWallKick = spr_XWallKick;
 		sprDashKick1 = spr_XDashKick1;
 		sprDashKick2 = spr_XDashKick2;
+		sprClimb1 = spr_XClimbStart;
+		sprClimb2 = spr_XClimb;
+		sprClimb3 = spr_XClimbEnd;
 		#endregion
 	}
 	break;

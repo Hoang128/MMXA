@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "259d2cbf-b894-417f-93d3-ee313f2844f9",
+            "Value": {
+                "id": "e9575c45-9fef-4986-b597-437e85eb4c7d",
+                "resourcePath": "sprites\\spr_XClimbEnd\\spr_XClimbEnd.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "28a94847-e7a3-4af1-81fe-c6c0daceb7e0",
             "Value": {
                 "id": "6db404b6-6961-49a8-9fef-d1a262252006",
@@ -275,6 +283,14 @@
             "Value": {
                 "id": "b0ea641a-f8d0-45ec-8343-fc3ffac1c5a1",
                 "resourcePath": "sprites\\spr_XRunStart\\spr_XRunStart.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "485856bf-b6e5-42c5-9b90-48a5e2730c50",
+            "Value": {
+                "id": "a0cf26c3-bd5d-4f78-9803-24d621bbb300",
+                "resourcePath": "sprites\\spr_XClimb\\spr_XClimb.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -651,6 +667,14 @@
             "Value": {
                 "id": "d699f398-6871-48ea-b8f6-189ef0a1202d",
                 "resourcePath": "sprites\\spr_XRunEnd\\spr_XRunEnd.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a077d155-0ec3-41cb-8563-0a5978352cd1",
+            "Value": {
+                "id": "02ef46da-1709-434b-b04c-9b4a3d45c4a0",
+                "resourcePath": "sprites\\spr_XClimbStart\\spr_XClimbStart.yy",
                 "resourceType": "GMSprite"
             }
         },

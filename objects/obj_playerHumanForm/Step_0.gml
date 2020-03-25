@@ -5,6 +5,37 @@ if (activateState != ActivateState.DEACTIVATE)
 	//Passive**************************************************************************************************
 	#region
 	
+	//Sprite with negative speed-------------------------------------------------------------------------------
+	#region
+	
+	if (image_speed < 0)
+	{
+		//Reserve Animation End
+		if (image_index <= 1)
+		{
+			if (sprite_index == sprClimb3)
+			{
+				y += distanceToMoveAnimationLadder;
+				isClimbing = 0;
+				
+				sprite_index = sprClimb2;
+				image_index = 4;
+			}
+			
+			if (sprite_index == sprClimb1)
+			{
+				isClimbing = 0;
+				vState = VerticalState.V_ON_GROUND;
+				aState = ActionState.IDLE;
+				
+				sprite_index = sprStand;
+				image_index = 0;
+			}
+		}
+	}
+	
+	#endregion
+	
 	//Collision------------------------------------------------------------------------------------------------
 	#region
 	
@@ -69,7 +100,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))
 	{
 		vspd = 0;
-		if (vState != VerticalState.V_ON_GROUND)
+		if ((vState != VerticalState.V_ON_GROUND) && (vState != ActionState.CLIMBING))
 		{
 			sprite_index = sprLand;
 			image_index = 0;
@@ -238,6 +269,8 @@ if (activateState != ActivateState.DEACTIVATE)
 	#endregion
 
 	#endregion
+	//*********************************************************************************************************
+	
 	//Active***************************************************************************************************
 	#region
 	if (activateState == ActivateState.ACTIVATE)
@@ -263,7 +296,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						//Jump dash
 						if (aState == ActionState.JUMPDASHING)
 						{
-							hspd = hDir * dashSpdPhase2;
+							hspd = hDir * jumpDashSpd;
 							hState = HorizontalState.H_MOVE_FORWARD;
 						}
 						
@@ -342,22 +375,25 @@ if (activateState != ActivateState.DEACTIVATE)
 			else
 			//Cancel Dash by run
 			{
-				if (hMove * hDir < 0)
-				{	
-					hspd = 0;
-					hDir = hMove;
-					if (vState == VerticalState.V_MOVE_NONE)
-					{
-						sprite_index = sprJump3;
-						image_index = 0;
-						vState = VerticalState.V_MOVE_FALLING;
+				if (aState != ActionState.CLIMBING)
+				{
+					if (hMove * hDir < 0)
+					{	
+						hspd = 0;
+						hDir = hMove;
+						if (vState == VerticalState.V_MOVE_NONE)
+						{
+							sprite_index = sprJump3;
+							image_index = 0;
+							vState = VerticalState.V_MOVE_FALLING;
+						}
+						else
+						{
+							sprite_index = sprDash3;
+							image_index = 0;
+						}
+						aState = ActionState.IDLE;
 					}
-					else
-					{
-						sprite_index = sprDash3;
-						image_index = 0;
-					}
-					aState = ActionState.IDLE;
 				}
 			}
 		}
@@ -399,25 +435,59 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Key Up Down------------------------------------------------------------------------------------------
 		#region
 		
-		if (keyboard_check(global.keyDown))
+		if (keyboard_check(global.keyDown) && !keyboard_check(global.keyUp))
 		{
 			if (vState == VerticalState.V_ON_GROUND)
 			{
-                //Duck
 				if (aState == ActionState.IDLE)
 				{
-					sprite_index = sprDuck1;
-					image_index = 0;
+					if (atkState < AttackState.A_STRICT_ATTACK)
+					{
+						var dynamicBlockIsTopLadder = (dynamicBlock != noone) && (dynamicBlock.object_index == obj_ladder && (dynamicBlock.topLadder));
+						var canClimbDown = (dynamicBlock.solid) && (!place_meeting(x, y + 1, obj_block));
+						var yPosCorrect = (abs(self.x - (dynamicBlock.bbox_right + dynamicBlock.bbox_left) / 2) <= minDistanceToLadder);
+						
+						//Climb down from top ladder
+						if (dynamicBlockIsTopLadder && canClimbDown && yPosCorrect)
+						{
+							sprite_index = sprClimb3;
+							image_index = 3;
+						
+							with(dynamicBlock)
+							{
+								solid = 0;
+								canSolid = 0;
+								dynamicBlock = noone;
+							}
+							
+							self.x = (dynamicBlock.bbox_right + dynamicBlock.bbox_left) / 2;
+							isClimbing = -1;
+							vState = VerticalState.V_MOVE_NONE;
+							aState = ActionState.CLIMBING;
+							atkState = AttackState.A_NONE;
+						}
+						
+						//Duck
+						else
+						{
+							sprite_index = sprDuck1;
+							image_index = 0;
 				
-					hspd = 0;
-					hState = HorizontalState.H_MOVE_NONE;
-					aState = ActionState.DUCKING;
+							hspd = 0;
+							hState = HorizontalState.H_MOVE_NONE;
+							aState = ActionState.DUCKING;
+						}
+					}
 				}
+				
+				//Jump down
 				if (keyboard_check_pressed(global.keyJump))
 				{
-					if ((atkState == AttackState.A_NORMAL_ATTACK) || (atkState == AttackState.A_NONE))
+					if (atkState < AttackState.A_STRICT_ATTACK)
 					{
-						if ((dynamicBlock != noone) && (dynamicBlock.solid) && !place_meeting(x, y + 1, obj_block))
+						var dynamicBlockIsThinPlatform = (dynamicBlock != noone) && (dynamicBlock.object_index == obj_thinPlatform);
+						var canJumpDown = (dynamicBlock.solid) && (!place_meeting(x, y + 1, obj_block));
+						if (dynamicBlockIsThinPlatform && canJumpDown)
 						{
 							sprite_index = sprJump3;
 							image_index = 0;
@@ -454,6 +524,73 @@ if (activateState != ActivateState.DEACTIVATE)
 						image_index = 1;
 					}
 					aState = ActionState.IDLE;
+				}
+			}
+		}
+		
+		//Climbing
+		if (aState == ActionState.CLIMBING)
+		{
+			//if (place_meeting(x, y + 1, obj_block))
+			//{
+			//	if (sprite_index == sprClimb2)
+			//	{
+			//		sprite_index = sprClimb1;
+			//		image_index = 3;
+				
+			//		isClimbing = -1;
+			//	}
+			//}
+			
+			if (!place_meeting(x, y - 1, obj_block) && !place_meeting(x, y + 1, obj_block))
+			{
+				if (sprite_index == sprClimb2)
+				{
+					if (!place_meeting(x, bbox_top - 1, obj_ladder))
+					{
+						sprite_index = sprClimb3;
+						image_index = 0;
+						
+						y -= distanceToMoveAnimationLadder;
+						while (!place_meeting(x, y + 1, obj_ladder)) y++;
+						isClimbing = 1;
+						vspd = 0;
+						vState = VerticalState.V_ON_GROUND;
+						aState = ActionState.IDLE;
+					}
+					else
+					{
+						var moveUp = keyboard_check(global.keyUp); 
+						var moveDown = keyboard_check(global.keyDown);
+						var vMove = moveDown - moveUp;
+					
+						if (vMove != 0)
+						{
+							if (vState == VerticalState.V_MOVE_NONE)
+							{
+								vspd = vMove * climbSpd;
+								if (moveDown) 
+								{
+									isClimbing = -1;
+									vState = VerticalState.V_MOVE_DOWN;
+								}
+								else
+								{
+									isClimbing = 1;
+									vState = VerticalState.V_MOVE_UP;
+								}
+							}
+						}
+						else
+						{
+							if (vState != VerticalState.V_MOVE_NONE)
+							{
+								vspd = 0;
+								isClimbing = 0;
+								vState = VerticalState.V_MOVE_NONE;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -571,11 +708,26 @@ if (activateState != ActivateState.DEACTIVATE)
 			
 			#endregion
 			
-			//Wall kick
+			
 			#region
 			
+			//Jump down form ladder & Wall kick
 			else
 			{
+				//Jump down from ladder
+				if (aState == ActionState.CLIMBING)
+				{
+					if (sprite_index == sprClimb2)
+					{
+						sprite_index = sprJump3;
+						image_index = 0;
+						
+						vState = VerticalState.V_MOVE_FALLING;
+						aState = ActionState.IDLE;
+					}
+				}
+				
+				//Wall kick
 				if ((aState == ActionState.SLIDING) || (place_meeting(x + hDir, y, obj_block) && canSlide))
 				{
 					//Dash kick
@@ -644,5 +796,6 @@ if (activateState != ActivateState.DEACTIVATE)
 	}
 	
 	#endregion
+	//*********************************************************************************************************
 	
 }

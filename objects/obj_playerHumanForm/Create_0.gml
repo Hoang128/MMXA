@@ -7,6 +7,7 @@ event_inherited();
 runSpd = 2; //Run speed
 dashSpdPhase1 = 2; //Dash speed when start dash
 dashSpdPhase2 = 5; //Dash speed when dash
+jumpDashSpd = 4.5;
 maxDashTime = 30; //Dash time
 jumpSpd = 6; //Jump speed
 grav = 0.3; //Gravity Accleration
@@ -22,8 +23,10 @@ dashKickTimeMax = 6; //Dash kick time
 dashKickFlyTimeMax = 12; //Max dash kick fly time
 hDashKickSpd = 3.6; //Dash kick speed
 shadowCreateTimeMax = 2; //Frame number between create shadow frame
-maxDisDetectSlopeAbove = 4;//Distance to detect slope on the ground
-dynamicBlock = noone;
+maxDisDetectSlopeAbove = 4; //Distance to detect slope on the ground
+minDistanceToLadder = 6; //Distance to ladder to climb
+distanceToMoveAnimationLadder = 34; //DO NOT MODIFY THIS
+climbSpd = 2;
 
 //Initialize State
 enum ActionState
@@ -99,6 +102,9 @@ wallKickTime = 0;
 dashKickTime = 0;
 dashKickFlyTime = 0;
 shadowCreateTime = shadowCreateTimeMax;
+isClimbing = 0;
+dynamicBlock = noone;
+
 
 //Initialize sprite
 sprStand = noone;
@@ -122,3 +128,6 @@ sprSlide2 = noone;
 sprWallKick = noone;
 sprDashKick1 = noone;
 sprDashKick2 = noone;
+sprClimb1 = noone;
+sprClimb2 = noone;
+sprClimb3 = noone;

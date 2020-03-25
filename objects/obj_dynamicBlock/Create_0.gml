@@ -2,5 +2,5 @@
 event_inherited();
 
 canSolid = 1;
-maxTimeWait = 100;
+maxTimeWait = 30;
 timeWait = maxTimeWait;
