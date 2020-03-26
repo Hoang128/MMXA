@@ -2,7 +2,7 @@
 
 global.masterVolume=1;
 global.BGMVolume=0;
-global.SFXVolume=0.6;
+global.SFXVolume=1;
 global.BGM_Emitter = audio_emitter_create();
 global.SFX_Emitter = audio_emitter_create();
 

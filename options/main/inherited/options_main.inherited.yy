@@ -36,7 +36,16 @@
 }←7fa50043-cea6-4cd0-9521-a8ba8c6ea9f0|{
     "audioGroups": {
         "Additions": [
-            
+            {
+                "Key": 1,
+                "Value": {
+                    "id": "e2770731-386f-4678-b26c-51de0f38bf47",
+                    "modelName": "GMAudioGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpXSounds",
+                    "targets": 461609314234257646
+                }
+            }
         ],
         "Checksum": "濑Ⱥ朦씁ᬄ縈",
         "Deletions": [

@@ -32,6 +32,8 @@ if (sprite_index == sprLand)
 if (sprite_index == sprDash1)
 {
 	dashPhase = 2;
+	
+	audio_play_sound_on(global.SFX_Emitter, sndDashEff, 0, 0);
 	sprite_index = sprDash2;
 	image_index = 0;
 }

@@ -131,3 +131,23 @@ sprDashKick2 = noone;
 sprClimb1 = noone;
 sprClimb2 = noone;
 sprClimb3 = noone;
+
+//Initialize sound fx
+sndVoiceDie = noone;
+sndVoiceHurt1 = noone;
+sndVoiceHurt2 = noone;
+sndVoiceJump1 = noone;
+sndVoiceJump2 = noone;
+sndVoiceJump3 = noone;
+sndVoiceLowHp1 = noone;
+sndVoiceLowHp2 = noone;
+sndVoiceLowHp3 = noone;
+sndVoiceWallKick = noone;
+sndVoiceSwitch = noone;
+
+sndDashEff = noone;
+sndJumpEff = noone;
+sndLandEff = noone;
+sndSlideEff = noone;
+sndBeamUp = noone;
+sndBeamDown = noone;

@@ -100,10 +100,11 @@ if (activateState != ActivateState.DEACTIVATE)
 	if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))
 	{
 		vspd = 0;
-		if ((vState != VerticalState.V_ON_GROUND) && (vState != ActionState.CLIMBING))
+		if ((vState != VerticalState.V_ON_GROUND) && (aState != ActionState.CLIMBING))
 		{
 			sprite_index = sprLand;
 			image_index = 0;
+			audio_play_sound_on(global.SFX_Emitter, sndLandEff, 0, 0);
 			
 			canSlide = 0;
 			if (aState == ActionState.JUMPDASHING)
@@ -361,6 +362,7 @@ if (activateState != ActivateState.DEACTIVATE)
 									{
 										sprite_index = sprSlide1;
 										image_index = 0;
+										audio_play_sound_on(global.SFX_Emitter, sndSlideEff, 0, 0);
 										
 										if (!canAirDash) canAirDash = 1;
 										vState = VerticalState.V_MOVE_DOWN;
@@ -531,16 +533,16 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Climbing
 		if (aState == ActionState.CLIMBING)
 		{
-			//if (place_meeting(x, y + 1, obj_block))
-			//{
-			//	if (sprite_index == sprClimb2)
-			//	{
-			//		sprite_index = sprClimb1;
-			//		image_index = 3;
+			if (place_meeting(x, y + 1, obj_block))
+			{
+				if (sprite_index == sprClimb2)
+				{
+					sprite_index = sprClimb1;
+					image_index = 3;
 				
-			//		isClimbing = -1;
-			//	}
-			//}
+					isClimbing = -1;
+				}
+			}
 			
 			if (!place_meeting(x, y - 1, obj_block) && !place_meeting(x, y + 1, obj_block))
 			{
@@ -695,6 +697,15 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				sprite_index = sprJump1;
 				image_index = 0;
+				audio_play_sound_on(global.SFX_Emitter, sndJumpEff, 0, 0);
+				var randVoiceJump = random(4);
+				if (randVoiceJump <= 3)
+				{
+					if (randVoiceJump > 2) audio_play_sound_on(global.SFX_Emitter, sndVoiceJump1, 0, 0);
+					else if (randVoiceJump >1) audio_play_sound_on(global.SFX_Emitter, sndVoiceJump2, 0, 0);
+					else audio_play_sound_on(global.SFX_Emitter, sndVoiceJump3, 0, 0);
+				}
+				
 				
 				vspd -= jumpSpd;
 				if (keyboard_check(global.keyDash))
@@ -735,6 +746,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					{
 						sprite_index = sprDashKick1;
 						image_index = 0;
+						audio_play_sound_on(global.SFX_Emitter, sndVoiceWallKick, 0, 0);
 						
 						hspd = 0;
 						vspd = 0;
@@ -754,6 +766,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					{
 						sprite_index = sprWallKick;
 						image_index = 0;
+						audio_play_sound_on(global.SFX_Emitter, sndVoiceWallKick, 0, 0);
 						
 						hspd = -hDir*hWallKickSpd;
 						vspd = -wallKickSpd;
