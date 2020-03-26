@@ -719,10 +719,9 @@ if (activateState != ActivateState.DEACTIVATE)
 			
 			#endregion
 			
-			
-			#region
-			
 			//Jump down form ladder & Wall kick
+			#region
+
 			else
 			{
 				//Jump down from ladder
@@ -748,6 +747,8 @@ if (activateState != ActivateState.DEACTIVATE)
 						image_index = 0;
 						audio_play_sound_on(global.SFX_Emitter, sndVoiceWallKick, 0, 0);
 						
+						var wkEff = instance_create_depth(x + image_xscale * (bbox_right - bbox_left) / 2, y - 4, depth - 1, obj_flareSmall);
+						wkEff.image_xscale = self.image_xscale;
 						hspd = 0;
 						vspd = 0;
 						hspd = -hDir*hDashKickSpd;
@@ -768,6 +769,8 @@ if (activateState != ActivateState.DEACTIVATE)
 						image_index = 0;
 						audio_play_sound_on(global.SFX_Emitter, sndVoiceWallKick, 0, 0);
 						
+						var wkEff = instance_create_depth(x + image_xscale * (bbox_right - bbox_left) / 2, y - 4, depth - 1, obj_flareSmall);
+						wkEff.image_xscale = self.image_xscale;
 						hspd = -hDir*hWallKickSpd;
 						vspd = -wallKickSpd;
 						wallKickTime = wallKickTimeMax;

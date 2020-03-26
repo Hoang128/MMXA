@@ -6,7 +6,8 @@
     "children": [
         "cc6367ee-4f95-427c-8671-3322453ed0ee",
         "dc665f68-7528-4b5d-968d-b28a2f994a0c",
-        "cda5138a-890d-4e9d-bdb3-f6ed66549ec9"
+        "cda5138a-890d-4e9d-bdb3-f6ed66549ec9",
+        "280ca7c6-c363-4e35-b119-bd3c915d3fe4"
     ],
     "filterType": "GMSprite",
     "folderName": "Palette",
