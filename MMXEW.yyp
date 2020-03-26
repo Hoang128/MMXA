@@ -1463,6 +1463,14 @@
             }
         },
         {
+            "Key": "f06db03d-0d49-492f-b3d5-a218a548aade",
+            "Value": {
+                "id": "06d7640c-fbbf-4f77-9d08-80776d3a944e",
+                "resourcePath": "sounds\\bgm_MMZ3_Prismastic\\bgm_MMZ3_Prismastic.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "f142cc4b-0623-4ff3-98a1-e8ff1e1e99ab",
             "Value": {
                 "id": "b28674de-0ce1-4006-9538-f52ef3c1d1b9",

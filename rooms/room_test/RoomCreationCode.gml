@@ -1,3 +1,3 @@
 global.isStage = true;
 
-scr_BGMSet(bgm_FlameStaggRemix,01.00,39.00);
+scr_BGMSet(bgm_MMZ3_Prismastic,0.50,104.00);

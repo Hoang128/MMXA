@@ -60,6 +60,11 @@ if (sprite_index == sprDash3)
 
 if (sprite_index == sprSlide1)
 {
+	var slideEff = instance_create_depth(x + 16 * image_xscale, bbox_bottom + 8, depth - 1, obj_vDust);
+	slideEff.image_xscale = image_xscale;
+	slideEff.xPlace = 16;
+	slideEff.yPlace = 8;
+	
 	sprite_index = sprSlide2;
 	image_index = 0;
 }
