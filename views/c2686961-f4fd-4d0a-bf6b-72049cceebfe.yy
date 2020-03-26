@@ -18,7 +18,7 @@
         "c68740f5-3770-4caf-acc9-5b90719f8eff"
     ],
     "filterType": "GMObject",
-    "folderName": "Stage",
+    "folderName": "Physic Platform Stage",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

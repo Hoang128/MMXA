@@ -32,6 +32,20 @@ if (sprite_index == sprLand)
 if (sprite_index == sprDash1)
 {
 	dashPhase = 2;
+	if (self.weight != WeighType.MASSIVE)
+	{
+		var dashEff = instance_create_depth(x + xPlaceDashEff * image_xscale, y + yPlaceDashEff, depth - 1, obj_PlayerDashEff);
+		dashEff.image_xscale = self.image_xscale;
+		dashEff.xPlace = xPlaceDashEff;
+		dashEff.yPlace = yPlaceDashEff;
+		if (object_index == obj_playerX) dashEff.sprite_index = spr_XDashEffect;
+		
+		if (vState == VerticalState.V_ON_GROUND)
+		{
+			var dashEff = instance_create_depth(x + 4 * image_xscale, y, depth - 2, obj_sideDust);
+			dashEff.image_xscale = self.image_xscale;
+		}
+	}
 	
 	audio_play_sound_on(global.SFX_Emitter, sndDashEff, 0, 0);
 	sprite_index = sprDash2;

@@ -6,6 +6,8 @@ event_inherited();
 
 //Initialize Parameters
 atkSpriteTimeMax = 60;
+xPlaceDashEff = -25;
+yPlaceDashEff = -4;
 
 //Initialize sprite
 scr_InitSpritePlayerHFormBase(obj_playerX);

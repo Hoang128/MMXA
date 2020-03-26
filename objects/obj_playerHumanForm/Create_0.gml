@@ -27,6 +27,8 @@ maxDisDetectSlopeAbove = 4; //Distance to detect slope on the ground
 minDistanceToLadder = 6; //Distance to ladder to climb
 distanceToMoveAnimationLadder = 34; //DO NOT MODIFY THIS
 climbSpd = 2;
+xPlaceDashEff = 0;
+yPlaceDashEff = 0;
 
 //Initialize State
 enum ActionState
