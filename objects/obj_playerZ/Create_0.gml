@@ -19,12 +19,11 @@ scr_InitSoundPlayerHFromBase(obj_playerZ);
 
 //Initialize shader
 scr_PalSwapInitSystem(shd_pal_swapper);
-myPal = spr_PalX;
+myPal = spr_PalZ;
 
 //Initialize Inside Variables
 atkSpriteTime = 0;
 airHikeTime = 1;
-canAirHike = 1;
 
 //Debug
 sprite_index=sprStand;
