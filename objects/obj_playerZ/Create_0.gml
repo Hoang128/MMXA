@@ -24,6 +24,7 @@ myPal = spr_PalX;
 //Initialize Inside Variables
 atkSpriteTime = 0;
 airHikeTime = 1;
+canAirHike = 1;
 
 //Debug
 sprite_index=sprStand;

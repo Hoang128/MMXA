@@ -268,6 +268,20 @@ if (activateState != ActivateState.DEACTIVATE)
 	}
 	
 	#endregion
+	
+	//Passive Counters
+	if (canJump == 0)
+	{
+		if (canJumpWait < 0)
+		{
+			canJump = 1;
+			canJumpWait = canJumpWaitMax;
+		}
+		else
+		{
+			canJumpWait--;
+		}
+	}
 
 	#endregion
 	//*********************************************************************************************************
@@ -496,7 +510,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				}
 				
 				//Jump down
-				if (keyboard_check_pressed(global.keyJump))
+				if (keyboard_check_pressed(global.keyJump) && (canJump))
 				{
 					if (atkState < AttackState.A_STRICT_ATTACK)
 					{
@@ -513,6 +527,7 @@ if (activateState != ActivateState.DEACTIVATE)
 								canSolid = 0;
 								dynamicBlock = noone;
 							}
+							canJump = 0;
 							vState = VerticalState.V_MOVE_FALLING;
 							aState = ActionState.IDLE;
 							atkState = AttackState.A_NONE;
@@ -701,7 +716,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		#region
 		
 		//Start jump
-		if (keyboard_check_pressed(global.keyJump))
+		if (keyboard_check_pressed(global.keyJump) && (canJump))
 		{
 			//Normal jump
 			#region
@@ -719,7 +734,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					else audio_play_sound_on(global.SFX_Emitter, sndVoiceJump3, 0, 0);
 				}
 				
-				
+				canJump = 0;
 				vspd = -jumpSpd;
 				if (keyboard_check(global.keyDash))
 				{
@@ -745,6 +760,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						sprite_index = sprJump3;
 						image_index = 0;
 						
+						canJump = 0;
 						vState = VerticalState.V_MOVE_FALLING;
 						aState = ActionState.IDLE;
 					}
@@ -762,6 +778,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						
 						var wkEff = instance_create_depth(x + image_xscale * (bbox_right - bbox_left) / 2, y - 4, depth - 1, obj_flareSmall);
 						wkEff.image_xscale = self.image_xscale;
+						canJump = 0;
 						hspd = 0;
 						vspd = 0;
 						hspd = -hDir*hDashKickSpd;
@@ -784,6 +801,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						
 						var wkEff = instance_create_depth(x + image_xscale * (bbox_right - bbox_left) / 2, y - 4, depth - 1, obj_flareSmall);
 						wkEff.image_xscale = self.image_xscale;
+						canJump = 0;
 						hspd = -hDir*hWallKickSpd;
 						vspd = -wallKickSpd;
 						wallKickTime = wallKickTimeMax;

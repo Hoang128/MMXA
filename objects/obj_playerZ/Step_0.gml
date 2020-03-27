@@ -10,10 +10,12 @@ if (activateState != ActivateState.DEACTIVATE)
 	if (atkSpriteTime > 0) atkSpriteTime--;
 	else atkState = AttackState.A_NONE;
 	
-	if ((vState == VerticalState.V_ON_GROUND) || (aState == ActionState.SLIDING))
+	if ((vState == VerticalState.V_ON_GROUND) || (aState == ActionState.WALLKICK) || (aState == ActionState.CLIMBING) || (aState == ActionState.SLIDING))
 	{
 		airHikeTime = airHikeTimeMax;
 	}
+	
+	if (canAirDash == 0) airHikeTime = 0;
 	
 	//Active*******************************************************************************************************
 	if (activateState == ActivateState.ACTIVATE)
@@ -28,7 +30,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		
 		//Double Jump
-		if (keyboard_check_pressed(global.keyJump))
+		if (keyboard_check_pressed(global.keyJump) && (canJump))
 		{
 			if (aState == ActionState.IDLE)
 			{
