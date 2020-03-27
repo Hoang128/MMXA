@@ -19,8 +19,33 @@ switch argument0
 		sndJumpEff = snd_XJumpEff;
 		sndLandEff = snd_XLandEff;
 		sndSlideEff = snd_XSlideEff;
-		sndBeamUp = snd_XBeamUpEffect;
+		sndBeamUp = snd_XBeamUpEff;
 		sndBeamDown = snd_XBeamDownEff;
+		#endregion
+	}
+	break;
+	
+	case obj_playerZ:
+	{
+		#region
+		sndVoiceDie = snd_VZDie;
+		sndVoiceHurt1 = snd_VZHurt1;
+		sndVoiceHurt2 = snd_VZHurt2;
+		sndVoiceJump1 = snd_VZJump1;
+		sndVoiceJump2 = snd_VZJump2;
+		sndVoiceJump3 = snd_VZJump3;
+		sndVoiceLowHp1 = snd_VZLowHp;
+		sndVoiceLowHp2 = snd_VZLowHp;
+		sndVoiceLowHp3 = snd_VZLowHp;
+		sndVoiceWallKick = snd_VZWallKick;
+		sndVoiceSwitch = snd_VZSwitch;
+
+		sndDashEff = snd_ZDashEff;
+		sndJumpEff = snd_ZJumpEff;
+		sndLandEff = snd_ZLandEff;
+		sndSlideEff = snd_ZSlideEff;
+		sndBeamUp = snd_ZBeamUpEff;
+		sndBeamDown = snd_ZBeamDownEff;
 		#endregion
 	}
 	break;

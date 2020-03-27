@@ -7,7 +7,7 @@
         
     ],
     "filterType": "GMSound",
-    "folderName": "group0",
+    "folderName": "Enemy",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

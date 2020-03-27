@@ -36,9 +36,11 @@ if (sprite_index == sprDash1)
 	{
 		var dashEff = instance_create_depth(x + xPlaceDashEff * image_xscale, y + yPlaceDashEff, depth - 1, obj_PlayerDashEff);
 		dashEff.image_xscale = self.image_xscale;
+		dashEff.core = self;
 		dashEff.xPlace = xPlaceDashEff;
 		dashEff.yPlace = yPlaceDashEff;
-		if (object_index == obj_playerX) dashEff.sprite_index = spr_XDashEffect;
+		if (object_index == obj_playerX) dashEff.sprite_index = spr_XDashEff;
+		else if (object_index == obj_playerZ) dashEff.sprite_index = spr_ZDashEff;
 		
 		if (vState == VerticalState.V_ON_GROUND)
 		{
@@ -64,6 +66,7 @@ if (sprite_index == sprSlide1)
 	slideEff.image_xscale = image_xscale;
 	slideEff.xPlace = 16;
 	slideEff.yPlace = 8;
+	slideEff.core = self;
 	
 	sprite_index = sprSlide2;
 	image_index = 0;

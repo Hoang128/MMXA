@@ -8,13 +8,44 @@ switch argument0
 			case sprStand: image_speed = 0.1; break;
 			case sprRunStart:
 			case sprRun:
-			case sprRunEnd: image_speed = 0.3; break;
+			case sprRunEnd: image_speed = 0.5; break;
 			case sprLand: image_speed = 0.5; break;
 			case sprDash1: image_speed = 0.5; break;
 			case sprDash2: image_speed = 0.6; break;
 			case sprDash3: image_speed = 0.3; break;
-			case sprJump1:
-			case sprJump3: image_speed = 0.2; break;
+			case sprJump1: image_speed = 0.3; break;
+			case sprJump3: image_speed = 0.3; break;
+			case sprJump2:
+			case sprJump4: image_speed = 1; break;
+			case sprSlide1: image_speed = 0.3; break;
+			case sprWallKick: image_speed = 0.5; break;
+			case sprDashKick1: image_speed = 0.6; break;
+			case sprDashKick2: image_speed = 0.6; break;
+			case sprClimb1: image_speed = isClimbing * 0.3; break;
+			case sprClimb2:
+			case sprClimb3: image_speed = isClimbing * 0.3; break;
+			default: image_speed = 0.5; break;
+		}
+		image_speed *= global.deltaTime;
+		#endregion
+	}
+	break;
+	
+	case obj_playerZ:
+	{
+		#region
+		switch sprite_index
+		{
+			case sprStand: image_speed = 0.1; break;
+			case sprRunStart:
+			case sprRun:
+			case sprRunEnd: image_speed = 0.5; break;
+			case sprLand: image_speed = 0.5; break;
+			case sprDash1: image_speed = 0.5; break;
+			case sprDash2: image_speed = 0.6; break;
+			case sprDash3: image_speed = 0.3; break;
+			case sprJump1: image_speed = 0.5; break;
+			case sprJump3: image_speed = 0.5; break;
 			case sprJump2: 
 			case sprJump4: image_speed = 1; break;
 			case sprSlide1: image_speed = 0.3; break;
@@ -24,6 +55,8 @@ switch argument0
 			case sprClimb1: image_speed = isClimbing * 0.3; break;
 			case sprClimb2:
 			case sprClimb3: image_speed = isClimbing * 0.3; break;
+			
+			case sprDoubleJump: image_speed = 0.35; break;
 			default: image_speed = 0.5; break;
 		}
 		image_speed *= global.deltaTime;

@@ -1,7 +1,7 @@
 /// @description
 
-if (instance_exists(obj_playerX))
+if (instance_exists(core))
 {
-	self.x = obj_playerX.x + self.xPlace * image_xscale;
-	self.y = obj_playerX.y + self.yPlace;
+	self.x = core.x + self.xPlace * image_xscale;
+	self.y = core.y + self.yPlace;
 }

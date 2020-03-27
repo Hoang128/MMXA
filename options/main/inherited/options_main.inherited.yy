@@ -13,7 +13,22 @@
                     "id": "4e8e8901-b074-4e17-a919-0d18344a9c9b",
                     "modelName": "GMTextureGroup",
                     "mvc": "1.0",
-                    "groupName": "groupXNormal",
+                    "groupName": "grpX",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 2,
+                "Value": {
+                    "id": "c0dc373e-43b9-4a40-ad7d-6a57c6a51a0d",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpZ",
                     "targets": 461609314234257646,
                     "autocrop": true,
                     "border": 2,
@@ -43,6 +58,16 @@
                     "modelName": "GMAudioGroup",
                     "mvc": "1.0",
                     "groupName": "grpXSounds",
+                    "targets": 461609314234257646
+                }
+            },
+            {
+                "Key": 2,
+                "Value": {
+                    "id": "7bf8d3d7-ebd4-41bb-808a-96e2fdfcd187",
+                    "modelName": "GMAudioGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpZSounds",
                     "targets": 461609314234257646
                 }
             }

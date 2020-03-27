@@ -1,10 +1,10 @@
 /// @description 
-if ((instance_exists(obj_playerX)))
+if ((instance_exists(core)))
 {
-	if (obj_playerX.aState == ActionState.SLIDING)
+	if (core.aState == ActionState.SLIDING)
 	{
-		self.x = obj_playerX.x + self.xPlace * image_xscale;
-		self.y = obj_playerX.y + self.yPlace;
+		self.x = core.x + self.xPlace * image_xscale;
+		self.y = core.y + self.yPlace;
 	}
 	else instance_destroy();
 }
