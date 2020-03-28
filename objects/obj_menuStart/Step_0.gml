@@ -4,5 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-x = 0;
-y = 0;
+if (lineExecute[1])
+{
+	room_goto(room_test);
+}

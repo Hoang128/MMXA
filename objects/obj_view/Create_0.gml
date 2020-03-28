@@ -13,4 +13,3 @@ view_visible = true;
 scr_InitCamera();
 
 //Create UI support
-instance_create_depth(x, y, 0, obj_testInGameMenu);

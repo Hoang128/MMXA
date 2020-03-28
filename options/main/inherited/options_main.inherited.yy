@@ -36,6 +36,21 @@
                     "mipsToGenerate": 0,
                     "scaled": true
                 }
+            },
+            {
+                "Key": 3,
+                "Value": {
+                    "id": "9fbd8df6-1bfd-4f17-9c64-e510c205d2db",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpFonts",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
             }
         ],
         "Checksum": "ࢺ懜璙ᓆ锯翋꤯맫",

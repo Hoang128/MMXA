@@ -19,4 +19,29 @@ if (active)
 			cursor++;
 		}
 	}
+	
+	if (keyboard_check_pressed(global.keyJump) || keyboard_check_pressed(vk_enter))
+	{
+		if (lineHandle[cursor] == false)
+		{
+			lineHandle[cursor] = true;
+			if (haveEndEff)
+				instance_create_depth(x, y, depth, obj_effClosing_Black);
+			active = false;
+		}
+	}
 }
+
+for (var i = 1; i <= lineNumber; i++)
+{
+	if (lineHandle[i] == true)
+	{
+		if (haveEndEff)
+		{
+			if (obj_effClosing_Black.image_alpha == 1)
+				lineExecute[i] = true;
+		}
+		else lineExecute[i] = true;
+	}
+}
+

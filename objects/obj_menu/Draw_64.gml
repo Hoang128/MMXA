@@ -2,9 +2,10 @@
 // You can write your code in this editor
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
-draw_set_font(fontDebug);
+draw_set_font(font);
 
-draw_rectangle_color(x, y, x + width, y + height, c_dkgray, c_dkgray, c_dkgray, c_dkgray, 0);
+if (background != noone)
+	draw_rectangle_color(x, y, x + width, y + height, c_dkgray, c_dkgray, c_dkgray, c_dkgray, 0);
 
 for(var i = 0; i <= lineNumber; i++)
 {
