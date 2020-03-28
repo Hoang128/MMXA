@@ -1,5 +1,26 @@
 /// @description Handle
 
+if (!init)
+{
+	lineHandle[lineNumber + 1] = false;
+	lineExecute[lineNumber + 1] = false;
+	lineEnable[lineNumber + 1] = true;
+	lineChild[lineNumber + 1] = noone;
+	for(var i=0; i <= lineNumber; i++)
+	{
+		if (lineEnable[i] != false)
+			lineEnable[i] = true;
+		lineHandle[i] = false;
+		lineExecute[i] = false;
+		if (lineChild[i] != noone)
+			continue;
+		else
+			lineChild[i] = noone;
+	}
+	
+	init++;
+}
+
 if (active)
 {
 	if (keyboard_check_pressed(global.keyUp) && !(keyboard_check_pressed(global.keyDown)))
@@ -28,6 +49,14 @@ if (active)
 			if (haveEndEff)
 				instance_create_depth(x, y, depth, obj_effClosing_Black);
 			active = false;
+		}
+	}
+	
+	if (instance_exists(parent))
+	{
+		if (keyboard_check_pressed(global.keyDash) || keyboard_check_pressed(vk_escape))
+		{
+			instance_destroy(self);
 		}
 	}
 }

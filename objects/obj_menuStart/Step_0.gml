@@ -8,3 +8,8 @@ if (lineExecute[1])
 {
 	room_goto(room_test);
 }
+
+if (lineExecute[3])
+{
+	room_goto(room_option);
+}
