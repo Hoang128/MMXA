@@ -4,19 +4,22 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_font(font);
 
-if (background != noone)
+if ((visibleWhenDeactivate) || ((active) && (!visibleWhenDeactivate)))
 {
-	draw_set_alpha(backgroundAlpha);
-	draw_rectangle_color(x, y, x + width, y + height, c_dkgray, c_dkgray, c_dkgray, c_dkgray, 0);
-	draw_set_alpha(1);
-}
+	if (background != noone)
+	{
+		draw_set_alpha(backgroundAlpha);
+		draw_rectangle_color(x, y, x + width, y + height, c_dkgray, c_dkgray, c_dkgray, c_dkgray, 0);
+		draw_set_alpha(1);
+	}
 
-draw_set_color(c_white);
-draw_text(x + xStartSpace, y + yStartSpace, lineContext[0]);
+	draw_set_color(c_white);
+	draw_text(x + xStartSpace, y + yStartSpace, lineContext[0]);
 
-for(var i = 1; i <= lineNumber; i++)
-{
-	draw_set_color(c_gray);
-	if (cursor == i) draw_set_color(c_white);
-	draw_text(x + xStartSpace, y + yStartSpace + i * lineSpace, lineContext[i]);
+	for(var i = 1; i <= lineNumber; i++)
+	{
+		draw_set_color(c_gray);
+		if (cursor == i) draw_set_color(c_white);
+		draw_text(x + xStartSpace, y + yStartSpace + i * lineSpace, lineContext[i]);
+	}
 }

@@ -21,7 +21,7 @@ if (!init)
 	init++;
 }
 
-if (active)
+if (active == 1)
 {
 	if (keyboard_check_pressed(global.keyUp) && !(keyboard_check_pressed(global.keyDown)))
 	{
@@ -52,13 +52,26 @@ if (active)
 		}
 	}
 	
-	if (instance_exists(parent))
+	if (instance_exists(parent) || (lastRoom != noone))
 	{
 		if (keyboard_check_pressed(global.keyDash) || keyboard_check_pressed(vk_escape))
 		{
-			instance_destroy(self);
+			backHandle = true;
+			if (haveDesEff)
+				instance_create_depth(x, y, depth, obj_effClosing_Black);
+			active = false;
 		}
 	}
+}
+
+if (backHandle)
+{
+	if (haveDesEff)
+	{
+		if (obj_effClosing_Black.image_alpha == 1)
+			backExecute = true;
+	}
+	else backExecute = true;
 }
 
 for (var i = 1; i <= lineNumber; i++)

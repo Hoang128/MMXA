@@ -10,9 +10,14 @@ yStartSpace = 4;
 width = 360;
 height = 360;
 haveEndEff = 0;
+haveDesEff = 0;
 haveStartAnim = 0;
 parent = noone;
 backgroundAlpha = 0.5;
+visibleWhenDeactivate = false;
+lastRoom = noone;
+backHandle = false;
+backExecute = false;
 
 lineContext[0] = "";
 lineContext[1] = "Start";
