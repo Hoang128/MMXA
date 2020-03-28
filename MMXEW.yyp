@@ -287,6 +287,14 @@
             }
         },
         {
+            "Key": "1406c20c-f593-4274-becf-f73f31daa0ba",
+            "Value": {
+                "id": "b9ae8522-1f9d-4ec8-9274-8bc31b634bde",
+                "resourcePath": "views\\1406c20c-f593-4274-becf-f73f31daa0ba.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "143e087c-630e-4f7f-aaec-2027c5ddb861",
             "Value": {
                 "id": "b1b1f522-549f-4c07-a48b-50a4a70d7916",
@@ -1076,14 +1084,6 @@
                 "id": "a4c155f2-b506-4135-942d-b77f98b696b3",
                 "resourcePath": "objects\\obj_startMenu\\obj_startMenu.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "74e024f0-d7c1-4c53-962d-69acc5ffac2e",
-            "Value": {
-                "id": "2d2aeb2c-4927-403f-94a1-d3813e155b3c",
-                "resourcePath": "views\\74e024f0-d7c1-4c53-962d-69acc5ffac2e.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -2092,6 +2092,14 @@
                 "id": "a6c3da32-5c5f-4311-9f78-135820cb35da",
                 "resourcePath": "sprites\\spr_ZDying\\spr_ZDying.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ebf62235-634f-4267-bc80-b608ac021a9a",
+            "Value": {
+                "id": "4869231c-f640-4ec9-a1aa-887053a3b723",
+                "resourcePath": "objects\\obj_menu\\obj_menu.yy",
+                "resourceType": "GMObject"
             }
         },
         {

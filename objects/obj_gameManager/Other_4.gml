@@ -9,5 +9,7 @@ if (global.debugging)
 //Init for start room
 
 if (global.isStage)
+{
 	instance_create_depth(x, y, depth, obj_playerZ);
-instance_create_depth(x, y, depth, obj_view);
+	instance_create_depth(x, y, depth, obj_view);
+}

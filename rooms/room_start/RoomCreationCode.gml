@@ -8,6 +8,7 @@ global.isStage = false;
 //Game Config
 room_speed = 60;
 global.deltaTime = 1; //Using for slow-time effect
+global.font = fontDebug;
 
 //Default Key Blind
 global.keyUp = vk_up;
