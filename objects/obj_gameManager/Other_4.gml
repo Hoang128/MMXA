@@ -10,6 +10,6 @@ if (global.debugging)
 
 if (global.isStage)
 {
-	instance_create_depth(x, y, depth, obj_playerZ);
+	instance_create_depth(x, y, -100, obj_playerZ);
 	instance_create_depth(x, y, depth, obj_view);
 }

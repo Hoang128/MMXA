@@ -903,6 +903,14 @@
             }
         },
         {
+            "Key": "65090512-e7d0-41c6-8fe5-6fc875a37519",
+            "Value": {
+                "id": "ffeaf2f1-5d0a-44d3-9857-b96a8d741332",
+                "resourcePath": "rooms\\room_option\\room_option.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "66fd89ec-f761-42de-96c4-1f23fbf558a2",
             "Value": {
                 "id": "15b3a2f2-1048-47c7-9850-5934320f28b8",
@@ -2044,6 +2052,14 @@
                 "id": "4478196e-a694-4c5f-8959-4787962df0c3",
                 "resourcePath": "sounds\\snd_VXJump3\\snd_VXJump3.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "e65cc7ef-f9db-4c6a-a229-d6385439bd41",
+            "Value": {
+                "id": "7287d7e0-170c-4e9c-a8ea-2b1add13e286",
+                "resourcePath": "objects\\obj_testInGameMenu\\obj_testInGameMenu.yy",
+                "resourceType": "GMObject"
             }
         },
         {

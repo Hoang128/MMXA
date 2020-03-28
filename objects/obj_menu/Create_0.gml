@@ -6,6 +6,8 @@ background = 0;
 lineSpace = 16;
 xStartSpace = 4;
 yStartSpace = 4;
+width = 360;
+height = 360;
 
 lineContext[0] = "";
 lineContext[1] = "Start";
