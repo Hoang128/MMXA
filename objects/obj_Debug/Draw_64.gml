@@ -196,3 +196,9 @@ else{
 		#endregion
 	}
 }
+
+draw_set_color(debugTextColorB);
+draw_text(xPlace+1,yPlace+1,string_hash_to_newline("spinner number = " + string(instance_number(obj_spinnerWindowMode))));
+draw_set_color(debugTextColorF);
+draw_text(xPlace,yPlace,string_hash_to_newline("spinner number = " + string(instance_number(obj_spinnerWindowMode))));
+yPlace += lineSpace;

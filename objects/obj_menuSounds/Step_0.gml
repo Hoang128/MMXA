@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-if (backHandle)
+if (backExecute)
 {
 	instance_destroy();
 }

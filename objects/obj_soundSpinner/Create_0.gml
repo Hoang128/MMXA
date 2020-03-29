@@ -8,9 +8,9 @@ valDisplay = parameter * ratio;
 triangleSpace = 32;
 triangleWidth = 20;
 triangleHeight = 32;
-line = 0;
 soundConfirm = snd_UISelect;
 soundMove = snd_UISelectChange;
+line = 1;
 
 active = -3;
 font = fnt_UIBoldMedium;
