@@ -69,4 +69,5 @@ global.zForm[1] = ItemState.USING;
 global.zSaber[1] = ItemState.USING;
 
 //Create Manager Object
-instance_create_depth(64, 96, -1000000, obj_gameManager);
+if (!instance_exists(obj_gameManager))
+	instance_create_depth(64, 96, -1000000, obj_gameManager);

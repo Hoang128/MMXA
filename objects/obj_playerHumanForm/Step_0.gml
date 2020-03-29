@@ -198,7 +198,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	{
 		if (dashKickFlyTime <= 0)
 		{
-			sprite_index = sprJump3;
+			sprite_index = sprJump2;
 			image_index = 0;
 			
 			hState = HorizontalState.H_MOVE_NONE;
