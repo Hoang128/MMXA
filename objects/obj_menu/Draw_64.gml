@@ -13,14 +13,25 @@ if ((visibleWhenDeactivate) || ((active) && (!visibleWhenDeactivate)))
 		draw_set_alpha(1);
 	}
 
+	
+	if (shadow == 1)
+	{
+		draw_set_color(c_black);
+		draw_text(x + shadowDistance + xStartSpace, y + shadowDistance + yStartSpace, lineContext[0]);
+	}
 	draw_set_color(c_white);
 	draw_text(x + xStartSpace, y + yStartSpace, lineContext[0]);
 
 	for(var i = 1; i <= lineNumber; i++)
 	{
+		if (shadow == 1)
+		{
+			draw_set_color(c_black);
+			draw_text(x + shadowDistance + xStartSpace, y + shadowDistance + yStartSpace + i * lineSpace, lineContext[i]);
+		}
 		draw_set_color(c_white);
-		if (lineEnable[i] == false) draw_set_color(c_gray);
 		if (cursor == i) draw_set_color(c_yellow);
+		if (lineEnable[i] == false) draw_set_color(c_gray);
 		draw_text(x + xStartSpace, y + yStartSpace + i * lineSpace, lineContext[i]);
 	}
 }

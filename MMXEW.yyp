@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "11ce7ceb-496a-4986-ad8b-5b1ad5d8de82",
+            "Value": {
+                "id": "a21d3eb0-e8f5-4148-a1ea-6293999645f2",
+                "resourcePath": "objects\\obj_menuGrid\\obj_menuGrid.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1227ce9b-f376-4265-af78-09e208836021",
             "Value": {
                 "id": "a066aab1-970d-4ea6-8b08-4c3a9fe42c1a",
@@ -1916,6 +1924,14 @@
                 "id": "18803691-d6b8-4024-a497-aec5ebf4a8eb",
                 "resourcePath": "sounds\\snd_ZEarthGaizer\\snd_ZEarthGaizer.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "bcad8074-4ae9-4136-9b50-0f47e23154ee",
+            "Value": {
+                "id": "3099b018-17ed-49b0-aa06-0251076a9ae8",
+                "resourcePath": "objects\\obj_menuGraphics\\obj_menuGraphics.yy",
+                "resourceType": "GMObject"
             }
         },
         {

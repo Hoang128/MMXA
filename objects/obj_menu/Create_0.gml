@@ -20,6 +20,8 @@ backHandle = false;
 backExecute = false;
 soundConfirm = snd_UISelect;
 soundMove = snd_UISelectChange;
+shadow = 1;
+shadowDistance = 4;
 
 lineContext[0] = "";
 lineContext[1] = "Start";

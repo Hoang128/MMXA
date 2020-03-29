@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 //Initialize parameter
-font = fnt_UISmall;
+font = fnt_UIBoldSmall;
 lineNumber = 3;
 background = 0;
 lineSpace = 16;

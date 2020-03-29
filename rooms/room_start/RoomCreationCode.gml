@@ -22,8 +22,10 @@ global.keySpAtk = ord("V");
 global.keyChangeL = ord("A");
 global.keyChangeR = ord("S");
 global.keyGiga = vk_space;
-global.keyMap = ord("F");
-global.keySupport = ord("D");
+global.keyChar1 = ord("D");
+global.keyChar2 = ord("F");
+global.keyStart = vk_enter;
+global.keyMap = vk_tab;
 
 //Item state
 enum ItemState

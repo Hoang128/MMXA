@@ -5,7 +5,7 @@ event_inherited();
 
 //Initialize parameter
 font = fnt_UIBoldMedium;
-lineNumber = 3;
+lineNumber = 4;
 background = noone;
 lineSpace = 64;
 xStartSpace = 4;
@@ -16,5 +16,6 @@ lineContext[0] = "";
 lineContext[1] = "START";
 lineContext[2] = "CONTINUE";
 lineContext[3] = "OPTION";
+lineContext[4] = "EXIT";
 
 scr_InitMenuProp();

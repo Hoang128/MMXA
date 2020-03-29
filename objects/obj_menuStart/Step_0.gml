@@ -13,3 +13,8 @@ if (lineExecute[3])
 {
 	room_goto(room_option);
 }
+
+if (lineExecute[4])
+{
+	game_end();
+}
