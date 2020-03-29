@@ -6,8 +6,13 @@ if (active == 1)
 	{
 		if (cursor > 1) 
 		{
-			audio_play_sound_on(global.SFXVolume, soundMove, 0, 0);
-			cursor--;
+			var newPlace = cursor - 1;
+			while (lineEnable[newPlace] == false) newPlace--;
+			if (newPlace != 0)
+			{
+				audio_play_sound_on(global.SFXVolume, soundMove, 0, 0);
+				cursor = newPlace;
+			}
 		}
 	}
 	
@@ -15,8 +20,13 @@ if (active == 1)
 	{
 		if (cursor < lineNumber)
 		{
-			audio_play_sound_on(global.SFXVolume, soundMove, 0, 0);
-			cursor++;
+			var newPlace = cursor + 1;
+			while (lineEnable[newPlace] == false) newPlace++;
+			if (newPlace != (lineNumber + 1))
+			{
+				audio_play_sound_on(global.SFXVolume, soundMove, 0, 0);
+				cursor = newPlace;
+			}
 		}
 	}
 	
