@@ -18,6 +18,8 @@ visibleWhenDeactivate = false;
 lastRoom = noone;
 backHandle = false;
 backExecute = false;
+soundConfirm = snd_UISelect;
+soundMove = snd_UISelectChange;
 
 lineContext[0] = "";
 lineContext[1] = "Start";

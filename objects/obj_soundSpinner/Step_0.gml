@@ -7,6 +7,7 @@ if (active)
 	{
 		if (valDisplay > minVal)
 		{
+			audio_play_sound_on(global.SFX_Emitter, soundMove, 0, 0);
 			valDisplay--;
 		}
 	}
@@ -15,12 +16,14 @@ if (active)
 	{
 		if (valDisplay < maxVal)
 		{
+			audio_play_sound_on(global.SFX_Emitter, soundMove, 0, 0);
 			valDisplay++;
 		}
 	}
 	
 	if (keyboard_check_pressed(global.keyDash))
 	{
+		audio_play_sound_on(global.SFX_Emitter, soundMove, 0, 0);
 		active = -3;
 		obj_menuSounds.lineExecute[line] = false;
 		obj_menuSounds.lineHandle[line] = false;
@@ -29,6 +32,7 @@ if (active)
 	
 	if (keyboard_check_pressed(global.keyJump))
 	{
+		audio_play_sound_on(global.SFX_Emitter, soundConfirm, 0, 0);
 		active = -3
 		parameter = valDisplay / ratio;
 		obj_menuSounds.lineExecute[line] = false;

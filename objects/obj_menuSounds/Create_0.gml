@@ -16,7 +16,7 @@ xStartSpinner = 640;
 parent = obj_menuOption;
 visibleWhenDeactivate = true;
 
-lineContext[0] = "Sound configurations";
+lineContext[0] = "SOUND CONFIGURATIONS";
 lineContext[1] = "Master sound: ";
 lineContext[2] = "SFX sound: ";
 lineContext[3] = "BGM sound: ";

@@ -9,7 +9,8 @@ triangleSpace = 24;
 triangleWidth = 24;
 triangleHeight = 36;
 line = 0;
-inited = 0;
+soundConfirm = snd_UISelect;
+soundMove = snd_UISelectChange;
 
 active = -3;
 font = fnt_UIBoldMedium;
