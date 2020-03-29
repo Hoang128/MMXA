@@ -18,8 +18,9 @@ if ((visibleWhenDeactivate) || ((active) && (!visibleWhenDeactivate)))
 
 	for(var i = 1; i <= lineNumber; i++)
 	{
-		draw_set_color(c_gray);
-		if (cursor == i) draw_set_color(c_white);
+		draw_set_color(c_white);
+		if (lineEnable[i] == false) draw_set_color(c_gray);
+		if (cursor == i) draw_set_color(c_yellow);
 		draw_text(x + xStartSpace, y + yStartSpace + i * lineSpace, lineContext[i]);
 	}
 }

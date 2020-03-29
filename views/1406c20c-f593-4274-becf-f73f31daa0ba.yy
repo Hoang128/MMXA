@@ -6,10 +6,9 @@
     "children": [
         "a319451b-4a60-42a4-beab-b1dce7111111",
         "ebf62235-634f-4267-bc80-b608ac021a9a",
-        "73f93694-5b91-406f-9a58-f52e0749d4de",
-        "267970a6-e9d2-4fa3-9fc2-567099dbfd87",
-        "307c51d1-1ea1-41b9-80ef-5692f580288d",
-        "361a4121-f5fb-4370-ab85-577946893093"
+        "9ebd79a1-42f9-46f4-8660-aef43b30ce12",
+        "ef333d0d-7ca4-4ef0-817e-352767e0f43c",
+        "9056e0a5-aefc-4dad-9dbf-1be65cf683da"
     ],
     "filterType": "GMObject",
     "folderName": "Menu",

@@ -1,0 +1,18 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+//Initialize parameter
+font = fnt_UISmall;
+lineNumber = 3;
+background = 0;
+lineSpace = 16;
+xStartSpace = 4;
+yStartSpace = 4;
+width = 360;
+height = 360;
+haveEndEff = 0;
+haveDesEff = 0;
+haveStartAnim = 0;
+parent = noone;
+backgroundAlpha = 0.8;
+context = "Press " + string(global.keyUp) + " - " + string(global.keyDown) + " to select. Press " + string(global.keyJump) + " to confirm. Press "+ string(global.keyDash) + " to back to previous menu.";

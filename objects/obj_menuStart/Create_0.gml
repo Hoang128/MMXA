@@ -16,3 +16,5 @@ lineContext[0] = "";
 lineContext[1] = "START";
 lineContext[2] = "CONTINUE";
 lineContext[3] = "OPTION";
+
+scr_InitMenuProp();

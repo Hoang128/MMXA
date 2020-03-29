@@ -1,26 +1,5 @@
 /// @description Handle
 
-if (!init)
-{
-	lineHandle[lineNumber + 1] = false;
-	lineExecute[lineNumber + 1] = false;
-	lineEnable[lineNumber + 1] = true;
-	lineChild[lineNumber + 1] = noone;
-	for(var i=0; i <= lineNumber; i++)
-	{
-		if (lineEnable[i] != false)
-			lineEnable[i] = true;
-		lineHandle[i] = false;
-		lineExecute[i] = false;
-		if (lineChild[i] != noone)
-			continue;
-		else
-			lineChild[i] = noone;
-	}
-	
-	init++;
-}
-
 if (active == 1)
 {
 	if (keyboard_check_pressed(global.keyUp) && !(keyboard_check_pressed(global.keyDown)))

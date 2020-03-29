@@ -311,6 +311,22 @@
             }
         },
         {
+            "Key": "14eebf66-1d34-41b1-a231-7c39de7142bf",
+            "Value": {
+                "id": "3c70770c-89b4-451a-8a04-40fa24152daa",
+                "resourcePath": "objects\\obj_menuTextboxInstruction\\obj_menuTextboxInstruction.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "158c4eef-406f-4f44-8c1d-16d1b8950427",
+            "Value": {
+                "id": "fd828654-6a48-44ef-b9c5-cd1e84799734",
+                "resourcePath": "views\\158c4eef-406f-4f44-8c1d-16d1b8950427.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "1681e449-2de9-4d38-95b0-08e11406cf29",
             "Value": {
                 "id": "6bc910a1-972c-4aeb-ad35-1dbb274c2bfb",
@@ -695,6 +711,14 @@
             }
         },
         {
+            "Key": "44bf5ac6-93f3-40a9-90be-8f19aea3d9fd",
+            "Value": {
+                "id": "dd86a039-2e6a-494b-95fa-8088a409313c",
+                "resourcePath": "scripts\\scr_InitMenuProp\\scr_InitMenuProp.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "46dc4241-e6b3-426f-bc05-95aace2503ac",
             "Value": {
                 "id": "df6110a3-be64-4eae-a8b4-a35e17f333e2",
@@ -980,6 +1004,14 @@
                 "id": "ffeaf2f1-5d0a-44d3-9857-b96a8d741332",
                 "resourcePath": "rooms\\room_option\\room_option.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "65fb9be3-b71a-4860-9662-2c7bf4247534",
+            "Value": {
+                "id": "144c86f9-3ad6-463b-8e0d-cc282c27a1c9",
+                "resourcePath": "scripts\\scr_keyToString\\scr_keyToString.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1471,6 +1503,14 @@
             }
         },
         {
+            "Key": "9056e0a5-aefc-4dad-9dbf-1be65cf683da",
+            "Value": {
+                "id": "31135ef4-e49b-4a17-991c-e4a3f79e6ade",
+                "resourcePath": "views\\9056e0a5-aefc-4dad-9dbf-1be65cf683da.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "916bf6d8-6e24-4bdc-b496-f2f3523184b6",
             "Value": {
                 "id": "9b488078-223b-4544-a50d-a44393f017a9",
@@ -1579,6 +1619,14 @@
             "Value": {
                 "id": "faa2cf4c-b54e-46e7-9928-861c05e3e130",
                 "resourcePath": "objects\\obj_effClosing_Black\\obj_effClosing_Black.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9ebd79a1-42f9-46f4-8660-aef43b30ce12",
+            "Value": {
+                "id": "29e727a1-1482-47db-bbd0-09a512fd7a61",
+                "resourcePath": "objects\\obj_menuTextBox\\obj_menuTextBox.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2247,6 +2295,14 @@
             }
         },
         {
+            "Key": "edb429f7-9773-4e09-854a-de25f8e50a2b",
+            "Value": {
+                "id": "19923043-a85f-4f5c-a7bf-55bafb0c3b67",
+                "resourcePath": "objects\\obj_menuKeyboard\\obj_menuKeyboard.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ee800bcd-d1f0-4812-8acf-d74f5ade03a1",
             "Value": {
                 "id": "ba71844f-d996-47ea-a18a-077992abb7da",
@@ -2260,6 +2316,14 @@
                 "id": "32d78b65-662b-4f11-8aa6-dfbbae18d691",
                 "resourcePath": "objects\\obj_effOpening_Black\\obj_effOpening_Black.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ef333d0d-7ca4-4ef0-817e-352767e0f43c",
+            "Value": {
+                "id": "fee93a04-dc54-4e00-9100-c727c4f5bcee",
+                "resourcePath": "views\\ef333d0d-7ca4-4ef0-817e-352767e0f43c.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2406,6 +2470,8 @@
         "7ef9a279-fb33-45fb-98f1-cf544f7c38d5",
         "bde8392f-6330-47e0-a68b-0e2e6195c91a",
         "9a64ac67-4b58-4171-85d8-07252e052eea",
+        "44bf5ac6-93f3-40a9-90be-8f19aea3d9fd",
+        "65fb9be3-b71a-4860-9662-2c7bf4247534",
         "0d069b93-fa38-4104-be09-e62014bf290b",
         "b7d0e6b2-03f3-4860-97dd-a63104070941",
         "5921e6d7-32dd-4709-847d-725d982b7456"

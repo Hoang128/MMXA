@@ -13,7 +13,7 @@ haveEndEff = 0;
 haveDesEff = 0;
 haveStartAnim = 0;
 parent = noone;
-backgroundAlpha = 0.5;
+backgroundAlpha = 0.8;
 visibleWhenDeactivate = false;
 lastRoom = noone;
 backHandle = false;
@@ -28,3 +28,5 @@ lineContext[3] = "Option";
 cursor = 1;
 active = 1;
 init = 0;
+
+scr_InitMenuProp();

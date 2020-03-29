@@ -11,5 +11,5 @@ triangleHeight = 36;
 line = 0;
 inited = 0;
 
-active = 0;
+active = -3;
 font = fnt_UIBoldMedium;
