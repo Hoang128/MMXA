@@ -646,7 +646,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							image_index = 1;
 							
 							dashPhase = 1;
-							dashTime = maxDashTime;
+							dashTime = maxAirDashTime;
 							vspd = 0;
 							vState = VerticalState.V_MOVE_NONE;
 							hState = HorizontalState.H_MOVE_FORWARD;
