@@ -102,21 +102,29 @@ if (activateState != ActivateState.DEACTIVATE)
 		vspd = 0;
 		if ((vState != VerticalState.V_ON_GROUND) && (aState != ActionState.CLIMBING))
 		{
-			sprite_index = sprLand;
-			image_index = 0;
-			audio_play_sound_on(global.SFX_Emitter, sndLandEff, 0, 0);
-			
-			canSlide = 0;
-			if (aState == ActionState.JUMPDASHING)
+			if (aState != ActionState.BEAMDOWN)
 			{
-				if (dashPhase > 0)
+				sprite_index = sprLand;
+				image_index = 0;
+				audio_play_sound_on(global.SFX_Emitter, sndLandEff, 0, 0);
+			
+				canSlide = 0;
+				if (aState == ActionState.JUMPDASHING)
 				{
-					dashSpd = 0;
-					dashPhase = 0;
+					if (dashPhase > 0)
+					{
+						dashSpd = 0;
+						dashPhase = 0;
+					}
 				}
+				if (!canAirDash)
+					canAirDash = 1;
 			}
-			if (!canAirDash)
-				canAirDash = 1;
+			else
+			{
+				if (sprite_index = sprFlash)
+					sprite_index = sprBeamDown;
+			}
 			vState = VerticalState.V_ON_GROUND;
 			aState = ActionState.IDLE;
 		}
@@ -186,6 +194,10 @@ if (activateState != ActivateState.DEACTIVATE)
 					aState = ActionState.IDLE;
 					vState = VerticalState.V_MOVE_FALLING;
 				}
+			}
+			if (aState == ActionState.BEAMDOWN)
+			{
+				vspd = beamSpd;
 			}
 		}
 	}
@@ -302,7 +314,8 @@ if (activateState != ActivateState.DEACTIVATE)
 			//Normal run
 			if((aState != ActionState.DASHING) && (aState != ActionState.CLIMBING))
 			{
-				hDir = hMove;
+				if (atkState < AttackState.A_STRICT_ATTACK)
+					hDir = hMove;
 				if (aState != ActionState.DUCKING)
 				{
 					var wallIsAHead = (place_meeting(x + hDir, y, obj_block) && (!place_meeting(x + hDir, y, obj_slope)));
@@ -340,13 +353,19 @@ if (activateState != ActivateState.DEACTIVATE)
 						//Run
 						else
 						{
-							if (sprite_index == sprStand || sprite_index == sprLand || sprite_index == sprDash3)
+							if (atkState < AttackState.A_STRICT_ATTACK)
 							{
-								sprite_index = sprRunStart;
-								image_index = 0;
+								if ((aState == ActionState.IDLE) && (vState == VerticalState.V_ON_GROUND)) 
+								{
+									if ((sprite_index != sprRunStart) && (sprite_index != sprRun))
+									{
+										sprite_index = sprRunStart;
+										image_index = 0;
+									}
+								}
+								hspd = hDir * runSpd;
+								hState = HorizontalState.H_MOVE_FORWARD;
 							}
-							hspd = hDir * runSpd;
-							hState = HorizontalState.H_MOVE_FORWARD;
 						}
 					}
 					else
@@ -634,7 +653,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		var wallIsAHead = (place_meeting(x + hDir, y, obj_block) && (!place_meeting(x + hDir, y, obj_slope)));
 		if (keyboard_check_pressed(global.keyDash) && (!wallIsAHead))
 		{
-			if ((aState != ActionState.CLIMBING) && (atkState != AttackState.A_STRICT_ATTACK))
+			if ((aState != ActionState.CLIMBING) && (atkState < AttackState.A_STRICT_ATTACK_LV2))
 			{
 				if (aState != ActionState.JUMPDASHING)
 				{
@@ -648,6 +667,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							dashPhase = 1;
 							dashTime = maxAirDashTime;
 							vspd = 0;
+							if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
 							vState = VerticalState.V_MOVE_NONE;
 							hState = HorizontalState.H_MOVE_FORWARD;
 							aState = ActionState.DASHING;
@@ -661,6 +681,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						
 						dashPhase = 1;
 						dashTime = maxDashTime;
+						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
 						hState = HorizontalState.H_MOVE_FORWARD;
 						aState = ActionState.DASHING;
 					}
@@ -716,7 +737,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		#region
 		
 		//Start jump
-		if (keyboard_check_pressed(global.keyJump) && (canJump))
+		if (keyboard_check_pressed(global.keyJump) && (canJump) && (atkState < AttackState.A_STRICT_ATTACK_LV3))
 		{
 			//Normal jump
 			#region
@@ -742,6 +763,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				}
 				else
 					aState = ActionState.IDLE;
+				if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
 				vState = VerticalState.V_MOVE_FALLING;
 			}
 			
@@ -763,6 +785,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						canJump = 0;
 						vState = VerticalState.V_MOVE_FALLING;
 						aState = ActionState.IDLE;
+						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
 					}
 				}
 				
@@ -790,6 +813,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						hState = HorizontalState.H_MOVE_PASSIVE;
 						vState = VerticalState.V_MOVE_UP;
 						aState = ActionState.DASHKICK;
+						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
 					}
 					
 					//Wall kick
@@ -809,6 +833,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						hState = HorizontalState.H_MOVE_PASSIVE;
 						vState = VerticalState.V_MOVE_UP;
 						aState = ActionState.WALLKICK;
+						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
 					}
 				}
 			}

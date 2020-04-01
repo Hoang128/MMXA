@@ -87,7 +87,7 @@ else{
 			switch aState
 			{
 				case ActionState.ACTION_INTERACTION: str_aState = "ACTION INTERACTION"; break;
-				case ActionState.FLASHING: str_aState = "FLASHING" break;
+				case ActionState.BEAMDOWN: str_aState = "BEAMDOWN" break;
 				case ActionState.IDLE: str_aState = "IDLE" break;
 				case ActionState.DASHING: str_aState = "DASHING" break;
 				case ActionState.STUNNING: str_aState = "STUNNING" break;

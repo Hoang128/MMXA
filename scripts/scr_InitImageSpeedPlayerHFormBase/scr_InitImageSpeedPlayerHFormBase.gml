@@ -5,6 +5,7 @@ switch argument0
 		#region
 		switch sprite_index
 		{
+			//General
 			case sprStand: image_speed = 0.1; break;
 			case sprRunStart:
 			case sprRun:
@@ -36,6 +37,7 @@ switch argument0
 		#region
 		switch sprite_index
 		{
+			//General
 			case sprStand: image_speed = 0.1; break;
 			case sprRunStart:
 			case sprRun:
@@ -56,7 +58,12 @@ switch argument0
 			case sprClimb2:
 			case sprClimb3: image_speed = isClimbing * 0.3; break;
 			
-			case sprDoubleJump: image_speed = 0.35; break;
+			//Zero only
+			case spr_ZDoubleJump: image_speed = 0.35; break;
+			case spr_ZSlashCombo1: image_speed = 0.7; break;
+			case spr_ZSlashCombo2: image_speed = 0.7; break;
+			case spr_ZSaberCombo3: image_speed = 0.7; break;
+			
 			default: image_speed = 0.5; break;
 		}
 		image_speed *= global.deltaTime;

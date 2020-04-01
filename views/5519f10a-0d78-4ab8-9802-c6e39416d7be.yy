@@ -10,7 +10,7 @@
         "ce37b693-1ada-4ee4-aae4-fc1ed75701a4"
     ],
     "filterType": "GMObject",
-    "folderName": "Effect",
+    "folderName": "Common Effect",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

@@ -3,6 +3,9 @@ switch argument0
 	case obj_playerX:
 	{
 		#region
+		sprFlash = spr_XFlash;
+		sprBeamDown = spr_XBeamDown;
+		sprBeamUp = noone;
 		sprStand = spr_XStand;
 		sprDying = spr_XDying;
 		sprLand = spr_XLand;
@@ -34,6 +37,9 @@ switch argument0
 	case obj_playerZ:
 	{
 		#region
+		sprFlash = spr_ZFlash;
+		sprBeamDown = spr_ZBeamDown;
+		sprBeamUp = noone;
 		sprStand = spr_ZStand;
 		sprDying = spr_ZDying;
 		sprLand = spr_ZLand;

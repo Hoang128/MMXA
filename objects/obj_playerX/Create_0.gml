@@ -19,8 +19,8 @@ scr_InitSoundPlayerHFromBase(obj_playerX);
 scr_PalSwapInitSystem(shd_pal_swapper);
 myPal = spr_PalX;
 
+//Initialize states
+scr_InitStatePlayer(weight);
+
 //Initialize Inside Variables
 atkSpriteTime = 0;
-
-//Debug
-sprite_index=sprStand;

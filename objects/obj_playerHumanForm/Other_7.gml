@@ -1,4 +1,18 @@
 /// @description Animated end stuff
+if (weight != WeighType.MASSIVE)
+{
+	if (sprite_index == sprBeamDown)
+	{
+		aState = ActionState.IDLE;
+		vState = VerticalState.V_ON_GROUND;
+		activateState = ActivateState.ACTIVATE;
+		vspd = 0;
+		
+		sprite_index = sprStand;
+		image_index = 0;
+	}
+}
+
 if (sprite_index == sprRunStart)
 {
 	sprite_index = sprRun;

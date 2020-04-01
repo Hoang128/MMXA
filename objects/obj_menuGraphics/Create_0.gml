@@ -5,7 +5,7 @@ event_inherited();
 
 //Initialize parameter
 font = fnt_UIBoldSmall;
-lineNumber = 3;
+lineNumber = 2;
 background = c_dkgray;
 // = 0.5;
 lineSpace = 128;
@@ -19,7 +19,6 @@ visibleWhenDeactivate = true;
 lineContext[0] = "GRAPHICS CONFIGURATIONS";
 lineContext[1] = "Window mode: ";
 lineContext[2] = "Window size: ";
-lineContext[3] = "Vertical Sync: ";
 
 
 spinner[0] = instance_create_depth(xStartSpinner, yStartSpace + 1 * lineSpace + 18, depth - 1, obj_spinnerWindowMode);

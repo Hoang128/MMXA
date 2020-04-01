@@ -32,7 +32,7 @@
                     "targets": 461609314234257646,
                     "autocrop": true,
                     "border": 2,
-                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "groupParent": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
                     "mipsToGenerate": 0,
                     "scaled": true
                 }

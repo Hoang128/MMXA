@@ -1,4 +1,4 @@
-/// @description Draw self
+/// @description Draw debug
 
 if (dynamicBlock!=noone){
 if (dynamicBlock.object_index == obj_ladder)

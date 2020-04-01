@@ -27,6 +27,7 @@ shadowCreateTimeMax = 2; //Frame number between create shadow frame
 maxDisDetectSlopeAbove = 4; //Distance to detect slope on the ground
 minDistanceToLadder = 6; //Distance to ladder to climb
 distanceToMoveAnimationLadder = 34; //DO NOT MODIFY THIS
+beamSpd = 3; //Beam down and beam up speed
 canJumpWaitMax = 2;
 climbSpd = 2;
 xPlaceDashEff = 0;
@@ -36,7 +37,8 @@ yPlaceDashEff = 0;
 enum ActionState
 {
 	ACTION_INTERACTION,
-	FLASHING,
+	BEAMDOWN,
+	BEAMUP,
 	IDLE,
 	DASHING,
 	JUMPDASHING,
@@ -47,7 +49,9 @@ enum ActionState
 	SLIDING,
 	DUCKING,
 	WALLKICK,
-	DASHKICK
+	DASHKICK,
+	
+	WAITING //Only ride armor
 }
 
 enum VerticalState
@@ -69,8 +73,11 @@ enum HorizontalState
 enum AttackState
 {
 	A_NONE,
-	A_NORMAL_ATTACK, //Can cancel
-	A_STRICT_ATTACK, //Can only cancel by attacked by enemy 
+	A_NORMAL_ATTACK, //X's attack
+	A_STRICT_ATTACK, //Can cancel by run, dash, jump, duck
+	A_STRICT_ATTACK_LV2, //Cannot cancel by run
+	A_STRICT_ATTACK_LV3, //Cannot cancel by run, dash
+	A_STRICT_ATTACK_LV4, //Cannot cancel by run, dash, jump
 	A_FREEZE_ATTACK  //Cannot cancel
 }
 
@@ -82,16 +89,13 @@ enum WeighType
 	MASSIVE
 }
 
-aState = ActionState.FLASHING;
+//Default state
+weight = WeighType.MEDIUM;
+activateState = ActivateState.HALF_ACTIVATE;
+aState = ActionState.BEAMDOWN;
 vState = VerticalState.V_MOVE_DOWN;
 hState = HorizontalState.H_MOVE_NONE;
 atkState = AttackState.A_NONE;
-weight = WeighType.MEDIUM;
-
-//For test
-activateState = ActivateState.ACTIVATE;
-aState = ActionState.IDLE;
-vState = VerticalState.V_MOVE_FALLING;
 
 //Inside Variable
 hspd = 0;
@@ -111,8 +115,10 @@ shadowCreateTime = shadowCreateTimeMax;
 isClimbing = 0;
 dynamicBlock = noone;
 
-
 //Initialize sprite
+sprFlash = noone;
+sprBeamDown = noone;
+sprBeamUp = noone;
 sprStand = noone;
 sprDying = noone;
 sprLand = noone;
