@@ -34,6 +34,12 @@ if (activateState != ActivateState.DEACTIVATE)
 			image_index = 0;
 			audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
 			audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
+			
+			if (instance_exists(obj_ZSaber)) 
+			{
+				obj_ZSaber.state = SaberState.SABER_COMBO_2;
+				obj_ZSaber.setupState = true;
+			}
 		}
 	}
 	
@@ -46,6 +52,11 @@ if (activateState != ActivateState.DEACTIVATE)
 			audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo3, 0, 0);
 			audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash3, 0, 0);
 			
+			if (instance_exists(obj_ZSaber)) 
+			{
+				obj_ZSaber.state = SaberState.SABER_COMBO_3;
+				obj_ZSaber.setupState = true;
+			}
 			atkState = AttackState.A_STRICT_ATTACK_LV2;
 		}
 	}
@@ -78,6 +89,9 @@ if (activateState != ActivateState.DEACTIVATE)
 							
 							hspd = 0;
 							atkState = AttackState.A_STRICT_ATTACK;
+							var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
+							objSaber.state = SaberState.SABER_COMBO_1;
+							objSaber.core = self;
 						}
 					}
 				}

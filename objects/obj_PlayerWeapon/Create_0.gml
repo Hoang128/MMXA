@@ -1,0 +1,6 @@
+/// @description Init
+damage = 0;
+collisionSFX = noone;
+canCreateDamage = true;
+createDamageTime = 2;
+timmer = 10;

@@ -30,3 +30,17 @@ atkSpriteTime = 0;
 airHikeTime = 1;
 standCombo = 0;
 canSlash = 1;
+
+//Initialize Saber state*******************************************************************************************************************************************
+enum SaberState
+{
+	SABER_NONE,
+	SABER_COMBO_1,
+	SABER_COMBO_2,
+	SABER_COMBO_3,
+	SABER_JUMP_SLASH,
+	SABER_DUCK_SLASH,
+	SABER_SPIN_SLASH,
+	SABER_SLIDE_SLASH,
+	SABER_CLIMB_SLASH
+}

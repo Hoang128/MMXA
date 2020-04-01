@@ -1423,6 +1423,14 @@
             }
         },
         {
+            "Key": "7ad2e235-3e72-4d12-b326-9d2fe2b81481",
+            "Value": {
+                "id": "1eb4e51e-c3f0-4a11-a944-211fe66bd63f",
+                "resourcePath": "views\\7ad2e235-3e72-4d12-b326-9d2fe2b81481.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "7c671d80-e59e-49b0-bfee-da5567d3f6f2",
             "Value": {
                 "id": "ac421920-8fa5-4f39-89c8-0b8f5687cf8a",
@@ -1719,6 +1727,14 @@
             }
         },
         {
+            "Key": "95f151ba-2ce2-432e-a1ef-e841b3055644",
+            "Value": {
+                "id": "b793c6cc-204b-4a83-a155-e35d933b6e67",
+                "resourcePath": "objects\\obj_ZSaber\\obj_ZSaber.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "96b38a97-c912-4078-9b42-e3da9a3e7077",
             "Value": {
                 "id": "364e7bac-9195-4f51-90ad-a6b58f1e8994",
@@ -1787,6 +1803,14 @@
             "Value": {
                 "id": "29e727a1-1482-47db-bbd0-09a512fd7a61",
                 "resourcePath": "objects\\obj_menuTextBox\\obj_menuTextBox.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9ed5e7ab-1a6b-458b-b6d8-7cd6c3da1b77",
+            "Value": {
+                "id": "4599c0e0-8517-4e88-8a19-1d1b6fa9a0a6",
+                "resourcePath": "objects\\obj_PlayerWeaponMeele\\obj_PlayerWeaponMeele.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2247,6 +2271,14 @@
             }
         },
         {
+            "Key": "cf9e2513-7d7d-4cdd-8936-12d6f12d8fed",
+            "Value": {
+                "id": "9639252e-d3f3-48bb-9d3c-bc25621e4b42",
+                "resourcePath": "objects\\obj_PlayerWeapon\\obj_PlayerWeapon.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d03c311d-0d20-48b3-8721-8d3e0b1fe14a",
             "Value": {
                 "id": "e8efc3f5-1e5f-4622-892b-26862ee94877",
@@ -2324,6 +2356,14 @@
                 "id": "2f7974ad-e270-4692-8706-09a10f780c0f",
                 "resourcePath": "objects\\obj_view\\obj_view.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d6dd3589-6cf4-4e77-a151-88583e5ef1e0",
+            "Value": {
+                "id": "a0cd6309-e333-43d5-9166-6feee667b4b8",
+                "resourcePath": "views\\d6dd3589-6cf4-4e77-a151-88583e5ef1e0.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

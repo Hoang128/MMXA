@@ -26,6 +26,7 @@ if (sprite_index == spr_ZSlashCombo1
 	standCombo = 0;
 	if (atkState < AttackState.A_STRICT_ATTACK_LV2)
 		atkState = AttackState.A_NONE;
+	else instance_destroy(obj_ZSaber);
 	
 	sprite_index = spr_ZSlashEnd_G;
 	image_index = 0;
