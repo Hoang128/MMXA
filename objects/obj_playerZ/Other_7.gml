@@ -64,3 +64,11 @@ if (sprite_index == spr_ZSlashLand)
 	sprite_index = sprStand;
 	image_index = 0;
 }
+
+if (sprite_index == spr_ZSlashDuck)
+{
+	atkState = AttackState.A_NONE;
+		
+	sprite_index = sprDuck2;
+	image_index = 0;
+}

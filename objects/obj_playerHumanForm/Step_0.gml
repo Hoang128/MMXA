@@ -487,7 +487,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				if (aState == ActionState.IDLE)
 				{
-					if (atkState < AttackState.A_STRICT_ATTACK_LV4)
+					if (atkState < AttackState.A_STRICT_ATTACK)
 					{
 						if (dynamicBlock != noone)
 						{
@@ -542,7 +542,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				//Jump down
 				if (keyboard_check_pressed(global.keyJump) && (canJump))
 				{
-					if (atkState < AttackState.A_STRICT_ATTACK_LV4)
+					if (atkState < AttackState.A_STRICT_ATTACK)
 					{
 						var dynamicBlockIsThinPlatform = (dynamicBlock != noone) && (dynamicBlock.object_index == obj_thinPlatform);
 						var canJumpDown = (dynamicBlock.solid) && (!place_meeting(x, y + 1, obj_block));
@@ -567,23 +567,26 @@ if (activateState != ActivateState.DEACTIVATE)
 			}
 		}
 		
-		if (keyboard_check_released(global.keyDown))
+		if (!keyboard_check(global.keyDown))
 		{
 			//Unduck
 			if (vState == VerticalState.V_ON_GROUND)
 			{
 				if (aState == ActionState.DUCKING)
 				{
-					sprite_index = sprDuck3;
-					if (sprite_index == sprDuck2)
+					if (atkState == AttackState.A_NONE)
 					{
-						image_index = 0;
+						sprite_index = sprDuck3;
+						if (sprite_index == sprDuck2)
+						{
+							image_index = 0;
+						}
+						if (sprite_index == sprDuck1)
+						{
+							image_index = 1;
+						}
+						aState = ActionState.IDLE;
 					}
-					if (sprite_index == sprDuck1)
-					{
-						image_index = 1;
-					}
-					aState = ActionState.IDLE;
 				}
 			}
 		}
@@ -856,8 +859,11 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			if (aState == ActionState.WALLKICK)
 				aState = ActionState.IDLE;
-			sprite_index = sprJump3;
-			image_index = 0;
+			if (atkState == AttackState.A_NONE)
+			{
+				sprite_index = sprJump3;
+				image_index = 0;
+			}		
 		}
 		
 		//End jump
@@ -869,7 +875,11 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if (vspd < 0)
 					{
-						sprite_index = sprJump3;
+						if (atkState == AttackState.A_NONE)
+						{
+							sprite_index = sprJump3;
+							image_index = 0;
+						}
 						vspd = 0;
 					}
 				}

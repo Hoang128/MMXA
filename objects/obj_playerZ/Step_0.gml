@@ -106,6 +106,23 @@ if (activateState != ActivateState.DEACTIVATE)
 							objSaber.core = self;
 						}
 					}
+					
+					if (aState == ActionState.DUCKING)
+					{
+						if (atkState == AttackState.A_NONE)
+						{
+							sprite_index = spr_ZSlashDuck;
+							image_index = 0;
+							randomize();
+							if (random(2) > 1.2)
+								audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo1, 0, 0);
+							audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
+							atkState = AttackState.A_STRICT_ATTACK;
+							var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
+							objSaber.state = SaberState.SABER_DUCK_SLASH;
+							objSaber.core = self;
+						}
+					}
 				}
 				
 				//JumpSlash
@@ -113,18 +130,21 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if (sprite_index != spr_ZDoubleJump)
 					{
-						sprite_index = spr_ZSlashJump;
-						image_index = 0;
-						randomize();
-						if (random(2) > 1.2)
-							audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
-						audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
+						if (atkState == AttackState.A_NONE)
+						{
+							sprite_index = spr_ZSlashJump;
+							image_index = 0;
+							randomize();
+							if (random(2) > 1.2)
+								audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
+							audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
 							
-						hspd = 0;
-						atkState = AttackState.A_NORMAL_ATTACK;
-						var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
-						objSaber.state = SaberState.SABER_JUMP_SLASH;
-						objSaber.core = self;
+							hspd = 0;
+							atkState = AttackState.A_NORMAL_ATTACK;
+							var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
+							objSaber.state = SaberState.SABER_JUMP_SLASH;
+							objSaber.core = self;
+						}
 					}
 					else
 					{

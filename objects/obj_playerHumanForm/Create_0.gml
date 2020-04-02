@@ -74,10 +74,10 @@ enum AttackState
 {
 	A_NONE,
 	A_NORMAL_ATTACK, //X's attack
-	A_STRICT_ATTACK, //Can cancel by run, dash, jump, duck
-	A_STRICT_ATTACK_LV2, //Cannot cancel by run
-	A_STRICT_ATTACK_LV3, //Cannot cancel by run, dash
-	A_STRICT_ATTACK_LV4, //Cannot cancel by run, dash, jump
+	A_STRICT_ATTACK, //Cannot cancel by duck
+	A_STRICT_ATTACK_LV2, //Cannot cancel by run, duck
+	A_STRICT_ATTACK_LV3, //Cannot cancel by run, dash, duck
+	A_STRICT_ATTACK_LV4, //Cannot cancel by run, dash, jump, duck
 	A_FREEZE_ATTACK  //Cannot cancel
 }
 

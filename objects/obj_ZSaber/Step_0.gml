@@ -13,6 +13,7 @@ if (setupState)
 		case SaberState.SABER_COMBO_3:		sprite_index = spr_ZSaberCombo3; break;
 		case SaberState.SABER_JUMP_SLASH:	sprite_index = spr_ZSaberSlashJump; break;
 		case SaberState.SABER_LAND_SLASH:	sprite_index = spr_ZSaberSlashLand; break;
+		case SaberState.SABER_DUCK_SLASH:	sprite_index = spr_ZSaberSlashDuck; break;
 	}
 	setupState = false;
 }

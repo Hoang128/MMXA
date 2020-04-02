@@ -9,7 +9,8 @@
         "fd06cb78-8c20-4719-bc39-3f4d6f45d347",
         "234dcac7-c53b-449b-af54-ed1e650c88f4",
         "585c73af-f662-4c73-8ef2-ef47ba38832f",
-        "703129d5-0841-4663-8423-8dd255ff66d7"
+        "703129d5-0841-4663-8423-8dd255ff66d7",
+        "1aa93b43-a2c3-4737-9dce-0b5deacf1584"
     ],
     "filterType": "GMSprite",
     "folderName": "Saber",
