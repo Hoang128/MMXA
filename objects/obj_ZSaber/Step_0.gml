@@ -8,9 +8,11 @@ if (setupState)
 {
 	switch (state)
 	{
-		case SaberState.SABER_COMBO_1: sprite_index = spr_ZSaberCombo1; break;
-		case SaberState.SABER_COMBO_2: sprite_index = spr_ZSaberCombo2; break;
-		case SaberState.SABER_COMBO_3: sprite_index = spr_ZSaberCombo3; break;
+		case SaberState.SABER_COMBO_1:		sprite_index = spr_ZSaberCombo1; break;
+		case SaberState.SABER_COMBO_2:		sprite_index = spr_ZSaberCombo2; break;
+		case SaberState.SABER_COMBO_3:		sprite_index = spr_ZSaberCombo3; break;
+		case SaberState.SABER_JUMP_SLASH:	sprite_index = spr_ZSaberSlashJump; break;
+		case SaberState.SABER_LAND_SLASH:	sprite_index = spr_ZSaberSlashLand; break;
 	}
 	setupState = false;
 }

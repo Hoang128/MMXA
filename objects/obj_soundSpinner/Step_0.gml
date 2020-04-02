@@ -35,6 +35,8 @@ if (active)
 		audio_play_sound_on(global.SFX_Emitter, soundConfirm, 0, 0);
 		active = -3
 		parameter = valDisplay / ratio;
+		if (emitter == noone) audio_master_gain(parameter);
+		else audio_emitter_gain(emitter, parameter);
 		obj_menuSounds.lineExecute[line] = false;
 		obj_menuSounds.lineHandle[line] = false;
 		obj_menuSounds.active = 1;

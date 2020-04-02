@@ -31,6 +31,34 @@ if (keyboard_check(ord("Q")))
 		}
 	}
 	
+	if (keyboard_check_pressed(vk_pageup))
+	{
+		if (!keyboard_check(ord("W")))
+		{
+			if (global.deltaTime + 0.1 <= 1) global.deltaTime += 0.1;
+			else global.deltaTime = 0.1;
+		}
+		else
+		{
+			if (global.deltaTime + 0.01 <= 1) global.deltaTime += 0.01;
+			else global.deltaTime = 0.01;
+		}
+	}
+	
+	if (keyboard_check_pressed(vk_pagedown))
+	{
+		if (!keyboard_check(ord("W")))
+		{
+			if (global.deltaTime - 0.1 >= 0.1) global.deltaTime -= 0.1;
+			else global.deltaTime = 1;
+		}
+		else
+		{
+			if (global.deltaTime - 0.01 >= 0) global.deltaTime -= 0.01;
+			else global.deltaTime = 1;
+		}
+	}
+	
 	if (keyboard_check_pressed(ord("R")))
 		room_restart();
 	
@@ -59,6 +87,20 @@ if (keyboard_check(ord("Q")))
 		{
 			if (keyboard_check(ord("W")))
 				showPlayerLog = 0;
+		}
+	}
+	
+	if (keyboard_check_pressed(ord("S")))
+	{
+		if (showSoundLog == 0)
+		{
+			showSoundLog = 1;
+		}
+		
+		if (showSoundLog == 1)
+		{
+			if (keyboard_check(ord("W")))
+				showSoundLog = 0;
 		}
 	}
 }

@@ -1,69 +1,30 @@
 /// @description Draw Debug Info to Screen
-var xPlace = 1280;
-var yPlace = 0;
+xPlace = 1280;
+yPlace = 0;
 
 draw_set_font(fontDebug);
 draw_set_halign(fa_right);
 draw_set_valign(fa_top);
 
 //Info
-draw_set_color(debugTextColorB);
-draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Debugging mode"));
-draw_set_color(debugTextColorF);
-draw_text(xPlace,yPlace,string_hash_to_newline("Debugging mode"));
-yPlace += lineSpace;
-
-draw_set_color(debugTextColorB);
-draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Press Q + H to show debug command list"));
-draw_set_color(debugTextColorF);
-draw_text(xPlace,yPlace,string_hash_to_newline("Press Q + H to show debug command list"));
-yPlace += lineSpace;
-
-draw_set_color(debugTextColorB);
-draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Room speed = " + string(room_speed)));
-draw_set_color(debugTextColorF);
-draw_text(xPlace,yPlace,string_hash_to_newline("Room speed = " + string(room_speed)));
-yPlace += lineSpace;
+scr_LOG_INFO("Debugging mode", debugTextColorF, debugTextColorB);
+scr_LOG_INFO("Press Q + H to show debug command list",debugTextColorF, debugTextColorB);
+scr_LOG_INFO("Room speed = " + string(room_speed), debugTextColorF, debugTextColorB);
+scr_LOG_INFO("Delta time = " + string(global.deltaTime), debugTextColorF, debugTextColorB);
 
 //Show Debug Help
 #region
 if (showDebugHelp)
 {
-	draw_set_color(debugTextColorB);
-	draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Debug command list"));
-	draw_set_color(debugTextColorF);
-	draw_text(xPlace,yPlace,string_hash_to_newline("Debug command list"));
-	yPlace += lineSpace;
-	
-	draw_set_color(debugTextColorB);
-	draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Press Q + + to increase room speed by 10, Q + - to decrease room speed by 10"));
-	draw_set_color(debugTextColorF);
-	draw_text(xPlace,yPlace,string_hash_to_newline("Press Q + + to increase room speed by 10, Q + - to decrease room speed by 10"));
-	yPlace += lineSpace;
-	
-	draw_set_color(debugTextColorB);
-	draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Press Q + W + to increase room speed by 1, Q + W - to decrease room speed by 1"));
-	draw_set_color(debugTextColorF);
-	draw_text(xPlace,yPlace,string_hash_to_newline("Press Q + W + to increase room speed by 1, Q + W - to decrease room speed by 1"));
-	yPlace += lineSpace;
-	
-	draw_set_color(debugTextColorB);
-	draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Press Q + W + H to close this list"));
-	draw_set_color(debugTextColorF);
-	draw_text(xPlace,yPlace,string_hash_to_newline("Press Q + W + H to close this list"));
-	yPlace += lineSpace;
-	
-	draw_set_color(debugTextColorB);
-	draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Press Q + R to restart current room"));
-	draw_set_color(debugTextColorF);
-	draw_text(xPlace,yPlace,string_hash_to_newline("Press Q + R to restart current room"));
-	yPlace += lineSpace;
-	
-	draw_set_color(debugTextColorB);
-	draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Press Q + P to turn on player log, Q + W + P to turn off"));
-	draw_set_color(debugTextColorF);
-	draw_text(xPlace,yPlace,string_hash_to_newline("Press Q + P to turn on player log, Q + W + P to turn off"));
-	yPlace += lineSpace;
+	scr_LOG_INFO("Debug command list", debugTextColorF, debugTextColorB);
+	scr_LOG_INFO("Press Q + + to increase room speed by 10, Q + - to decrease room speed by 10", debugTextColorF, debugTextColorB);
+	scr_LOG_INFO("Press Q + Page Up to increase global delta time by 0.1, Q + Page Down to decrease global delta time by 0.1", debugTextColorF, debugTextColorB);
+	scr_LOG_INFO("Press Q + W + Page Up to increase global delta time by 0.01, Q + W + Page Down to decrease global delta time by 0.01", debugTextColorF, debugTextColorB);
+	scr_LOG_INFO("Press Q + W + to increase room speed by 1, Q + W - to decrease room speed by 1", debugTextColorF, debugTextColorB);
+	scr_LOG_INFO("Press Q + W + H to close this list", debugTextColorF, debugTextColorB);
+	scr_LOG_INFO("Press Q + R to restart current room", debugTextColorF, debugTextColorB);
+	scr_LOG_INFO("Press Q + P to turn on player log, Q + W + P to turn off", debugTextColorF, debugTextColorB);
+	scr_LOG_INFO("Press Q + P to turn on sound log, Q + W + P to turn off", debugTextColorF, debugTextColorB);
 }
 #endregion
 
@@ -98,6 +59,8 @@ else{
 				case ActionState.SLIDING: str_aState = "SLIDING" break;
 				case ActionState.WALLKICK: str_aState = "WALL KICK" break;
 				case ActionState.DASHKICK: str_aState = "DASH KICK" break;
+				case ActionState.DUCKING: str_aState = "DUCKING"; break;
+				case ActionState.WAITING: str_aState = "WAITING"; break;
 				default: str_aState = "NOT HAVE STATE ?"; break;
 			}
 
@@ -106,7 +69,9 @@ else{
 				case AttackState.A_NONE: str_atkState = "NONE"; break;
 				case AttackState.A_NORMAL_ATTACK: str_atkState = "NORMAL ATTACK"; break;
 				case AttackState.A_STRICT_ATTACK: str_atkState = "STRIC ATTACK"; break;
-				case AttackState.A_FREEZE_ATTACK: str_atkState = "FREEZE ATTACK"; break;
+				case AttackState.A_STRICT_ATTACK_LV2: str_atkState = "STRIC ATTACK"; break;
+				case AttackState.A_STRICT_ATTACK_LV3: str_atkState = "STRIC ATTACK"; break;
+				case AttackState.A_STRICT_ATTACK_LV4: str_atkState = "FREEZE ATTACK"; break;
 				default: str_atkState = "NOT HAVE STATE ?"; break;
 			}
 
@@ -127,78 +92,26 @@ else{
 				case VerticalState.V_ON_GROUND: str_vState = "ON GROUND"; break;
 				default: str_vState = "NOT HAVE STATE ?"; break;
 			}
-			draw_set_color(debugTextColorB);
-			draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Log player"));
-			draw_set_color(debugTextColorF);
-			draw_text(xPlace,yPlace,string_hash_to_newline("Log player"));
-			yPlace += lineSpace;
-			
-			draw_set_color(debugTextColorB);
-			draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Char direction = " + string(obj_playerHumanForm.hDir)));
-			draw_set_color(debugTextColorF);
-			draw_text(xPlace,yPlace,string_hash_to_newline("Char direction = " + string(obj_playerHumanForm.hDir)));
-			yPlace += lineSpace;
-			
-			draw_set_color(debugTextColorB);
-			draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Char Action State = " + str_aState));
-			draw_set_color(debugTextColorF);
-			draw_text(xPlace,yPlace,string_hash_to_newline("Char Action State = " + str_aState));
-			yPlace += lineSpace;
-			
-			draw_set_color(debugTextColorB);
-			draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Char Horizontal State = " + str_hState));
-			draw_set_color(debugTextColorF);
-			draw_text(xPlace,yPlace,string_hash_to_newline("Char Horizontal State = " + str_hState));
-			yPlace += lineSpace;
-			
-			draw_set_color(debugTextColorB);
-			draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Char Vertical State = " + str_vState));
-			draw_set_color(debugTextColorF);
-			draw_text(xPlace,yPlace,string_hash_to_newline("Char Vertical State = " + str_vState));
-			yPlace += lineSpace;
-			
-			draw_set_color(debugTextColorB);
-			draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Char Attack State = " + str_atkState));
-			draw_set_color(debugTextColorF);
-			draw_text(xPlace,yPlace,string_hash_to_newline("Char Attack State = " + str_atkState));
-			yPlace += lineSpace;
-			
-			draw_set_color(debugTextColorB);
-			draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Can air dash = " + string(obj_playerHumanForm.canAirDash)));
-			draw_set_color(debugTextColorF);
-			draw_text(xPlace,yPlace,string_hash_to_newline("Can air dash = " + string(obj_playerHumanForm.canAirDash)));
-			yPlace += lineSpace;
-			
-			draw_set_color(debugTextColorB);
-			draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Self Horizontal speed = " + string(obj_playerHumanForm.hspd)));
-			draw_set_color(debugTextColorF);
-			draw_text(xPlace,yPlace,string_hash_to_newline("Self Horizontal speed = " + string(obj_playerHumanForm.hspd)));
-			yPlace += lineSpace;
-			
-			draw_set_color(debugTextColorB);
-			draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Self Vertical speed = " + string(obj_playerHumanForm.vspd)));
-			draw_set_color(debugTextColorF);
-			draw_text(xPlace,yPlace,string_hash_to_newline("Self Vertical speed = " + string(obj_playerHumanForm.vspd)));
-			yPlace += lineSpace;
-			
-			draw_set_color(debugTextColorB);
-			draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Can slide = " + string(obj_playerHumanForm.canSlide)));
-			draw_set_color(debugTextColorF);
-			draw_text(xPlace,yPlace,string_hash_to_newline("Can slide = " + string(obj_playerHumanForm.canSlide)));
-			yPlace += lineSpace;
-			
-			draw_set_color(debugTextColorB);
-			draw_text(xPlace+1,yPlace+1,string_hash_to_newline("Slide speed = " + string(obj_playerHumanForm.slideSpd)));
-			draw_set_color(debugTextColorF);
-			draw_text(xPlace,yPlace,string_hash_to_newline("Slide speed = " + string(obj_playerHumanForm.slideSpd)));
-			yPlace += lineSpace;
+			scr_LOG_INFO("Log player", debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char direction = " + string(obj_playerHumanForm.hDir), debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char Action State = " + str_aState, debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char Horizontal State = " + str_hState, debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char Vertical State = " + str_vState, debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char Attack State = " + str_atkState, debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char Image index = " + string(obj_playerHumanForm.image_index), debugTextColorF, debugTextColorB);
 		}
 		#endregion
 	}
+	
+	//Log sound
+	if (showSoundLog)
+	{
+		#region
+		
+		scr_LOG_INFO("Master sound = " + string(global.masterVolume), debugTextColorF, debugTextColorB);
+		scr_LOG_INFO("SFX sound = " + string(global.SFXVolume), debugTextColorF, debugTextColorB);
+		scr_LOG_INFO("BGM sound = " + string(global.BGMVolume), debugTextColorF, debugTextColorB);
+		
+		#endregion
+	}
 }
-
-draw_set_color(debugTextColorB);
-draw_text(xPlace+1,yPlace+1,string_hash_to_newline("spinner number = " + string(instance_number(obj_spinnerWindowMode))));
-draw_set_color(debugTextColorF);
-draw_text(xPlace,yPlace,string_hash_to_newline("spinner number = " + string(instance_number(obj_spinnerWindowMode))));
-yPlace += lineSpace;

@@ -3,6 +3,7 @@ minVal = 0;
 maxVal = 10;
 
 parameter = global.masterVolume;
+emitter = noone;
 ratio = 10;
 valDisplay = parameter * ratio;
 triangleSpace = 32;

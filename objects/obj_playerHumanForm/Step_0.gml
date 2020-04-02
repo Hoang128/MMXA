@@ -104,8 +104,11 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			if (aState != ActionState.BEAMDOWN)
 			{
-				sprite_index = sprLand;
-				image_index = 0;
+				if (atkState == AttackState.A_NONE)
+				{
+					sprite_index = sprLand;
+					image_index = 0;
+				}
 				audio_play_sound_on(global.SFX_Emitter, sndLandEff, 0, 0);
 			
 				canSlide = 0;
@@ -281,7 +284,9 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	#endregion
 	
-	//Passive Counters
+	//Passive Counters-----------------------------------------------------------------------------------
+	#region
+	
 	if (canJump == 0)
 	{
 		if (canJumpWait < 0)
@@ -291,9 +296,11 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		else
 		{
-			canJumpWait--;
+			canJumpWait -= global.deltaTime;
 		}
 	}
+	
+	#endregion
 
 	#endregion
 	//*********************************************************************************************************
@@ -362,6 +369,9 @@ if (activateState != ActivateState.DEACTIVATE)
 										sprite_index = sprRunStart;
 										image_index = 0;
 									}
+									
+									if (atkState > AttackState.A_NONE)
+										atkState = AttackState.A_NONE;
 								}
 								hspd = hDir * runSpd;
 								hState = HorizontalState.H_MOVE_FORWARD;
@@ -400,6 +410,7 @@ if (activateState != ActivateState.DEACTIVATE)
 										if (!canAirDash) canAirDash = 1;
 										vState = VerticalState.V_MOVE_DOWN;
 										aState = ActionState.SLIDING;
+										atkState = AttackState.A_NONE;
 									}
 								}
 							}
@@ -476,7 +487,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				if (aState == ActionState.IDLE)
 				{
-					if (atkState < AttackState.A_STRICT_ATTACK)
+					if (atkState < AttackState.A_STRICT_ATTACK_LV4)
 					{
 						if (dynamicBlock != noone)
 						{
@@ -531,7 +542,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				//Jump down
 				if (keyboard_check_pressed(global.keyJump) && (canJump))
 				{
-					if (atkState < AttackState.A_STRICT_ATTACK)
+					if (atkState < AttackState.A_STRICT_ATTACK_LV4)
 					{
 						var dynamicBlockIsThinPlatform = (dynamicBlock != noone) && (dynamicBlock.object_index == obj_thinPlatform);
 						var canJumpDown = (dynamicBlock.solid) && (!place_meeting(x, y + 1, obj_block));
@@ -693,7 +704,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (aState == ActionState.DASHING)
 		{
 			hspd = dashSpd * hDir;
-			if (dashTime > 0) dashTime--;
+			if (dashTime > 0) dashTime -= global.deltaTime;
 		}
 		
 		//Dash phase speed

@@ -23,12 +23,15 @@ lineContext[3] = "BGM sound: ";
 
 spinner[0] = instance_create_depth(xStartSpinner, yStartSpace + 1 * lineSpace + 18, depth - 1, obj_soundSpinner);
 spinner[0].parameter = global.masterVolume;
+spinner[0].emitter = noone;
 spinner[0].line = 1;
 spinner[1] = instance_create_depth(xStartSpinner, yStartSpace + 2 * lineSpace + 18, depth - 1, obj_soundSpinner);
 spinner[1].parameter = global.SFXVolume;
+spinner[1].emitter = global.SFX_Emitter;
 spinner[1].line = 2;
 spinner[2] = instance_create_depth(xStartSpinner, yStartSpace + 3 * lineSpace + 18, depth - 1, obj_soundSpinner);
 spinner[2].parameter = global.BGMVolume;
+spinner[2].emitter = global.BGM_Emitter;
 spinner[2].line = 3;
 
 scr_InitMenuProp();

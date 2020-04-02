@@ -31,3 +31,36 @@ if (sprite_index == spr_ZSlashCombo1
 	sprite_index = spr_ZSlashEnd_G;
 	image_index = 0;
 }
+
+if (sprite_index == spr_ZSlashEnd_A)
+{
+	if (atkState != AttackState.A_NONE)
+		atkState = AttackState.A_NONE;
+	instance_destroy(obj_EndSlashAirEff);
+	
+	if (vspd < 0)
+		sprite_index = sprJump2;
+	else
+		sprite_index = sprJump4;
+}
+
+if (sprite_index == spr_ZSlashJump)
+{
+	if (atkState < AttackState.A_STRICT_ATTACK_LV2)
+		atkState = AttackState.A_NONE;
+	else instance_destroy(obj_ZSaber);
+	
+	instance_create_depth(x, y, depth, obj_EndSlashAirEff);
+	
+	sprite_index = spr_ZSlashEnd_A;
+	image_index = 0;
+}
+
+if (sprite_index == spr_ZSlashLand)
+{
+	if (atkState != AttackState.A_NONE)
+		atkState = AttackState.A_NONE;
+	
+	sprite_index = sprStand;
+	image_index = 0;
+}

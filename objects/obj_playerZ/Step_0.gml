@@ -15,15 +15,26 @@ if (activateState != ActivateState.DEACTIVATE)
 	}
 	
 	if (canAirDash == 0) airHikeTime = 0;
+	//Change slash from jump to land
+	if (sprite_index == spr_ZSlashJump)
+	{
+		if (place_meeting(x, y + 1, obj_block))
+		{
+			sprite_index = spr_ZSlashLand;
+			
+			obj_ZSaber.state = SaberState.SABER_LAND_SLASH;
+			obj_ZSaber.setupState = true;
+		}
+	}
 	
 	//Slash timmer
 	if (canSlash < 1) 
 	{
 		if (atkState == AttackState.A_NONE) canSlash = 1;
-		canSlash++;
+		canSlash += global.deltaTime;
 	}
 	
-	//Slash combo
+	//Slash combo 2
 	if ((standCombo > 0) && (atkState != AttackState.A_STRICT_ATTACK)) standCombo = 0;
 	
 	if ((sprite_index == spr_ZSlashCombo1) && (image_index > 8))
@@ -43,6 +54,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 	}
 	
+	//Slash combo 3
 	if ((sprite_index == spr_ZSlashCombo2) && (image_index > 6))
 	{
 		if (standCombo > 2)
@@ -95,6 +107,30 @@ if (activateState != ActivateState.DEACTIVATE)
 						}
 					}
 				}
+				
+				//JumpSlash
+				if (vState == VerticalState.V_MOVE_FALLING)
+				{
+					if (sprite_index != spr_ZDoubleJump)
+					{
+						sprite_index = spr_ZSlashJump;
+						image_index = 0;
+						randomize();
+						if (random(2) > 1.2)
+							audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
+						audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
+							
+						hspd = 0;
+						atkState = AttackState.A_NORMAL_ATTACK;
+						var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
+						objSaber.state = SaberState.SABER_JUMP_SLASH;
+						objSaber.core = self;
+					}
+					else
+					{
+						
+					}
+				}
 				canSlash = -slashWaitTime;
 			}
 		}
@@ -102,7 +138,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Double Jump
 		if (keyboard_check_pressed(global.keyJump) && (canJump))
 		{
-			if (aState == ActionState.IDLE)
+			if ((aState == ActionState.IDLE) && atkState < (AttackState.A_STRICT_ATTACK_LV4))
 			{
 				if ((vState == VerticalState.V_MOVE_FALLING) && (vspd >= 0))
 				{
@@ -119,7 +155,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							else audio_play_sound_on(global.SFX_Emitter, sndVoiceJump3, 0, 0);
 						}
 				
-				
+						atkState = AttackState.A_NONE;
 						vspd = -jumpSpd;
 						airHikeTime -- ;
 					}

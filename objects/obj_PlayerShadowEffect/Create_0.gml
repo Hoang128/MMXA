@@ -1,4 +1,5 @@
 /// @description Init
+event_inherited();
 
 sprite_index = noone;
 image_alpha = 1;
