@@ -195,7 +195,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					canSlide = 0;
 					vspd = slideSpd / 2;
 					aState = ActionState.IDLE;
-					if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+					if (atkState < AttackState.A_STRICT_ATTACK) atkState = AttackState.A_NONE;
 					vState = VerticalState.V_MOVE_FALLING;
 				}
 			}
@@ -474,6 +474,8 @@ if (activateState != ActivateState.DEACTIVATE)
 					vspd = slideSpd / 2;
 					vState = VerticalState.V_MOVE_FALLING;
 					aState = ActionState.IDLE;
+					if (atkState < AttackState.A_STRICT_ATTACK) 
+						atkState = AttackState.A_NONE;
 				}
 			}
 		}

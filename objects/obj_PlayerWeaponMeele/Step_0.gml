@@ -1,4 +1,5 @@
 /// @description Follow the core
+event_inherited();
 
 if (core != noone)
 {
