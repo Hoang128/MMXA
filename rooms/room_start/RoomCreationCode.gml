@@ -27,13 +27,8 @@ global.keyChar2 = ord("F");
 global.keyStart = vk_enter;
 global.keyMap = vk_tab;
 
-//Item state
-enum ItemState
-{
-	LOCK,
-	UNLOCK,
-	USING
-}
+//Initialize Enum States
+scr_InitalizeEnumStates();
 
 //Default Elves
 for(i = 0; i < 16; i++)

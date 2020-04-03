@@ -5,7 +5,7 @@ event_inherited();
 
 //Initialize Parameter
 runSpd = 2; //Run speed
-dashSpdPhase1 = 2; //Dash speed when start dash
+dashSpdPhase1 = 1; //Dash speed when start dash
 dashSpdPhase2 = 5; //Dash speed when dash
 jumpDashSpd = 4.5;
 maxDashTime = 30; //Dash time
@@ -15,7 +15,7 @@ grav = 0.3; //Gravity Accleration
 maxGrav = 6; //Max fall speed
 minSlideHeigh = 12; //Minimum heigh from player to floor that player can slide
 minWallKickRange = 4; //Minimum range from player to wall to perform wall/dash kick
-slideSpd = 2; //Slide speed
+slideSpd = 1.5; //Slide speed
 wallKickSpd = 4; //Wall kick heigh
 wallKickTimeMax = 6; //Wall kick time
 hWallKickSpd = 2; //Wall kick speed
@@ -32,62 +32,7 @@ canJumpWaitMax = 2;
 climbSpd = 2;
 xPlaceDashEff = 0;
 yPlaceDashEff = 0;
-
-//Initialize State
-enum ActionState
-{
-	ACTION_INTERACTION,
-	BEAMDOWN,
-	BEAMUP,
-	IDLE,
-	DASHING,
-	JUMPDASHING,
-	STUNNING,
-	DYING,
-	CLIMBING,
-	SP_MOVE,
-	SLIDING,
-	DUCKING,
-	WALLKICK,
-	DASHKICK,
-	
-	WAITING //Only ride armor
-}
-
-enum VerticalState
-{
-	V_MOVE_FALLING, //Affect by Gravity
-	V_MOVE_UP, //Move up, not affect by gravity
-	V_MOVE_DOWN, //Move down, not affect by gravity
-	V_MOVE_NONE, //Do not change y position
-	V_ON_GROUND //On ground
-};
-
-enum HorizontalState
-{
-	H_MOVE_NONE,
-	H_MOVE_FORWARD,
-	H_MOVE_PASSIVE
-};
-
-enum AttackState
-{
-	A_NONE,
-	A_NORMAL_ATTACK, //X's attack
-	A_STRICT_ATTACK, //Cannot cancel by duck
-	A_STRICT_ATTACK_LV2, //Cannot cancel by run, duck
-	A_STRICT_ATTACK_LV3, //Cannot cancel by run, dash, duck
-	A_STRICT_ATTACK_LV4, //Cannot cancel by run, dash, jump, duck
-	A_FREEZE_ATTACK  //Cannot cancel
-}
-
-enum WeighType
-{
-	LIGHT,
-	MEDIUM,
-	HEAVY,
-	MASSIVE
-}
+myDeltaTime = 1;
 
 //Default state
 weight = WeighType.MEDIUM;

@@ -2,13 +2,6 @@
 
 event_inherited();
 
-enum ActivateState
-{
-	DEACTIVATE,
-	HALF_ACTIVATE,
-	ACTIVATE
-}
-
 activateState = ActivateState.DEACTIVATE;
 
 myDeltaTime = 1;

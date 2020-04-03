@@ -56,7 +56,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			hspd = 0;
 	}
 	
-	x += hspd * global.deltaTime * myDeltaTime;
+	x += hspd * myDeltaTime * global.deltaTime;
 	
 	#endregion
 	
@@ -89,7 +89,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 	}
 	
-	y += vspd * global.deltaTime * myDeltaTime;
+	y += vspd * myDeltaTime * global.deltaTime;
 	
 	#endregion
 	
@@ -143,7 +143,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				if ((!canSlide) && (vspd >= 0)) canSlide = 1;
 			}
 			if (vspd < maxGrav)
-				vspd += grav * global.deltaTime * myDeltaTime;
+				vspd += grav * myDeltaTime * global.deltaTime;
 		}
 		if (vState == VerticalState.V_MOVE_NONE)
 		{
@@ -195,6 +195,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					canSlide = 0;
 					vspd = slideSpd / 2;
 					aState = ActionState.IDLE;
+					if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
 					vState = VerticalState.V_MOVE_FALLING;
 				}
 			}
@@ -222,7 +223,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		else
 		{
-			dashKickFlyTime -= global.deltaTime * myDeltaTime;
+			dashKickFlyTime -= myDeltaTime * global.deltaTime;
 		}
 		
 		if (hState == HorizontalState.H_MOVE_PASSIVE)
@@ -259,7 +260,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			else 
 			{
 				hDir = sign(hspd);
-				dashKickTime -= global.deltaTime * myDeltaTime;
+				dashKickTime -= myDeltaTime * global.deltaTime;
 			}
 		}
 	}
@@ -278,7 +279,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				hState = HorizontalState.H_MOVE_NONE;
 				vState = VerticalState.V_MOVE_FALLING;
 			}
-			else if (wallKickTime > 0) wallKickTime -= global.deltaTime * myDeltaTime;
+			else if (wallKickTime > 0) wallKickTime -= myDeltaTime * global.deltaTime;
 		}
 	}
 	
@@ -296,7 +297,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		else
 		{
-			canJumpWait -= global.deltaTime;
+			canJumpWait -= myDeltaTime * global.deltaTime;
 		}
 	}
 	
@@ -441,6 +442,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						aState = ActionState.IDLE;
 					}
 				}
+				else hDir = hMove;
 			}
 		}
 		else
@@ -493,10 +495,10 @@ if (activateState != ActivateState.DEACTIVATE)
 						{
 							var dynamicBlockIsTopLadder = (dynamicBlock.object_index == obj_ladder && (dynamicBlock.topLadder));
 							var canClimbDown = (dynamicBlock.solid) && (!place_meeting(x, y + 1, obj_block));
-							var yPosCorrect = (abs(self.x - (dynamicBlock.bbox_right + dynamicBlock.bbox_left) / 2) <= minDistanceToLadder);
+							var xPosCorrect = (abs(self.x - (dynamicBlock.bbox_right + dynamicBlock.bbox_left) / 2) <= minDistanceToLadder);
 						
 							//Climb down from top ladder
-							if (dynamicBlockIsTopLadder && canClimbDown && yPosCorrect)
+							if (dynamicBlockIsTopLadder && canClimbDown && xPosCorrect)
 							{
 								sprite_index = sprClimb3;
 								image_index = 3;
@@ -550,6 +552,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						{
 							sprite_index = sprJump3;
 							image_index = 0;
+							audio_play_sound_on(global.SFX_Emitter, sndJumpEff, 0, 0);
 						
 							with(dynamicBlock)
 							{
@@ -607,7 +610,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			
 			if (!place_meeting(x, y - 1, obj_block) && !place_meeting(x, y + 1, obj_block))
 			{
-				if (sprite_index == sprClimb2)
+				if ((atkState < AttackState.A_STRICT_ATTACK) && (sprite_index == sprClimb2))
 				{
 					if (!place_meeting(x, bbox_top - 1, obj_ladder))
 					{
@@ -676,7 +679,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						if (canAirDash)
 						{
 							sprite_index = sprDash1;
-							image_index = 1;
+							image_index = 2;
 							
 							dashPhase = 1;
 							dashTime = maxAirDashTime;
@@ -707,7 +710,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (aState == ActionState.DASHING)
 		{
 			hspd = dashSpd * hDir;
-			if (dashTime > 0) dashTime -= global.deltaTime;
+			if (dashTime > 0) dashTime -= myDeltaTime * global.deltaTime;
 		}
 		
 		//Dash phase speed

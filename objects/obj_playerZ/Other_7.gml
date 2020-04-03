@@ -44,7 +44,7 @@ if (sprite_index == spr_ZSlashEnd_A)
 		sprite_index = sprJump4;
 }
 
-if (sprite_index == spr_ZSlashJump)
+if ((sprite_index == spr_ZSlashJump) || (sprite_index == spr_ZSlashSpin))
 {
 	if (atkState < AttackState.A_STRICT_ATTACK_LV2)
 		atkState = AttackState.A_NONE;
@@ -70,5 +70,39 @@ if (sprite_index == spr_ZSlashDuck)
 	atkState = AttackState.A_NONE;
 		
 	sprite_index = sprDuck2;
+	image_index = 0;
+}
+
+if (sprite_index == spr_ZSlashSlide)
+{
+	atkState = AttackState.A_NONE;
+	
+	sprite_index = sprSlide2;
+	image_index = 0;
+}
+
+if (sprite_index == spr_ZSlashClimb)
+{
+	atkState = AttackState.A_NONE;
+	var moveUp = keyboard_check(global.keyUp);
+	var moveDown = keyboard_check(global.keyDown);
+	var vMove = moveUp - moveDown;
+	if (vMove > 0)
+	{
+		if (moveUp) 
+		{
+			vState = VerticalState.V_MOVE_UP;
+			vspd = -climbSpd;
+			isClimbing = 1;
+		}
+		else
+		{
+			vState = VerticalState.V_MOVE_DOWN;
+			vspd = climbSpd;
+			isClimbing = -1;
+		}
+	}
+	
+	sprite_index = sprClimb2;
 	image_index = 0;
 }

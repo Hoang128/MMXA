@@ -18,7 +18,7 @@ switch argument0
 			case sprJump3:			image_speed = 0.3; break;
 			case sprJump2:
 			case sprJump4:			image_speed = 1; break;
-			case sprSlide1:			image_speed = 0.3; break;
+			case sprSlide1:			image_speed = 0.4; break;
 			case sprWallKick:		image_speed = 0.5; break;
 			case sprDashKick1:		image_speed = 0.6; break;
 			case sprDashKick2:		image_speed = 0.6; break;
@@ -50,7 +50,7 @@ switch argument0
 			case sprJump3:			image_speed = 0.5; break;
 			case sprJump2: 
 			case sprJump4:			image_speed = 1; break;
-			case sprSlide1:			image_speed = 0.3; break;
+			case sprSlide1:			image_speed = 0.4; break;
 			case sprWallKick:		image_speed = 0.5; break;
 			case sprDashKick1:		image_speed = 0.6; break;
 			case sprDashKick2:		image_speed = 0.6; break;
@@ -63,9 +63,9 @@ switch argument0
 			case spr_ZSlashCombo1:	image_speed = 0.7; break;
 			case spr_ZSlashCombo2:	image_speed = 0.7; break;
 			case spr_ZSaberCombo3:	image_speed = 0.7; break;
-			case spr_ZSlashJump:	image_speed = 0.7; break;
-			case spr_ZSlashEnd_A:	image_speed = 0.7; break;
-			case spr_ZSlashLand:	image_speed = 0.7; break;
+			case spr_ZSlashJump:	image_speed = 1; break;
+			case spr_ZSlashEnd_A:	image_speed = 1; break;
+			case spr_ZSlashLand:	image_speed = 1; break;
 			
 			default:				image_speed = 0.5; break;
 		}

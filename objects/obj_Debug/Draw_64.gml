@@ -68,10 +68,11 @@ else{
 			{
 				case AttackState.A_NONE: str_atkState = "NONE"; break;
 				case AttackState.A_NORMAL_ATTACK: str_atkState = "NORMAL ATTACK"; break;
-				case AttackState.A_STRICT_ATTACK: str_atkState = "STRIC ATTACK"; break;
-				case AttackState.A_STRICT_ATTACK_LV2: str_atkState = "STRIC ATTACK"; break;
-				case AttackState.A_STRICT_ATTACK_LV3: str_atkState = "STRIC ATTACK"; break;
-				case AttackState.A_STRICT_ATTACK_LV4: str_atkState = "FREEZE ATTACK"; break;
+				case AttackState.A_STRICT_ATTACK: str_atkState = "STRICT ATTACK"; break;
+				case AttackState.A_STRICT_ATTACK_LV2: str_atkState = "STRICT ATTACK LV2"; break;
+				case AttackState.A_STRICT_ATTACK_LV3: str_atkState = "STRICT ATTACK LV3"; break;
+				case AttackState.A_STRICT_ATTACK_LV4: str_atkState = "STRICT ATTACK LV4"; break;
+				case AttackState.A_FREEZE_ATTACK: str_atkState = "FREEZE ATTACK"; break;
 				default: str_atkState = "NOT HAVE STATE ?"; break;
 			}
 
@@ -98,7 +99,7 @@ else{
 			scr_LOG_INFO("Char Horizontal State = " + str_hState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Vertical State = " + str_vState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Attack State = " + str_atkState, debugTextColorF, debugTextColorB);
-			scr_LOG_INFO("Char Image index = " + string(obj_playerHumanForm.image_index), debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char Image speed = " + string(obj_playerHumanForm.image_speed), debugTextColorF, debugTextColorB);
 		}
 		#endregion
 	}

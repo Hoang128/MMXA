@@ -18,12 +18,25 @@ if (activateState != ActivateState.DEACTIVATE)
 	//Change slash from jump to land
 	if (sprite_index == spr_ZSlashJump)
 	{
-		if (place_meeting(x, y + 1, obj_block))
+		if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))
 		{
 			sprite_index = spr_ZSlashLand;
 			
+			atkState = AttackState.A_STRICT_ATTACK;
 			obj_ZSaber.state = SaberState.SABER_LAND_SLASH;
 			obj_ZSaber.setupState = true;
+		}
+	}
+	
+	//Change spin to land
+	if (sprite_index == spr_ZSlashSpin)
+	{
+		if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))
+		{
+			sprite_index = sprLand;
+			
+			atkState = AttackState.A_NONE;
+			instance_destroy(obj_ZSaber);
 		}
 	}
 	
@@ -86,24 +99,43 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if ((aState == ActionState.IDLE) || (aState == ActionState.DASHING))
 					{
-						if (standCombo < 3)
+						if (sprite_index != sprLand)
 						{
-							standCombo++;
-						}
-						aState = ActionState.IDLE;
+							if (standCombo < 3)
+							{
+								standCombo++;
+							}
+							aState = ActionState.IDLE;
 					
-						if (atkState == AttackState.A_NONE)
-						{
-							sprite_index = spr_ZSlashCombo1;
-							image_index = 0;
-							audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo1, 0, 0);
-							audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
+							if (atkState == AttackState.A_NONE)
+							{
+								sprite_index = spr_ZSlashCombo1;
+								image_index = 0;
+								audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo1, 0, 0);
+								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
 							
-							hspd = 0;
-							atkState = AttackState.A_STRICT_ATTACK;
-							var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
-							objSaber.state = SaberState.SABER_COMBO_1;
-							objSaber.core = self;
+								hspd = 0;
+								atkState = AttackState.A_STRICT_ATTACK;
+								var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
+								objSaber.state = SaberState.SABER_COMBO_1;
+								objSaber.core = self;
+							}
+						}
+						else
+						{
+							if (atkState == AttackState.A_NONE)
+							{
+								sprite_index = spr_ZSlashLand;
+								image_index = 0;
+								audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
+								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
+							
+								hspd = 0;
+								atkState = AttackState.A_STRICT_ATTACK;
+								var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
+								objSaber.state = SaberState.SABER_LAND_SLASH;
+								objSaber.core = self;
+							}
 						}
 					}
 					
@@ -126,9 +158,9 @@ if (activateState != ActivateState.DEACTIVATE)
 				}
 				
 				//JumpSlash
-				if (vState == VerticalState.V_MOVE_FALLING)
+				else if (vState == VerticalState.V_MOVE_FALLING)
 				{
-					if (sprite_index != spr_ZDoubleJump)
+					if ((sprite_index != spr_ZDoubleJump) && !keyboard_check(global.keyUp))
 					{
 						if (atkState == AttackState.A_NONE)
 						{
@@ -148,9 +180,67 @@ if (activateState != ActivateState.DEACTIVATE)
 					}
 					else
 					{
-						
+						if (atkState == AttackState.A_NONE)
+						{
+							sprite_index = spr_ZSlashSpin;
+							image_index = 0;
+							randomize();
+							if (random(2) > 1.2)
+								audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
+							audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
+							
+							hspd = 0;
+							atkState = AttackState.A_NORMAL_ATTACK;
+							var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
+							objSaber.state = SaberState.SABER_SPIN_SLASH;
+							objSaber.core = self;
+						}
 					}
 				}
+				
+				//Slide & Climb Slash
+				else
+				{
+					//Slide Slash
+					if ((aState == ActionState.SLIDING) && (sprite_index == sprSlide2))
+					{
+						if (atkState == AttackState.A_NONE)
+						{
+							sprite_index = spr_ZSlashSlide;
+							image_index = 0;
+							audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo1, 0, 0);
+							audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
+							
+							hspd = 0;
+							atkState = AttackState.A_NORMAL_ATTACK;
+							var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
+							objSaber.state = SaberState.SABER_SLIDE_SLASH;
+							objSaber.core = self;
+						}
+					}
+					
+					//Climb Slash
+					if ((aState == ActionState.CLIMBING) && (sprite_index == sprClimb2))
+					{
+						if (atkState == AttackState.A_NONE)
+						{
+							sprite_index = spr_ZSlashClimb;
+							image_index = 0;
+							image_speed = 0;
+							audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo1, 0, 0);
+							audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
+							
+							vspd = 0;
+							isClimbing = 0;
+							vState = VerticalState.V_MOVE_NONE;
+							atkState = AttackState.A_STRICT_ATTACK;
+							var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
+							objSaber.state = SaberState.SABER_CLIMB_SLASH;
+							objSaber.core = self;
+						}
+					}
+				}
+				
 				canSlash = -slashWaitTime;
 			}
 		}

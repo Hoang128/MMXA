@@ -3,4 +3,6 @@ damage = 0;
 collisionSFX = noone;
 canCreateDamage = true;
 createDamageTime = 2;
-timmer = 10;
+maxTimmer = 10;
+
+timmer = maxTimmer;
