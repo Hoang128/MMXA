@@ -4,4 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
+collisionEff = obj_flareSlash;
+
 core = noone;
