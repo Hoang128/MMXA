@@ -1455,6 +1455,14 @@
             }
         },
         {
+            "Key": "70800fd1-9d26-4043-8e0b-39ec0736089f",
+            "Value": {
+                "id": "0ea2951e-4535-4a12-b1ee-ed4741336b51",
+                "resourcePath": "objects\\obj_E_RealEnemy\\obj_E_RealEnemy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "70fadd0a-97c3-400c-bed8-176307644823",
             "Value": {
                 "id": "e6a04f1c-dbef-4781-a6ba-2c943769e639",

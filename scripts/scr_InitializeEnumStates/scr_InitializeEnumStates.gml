@@ -89,3 +89,11 @@ enum ItemState
 	UNLOCK,
 	USING
 }
+
+//Initialize Enemy type*********************************************************************************************************************************************
+enum EnemyType
+{
+	REAL_ENEMY,
+	BULLET,
+	ELF_ENEMY
+}

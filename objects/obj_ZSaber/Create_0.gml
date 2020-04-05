@@ -5,8 +5,7 @@
 event_inherited();
 
 collisionSFX = snd_MWeaponColEnemyEff;
-createDamageTime = 4;
-maxTimmer = 10;
+maxTimmer = 8;
 damage = 1;
 
 setupState = true;

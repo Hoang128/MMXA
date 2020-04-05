@@ -6,8 +6,6 @@ event_inherited();
 
 hspd = moveSpd * image_xscale;
 
-if (createDamageTime == 0) instance_destroy();
-
 if (flyTime > 0)
 {
 	x += hspd * DELTA_TIME;
