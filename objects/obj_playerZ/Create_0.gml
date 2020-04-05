@@ -30,3 +30,4 @@ atkSpriteTime = 0;
 airHikeTime = 1;
 standCombo = 0;
 canSlash = 1;
+busterType = noone;

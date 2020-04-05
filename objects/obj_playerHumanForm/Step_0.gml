@@ -332,8 +332,11 @@ if (activateState != ActivateState.DEACTIVATE)
 						//Jump dash
 						if (aState == ActionState.JUMPDASHING)
 						{
-							hspd = hDir * jumpDashSpd;
-							hState = HorizontalState.H_MOVE_FORWARD;
+							if (atkState < AttackState.A_STRICT_ATTACK_LV2)
+							{
+								hspd = hDir * jumpDashSpd;
+								hState = HorizontalState.H_MOVE_FORWARD;
+							}
 						}
 						
 						//Wall kick

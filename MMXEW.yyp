@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "07984710-3b1a-428a-8641-8d4eceff9ea8",
+            "Value": {
+                "id": "259a20c2-0003-49ea-80ef-00cdcdf36780",
+                "resourcePath": "sprites\\spr_ShotEffZBusterNor\\spr_ShotEffZBusterNor.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "082e4ded-ed29-408c-a285-8b62032b37c3",
             "Value": {
                 "id": "6a7eadd1-5280-47d8-a28a-28f414a947ff",
@@ -316,6 +324,14 @@
                 "id": "3dac2006-78bd-4909-a8d2-d379b04c602c",
                 "resourcePath": "sounds\\snd_VZWallKick\\snd_VZWallKick.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "101f04ac-5b54-47f7-acf2-29f3afd0dd58",
+            "Value": {
+                "id": "32b945fb-dc0b-45d3-bda1-a630827793a2",
+                "resourcePath": "sprites\\spr_ZBusterNor\\spr_ZBusterNor.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -463,6 +479,14 @@
             }
         },
         {
+            "Key": "1dce8658-4821-4c7f-bc7f-2a9c1653674f",
+            "Value": {
+                "id": "92d49e11-3a99-419a-9e9b-f24d3dacfbd3",
+                "resourcePath": "sprites\\spr_ZShotNorG\\spr_ZShotNorG.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1f9fc8ca-022c-4684-b64a-04e6695e0771",
             "Value": {
                 "id": "15e0743b-d94c-4882-8dc9-842139310db0",
@@ -476,6 +500,14 @@
                 "id": "3a6b1a4e-aee4-4449-bb55-62a26c70d165",
                 "resourcePath": "views\\1fbf194a-1e13-4f46-a32d-1e54a19ac598.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "1fe14f28-3933-480f-b6d4-63292c2e563e",
+            "Value": {
+                "id": "e19760fb-506a-4ca6-aac6-00238784fb73",
+                "resourcePath": "objects\\obj_E_MovingDummy\\obj_E_MovingDummy.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -756,6 +788,14 @@
                 "id": "c0d95ccb-9449-4d82-86ff-6d75cd464093",
                 "resourcePath": "sounds\\snd_XBeamUpEff\\snd_XBeamUpEff.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "3a2173b8-8664-4688-ae4c-ea4934fe514e",
+            "Value": {
+                "id": "23237eea-c8e2-414c-9e1e-cf9aeea8040e",
+                "resourcePath": "views\\3a2173b8-8664-4688-ae4c-ea4934fe514e.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1154,7 +1194,7 @@
             "Key": "5d5ab23c-451a-4fed-b8d1-8ce7517cf788",
             "Value": {
                 "id": "5b906470-3435-42b9-b56f-166480d7bfea",
-                "resourcePath": "notes\\Read it before you code something.yy",
+                "resourcePath": "notes\\Read it before you code anything.yy",
                 "resourceType": "GMNotes"
             }
         },
@@ -1615,6 +1655,14 @@
             }
         },
         {
+            "Key": "82230428-a00d-4d2e-bd52-9688739c955d",
+            "Value": {
+                "id": "8c510f19-6be2-420d-b6d6-b662c99c3344",
+                "resourcePath": "objects\\obj_ShotEffZ\\obj_ShotEffZ.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8279316f-c76c-43c7-bf4c-8e58487db988",
             "Value": {
                 "id": "1c526115-2607-415d-8ab6-d295e19177fb",
@@ -1636,6 +1684,14 @@
                 "id": "984f838f-0b58-4333-9c7a-68669759829b",
                 "resourcePath": "views\\84c007b1-031f-48c8-a952-2b691c2c3c3d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "85ad2a03-97cc-4280-a18d-6b79e3cbd5aa",
+            "Value": {
+                "id": "988e3ab7-f648-4617-a0db-880d93442116",
+                "resourcePath": "objects\\obj_ZChronoField\\obj_ZChronoField.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1967,6 +2023,14 @@
             }
         },
         {
+            "Key": "9f4e92d6-901f-4e01-958c-e7ee2b7e2fb3",
+            "Value": {
+                "id": "3b10d632-b922-4b86-bd71-231a4c2d9629",
+                "resourcePath": "views\\9f4e92d6-901f-4e01-958c-e7ee2b7e2fb3.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "9feb2d75-251e-41fc-9aa0-afc19c36d9a3",
             "Value": {
                 "id": "7c272d67-8273-42e3-9760-115ae62ae4e7",
@@ -2239,6 +2303,14 @@
             }
         },
         {
+            "Key": "bbb7010d-7528-4da5-93b6-f47e4dd5ed83",
+            "Value": {
+                "id": "eabc1865-841a-4813-8eb7-876e46bb8caa",
+                "resourcePath": "sprites\\spr_ZShotNorA\\spr_ZShotNorA.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bc94eb8d-3492-4e01-9eb4-01002e049d55",
             "Value": {
                 "id": "18803691-d6b8-4024-a497-aec5ebf4a8eb",
@@ -2287,6 +2359,22 @@
             }
         },
         {
+            "Key": "bfbd2672-7687-494d-a6e1-6a25f5bf9742",
+            "Value": {
+                "id": "f35feaf0-3c9d-4b68-8657-c5cf568df205",
+                "resourcePath": "objects\\obj_ZBusterNor\\obj_ZBusterNor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bff8a4fe-3fd5-4315-babb-cea843f3e121",
+            "Value": {
+                "id": "c7835007-5e1e-4a67-a809-6324aafbe783",
+                "resourcePath": "sprites\\spr_ZBusterNorEnd\\spr_ZBusterNorEnd.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bffa9a3c-a42a-4a6e-be6a-8e2c7f6e226a",
             "Value": {
                 "id": "025872f5-7f6b-42ee-acaa-4302e5303f47",
@@ -2327,6 +2415,14 @@
             }
         },
         {
+            "Key": "c6613a5f-5b42-418a-800c-2a4b3cec6e0a",
+            "Value": {
+                "id": "f7a2a240-11db-4c55-a8e3-661042f25a65",
+                "resourcePath": "views\\c6613a5f-5b42-418a-800c-2a4b3cec6e0a.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c68740f5-3770-4caf-acc9-5b90719f8eff",
             "Value": {
                 "id": "934b566a-6e6a-44ef-96a1-48effe4de78c",
@@ -2339,6 +2435,14 @@
             "Value": {
                 "id": "2bd12bd4-64ce-4489-9c42-734d9f5d1990",
                 "resourcePath": "views\\c7b676d4-020b-49b7-b153-027f4c45c56d.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c7da223e-5290-4ff5-b732-273f6a5b21db",
+            "Value": {
+                "id": "2b869584-37a1-4199-85b9-2eab0490e376",
+                "resourcePath": "views\\c7da223e-5290-4ff5-b732-273f6a5b21db.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -2791,6 +2895,14 @@
             }
         },
         {
+            "Key": "ef606e8f-e130-489e-9dcb-7ae86c790c07",
+            "Value": {
+                "id": "3ef028bb-09e0-4ed9-ae8d-7ec60ce1cb45",
+                "resourcePath": "objects\\obj_PlayerShotEff\\obj_PlayerShotEff.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ef95d8ce-4e18-4b36-9d61-5609790f5b94",
             "Value": {
                 "id": "86a416b1-ffd6-419f-96c3-995aaff69b98",
@@ -2900,6 +3012,14 @@
                 "id": "3689a2e1-1f97-439a-b36a-818bf759c75e",
                 "resourcePath": "views\\f816c86a-e51d-4702-873c-38c6257eeb21.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f851b445-5532-434b-ac3d-0aa9d26dc961",
+            "Value": {
+                "id": "e829553e-8a4e-4c47-83f8-2989b1f0a564",
+                "resourcePath": "objects\\obj_ShotEffZBusterNor\\obj_ShotEffZBusterNor.yy",
+                "resourceType": "GMObject"
             }
         },
         {

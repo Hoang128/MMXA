@@ -67,6 +67,9 @@ switch argument0
 			case spr_ZSlashEnd_A:	image_speed = 1; break;
 			case spr_ZSlashLand:	image_speed = 1; break;
 			
+			case spr_ZShotNorA:
+			case spr_ZShotNorG:		image_speed = 0.4; break;
+			
 			default:				image_speed = 0.5; break;
 		}
 		image_speed *= global.deltaTime;

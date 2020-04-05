@@ -106,3 +106,20 @@ if (sprite_index == spr_ZSlashClimb)
 	sprite_index = sprClimb2;
 	image_index = 0;
 }
+
+if (sprite_index == spr_ZShotNorG)
+{
+	atkState = AttackState.A_NONE;
+	
+	sprite_index = sprStand;
+	image_index = 0;
+}
+
+if (sprite_index == spr_ZShotNorA)
+{
+	atkState = AttackState.A_NONE;
+	vState = VerticalState.V_MOVE_FALLING;
+	
+	sprite_index = sprJump3;
+	image_index = 0;
+}

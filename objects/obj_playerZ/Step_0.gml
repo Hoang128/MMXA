@@ -86,10 +86,40 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 	}
 	
+	//Buster
+	//Normal shot
+	if ((sprite_index == spr_ZShotNorG) || (sprite_index == spr_ZShotNorA))
+	{
+		if ((image_index > 4) && (image_index < 5))
+		{
+			if (busterType != noone)
+			{
+				if (!instance_exists(obj_ShotEffZBusterNor))
+				{
+					var xPlace;
+					var yPlace;
+					if (sprite_index == spr_ZShotNorG)
+					{
+						xPlace = 24;
+						yPlace = -22;
+					}
+					if (sprite_index == spr_ZShotNorA)
+					{
+						xPlace = 30;
+						yPlace = -24;
+					}
+					var shotEff = instance_create_depth(x + xPlace * image_xscale, y + yPlace, depth - 1, obj_ShotEffZBusterNor);
+					shotEff.image_xscale = image_xscale;
+					busterType = noone;
+				}
+			}
+		}
+	}
+	
 	//Active*******************************************************************************************************
 	if (activateState == ActivateState.ACTIVATE)
 	{
-		
+		//Normal attack	
 		if (keyboard_check_pressed(global.keyAtk))
 		{
 			if (canSlash > 0)
@@ -242,6 +272,41 @@ if (activateState != ActivateState.DEACTIVATE)
 				}
 				
 				canSlash = -slashWaitTime;
+			}
+		}
+		
+		//Special attack
+		if (keyboard_check_pressed(global.keySpAtk))
+		{
+			if ((!keyboard_check(global.keyUp)) && (!keyboard_check(global.keyDown)))
+			{
+				if (!instance_exists(obj_ZChronoField))
+				{
+					if (atkState == AttackState.A_NONE)
+					{
+						if (vState == VerticalState.V_ON_GROUND)
+						{
+							sprite_index = spr_ZShotNorG;
+							image_index = 0;
+						
+							busterType = obj_ZChronoField;
+							hspd = 0;
+							aState =ActionState.IDLE;
+							atkState = AttackState.A_STRICT_ATTACK_LV2;
+						}
+						else
+						{
+							sprite_index = spr_ZShotNorA;
+							image_index = 0;
+						
+							busterType = obj_ZChronoField;
+							hspd = 0;
+							vspd = -0.5;
+							atkState = AttackState.A_STRICT_ATTACK_LV2;
+							vState = VerticalState.V_MOVE_UP;
+						}
+					}
+				}
 			}
 		}
 		
