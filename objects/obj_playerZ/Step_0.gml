@@ -114,6 +114,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					}
 					var shotEff = instance_create_depth(x + xPlace * image_xscale, y + yPlace, depth - 1, obj_ShotEffZBusterNor);
 					shotEff.image_xscale = image_xscale;
+					shotEff.busterType = busterType;
 					busterType = noone;
 				}
 			}
@@ -308,7 +309,41 @@ if (activateState != ActivateState.DEACTIVATE)
 							if (aState == ActionState.DASHING)
 								aState = ActionState.IDLE;
 							atkState = AttackState.A_NORMAL_ATTACK;
+							vState = VerticalState.V_MOVE_FALLING;
 						}
+					}
+				}
+			}
+		}
+		
+		//Form attack
+		if (keyboard_check_pressed(global.keyGiga))
+		{
+			//Z buster
+			if ((!keyboard_check(global.keyUp)) && (!keyboard_check(global.keyDown)))
+			{
+				if (atkState == AttackState.A_NONE)
+				{
+					if (vState == VerticalState.V_ON_GROUND)
+					{
+						sprite_index = spr_ZShotNorG;
+						image_index = 0;
+						
+						busterType = obj_ZBusterNor;
+						hspd = 0;
+						aState = ActionState.IDLE;
+						atkState = AttackState.A_STRICT_ATTACK_LV2;
+					}
+					else
+					{
+						sprite_index = spr_ZShotNorA;
+						image_index = 0;
+						
+						busterType = obj_ZBusterNor;
+						if (aState == ActionState.DASHING)
+							aState = ActionState.IDLE;
+						atkState = AttackState.A_NORMAL_ATTACK;
+						vState = VerticalState.V_MOVE_FALLING;
 					}
 				}
 			}

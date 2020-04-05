@@ -3,7 +3,7 @@
 event_inherited();
 
 minRadius = 5;
-maxRadius = 48;
+maxRadius = 64;
 maxTimeEffect = 120;
 maxTimeShot = 20;
 phase = 0;

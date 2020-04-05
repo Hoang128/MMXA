@@ -1,5 +1,6 @@
-#macro RESOLUTION_WIDTH "426"
-#macro RESOLUTION_HEIGH "240"
+//Initialize Enum States & Macros
+scr_InitializeMacros();
+scr_InitializeEnumStates();
 
 global.debugging = true;
 
@@ -27,9 +28,6 @@ global.keyChar2 = ord("F");
 global.keyStart = vk_enter;
 global.keyMap = vk_tab;
 
-//Initialize Enum States
-scr_InitalizeEnumStates();
-
 //Default Elves
 for(i = 0; i < 16; i++)
 {
@@ -47,6 +45,8 @@ for(i = 0; i <= 4; i++)
 {
 	global.zCore[i] = ItemState.LOCK;
 }
+
+global.zCore[2] = ItemState.USING;
 
 //Zero Form(5 Form: Ultimate, Red, Black, Nightmare, Blue, Crimson)
 for(i = 0; i <=4; i++)

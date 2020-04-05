@@ -367,6 +367,14 @@
             }
         },
         {
+            "Key": "137b0cb3-9668-4ef5-808b-76609df419c6",
+            "Value": {
+                "id": "60bf63e8-1225-4e47-9b1c-de9b23469cb0",
+                "resourcePath": "sprites\\spr_ZBusterColEffLv2\\spr_ZBusterColEffLv2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1406c20c-f593-4274-becf-f73f31daa0ba",
             "Value": {
                 "id": "b9ae8522-1f9d-4ec8-9274-8bc31b634bde",
@@ -476,6 +484,14 @@
                 "id": "2f61dc7f-5002-4b9c-9332-23cf4e8e6d46",
                 "resourcePath": "views\\1c1af90f-c363-4fef-a640-2b2b42791a9c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "1d6ca261-2f19-49d4-8abc-835cb0ad1928",
+            "Value": {
+                "id": "95eefe16-3031-40ec-924c-47d8a0ffef22",
+                "resourcePath": "objects\\obj_ZBusterColEffLv1\\obj_ZBusterColEffLv1.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -740,6 +756,14 @@
                 "id": "6c763ac1-be4e-4531-bf6e-d85e6fe251b1",
                 "resourcePath": "sounds\\snd_ZLandEff\\snd_ZLandEff.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "32d1b60c-88fb-4bdb-a9b4-e9ca4d8f21e5",
+            "Value": {
+                "id": "30887377-a0ff-49c8-8f80-748a0ee52527",
+                "resourcePath": "views\\32d1b60c-88fb-4bdb-a9b4-e9ca4d8f21e5.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1575,6 +1599,14 @@
             }
         },
         {
+            "Key": "79b7701b-81ac-435b-8440-1d6f48d10007",
+            "Value": {
+                "id": "acaaee51-976b-40e9-b2d7-bd0e3083cc7b",
+                "resourcePath": "sprites\\spr_ZBusterColEffLv1\\spr_ZBusterColEffLv1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7a26e9cf-d5bf-47f4-b7da-f806ca704be9",
             "Value": {
                 "id": "1ffa038d-fa07-41a9-86cb-8057d4951f7a",
@@ -1650,7 +1682,7 @@
             "Key": "821a7116-4bc2-4cc0-ad2f-965f291f314d",
             "Value": {
                 "id": "e750d66f-4f9c-4012-be0b-1bf61aba0234",
-                "resourcePath": "scripts\\scr_InitalizeEnumStates\\scr_InitalizeEnumStates.yy",
+                "resourcePath": "scripts\\scr_InitializeEnumStates\\scr_InitializeEnumStates.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2175,6 +2207,14 @@
             }
         },
         {
+            "Key": "af985271-323f-4e4b-a6a9-507cbaf283ea",
+            "Value": {
+                "id": "b557b0f6-7967-43e3-9d8a-1b80ee757085",
+                "resourcePath": "scripts\\scr_InitializeMacros\\scr_InitializeMacros.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b0253a19-eeae-4db6-b389-83da9dcaa47a",
             "Value": {
                 "id": "04079f20-d28c-4347-b831-e5dfe1b966e5",
@@ -2236,6 +2276,14 @@
                 "id": "46356ebe-6576-4fd7-a325-6367423c9c78",
                 "resourcePath": "sounds\\snd_MWeaponColEnemyEff\\snd_MWeaponColEnemyEff.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "b70aad42-3190-4b60-b625-0c2667d27c73",
+            "Value": {
+                "id": "0e63f7e2-5cdd-4acb-8b7a-5591e2e0e916",
+                "resourcePath": "objects\\obj_ZBusterEnd\\obj_ZBusterEnd.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2380,6 +2428,14 @@
                 "id": "025872f5-7f6b-42ee-acaa-4302e5303f47",
                 "resourcePath": "sprites\\spr_ZJump2\\spr_ZJump2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c16c25e2-fbb5-4383-baa9-75c4c4306f82",
+            "Value": {
+                "id": "36cafd30-abd4-4e5b-b6fb-21b47746fa80",
+                "resourcePath": "views\\c16c25e2-fbb5-4383-baa9-75c4c4306f82.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3109,7 +3165,8 @@
         "0d069b93-fa38-4104-be09-e62014bf290b",
         "b7d0e6b2-03f3-4860-97dd-a63104070941",
         "5921e6d7-32dd-4709-847d-725d982b7456",
-        "821a7116-4bc2-4cc0-ad2f-965f291f314d"
+        "821a7116-4bc2-4cc0-ad2f-965f291f314d",
+        "af985271-323f-4e4b-a6a9-507cbaf283ea"
     ],
     "tutorial": ""
 }
