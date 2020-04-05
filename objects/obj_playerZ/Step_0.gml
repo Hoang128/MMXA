@@ -15,10 +15,12 @@ if (activateState != ActivateState.DEACTIVATE)
 	}
 	
 	if (canAirDash == 0) airHikeTime = 0;
-	//Change slash from jump to land
-	if (sprite_index == spr_ZSlashJump)
+	
+	//Change attack sprite from jump to land
+	if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))
 	{
-		if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))
+		//Jump slash
+		if (sprite_index == spr_ZSlashJump)
 		{
 			sprite_index = spr_ZSlashLand;
 			
@@ -26,17 +28,19 @@ if (activateState != ActivateState.DEACTIVATE)
 			obj_ZSaber.state = SaberState.SABER_LAND_SLASH;
 			obj_ZSaber.setupState = true;
 		}
-	}
-	
-	//Change spin to land
-	if (sprite_index == spr_ZSlashSpin)
-	{
-		if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))
+		
+		//Spin slash
+		if (sprite_index == spr_ZSlashSpin)
 		{
 			sprite_index = sprLand;
 			
 			atkState = AttackState.A_NONE;
 			instance_destroy(obj_ZSaber);
+		}
+		
+		if (sprite_index == spr_ZShotNorA)
+		{
+			sprite_index = spr_ZShotNorG;
 		}
 	}
 	
@@ -278,6 +282,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Special attack
 		if (keyboard_check_pressed(global.keySpAtk))
 		{
+			//Chrono Field
 			if ((!keyboard_check(global.keyUp)) && (!keyboard_check(global.keyDown)))
 			{
 				if (!instance_exists(obj_ZChronoField))
@@ -291,7 +296,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						
 							busterType = obj_ZChronoField;
 							hspd = 0;
-							aState =ActionState.IDLE;
+							aState = ActionState.IDLE;
 							atkState = AttackState.A_STRICT_ATTACK_LV2;
 						}
 						else
@@ -300,10 +305,9 @@ if (activateState != ActivateState.DEACTIVATE)
 							image_index = 0;
 						
 							busterType = obj_ZChronoField;
-							hspd = 0;
-							vspd = -0.5;
-							atkState = AttackState.A_STRICT_ATTACK_LV2;
-							vState = VerticalState.V_MOVE_UP;
+							if (aState == ActionState.DASHING)
+								aState = ActionState.IDLE;
+							atkState = AttackState.A_NORMAL_ATTACK;
 						}
 					}
 				}
