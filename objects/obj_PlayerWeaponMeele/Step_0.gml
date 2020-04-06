@@ -1,4 +1,4 @@
-/// @description Follow the core
+/// @description Handle event and follow the core
 
 if (core != noone)
 {

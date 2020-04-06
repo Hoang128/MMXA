@@ -5,8 +5,16 @@ if (damageTimmer == -1)
 	damageTimmer = 0;
 if (damageTimmer <= 0)
 {
-	audio_play_sound_on(global.SFX_Emitter, other.collisionSFX, 0, 0);
-	hp -= other.damage;
+	var realDamage = 0;
+	switch (other.element)
+	{
+		case Element.NEUTRAL:	realDamage = other.damage - neutralArmor;	break;
+		case Element.FIRE:		realDamage = other.damage - fireArmor;		break;
+		case Element.ICE:		realDamage = other.damage - iceArmor;		break;
+		case Element.ELECT:		realDamage = other.damage - electArmor;		break;
+	}
+	if (realDamage > 0)
+		hp -= realDamage;
 	if (other.collisionEff != noone)
 	{
 		//Create collision effect
@@ -59,6 +67,13 @@ if (damageTimmer <= 0)
 			objColEff.image_xscale = self.image_xscale;
 		}
 		#endregion
+	}
+	audio_play_sound_on(global.SFX_Emitter, other.collisionSFX, 0, 0);
+	
+	if (other.type == WeaponType.BUSTER)
+	{
+		if (hp > 0) 
+			instance_destroy(other);
 	}
 	damageTimmer = other.maxTimmer;
 }

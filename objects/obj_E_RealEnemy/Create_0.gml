@@ -5,3 +5,7 @@
 event_inherited();
 
 damageTimmer = -1;
+neutralArmor = 0;
+fireArmor = 0;
+iceArmor = 0;
+electArmor = 0;
