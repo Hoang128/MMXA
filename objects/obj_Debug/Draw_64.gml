@@ -99,7 +99,7 @@ else{
 			scr_LOG_INFO("Char Horizontal State = " + str_hState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Vertical State = " + str_vState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Attack State = " + str_atkState, debugTextColorF, debugTextColorB);
-			scr_LOG_INFO("Char Image speed = " + string(obj_playerHumanForm.image_speed), debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char Attack State (INT) = " + string(obj_playerHumanForm.atkState), debugTextColorF, debugTextColorB);
 		}
 		#endregion
 	}

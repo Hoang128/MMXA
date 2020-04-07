@@ -17,6 +17,15 @@ if (setupState)
 		case SaberState.SABER_SPIN_SLASH:		{ sprite_index = spr_ZSaberSlashSpin;	maxTimmer = 2; }	break;
 		case SaberState.SABER_SLIDE_SLASH:		{ sprite_index = spr_ZSaberSlashSlide;	maxTimmer = 4; }	break;
 		case SaberState.SABER_CLIMB_SLASH:		{ sprite_index = spr_ZSaberSlashClimb;	maxTimmer = 4; }	break;
+		case SaberState.SABER_CHARGE_SLASH:		
+		{ 
+			if (global.zSaber[1] == ItemState.USING)
+			{
+				sprite_index = spr_ZSaberSlashCharge_Smash;	
+				maxTimmer = 4; 
+				damage = 2;
+			}
+		}	break;
 	}
 	
 	setupState = false;

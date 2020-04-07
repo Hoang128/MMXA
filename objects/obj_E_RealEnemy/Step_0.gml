@@ -4,4 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-if (damageTimmer > 0) damageTimmer -= global.deltaTime;
+if (damageTimmer > 0) damageTimmer -= DELTA_TIME;
+if (hp == 0) instance_destroy();

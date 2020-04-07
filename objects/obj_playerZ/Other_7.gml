@@ -23,6 +23,8 @@ if (sprite_index == spr_ZSlashCombo1
  || sprite_index == spr_ZSlashCombo2
  || sprite_index == spr_ZSlashCombo3)
 {
+	canCharge = 1;
+	canChargeTimmer = canChargeTimmerMax;
 	standCombo = 0;
 	if (atkState < AttackState.A_STRICT_ATTACK_LV2)
 		atkState = AttackState.A_NONE;
@@ -46,6 +48,8 @@ if (sprite_index == spr_ZSlashEnd_A)
 
 if ((sprite_index == spr_ZSlashJump) || (sprite_index == spr_ZSlashSpin))
 {
+	canCharge = 1;
+	canChargeTimmer = canChargeTimmerMax;
 	if (atkState < AttackState.A_STRICT_ATTACK_LV2)
 		atkState = AttackState.A_NONE;
 	else instance_destroy(obj_ZSaber);
@@ -58,6 +62,8 @@ if ((sprite_index == spr_ZSlashJump) || (sprite_index == spr_ZSlashSpin))
 
 if (sprite_index == spr_ZSlashLand)
 {
+	canCharge = 1;
+	canChargeTimmer = canChargeTimmerMax;
 	if (atkState != AttackState.A_NONE)
 		atkState = AttackState.A_NONE;
 	
@@ -67,6 +73,8 @@ if (sprite_index == spr_ZSlashLand)
 
 if (sprite_index == spr_ZSlashDuck)
 {
+	canCharge = 1;
+	canChargeTimmer = canChargeTimmerMax;
 	atkState = AttackState.A_NONE;
 		
 	sprite_index = sprDuck2;
@@ -75,6 +83,8 @@ if (sprite_index == spr_ZSlashDuck)
 
 if (sprite_index == spr_ZSlashSlide)
 {
+	canCharge = 1;
+	canChargeTimmer = canChargeTimmerMax;
 	atkState = AttackState.A_NONE;
 	
 	sprite_index = sprSlide2;
@@ -83,6 +93,8 @@ if (sprite_index == spr_ZSlashSlide)
 
 if (sprite_index == spr_ZSlashClimb)
 {
+	canCharge = 1;
+	canChargeTimmer = canChargeTimmerMax;
 	atkState = AttackState.A_NONE;
 	var moveUp = keyboard_check(global.keyUp);
 	var moveDown = keyboard_check(global.keyDown);
@@ -121,5 +133,30 @@ if (sprite_index == spr_ZShotNorA)
 	vState = VerticalState.V_MOVE_FALLING;
 	
 	sprite_index = sprJump3;
+	image_index = 0;
+}
+
+if (sprite_index == spr_ZSlashCharge_A)
+{
+	canCharge = 1;
+	canChargeTimmer = canChargeTimmerMax;
+	atkState = AttackState.A_NONE;
+	instance_destroy(obj_ZSaber);
+	
+	if (vspd < 0)
+		sprite_index = sprJump2;
+	else
+		sprite_index = sprJump4;
+}
+
+if (sprite_index == spr_ZSlashCharge_G)
+{
+	canCharge = 1;
+	canChargeTimmer = canChargeTimmerMax;
+	atkState = AttackState.A_NONE;
+	instance_destroy(obj_ZSaber);
+	aState = ActionState.IDLE;
+	
+	sprite_index = spr_ZSlashEnd_G;
 	image_index = 0;
 }

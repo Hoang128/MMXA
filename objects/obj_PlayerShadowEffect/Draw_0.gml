@@ -11,7 +11,7 @@ if (myPalSprite != noone)
 	
 	if (core.object_index == obj_playerZ)
 	{
-		scr_PalSwapSet(myPalSprite, 3, false);
+		scr_PalSwapSet(myPalSprite, 1, false);
 	}
 }
 

@@ -38,6 +38,17 @@ if (activateState != ActivateState.DEACTIVATE)
 			instance_destroy(obj_ZSaber);
 		}
 		
+		//Charge slash
+		if (sprite_index == spr_ZSlashCharge_A)
+		{
+			sprite_index = spr_ZSlashCharge_G;
+			
+			hspd = 0;
+			atkState = AttackState.A_STRICT_ATTACK_LV3;
+			hState = AttackState.A_NONE;
+		}
+		
+		//Shot
 		if (sprite_index == spr_ZShotNorA)
 		{
 			sprite_index = spr_ZShotNorG;
@@ -48,11 +59,11 @@ if (activateState != ActivateState.DEACTIVATE)
 	if (canSlash < 1) 
 	{
 		if (atkState == AttackState.A_NONE) canSlash = 1;
-		canSlash += global.deltaTime;
+		canSlash += DELTA_TIME;
 	}
 	
 	//Slash combo 2
-	if ((standCombo > 0) && (atkState != AttackState.A_STRICT_ATTACK)) standCombo = 0;
+	if ((standCombo > 0) && (atkState != AttackState.A_STRICT_ATTACK_LV2)) standCombo = 0;
 	
 	if ((sprite_index == spr_ZSlashCombo1) && (image_index > 8))
 	{
@@ -86,7 +97,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				obj_ZSaber.state = SaberState.SABER_COMBO_3;
 				obj_ZSaber.setupState = true;
 			}
-			atkState = AttackState.A_STRICT_ATTACK_LV2;
+			atkState = AttackState.A_STRICT_ATTACK_LV3;
 		}
 	}
 	
@@ -121,6 +132,15 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 	}
 	
+	//Passive Counters
+	if (canCharge == 1)
+	{
+		if (canChargeTimmer > 0)
+		{
+			canChargeTimmer -= DELTA_TIME;
+		}
+	}
+	
 	//Active*******************************************************************************************************
 	if (activateState == ActivateState.ACTIVATE)
 	{
@@ -150,7 +170,7 @@ if (activateState != ActivateState.DEACTIVATE)
 								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
 							
 								hspd = 0;
-								atkState = AttackState.A_STRICT_ATTACK;
+								atkState = AttackState.A_STRICT_ATTACK_LV2;
 								var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
 								objSaber.state = SaberState.SABER_COMBO_1;
 								objSaber.core = self;
@@ -166,7 +186,7 @@ if (activateState != ActivateState.DEACTIVATE)
 								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
 							
 								hspd = 0;
-								atkState = AttackState.A_STRICT_ATTACK;
+								atkState = AttackState.A_STRICT_ATTACK_LV2;
 								var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
 								objSaber.state = SaberState.SABER_LAND_SLASH;
 								objSaber.core = self;
@@ -184,7 +204,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							if (random(2) > 1.2)
 								audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo1, 0, 0);
 							audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
-							atkState = AttackState.A_STRICT_ATTACK;
+							atkState = AttackState.A_STRICT_ATTACK_LV2;
 							var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
 							objSaber.state = SaberState.SABER_DUCK_SLASH;
 							objSaber.core = self;
@@ -268,7 +288,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							vspd = 0;
 							isClimbing = 0;
 							vState = VerticalState.V_MOVE_NONE;
-							atkState = AttackState.A_STRICT_ATTACK;
+							atkState = AttackState.A_STRICT_ATTACK_LV2;
 							var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
 							objSaber.state = SaberState.SABER_CLIMB_SLASH;
 							objSaber.core = self;
@@ -280,6 +300,83 @@ if (activateState != ActivateState.DEACTIVATE)
 			}
 		}
 		
+		//Charge attack
+		if (keyboard_check(global.keyAtk))
+		{
+			if (canCharge)
+			{
+				if (chargeNormal == 0) 
+					chargeNormal += DELTA_TIME;
+			}
+			
+			if ((chargeNormal > 0) && (chargeNormal < chargeLv2Limit))
+			{
+				chargeNormal += DELTA_TIME;
+				if (chargeNormal >= chargeLv1Limit)
+				{
+					if (!instance_exists(obj_ZChargeEffLv1))
+					{
+						var objChargeEff = instance_create_depth(x, y, depth - 2, obj_ZChargeEffLv1);
+						objChargeEff.core = self;
+						objChargeEff.chargeParameter = self.chargeNormal;
+					}
+				}
+			}
+			
+			if (chargeNormal >= chargeLv2Limit)
+			{
+				if (!instance_exists(obj_ZChargeEffLv2))
+				{
+					var objChargeEff = instance_create_depth(x, y, depth - 2, obj_ZChargeEffLv2);
+					objChargeEff.core = self;
+					objChargeEff.chargeParameter = self.chargeNormal;
+				}
+			}
+		}
+		
+		if (keyboard_check_released(global.keyAtk))
+		{
+			if (chargeNormal >= chargeLv1Limit)
+			{
+				if (instance_exists(obj_ZChargeEffLv1))
+					instance_destroy(obj_ZChargeEffLv1);
+			}
+			if (chargeNormal >= chargeLv2Limit)
+			{
+				if (instance_exists(obj_ZChargeEffLv2))
+					instance_destroy(obj_ZChargeEffLv2);
+				
+				if (vState == VerticalState.V_ON_GROUND)
+				{
+					sprite_index = spr_ZSlashCharge_G;
+					hspd = 0;
+					hState = HorizontalState.H_MOVE_NONE;
+					atkState = AttackState.A_STRICT_ATTACK_LV3;
+					
+				}
+				else
+				{
+					sprite_index = spr_ZSlashCharge_A;
+					
+					if (canAirDash)
+						canAirDash = 0;
+					if (aState == ActionState.DASHING)
+						aState = ActionState.IDLE;
+					atkState = AttackState.A_STRICT_ATTACK;
+				}
+				image_index = 0;
+				audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo3, 0, 0);
+				audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash3, 0, 0);
+
+				vState = VerticalState.V_MOVE_FALLING;
+				var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
+				objSaber.state = SaberState.SABER_CHARGE_SLASH;
+				objSaber.core = self;
+			}
+			canCharge = 0;
+			chargeNormal = 0;
+		}
+		
 		//Special attack
 		if (keyboard_check_pressed(global.keySpAtk))
 		{
@@ -288,29 +385,30 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				if (!instance_exists(obj_ZChronoField))
 				{
-					if (atkState == AttackState.A_NONE)
+					audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
+					if (atkState < AttackState.A_STRICT_ATTACK_LV3)
 					{
 						if (vState == VerticalState.V_ON_GROUND)
 						{
 							sprite_index = spr_ZShotNorG;
-							image_index = 0;
-						
-							busterType = obj_ZChronoField;
+
 							hspd = 0;
 							aState = ActionState.IDLE;
-							atkState = AttackState.A_STRICT_ATTACK_LV2;
+							atkState = AttackState.A_STRICT_ATTACK_LV3;
 						}
 						else
 						{
 							sprite_index = spr_ZShotNorA;
-							image_index = 0;
 						
-							busterType = obj_ZChronoField;
 							if (aState == ActionState.DASHING)
 								aState = ActionState.IDLE;
 							atkState = AttackState.A_NORMAL_ATTACK;
 							vState = VerticalState.V_MOVE_FALLING;
 						}
+						image_index = 0;
+						busterType = obj_ZChronoField;
+						if (instance_exists(obj_ZSaber)) 
+							instance_destroy(obj_ZSaber);
 					}
 				}
 			}
@@ -319,31 +417,36 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Form attack
 		if (keyboard_check_pressed(global.keyGiga))
 		{
-			//Z buster
-			if ((!keyboard_check(global.keyUp)) && (!keyboard_check(global.keyDown)))
+			if (global.zCore[2] == ItemState.USING)
 			{
-				if (atkState == AttackState.A_NONE)
+				//Z buster
+				if ((!keyboard_check(global.keyUp)) && (!keyboard_check(global.keyDown)))
 				{
-					if (vState == VerticalState.V_ON_GROUND)
+					if (atkState < AttackState.A_STRICT_ATTACK_LV3)
 					{
-						sprite_index = spr_ZShotNorG;
-						image_index = 0;
-						
-						busterType = obj_ZBusterNor;
-						hspd = 0;
-						aState = ActionState.IDLE;
-						atkState = AttackState.A_STRICT_ATTACK_LV2;
-					}
-					else
-					{
-						sprite_index = spr_ZShotNorA;
-						image_index = 0;
-						
-						busterType = obj_ZBusterNor;
-						if (aState == ActionState.DASHING)
+						audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
+						if (vState == VerticalState.V_ON_GROUND)
+						{
+							sprite_index = spr_ZShotNorG;
+							
+							hspd = 0;
 							aState = ActionState.IDLE;
-						atkState = AttackState.A_NORMAL_ATTACK;
-						vState = VerticalState.V_MOVE_FALLING;
+							atkState = AttackState.A_STRICT_ATTACK_LV3;
+						}
+						else
+						{
+							sprite_index = spr_ZShotNorA;
+						
+							busterType = obj_ZBusterNor;
+							if (aState == ActionState.DASHING)
+								aState = ActionState.IDLE;
+							atkState = AttackState.A_NORMAL_ATTACK;
+							vState = VerticalState.V_MOVE_FALLING;
+						}
+						image_index = 0;
+						busterType = obj_ZBusterNor;
+						if (instance_exists(obj_ZSaber)) 
+							instance_destroy(obj_ZSaber);
 					}
 				}
 			}

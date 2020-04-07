@@ -28,11 +28,12 @@ maxDisDetectSlopeAbove = 4; //Distance to detect slope on the ground
 minDistanceToLadder = 6; //Distance to ladder to climb
 distanceToMoveAnimationLadder = 34; //DO NOT MODIFY THIS
 beamSpd = 3; //Beam down and beam up speed
-canJumpWaitMax = 2;
-climbSpd = 2;
-xPlaceDashEff = 0;
-yPlaceDashEff = 0;
-myDeltaTime = 1;
+canJumpWaitMax = 2; //Step number disable jump's key function between each time jump key pressed
+climbSpd = 2; //Climb ladder's speed
+myDeltaTime = 1; //Use for slow time
+chargeLv1Limit = 20; //Time hold attack button to show lv1 charge effect
+chargeLv2Limit = 80; //Time hold attack button to show lv2 charge effect
+
 
 //Default state
 weight = WeighType.MEDIUM;
@@ -59,6 +60,9 @@ dashKickFlyTime = 0;
 shadowCreateTime = shadowCreateTimeMax;
 isClimbing = 0;
 dynamicBlock = noone;
+xPlaceDashEff = 0;
+yPlaceDashEff = 0;
+chargeNormal = 0;
 
 //Initialize sprite
 sprFlash = noone;

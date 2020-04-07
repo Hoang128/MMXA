@@ -56,7 +56,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			hspd = 0;
 	}
 	
-	x += hspd * myDeltaTime * global.deltaTime;
+	x += hspd * DELTA_TIME;
 	
 	#endregion
 	
@@ -89,7 +89,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 	}
 	
-	y += vspd * myDeltaTime * global.deltaTime;
+	y += vspd * DELTA_TIME;
 	
 	#endregion
 	
@@ -143,7 +143,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				if ((!canSlide) && (vspd >= 0)) canSlide = 1;
 			}
 			if (vspd < maxGrav)
-				vspd += grav * myDeltaTime * global.deltaTime;
+				vspd += grav * DELTA_TIME;
 		}
 		if (vState == VerticalState.V_MOVE_NONE)
 		{
@@ -195,7 +195,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					canSlide = 0;
 					vspd = slideSpd / 2;
 					aState = ActionState.IDLE;
-					if (atkState < AttackState.A_STRICT_ATTACK) atkState = AttackState.A_NONE;
+					if (atkState < AttackState.A_STRICT_ATTACK_LV2) atkState = AttackState.A_NONE;
 					vState = VerticalState.V_MOVE_FALLING;
 				}
 			}
@@ -223,7 +223,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		else
 		{
-			dashKickFlyTime -= myDeltaTime * global.deltaTime;
+			dashKickFlyTime -= DELTA_TIME;
 		}
 		
 		if (hState == HorizontalState.H_MOVE_PASSIVE)
@@ -260,7 +260,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			else 
 			{
 				hDir = sign(hspd);
-				dashKickTime -= myDeltaTime * global.deltaTime;
+				dashKickTime -= DELTA_TIME;
 			}
 		}
 	}
@@ -279,7 +279,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				hState = HorizontalState.H_MOVE_NONE;
 				vState = VerticalState.V_MOVE_FALLING;
 			}
-			else if (wallKickTime > 0) wallKickTime -= myDeltaTime * global.deltaTime;
+			else if (wallKickTime > 0) wallKickTime -= DELTA_TIME;
 		}
 	}
 	
@@ -297,7 +297,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		else
 		{
-			canJumpWait -= myDeltaTime * global.deltaTime;
+			canJumpWait -= DELTA_TIME;
 		}
 	}
 	
@@ -322,7 +322,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			//Normal run
 			if((aState != ActionState.DASHING) && (aState != ActionState.CLIMBING))
 			{
-				if (atkState < AttackState.A_STRICT_ATTACK)
+				if (atkState < AttackState.A_STRICT_ATTACK_LV2)
 					hDir = hMove;
 				if (aState != ActionState.DUCKING)
 				{
@@ -364,18 +364,18 @@ if (activateState != ActivateState.DEACTIVATE)
 						//Run
 						else
 						{
-							if (atkState < AttackState.A_STRICT_ATTACK)
+							if (atkState < AttackState.A_STRICT_ATTACK_LV2)
 							{
 								if ((aState == ActionState.IDLE) && (vState == VerticalState.V_ON_GROUND)) 
 								{
-									if ((sprite_index != sprRunStart) && (sprite_index != sprRun))
+									if (atkState < AttackState.A_STRICT_ATTACK)
 									{
-										sprite_index = sprRunStart;
-										image_index = 0;
+										if ((sprite_index != sprRunStart) && (sprite_index != sprRun))
+										{
+											sprite_index = sprRunStart;
+											image_index = 0;
+										}
 									}
-									
-									if (atkState > AttackState.A_NONE)
-										atkState = AttackState.A_NONE;
 								}
 								hspd = hDir * runSpd;
 								hState = HorizontalState.H_MOVE_FORWARD;
@@ -477,7 +477,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					vspd = slideSpd / 2;
 					vState = VerticalState.V_MOVE_FALLING;
 					aState = ActionState.IDLE;
-					if (atkState < AttackState.A_STRICT_ATTACK) 
+					if (atkState < AttackState.A_STRICT_ATTACK_LV2) 
 						atkState = AttackState.A_NONE;
 				}
 			}
@@ -494,7 +494,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				if (aState == ActionState.IDLE)
 				{
-					if (atkState < AttackState.A_STRICT_ATTACK)
+					if (atkState < AttackState.A_STRICT_ATTACK_LV2)
 					{
 						if (dynamicBlock != noone)
 						{
@@ -675,7 +675,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		var wallIsAHead = (place_meeting(x + hDir, y, obj_block) && (!place_meeting(x + hDir, y, obj_slope)));
 		if (keyboard_check_pressed(global.keyDash) && (!wallIsAHead))
 		{
-			if ((aState != ActionState.CLIMBING) && (atkState < AttackState.A_STRICT_ATTACK_LV2))
+			if ((aState != ActionState.CLIMBING) && (atkState < AttackState.A_STRICT_ATTACK_LV3))
 			{
 				if (aState != ActionState.JUMPDASHING)
 				{
@@ -715,7 +715,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (aState == ActionState.DASHING)
 		{
 			hspd = dashSpd * hDir;
-			if (dashTime > 0) dashTime -= myDeltaTime * global.deltaTime;
+			if (dashTime > 0) dashTime -= DELTA_TIME;
 		}
 		
 		//Dash phase speed
@@ -759,7 +759,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		#region
 		
 		//Start jump
-		if (keyboard_check_pressed(global.keyJump) && (canJump) && (atkState < AttackState.A_STRICT_ATTACK_LV3))
+		if (keyboard_check_pressed(global.keyJump) && (canJump) && (atkState < AttackState.A_STRICT_ATTACK_LV4))
 		{
 			//Normal jump
 			#region

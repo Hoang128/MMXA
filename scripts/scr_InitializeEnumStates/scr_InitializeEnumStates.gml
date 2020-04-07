@@ -49,7 +49,7 @@ enum HorizontalState
 enum AttackState
 {
 	A_NONE,
-	A_NORMAL_ATTACK, //X's attack
+	A_NORMAL_ATTACK, //Attack in normal sprite
 	A_STRICT_ATTACK, //Cannot cancel by duck
 	A_STRICT_ATTACK_LV2, //Cannot cancel by run, duck
 	A_STRICT_ATTACK_LV3, //Cannot cancel by run, dash, duck
@@ -79,7 +79,8 @@ enum SaberState
 	SABER_SPIN_SLASH,
 	SABER_SLIDE_SLASH,
 	SABER_CLIMB_SLASH,
-	SABER_LAND_SLASH
+	SABER_LAND_SLASH,
+	SABER_CHARGE_SLASH
 }
 
 //Initialize Item State*********************************************************************************************************************************************
@@ -112,5 +113,7 @@ enum WeaponType
 {
 	BUSTER,
 	SABER,
+	BEAM,
+	BULLET,
 	OTHER
 }

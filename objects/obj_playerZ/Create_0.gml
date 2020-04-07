@@ -9,6 +9,7 @@ xPlaceDashEff = -25;
 yPlaceDashEff = -4;
 airHikeTimeMax = 1;
 slashWaitTime = 2;
+canChargeTimmerMax = 2;
 
 //Initialize parents sprites***************************************************************************************************************************************
 scr_InitSpritePlayerHFormBase(obj_playerZ);
@@ -31,3 +32,5 @@ airHikeTime = 1;
 standCombo = 0;
 canSlash = 1;
 busterType = noone;
+canCharge = 0;
+canChargeTimmer = 0;

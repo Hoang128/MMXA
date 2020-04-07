@@ -9,3 +9,5 @@ neutralArmor = 0;
 fireArmor = 0;
 iceArmor = 0;
 electArmor = 0;
+
+createExplosion = true;

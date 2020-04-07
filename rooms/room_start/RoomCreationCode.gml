@@ -46,8 +46,6 @@ for(i = 0; i <= 4; i++)
 	global.zCore[i] = ItemState.LOCK;
 }
 
-global.zCore[2] = ItemState.USING;
-
 //Zero Form(5 Form: Ultimate, Red, Black, Nightmare, Blue, Crimson)
 for(i = 0; i <=4; i++)
 {
@@ -61,7 +59,7 @@ for(i = 0; i <=4; i++)
 }
 
 //Default Zero
-global.zCore[1] = ItemState.USING;
+global.zCore[2] = ItemState.USING;
 global.zForm[1] = ItemState.USING;
 global.zSaber[1] = ItemState.USING;
 
