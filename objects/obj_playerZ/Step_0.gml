@@ -25,8 +25,8 @@ if (activateState != ActivateState.DEACTIVATE)
 			sprite_index = spr_ZSlashLand;
 			
 			atkState = AttackState.A_STRICT_ATTACK;
-			obj_ZSaber.state = SaberState.SABER_LAND_SLASH;
-			obj_ZSaber.setupState = true;
+
+			scr_MeeleWeaponChangeState(obj_ZSaberImage, SaberState.SABER_LAND_SLASH);
 		}
 		
 		//Spin slash
@@ -35,7 +35,8 @@ if (activateState != ActivateState.DEACTIVATE)
 			sprite_index = sprLand;
 			
 			atkState = AttackState.A_NONE;
-			instance_destroy(obj_ZSaber);
+			
+			scr_MeeleWeaponDestroy(obj_ZSaberImage);
 		}
 		
 		//Charge slash
@@ -76,8 +77,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			
 			if (instance_exists(obj_ZSaber)) 
 			{
-				obj_ZSaber.state = SaberState.SABER_COMBO_2;
-				obj_ZSaber.setupState = true;
+				scr_MeeleWeaponChangeState(obj_ZSaberImage, SaberState.SABER_COMBO_2);
 			}
 		}
 	}
@@ -94,8 +94,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			
 			if (instance_exists(obj_ZSaber)) 
 			{
-				obj_ZSaber.state = SaberState.SABER_COMBO_3;
-				obj_ZSaber.setupState = true;
+				scr_MeeleWeaponChangeState(obj_ZSaberImage, SaberState.SABER_COMBO_3);
 			}
 			atkState = AttackState.A_STRICT_ATTACK_LV3;
 		}
@@ -171,9 +170,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							
 								hspd = 0;
 								atkState = AttackState.A_STRICT_ATTACK_LV2;
-								var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
-								objSaber.state = SaberState.SABER_COMBO_1;
-								objSaber.core = self;
+								
+								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_COMBO_1, self);
 							}
 						}
 						else
@@ -187,9 +185,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							
 								hspd = 0;
 								atkState = AttackState.A_STRICT_ATTACK_LV2;
-								var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
-								objSaber.state = SaberState.SABER_LAND_SLASH;
-								objSaber.core = self;
+
+								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_LAND_SLASH, self);
 							}
 						}
 					}
@@ -205,9 +202,8 @@ if (activateState != ActivateState.DEACTIVATE)
 								audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo1, 0, 0);
 							audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
 							atkState = AttackState.A_STRICT_ATTACK_LV2;
-							var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
-							objSaber.state = SaberState.SABER_DUCK_SLASH;
-							objSaber.core = self;
+							
+							scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_DUCK_SLASH, self);
 						}
 					}
 				}
@@ -228,9 +224,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							
 							hspd = 0;
 							atkState = AttackState.A_NORMAL_ATTACK;
-							var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
-							objSaber.state = SaberState.SABER_JUMP_SLASH;
-							objSaber.core = self;
+							
+							scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_JUMP_SLASH, self);
 						}
 					}
 					else
@@ -246,9 +241,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							
 							hspd = 0;
 							atkState = AttackState.A_NORMAL_ATTACK;
-							var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
-							objSaber.state = SaberState.SABER_SPIN_SLASH;
-							objSaber.core = self;
+							
+							scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_SPIN_SLASH, self);
 						}
 					}
 				}
@@ -268,9 +262,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							
 							hspd = 0;
 							atkState = AttackState.A_NORMAL_ATTACK;
-							var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
-							objSaber.state = SaberState.SABER_SLIDE_SLASH;
-							objSaber.core = self;
+							
+							scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_SLIDE_SLASH, self);
 						}
 					}
 					
@@ -289,9 +282,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							isClimbing = 0;
 							vState = VerticalState.V_MOVE_NONE;
 							atkState = AttackState.A_STRICT_ATTACK_LV2;
-							var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
-							objSaber.state = SaberState.SABER_CLIMB_SLASH;
-							objSaber.core = self;
+							
+							scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_CLIMB_SLASH, self);
 						}
 					}
 				}
@@ -369,9 +361,8 @@ if (activateState != ActivateState.DEACTIVATE)
 				audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash3, 0, 0);
 
 				vState = VerticalState.V_MOVE_FALLING;
-				var objSaber = instance_create_depth(x, y, depth - 1, obj_ZSaber);
-				objSaber.state = SaberState.SABER_CHARGE_SLASH;
-				objSaber.core = self;
+				
+				scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_CHARGE_SLASH, self);
 			}
 			canCharge = 0;
 			chargeNormal = 0;

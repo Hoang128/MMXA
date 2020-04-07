@@ -3,6 +3,3 @@
 
 // Inherit the parent event
 event_inherited();
-
-draw_set_font(fnt_Ingame);
-draw_set_color(c_black);

@@ -26,9 +26,9 @@ if (sprite_index == spr_ZSlashCombo1
 	canCharge = 1;
 	canChargeTimmer = canChargeTimmerMax;
 	standCombo = 0;
-	if (atkState < AttackState.A_STRICT_ATTACK_LV2)
+	if (atkState < AttackState.A_STRICT_ATTACK_LV3)
 		atkState = AttackState.A_NONE;
-	else instance_destroy(obj_ZSaber);
+	else scr_MeeleWeaponDestroy(obj_ZSaberImage);
 	
 	sprite_index = spr_ZSlashEnd_G;
 	image_index = 0;
