@@ -20,52 +20,19 @@ if (damageTimmer <= 0)
 		//Create collision effect
 		#region
 			
-		with (other)
+		if (other.type == WeaponType.SABER)
 		{
-			var xPlace = x;
-			var yPlace = y;
-			var rBorderIsInEnemy = place_meeting(bbox_right, y, other);
-			var lBorderIsInEnemy = place_meeting(bbox_left, y, other);
-			var tBorderIsInEnemy = place_meeting(x, bbox_top, other);
-			var bBorderIsInEnemy = place_meeting(x, bbox_bottom, other);
-				
-			if (rBorderIsInEnemy && !lBorderIsInEnemy)
-			{
-				xPlace = (bbox_right + other.bbox_left) / 2;
-			}
-			if (!rBorderIsInEnemy && lBorderIsInEnemy)
-			{
-				xPlace = (bbox_left + other.bbox_right) / 2;
-			}
-			if (!rBorderIsInEnemy && !lBorderIsInEnemy)
-			{
-				xPlace = (other.bbox_right + other.bbox_left) / 2;
-			}
-			if (rBorderIsInEnemy && lBorderIsInEnemy)
-			{
-				xPlace = (bbox_right + bbox_left) / 2;
-			}
-				
-			if (tBorderIsInEnemy && !bBorderIsInEnemy)
-			{
-				yPlace = (bbox_top + other.bbox_bottom) / 2;
-			}
-			if (!tBorderIsInEnemy && bBorderIsInEnemy)
-			{
-				yPlace = (bbox_bottom + other.bbox_top) / 2;
-			}
-			if (!tBorderIsInEnemy && !bBorderIsInEnemy)
-			{
-				yPlace = (other.bbox_top + other.bbox_bottom) / 2;
-			}
-			if (tBorderIsInEnemy && bBorderIsInEnemy)
-			{
-				yPlace = (bbox_bottom + bbox_top) / 2;
-			}
-				
-			var objColEff = instance_create_depth(xPlace, yPlace, depth - 1, collisionEff);
-			objColEff.image_xscale = self.image_xscale;
+			var xPlace = clamp(other.x + (abs(other.sprite_width) - abs(other.sprite_xoffset)) * 0.75 * other.image_xscale, bbox_left, bbox_right);
+			var yPlace = clamp((other.core.bbox_top + other.core.bbox_bottom) / 2, bbox_top, bbox_bottom);
 		}
+		else
+		{
+			var xPlace = other.x + other.image_xscale * (other.bbox_right - other.bbox_left) / 2;
+			var yPlace = (other.bbox_top + other.bbox_bottom) / 2;
+		}
+				
+		var objColEff = instance_create_depth(xPlace, yPlace, other.depth - 1, other.collisionEff);
+		objColEff.image_xscale = other.image_xscale;
 		#endregion
 	}
 	audio_play_sound_on(global.SFX_Emitter, other.collisionSFX, 0, 0);

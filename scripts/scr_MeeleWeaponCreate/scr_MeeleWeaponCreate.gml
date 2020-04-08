@@ -10,7 +10,7 @@ switch (obj_ImageWeapon)
 		objSaberImage.state = weaponState;
 		objSaberImage.core = core;
 		
-		var objSaber = instance_create_depth(x, y, depth, obj_ZSaber);
+		var objSaber = instance_create_depth(x, y, depth - 2, obj_ZSaber);
 		objSaber.state = weaponState;
 		objSaber.core = core;
 	}
