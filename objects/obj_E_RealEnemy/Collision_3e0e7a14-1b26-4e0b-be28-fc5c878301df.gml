@@ -15,6 +15,10 @@ if (damageTimmer <= 0)
 	}
 	if (realDamage > 0)
 		hp -= realDamage;
+		
+	//Create Effect
+	if (other.slowTime == true) 
+		scr_setTimeSlowEff(2, 0.2);
 	if (other.collisionEff != noone)
 	{
 		//Create collision effect

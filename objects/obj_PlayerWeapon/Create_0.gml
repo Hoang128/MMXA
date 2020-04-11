@@ -8,3 +8,4 @@ maxTimmer = 5;
 isGuardBreaker = false;
 element = Element.NEUTRAL;
 type = WeaponType.OTHER;
+slowTime = false;

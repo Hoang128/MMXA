@@ -24,7 +24,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			sprite_index = spr_ZSlashLand;
 			
-			atkState = AttackState.A_STRICT_ATTACK;
+			atkState = AttackState.A_STRICT_ATTACK_LV2;
 
 			scr_MeeleWeaponChangeState(obj_ZSaberImage, SaberState.SABER_LAND_SLASH);
 		}
@@ -223,7 +223,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
 							
 							hspd = 0;
-							atkState = AttackState.A_NORMAL_ATTACK;
+							atkState = AttackState.A_STRICT_ATTACK;
 							
 							scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_JUMP_SLASH, self);
 						}
@@ -240,7 +240,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
 							
 							hspd = 0;
-							atkState = AttackState.A_NORMAL_ATTACK;
+							atkState = AttackState.A_STRICT_ATTACK;
 							
 							scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_SPIN_SLASH, self);
 						}

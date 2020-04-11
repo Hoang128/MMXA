@@ -483,7 +483,7 @@
     "playbackSpeed": 60,
     "playbackSpeedType": 0,
     "premultiplyAlpha": false,
-    "sepmasks": false,
+    "sepmasks": true,
     "swatchColours": null,
     "swfPrecision": 2.525,
     "textureGroupId": "c0dc373e-43b9-4a40-ad7d-6a57c6a51a0d",
