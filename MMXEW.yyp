@@ -351,6 +351,14 @@
             }
         },
         {
+            "Key": "0f84753d-a1d6-4830-8dc6-9f327bb44bb1",
+            "Value": {
+                "id": "2d5a0410-f6d3-4746-ba6d-699030947df3",
+                "resourcePath": "sprites\\spr_glowCircleEff\\spr_glowCircleEff.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "101f04ac-5b54-47f7-acf2-29f3afd0dd58",
             "Value": {
                 "id": "32b945fb-dc0b-45d3-bda1-a630827793a2",
@@ -1004,6 +1012,14 @@
                 "id": "e8a916eb-e1d4-4fab-b349-9f643e684c34",
                 "resourcePath": "views\\432c1f13-36b5-42de-b4ff-1d3c223f8d7c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "43595e7f-80ec-4bc7-891b-042ca7bc14f6",
+            "Value": {
+                "id": "f00d04e3-c550-4b3f-aad4-0fb60ad6797e",
+                "resourcePath": "objects\\obj_managerInGame\\obj_managerInGame.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2428,6 +2444,14 @@
                 "id": "092ae930-c6ac-4ebb-b1f4-f0c08ee5ee9b",
                 "resourcePath": "sounds\\snd_VXNovaStrike1\\snd_VXNovaStrike1.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "b14a8d21-d714-4e3e-a499-e1f3edf308f2",
+            "Value": {
+                "id": "d6023a3e-f074-49aa-a5cd-271f26bb4f7e",
+                "resourcePath": "objects\\obj_HUD\\obj_HUD.yy",
+                "resourceType": "GMObject"
             }
         },
         {

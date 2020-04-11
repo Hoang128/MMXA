@@ -1,6 +1,8 @@
 /// @description Handle
 
 //System key
+#region
+
 if (keyboard_check_pressed(vk_f4))
 {
 	if (window_get_fullscreen() == false)
@@ -49,4 +51,23 @@ if (keyboard_check_released(vk_f5))
 {
 	if (!canChangeViewPort)
 		canChangeViewPort = true;
+}
+
+#endregion
+
+
+//Deactive all
+
+//Active object inside zone
+if (activateCount > 0)
+{
+	activateCount--;
+}
+else
+{
+	instance_deactivate_all(true);
+	instance_activate_object(obj_managerInGame);
+	instance_activate_region(X_ACTIVE_BOX, Y_ACTIVE_BOX, X_ACTIVE_BOX + W_ACTIVE_BOX, Y_ACTIVE_BOX + H_ACTIVE_BOX, true);
+	
+	activateCount = activateMaxCount;
 }
