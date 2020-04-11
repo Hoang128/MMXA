@@ -900,3 +900,35 @@ if (activateState != ActivateState.DEACTIVATE)
 	//*********************************************************************************************************
 	
 }
+
+else
+{
+	if (aState == ActionState.BEAMUP)
+	{
+		if (!collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + RESOLUTION_WIDTH, Y_VIEW + RESOLUTION_HEIGH, self, false, false))
+		{
+			instance_destroy();
+		}
+	}
+	if (aState == ActionState.BEAMDOWN)
+	{
+		if (yBeam != -1)
+		{
+			if ((yBeam - y) <= (bbox_bottom - bbox_top))
+				activateState = ActivateState.HALF_ACTIVATE;
+		}
+		else
+		{
+			if (collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + RESOLUTION_WIDTH, Y_VIEW + RESOLUTION_HEIGH, self, false, false))
+			{
+				if (!place_meeting(x, y, obj_block))
+				{
+					activateState = ActivateState.HALF_ACTIVATE;
+				}
+			}
+		}
+	}
+	
+	x += hspd * DELTA_TIME;
+	y += vspd * DELTA_TIME;
+}

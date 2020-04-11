@@ -15,7 +15,8 @@
         "40e575e9-69a6-4366-8879-14157c513b6a",
         "01e4f990-a8ef-429d-8ddf-d541f29d1401",
         "32e186fd-7dc1-47e2-be2e-3b745578fb63",
-        "c68740f5-3770-4caf-acc9-5b90719f8eff"
+        "c68740f5-3770-4caf-acc9-5b90719f8eff",
+        "759fedb5-023b-4c83-8482-e3e173e7f558"
     ],
     "filterType": "GMObject",
     "folderName": "Physic Platform Stage",

@@ -11,3 +11,4 @@ enum CameraState
 };
 
 state = CameraState.NORMAL;
+playerCore = noone;

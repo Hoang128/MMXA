@@ -5,4 +5,4 @@
 event_inherited();
 
 if (damageTimmer > 0) damageTimmer -= global.deltaTime;
-if (hp == 0) instance_destroy();
+if (hp <= 0) instance_destroy();

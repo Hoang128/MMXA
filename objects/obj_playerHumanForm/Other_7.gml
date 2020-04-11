@@ -7,6 +7,11 @@ if (weight != WeighType.MASSIVE)
 		vState = VerticalState.V_ON_GROUND;
 		activateState = ActivateState.ACTIVATE;
 		vspd = 0;
+		if (instance_exists(obj_cameraMan))
+		{
+			obj_cameraMan.state = CameraState.NORMAL;
+			obj_cameraMan.playerCore = self;
+		}
 		
 		sprite_index = sprStand;
 		image_index = 0;
@@ -122,5 +127,16 @@ if (isClimbing == 1)
 		
 		sprite_index = sprClimb2;
 		image_index = 0;
+	}
+}
+
+if (sprite_index == sprBeamUp)
+{
+	image_index --;
+	if (vState != VerticalState.V_MOVE_UP)
+	{
+		vspd = -beamSpd;
+		activateState = ActivateState.DEACTIVATE;
+		vState = VerticalState.V_MOVE_UP;
 	}
 }

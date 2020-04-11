@@ -7,7 +7,8 @@
         "d5b344ac-6c31-498e-8680-c33aa88d690a",
         "319c3fb7-9694-4178-bf3d-350150bc0b97",
         "c4161c4a-3094-4eae-b934-fbbb09c15476",
-        "b14a8d21-d714-4e3e-a499-e1f3edf308f2"
+        "b14a8d21-d714-4e3e-a499-e1f3edf308f2",
+        "dc93c5ff-49e3-427e-a944-d18d71ca4d6b"
     ],
     "filterType": "GMObject",
     "folderName": "In Game",

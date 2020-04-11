@@ -24,3 +24,6 @@ scr_InitStatePlayer(weight);
 
 //Initialize Inside Variables
 atkSpriteTime = 0;
+
+//Sound Beam-down
+audio_play_sound_on(global.SFX_Emitter, snd_XBeamDownEff, 0, 0);

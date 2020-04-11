@@ -103,4 +103,23 @@ if (keyboard_check(ord("Q")))
 				showSoundLog = 0;
 		}
 	}
+	
+	if (keyboard_check_pressed(ord("E")))
+	{
+		if (!instance_exists(obj_changePlayer))
+		{
+			if (instance_exists(obj_cameraMan.playerCore))
+			{
+				if (obj_cameraMan.playerCore.sprite_index == obj_cameraMan.playerCore.sprStand)
+				{
+					var objChange = instance_create_depth(x, obj_cameraMan.playerCore.y, depth, obj_changePlayer);
+					objChange.playerChangeFrom = obj_cameraMan.playerCore;
+					if (obj_cameraMan.playerCore.object_index == obj_playerX) 
+						objChange.playerChangeTo = obj_playerZ;
+					if (obj_cameraMan.playerCore.object_index == obj_playerZ) 
+						objChange.playerChangeTo = obj_playerX;
+				}
+			}
+		}
+	}
 }

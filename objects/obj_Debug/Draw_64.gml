@@ -17,14 +17,15 @@ scr_LOG_INFO("Delta time = " + string(global.deltaTime), debugTextColorF, debugT
 if (showDebugHelp)
 {
 	scr_LOG_INFO("Debug command list", debugTextColorF, debugTextColorB);
+	scr_LOG_INFO("Press Q + W + H to close this list", debugTextColorF, debugTextColorB);
 	scr_LOG_INFO("Press Q + + to increase room speed by 10, Q + - to decrease room speed by 10", debugTextColorF, debugTextColorB);
 	scr_LOG_INFO("Press Q + Page Up to increase global delta time by 0.1, Q + Page Down to decrease global delta time by 0.1", debugTextColorF, debugTextColorB);
 	scr_LOG_INFO("Press Q + W + Page Up to increase global delta time by 0.01, Q + W + Page Down to decrease global delta time by 0.01", debugTextColorF, debugTextColorB);
 	scr_LOG_INFO("Press Q + W + to increase room speed by 1, Q + W - to decrease room speed by 1", debugTextColorF, debugTextColorB);
-	scr_LOG_INFO("Press Q + W + H to close this list", debugTextColorF, debugTextColorB);
 	scr_LOG_INFO("Press Q + R to restart current room", debugTextColorF, debugTextColorB);
 	scr_LOG_INFO("Press Q + P to turn on player log, Q + W + P to turn off", debugTextColorF, debugTextColorB);
 	scr_LOG_INFO("Press Q + P to turn on sound log, Q + W + P to turn off", debugTextColorF, debugTextColorB);
+	scr_LOG_INFO("Press Q + Tab to change character", debugTextColorF, debugTextColorB);
 }
 #endregion
 
@@ -39,11 +40,20 @@ else{
 			var atkState = obj_playerHumanForm.atkState;
 			var hState = obj_playerHumanForm.hState;
 			var vState = obj_playerHumanForm.vState;
+			var activateState = obj_playerHumanForm.activateState;
 
 			var str_aState = "";
 			var str_atkState = "";
 			var str_hState = "";
 			var str_vState = "";
+			var str_activateState = "";
+			
+			switch activateState
+			{
+				case ActivateState.ACTIVATE: str_activateState = "ACTIVATE"; break;
+				case ActivateState.DEACTIVATE: str_activateState = "DEACTIVATE"; break;
+				case ActivateState.HALF_ACTIVATE: str_activateState = "HALF ACTIVATE"; break;
+			}
 
 			switch aState
 			{
@@ -61,6 +71,7 @@ else{
 				case ActionState.DASHKICK: str_aState = "DASH KICK" break;
 				case ActionState.DUCKING: str_aState = "DUCKING"; break;
 				case ActionState.WAITING: str_aState = "WAITING"; break;
+				case ActionState.BEAMUP: str_aState = "BEAM UP"; break;
 				default: str_aState = "NOT HAVE STATE ?"; break;
 			}
 
@@ -95,11 +106,11 @@ else{
 			}
 			scr_LOG_INFO("Log player", debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char direction = " + string(obj_playerHumanForm.hDir), debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char activate = " + str_activateState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Action State = " + str_aState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Horizontal State = " + str_hState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Vertical State = " + str_vState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Attack State = " + str_atkState, debugTextColorF, debugTextColorB);
-			scr_LOG_INFO("Char Attack State (INT) = " + string(obj_playerHumanForm.atkState), debugTextColorF, debugTextColorB);
 		}
 		#endregion
 	}

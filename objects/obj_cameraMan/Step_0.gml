@@ -4,15 +4,12 @@ switch state
 {
 	case CameraState.NORMAL: 
 	{
-		if (instance_exists(obj_player))
+		if (instance_exists(playerCore))
 		{
-			with(obj_player)
+			if (playerCore.activateState != ActivateState.DEACTIVATE)
 			{
-				if (activateState != ActivateState.DEACTIVATE)
-				{
-					other.x = self.x;
-					other.y = self.y;
-				}
+				x = playerCore.x;
+				y = playerCore.y;
 			}
 		}
 		break;

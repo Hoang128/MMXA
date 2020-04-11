@@ -3,7 +3,7 @@
     "modelName": "GMSound",
     "mvc": "1.0",
     "name": "snd_ZBeamDownEff",
-    "audioGroupGuid": "7bf8d3d7-ebd4-41bb-808a-96e2fdfcd187",
+    "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
     "bitDepth": 1,
     "bitRate": 128,
     "kind": 0,

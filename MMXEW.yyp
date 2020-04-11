@@ -543,6 +543,14 @@
             }
         },
         {
+            "Key": "1e12dd86-3d74-4489-a954-01d2564eef4e",
+            "Value": {
+                "id": "aa87b29e-12e8-4a86-ae36-3ae7f79e5bb4",
+                "resourcePath": "sprites\\spr_ZBeamUp\\spr_ZBeamUp.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1f9fc8ca-022c-4684-b64a-04e6695e0771",
             "Value": {
                 "id": "15e0743b-d94c-4882-8dc9-842139310db0",
@@ -1671,6 +1679,14 @@
             }
         },
         {
+            "Key": "759fedb5-023b-4c83-8482-e3e173e7f558",
+            "Value": {
+                "id": "4433563f-f4d5-473d-bc6c-f9f263a60e1e",
+                "resourcePath": "objects\\obj_moving_block\\obj_moving_block.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "75efc36d-4062-40ae-8167-501fd2b62ba1",
             "Value": {
                 "id": "7c5cb4da-14d1-441b-84c9-1426c90e3a55",
@@ -1780,6 +1796,14 @@
                 "id": "1eb4e51e-c3f0-4a11-a944-211fe66bd63f",
                 "resourcePath": "views\\7ad2e235-3e72-4d12-b326-9d2fe2b81481.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7b775052-8e69-41f5-8992-972413d41e80",
+            "Value": {
+                "id": "5ba31f11-c60a-4355-9a62-f4f5f450a7b6",
+                "resourcePath": "objects\\obj_ZSaberSlashEff\\obj_ZSaberSlashEff.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2084,6 +2108,14 @@
                 "id": "9b488078-223b-4544-a50d-a44393f017a9",
                 "resourcePath": "sounds\\snd_ZX7Slash3\\snd_ZX7Slash3.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "91a991e9-3408-4627-9d19-6cc6e6e9913e",
+            "Value": {
+                "id": "a9973f3f-c46f-4bb8-849a-4f296255c94a",
+                "resourcePath": "sprites\\spr_XBeamUp\\spr_XBeamUp.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3028,6 +3060,14 @@
                 "id": "43bf4b99-7f92-41cc-899f-2f69306f7408",
                 "resourcePath": "sprites\\spr_PalXShadow\\spr_PalXShadow.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "dc93c5ff-49e3-427e-a944-d18d71ca4d6b",
+            "Value": {
+                "id": "4e7acf20-5d2c-499c-a030-3c3c778f4c1f",
+                "resourcePath": "objects\\obj_changePlayer\\obj_changePlayer.yy",
+                "resourceType": "GMObject"
             }
         },
         {

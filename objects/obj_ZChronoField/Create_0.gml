@@ -7,7 +7,7 @@ maxRadius = 64;
 maxTimeEffect = 120;
 maxTimeShot = 20;
 phase = 0;
-increaseRadiusSpd = 2;
+increaseRadiusSpd = 4;
 slowRatio = 0.2;
 moveSpd = 6;
 

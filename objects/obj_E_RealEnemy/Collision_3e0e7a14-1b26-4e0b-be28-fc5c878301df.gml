@@ -34,9 +34,19 @@ if (damageTimmer <= 0)
 			var xPlace = other.x + other.image_xscale * (other.bbox_right - other.bbox_left) / 2;
 			var yPlace = (other.bbox_top + other.bbox_bottom) / 2;
 		}
-				
+		
+		randomize();
+		var effAngle = random(60) * 3;
+		
 		var objColEff = instance_create_depth(xPlace, yPlace, other.depth - 1, other.collisionEff);
+		objColEff.image_angle = effAngle;
 		objColEff.image_xscale = other.image_xscale;
+		
+		if (other.object_index == obj_ZSaber)
+		{
+			var objZEff = instance_create_depth(xPlace, yPlace, other.depth - 2, obj_ZSaberSlashEff);
+			objZEff.image_angle = effAngle;
+		}
 		#endregion
 	}
 	audio_play_sound_on(global.SFX_Emitter, other.collisionSFX, 0, 0);

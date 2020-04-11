@@ -5,7 +5,7 @@ switch argument0
 		#region
 		sprFlash = spr_XFlash;
 		sprBeamDown = spr_XBeamDown;
-		sprBeamUp = noone;
+		sprBeamUp = spr_XBeamUp;
 		sprStand = spr_XStand;
 		sprDying = spr_XDying;
 		sprLand = spr_XLand;
@@ -39,7 +39,7 @@ switch argument0
 		#region
 		sprFlash = spr_ZFlash;
 		sprBeamDown = spr_ZBeamDown;
-		sprBeamUp = noone;
+		sprBeamUp = spr_ZBeamUp;
 		sprStand = spr_ZStand;
 		sprDying = spr_ZDying;
 		sprLand = spr_ZLand;

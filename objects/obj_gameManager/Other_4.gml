@@ -10,9 +10,9 @@ if (global.debugging)
 
 if (global.isStage)
 {
-	instance_create_depth(x, y, -100, obj_playerZ);
 	instance_create_depth(x, y, depth, obj_view);
 	instance_create_depth(x, y, depth, obj_globalEffManager);
+	instance_create_depth(x, y, -100, obj_playerZ);
 }
 
 instance_create_depth(x, y, depth, obj_effOpening_Black);

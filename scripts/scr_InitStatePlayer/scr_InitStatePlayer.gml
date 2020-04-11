@@ -7,7 +7,8 @@ switch weightPlayer
 	{
 		//Default state
 		weight = WeighType.MEDIUM;
-		activateState = ActivateState.HALF_ACTIVATE;
+		vspd = beamSpd;
+		activateState = ActivateState.DEACTIVATE;
 		aState = ActionState.BEAMDOWN;
 		vState = VerticalState.V_MOVE_DOWN;
 		hState = HorizontalState.H_MOVE_NONE;
