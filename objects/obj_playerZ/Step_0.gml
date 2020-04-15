@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Zero's Actions
 // You can write your code in this editor
 
 //Inherit the parent event
@@ -376,9 +376,10 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				if (!instance_exists(obj_ZChronoField))
 				{
-					audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
 					if (atkState < AttackState.A_STRICT_ATTACK_LV3)
 					{
+						audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
+						scr_MeeleWeaponDestroy(obj_ZSaberImage);
 						if (vState == VerticalState.V_ON_GROUND)
 						{
 							sprite_index = spr_ZShotNorG;
@@ -393,7 +394,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						
 							if (aState == ActionState.DASHING)
 								aState = ActionState.IDLE;
-							atkState = AttackState.A_NORMAL_ATTACK;
+							atkState = AttackState.A_STRICT_ATTACK;
 							vState = VerticalState.V_MOVE_FALLING;
 						}
 						image_index = 0;
@@ -416,6 +417,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					if (atkState < AttackState.A_STRICT_ATTACK_LV3)
 					{
 						audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
+						scr_MeeleWeaponDestroy(obj_ZSaberImage);
 						if (vState == VerticalState.V_ON_GROUND)
 						{
 							sprite_index = spr_ZShotNorG;
@@ -431,7 +433,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							busterType = obj_ZBusterNor;
 							if (aState == ActionState.DASHING)
 								aState = ActionState.IDLE;
-							atkState = AttackState.A_NORMAL_ATTACK;
+							atkState = AttackState.A_STRICT_ATTACK;
 							vState = VerticalState.V_MOVE_FALLING;
 						}
 						image_index = 0;

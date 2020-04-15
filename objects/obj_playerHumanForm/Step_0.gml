@@ -385,7 +385,9 @@ if (activateState != ActivateState.DEACTIVATE)
 					else
 					{
 						hDir = hMove;
-						
+						hspd = 0;
+						hState = HorizontalState.H_MOVE_NONE;
+							
 						//Stop run if see wall
 						if (vState == VerticalState.V_ON_GROUND)
 						{
@@ -394,12 +396,9 @@ if (activateState != ActivateState.DEACTIVATE)
 								sprite_index = sprRunEnd;
 								image_index = 0;
 							}
-					
-							hspd = 0;
-							hState = HorizontalState.H_MOVE_NONE;
 						}
 						else
-						{
+						{			
 							//Slide
 							if(weight != WeighType.MASSIVE)
 							{

@@ -1,7 +1,7 @@
 /// @description Init Sound
 
 global.masterVolume=1;
-global.BGMVolume=0;
+global.BGMVolume=1;
 global.SFXVolume=1;
 global.BGM_Emitter = audio_emitter_create();
 global.SFX_Emitter = audio_emitter_create();
