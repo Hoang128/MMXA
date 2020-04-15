@@ -13,3 +13,4 @@ virtualY = y;
 
 hDir = 1;
 vDir = 1;
+solid = true;

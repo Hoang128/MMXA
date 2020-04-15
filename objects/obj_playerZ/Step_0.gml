@@ -25,7 +25,8 @@ if (activateState != ActivateState.DEACTIVATE)
 			sprite_index = spr_ZSlashLand;
 			
 			atkState = AttackState.A_STRICT_ATTACK_LV2;
-
+			hspd = 0;
+			hState = AttackState.A_NONE;
 			scr_MeeleWeaponChangeState(obj_ZSaberImage, SaberState.SABER_LAND_SLASH);
 		}
 		
@@ -35,7 +36,8 @@ if (activateState != ActivateState.DEACTIVATE)
 			sprite_index = sprLand;
 			
 			atkState = AttackState.A_NONE;
-			
+			hspd = 0;
+			hState = AttackState.A_NONE;
 			scr_MeeleWeaponDestroy(obj_ZSaberImage);
 		}
 		
@@ -45,14 +47,18 @@ if (activateState != ActivateState.DEACTIVATE)
 			sprite_index = spr_ZSlashCharge_G;
 			
 			hspd = 0;
-			atkState = AttackState.A_STRICT_ATTACK_LV3;
 			hState = AttackState.A_NONE;
+			atkState = AttackState.A_STRICT_ATTACK_LV3;
 		}
 		
 		//Shot
 		if (sprite_index == spr_ZShotNorA)
 		{
 			sprite_index = spr_ZShotNorG;
+			
+			hspd = 0;
+			hState = AttackState.A_NONE;
+			atkState = AttackState.A_STRICT_ATTACK_LV3;
 		}
 	}
 	
