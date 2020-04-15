@@ -30,6 +30,8 @@ switch argument0
 		sprClimb1 = spr_XClimbStart;
 		sprClimb2 = spr_XClimb;
 		sprClimb3 = spr_XClimbEnd;
+		sprStun1 = spr_XStun1;
+		sprStun2 = spr_XStun2;
 		#endregion
 	}
 	break;
@@ -63,7 +65,9 @@ switch argument0
 		sprDashKick2 = spr_ZDashKick2;
 		sprClimb1 = spr_ZClimbStart;
 		sprClimb2 = spr_ZClimb;
-		sprClimb3 = spr_ZClimbEnd;
+		sprClimb3 = spr_ZClimbEnd
+		sprStun1 = spr_ZStun1;
+		sprStun2 = spr_ZStun2;
 		#endregion
 	}
 	break;

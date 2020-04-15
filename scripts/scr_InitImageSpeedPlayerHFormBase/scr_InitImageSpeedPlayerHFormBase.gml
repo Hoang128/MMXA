@@ -27,6 +27,9 @@ switch argument0
 			case sprClimb3:			image_speed = isClimbing * 0.3; break;
 			case sprBeamDown:
 			case sprBeamUp:			image_speed = 0.3; break;
+			case sprStun1:			image_speed = 0.7; break;
+			case sprStun2:			image_speed = 0.3; break;
+			
 			default:				image_speed = 0.5; break;
 		}
 		image_speed *= global.deltaTime;
@@ -61,6 +64,8 @@ switch argument0
 			case sprClimb3:			image_speed = isClimbing * 0.3; break;
 			case sprBeamDown:
 			case sprBeamUp:			image_speed = 0.3; break;
+			case sprStun1:			image_speed = 0.7; break;
+			case sprStun2:			image_speed = 0.3; break;
 			
 			//Zero only
 			case spr_ZDoubleJump:	image_speed = 0.35; break;

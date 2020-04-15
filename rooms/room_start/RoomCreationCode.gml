@@ -28,6 +28,14 @@ global.keyChar2 = ord("F");
 global.keyStart = vk_enter;
 global.keyMap = vk_tab;
 
+//Default HP & MP
+global.hp[0] = 16;
+global.hp[1] = 16;
+global.hp[2] = 16;
+global.wp[0] = 16;
+global.wp[1] = 16;
+global.wp[2] = 16;
+
 //Default Elves
 for(i = 0; i < 16; i++)
 {

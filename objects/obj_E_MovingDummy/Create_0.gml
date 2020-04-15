@@ -4,6 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
+stunType = StunType.STUN_NORMAL;
 move = 1;
 timmer = 120;
 change = 0;

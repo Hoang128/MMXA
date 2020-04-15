@@ -4,6 +4,8 @@
 event_inherited();
 
 //Initialize Parameters
+hp = global.hp[0];
+wp = global.wp[0];
 atkSpriteTimeMax = 60;
 xPlaceDashEff = -25;
 yPlaceDashEff = -4;

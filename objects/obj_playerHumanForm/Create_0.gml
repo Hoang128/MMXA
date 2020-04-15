@@ -4,10 +4,12 @@
 event_inherited();
 
 //Initialize Parameter
+hp = 1; //Health point
+hpRed = 0; //Health point red
 runSpd = 2; //Run speed
 dashSpdPhase1 = 1; //Dash speed when start dash
 dashSpdPhase2 = 5; //Dash speed when dash
-jumpDashSpd = 4.5;
+jumpDashSpd = 4.5; //Jump Dash speed
 maxDashTime = 30; //Dash time
 maxAirDashTime = 25; //Air dash time
 jumpSpd = 6; //Jump speed
@@ -33,7 +35,12 @@ climbSpd = 2; //Climb ladder's speed
 myDeltaTime = 1; //Use for slow time
 chargeLv1Limit = 20; //Time hold attack button to show lv1 charge effect
 chargeLv2Limit = 80; //Time hold attack button to show lv2 charge effect
-yBeam = -1;
+stunTimeMax = 120;
+stunHspd = 1;
+stunVspd = 2;
+stunType = StunType.STUN_NONE;
+stunSprLoop1 = 0;
+stunSprLoop2 = 1;
 
 
 //Default state
@@ -45,6 +52,7 @@ hState = HorizontalState.H_MOVE_NONE;
 atkState = AttackState.A_NONE;
 
 //Inside Variable
+yBeam = -1;
 hspd = 0;
 vspd = 0;
 hDir = 1;
@@ -63,7 +71,9 @@ isClimbing = 0;
 dynamicBlock = noone;
 xPlaceDashEff = 0;
 yPlaceDashEff = 0;
-chargeNormal = 0;
+chargeNormal = 0
+stunTime = 0;
+stunSprLoop = 0;
 
 //Initialize sprite
 sprFlash = noone;

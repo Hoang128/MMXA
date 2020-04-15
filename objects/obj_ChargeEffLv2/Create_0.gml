@@ -4,5 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-chargeParameter = noone;
 core = noone;

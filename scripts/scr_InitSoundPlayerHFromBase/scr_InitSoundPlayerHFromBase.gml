@@ -14,6 +14,8 @@ switch argument0
 		sndVoiceLowHp3 = snd_VXLowHp3;
 		sndVoiceWallKick = snd_VXWallKick;
 		sndVoiceSwitch = snd_VXSwitch;
+		sndVoiceHurt1 = snd_VXHurt1;
+		sndVoiceHurt2 = snd_VXHurt2;
 
 		sndDashEff = snd_XDashEff;
 		sndJumpEff = snd_XJumpEff;
@@ -39,6 +41,8 @@ switch argument0
 		sndVoiceLowHp3 = snd_VZLowHp;
 		sndVoiceWallKick = snd_VZWallKick;
 		sndVoiceSwitch = snd_VZSwitch;
+		sndVoiceHurt1 = snd_VZHurt1;
+		sndVoiceHurt2 = snd_VZHurt2;
 
 		sndDashEff = snd_ZDashEff;
 		sndJumpEff = snd_ZJumpEff;

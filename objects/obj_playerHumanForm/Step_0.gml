@@ -100,7 +100,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))
 	{
 		vspd = 0;
-		if ((vState != VerticalState.V_ON_GROUND) && (aState != ActionState.CLIMBING))
+		if ((vState != VerticalState.V_ON_GROUND) && (aState != ActionState.CLIMBING) && (aState != ActionState.STUNNING))
 		{
 			if (aState != ActionState.BEAMDOWN)
 			{
@@ -299,6 +299,15 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			canJumpWait -= DELTA_TIME;
 		}
+	}
+	
+	if (stunTime > 0)
+	{
+		stunTime -= DELTA_TIME;
+	}
+	else
+	{
+		stunTime = 0;
 	}
 	
 	#endregion

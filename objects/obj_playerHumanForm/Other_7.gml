@@ -140,3 +140,58 @@ if (sprite_index == sprBeamUp)
 		vState = VerticalState.V_MOVE_UP;
 	}
 }
+
+if (sprite_index == sprStun1)
+{
+	if (stunType == StunType.STUN_SOFT)
+	{
+		if (place_meeting(x, y + 1, obj_block))
+		{
+			vState = VerticalState.V_ON_GROUND;
+			sprite_index = sprStand;
+			image_index = 0;
+		}
+		else
+		{
+			vState = VerticalState.V_MOVE_FALLING;
+			sprite_index = sprJump3;
+			image_index = 0;
+		}
+		hspd = 0;
+		activateState = ActivateState.ACTIVATE;
+		aState = ActionState.IDLE;
+		hState = HorizontalState.H_MOVE_NONE;
+		stunType = StunType.STUN_NONE;
+	}
+}
+
+if (sprite_index == sprStun2)
+{
+	if (stunSprLoop > 0) stunSprLoop--;
+	else
+	{
+		if (stunType == StunType.STUN_NORMAL || stunType == StunType.STUN_SOFT)
+		{
+			if (place_meeting(x, y + 1, obj_block))
+			{
+				vState = VerticalState.V_ON_GROUND;
+				sprite_index = sprStand;
+				image_index = 0;
+			}
+			else
+			{
+				vState = VerticalState.V_MOVE_FALLING;
+				sprite_index = sprJump3;
+				image_index = 0;
+			}
+			if (chargeNormal > 0)
+				if (!keyboard_check(global.keyAtk))
+					chargeNormal = 0;
+			hspd = 0;
+			activateState = ActivateState.ACTIVATE;
+			aState = ActionState.IDLE;
+			hState = HorizontalState.H_MOVE_NONE;
+			stunType = StunType.STUN_NONE;
+		}
+	}
+}

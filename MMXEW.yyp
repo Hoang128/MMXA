@@ -2935,6 +2935,14 @@
             }
         },
         {
+            "Key": "ce1e3eb5-9e79-44ee-9db1-8e58110f68ff",
+            "Value": {
+                "id": "acc95224-a8d8-4b0c-8b0c-05d473db2f79",
+                "resourcePath": "sprites\\spr_ZStun1\\spr_ZStun1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ce37b693-1ada-4ee4-aae4-fc1ed75701a4",
             "Value": {
                 "id": "a62fbf07-6401-426d-aee0-310e376ed0f9",
@@ -3092,6 +3100,14 @@
                 "id": "09a85f6c-0eea-4b5c-ac9f-e0a2946a487f",
                 "resourcePath": "scripts\\scr_ActivateObjectControlable\\scr_ActivateObjectControlable.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d80cd43a-b424-4f87-8adb-4d4aeef82506",
+            "Value": {
+                "id": "cad64a9b-7c5f-4656-bd1a-09e603612192",
+                "resourcePath": "sprites\\spr_ZStun2\\spr_ZStun2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
