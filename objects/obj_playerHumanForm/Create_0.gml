@@ -41,6 +41,7 @@ stunVspd = 2;
 stunType = StunType.STUN_NONE;
 stunSprLoop1 = 0;
 stunSprLoop2 = 1;
+blinkMax = 10;
 
 
 //Default state
@@ -74,6 +75,8 @@ yPlaceDashEff = 0;
 chargeNormal = 0
 stunTime = 0;
 stunSprLoop = 0;
+blink = 0;
+myPal = noone;
 
 //Initialize sprite
 sprFlash = noone;
@@ -103,6 +106,8 @@ sprDashKick2 = noone;
 sprClimb1 = noone;
 sprClimb2 = noone;
 sprClimb3 = noone;
+sprStun1 = noone;
+sprStun2 = noone;
 
 //Initialize sound fx
 sndVoiceDie = noone;
@@ -116,6 +121,8 @@ sndVoiceLowHp2 = noone;
 sndVoiceLowHp3 = noone;
 sndVoiceWallKick = noone;
 sndVoiceSwitch = noone;
+sndVoiceHurt1 = noone;
+sndVoiceHurt2 = noone;
 
 sndDashEff = noone;
 sndJumpEff = noone;

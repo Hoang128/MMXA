@@ -1,9 +1,7 @@
 /// @description Draw with palette
 
-scr_PalSwapSet(myPal, 1, false);
-
-draw_self();
-
-scr_PalSwapReset();
-
 event_inherited();
+
+scr_DrawPlayerSprite(obj_playerZ);
+if (gpu_get_blendmode() == bm_add)
+	gpu_set_blendmode(bm_normal);

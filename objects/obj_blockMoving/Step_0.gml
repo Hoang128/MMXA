@@ -41,24 +41,27 @@ if (solid)
 			var bbox_width = abs(bbox_right - bbox_left) / 2;
 			var hsp = other.hspd;
 			if (abs(hsp) < 1) hsp = sign(hsp);
-			if (place_meeting(x, y + 1, other) || place_meeting(x - hsp, y, other))
+			if (place_meeting(x - hsp, y, other))
 			{
 				other.playerOther = other.id;
-				if (place_meeting(x - hsp, y, other))
+				if (!collision_rectangle(x + bbox_width / 2 * sign(other.hspd), bbox_top, x + (bbox_width / 2 + 1) * sign(other.hspd), bbox_bottom, obj_block, false, true))
 				{
-					if (!collision_rectangle(x + bbox_width / 2 * sign(other.hspd), bbox_top, x + (bbox_width / 2 + 1) * sign(other.hspd), bbox_bottom, obj_block, false, true))
-					{
-						x += hsp;
-					}
-				}
-				else
-				{
-					if (!collision_rectangle(x + bbox_width / 2 * sign(other.hspd), bbox_top, x + (bbox_width / 2 + 1) * sign(other.hspd), bbox_bottom, obj_block, false, true))
-					{
-						x += other.hspd;
-					}
+					x += hsp;
 				}
 		
+				if (!place_meeting(x, y + clamp(other.vspd, 1, other.vspd), obj_block))
+				{
+					y += other.vspd;
+				}
+			}
+			
+			if (place_meeting(x, y + 1, other))
+			{
+				if (!collision_rectangle(x + bbox_width / 2 * sign(other.hspd), bbox_top, x + (bbox_width / 2 + 1) * sign(other.hspd), bbox_bottom, obj_block, false, true))
+				{
+					x += other.hspd;
+				}
+				
 				if (!place_meeting(x, y + clamp(other.vspd, 1, other.vspd), obj_block))
 				{
 					y += other.vspd;

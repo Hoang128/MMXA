@@ -599,6 +599,14 @@
             }
         },
         {
+            "Key": "20adcb2f-96bf-4f5c-afff-bcc3f9c6aaba",
+            "Value": {
+                "id": "e4644eb3-76aa-4d94-9e2a-008dd8128f9a",
+                "resourcePath": "scripts\\scr_DrawPlayerSprite\\scr_DrawPlayerSprite.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "21e4b6ae-92fc-43e2-97b3-9c83195b03d9",
             "Value": {
                 "id": "5541533d-44c5-45aa-9a02-58ee0107677c",
@@ -3576,6 +3584,7 @@
         "a9b4aaef-816f-43c3-9bb2-14c409035741",
         "4c58e84f-cd00-44a1-97d8-c890ed7946ec",
         "7c69365c-a3e2-462a-96ad-b79288d746ff",
+        "20adcb2f-96bf-4f5c-afff-bcc3f9c6aaba",
         "bde8392f-6330-47e0-a68b-0e2e6195c91a",
         "a3bf0979-ecca-4d53-8b5c-be768e539034",
         "9a64ac67-4b58-4171-85d8-07252e052eea",

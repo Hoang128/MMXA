@@ -303,10 +303,13 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	if (stunTime > 0)
 	{
+		if (blink > 0) blink -= DELTA_TIME;
+		else blink = blinkMax;
 		stunTime -= DELTA_TIME;
 	}
 	else
 	{
+		blink = 0;
 		stunTime = 0;
 	}
 	

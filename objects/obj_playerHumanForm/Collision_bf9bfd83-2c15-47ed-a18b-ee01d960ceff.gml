@@ -24,6 +24,7 @@ if ((activateState == ActivateState.ACTIVATE && stunType == AttackState.A_NONE) 
 		hp -= other.damage;
 		hpRed +=other.damageRed;
 		stunTime = stunTimeMax;
+		blink = blinkMax;
 		hspd = -hDir * stunHspd;
 		vspd = -stunVspd;
 		activateState = ActivateState.HALF_ACTIVATE;
