@@ -3223,6 +3223,14 @@
             }
         },
         {
+            "Key": "e571c2b6-27e6-4450-b790-1facd96e5a19",
+            "Value": {
+                "id": "c3757688-d765-4505-8930-a1b9907cf3ec",
+                "resourcePath": "sounds\\snd_ChargeEff\\snd_ChargeEff.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "e5b9cd50-ef0a-4b06-9533-fba66e433379",
             "Value": {
                 "id": "ab56eb0c-4f00-427a-8bf7-49f01900dfcb",

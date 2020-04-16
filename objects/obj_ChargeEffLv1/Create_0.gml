@@ -5,3 +5,8 @@
 event_inherited();
 
 core = noone;
+sfx = noone;
+init = false;
+intro = 1.400;
+loop = 0.800;
+bgmLength = intro + loop;

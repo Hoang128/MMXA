@@ -1,6 +1,5 @@
 /// @description Init
 glow = 0;
-
-init = false;
+imgSpd = 1;
 
 myDeltaTime = 1;
