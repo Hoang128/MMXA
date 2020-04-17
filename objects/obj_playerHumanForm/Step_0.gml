@@ -418,14 +418,17 @@ if (activateState != ActivateState.DEACTIVATE)
 								{
 									if ((aState != ActionState.SLIDING) && (canSlide))
 									{
-										sprite_index = sprSlide1;
-										image_index = 0;
-										audio_play_sound_on(global.SFX_Emitter, sndSlideEff, 0, 0);
+										if (!place_meeting(x + hDir, y, obj_blockNoSlide))
+										{
+											sprite_index = sprSlide1;
+											image_index = 0;
+											audio_play_sound_on(global.SFX_Emitter, sndSlideEff, 0, 0);
 										
-										if (!canAirDash) canAirDash = 1;
-										vState = VerticalState.V_MOVE_DOWN;
-										aState = ActionState.SLIDING;
-										atkState = AttackState.A_NONE;
+											if (!canAirDash) canAirDash = 1;
+											vState = VerticalState.V_MOVE_DOWN;
+											aState = ActionState.SLIDING;
+											atkState = AttackState.A_NONE;
+										}
 									}
 								}
 							}
@@ -823,7 +826,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				}
 				
 				//Wall kick
-				if ((aState == ActionState.SLIDING) || (place_meeting(x + hDir, y, obj_block) && canSlide))
+				if ((aState == ActionState.SLIDING) || (place_meeting(x + hDir, y, obj_block) && !place_meeting(x + hDir, y, obj_blockNoSlide) && canSlide))
 				{
 					//Dash kick
 					if ((aState != ActionState.DASHKICK) && keyboard_check(global.keyDash))

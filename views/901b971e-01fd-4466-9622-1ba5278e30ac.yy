@@ -6,8 +6,7 @@
     "children": [
         "b0253a19-eeae-4db6-b389-83da9dcaa47a",
         "0c0434b4-ed7a-4366-b6ce-334fd6c2fd86",
-        "b879969a-7e4d-4329-b2a5-ada4daedac2e",
-        "f2800ebe-5fb6-42a6-bfd1-b97a9601bdc2"
+        "b879969a-7e4d-4329-b2a5-ada4daedac2e"
     ],
     "filterType": "GMObject",
     "folderName": "Physic Root",
