@@ -11,6 +11,7 @@ if (weight != WeighType.MASSIVE)
 		{
 			obj_cameraMan.state = CameraState.NORMAL;
 			obj_cameraMan.playerCore = self;
+			obj_gameManager.playerCore = self;
 		}
 		
 		sprite_index = sprStand;

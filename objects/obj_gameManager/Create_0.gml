@@ -9,3 +9,6 @@ canChangeViewPort = true;
 //Deactivate object variables
 activateCount = 0;
 activateMaxCount = 3;
+
+//Core
+playerCore = noone;

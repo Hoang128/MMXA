@@ -1,9 +1,16 @@
-//Argument 0: object to activate
-//Argument 1: state to activate: HALF or FULL
-if (!instance_exists(argument0)) return false;
-with(obj_player)
-{
-	activate = ActivateState.DEACTIVATE;
-}
-argument0.activate = argument1;
-return true;
+//Argument 0: object to deactivate
+//Argument 1: object to activate
+//Argument 2: state to activate: HALF or FULL
+var objToDeactivate = argument0;
+var objToActivate = argument1;
+var stateToActivate = argument2;
+
+if (!instance_exists(objToActivate) || !instance_exists(objToDeactivate))
+	return;
+
+objToDeactivate.activateState = ActivateState.DEACTIVATE;
+
+objToActivate.activateState = stateToActivate;
+
+obj_cameraMan.playerCore = objToActivate;
+obj_gameManager.playerCore = objToActivate;

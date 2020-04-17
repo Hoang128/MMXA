@@ -503,6 +503,14 @@
             }
         },
         {
+            "Key": "1a613054-3a53-44a2-93d7-365f9baaa1c8",
+            "Value": {
+                "id": "acb19d83-71c2-4a44-8754-3ff7e3c08cde",
+                "resourcePath": "objects\\obj_iceController\\obj_iceController.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1aa93b43-a2c3-4737-9dce-0b5deacf1584",
             "Value": {
                 "id": "28cf900e-1427-496b-9669-a9a401f5e39a",
@@ -948,6 +956,14 @@
                 "id": "1289d317-8583-4a87-8a44-9036a3862937",
                 "resourcePath": "sprites\\spr_slopeR1Ice\\spr_slopeR1Ice.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "38263a19-c400-4b8a-a13e-c52ecf516e2e",
+            "Value": {
+                "id": "44f62c63-a064-4d47-aa7a-f27e8f03f1c3",
+                "resourcePath": "views\\38263a19-c400-4b8a-a13e-c52ecf516e2e.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3660,6 +3676,14 @@
                 "id": "94143a55-aed2-49bc-8bce-02d3446ee087",
                 "resourcePath": "sounds\\snd_ZSkillIceEff\\snd_ZSkillIceEff.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "fd89af4a-c3fb-40b8-b6b7-63f24d9ec180",
+            "Value": {
+                "id": "64eb9d64-fdb5-4583-92a2-b50e914488ba",
+                "resourcePath": "objects\\obj_blockIce\\obj_blockIce.yy",
+                "resourceType": "GMObject"
             }
         },
         {
