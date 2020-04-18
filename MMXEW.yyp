@@ -3709,6 +3709,14 @@
                 "resourcePath": "fonts\\fontDebug\\fontDebug.yy",
                 "resourceType": "GMFont"
             }
+        },
+        {
+            "Key": "fff2ea87-eb25-46c5-aecb-75696be04e5f",
+            "Value": {
+                "id": "49cb26ac-0f32-4409-b7ba-7a8203dfd44b",
+                "resourcePath": "scripts\\scr_SetIceSlideSpd\\scr_SetIceSlideSpd.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
@@ -3721,6 +3729,7 @@
         "4c58e84f-cd00-44a1-97d8-c890ed7946ec",
         "7c69365c-a3e2-462a-96ad-b79288d746ff",
         "20adcb2f-96bf-4f5c-afff-bcc3f9c6aaba",
+        "fff2ea87-eb25-46c5-aecb-75696be04e5f",
         "bde8392f-6330-47e0-a68b-0e2e6195c91a",
         "a3bf0979-ecca-4d53-8b5c-be768e539034",
         "9a64ac67-4b58-4171-85d8-07252e052eea",

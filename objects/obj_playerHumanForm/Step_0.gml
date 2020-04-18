@@ -390,6 +390,7 @@ if (activateState != ActivateState.DEACTIVATE)
 									}
 								}
 								hspd = hDir * runSpd;
+								scr_SetIceSlideSpd(hspd, false);
 								hState = HorizontalState.H_MOVE_FORWARD;
 							}
 						}
@@ -443,18 +444,21 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if (hMove * hDir < 0)
 					{	
-						hspd = 0;
 						hDir = hMove;
 						if (vState == VerticalState.V_MOVE_NONE)
 						{
 							sprite_index = sprJump3;
 							image_index = 0;
+							hspd = 0;
 							vState = VerticalState.V_MOVE_FALLING;
 						}
 						else
 						{
 							sprite_index = sprDash3;
 							image_index = 0;
+							
+							scr_SetIceSlideSpd(hspd, true);
+							hspd = 0;
 						}
 						aState = ActionState.IDLE;
 					}
@@ -474,6 +478,8 @@ if (activateState != ActivateState.DEACTIVATE)
 						sprite_index = sprRunEnd;
 						image_index = 0;
 					}
+					
+					scr_SetIceSlideSpd(hspd, true);
 					
 					hspd = 0;
 					hState = HorizontalState.H_MOVE_NONE;
@@ -746,7 +752,6 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			if (aState == ActionState.DASHING)
 			{
-				hspd = 0;
 				if (vState != VerticalState.V_ON_GROUND)
 				{
 					sprite_index = sprJump3;
@@ -761,7 +766,10 @@ if (activateState != ActivateState.DEACTIVATE)
 					image_index = 0;
 					
 					dashPhase = 0;
+					
+					scr_SetIceSlideSpd(hspd, true);
 				}
+				hspd = 0;
 				aState = ActionState.IDLE;
 				hState = HorizontalState.H_MOVE_NONE;
 			}

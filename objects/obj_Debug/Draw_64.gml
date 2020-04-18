@@ -25,7 +25,7 @@ if (showDebugHelp)
 	scr_LOG_INFO("Press Q + R to restart current room", debugTextColorF, debugTextColorB);
 	scr_LOG_INFO("Press Q + P to turn on player log, Q + W + P to turn off", debugTextColorF, debugTextColorB);
 	scr_LOG_INFO("Press Q + P to turn on sound log, Q + W + P to turn off", debugTextColorF, debugTextColorB);
-	scr_LOG_INFO("Press Q + Tab to change character", debugTextColorF, debugTextColorB);
+	scr_LOG_INFO("Press Q + E to change character", debugTextColorF, debugTextColorB);
 }
 #endregion
 
@@ -111,6 +111,8 @@ else{
 			scr_LOG_INFO("Char Horizontal State = " + str_hState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Vertical State = " + str_vState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Attack State = " + str_atkState, debugTextColorF, debugTextColorB);
+			if (instance_exists(obj_iceController))
+				scr_LOG_INFO("Ice Slide Speed = " + string(obj_iceController.iceSlideSpd), debugTextColorF, debugTextColorB);
 		}
 		#endregion
 	}

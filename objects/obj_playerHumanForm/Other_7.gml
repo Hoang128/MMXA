@@ -67,6 +67,8 @@ if (sprite_index == sprDash1)
 			var dashEff = instance_create_depth(x + 4 * image_xscale, y, depth - 2, obj_sideDust);
 			dashEff.image_xscale = self.image_xscale;
 		}
+		
+		scr_SetIceSlideSpd(dashSpdPhase2 * hDir, false);
 	}
 	
 	audio_play_sound_on(global.SFX_Emitter, sndDashEff, 0, 0);

@@ -24,6 +24,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			sprite_index = spr_ZSlashLand;
 			
+			scr_SetIceSlideSpd(hspd, true);
+			
 			atkState = AttackState.A_STRICT_ATTACK_LV2;
 			hspd = 0;
 			hState = AttackState.A_NONE;
@@ -34,6 +36,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (sprite_index == spr_ZSlashSpin)
 		{
 			sprite_index = sprLand;
+			
+			scr_SetIceSlideSpd(hspd, true);
 			
 			atkState = AttackState.A_NONE;
 			hspd = 0;
@@ -46,6 +50,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			sprite_index = spr_ZSlashCharge_G;
 			
+			scr_SetIceSlideSpd(hspd, true);
+			
 			hspd = 0;
 			hState = AttackState.A_NONE;
 			atkState = AttackState.A_STRICT_ATTACK_LV3;
@@ -55,6 +61,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (sprite_index == spr_ZShotNorA)
 		{
 			sprite_index = spr_ZShotNorG;
+			
+			scr_SetIceSlideSpd(hspd, true);
 			
 			hspd = 0;
 			hState = AttackState.A_NONE;
@@ -173,7 +181,9 @@ if (activateState != ActivateState.DEACTIVATE)
 								image_index = 0;
 								audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo1, 0, 0);
 								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
-							
+								
+								scr_SetIceSlideSpd(hspd, true);
+								
 								hspd = 0;
 								atkState = AttackState.A_STRICT_ATTACK_LV2;
 								
@@ -188,7 +198,9 @@ if (activateState != ActivateState.DEACTIVATE)
 								image_index = 0;
 								audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
 								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
-							
+								
+								scr_SetIceSlideSpd(hspd, true);
+								
 								hspd = 0;
 								atkState = AttackState.A_STRICT_ATTACK_LV2;
 
@@ -347,6 +359,9 @@ if (activateState != ActivateState.DEACTIVATE)
 				if (vState == VerticalState.V_ON_GROUND)
 				{
 					sprite_index = spr_ZSlashCharge_G;
+					
+					scr_SetIceSlideSpd(hspd, true);
+					
 					hspd = 0;
 					hState = HorizontalState.H_MOVE_NONE;
 					atkState = AttackState.A_STRICT_ATTACK_LV3;
@@ -389,7 +404,9 @@ if (activateState != ActivateState.DEACTIVATE)
 						if (vState == VerticalState.V_ON_GROUND)
 						{
 							sprite_index = spr_ZShotNorG;
-
+							
+							scr_SetIceSlideSpd(hspd, true);
+							
 							hspd = 0;
 							aState = ActionState.IDLE;
 							atkState = AttackState.A_STRICT_ATTACK_LV3;
@@ -427,6 +444,8 @@ if (activateState != ActivateState.DEACTIVATE)
 						if (vState == VerticalState.V_ON_GROUND)
 						{
 							sprite_index = spr_ZShotNorG;
+							
+							scr_SetIceSlideSpd(hspd, true);
 							
 							hspd = 0;
 							aState = ActionState.IDLE;
