@@ -8,8 +8,11 @@ if(instance_exists(obj_iceController))
 		{
 			if (abs(spd) > abs(obj_iceController.iceSlideSpd))
 			{
-				obj_iceController.iceSlideSpd = spd;
-				obj_iceController.iceSlideAcr = abs(spd / 40);
+				if (!place_meeting(x, y + 1, obj_blockIceSlope))
+				{
+					obj_iceController.iceSlideSpd = spd;
+					obj_iceController.iceSlideAcr = abs(spd / 40);
+				}
 			}
 		}
 		else

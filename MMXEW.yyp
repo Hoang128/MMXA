@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "0962e683-e6aa-44a2-a563-0efa8208a1f3",
+            "Value": {
+                "id": "86b75cf8-1612-49f4-8dae-51e3fc6ce1f5",
+                "resourcePath": "objects\\obj_blockIceSlopeL2\\obj_blockIceSlopeL2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0a17aea5-3af5-4f6f-a84f-83563e3373ad",
             "Value": {
                 "id": "4e4c3cbd-4c11-4e91-a438-f032fb7be315",
@@ -796,6 +804,14 @@
                 "id": "bf5e948d-5460-40f4-b271-95eb82fda456",
                 "resourcePath": "sounds\\snd_ZSaberSlash3\\snd_ZSaberSlash3.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "2dcfa734-6ce4-4a53-8323-5856f83ba857",
+            "Value": {
+                "id": "ac3c86ab-6f9c-4e97-a92d-824e68e22a3e",
+                "resourcePath": "objects\\obj_blockIceNoSlide\\obj_blockIceNoSlide.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1647,6 +1663,14 @@
             }
         },
         {
+            "Key": "6f8383bb-e159-46c9-b702-c9378c9fa3e0",
+            "Value": {
+                "id": "b6ae27b1-cd06-419f-9182-ad7b57763100",
+                "resourcePath": "objects\\obj_blockIceSlope\\obj_blockIceSlope.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6f9fd78a-c73b-4fe9-a6e4-2bc59fa71833",
             "Value": {
                 "id": "e8588bd9-7a47-43af-8743-088f266b8a1f",
@@ -2116,6 +2140,14 @@
                 "id": "2165cd31-c951-4415-89b7-e71c4627d978",
                 "resourcePath": "sprites\\spr_slopeL1Ice\\spr_slopeL1Ice.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "89eb9237-15af-4f2c-a41d-4e23a5847557",
+            "Value": {
+                "id": "e855c2ca-e1d0-4ac6-a231-0ea4eceb0e4b",
+                "resourcePath": "objects\\obj_blockIceSlopeL1\\obj_blockIceSlopeL1.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2655,6 +2687,14 @@
             }
         },
         {
+            "Key": "b233591e-e311-4343-86df-794ebee104ae",
+            "Value": {
+                "id": "83df3450-2eac-4f78-87d5-84338cd5fe78",
+                "resourcePath": "objects\\obj_blockIceSlopeL3\\obj_blockIceSlopeL3.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b2792373-7dfc-4b5d-823a-8aa2d5c9e8b5",
             "Value": {
                 "id": "c51b9003-07d3-46ab-aa41-955672c094ee",
@@ -2959,6 +2999,14 @@
             }
         },
         {
+            "Key": "c81b93d9-90ea-4052-ba69-cee2a4774e8e",
+            "Value": {
+                "id": "4a603000-71fd-45fa-96c6-bfc0ba423b87",
+                "resourcePath": "objects\\obj_blockIceSlopeR2\\obj_blockIceSlopeR2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ca7e38aa-17ec-42ad-bca6-a2065f0bb265",
             "Value": {
                 "id": "bd42de56-a1f0-4b14-9bdf-ab7be0bfcc93",
@@ -3215,6 +3263,14 @@
             }
         },
         {
+            "Key": "d8ad0086-e67c-4f03-aa37-ea050be5a396",
+            "Value": {
+                "id": "9aa46591-7799-4cae-98cc-6cde0e9d8d25",
+                "resourcePath": "objects\\obj_blockIceSlopeR1\\obj_blockIceSlopeR1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d9643059-61a7-4929-86c8-c38490b14e9d",
             "Value": {
                 "id": "bbe2f93e-884d-4aec-ae9f-c3aa6571ccdb",
@@ -3404,6 +3460,14 @@
                 "id": "71cd3283-7216-4c1d-85d3-1ab36625af40",
                 "resourcePath": "sprites\\spr_ZSaberHBSlashDuck\\spr_ZSaberHBSlashDuck.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e9c4691b-74f6-4aa0-b593-01bc48464fcb",
+            "Value": {
+                "id": "c4473dbd-f844-460a-a50f-1b7c9759c805",
+                "resourcePath": "objects\\obj_blockIceSlopeR3\\obj_blockIceSlopeR3.yy",
+                "resourceType": "GMObject"
             }
         },
         {

@@ -112,7 +112,11 @@ else{
 			scr_LOG_INFO("Char Vertical State = " + str_vState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Attack State = " + str_atkState, debugTextColorF, debugTextColorB);
 			if (instance_exists(obj_iceController))
+			{
 				scr_LOG_INFO("Ice Slide Speed = " + string(obj_iceController.iceSlideSpd), debugTextColorF, debugTextColorB);
+				scr_LOG_INFO("Ice Slide Slope = " + string(obj_iceController.iceSlideSlope), debugTextColorF, debugTextColorB);
+				scr_LOG_INFO("Ice Slide Accleration = " + string(obj_iceController.iceSlideAcr), debugTextColorF, debugTextColorB);
+			}
 		}
 		#endregion
 	}

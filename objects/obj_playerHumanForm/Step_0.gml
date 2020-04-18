@@ -338,7 +338,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					hDir = hMove;
 				if (aState != ActionState.DUCKING)
 				{
-					var wallIsAHead = (place_meeting(x + hDir, y, obj_block) && (!place_meeting(x + hDir, y, obj_slope)));
+					var wallIsAHead = (place_meeting(x + hDir, y, obj_block) && (!place_meeting(x + hDir, y, obj_slope) && !place_meeting(x + hDir, y, obj_blockIceSlope)));
 					if (!wallIsAHead)
 					{
 						//Jump dash
@@ -419,7 +419,7 @@ if (activateState != ActivateState.DEACTIVATE)
 								{
 									if ((aState != ActionState.SLIDING) && (canSlide))
 									{
-										if (!place_meeting(x + hDir, y, obj_blockNoSlide))
+										if (!place_meeting(x + hDir, y, obj_blockNoSlide) && !place_meeting(x + hDir, y, obj_blockIceNoSlide))
 										{
 											sprite_index = sprSlide1;
 											image_index = 0;
@@ -692,7 +692,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		#region
 		
 		//Start dash
-		var wallIsAHead = (place_meeting(x + hDir, y, obj_block) && (!place_meeting(x + hDir, y, obj_slope)));
+		var wallIsAHead = (place_meeting(x + hDir, y, obj_block) && (!place_meeting(x + hDir, y, obj_slope) && !place_meeting(x + hDir, y, obj_blockIceSlope)));
 		if (keyboard_check_pressed(global.keyDash) && (!wallIsAHead))
 		{
 			if ((aState != ActionState.CLIMBING) && (atkState < AttackState.A_STRICT_ATTACK_LV3))
@@ -747,7 +747,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		
 		//End dash
-		var wallIsAHead = ((place_meeting(x + hDir, y, obj_block)) && (!place_meeting(x + hDir, y, obj_slope)));
+		var wallIsAHead = ((place_meeting(x + hDir, y, obj_block)) && (!place_meeting(x + hDir, y, obj_slope) && !place_meeting(x + hDir, y, obj_blockIceSlope)));
 		if (keyboard_check_released(global.keyDash) || (wallIsAHead) || (dashTime <= 0))
 		{
 			if (aState == ActionState.DASHING)
@@ -834,50 +834,53 @@ if (activateState != ActivateState.DEACTIVATE)
 				}
 				
 				//Wall kick
-				if ((aState == ActionState.SLIDING) || (place_meeting(x + hDir, y, obj_block) && !place_meeting(x + hDir, y, obj_blockNoSlide) && canSlide))
+				if ((aState == ActionState.SLIDING) || (place_meeting(x + hDir, y, obj_block) && !place_meeting(x + hDir, y, obj_blockNoSlide) && !place_meeting(x + hDir, y, obj_blockIceNoSlide) && canSlide))
 				{
-					//Dash kick
-					if ((aState != ActionState.DASHKICK) && keyboard_check(global.keyDash))
+					if (weight < WeighType.MASSIVE)
 					{
-						sprite_index = sprDashKick1;
-						image_index = 0;
-						audio_play_sound_on(global.SFX_Emitter, sndVoiceWallKick, 0, 0);
+						//Dash kick
+						if ((aState != ActionState.DASHKICK) && keyboard_check(global.keyDash))
+						{
+							sprite_index = sprDashKick1;
+							image_index = 0;
+							audio_play_sound_on(global.SFX_Emitter, sndVoiceWallKick, 0, 0);
 						
-						var wkEff = instance_create_depth(x + image_xscale * (bbox_right - bbox_left) / 2, y - 4, depth - 1, obj_flareSmall);
-						wkEff.image_xscale = self.image_xscale;
-						canJump = 0;
-						hspd = 0;
-						vspd = 0;
-						hspd = -hDir*hDashKickSpd;
-						vspd = -dashKickSpd;
-						hDir = sign(hspd);
-						dashKickFlyTime = dashKickFlyTimeMax;
-						dashKickTime = dashKickTimeMax;
-						canSlide = 0;
-						hState = HorizontalState.H_MOVE_PASSIVE;
-						vState = VerticalState.V_MOVE_UP;
-						aState = ActionState.DASHKICK;
-						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
-					}
+							var wkEff = instance_create_depth(x + image_xscale * (bbox_right - bbox_left) / 2, y - 4, depth - 1, obj_flareSmall);
+							wkEff.image_xscale = self.image_xscale;
+							canJump = 0;
+							hspd = 0;
+							vspd = 0;
+							hspd = -hDir*hDashKickSpd;
+							vspd = -dashKickSpd;
+							hDir = sign(hspd);
+							dashKickFlyTime = dashKickFlyTimeMax;
+							dashKickTime = dashKickTimeMax;
+							canSlide = 0;
+							hState = HorizontalState.H_MOVE_PASSIVE;
+							vState = VerticalState.V_MOVE_UP;
+							aState = ActionState.DASHKICK;
+							if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+						}
 					
-					//Wall kick
-					if ((aState != ActionState.WALLKICK) && !(keyboard_check(global.keyDash)))
-					{
-						sprite_index = sprWallKick;
-						image_index = 0;
-						audio_play_sound_on(global.SFX_Emitter, sndVoiceWallKick, 0, 0);
+						//Wall kick
+						if ((aState != ActionState.WALLKICK) && !(keyboard_check(global.keyDash)))
+						{
+							sprite_index = sprWallKick;
+							image_index = 0;
+							audio_play_sound_on(global.SFX_Emitter, sndVoiceWallKick, 0, 0);
 						
-						var wkEff = instance_create_depth(x + image_xscale * (bbox_right - bbox_left) / 2, y - 4, depth - 1, obj_flareSmall);
-						wkEff.image_xscale = self.image_xscale;
-						canJump = 0;
-						hspd = -hDir*hWallKickSpd;
-						vspd = -wallKickSpd;
-						wallKickTime = wallKickTimeMax;
-						canSlide = 0;
-						hState = HorizontalState.H_MOVE_PASSIVE;
-						vState = VerticalState.V_MOVE_UP;
-						aState = ActionState.WALLKICK;
-						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+							var wkEff = instance_create_depth(x + image_xscale * (bbox_right - bbox_left) / 2, y - 4, depth - 1, obj_flareSmall);
+							wkEff.image_xscale = self.image_xscale;
+							canJump = 0;
+							hspd = -hDir*hWallKickSpd;
+							vspd = -wallKickSpd;
+							wallKickTime = wallKickTimeMax;
+							canSlide = 0;
+							hState = HorizontalState.H_MOVE_PASSIVE;
+							vState = VerticalState.V_MOVE_UP;
+							aState = ActionState.WALLKICK;
+							if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+						}
 					}
 				}
 			}
