@@ -41,12 +41,14 @@ else{
 			var hState = obj_playerHumanForm.hState;
 			var vState = obj_playerHumanForm.vState;
 			var activateState = obj_playerHumanForm.activateState;
+			var inWaterState = obj_playerHumanForm.inWater;
 
 			var str_aState = "";
 			var str_atkState = "";
 			var str_hState = "";
 			var str_vState = "";
 			var str_activateState = "";
+			var str_inWaterState = "";
 			
 			switch activateState
 			{
@@ -104,6 +106,14 @@ else{
 				case VerticalState.V_ON_GROUND: str_vState = "ON GROUND"; break;
 				default: str_vState = "NOT HAVE STATE ?"; break;
 			}
+			
+			switch inWaterState
+			{
+				case InLiquid.FULL:	str_inWaterState = "FULL"; break;
+				case InLiquid.HALF: str_inWaterState = "HALF"; break;
+				case InLiquid.NONE: str_inWaterState = "NONE"; break;
+			}
+			
 			scr_LOG_INFO("Log player", debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char direction = " + string(obj_playerHumanForm.hDir), debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char activate = " + str_activateState, debugTextColorF, debugTextColorB);
@@ -111,6 +121,8 @@ else{
 			scr_LOG_INFO("Char Horizontal State = " + str_hState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Vertical State = " + str_vState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Attack State = " + str_atkState, debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char In Water State = " + str_inWaterState, debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Vertical Speed = " + string(obj_playerHumanForm.vspd), debugTextColorF, debugTextColorB);
 			if (instance_exists(obj_iceController))
 			{
 				scr_LOG_INFO("Ice Slide Speed = " + string(obj_iceController.iceSlideSpd), debugTextColorF, debugTextColorB);

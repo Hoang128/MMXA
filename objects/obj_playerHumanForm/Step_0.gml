@@ -314,6 +314,22 @@ if (activateState != ActivateState.DEACTIVATE)
 	}
 	
 	#endregion
+	
+	//Passive with enviroment
+	switch(inWater)
+	{
+		case InLiquid.FULL:
+		{
+			grav = GRAVITY_WATER;
+			maxGrav = MAX_FALL_WATER;
+		}	break;
+		default:
+		{
+			grav = GRAVITY_AIR;
+			maxGrav = MAX_FALL_AIR;
+		}
+	}
+	
 
 	#endregion
 	//*********************************************************************************************************
