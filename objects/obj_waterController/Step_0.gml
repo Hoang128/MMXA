@@ -16,6 +16,13 @@ if instance_exists(obj_gameManager.playerCore)
 		}
 		else if (colBotPart && !colTopPart)
 		{
+			var water = colBotPart;
+			if(inWater != InLiquid.HALF)
+			{
+				instance_create_depth(x, water.bbox_top, depth - 2, obj_waterPulseEff);
+				objWaterEff = instance_create_depth(x, water.bbox_top, depth - 1, obj_waterEff);
+				objWaterEff.core = self;
+			}
 			inWater = InLiquid.HALF;
 		}
 		else

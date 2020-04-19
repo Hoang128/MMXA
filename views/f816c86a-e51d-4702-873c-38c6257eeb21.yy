@@ -6,7 +6,8 @@
     "children": [
         "a19e70da-f48e-470a-8e73-d31003d0293c",
         "86b550eb-cacc-4320-a02e-0aac5b7037b1",
-        "73f3e915-0c88-4aa4-ac73-e5360fa8412d"
+        "73f3e915-0c88-4aa4-ac73-e5360fa8412d",
+        "a76b0664-03dd-4708-b080-5ce476e42a70"
     ],
     "filterType": "GMSound",
     "folderName": "Common Effect",
