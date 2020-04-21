@@ -973,3 +973,9 @@ else
 	x += hspd * DELTA_TIME;
 	y += vspd * DELTA_TIME;
 }
+
+if (hp <= 0)
+{
+	aState = ActionState.DYING;
+	instance_destroy();
+}

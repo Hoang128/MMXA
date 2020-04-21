@@ -16,6 +16,7 @@ switch argument0
 		sndVoiceSwitch = snd_VXSwitch;
 		sndVoiceHurt1 = snd_VXHurt1;
 		sndVoiceHurt2 = snd_VXHurt2;
+		sndVoiceDie = snd_VXDie;
 
 		sndDashEff = snd_XDashEff;
 		sndJumpEff = snd_XJumpEff;
@@ -43,6 +44,7 @@ switch argument0
 		sndVoiceSwitch = snd_VZSwitch;
 		sndVoiceHurt1 = snd_VZHurt1;
 		sndVoiceHurt2 = snd_VZHurt2;
+		sndVoiceDie = snd_VZDie;
 
 		sndDashEff = snd_ZDashEff;
 		sndJumpEff = snd_ZJumpEff;

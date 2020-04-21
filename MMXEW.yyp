@@ -663,6 +663,14 @@
             }
         },
         {
+            "Key": "22afc724-42b6-4eb2-bede-13dc1db9971a",
+            "Value": {
+                "id": "798337b8-9701-455c-8d62-d48ba4425b41",
+                "resourcePath": "sprites\\spr_ZDeathEff\\spr_ZDeathEff.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "232c709a-0041-496b-9dbf-537fb62190de",
             "Value": {
                 "id": "3610925e-303e-4ef0-84a7-adfa988f8fa4",
@@ -807,6 +815,14 @@
             }
         },
         {
+            "Key": "2ca9f5bd-a731-4ed6-a1dd-d6cb8f6ffaf3",
+            "Value": {
+                "id": "68a2700b-2caa-4405-a807-d1b9f123c89e",
+                "resourcePath": "sounds\\snd_PlayerDeathEff\\snd_PlayerDeathEff.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "2d49b939-b9c2-42f7-9e31-497f53a3e3f8",
             "Value": {
                 "id": "bf5e948d-5460-40f4-b271-95eb82fda456",
@@ -892,6 +908,14 @@
                 "id": "f02bd1d5-e6e6-41e4-bba0-45a64fff17eb",
                 "resourcePath": "sprites\\spr_XDashEff\\spr_XDashEff.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "322e5e6e-6552-4273-8290-a123eebc01a3",
+            "Value": {
+                "id": "4688bf2e-7a64-476b-8b59-e0961cefbe5e",
+                "resourcePath": "objects\\obj_ZDeathEff\\obj_ZDeathEff.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1115,6 +1139,14 @@
             "Value": {
                 "id": "66cf4b29-a541-4d0b-9a91-0f0737d9f4ea",
                 "resourcePath": "sprites\\spr_ZSlashEnd_A\\spr_ZSlashEnd_A.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3f992ef6-2a04-4517-a025-69aad0bcfa33",
+            "Value": {
+                "id": "6c72f29e-aef4-48c1-810f-dbde417d2e3d",
+                "resourcePath": "sprites\\spr_XDeathEff\\spr_XDeathEff.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2543,6 +2575,14 @@
             }
         },
         {
+            "Key": "9fa42ae1-3459-4aec-9bdc-83ba8bc92a78",
+            "Value": {
+                "id": "91c8dcff-a6f7-49e1-9f72-5704ee4c63f7",
+                "resourcePath": "objects\\obj_PlayerDeathEff\\obj_PlayerDeathEff.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9feb2d75-251e-41fc-9aa0-afc19c36d9a3",
             "Value": {
                 "id": "7c272d67-8273-42e3-9760-115ae62ae4e7",
@@ -2971,6 +3011,14 @@
             "Value": {
                 "id": "93f5fe83-ce30-4773-b0eb-0a9b823e0e73",
                 "resourcePath": "objects\\obj_PlayerWeaponBuster\\obj_PlayerWeaponBuster.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bf3560b9-b14f-4ff2-96f8-019285231e4d",
+            "Value": {
+                "id": "864d455e-7fb6-4ea8-aad0-25f73aa7578b",
+                "resourcePath": "objects\\obj_XDeathEff\\obj_XDeathEff.yy",
                 "resourceType": "GMObject"
             }
         },

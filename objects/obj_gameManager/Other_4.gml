@@ -16,3 +16,6 @@ if (global.isStage)
 }
 
 instance_create_depth(x, y, depth, obj_effOpening_Black);
+
+roomTrans = -1;
+timeWaitTrans = timeWaitTransMax;

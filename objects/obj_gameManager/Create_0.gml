@@ -12,3 +12,8 @@ activateMaxCount = 3;
 
 //Core
 playerCore = noone;
+
+//Trans room
+roomTrans = -1;
+timeWaitTransMax = 120;
+timeWaitTrans = timeWaitTransMax;
