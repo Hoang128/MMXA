@@ -3,6 +3,8 @@
 //Initialize parameter
 font = fnt_UIBig;
 lineNumber = 3;
+lineNumberVisible = -1;
+lineVisibleTop = 1;
 background = 0;
 lineSpace = 16;
 xStartSpace = 4;

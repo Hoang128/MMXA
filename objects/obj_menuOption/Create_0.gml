@@ -30,13 +30,13 @@ lineContext[5] = "Back";
 
 scr_InitMenuProp();
 
+lineChild[1] = obj_menuKeyboard;
 lineChild[3] = obj_menuGraphics;
 lineChild[4] = obj_menuSounds;
 
-lineEnable[1] = false;
 lineEnable[2] = false;
 
-cursor = 3;
+cursor = 1;
 
 var ins = instance_create_depth(x, y + height + 16, depth, obj_menuTextboxInstruction);
 ins.width = 1280 - x * 2;

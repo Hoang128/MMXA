@@ -12,6 +12,12 @@ if (active == 1)
 			{
 				audio_play_sound_on(global.SFXVolume, soundMove, 0, 0);
 				cursor = newPlace;
+				
+				if (lineNumberVisible > 0)
+				{
+					if (newPlace < lineVisibleTop)
+						lineVisibleTop = newPlace;
+				}
 			}
 		}
 	}
@@ -26,6 +32,12 @@ if (active == 1)
 			{
 				audio_play_sound_on(global.SFXVolume, soundMove, 0, 0);
 				cursor = newPlace;
+				
+				if (lineNumberVisible > 0)
+				{
+					if (newPlace > lineVisibleTop + (lineNumberVisible - 1))
+						lineVisibleTop = newPlace - (lineNumberVisible - 1);
+				}
 			}
 		}
 	}

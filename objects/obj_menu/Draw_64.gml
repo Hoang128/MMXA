@@ -22,16 +22,36 @@ if ((visibleWhenDeactivate) || ((active) && (!visibleWhenDeactivate)))
 	draw_set_color(c_white);
 	draw_text(x + xStartSpace, y + yStartSpace, lineContext[0]);
 
-	for(var i = 1; i <= lineNumber; i++)
+	if (lineNumberVisible == -1)
 	{
-		if (shadow == 1)
+		for(var i = 1; i <= lineNumber; i++)
 		{
-			draw_set_color(c_black);
-			draw_text(x + shadowDistance + xStartSpace, y + shadowDistance + yStartSpace + i * lineSpace, lineContext[i]);
+			if (shadow == 1)
+			{
+				draw_set_color(c_black);
+				draw_text(x + shadowDistance + xStartSpace, y + shadowDistance + yStartSpace + i * lineSpace, lineContext[i]);
+			}
+			draw_set_color(c_white);
+			if (cursor == i) draw_set_color(c_yellow);
+			if (lineEnable[i] == false) draw_set_color(c_gray);
+			draw_text(x + xStartSpace, y + yStartSpace + i * lineSpace, lineContext[i]);
 		}
-		draw_set_color(c_white);
-		if (cursor == i) draw_set_color(c_yellow);
-		if (lineEnable[i] == false) draw_set_color(c_gray);
-		draw_text(x + xStartSpace, y + yStartSpace + i * lineSpace, lineContext[i]);
+	}
+	
+	else
+	{
+		var i = 1;
+		for(i = 2; i <= lineNumberVisible + 1; i++)
+		{
+			if (shadow == 1)
+			{
+				draw_set_color(c_black);
+				draw_text(x + shadowDistance + xStartSpace, y + shadowDistance + yStartSpace + i * lineSpace, lineContext[lineVisibleTop - 1 + i - 1]);
+			}
+			draw_set_color(c_white);
+			if (cursor == lineVisibleTop - 1 + i - 1) draw_set_color(c_yellow);
+			if (lineEnable[lineVisibleTop - 1 + i - 1] == false) draw_set_color(c_gray);
+			draw_text(x + xStartSpace, y + yStartSpace + (i) * lineSpace, lineContext[lineVisibleTop - 1 + i - 1]);
+		}
 	}
 }
