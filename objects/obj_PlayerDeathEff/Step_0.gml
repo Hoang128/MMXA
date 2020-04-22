@@ -2,6 +2,16 @@
 
 if (startMove == false)
 {
-	motion_set(direction, moveSpd * DELTA_TIME);
+	speed = moveSpd * 2 * DELTA_TIME
+	motion_set(direction, speed);
 	startMove = true;
+}
+
+else
+{
+	if (speed > 1)
+	{
+		speed -= slowSpd * DELTA_TIME;
+		motion_set(direction, speed);
+	}
 }

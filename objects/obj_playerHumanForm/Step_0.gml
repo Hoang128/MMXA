@@ -944,6 +944,11 @@ if (activateState != ActivateState.DEACTIVATE)
 
 else
 {
+	if (aState == ActionState.DYING)
+	{
+		if (timeWaitToDestroy > 0) timeWaitToDestroy -= DELTA_TIME;
+		else	instance_destroy();
+	}
 	if (aState == ActionState.BEAMUP)
 	{
 		if (!collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + RESOLUTION_WIDTH, Y_VIEW + RESOLUTION_HEIGH, self, false, false))
@@ -974,8 +979,22 @@ else
 	y += vspd * DELTA_TIME;
 }
 
+//Full passive
+
+//Hp
 if (hp <= 0)
 {
-	aState = ActionState.DYING;
-	instance_destroy();
+	hp = 0;
+	if (weight < WeighType.MASSIVE)
+	{
+		hspd = 0;
+		vspd = 0;
+		hState = HorizontalState.H_MOVE_NONE;
+		vState = VerticalState.V_MOVE_NONE;
+		aState = ActionState.DYING;
+		activateState = ActivateState.DEACTIVATE;
+		sprite_index = sprStun1;
+		image_index = 0;
+	}
+	else	instance_destroy();
 }

@@ -12,7 +12,7 @@ if (aState == ActionState.DYING)
 	{
 		obj[i] = instance_create_depth(x, y, depth - 1, obj_ZDeathEff);
 		obj[i].direction = 360 / 12 * i + 360 / 24;
-		obj[i].moveSpd = 2.5;
+		obj[i].moveSpd = 2;
 	}
 
 	for (var i = 0; i < 12; i++)
@@ -26,7 +26,7 @@ if (aState == ActionState.DYING)
 	{
 		obj[i] = instance_create_depth(x, y, depth - 1, obj_ZDeathEff);
 		obj[i].direction = 360 / 12 * i + 360 / 24;
-		obj[i].moveSpd = 0.5;
+		obj[i].moveSpd = 1;
 	}
 }
 

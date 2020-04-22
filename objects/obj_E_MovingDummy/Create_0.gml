@@ -9,3 +9,6 @@ move = 1;
 timmer = 120;
 change = 0;
 moveSpd = 1;
+
+damage = 2;
+damageRed = 1;

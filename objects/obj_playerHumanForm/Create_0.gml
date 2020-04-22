@@ -42,7 +42,7 @@ stunType = StunType.STUN_NONE;
 stunSprLoop1 = 0;
 stunSprLoop2 = 1;
 blinkMax = 10;
-
+timeWaitToDestroy = 10;
 
 //Default state
 weight = WeighType.MEDIUM;

@@ -5,3 +5,6 @@
 event_inherited();
 
 hp = 100;
+
+damage = 1;
+damageRed = 1;

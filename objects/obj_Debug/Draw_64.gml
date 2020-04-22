@@ -122,7 +122,7 @@ else{
 			scr_LOG_INFO("Char Vertical State = " + str_vState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Attack State = " + str_atkState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char In Water State = " + str_inWaterState, debugTextColorF, debugTextColorB);
-			scr_LOG_INFO("Vertical Speed = " + string(obj_playerHumanForm.vspd), debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char Health Point = " + string(obj_playerHumanForm.hp), debugTextColorF, debugTextColorB);
 			if (instance_exists(obj_iceController))
 			{
 				scr_LOG_INFO("Ice Slide Speed = " + string(obj_iceController.iceSlideSpd), debugTextColorF, debugTextColorB);
