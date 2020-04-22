@@ -7,7 +7,7 @@
         "73f93694-5b91-406f-9a58-f52e0749d4de"
     ],
     "filterType": "GMObject",
-    "folderName": "Start",
+    "folderName": "Start menu",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

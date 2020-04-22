@@ -2007,6 +2007,14 @@
             }
         },
         {
+            "Key": "7a97ebab-dff8-405b-ad00-2dfe31e35466",
+            "Value": {
+                "id": "206dbb74-f878-47b6-abc1-32f028ce26e5",
+                "resourcePath": "views\\7a97ebab-dff8-405b-ad00-2dfe31e35466.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "7ad2e235-3e72-4d12-b326-9d2fe2b81481",
             "Value": {
                 "id": "1eb4e51e-c3f0-4a11-a944-211fe66bd63f",

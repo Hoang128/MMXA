@@ -52,7 +52,7 @@ if ((sprite_index == spr_ZSlashJump) || (sprite_index == spr_ZSlashSpin))
 	canChargeTimmer = canChargeTimmerMax;
 	if (atkState < AttackState.A_STRICT_ATTACK_LV2)
 		atkState = AttackState.A_NONE;
-	else instance_destroy(obj_ZSaber);
+	else scr_MeeleWeaponDestroy(obj_ZSaberImage);
 	
 	instance_create_depth(x, y, depth, obj_EndSlashAirEff);
 	
@@ -141,7 +141,7 @@ if (sprite_index == spr_ZSlashCharge_A)
 	canCharge = 1;
 	canChargeTimmer = canChargeTimmerMax;
 	atkState = AttackState.A_NONE;
-	instance_destroy(obj_ZSaber);
+	scr_MeeleWeaponDestroy(obj_ZSaberImage);
 	
 	if (vspd < 0)
 		sprite_index = sprJump2;
@@ -154,7 +154,7 @@ if (sprite_index == spr_ZSlashCharge_G)
 	canCharge = 1;
 	canChargeTimmer = canChargeTimmerMax;
 	atkState = AttackState.A_NONE;
-	instance_destroy(obj_ZSaber);
+	scr_MeeleWeaponDestroy(obj_ZSaberImage);
 	aState = ActionState.IDLE;
 	
 	sprite_index = spr_ZSlashEnd_G;

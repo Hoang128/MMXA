@@ -8,7 +8,7 @@
         "9dee61a9-3407-4604-80d3-65316ddf322d"
     ],
     "filterType": "GMObject",
-    "folderName": "Screen Effect",
+    "folderName": "Screen effect",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

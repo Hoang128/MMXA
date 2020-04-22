@@ -54,7 +54,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			
 			hspd = 0;
 			hState = AttackState.A_NONE;
-			atkState = AttackState.A_STRICT_ATTACK_LV3;
+			atkState = AttackState.A_STRICT_ATTACK_LV4;
 		}
 		
 		//Shot
@@ -364,7 +364,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					
 					hspd = 0;
 					hState = HorizontalState.H_MOVE_NONE;
-					atkState = AttackState.A_STRICT_ATTACK_LV3;
+					atkState = AttackState.A_STRICT_ATTACK_LV4;
 					
 				}
 				else
