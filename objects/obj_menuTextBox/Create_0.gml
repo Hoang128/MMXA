@@ -15,4 +15,6 @@ haveDesEff = 0;
 haveStartAnim = 0;
 parent = noone;
 backgroundAlpha = 0.8;
-context = "Press " + string(global.keyUp) + " - " + string(global.keyDown) + " to select. Press " + string(global.keyJump) + " to confirm. Press "+ string(global.keyDash) + " to back to previous menu.";
+shadow = 1;
+shadowDistance = 4;
+context[0] = "Press " + string(global.keyUp) + " - " + string(global.keyDown) + " to select. Press " + string(global.keyJump) + " to confirm. Press "+ string(global.keyDash) + " to back to previous menu.";

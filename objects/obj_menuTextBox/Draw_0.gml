@@ -12,5 +12,14 @@ if (background != noone)
 	draw_set_alpha(1);
 }
 
-draw_set_color(c_white);
-draw_text_ext(x + xStartSpace, y + yStartSpace, context, lineSpace, width - xStartSpace * 2);
+
+for (var i = 0; i < lineNumber; i++)
+{
+	if (shadow == 1)
+	{
+		draw_set_color(c_black);
+		draw_text_ext(x + xStartSpace + shadowDistance, y + yStartSpace + lineSpace * i + shadowDistance, context[i], lineSpace, width - xStartSpace * 2);
+	}
+	draw_set_color(c_white);
+	draw_text_ext(x + xStartSpace, y + yStartSpace + lineSpace * i, context[i], lineSpace, width - xStartSpace * 2);
+}

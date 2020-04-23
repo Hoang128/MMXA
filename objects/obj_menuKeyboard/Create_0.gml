@@ -22,6 +22,8 @@ height = 720 - 16 * 2;
 xStartSpinner = 640;
 parent = obj_menuOption;
 visibleWhenDeactivate = true;
+xKeyContext = 640;
+charConfiguration = 0;
 
 lineContext[0] = "KEYBOARD CONFIGURATIONS";
 
@@ -34,9 +36,16 @@ lineContext[6] = "Special attack";
 lineContext[7] = "Jump";
 lineContext[8] = "Dash";
 lineContext[9] = "Giga attack";
-lineContext[10] = "Use fusion elf 1";
-lineContext[11] = "Use fusion elf 2";
+lineContext[10] = "Character key 1";
+lineContext[11] = "Character key 2";
 lineContext[12] = "Change weapon L";
 lineContext[13] = "Change weapon R";
 lineContext[14] = "Map";
+
+for (var i = 1; i <= 14; i++)
+{
+	keyChangeContext[i] = instance_create_depth(xKeyContext, 0, depth - 1, obj_keyChangeContext);
+	keyChangeContext[i].keyId = i;
+	keyChangeContext[i].core = self;
+}
 scr_InitMenuProp();
