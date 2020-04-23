@@ -1,6 +1,7 @@
 /// @description Init
 
 //Initialize parameter
+depth = -1000;
 font = fnt_UIBig;
 lineNumber = 3;
 lineNumberVisible = -1;
@@ -15,7 +16,7 @@ haveEndEff = 0;
 haveDesEff = 0;
 haveStartAnim = 0;
 parent = noone;
-backgroundAlpha = 0.8;
+backgroundAlpha = 0.75;
 visibleWhenDeactivate = false;
 lastRoom = noone;
 backHandle = false;

@@ -5,7 +5,8 @@
     "name": "33ac0e89-6869-42dd-bd09-e96a4b3e2bbf",
     "children": [
         "edb429f7-9773-4e09-854a-de25f8e50a2b",
-        "a300872f-3e0e-4391-9810-7fd67907843e"
+        "a300872f-3e0e-4391-9810-7fd67907843e",
+        "7e1ba4d5-545d-46a3-a371-9632cd2eb483"
     ],
     "filterType": "GMObject",
     "folderName": "Sub menu keyboard",

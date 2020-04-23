@@ -14,7 +14,6 @@ font = fnt_UIBoldSmall;
 lineNumber = 14;
 lineNumberVisible = 8;
 background = c_dkgray;
-//backgroundAlpha = 0.5;
 lineSpace = 48;
 xStartSpace = 64;
 yStartSpace = 16;

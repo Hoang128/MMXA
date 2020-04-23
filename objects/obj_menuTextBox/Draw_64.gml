@@ -1,0 +1,25 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_font(font);
+
+if (background != noone)
+{
+	draw_set_alpha(backgroundAlpha);
+	draw_rectangle_color(x, y, x + width, y + height, c_black, c_black, c_black, c_black, 0);
+	draw_set_alpha(1);
+}
+
+
+for (var i = 0; i < lineNumber; i++)
+{
+	if (shadow == 1)
+	{
+		draw_set_color(c_black);
+		draw_text_ext(x + xStartSpace + shadowDistance, y + yStartSpace + lineSpace * i + shadowDistance, context[i], lineSpace, width - xStartSpace * 2);
+	}
+	draw_set_color(c_white);
+	draw_text_ext(x + xStartSpace, y + yStartSpace + lineSpace * i, context[i], lineSpace, width - xStartSpace * 2);
+}

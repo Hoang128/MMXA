@@ -37,3 +37,15 @@ if (backExecute)
 {
 	instance_destroy();
 }
+
+for(var i = 1; i <= 14; i++)
+{
+	if(lineExecute[i])
+	{
+		if (keyChangeContext[i].canChange == -3)
+		{
+			keyChangeContext[i].active = 1;
+			keyChangeContext[i].canChange = -2;
+		}
+	}
+}

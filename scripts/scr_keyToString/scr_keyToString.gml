@@ -36,6 +36,7 @@ switch (argument0)
 	case vk_left:		returnStr = "LEFT ARROW"; break;
 	case vk_up:			returnStr = "UP ARROW"; break;
 	case vk_down:		returnStr = "DOWN ARROW"; break;
+	case noone:			returnStr = " "; break;
 	default:			returnStr = chr(argument0); break;
 }
 

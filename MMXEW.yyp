@@ -415,14 +415,6 @@
             }
         },
         {
-            "Key": "11ce7ceb-496a-4986-ad8b-5b1ad5d8de82",
-            "Value": {
-                "id": "a21d3eb0-e8f5-4148-a1ea-6293999645f2",
-                "resourcePath": "objects\\obj_menuGrid\\obj_menuGrid.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "1227ce9b-f376-4265-af78-09e208836021",
             "Value": {
                 "id": "a066aab1-970d-4ea6-8b08-4c3a9fe42c1a",
@@ -1204,6 +1196,14 @@
                 "id": "df6110a3-be64-4eae-a8b4-a35e17f333e2",
                 "resourcePath": "fonts\\fnt_UIBoldMedium\\fnt_UIBoldMedium.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "46def8dc-e993-4322-9194-f2b63782706c",
+            "Value": {
+                "id": "addc5363-c2b1-4b66-ae06-88b7db914853",
+                "resourcePath": "objects\\obj_menuPopUp\\obj_menuPopUp.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2060,6 +2060,14 @@
                 "id": "06ba0296-8794-47da-a88c-da01ada20070",
                 "resourcePath": "sounds\\snd_VXHurt1\\snd_VXHurt1.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "7e1ba4d5-545d-46a3-a371-9632cd2eb483",
+            "Value": {
+                "id": "4d895099-916a-4324-b912-d442fd5d8bcb",
+                "resourcePath": "objects\\obj_popUpKeyboardDuplicate\\obj_popUpKeyboardDuplicate.yy",
+                "resourceType": "GMObject"
             }
         },
         {

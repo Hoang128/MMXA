@@ -7,7 +7,6 @@ event_inherited();
 font = fnt_UIBoldSmall;
 lineNumber = 2;
 background = c_dkgray;
-// = 0.5;
 lineSpace = 128;
 xStartSpace = 64;
 yStartSpace = 16;

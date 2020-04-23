@@ -1,4 +1,6 @@
 /// @description Init
+depth = -5000;
+
 lineSpace = 20;
 showDebugHelp = 0;
 showPlayerLog = 0;

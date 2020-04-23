@@ -17,7 +17,6 @@ haveEndEff = 0;
 haveDesEff = 1;
 haveStartAnim = 0;
 parent = noone;
-//backgroundAlpha = 0.5;
 lastRoom = room_start;
 visibleWhenDeactivate = true;
 

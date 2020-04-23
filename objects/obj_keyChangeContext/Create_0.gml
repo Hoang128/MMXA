@@ -11,3 +11,9 @@ yStartSpace = 16;
 lineSpace = 48;
 shadowDistance = 4;
 shadow = 1;
+
+canChange = -3;
+active = 0;
+
+soundConfirm = snd_UISelect;
+soundMove = snd_UISelectChange;

@@ -9,7 +9,7 @@ if ((visibleWhenDeactivate) || ((active) && (!visibleWhenDeactivate)))
 	if (background != noone)
 	{
 		draw_set_alpha(backgroundAlpha);
-		draw_rectangle_color(x, y, x + width, y + height, c_dkgray, c_dkgray, c_dkgray, c_dkgray, 0);
+		draw_rectangle_color(x, y, x + width, y + height, c_black, c_black, c_black, c_black, 0);
 		draw_set_alpha(1);
 	}
 
