@@ -8,7 +8,7 @@
         "232c709a-0041-496b-9dbf-537fb62190de"
     ],
     "filterType": "GMSprite",
-    "folderName": "Saber",
+    "folderName": "Z - Saber",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

@@ -13,7 +13,9 @@
         "89ffa889-f816-48b4-b3e1-c5e09f8daf9f",
         "b7b5a2f5-51db-4a62-871b-2339077a0275",
         "3a4fd788-9378-4c19-b1a7-6f2a6c416756",
-        "d6e53326-9cc1-48b1-be7b-472c01d408f3"
+        "d6e53326-9cc1-48b1-be7b-472c01d408f3",
+        "089c5744-4d04-435c-9256-54a01c543d1c",
+        "e36a73bc-aa72-4d89-a23c-b45e88c34ed8"
     ],
     "filterType": "GMSprite",
     "folderName": "Hitbox",
