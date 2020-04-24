@@ -35,6 +35,8 @@ else
 	{
 		if (canChange == 1)
 		{
+			if (effectTime < 30) effectTime++
+			else	effectTime = 0;
 			if (keyboard_check_pressed(vk_anykey))
 			{
 				var currentKey = keyboard_lastkey;

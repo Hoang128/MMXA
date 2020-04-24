@@ -11,6 +11,8 @@ yStartSpace = 16;
 lineSpace = 48;
 shadowDistance = 4;
 shadow = 1;
+effectTime = 0;
+effectTimeMax = 30;
 
 canChange = -3;
 active = 0;
