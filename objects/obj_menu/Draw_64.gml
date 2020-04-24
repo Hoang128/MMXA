@@ -41,6 +41,11 @@ if ((visibleWhenDeactivate) || ((active) && (!visibleWhenDeactivate)))
 	else
 	{
 		var i = 1;
+		if (lineVisibleTop != 1)
+		{
+			draw_set_color(c_white);
+			draw_triangle(x + xStartSpace + triangleSpace, y + yStartSpace + i * lineSpace + 16 + triangleHeight, x + xStartSpace + triangleWidth + triangleSpace, y + yStartSpace + i * lineSpace + 16 + triangleHeight, x + xStartSpace + triangleWidth / 2 + triangleSpace, y + yStartSpace + i * lineSpace + 16, false);
+		}
 		for(i = 2; i <= lineNumberVisible + 1; i++)
 		{
 			if (shadow == 1)
@@ -52,6 +57,12 @@ if ((visibleWhenDeactivate) || ((active) && (!visibleWhenDeactivate)))
 			if (cursor == lineVisibleTop - 1 + i - 1) draw_set_color(c_yellow);
 			if (lineEnable[lineVisibleTop - 1 + i - 1] == false) draw_set_color(c_gray);
 			draw_text(x + xStartSpace, y + yStartSpace + (i) * lineSpace, lineContext[lineVisibleTop - 1 + i - 1]);
+		}
+		i++;
+		if (lineVisibleTop != (lineNumber - lineNumberVisible + 1))
+		{
+			draw_set_color(c_white);
+			draw_triangle(x + xStartSpace + triangleSpace, y + yStartSpace + i * lineSpace - 16 - triangleHeight, x + xStartSpace + triangleWidth + triangleSpace, y + yStartSpace + i * lineSpace - 16 - triangleHeight, x + xStartSpace + triangleWidth / 2 + triangleSpace, y + yStartSpace + i * lineSpace - 16, false);
 		}
 	}
 }

@@ -25,6 +25,9 @@ soundConfirm = snd_UISelect;
 soundMove = snd_UISelectChange;
 shadow = 1;
 shadowDistance = 4;
+triangleSpace = 32;
+triangleWidth = 32;
+triangleHeight = 16;
 
 lineContext[0] = "";
 lineContext[1] = "Start";

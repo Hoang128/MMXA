@@ -13,7 +13,6 @@ global.font = fontDebug;
 
 //Default Key Blind
 global.keyStart = vk_enter;
-
 global.keyUp = vk_up;
 global.keyDown = vk_down;
 global.keyLeft = vk_left;
