@@ -1607,6 +1607,14 @@
             }
         },
         {
+            "Key": "665ecb10-3b9e-4a05-81ef-3aca1c665565",
+            "Value": {
+                "id": "6cfbd101-587d-4b73-bf4c-fe69fa206015",
+                "resourcePath": "scripts\\scr_loadConfig\\scr_loadConfig.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "66f49da1-d5a5-41ba-a553-7f4a8da2ff05",
             "Value": {
                 "id": "ead9ee93-4d51-4569-8e39-2e7466bb5a83",
@@ -2511,6 +2519,14 @@
             }
         },
         {
+            "Key": "992dda25-7f56-4746-b015-98e74df2c291",
+            "Value": {
+                "id": "1c23884f-ce52-4e9a-bd29-a87f86bc69fc",
+                "resourcePath": "views\\992dda25-7f56-4746-b015-98e74df2c291.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "9a013aaa-a5a4-4c93-869b-cc3824545ab9",
             "Value": {
                 "id": "1ed9474b-85c2-4170-a605-119c911e0137",
@@ -2852,6 +2868,14 @@
                 "id": "a50f91b3-2567-4014-992d-a5ba7f98dc12",
                 "resourcePath": "sounds\\snd_UISelectBoss\\snd_UISelectBoss.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "b4cb5fdf-c277-47d8-a686-ad6fa4b6d703",
+            "Value": {
+                "id": "8b967fdf-9622-4914-9e0b-5db8c0b58a70",
+                "resourcePath": "scripts\\scr_saveConfig\\scr_saveConfig.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4004,7 +4028,9 @@
         "5921e6d7-32dd-4709-847d-725d982b7456",
         "821a7116-4bc2-4cc0-ad2f-965f291f314d",
         "af985271-323f-4e4b-a6a9-507cbaf283ea",
-        "96b45332-4b85-4e28-a5ed-d32f1ccafbe3"
+        "96b45332-4b85-4e28-a5ed-d32f1ccafbe3",
+        "665ecb10-3b9e-4a05-81ef-3aca1c665565",
+        "b4cb5fdf-c277-47d8-a686-ad6fa4b6d703"
     ],
     "tutorial": ""
 }

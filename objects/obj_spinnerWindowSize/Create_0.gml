@@ -22,4 +22,13 @@ context[4] = "1280 x 720";
 context[5] = "1600 x 900";
 context[6] = "1920 x 1080";
 
-firstContextCursor = 0;
+switch(window_get_height())
+{
+	case 240:		cursor = 0;		break;
+	case 360:		cursor = 1;		break;
+	case 450:		cursor = 2;		break;
+	case 540:		cursor = 3;		break;
+	case 720:		cursor = 4;		break;
+	case 900:		cursor = 5;		break;
+	case 1080:		cursor = 6;		break;
+}

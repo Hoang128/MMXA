@@ -17,4 +17,7 @@ parent = obj_menuGraphics;
 context[0] = "Window";
 context[1] = "Fullscreen";
 
-firstContextCursor = 0;
+if (window_get_fullscreen() == true)
+	cursor = 1;
+else
+	cursor = 0;

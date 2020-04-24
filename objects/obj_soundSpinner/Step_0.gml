@@ -1,5 +1,15 @@
 /// @description Handle
-
+if (!init)
+{
+	switch(parameter)
+	{
+		case 0: volume = global.masterVolume;	break;
+		case 1: volume = global.SFXVolume;		break;
+		case 2: volume = global.BGMVolume;		break;
+	}
+	valDisplay = volume * ratio;
+	init = true;
+}
 if (!instance_exists(obj_menuSounds)) instance_destroy();
 if (active)
 {
@@ -34,9 +44,28 @@ if (active)
 	{
 		audio_play_sound_on(global.SFX_Emitter, soundConfirm, 0, 0);
 		active = -3
-		parameter = valDisplay / ratio;
-		if (emitter == noone) audio_master_gain(parameter);
-		else audio_emitter_gain(emitter, parameter);
+		volume = valDisplay / ratio;
+		switch(parameter)
+		{
+			case 0:	
+			{
+				audio_master_gain(volume);
+				global.masterVolume = volume;
+				break;
+			}
+			case 1: 
+			{
+				audio_emitter_gain(global.SFX_Emitter, volume);
+				global.SFXVolume = volume;
+				break;
+			}
+			case 2: 
+			{
+				audio_emitter_gain(global.BGM_Emitter, volume);
+				global.BGMVolume = volume;
+				break;
+			}
+		}
 		obj_menuSounds.lineExecute[line] = false;
 		obj_menuSounds.lineHandle[line] = false;
 		obj_menuSounds.active = 1;

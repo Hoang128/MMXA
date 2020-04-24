@@ -2,10 +2,10 @@
 minVal = 0;
 maxVal = 10;
 
-parameter = global.masterVolume;
-emitter = noone;
+parameter = 0;
+volume = 1;
 ratio = 10;
-valDisplay = parameter * ratio;
+valDisplay = 0;
 triangleSpace = 32;
 triangleWidth = 20;
 triangleHeight = 32;
@@ -15,3 +15,5 @@ line = 1;
 
 active = -3;
 font = fnt_UIBoldMedium;
+
+init = false;

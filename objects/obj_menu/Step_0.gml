@@ -10,7 +10,7 @@ if (active == 1)
 			while (lineEnable[newPlace] == false) newPlace--;
 			if (newPlace != 0)
 			{
-				audio_play_sound_on(global.SFXVolume, soundMove, 0, 0);
+				audio_play_sound_on(global.SFX_Emitter, soundMove, 0, 0);
 				cursor = newPlace;
 				
 				if (lineNumberVisible > 0)
@@ -30,7 +30,7 @@ if (active == 1)
 			while (lineEnable[newPlace] == false) newPlace++;
 			if (newPlace != (lineNumber + 1))
 			{
-				audio_play_sound_on(global.SFXVolume, soundMove, 0, 0);
+				audio_play_sound_on(global.SFX_Emitter, soundMove, 0, 0);
 				cursor = newPlace;
 				
 				if (lineNumberVisible > 0)
@@ -46,7 +46,7 @@ if (active == 1)
 	{
 		if (lineHandle[cursor] == false)
 		{
-			audio_play_sound_on(global.SFXVolume, soundConfirm, 0, 0);
+			audio_play_sound_on(global.SFX_Emitter, soundConfirm, 0, 0);
 			lineHandle[cursor] = true;
 			if (haveEndEff)
 				instance_create_depth(x, y, depth, obj_effClosing_Black);
@@ -58,7 +58,7 @@ if (active == 1)
 	{
 		if (keyboard_check_pressed(global.keyDash) || keyboard_check_pressed(vk_escape))
 		{
-			audio_play_sound_on(global.SFXVolume, soundMove, 0, 0);
+			audio_play_sound_on(global.SFX_Emitter, soundMove, 0, 0);
 			backHandle = true;
 			if (haveDesEff)
 				instance_create_depth(x, y, depth, obj_effClosing_Black);

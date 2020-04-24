@@ -2,32 +2,13 @@
 scr_InitializeMacros();
 scr_InitializeEnumStates();
 
+global.font = fontDebug;
+
 global.debugging = true;
 
 global.isStage = false;
 
-//Game Config
-room_speed = 60;
-global.deltaTime = 1; //Using for slow-time effect
-global.font = fontDebug;
-
-//Default Key Blind
-global.keyStart = vk_enter;
-global.keyUp = vk_up;
-global.keyDown = vk_down;
-global.keyLeft = vk_left;
-global.keyRight = vk_right;
-global.keyAtk = ord("C");
-global.keySpAtk = ord("V");
-global.keyDash = ord("Z");
-global.keyJump = ord("X");
-global.keyGiga = vk_space;
-global.keyChar1 = ord("D");
-global.keyChar2 = ord("F");
-global.keyChangeL = ord("A");
-global.keyChangeR = ord("S");
-global.keyMap = vk_tab;
-
+//Default parameter***************************************************************************************
 //Default HP & MP
 global.hp[0] = 16;
 global.hp[1] = 16;
@@ -74,3 +55,40 @@ global.zSaber[1] = ItemState.USING;
 //Create Manager Object
 if (!instance_exists(obj_gameManager))
 	instance_create_depth(64, 96, -1000000, obj_gameManager);
+
+//Game Speed**********************************************************************************************
+room_speed = 60;
+global.deltaTime = 1; //Using for slow-time effect
+
+//Default Config******************************************************************************************
+//Default Resolution
+global.wWidth = 1280;
+global.wHeight = 720;
+global.fullScreen = 0;
+
+//Default Key Blind
+global.keyStart = vk_enter;
+global.keyUp = vk_up;
+global.keyDown = vk_down;
+global.keyLeft = vk_left;
+global.keyRight = vk_right;
+global.keyAtk = ord("C");
+global.keySpAtk = ord("V");
+global.keyDash = ord("Z");
+global.keyJump = ord("X");
+global.keyGiga = vk_space;
+global.keyChar1 = ord("D");
+global.keyChar2 = ord("F");
+global.keyChangeL = ord("A");
+global.keyChangeR = ord("S");
+global.keyMap = vk_tab;
+
+//Default volume
+global.masterVolume=1;
+global.BGMVolume=1;
+global.SFXVolume=1;
+global.BGM_Emitter = audio_emitter_create();
+global.SFX_Emitter = audio_emitter_create();
+
+//Load config*********************************************************************************************
+scr_loadConfig();
