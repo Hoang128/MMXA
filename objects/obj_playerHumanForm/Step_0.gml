@@ -1,4 +1,33 @@
-/// @description Move
+/// @description Step
+
+//Full passive
+
+//Hp
+if (hp <= 0)
+{
+	hp = 0;
+	if (weight < WeighType.MASSIVE)
+	{
+		hspd = 0;
+		vspd = 0;
+		hState = HorizontalState.H_MOVE_NONE;
+		vState = VerticalState.V_MOVE_NONE;
+		aState = ActionState.DYING;
+		activateState = ActivateState.DEACTIVATE;
+		sprite_index = sprStun1;
+		image_index = 0;
+	}
+	else	instance_destroy();
+}
+
+if ((vState != VerticalState.V_ON_GROUND))
+{
+	//Avoid top floor collision
+	while (place_meeting(x, y-1, obj_block))
+	{
+		y++;
+	}
+}
 
 if (activateState != ActivateState.DEACTIVATE)
 {
@@ -104,7 +133,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			if (aState != ActionState.BEAMDOWN)
 			{
-				if (atkState == AttackState.A_NONE)
+				if (atkState <= AttackState.A_NORMAL_ATTACK)
 				{
 					sprite_index = sprLand;
 					image_index = 0;
@@ -285,7 +314,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	#endregion
 	
-	//Passive Counters-----------------------------------------------------------------------------------
+	//Passive Counters-----------------------------------------------------------------------------------------
 	#region
 	
 	if (canJump == 0)
@@ -315,7 +344,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	#endregion
 	
-	//Passive with enviroment
+	//Passive with enviroment----------------------------------------------------------------------------------
 	switch(inWater)
 	{
 		case InLiquid.FULL:
@@ -774,6 +803,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					image_index = 0;
 					
 					dashPhase = 0;
+					
 					vState = VerticalState.V_MOVE_FALLING;
 				}
 				else
@@ -977,24 +1007,4 @@ else
 	
 	x += hspd * DELTA_TIME;
 	y += vspd * DELTA_TIME;
-}
-
-//Full passive
-
-//Hp
-if (hp <= 0)
-{
-	hp = 0;
-	if (weight < WeighType.MASSIVE)
-	{
-		hspd = 0;
-		vspd = 0;
-		hState = HorizontalState.H_MOVE_NONE;
-		vState = VerticalState.V_MOVE_NONE;
-		aState = ActionState.DYING;
-		activateState = ActivateState.DEACTIVATE;
-		sprite_index = sprStun1;
-		image_index = 0;
-	}
-	else	instance_destroy();
 }
