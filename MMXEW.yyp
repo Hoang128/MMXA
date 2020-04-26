@@ -1255,6 +1255,14 @@
             }
         },
         {
+            "Key": "415c0ee1-8888-46de-bc66-3345109e41c0",
+            "Value": {
+                "id": "50323424-260a-45bb-9c88-c6d56e22bb5f",
+                "resourcePath": "views\\415c0ee1-8888-46de-bc66-3345109e41c0.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "432c1f13-36b5-42de-b4ff-1d3c223f8d7c",
             "Value": {
                 "id": "e8a916eb-e1d4-4fab-b349-9f643e684c34",
@@ -1524,6 +1532,14 @@
                 "id": "4f5ace38-8668-4cf6-9433-ebe63262fb1f",
                 "resourcePath": "views\\5519f10a-0d78-4ab8-9802-c6e39416d7be.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "55506e35-c848-42e4-a432-a5c512bdd3a0",
+            "Value": {
+                "id": "57d45109-3208-438d-a954-6d2efa10b349",
+                "resourcePath": "sounds\\snd_VZShotC3\\snd_VZShotC3.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1916,6 +1932,14 @@
                 "id": "99649509-339a-43a0-9fd7-14f3bc31b5bd",
                 "resourcePath": "fonts\\fnt_UISmall\\fnt_UISmall.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "6e9a99ba-618e-4703-9d22-d2b105c474f3",
+            "Value": {
+                "id": "a51cc2dd-71ef-402d-b764-3fcbb4df2f16",
+                "resourcePath": "sounds\\snd_VZShotC1\\snd_VZShotC1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -3143,6 +3167,14 @@
             }
         },
         {
+            "Key": "b2eff27a-456b-49b7-b12d-9b0cf352f5b1",
+            "Value": {
+                "id": "22364372-37ef-48e4-a069-7908fdc14a88",
+                "resourcePath": "objects\\obj_ShotEffZBusterCharge\\obj_ShotEffZBusterCharge.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b33036c1-15a3-4692-ba48-4daf149c954a",
             "Value": {
                 "id": "59a3e8e5-f9e4-449c-bf11-f333464593b1",
@@ -3171,6 +3203,14 @@
             "Value": {
                 "id": "46356ebe-6576-4fd7-a325-6367423c9c78",
                 "resourcePath": "sounds\\snd_MWeaponColEnemyEff\\snd_MWeaponColEnemyEff.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "b5ad2465-06ed-4a2a-ba29-4a5f221db9b7",
+            "Value": {
+                "id": "2495fa8a-d813-4415-91a3-62a25f411c45",
+                "resourcePath": "sounds\\snd_VZShotC2\\snd_VZShotC2.yy",
                 "resourceType": "GMSound"
             }
         },

@@ -13,30 +13,30 @@ if core.sprite_index==spr_ZShotNorA{
     yPlace=yPlaceJmp;
 }
 
-//if core.sprite_index==core.sZShotC1{
-//	xPlace=xPlaceCharge1*core.charDir;
-//	yPlace=yPlaceCharge1;
-//}
+if core.sprite_index==spr_ZShotC1_G{
+	xPlace=xPlaceCharge1*core.hDir;
+	yPlace=yPlaceCharge1;
+}
 
-//if core.sprite_index==core.sZShotC2{
-//	xPlace=xPlaceCharge2*core.charDir;
-//	yPlace=yPlaceCharge2;
-//}
+if core.sprite_index==spr_ZShotC2_G{
+	xPlace=xPlaceCharge2*core.hDir;
+	yPlace=yPlaceCharge2;
+}
 
-//if core.sprite_index==core.sZShotC1A{
-//	xPlace=xPlaceCharge1A*core.charDir;
-//	yPlace=yPlaceCharge1A;
-//}
+if core.sprite_index==spr_ZShotC1_A{
+	xPlace=xPlaceCharge1A*core.hDir;
+	yPlace=yPlaceCharge1A;
+}
 
-//if core.sprite_index==core.sZShotC2A{
-//	xPlace=xPlaceCharge2A*core.charDir;
-//	yPlace=yPlaceCharge2A;
-//}
+if core.sprite_index==spr_ZShotC2_A{
+	xPlace=xPlaceCharge2A*core.hDir;
+	yPlace=yPlaceCharge2A;
+}
 
-//if core.sprite_index==core.sZBusterBarrage{
-//	xPlace=xPlaceUltimate*core.charDir;
-//	yPlace=yPlaceUltimate;
-//}
+if core.sprite_index==spr_ZShotBarrage{
+	xPlace=xPlaceUltimate*core.hDir;
+	yPlace=yPlaceUltimate;
+}
 
 self.x=core.x+xPlace;
 self.y=core.y+yPlace;

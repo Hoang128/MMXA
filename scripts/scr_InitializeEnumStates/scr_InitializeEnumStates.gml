@@ -80,7 +80,9 @@ enum SaberState
 	SABER_SLIDE_SLASH,
 	SABER_CLIMB_SLASH,
 	SABER_LAND_SLASH,
-	SABER_CHARGE_SLASH
+	SABER_CHARGE_SLASH,
+	SABER_CHARGE_COMBO_G,
+	SABER_CHARGE_COMBO_A
 }
 
 //Initialize Item State*********************************************************************************************************************************************

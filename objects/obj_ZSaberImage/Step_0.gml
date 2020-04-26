@@ -24,6 +24,8 @@ if (setupState)
 				sprite_index = spr_ZSaberSlashCharge_Smash;	
 			}
 		}	break;
+		case SaberState.SABER_CHARGE_COMBO_G:	{ sprite_index = spr_ZSaberSlashShotC3_G;	maxTimmer = 4; }	break;
+		case SaberState.SABER_CHARGE_COMBO_A:	{ sprite_index = spr_ZSaberSlashShotC3_A;	maxTimmer = 4; }	break;
 	}
 	
 	setupState = false;

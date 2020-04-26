@@ -15,7 +15,7 @@ if (instance_exists(core))
 	
 	else
 	{
-		if ((core.chargeCore < core.chargeCoreLv1Limit) && (core.chargeCore > 0)) 
+		if ((core.chargeCore < core.chargeCoreLv1Limit) && (core.chargeCore >= 0)) 
 		instance_destroy();
 	}
 }

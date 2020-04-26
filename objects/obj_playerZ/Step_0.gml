@@ -102,6 +102,8 @@ if (activateState != ActivateState.DEACTIVATE)
 			
 			scr_SetIceSlideSpd(hspd, true);
 			
+			scr_MeeleWeaponChangeState(obj_ZSaberImage, SaberState.SABER_CHARGE_COMBO_G);
+			
 			hspd = 0;
 			hState = AttackState.A_NONE;
 			atkState = AttackState.A_STRICT_ATTACK_LV3;
@@ -187,6 +189,58 @@ if (activateState != ActivateState.DEACTIVATE)
 					shotEff.busterType = busterType;
 					busterType = noone;
 				}
+			}
+		}
+	}
+	
+	if (sprite_index == spr_ZShotC1_G || sprite_index == spr_ZShotC1_A)
+	{
+		if (image_index >= 3 && image_index <= 4)
+		{
+			if (!instance_exists(obj_ShotEffZBusterCharge))
+			{
+				var xPlace;
+				var yPlace;
+				if (sprite_index == spr_ZShotC1_G)
+				{
+					xPlace = 48;
+					yPlace = -19;
+				}
+				if (sprite_index == spr_ZShotC1_A)
+				{
+					xPlace = 35;
+					yPlace = -26;
+				}
+				var shotEff = instance_create_depth(x + xPlace * image_xscale, y + yPlace, depth - 1, obj_ShotEffZBusterCharge);
+				shotEff.image_xscale = image_xscale;
+				shotEff.busterType = busterType;
+				busterType = noone;
+			}
+		}
+	}
+	
+	if (sprite_index == spr_ZShotC2_G || sprite_index == spr_ZShotC2_A)
+	{
+		if (image_index >= 3 && image_index <= 4)
+		{
+			if (!instance_exists(obj_ShotEffZBusterCharge))
+			{
+				var xPlace;
+				var yPlace;
+				if (sprite_index == spr_ZShotC2_G)
+				{
+					xPlace = 48;
+					yPlace = -19;
+				}
+				if (sprite_index == spr_ZShotC2_A)
+				{
+					xPlace = 35;
+					yPlace = -26;
+				}
+				var shotEff = instance_create_depth(x + xPlace * image_xscale, y + yPlace, depth - 1, obj_ShotEffZBusterCharge);
+				shotEff.image_xscale = image_xscale;
+				shotEff.busterType = busterType;
+				busterType = noone;
 			}
 		}
 	}
@@ -568,6 +622,10 @@ if (activateState != ActivateState.DEACTIVATE)
 							{
 								sprite_index = spr_ZShotC3_G;
 								image_index = 0;
+								audio_play_sound_on(global.SFX_Emitter, snd_VZShotC3, 0, 0);
+								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash3, 0, 0);
+								
+								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_CHARGE_COMBO_G, self);
 								
 								hspd = 0;
 								aState = ActionState.IDLE;
@@ -582,12 +640,17 @@ if (activateState != ActivateState.DEACTIVATE)
 							{
 								sprite_index = spr_ZShotC3_A;
 								image_index = 0;
+								audio_play_sound_on(global.SFX_Emitter, snd_VZShotC3, 0, 0);
+								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash3, 0, 0);
+								
+								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_CHARGE_COMBO_A, self);
 								
 								if (aState == ActionState.DASHING)
 									aState = ActionState.IDLE;
 								atkState = AttackState.A_STRICT_ATTACK;
 								vState = VerticalState.V_MOVE_FALLING;
 								chargeCore = 0;
+								chargeCoreLv = 0;
 							}
 						}
 					}	break;
@@ -600,6 +663,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							{
 								sprite_index = spr_ZShotC2_G;
 								image_index = 0;
+								audio_play_sound_on(global.SFX_Emitter, snd_VZShotC2, 0, 0);
+								
 								
 								hspd = 0;
 								aState = ActionState.IDLE;
@@ -608,7 +673,10 @@ if (activateState != ActivateState.DEACTIVATE)
 								if (chargeCoreLv == 3)
 									chargeCore = -3;
 								else
+								{
+									chargeCoreLv = 0;
 									chargeCore = 0;
+								}
 							}
 						}
 						else
@@ -617,6 +685,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							{
 								sprite_index = spr_ZShotC2_A;
 								image_index = 0;
+								audio_play_sound_on(global.SFX_Emitter, snd_VZShotC2, 0, 0);
+								
 						
 								if (aState == ActionState.DASHING)
 									aState = ActionState.IDLE;
@@ -625,7 +695,10 @@ if (activateState != ActivateState.DEACTIVATE)
 								if (chargeCoreLv == 3)
 									chargeCore = -3;
 								else
+								{
+									chargeCoreLv = 0;
 									chargeCore = 0;
+								}
 							}
 						}
 					}	break;
@@ -711,6 +784,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						{
 							sprite_index = spr_ZShotC1_G;
 							image_index = 0;
+							audio_play_sound_on(global.SFX_Emitter, snd_VZShotC1, 0, 0);
 						
 							hspd = 0;
 							aState = ActionState.IDLE;
@@ -724,6 +798,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						{
 							sprite_index = spr_ZShotC1_A;
 							image_index = 0;
+							audio_play_sound_on(global.SFX_Emitter, snd_VZShotC1, 0, 0);
 						
 							atkState = AttackState.A_STRICT_ATTACK;
 							if (aState == ActionState.DASHING)
@@ -734,18 +809,13 @@ if (activateState != ActivateState.DEACTIVATE)
 					if (chargeCoreLv > 1)
 						chargeCore = -2;
 					else
+					{
+						chargeCoreLv = 0;
 						chargeCore = 0;
+					}
 				}
 				else if (chargeCore > 0) 
 					chargeCore = 0;
-			}
-			else
-			{
-				//Test
-				if (instance_exists(obj_ZChargeEffLv1))	instance_destroy(obj_ZChargeEffLv1);
-				if (instance_exists(obj_ZChargeEffLv2))	instance_destroy(obj_ZChargeEffLv2);
-				chargeCore = 0;
-				//Test
 			}
 		}
 		

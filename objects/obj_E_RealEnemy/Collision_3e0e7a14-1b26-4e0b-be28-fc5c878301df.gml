@@ -35,17 +35,22 @@ if (damageTimmer <= 0)
 			var yPlace = (other.bbox_top + other.bbox_bottom) / 2;
 		}
 		
-		randomize();
-		var effAngle = random(60) * 3;
-		
-		var objColEff = instance_create_depth(xPlace, yPlace, other.depth - 1, other.collisionEff);
-		objColEff.image_angle = effAngle;
-		objColEff.image_xscale = other.image_xscale;
-		
 		if (other.object_index == obj_ZSaber)
 		{
+			randomize();
+			var effAngle = random(60) * 3;
+		
+			var objColEff = instance_create_depth(xPlace, yPlace, other.depth - 1, other.collisionEff);
+			objColEff.image_angle = effAngle;
+			objColEff.image_xscale = other.image_xscale;
+			
 			var objZEff = instance_create_depth(xPlace, yPlace, other.depth - 2, obj_ZSaberSlashEff);
 			objZEff.image_angle = effAngle;
+		}
+		else
+		{
+			var objColEff = instance_create_depth(xPlace, yPlace, other.depth - 1, other.collisionEff);
+			objColEff.image_xscale = other.image_xscale;
 		}
 		#endregion
 	}
