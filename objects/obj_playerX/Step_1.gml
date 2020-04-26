@@ -12,3 +12,8 @@ switch(sprite_index)
 image_xscale = hDir;
 
 scr_InitImageSpeedPlayerHFormBase(obj_playerX);
+
+switch(image_index)
+{
+	case spr_XShotStand: image_speed = 0.5; break;
+}

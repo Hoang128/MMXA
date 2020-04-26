@@ -20,15 +20,6 @@ if (hp <= 0)
 	else	instance_destroy();
 }
 
-if ((vState != VerticalState.V_ON_GROUND))
-{
-	//Avoid top floor collision
-	while (place_meeting(x, y-1, obj_block))
-	{
-		y++;
-	}
-}
-
 if (activateState != ActivateState.DEACTIVATE)
 {
 	//Passive**************************************************************************************************
@@ -91,6 +82,15 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	//Vertical
 	#region
+	
+	//Avoid top floor collision
+	if ((vState != VerticalState.V_ON_GROUND))
+	{
+		while (place_meeting(x, y-1, obj_block))
+		{
+			y++;
+		}
+	}
 	
 	//Vertical collision with block
 	if (place_meeting(x, y + vspd, obj_block))

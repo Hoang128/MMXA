@@ -5,3 +5,6 @@
 event_inherited();
 
 imgSpd = 1;
+
+formCharge = false;
+chargeLevel = 3;
