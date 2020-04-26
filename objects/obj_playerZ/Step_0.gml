@@ -618,7 +618,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					{
 						if (vState == VerticalState.V_ON_GROUND)
 						{
-							if (sprite_index != spr_ZShotC2_G)
+							if ((sprite_index != spr_ZShotC2_G) || (sprite_index == spr_ZShotC2_G && image_index > 7))
 							{
 								sprite_index = spr_ZShotC3_G;
 								image_index = 0;
@@ -636,7 +636,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						}
 						else
 						{
-							if (sprite_index != spr_ZShotC2_A)
+							if ((sprite_index != spr_ZShotC2_A) || (sprite_index == spr_ZShotC2_A && image_index > 7))
 							{
 								sprite_index = spr_ZShotC3_A;
 								image_index = 0;
@@ -659,7 +659,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					{
 						if (vState == VerticalState.V_ON_GROUND)
 						{
-							if (sprite_index != spr_ZShotC1_G)
+							if ((sprite_index != spr_ZShotC1_G) || (sprite_index == spr_ZShotC1_G && image_index > 7))
 							{
 								sprite_index = spr_ZShotC2_G;
 								image_index = 0;
@@ -681,7 +681,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						}
 						else
 						{
-							if (sprite_index != spr_ZShotC1_A)
+							if ((sprite_index != spr_ZShotC1_A) || (sprite_index == spr_ZShotC1_G && image_index > 7))
 							{
 								sprite_index = spr_ZShotC2_A;
 								image_index = 0;

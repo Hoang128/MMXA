@@ -1,4 +1,6 @@
 /// @description Handle
+event_inherited();
+
 if ((image_index > frameShot - 1) && (image_index < frameShot))
 {
 	if (!bulletCreate)
