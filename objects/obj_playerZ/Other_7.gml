@@ -160,3 +160,24 @@ if (sprite_index == spr_ZSlashCharge_G)
 	sprite_index = spr_ZSlashEnd_G;
 	image_index = 0;
 }
+
+if (sprite_index == spr_ZShotC1_A || sprite_index == spr_ZShotC2_A || sprite_index == spr_ZShotC3_A)
+{
+	if (atkState != AttackState.A_NONE)
+		atkState = AttackState.A_NONE;
+	scr_MeeleWeaponDestroy(obj_ZSaberImage);
+	
+	if (vspd < 0)
+		sprite_index = sprJump2;
+	else
+		sprite_index = sprJump4;
+}
+
+if (sprite_index == spr_ZShotC1_G || sprite_index == spr_ZShotC2_G || sprite_index == spr_ZShotC3_G)
+{
+	if (atkState != AttackState.A_NONE)
+		atkState = AttackState.A_NONE;
+	scr_MeeleWeaponDestroy(obj_ZSaberImage);
+	
+	sprite_index = sprStand;
+}

@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "0031b41c-a41f-4306-9f6a-72bc8dfd1de6",
+            "Value": {
+                "id": "513cabfe-5c77-4d97-81df-9fa7aa9ca06e",
+                "resourcePath": "objects\\obj_ZBuster\\obj_ZBuster.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "01076af6-3544-4bb4-ad08-ebfff42974e3",
             "Value": {
                 "id": "8f9704e6-45e3-4fe6-be1a-5b6fb8b45447",
@@ -1108,6 +1116,14 @@
                 "id": "60bd0de9-2f8e-4528-b853-18b233fc8278",
                 "resourcePath": "sprites\\spr_ZSaberCombo1\\spr_ZSaberCombo1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3b00a31a-a8ca-4a38-8fbb-8328d50f714c",
+            "Value": {
+                "id": "6d248248-66de-4c14-a705-2ca4a739f1f5",
+                "resourcePath": "objects\\obj_ZBusterChargeEnd\\obj_ZBusterChargeEnd.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2727,6 +2743,14 @@
             }
         },
         {
+            "Key": "97f3467a-4fed-4313-b7cc-dd8ad242e38a",
+            "Value": {
+                "id": "c063fd11-c986-4e00-9943-45df14c0f554",
+                "resourcePath": "objects\\obj_ZBusterCharge\\obj_ZBusterCharge.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9910cf67-7ce5-4315-87ba-e5f8e3b868be",
             "Value": {
                 "id": "f4988df5-9d21-4161-81cb-03cfab58d3d6",
@@ -3235,6 +3259,14 @@
             "Value": {
                 "id": "5aad8393-c8db-4501-b7a7-7798c1d631eb",
                 "resourcePath": "objects\\obj_spinnerContext\\obj_spinnerContext.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b9e79ebb-ee17-403e-ad95-26bb967f8698",
+            "Value": {
+                "id": "b98cb00d-f25e-4cca-a869-2d0d90a55111",
+                "resourcePath": "objects\\obj_ZBusterColEffLv2\\obj_ZBusterColEffLv2.yy",
                 "resourceType": "GMObject"
             }
         },

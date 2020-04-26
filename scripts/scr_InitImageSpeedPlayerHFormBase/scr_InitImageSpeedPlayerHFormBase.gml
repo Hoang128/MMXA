@@ -77,7 +77,13 @@ switch argument0
 			case spr_ZSlashLand:	image_speed = 1; break;
 			
 			case spr_ZShotNorA:
-			case spr_ZShotNorG:		image_speed = 0.4; break;
+			case spr_ZShotNorG:		image_speed = 0.5; break;
+			case spr_ZShotC1_A:
+			case spr_ZShotC1_G:
+			case spr_ZShotC2_A:
+			case spr_ZShotC2_G:
+			case spr_ZShotC3_A:
+			case spr_ZShotC3_G:		image_speed = 0.4; break;
 			
 			default:				image_speed = 0.5; break;
 		}

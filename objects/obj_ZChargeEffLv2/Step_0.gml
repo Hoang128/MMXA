@@ -6,15 +6,15 @@
 event_inherited();
 if (instance_exists(core))
 {
-	if (formCharge == 0)
+	if (coreCharge == 0)
 	{
-		if (core.chargeNormal < core.chargeFormLv2Limit) 
+		if (core.chargeNormal < core.chargeLv2Limit) 
 		instance_destroy();
 	}
 	
 	else
 	{
-		if (core.chargeForm < core.chargeFormLv2Limit) 
+		if ((core.chargeCore < core.chargeCoreLv2Limit) && (core.chargeCore > 0)) 
 		instance_destroy();
 	}
 }

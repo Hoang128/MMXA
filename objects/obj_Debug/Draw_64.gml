@@ -123,6 +123,7 @@ else{
 			scr_LOG_INFO("Char Attack State = " + str_atkState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char In Water State = " + str_inWaterState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Health Point = " + string(obj_playerHumanForm.hp), debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char Charge Core = " + string(obj_playerZ.chargeCore), debugTextColorF, debugTextColorB);
 			if (instance_exists(obj_iceController))
 			{
 				scr_LOG_INFO("Ice Slide Speed = " + string(obj_iceController.iceSlideSpd), debugTextColorF, debugTextColorB);

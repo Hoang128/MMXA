@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_PlayerWeaponBuster",
     "eventList": [
-        
+        {
+            "id": "7b073c80-b685-4037-9c33-011e0a46e068",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "bee899b2-7d7e-428c-afc3-00443ceec252"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

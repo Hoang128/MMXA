@@ -1,6 +1,6 @@
 /// @description Draw
 
-if (formCharge != 0)
+if (coreCharge != 0)
 {
 	if (chargeLevel < 3)
 		scr_PalSwapSet(spr_PalZChargeEff, 1, false);
@@ -10,5 +10,5 @@ if (formCharge != 0)
 	
 draw_self();
 
-if (formCharge != 0)
+if (coreCharge != 0)
 	scr_PalSwapReset();

@@ -10,4 +10,3 @@ moveSpd = 6;
 maxTimmer = 2;
 createEff = false;
 image_speed = 0.5;
-type = WeaponType.BUSTER;

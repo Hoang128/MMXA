@@ -6,7 +6,7 @@ event_inherited();
 
 image_speed = 1;
 
-formCharge = 0;
+coreCharge = 0;
 chargeLevel = 1;
 
 scr_PalSwapInitSystem(shd_pal_swapper);
