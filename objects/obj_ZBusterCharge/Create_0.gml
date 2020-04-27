@@ -7,6 +7,10 @@ collisionSFX = snd_RWeaponColEnemyEff;
 collisionEff = obj_ZBusterColEffLv2;
 flyTime = 20;
 moveSpd = 8;
-maxTimmer = 2;
+maxTimmer = 4;
 createEff = false;
-image_speed = 0.5;
+imgSpd = 0.5;
+effWidthNumber = 4;
+effWidthRange = (bbox_bottom - bbox_top) / (effWidthNumber - 1);
+
+timmer = maxTimmer;

@@ -6,4 +6,5 @@ event_inherited();
 
 collisionEff = obj_flareSlash;
 
+glow = 0;
 core = noone;

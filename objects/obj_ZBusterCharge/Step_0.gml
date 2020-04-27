@@ -17,6 +17,19 @@ if (flyTime > 0)
 		instance_destroy();
 	}
 	flyTime -= DELTA_TIME;
+	
+	if (timmer > 0) timmer -= DELTA_TIME;
+	else
+	{
+		randomize();
+		var xPlace = self.x;
+		var yPlace = self.bbox_top + floor(random(effWidthNumber)) * effWidthRange;
+		var obj = instance_create_depth(xPlace, yPlace, depth, obj_ZBusterChargeEff);
+		obj.image_xscale = image_xscale;
+		obj.hspd = hspd / 2;
+		
+		timmer = maxTimmer;
+	}
 }
 else
 {

@@ -9,4 +9,4 @@ flyTime = 20;
 moveSpd = 8;
 maxTimmer = 2;
 createEff = false;
-image_speed = 0.5;
+imgSpd = 0.5;

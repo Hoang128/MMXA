@@ -34,7 +34,7 @@
             "Key": "0031b41c-a41f-4306-9f6a-72bc8dfd1de6",
             "Value": {
                 "id": "513cabfe-5c77-4d97-81df-9fa7aa9ca06e",
-                "resourcePath": "objects\\obj_ZBuster\\obj_ZBuster.yy",
+                "resourcePath": "objects\\obj_ZBusterChargeEff\\obj_ZBusterChargeEff.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -419,14 +419,6 @@
             "Value": {
                 "id": "286128f5-3c5d-4d6e-b9f6-d6dccd7dfb98",
                 "resourcePath": "sprites\\spr_slopeL2Ice\\spr_slopeL2Ice.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "0f84753d-a1d6-4830-8dc6-9f327bb44bb1",
-            "Value": {
-                "id": "2d5a0410-f6d3-4746-ba6d-699030947df3",
-                "resourcePath": "sprites\\spr_glowCircleEff\\spr_glowCircleEff.yy",
                 "resourceType": "GMSprite"
             }
         },

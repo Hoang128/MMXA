@@ -1,6 +1,7 @@
 /// @description Init
 event_inherited();
 
+glow = 1;
 damage = 0;
 collisionSFX = noone;
 collisionEff = noone;
@@ -9,3 +10,4 @@ isGuardBreaker = false;
 element = Element.NEUTRAL;
 type = WeaponType.OTHER;
 slowTime = false;
+imgSpd = 0.5;
