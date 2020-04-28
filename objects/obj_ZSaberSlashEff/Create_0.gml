@@ -2,6 +2,7 @@
 
 event_inherited();
 
+glow = 0;
 fadeSpd = .05;
 //xScaleSpd = .5;
 xScaleMax = RESOLUTION_WIDTH/30;
