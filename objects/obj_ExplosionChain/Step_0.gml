@@ -1,0 +1,15 @@
+/// @description
+if (chainNumber <= chainMax)
+{
+	if (chainTime < chainTimeMax)
+	{
+		chainTime += DELTA_TIME;
+	}
+	else
+	{
+		instance_create_depth(x - rangeMax + random(rangeMax * 2), y - rangeMax + random(rangeMax * 2), depth, obj_Explosion);
+		chainTime = 0;
+		chainNumber++;
+	}
+}
+else	instance_destroy();

@@ -487,6 +487,14 @@
             }
         },
         {
+            "Key": "14847a30-3b7f-4615-87b1-37506287d2bd",
+            "Value": {
+                "id": "c5e749ed-5761-4b64-a734-190cf5c276eb",
+                "resourcePath": "views\\14847a30-3b7f-4615-87b1-37506287d2bd.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "14eebf66-1d34-41b1-a231-7c39de7142bf",
             "Value": {
                 "id": "3c70770c-89b4-451a-8a04-40fa24152daa",
@@ -1511,6 +1519,14 @@
             }
         },
         {
+            "Key": "4f6b9545-94d0-4d4c-bf37-4397d58cd8f7",
+            "Value": {
+                "id": "97f01091-1739-4f12-bd8e-b29e5c93c374",
+                "resourcePath": "objects\\obj_ExplosionChain\\obj_ExplosionChain.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "50316aaa-8f5a-452d-a834-c237ae158a74",
             "Value": {
                 "id": "67d2e008-60a8-4d00-9742-50cb53854301",
@@ -2463,6 +2479,14 @@
             }
         },
         {
+            "Key": "83f3a723-a588-4cec-956e-b81244055179",
+            "Value": {
+                "id": "5f308a3a-5d3b-4dd3-9e53-971e5c7e069a",
+                "resourcePath": "objects\\obj_LiveUp\\obj_LiveUp.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "84c007b1-031f-48c8-a952-2b691c2c3c3d",
             "Value": {
                 "id": "984f838f-0b58-4333-9c7a-68669759829b",
@@ -2884,6 +2908,14 @@
                 "id": "1ed9474b-85c2-4170-a605-119c911e0137",
                 "resourcePath": "objects\\obj_vDust\\obj_vDust.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9a522c54-3c1b-4fcf-b225-f7bc76e9a835",
+            "Value": {
+                "id": "6f5db726-c14f-4c3c-8cf5-a34c928fbf38",
+                "resourcePath": "scripts\\scr_dropItem\\scr_dropItem.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4688,7 +4720,8 @@
         "96b45332-4b85-4e28-a5ed-d32f1ccafbe3",
         "b3458fc3-31c5-46f1-810d-de175ad4be09",
         "665ecb10-3b9e-4a05-81ef-3aca1c665565",
-        "b4cb5fdf-c277-47d8-a686-ad6fa4b6d703"
+        "b4cb5fdf-c277-47d8-a686-ad6fa4b6d703",
+        "9a522c54-3c1b-4fcf-b225-f7bc76e9a835"
     ],
     "tutorial": ""
 }

@@ -8,3 +8,5 @@ hp = 5;
 
 damage = 1;
 damageRed = 1;
+
+destroy_EChain = 3;
