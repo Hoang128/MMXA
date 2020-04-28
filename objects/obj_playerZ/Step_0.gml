@@ -627,9 +627,10 @@ if (activateState != ActivateState.DEACTIVATE)
 								
 								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_CHARGE_COMBO_G, self);
 								
+								scr_SetIceSlideSpd(hspd, true);
+								
 								hspd = 0;
 								aState = ActionState.IDLE;
-								hState = HorizontalState.H_MOVE_NONE;
 								atkState = AttackState.A_STRICT_ATTACK_LV3;
 								chargeCore = 0;
 							}
@@ -665,10 +666,10 @@ if (activateState != ActivateState.DEACTIVATE)
 								image_index = 0;
 								audio_play_sound_on(global.SFX_Emitter, snd_VZShotC2, 0, 0);
 								
+								scr_SetIceSlideSpd(hspd, true);
 								
 								hspd = 0;
 								aState = ActionState.IDLE;
-								hState = HorizontalState.H_MOVE_NONE;
 								atkState = AttackState.A_STRICT_ATTACK_LV3;
 								if (chargeCoreLv == 3)
 									chargeCore = -3;
@@ -785,11 +786,12 @@ if (activateState != ActivateState.DEACTIVATE)
 							sprite_index = spr_ZShotC1_G;
 							image_index = 0;
 							audio_play_sound_on(global.SFX_Emitter, snd_VZShotC1, 0, 0);
-						
+							
+							scr_SetIceSlideSpd(hspd, true);
+							
 							hspd = 0;
 							aState = ActionState.IDLE;
 							atkState = AttackState.A_STRICT_ATTACK_LV3;
-							hState = HorizontalState.H_MOVE_NONE;
 						}
 					}
 					else

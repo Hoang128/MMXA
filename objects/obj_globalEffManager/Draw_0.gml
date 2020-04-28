@@ -6,17 +6,7 @@ with(obj_player)
 {
 	if (glow == 1)
 	{
-		gpu_set_blendmode(bm_src_color);
-		var rFirst = min(bbox_right - bbox_left, bbox_bottom - bbox_top);
-		draw_set_color(c_white);
-		draw_set_alpha(other.glowRatio1);
-		draw_circle((bbox_left + bbox_right) / 2 - camera_get_view_x(view_camera), (bbox_top + bbox_bottom) / 2 - camera_get_view_y(view_camera),  rFirst * (1 + other.glowRadiusBonusRatio * 1), false);
-		draw_set_alpha(other.glowRatio2);
-		draw_circle((bbox_left + bbox_right) / 2 - camera_get_view_x(view_camera), (bbox_top + bbox_bottom) / 2 - camera_get_view_y(view_camera),  rFirst * (1 + other.glowRadiusBonusRatio * 2), false);
-		draw_set_alpha(other.glowRatio3);
-		draw_circle((bbox_left + bbox_right) / 2 - camera_get_view_x(view_camera), (bbox_top + bbox_bottom) / 2 - camera_get_view_y(view_camera),  rFirst * (1 + other.glowRadiusBonusRatio * 3), false);
-		draw_set_alpha(1);
-		gpu_set_blendmode(bm_normal);
+		scr_drawGlowEff();
 	}
 }
 
@@ -24,17 +14,7 @@ with (obj_PlayerWeapon)
 {
 	if (glow == 1)
 	{
-		gpu_set_blendmode(bm_src_color);
-		var rFirst = min(bbox_right - bbox_left, bbox_bottom - bbox_top);
-		draw_set_color(c_white);
-		draw_set_alpha(other.glowRatio1);
-		draw_circle((bbox_left + bbox_right) / 2 - camera_get_view_x(view_camera), (bbox_top + bbox_bottom) / 2 - camera_get_view_y(view_camera),  rFirst * (1 + other.glowRadiusBonusRatio * 1), false);
-		draw_set_alpha(other.glowRatio2);
-		draw_circle((bbox_left + bbox_right) / 2 - camera_get_view_x(view_camera), (bbox_top + bbox_bottom) / 2 - camera_get_view_y(view_camera),  rFirst * (1 + other.glowRadiusBonusRatio * 2), false);
-		draw_set_alpha(other.glowRatio3);
-		draw_circle((bbox_left + bbox_right) / 2 - camera_get_view_x(view_camera), (bbox_top + bbox_bottom) / 2 - camera_get_view_y(view_camera),  rFirst * (1 + other.glowRadiusBonusRatio * 3), false);
-		draw_set_alpha(1);
-		gpu_set_blendmode(bm_normal);
+		scr_drawGlowEff();
 	}
 }
 
@@ -42,20 +22,7 @@ with (obj_effect)
 {
 	if (glow == 1)
 	{
-		gpu_set_blendmode(bm_src_color);
-		if (fixedGlowRadius == 0)
-			var rFirst = min(bbox_right - bbox_left, bbox_bottom - bbox_top);
-		else
-			var rFirst = fixedGlowRadius;
-		draw_set_color(c_white);
-		draw_set_alpha(other.glowRatio1);
-		draw_circle((bbox_left + bbox_right) / 2 - camera_get_view_x(view_camera), (bbox_top + bbox_bottom) / 2 - camera_get_view_y(view_camera),  rFirst * (1 + other.glowRadiusBonusRatio * 1), false);
-		draw_set_alpha(other.glowRatio2);
-		draw_circle((bbox_left + bbox_right) / 2 - camera_get_view_x(view_camera), (bbox_top + bbox_bottom) / 2 - camera_get_view_y(view_camera),  rFirst * (1 + other.glowRadiusBonusRatio * 2), false);
-		draw_set_alpha(other.glowRatio3);
-		draw_circle((bbox_left + bbox_right) / 2 - camera_get_view_x(view_camera), (bbox_top + bbox_bottom) / 2 - camera_get_view_y(view_camera),  rFirst * (1 + other.glowRadiusBonusRatio * 3), false);
-		draw_set_alpha(1);
-		gpu_set_blendmode(bm_normal);
+		scr_drawGlowEff();
 	}
 }
 

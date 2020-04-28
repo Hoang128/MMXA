@@ -4,6 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
+glow = 1;
 imgSpd = 0.5;
 direction = 0;
 moveSpd = 0;

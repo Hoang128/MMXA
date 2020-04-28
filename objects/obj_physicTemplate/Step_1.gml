@@ -1,3 +1,3 @@
 /// @description Image speed
 
-image_speed *= myDeltaTime*global.deltaTime;
+image_speed = imgSpd * DELTA_TIME;

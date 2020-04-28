@@ -9,4 +9,6 @@ gravWater = 0.15; //Gravity Accleration in water
 maxGravWater = 3; //Max fall speed in water
 inWater = 0;
 
+imgSpd = 0;
+
 myDeltaTime = 1;
