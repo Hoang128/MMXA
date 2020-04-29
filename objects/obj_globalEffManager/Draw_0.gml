@@ -6,7 +6,7 @@ with(obj_player)
 {
 	if (glow == 1)
 	{
-		scr_drawGlowEff();
+		scr_drawGlowEff(other.dark);
 	}
 }
 
@@ -14,7 +14,7 @@ with (obj_PlayerWeapon)
 {
 	if (glow == 1)
 	{
-		scr_drawGlowEff();
+		scr_drawGlowEff(other.dark);
 	}
 }
 
@@ -22,7 +22,7 @@ with (obj_effect)
 {
 	if (glow == 1)
 	{
-		scr_drawGlowEff();
+		scr_drawGlowEff(other.dark);
 	}
 }
 

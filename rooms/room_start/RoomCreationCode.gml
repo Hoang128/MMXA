@@ -10,12 +10,12 @@ global.isStage = false;
 
 //Default parameter***************************************************************************************
 //Default HP & MP
-global.hp[0] = 16;
-global.hp[1] = 16;
-global.hp[2] = 16;
-global.wp[0] = 16;
-global.wp[1] = 16;
-global.wp[2] = 16;
+global.hpMax[0] = 16;
+global.hpMax[1] = 16;
+global.hpMax[2] = 16;
+global.wpMax[0] = 16;
+global.wpMax[1] = 16;
+global.wpMax[2] = 16;
 
 //Default Elves
 for(i = 0; i < 16; i++)

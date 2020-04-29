@@ -5,3 +5,8 @@
 event_inherited();
 
 mask_index = spr_WCapsuleLv1;
+image_speed = 0;
+image_index = 0;
+imgSpd = 0;
+
+wp = 4;

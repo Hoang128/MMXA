@@ -1,11 +1,11 @@
 gpu_set_blendmode(bm_src_color);
 var rFirst = min((bbox_right - bbox_left) / 2 * 1.8, (bbox_bottom - bbox_top) / 2 * 1.8);
 draw_set_color(c_white);
-draw_set_alpha(other.glowRatio1);
+draw_set_alpha(other.glowRatio1 * argument0);
 draw_circle((bbox_left + bbox_right) / 2 - camera_get_view_x(view_camera), (bbox_top + bbox_bottom) / 2 - camera_get_view_y(view_camera),  rFirst + other.glowRadiusBonus * 1, false);
-draw_set_alpha(other.glowRatio2);
+draw_set_alpha(other.glowRatio2 * argument0);
 draw_circle((bbox_left + bbox_right) / 2 - camera_get_view_x(view_camera), (bbox_top + bbox_bottom) / 2 - camera_get_view_y(view_camera),  rFirst + other.glowRadiusBonus * 2, false);
-draw_set_alpha(other.glowRatio3);
+draw_set_alpha(other.glowRatio3 * argument0);
 draw_circle((bbox_left + bbox_right) / 2 - camera_get_view_x(view_camera), (bbox_top + bbox_bottom) / 2 - camera_get_view_y(view_camera),  rFirst + other.glowRadiusBonus * 3, false);
 draw_set_alpha(1);
 gpu_set_blendmode(bm_normal);
