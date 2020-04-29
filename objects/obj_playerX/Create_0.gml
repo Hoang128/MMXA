@@ -6,9 +6,11 @@ event_inherited();
 //Initialize Parameters
 hp = global.hpMax[0];
 wp = global.wpMax[0];
-atkSpriteTimeMax = 60;
+atkSpriteTimeMax = 30;
 xPlaceDashEff = -25;
 yPlaceDashEff = -4;
+chargeLv1Limit = 30; //Time hold attack button to show lv1 charge effect
+chargeLv2Limit = 100; //Time hold attack button to show lv2 charge effect
 
 //Initialize sprite
 scr_InitSpritePlayerHFormBase(obj_playerX);

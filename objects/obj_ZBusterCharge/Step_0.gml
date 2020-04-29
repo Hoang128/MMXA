@@ -12,7 +12,7 @@ if (flyTime > 0)
 	if place_meeting(x, y, obj_block) 
 	{
 		var xPlace = x + image_xscale * (bbox_right - bbox_left) / 2;
-		var colWallObj = instance_create_depth(xPlace , y, depth - 1, obj_ZBusterColEffLv2);
+		var colWallObj = instance_create_depth(xPlace , y, depth - 1, collisionEff);
 		colWallObj.image_xscale = image_xscale;
 		instance_destroy();
 	}

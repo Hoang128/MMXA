@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_XChargeEffLv2",
     "eventList": [
-        
+        {
+            "id": "feb2d2bf-5781-48bc-8917-0519bec7a1ca",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "0b0c8627-b1eb-4a41-a339-6e6105e3d28e"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

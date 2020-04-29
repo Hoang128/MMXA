@@ -32,7 +32,6 @@ switch argument0
 			
 			default:				image_speed = 0.5; break;
 		}
-		image_speed *= global.deltaTime;
 		#endregion
 	}
 	break;
@@ -87,7 +86,6 @@ switch argument0
 			
 			default:				image_speed = 0.5; break;
 		}
-		image_speed *= global.deltaTime;
 		#endregion
 	}
 	break;

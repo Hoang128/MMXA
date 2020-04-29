@@ -13,3 +13,5 @@ switch(sprite_index)
 image_xscale = hDir;
 
 scr_InitImageSpeedPlayerHFormBase(obj_playerZ);
+
+image_speed *= global.deltaTime;

@@ -13,7 +13,11 @@ image_xscale = hDir;
 
 scr_InitImageSpeedPlayerHFormBase(obj_playerX);
 
-switch(image_index)
+switch(sprite_index)
 {
-	case spr_XShotStand: image_speed = 0.5; break;
+	case spr_XShotStand:	image_speed = 0.5; break;
+	case spr_XCShotStand:
+	case spr_XCShotDuck:	image_speed = 0.8; break;
 }
+
+image_speed *= DELTA_TIME;

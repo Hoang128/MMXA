@@ -1,5 +1,6 @@
 var obj = argument0;
 var attackMode = argument1;
+var charge = argument2;
 switch (obj)
 {
 	case obj_playerX:
@@ -8,9 +9,31 @@ switch (obj)
 		{
 			switch (sprite_index)
 			{
-				case sprStand:		{
-					sprite_index = spr_XShotStand;
-					image_index = 0;
+				case sprStand:		
+				{
+					if (charge == false)
+					{
+						sprite_index = spr_XShotStand;
+						image_index = 0;
+					}
+					else
+					{
+						sprite_index = spr_XCShotStand;
+						image_index = 0;
+					}
+				}	break;
+				case sprDuck2:		
+				{
+					if (charge == false)
+					{
+						sprite_index = spr_XShotDuck;
+						image_index = 0;
+					}
+					else
+					{
+						sprite_index = spr_XCShotDuck;
+						image_index = 0;
+					}
 				}	break;
 				case sprRunStart:	sprite_index = spr_XShotRunStart;	break;
 				case sprRun:		sprite_index = spr_XShotRun;		break;
@@ -22,14 +45,24 @@ switch (obj)
 				case sprDash1:		sprite_index = spr_XShotDash1;		break;
 				case sprDash2:		sprite_index = spr_XShotDash2;		break;
 				case sprDash3:		sprite_index = spr_XShotDash3;		break;
-				case sprDuck2:		sprite_index = spr_XShotDuck;		break;
 				case sprWallKick:	sprite_index = spr_XShotWallKick;	break;
 				case sprLand:		sprite_index = spr_XShotLand;		break;
 				case sprClimb2:		sprite_index = spr_XShotClimb;		break;
 				case sprSlide1:		sprite_index = spr_XShotSlide1;		break;
 				case sprSlide2:		sprite_index = spr_XShotSlide2;		break;
+				case sprDashKick1:
+				case sprDashKick2:	sprite_index = spr_XShotJump2;		break;
 			}
-			sprStand = spr_XShotStand;
+			if (!charge)
+			{
+				sprStand = spr_XShotStand;
+				sprDuck2 = spr_XShotDuck;
+			}
+			else
+			{
+				sprStand = spr_XCShotStand;
+				sprDuck2 = spr_XCShotDuck;
+			}
 			sprRunStart = spr_XShotRunStart;
 			sprRun = spr_XShotRun;
 			sprRunEnd = spr_XShotRunEnd;
@@ -40,12 +73,13 @@ switch (obj)
 			sprDash1 = spr_XShotDash1;
 			sprDash2 = spr_XShotDash2;
 			sprDash3 = spr_XShotDash3;
-			sprDuck2 = spr_XShotDuck;
 			sprWallKick = spr_XShotWallKick;
 			sprLand = spr_XShotLand;
 			sprClimb2 = spr_XShotClimb;
 			sprSlide1 = spr_XShotSlide1;
 			sprSlide2 = spr_XShotSlide2;
+			sprDashKick1 = spr_XShotJump2;
+			sprDashKick2 = spr_XShotJump2;
 		}
 		
 		if (attackMode == false)
@@ -69,6 +103,8 @@ switch (obj)
 				case sprClimb2:		sprite_index = spr_XClimb;		break;
 				case sprSlide1:		sprite_index = spr_XSlide1;		break;
 				case sprSlide2:		sprite_index = spr_XSlide2;		break;
+				case sprDashKick1:	sprite_index = spr_XDashKick1;	break;
+				case sprDashKick2:	sprite_index = spr_XDashKick2;	break;
 			}
 			sprStand = spr_XStand;
 			sprRunStart = spr_XRunStart;
@@ -87,6 +123,8 @@ switch (obj)
 			sprClimb2 = spr_XClimb;
 			sprSlide1 = spr_XSlide1;
 			sprSlide2 = spr_XSlide2;
+			sprDashKick1 = spr_XDashKick1;
+			sprDashKick2 = spr_XDashKick2;
 		}
 	}	break;
 }

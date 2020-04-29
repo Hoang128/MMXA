@@ -243,8 +243,11 @@ if (activateState != ActivateState.DEACTIVATE)
 	{
 		if (dashKickFlyTime <= 0)
 		{
-			sprite_index = sprJump2;
-			image_index = 0;
+			if (atkState == AttackState.A_NONE)
+			{
+				sprite_index = sprJump2;
+				image_index = 0;
+			}
 			
 			hState = HorizontalState.H_MOVE_NONE;
 			vState = VerticalState.V_MOVE_FALLING;
@@ -300,8 +303,11 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			if ((wallKickTime <= 0) || place_meeting(x, y - 1, obj_block))
 			{
-				sprite_index = sprJump2;
-				image_index = 0;
+				if (atkState == AttackState.A_NONE)
+				{
+					sprite_index = sprJump2;
+					image_index = 0;
+				}
 
 				hspd = 0;
 				canSlide = 1;
@@ -954,7 +960,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if (vspd < 0)
 					{
-						if (atkState == AttackState.A_NONE)
+						if (atkState < AttackState.A_STRICT_ATTACK)
 						{
 							sprite_index = sprJump3;
 							image_index = 0;
