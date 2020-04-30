@@ -6,7 +6,7 @@ event_inherited();
 //Initialize Parameters
 hp = global.hpMax[0];
 wp = global.wpMax[0];
-atkSpriteTimeMax = 30;
+atkSpriteTimeMax = 20;
 xPlaceDashEff = -25;
 yPlaceDashEff = -4;
 chargeLv1Limit = 30; //Time hold attack button to show lv1 charge effect

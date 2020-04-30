@@ -2,5 +2,5 @@
 
 event_inherited();
 
-glow = 0;
+glow = 1;
 core = noone;
