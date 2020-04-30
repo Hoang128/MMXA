@@ -944,7 +944,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			if (aState == ActionState.WALLKICK)
 				aState = ActionState.IDLE;
-			if (atkState == AttackState.A_NONE)
+			if (atkState < AttackState.A_STRICT_ATTACK)
 			{
 				sprite_index = sprJump3;
 				image_index = 0;

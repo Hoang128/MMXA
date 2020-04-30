@@ -4,6 +4,25 @@
 //Inherit the parent event
 event_inherited();
 
+//Passive all
+if (resetBusterOnRowMax > 0)
+	resetBusterOnRowMax -= DELTA_TIME;
+else
+{
+	if (busterOnRow < busterOnRowMax && busterOnRow > 0)
+	{
+		busterOnRow = 0;
+	}
+}
+if (waitShot > 0)
+	waitShot -= DELTA_TIME;
+else
+{
+	waitShot = 0;
+	if (busterOnRow == busterOnRowMax)
+		busterOnRow = 0;
+}
+
 if (activateState != ActivateState.DEACTIVATE)
 {
 	//Passive******************************************************************************************************
@@ -23,12 +42,25 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			if (atkState < AttackState.A_STRICT_ATTACK)
 			{
-				scr_playerXChangeShotSprite(object_index, true, false);
+				if (busterOnRow < busterOnRowMax)
+				{
+					if (waitShot == 0)
+					{
+						scr_playerXChangeShotSprite(object_index, true, false);
 				
-				var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffXBuster);
-				obj.core = self;
-				atkSpriteTime = atkSpriteTimeMax;
-				atkState = AttackState.A_NORMAL_ATTACK;
+						var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffXBuster);
+						obj.core = self;
+						atkSpriteTime = atkSpriteTimeMax;
+						atkState = AttackState.A_NORMAL_ATTACK;
+						
+						busterOnRow++;
+						resetBusterOnRowMax = waitShotLong;
+						if (busterOnRow == busterOnRowMax)
+							waitShot = waitShotLong;
+						else
+							waitShot = waitShotNormal;
+					}
+				}
 			}
 		}
 		
