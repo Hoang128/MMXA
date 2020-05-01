@@ -1,8 +1,8 @@
 //View
-#macro RESOLUTION_WIDTH "426"
-#macro RESOLUTION_HEIGH "240"
-#macro VIEW_WIDTH "1280"
-#macro VIEW_HEIGHT "720"
+#macro RESOLUTION_WIDTH 426
+#macro RESOLUTION_HEIGH 240
+#macro VIEW_WIDTH 1280
+#macro VIEW_HEIGHT 720
 #macro X_VIEW camera_get_view_x(view_camera)
 #macro Y_VIEW camera_get_view_y(view_camera)
 #macro X_ACTIVE_BOX camera_get_view_x(view_camera) - camera_get_view_width(view_camera)

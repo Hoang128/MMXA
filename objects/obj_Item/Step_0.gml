@@ -23,12 +23,8 @@ if (place_meeting(x + hspd, y, obj_block))
 	{
 		x += sign(hspd);
 	}
-	if (!place_meeting(x + hspd, y - maxDisDetectSlopeAbove, obj_block))
-	{
-		while (place_meeting(x + hspd, y, obj_block)) y--;
-	}
-	else
-		hspd = 0;
+		
+	hspd = 0;
 }
 	
 x += hspd * DELTA_TIME;
@@ -44,6 +40,7 @@ if (place_meeting(x, y + vspd, obj_block))
 	{
 		y += sign(vspd);
 	}
+	
 	vspd = 0;
 }
 	

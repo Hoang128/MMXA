@@ -9,5 +9,8 @@ neutralArmor = 0;
 fireArmor = 0;
 iceArmor = 0;
 electArmor = 0;
+distanceToParentLimit = W_ACTIVE_BOX;
+physicAffected = false;
 
 createExplosion = true;
+maxDisDetectSlopeAbove = 4; //Distance to detect slope on the ground
