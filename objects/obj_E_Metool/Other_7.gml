@@ -10,3 +10,20 @@ if (sprite_index == spr_metoolTrans)
 		state = 2;
 	}
 }
+
+if (sprite_index == spr_metoolDown)
+{
+	sprite_index = spr_metoolGuard;
+	image_index = 0;
+	guard = 1;
+	state = 4;
+}
+
+if (sprite_index == spr_metoolUp)
+{
+	sprite_index = spr_metoolRun;
+	image_index = 0;
+	hspd = moveSpd * image_xscale;
+	timeToNextGuard = 0;
+	state = 2;
+}

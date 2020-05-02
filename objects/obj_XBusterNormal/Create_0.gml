@@ -9,3 +9,4 @@ moveSpd = 8;
 maxTimmer = 2;
 createEff = false;
 imgSpd = 0.5;
+bounce = 0;

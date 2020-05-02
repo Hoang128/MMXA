@@ -622,24 +622,27 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if (atkState < AttackState.A_STRICT_ATTACK)
 					{
-						var dynamicBlockIsThinPlatform = (dynamicBlock != noone) && (dynamicBlock.object_index == obj_thinPlatform);
-						var canJumpDown = (dynamicBlock.solid) && (!place_meeting(x, y + 1, obj_block));
-						if (dynamicBlockIsThinPlatform && canJumpDown)
+						if (dynamicBlock != noone)
 						{
-							sprite_index = sprJump3;
-							image_index = 0;
-							audio_play_sound_on(global.SFX_Emitter, sndJumpEff, 0, 0);
-						
-							with(dynamicBlock)
+							var dynamicBlockIsThinPlatform = (dynamicBlock != noone) && (dynamicBlock.object_index == obj_thinPlatform);
+							var canJumpDown = (dynamicBlock.solid) && (!place_meeting(x, y + 1, obj_block));
+							if (dynamicBlockIsThinPlatform && canJumpDown)
 							{
-								solid = 0;
-								canSolid = 0;
-								dynamicBlock = noone;
+								sprite_index = sprJump3;
+								image_index = 0;
+								audio_play_sound_on(global.SFX_Emitter, sndJumpEff, 0, 0);
+						
+								with(dynamicBlock)
+								{
+									solid = 0;
+									canSolid = 0;
+									dynamicBlock = noone;
+								}
+								canJump = 0;
+								vState = VerticalState.V_MOVE_FALLING;
+								aState = ActionState.IDLE;
+								atkState = AttackState.A_NONE;
 							}
-							canJump = 0;
-							vState = VerticalState.V_MOVE_FALLING;
-							aState = ActionState.IDLE;
-							atkState = AttackState.A_NONE;
 						}
 					}
 				}

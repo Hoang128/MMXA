@@ -11,3 +11,8 @@ guard = 0;
 destroy_EChain = 1;
 physicAffected = true;
 moveSpd = 0.5;
+guardTimeMax = 60;
+timeToNextGuardMax = 300;
+
+guardTime = 0;
+timeToNextGuard = timeToNextGuardMax;

@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "0b2c7ab0-08fb-445f-ba14-0ba3eedb94cd",
+            "Value": {
+                "id": "f9a7ffe8-2fa8-4975-8239-1d8725d64400",
+                "resourcePath": "sprites\\spr_metoolUp\\spr_metoolUp.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0b5e404b-a646-49de-bf36-ae7ca7fd340f",
             "Value": {
                 "id": "a86a1e0d-2308-4b44-84d0-d10ce44b6ef5",
@@ -847,6 +855,14 @@
             }
         },
         {
+            "Key": "27d38a72-cddd-4cae-b9ef-99f50bf5599c",
+            "Value": {
+                "id": "2136ada9-83b5-49f5-b6cd-7cd1726eee9c",
+                "resourcePath": "objects\\obj_XBusterNormalBounce\\obj_XBusterNormalBounce.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "27ef5b30-3317-45b6-99c1-02829a2f183d",
             "Value": {
                 "id": "bb1073fa-976a-4982-b561-646b6c0b135f",
@@ -1292,6 +1308,14 @@
                 "id": "8eb8a608-3c05-4a07-846a-a2f512949277",
                 "resourcePath": "views\\3b58febd-39e1-475c-8772-191002250597.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3b841cc2-af29-4b80-bb5c-d619bad798df",
+            "Value": {
+                "id": "85b0e215-de38-4680-bda2-617f7ac98ba2",
+                "resourcePath": "sounds\\snd_ArmorGuardColEff\\snd_ArmorGuardColEff.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -3815,11 +3839,27 @@
             }
         },
         {
+            "Key": "c15cc3eb-98c3-4f91-8903-346b05671da6",
+            "Value": {
+                "id": "424ccf40-0b3f-402d-8b9b-1e38eaf67b45",
+                "resourcePath": "objects\\obj_E_DummyGuard\\obj_E_DummyGuard.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c16c25e2-fbb5-4383-baa9-75c4c4306f82",
             "Value": {
                 "id": "36cafd30-abd4-4e5b-b6fb-21b47746fa80",
                 "resourcePath": "views\\c16c25e2-fbb5-4383-baa9-75c4c4306f82.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c23d3474-09f3-42cb-883a-8187cd34ebbf",
+            "Value": {
+                "id": "d296f7f2-9741-44c5-9a09-e03447f76f86",
+                "resourcePath": "objects\\obj_ArmorGuardColEff\\obj_ArmorGuardColEff.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -4132,6 +4172,14 @@
                 "id": "8b821899-f385-446c-914f-fad421191ba3",
                 "resourcePath": "sounds\\snd_ZJumpEff\\snd_ZJumpEff.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "d2c5dee1-0a38-4841-8896-bd63f691d548",
+            "Value": {
+                "id": "3ed3114d-c10c-4850-b798-afaa525c7c5c",
+                "resourcePath": "sprites\\spr_ArmorGuardCollisionEff\\spr_ArmorGuardCollisionEff.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4988,6 +5036,14 @@
                 "id": "71569dcd-db97-4169-a944-1212b66c409c",
                 "resourcePath": "sprites\\spr_slopeR1\\spr_slopeR1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ffe5bbd9-959a-48e7-acdb-ed431cc4c54a",
+            "Value": {
+                "id": "eff6cb21-fc18-499e-93e9-09fbee10eeec",
+                "resourcePath": "objects\\obj_S_DummyGuard\\obj_S_DummyGuard.yy",
+                "resourceType": "GMObject"
             }
         },
         {

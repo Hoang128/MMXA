@@ -12,6 +12,7 @@ switch(sprite_index)
 switch(sprite_index)
 {
 	case spr_metoolDown:
+	case spr_metoolUp:		imgSpd = 0.7;	break;
 	case spr_metoolFalling:
 	case spr_metoolGuard:
 	case spr_metoolJump1:

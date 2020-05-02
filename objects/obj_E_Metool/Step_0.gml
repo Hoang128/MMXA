@@ -11,7 +11,14 @@ event_inherited();
 3: jump
 4: guard
 5.1 - 5.2: trans from air to ground - or from ground to air
+6.1 - 6.2: trans from normal to guard - or from guard to normal
 */
+
+if (timeToNextGuard < timeToNextGuardMax)
+{
+	timeToNextGuard += DELTA_TIME;
+}
+else	timeToNextGuard = timeToNextGuardMax;
 
 if (state == 0)
 {
@@ -65,5 +72,30 @@ if (state == 2)
 			image_xscale = 1;
 			hspd = 1 * moveSpd;
 		}
+	}
+	
+	if (instance_exists(obj_PlayerWeapon) && distance_to_object(instance_nearest(x, y, obj_PlayerWeapon)) < 60)
+	{
+		if (timeToNextGuard == timeToNextGuardMax)
+		{
+			sprite_index = spr_metoolDown;
+			image_index = 0;
+			hspd = 0;
+			state = 6.1;
+		}
+	}
+}
+
+if (state == 4)
+{
+	if (guardTime < guardTimeMax)
+		guardTime += DELTA_TIME;
+	else
+	{
+		sprite_index = spr_metoolUp;
+		image_index = 0;
+		guardTime = 0;
+		guard = 0;
+		state = 6.2;
 	}
 }
