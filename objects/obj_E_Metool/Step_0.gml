@@ -20,82 +20,83 @@ if (timeToNextGuard < timeToNextGuardMax)
 }
 else	timeToNextGuard = timeToNextGuardMax;
 
-if (state == 0)
+switch (state)
 {
-	if (place_meeting(x, y + 1, obj_block))
+	case 0:
 	{
-		sprite_index = spr_metoolRun;
-		image_index = 0;
-		state = 2;
-	}
-	else
-	{
-		sprite_index = spr_metoolFalling;
-		image_index = 0;
-		state = 1;
-	}
-}
-
-if (state == 1)
-{
-	if (place_meeting(x, y + 1, obj_block))
-	{
-		sprite_index = spr_metoolTrans;
-		image_index = 0;
-		state = 5.1;
-	}
-}
-
-
-
-if (state == 2)
-{
-	if (!collision_rectangle(x + abs(bbox_right - bbox_left) / 2 * image_xscale, y, x + (abs(bbox_right - bbox_left) / 2 + 1) * image_xscale, y + 1, obj_block, false, false))
-	{
-		image_xscale *= -1;
-		hspd = image_xscale * moveSpd;
-	}
-	
-	if (image_xscale == 1)
-	{
-		if (collision_rectangle(bbox_right, bbox_top, bbox_right + 1, bbox_bottom, obj_block, false, false))
+		if (place_meeting(x, y + 1, obj_block))
 		{
-			image_xscale = -1;
-			hspd = -1 * moveSpd;
-		}
-	}
-	
-	if (image_xscale == -1)
-	{
-		if (collision_rectangle(bbox_left - 1, bbox_top, bbox_left, bbox_bottom, obj_block, false, false))
-		{
-			image_xscale = 1;
-			hspd = 1 * moveSpd;
-		}
-	}
-	
-	if (instance_exists(obj_PlayerWeapon) && distance_to_object(instance_nearest(x, y, obj_PlayerWeapon)) < 60)
-	{
-		if (timeToNextGuard == timeToNextGuardMax)
-		{
-			sprite_index = spr_metoolDown;
+			sprite_index = spr_metoolRun;
 			image_index = 0;
-			hspd = 0;
-			state = 6.1;
+			state = 2;
 		}
-	}
-}
+		else
+		{
+			sprite_index = spr_metoolFalling;
+			image_index = 0;
+			state = 1;
+		}
+	}	break;
 
-if (state == 4)
-{
-	if (guardTime < guardTimeMax)
-		guardTime += DELTA_TIME;
-	else
+	case 1:
 	{
-		sprite_index = spr_metoolUp;
-		image_index = 0;
-		guardTime = 0;
-		guard = 0;
-		state = 6.2;
-	}
+		if (place_meeting(x, y + 1, obj_block))
+		{
+			sprite_index = spr_metoolTrans;
+			image_index = 0;
+			state = 5.1;
+		}
+	}	break;
+
+	case 2:
+	{
+		if (!collision_rectangle(x + abs(bbox_right - bbox_left) / 2 * image_xscale, y, x + (abs(bbox_right - bbox_left) / 2 + 1) * image_xscale, y + 1, obj_block, false, false))
+		{
+			image_xscale *= -1;
+			hspd = image_xscale * moveSpd;
+		}
+	
+		if (image_xscale == 1)
+		{
+			if (collision_rectangle(bbox_right, bbox_top, bbox_right + 1, bbox_bottom, obj_block, false, false))
+			{
+				image_xscale = -1;
+				hspd = -1 * moveSpd;
+			}
+		}
+	
+		if (image_xscale == -1)
+		{
+			if (collision_rectangle(bbox_left - 1, bbox_top, bbox_left, bbox_bottom, obj_block, false, false))
+			{
+				image_xscale = 1;
+				hspd = 1 * moveSpd;
+			}
+		}
+	
+		if (instance_exists(obj_PlayerWeapon) && distance_to_object(instance_nearest(x, y, obj_PlayerWeapon)) < 60)
+		{
+			if (timeToNextGuard == timeToNextGuardMax)
+			{
+				sprite_index = spr_metoolDown;
+				image_index = 0;
+				hspd = 0;
+				state = 6.1;
+			}
+		}
+	}	break;
+
+	case 4:
+	{
+		if (guardTime < guardTimeMax)
+			guardTime += DELTA_TIME;
+		else
+		{
+			sprite_index = spr_metoolUp;
+			image_index = 0;
+			guardTime = 0;
+			guard = 0;
+			state = 6.2;
+		}
+	}	break;
 }

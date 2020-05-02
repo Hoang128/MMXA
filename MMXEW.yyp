@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "04cbe384-13aa-4f55-b208-e0952f892409",
+            "Value": {
+                "id": "93c34437-4043-49f1-aa1b-5c5979177b79",
+                "resourcePath": "sprites\\spr_knotBeretShot\\spr_knotBeretShot.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "051e1a72-a8f9-4edd-b8c7-68805fa1c96a",
             "Value": {
                 "id": "0cbc88ab-649f-49d3-8a6a-09e3a96ae5a7",
@@ -1079,19 +1087,19 @@
             }
         },
         {
+            "Key": "3204f0bb-821f-4c83-a2ba-e42d90f5b6a1",
+            "Value": {
+                "id": "b0e522b9-1d19-488b-8444-439442fdac6f",
+                "resourcePath": "views\\3204f0bb-821f-4c83-a2ba-e42d90f5b6a1.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "322e5e6e-6552-4273-8290-a123eebc01a3",
             "Value": {
                 "id": "4688bf2e-7a64-476b-8b59-e0961cefbe5e",
                 "resourcePath": "objects\\obj_ZDeathEff\\obj_ZDeathEff.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "32741d94-e609-44c6-a845-37a4c40a9753",
-            "Value": {
-                "id": "36486b24-a950-40db-8228-3c613a0be450",
-                "resourcePath": "sprites\\spr_UITransEff\\spr_UITransEff.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -1147,6 +1155,14 @@
             "Value": {
                 "id": "d0ca9504-a484-442c-8d36-bbde038bcb42",
                 "resourcePath": "sprites\\spr_blockNoSlideIce\\spr_blockNoSlideIce.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "34a169d1-84a3-4511-88d0-bf6e5b33de8e",
+            "Value": {
+                "id": "e4aec5ac-fba4-4461-aa0e-131bf88ed55f",
+                "resourcePath": "sprites\\spr_knotBeretRun\\spr_knotBeretRun.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1435,6 +1451,14 @@
             "Value": {
                 "id": "50323424-260a-45bb-9c88-c6d56e22bb5f",
                 "resourcePath": "views\\415c0ee1-8888-46de-bc66-3345109e41c0.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "41904261-2651-4107-ac1e-f0bfbb1afa1f",
+            "Value": {
+                "id": "5a64f65e-d709-4b9c-95c9-35752a10196c",
+                "resourcePath": "views\\41904261-2651-4107-ac1e-f0bfbb1afa1f.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -2567,6 +2591,14 @@
             }
         },
         {
+            "Key": "7ace4796-3a95-44e9-8789-45134d5e750e",
+            "Value": {
+                "id": "6e99e411-1813-430c-bdf8-6e798e8ada7e",
+                "resourcePath": "sprites\\spr_knotBeretLand\\spr_knotBeretLand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7ad2e235-3e72-4d12-b326-9d2fe2b81481",
             "Value": {
                 "id": "1eb4e51e-c3f0-4a11-a944-211fe66bd63f",
@@ -2767,6 +2799,14 @@
             }
         },
         {
+            "Key": "86dd4e54-8088-4a96-8317-039e6e651534",
+            "Value": {
+                "id": "974d483a-bfb0-4293-ad06-ac575c7eeb8f",
+                "resourcePath": "sprites\\spr_knotBeretThrowBomb\\spr_knotBeretThrowBomb.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8760e927-5f2b-4f84-8f28-d9c5aca95d91",
             "Value": {
                 "id": "f364f10c-d239-42e7-98fd-64fc770b0f7f",
@@ -2940,6 +2980,14 @@
                 "id": "49368d95-22e1-42c7-88b0-38c1d68b4cfd",
                 "resourcePath": "sprites\\spr_blockMoving\\spr_blockMoving.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8f0dd88a-067a-407c-8745-37d6cc09ef2d",
+            "Value": {
+                "id": "6de59b24-1bba-4eea-b2e5-80f86d79635f",
+                "resourcePath": "views\\8f0dd88a-067a-407c-8745-37d6cc09ef2d.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3911,6 +3959,14 @@
             }
         },
         {
+            "Key": "c3eab59f-8d88-41c5-9785-a66817a42251",
+            "Value": {
+                "id": "9bcdae0c-55ee-4684-95b6-61a1c21bafa1",
+                "resourcePath": "objects\\obj_E_KnotBeret_Stand_Type\\obj_E_KnotBeret_Stand_Type.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c4161c4a-3094-4eae-b934-fbbb09c15476",
             "Value": {
                 "id": "7c628eb7-8160-401a-843d-c4fbf75c0fa5",
@@ -4204,6 +4260,14 @@
                 "id": "3ed3114d-c10c-4850-b798-afaa525c7c5c",
                 "resourcePath": "sprites\\spr_ArmorGuardCollisionEff\\spr_ArmorGuardCollisionEff.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d31219f6-1596-4d01-99ee-fa3143b9696f",
+            "Value": {
+                "id": "662c8179-ed52-4d7d-ac61-d15ca9667159",
+                "resourcePath": "objects\\obj_S_KnotBeret_Stand_Type\\obj_S_KnotBeret_Stand_Type.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -4727,11 +4791,27 @@
             }
         },
         {
+            "Key": "ee236ccc-b391-491b-8b18-7252a390f958",
+            "Value": {
+                "id": "3e62e680-b664-47b1-998c-0242c8320457",
+                "resourcePath": "sprites\\spr_knotBeretStand\\spr_knotBeretStand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ee800bcd-d1f0-4812-8acf-d74f5ade03a1",
             "Value": {
                 "id": "ba71844f-d996-47ea-a18a-077992abb7da",
                 "resourcePath": "objects\\obj_playerHumanForm\\obj_playerHumanForm.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "eed05114-ca8a-4d79-b9c0-1fdaa104b116",
+            "Value": {
+                "id": "642d506b-c0ba-49c1-abb9-d8a31d4f907f",
+                "resourcePath": "views\\eed05114-ca8a-4d79-b9c0-1fdaa104b116.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -4812,6 +4892,14 @@
                 "id": "b28674de-0ce1-4006-9538-f52ef3c1d1b9",
                 "resourcePath": "sounds\\snd_VXDie\\snd_VXDie.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "f2153897-d078-45c5-82a3-4322d3e32ede",
+            "Value": {
+                "id": "deb462ae-6e79-4839-8f85-0d0b0e4b0079",
+                "resourcePath": "sprites\\spr_knotBeretShotUp\\spr_knotBeretShotUp.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4900,6 +4988,14 @@
                 "id": "23259a8b-2c5a-4045-b3d8-c499e6b1eea0",
                 "resourcePath": "objects\\obj_slopeL3\\obj_slopeL3.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f68eba7e-8845-47d0-b636-5d6c5a7a6e68",
+            "Value": {
+                "id": "1aecd189-a255-4124-8824-6ae04b81b083",
+                "resourcePath": "sprites\\spr_knotBeretFall\\spr_knotBeretFall.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
