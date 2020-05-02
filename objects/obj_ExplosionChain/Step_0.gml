@@ -1,5 +1,5 @@
 /// @description
-if (chainNumber <= chainMax)
+if (chainNumber < chainMax)
 {
 	if (chainTime < chainTimeMax)
 	{

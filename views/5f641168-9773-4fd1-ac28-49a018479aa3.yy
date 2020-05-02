@@ -11,7 +11,8 @@
         "5557e016-6288-44d2-8e65-bc51d2d1ed10",
         "f10ff348-5953-4261-b0c3-f3103089ab6e",
         "35266f13-2e91-49db-86d3-3d04a8e628a8",
-        "4a39d6de-1ecb-4b9c-b02f-db2aebae46a9"
+        "4a39d6de-1ecb-4b9c-b02f-db2aebae46a9",
+        "b34cc671-935a-42ac-82d7-b184921c8fb7"
     ],
     "filterType": "GMSprite",
     "folderName": "Metool",

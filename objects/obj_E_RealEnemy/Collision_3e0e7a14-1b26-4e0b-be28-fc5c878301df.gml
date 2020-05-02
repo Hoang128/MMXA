@@ -60,8 +60,13 @@ if (damageTimmer <= 0)
 	
 		if (other.type == WeaponType.BUSTER)
 		{
-			if (hp > 0) 
+			if (other.object_index == obj_XBusterNormal)
 				instance_destroy(other);
+			else
+			{
+				if (hp > 0)
+					instance_destroy(other);
+			}
 		}
 	}
 	else

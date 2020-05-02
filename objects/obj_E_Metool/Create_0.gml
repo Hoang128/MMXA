@@ -13,6 +13,8 @@ physicAffected = true;
 moveSpd = 0.5;
 guardTimeMax = 60;
 timeToNextGuardMax = 300;
+explosionPiece = 5;
+pieceSprite = spr_metoolPiece;
 
 guardTime = 0;
 timeToNextGuard = timeToNextGuardMax;
