@@ -70,9 +70,7 @@ if (damageTimmer <= 0)
 		}
 	}
 	else
-	{
-		scr_setTimeSlowEff(2, 0.2);
-		
+	{	
 		//Create collision effect
 		#region
 			
@@ -101,7 +99,12 @@ if (damageTimmer <= 0)
 			
 			case obj_ZBusterNor:
 			case obj_ZBusterCharge:
+			case obj_XBusterC1:
+			case obj_XBusterC2:
 				instance_destroy(other);
+			break;
+			case obj_ZSaber:
+				scr_setTimeSlowEff(2, 0.2);
 			break;
 		}
 	}

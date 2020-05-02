@@ -7,3 +7,4 @@ event_inherited();
 imgSpd = 0.5;
 init = 0;
 moveSpd = 8;
+glow = 1;

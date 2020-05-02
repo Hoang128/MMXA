@@ -6,7 +6,7 @@ if (activateState == ActivateState.ACTIVATE)
 	{
 		if (keyboard_check(global.keyUp) && !keyboard_check(global.keyDown))
 		{
-			if ((self.x - (other.bbox_right + other.bbox_left) / 2) < minDistanceToLadder)
+			if (abs(x - (other.bbox_right + other.bbox_left) / 2) < minDistanceToLadder)
 			{
 				sprite_index = sprClimb1;
 				image_index = 0;
