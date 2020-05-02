@@ -72,6 +72,7 @@ else
 	instance_activate_object(obj_spinnerContext);
 	instance_activate_object(obj_E_Spawmer);
 	instance_activate_object(obj_dynamicBlock);
+	instance_activate_object(obj_block);
 	instance_activate_region(X_ACTIVE_BOX, Y_ACTIVE_BOX, X_ACTIVE_BOX + W_ACTIVE_BOX, Y_ACTIVE_BOX + H_ACTIVE_BOX, true);
 	
 	activateCount = activateMaxCount;
