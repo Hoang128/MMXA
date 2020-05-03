@@ -17,7 +17,11 @@ if ((activateState == ActivateState.ACTIVATE && stunType == AttackState.A_NONE) 
 			audio_play_sound_on(global.SFX_Emitter, sndVoiceHurt1, 0, 0);
 		else
 			audio_play_sound_on(global.SFX_Emitter, sndVoiceHurt2, 0, 0);
-			
+		if (other.bullet == 1)
+		{
+			if (other.createBulletEff == false)	createBulletEff = true;
+			other.touchPlayer = true;
+		}
 		if (instance_exists(obj_PlayerShotEff)) instance_destroy(obj_PlayerShotEff);
 		if (instance_exists(obj_PlayerWeaponMeeleImage)) instance_destroy(obj_PlayerWeaponMeeleImage);
 		if (instance_exists(obj_PlayerWeaponMeele)) instance_destroy(obj_PlayerWeaponMeele);

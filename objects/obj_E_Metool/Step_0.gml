@@ -28,6 +28,8 @@ switch (state)
 		{
 			sprite_index = spr_metoolRun;
 			image_index = 0;
+			if (instance_exists(obj_gameManager.playerCore))
+				image_xscale = sign(obj_gameManager.playerCore.x - self.x);
 			state = 2;
 		}
 		else

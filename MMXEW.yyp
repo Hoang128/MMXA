@@ -1239,6 +1239,14 @@
             }
         },
         {
+            "Key": "38dd2ed7-0e26-4201-96f6-e44114f5a471",
+            "Value": {
+                "id": "46c27843-56be-46cf-a817-ce5eb2366c64",
+                "resourcePath": "objects\\obj_E_Bullet\\obj_E_Bullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "38f7f696-28a6-43a8-8eb6-347537131e80",
             "Value": {
                 "id": "f261cd1f-dac9-4d7a-af0d-ed04004497bb",
@@ -2684,6 +2692,14 @@
                 "id": "223e83e4-9520-427f-b0c3-4da8419917d6",
                 "resourcePath": "views\\7f54607a-8bed-4008-a5f2-74e3fec2ddb3.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8031c64a-a72c-4346-b520-ea67cfdd978b",
+            "Value": {
+                "id": "41569a03-2380-46cf-81d9-f50866651b98",
+                "resourcePath": "sprites\\spr_knotBeretGrenade\\spr_knotBeretGrenade.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4591,6 +4607,14 @@
             }
         },
         {
+            "Key": "e54e87e9-a44d-49fa-82dd-eb9984ae1b02",
+            "Value": {
+                "id": "6839a45b-582d-470d-a08a-5549530e387f",
+                "resourcePath": "objects\\obj_E_KnotBeretBullet\\obj_E_KnotBeretBullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e571c2b6-27e6-4450-b790-1facd96e5a19",
             "Value": {
                 "id": "c3757688-d765-4505-8930-a1b9907cf3ec",
@@ -4628,6 +4652,14 @@
                 "id": "4478196e-a694-4c5f-8959-4787962df0c3",
                 "resourcePath": "sounds\\snd_VXJump3\\snd_VXJump3.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "e6b689d4-0836-4b9e-933b-a667339c982b",
+            "Value": {
+                "id": "cb95f8d7-9174-41a9-be68-27bdf2f20f94",
+                "resourcePath": "sprites\\spr_knotBeretBullet\\spr_knotBeretBullet.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4900,6 +4932,14 @@
                 "id": "deb462ae-6e79-4839-8f85-0d0b0e4b0079",
                 "resourcePath": "sprites\\spr_knotBeretShotUp\\spr_knotBeretShotUp.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f248e4b4-f8ef-4af3-aaa1-3b765a2104ec",
+            "Value": {
+                "id": "031a7692-a486-4cfc-bb00-ee406999afa1",
+                "resourcePath": "objects\\obj_E_KnotBeretBomb\\obj_E_KnotBeretBomb.yy",
+                "resourceType": "GMObject"
             }
         },
         {
