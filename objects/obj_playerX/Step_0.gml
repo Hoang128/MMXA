@@ -47,18 +47,27 @@ if (activateState != ActivateState.DEACTIVATE)
 					if (waitShot == 0)
 					{
 						scr_playerXChangeShotSprite(object_index, true, false);
-				
-						var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffXBuster);
-						obj.core = self;
-						atkSpriteTime = atkSpriteTimeMax;
-						atkState = AttackState.A_NORMAL_ATTACK;
+						if (sprite_index != spr_XClimbStart && sprite_index != spr_XClimbEnd)
+						{
+							var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffXBuster);
+							obj.core = self;
+							atkSpriteTime = atkSpriteTimeMax;
 						
-						busterOnRow++;
-						resetBusterOnRowMax = waitShotLong;
-						if (busterOnRow == busterOnRowMax)
-							waitShot = waitShotLong;
-						else
-							waitShot = waitShotNormal;
+							if (sprite_index == spr_XShotClimb)
+							{
+								vspd = 0;
+								vState = VerticalState.V_MOVE_NONE;
+								isClimbing = 0;
+							}
+							atkState = AttackState.A_NORMAL_ATTACK;
+						
+							busterOnRow++;
+							resetBusterOnRowMax = waitShotLong;
+							if (busterOnRow == busterOnRowMax)
+								waitShot = waitShotLong;
+							else
+								waitShot = waitShotNormal;
+						}
 					}
 				}
 			}
@@ -98,12 +107,20 @@ if (activateState != ActivateState.DEACTIVATE)
 				if (chargeNormal < chargeLv2Limit)
 				{
 					scr_playerXChangeShotSprite(object_index, true, false);
-					
-					var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffXBusterC1);
-					obj.core = self;
-					atkSpriteTime = atkSpriteTimeMax;
-					atkState = AttackState.A_NORMAL_ATTACK;
-					chargeNormal = 0;
+					if (sprite_index != spr_XClimbStart && sprite_index != spr_XClimbEnd)
+					{
+						var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffXBusterC1);
+						obj.core = self;
+						atkSpriteTime = atkSpriteTimeMax;
+						if (sprite_index == spr_XShotClimb)
+						{
+							vspd = 0;
+							vState = VerticalState.V_MOVE_NONE;
+							isClimbing = 0;
+						}
+						atkState = AttackState.A_NORMAL_ATTACK;
+						chargeNormal = 0;
+					}
 				}
 				else
 				{	
@@ -119,12 +136,20 @@ if (activateState != ActivateState.DEACTIVATE)
 						if (r >=3 && r < 4)
 							audio_play_sound_on(global.SFX_Emitter, snd_VXChargeShot3, 0, 0);
 					}
-					
-					var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffXBusterC2);
-					obj.core = self;
-					atkSpriteTime = atkSpriteTimeMax;
-					atkState = AttackState.A_NORMAL_ATTACK;
-					chargeNormal = 0;	
+					if (sprite_index != spr_XClimbStart && sprite_index != spr_XClimbEnd)
+					{
+						var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffXBusterC2);
+						obj.core = self;
+						atkSpriteTime = atkSpriteTimeMax;
+						if (sprite_index == spr_XShotClimb)
+						{
+							vspd = 0;
+							vState = VerticalState.V_MOVE_NONE;
+							isClimbing = 0;
+						}
+						atkState = AttackState.A_NORMAL_ATTACK;
+						chargeNormal = 0;	
+					}
 				}
 			}
 			else	chargeNormal = 0;

@@ -18,6 +18,7 @@ switch(sprite_index)
 	case spr_XShotStand:	image_speed = 0.5; break;
 	case spr_XCShotStand:
 	case spr_XCShotDuck:	image_speed = 0.8; break;
+	case spr_XShotClimb:	image_speed = 0.3; break;
 }
 
 image_speed *= DELTA_TIME;

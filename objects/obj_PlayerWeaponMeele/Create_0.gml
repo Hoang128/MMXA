@@ -8,3 +8,4 @@ collisionEff = obj_flareSlash;
 
 glow = 0;
 core = noone;
+direction = 0;

@@ -5,18 +5,57 @@ if (damageTimmer == -1)
 	damageTimmer = 0;
 if (damageTimmer <= 0)
 {
-	if (guard == 0)
+	var realDamage = 0;
+
+	switch (other.element)
 	{
-		var realDamage = 0;
-		switch (other.element)
+		case Element.NEUTRAL:	realDamage = other.damage - neutralArmor;	break;
+		case Element.FIRE:		realDamage = other.damage - fireArmor;		break;
+		case Element.ICE:		realDamage = other.damage - iceArmor;		break;
+		case Element.ELECT:		realDamage = other.damage - electArmor;		break;
+	}
+	if (realDamage < 0)	realDamage = 0;
+	if (guard == 0.5)
+	{
+		switch (guardDir)
 		{
-			case Element.NEUTRAL:	realDamage = other.damage - neutralArmor;	break;
-			case Element.FIRE:		realDamage = other.damage - fireArmor;		break;
-			case Element.ICE:		realDamage = other.damage - iceArmor;		break;
-			case Element.ELECT:		realDamage = other.damage - electArmor;		break;
+			case 0:	
+			{
+				if ((other.bbox_right - self.bbox_left) > 0)
+				{
+					realDamage = 0;
+				}	
+			}	break;
+			case 180:
+			{
+				if ((other.bbox_left - self.bbox_right) < 0)
+				{
+					realDamage = 0;
+				}	
+			}	break;
+			case 90:
+			{
+				if ((other.bbox_bottom - self.bbox_top) < 0)
+				{
+					realDamage = 0;
+				}
+			}	break;
+			case 270:
+			{
+				if ((other.bbox_top - self.bbox_bottom) > 0)
+				{
+					realDamage = 0;
+				}
+			}	break;
 		}
-		if (realDamage > 0)
-			hp -= realDamage;
+	}
+	if (guard == 1)
+	{
+		realDamage = 0;
+	}
+	if (realDamage > 0)
+	{
+		hp -= realDamage;
 		
 		//Create Effect
 		if (other.slowTime == true) 
@@ -70,7 +109,7 @@ if (damageTimmer <= 0)
 		}
 	}
 	else
-	{	
+	{
 		//Create collision effect
 		#region
 			
@@ -108,5 +147,6 @@ if (damageTimmer <= 0)
 			break;
 		}
 	}
+	
 	damageTimmer = other.maxTimmer;
 }

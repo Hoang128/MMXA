@@ -16,6 +16,7 @@ if (pieceType != noone)
 				var obj = instance_create_depth(x ,y ,depth , obj_E_Piece);
 				obj.hspd = hRange * hDir;
 				obj.vspd = -(random(2) + 4);
+				obj.sprite_index = pieceType;
 				obj.image_index = pieceTime;
 				hDir *= -1;
 				hRange += range;

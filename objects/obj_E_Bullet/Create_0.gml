@@ -6,3 +6,4 @@ event_inherited();
 bullet = 1;
 touchPlayer = false;
 destroyAfterTouch = false;
+damageTimmer = -1;

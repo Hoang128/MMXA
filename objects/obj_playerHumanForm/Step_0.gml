@@ -689,7 +689,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			
 			if (!place_meeting(x, y - 1, obj_block) && !place_meeting(x, y + 1, obj_block))
 			{
-				if ((atkState < AttackState.A_STRICT_ATTACK) && (sprite_index == sprClimb2))
+				if ((atkState == AttackState.A_NONE) && (sprite_index == sprClimb2))
 				{
 					if (!place_meeting(x, bbox_top - 1, obj_ladder))
 					{
