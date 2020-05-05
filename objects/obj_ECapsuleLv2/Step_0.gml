@@ -8,7 +8,7 @@ if (place_meeting(x, y + 1, obj_block))
 {
 	if (phase == 1)
 	{
-		imgSpd = 0.1;
+		imgSpd = 0.4;
 		phase = 2;
 	}
 }
