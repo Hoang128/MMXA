@@ -7,5 +7,5 @@ event_inherited();
 glow = 1;
 imgSpd = 0.5;
 
-if (collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + RESOLUTION_WIDTH, Y_VIEW + RESOLUTION_HEIGH, self, false, false))
+if (collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + W_VIEW, Y_VIEW + H_VIEW, self, false, false))
 	audio_play_sound_on(global.SFX_Emitter, snd_explosion, false, false);

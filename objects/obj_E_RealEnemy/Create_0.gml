@@ -16,3 +16,4 @@ pieceSprite = 0;
 createExplosion = true;
 maxDisDetectSlopeAbove = 4; //Distance to detect slope on the ground
 guardDir = 0;
+guardEffEnable = true;

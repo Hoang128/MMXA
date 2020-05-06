@@ -8,7 +8,7 @@ hp = 2;
 damage = 2;
 damageRed = 1;
 
-idleTimeMax = 200;
+idleTimeMax = 150;
 shotTimeMax = 3;
 
 idleTime = 0;
@@ -17,6 +17,8 @@ createBullet = false;
 
 shield = noone;
 guard = 0.5;
+guardEffEnable = false;
 
+destroy_EChain = 3;
 explosionPiece = 3;
 pieceSprite = spr_GuardianPiece;

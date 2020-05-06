@@ -1,9 +1,9 @@
 /// @description Handle
 
-var xx = X_VIEW - RESOLUTION_WIDTH / 2;
-var yy = Y_VIEW - RESOLUTION_HEIGH / 2;
-var ww = RESOLUTION_WIDTH * 2;
-var hh = RESOLUTION_HEIGH * 2;
+var xx = X_VIEW - W_VIEW / 2;
+var yy = Y_VIEW - H_VIEW / 2;
+var ww = W_VIEW * 2;
+var hh = H_VIEW * 2;
 
 if (collision_rectangle(X_ACTIVE_BOX, Y_ACTIVE_BOX, X_ACTIVE_BOX + W_ACTIVE_BOX, Y_ACTIVE_BOX + H_ACTIVE_BOX, self, false, false))
 {

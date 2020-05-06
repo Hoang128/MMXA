@@ -7,7 +7,7 @@ if (phase == 0)
 		timeShot -= myDeltaTime * global.deltaTime;
 		
 		x += image_xscale * moveSpd * myDeltaTime * global.deltaTime;
-		if (distance_to_object(obj_E_Root) < radius) phase = 1;
+		if (distance_to_object(obj_E_RealEnemy) < radius) phase = 1;
 	}
 	else
 	{

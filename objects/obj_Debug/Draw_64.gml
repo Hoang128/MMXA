@@ -11,6 +11,7 @@ scr_LOG_INFO("Debugging mode", debugTextColorF, debugTextColorB);
 scr_LOG_INFO("Press Q + H to show debug command list",debugTextColorF, debugTextColorB);
 scr_LOG_INFO("Room speed = " + string(room_speed), debugTextColorF, debugTextColorB);
 scr_LOG_INFO("Delta time = " + string(global.deltaTime), debugTextColorF, debugTextColorB);
+scr_LOG_INFO("eff number = " + string(instance_number(obj_E_GuardianShieldEff)), debugTextColorF, debugTextColorB);
 
 //Show Debug Help
 #region

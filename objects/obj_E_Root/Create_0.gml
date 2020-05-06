@@ -17,3 +17,4 @@ hspd = 0;
 vspd = 0;
 bullet = 0;
 shield = 0;
+glow = 0;

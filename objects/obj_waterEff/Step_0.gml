@@ -1,4 +1,5 @@
 /// @description handle
+event_inherited();
 
 if (instance_exists(core))
 {

@@ -992,7 +992,7 @@ else
 	}
 	if (aState == ActionState.BEAMUP)
 	{
-		if (!collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + RESOLUTION_WIDTH, Y_VIEW + RESOLUTION_HEIGH, self, false, false))
+		if (!collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + W_VIEW, Y_VIEW + H_VIEW, self, false, false))
 		{
 			instance_destroy();
 		}
@@ -1006,7 +1006,7 @@ else
 		}
 		else
 		{
-			if (collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + RESOLUTION_WIDTH, Y_VIEW + RESOLUTION_HEIGH, self, false, false))
+			if (collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + W_VIEW, Y_VIEW + H_VIEW, self, false, false))
 			{
 				if (!place_meeting(x, y, obj_block))
 				{

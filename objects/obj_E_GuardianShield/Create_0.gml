@@ -9,3 +9,5 @@ damageRed = 2;
 stunType = StunType.STUN_NORMAL;
 guard = 1;
 core = noone;
+shieldEff1 = noone;
+shieldEff2 = noone;

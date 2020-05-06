@@ -1,4 +1,6 @@
 /// @description 
+event_inherited();
+
 if ((instance_exists(core)))
 {
 	if (core.aState == ActionState.SLIDING)

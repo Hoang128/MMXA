@@ -1,4 +1,5 @@
 /// @description 
+event_inherited();
 
 scr_destroyObjOutOfCamera(self);
 

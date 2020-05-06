@@ -70,8 +70,15 @@ if (damageTimmer <= 0)
 		}
 		else
 		{
-			var xPlace = other.x + other.image_xscale * (other.bbox_right - other.bbox_left) / 2;
 			var yPlace = (other.bbox_top + other.bbox_bottom) / 2;
+			var xPlace = (other.bbox_right + other.bbox_left) / 2;
+			with (other)
+			{
+				while(!place_meeting(xPlace, yPlace, other))
+				{
+					xPlace += image_xscale;
+				}
+			}
 		}
 		
 		var objColEff = instance_create_depth(xPlace, yPlace, other.depth - 1, obj_ArmorGuardColEff);

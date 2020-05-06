@@ -15,7 +15,7 @@ switch (sprite_index)
 	{
 		sprite_index = spr_GuardianShot;
 		image_index = 0;
-		shotTime = 1;
+		shotTime = 0;
 		state = 4;
 	}	break;
 	
@@ -29,11 +29,11 @@ switch (sprite_index)
 	
 	case spr_GuardianShot:
 	{
-		if (shotTime < shotTimeMax)
+		if (shotTime <= shotTimeMax)
 		{
 			image_index = 0;
 			createBullet = 0;
-			shotTime++;
+			shotTime += DELTA_TIME;
 		}
 		else
 		{

@@ -45,7 +45,7 @@ switch (state)
 			}
 			else
 			{
-				if (collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + RESOLUTION_WIDTH, Y_VIEW + RESOLUTION_HEIGH, self, false, false))
+				if (collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + W_VIEW, Y_VIEW + H_VIEW, self, false, false))
 				{
 					sprite_index = spr_GuardianOpenGuard;
 					image_index = 0;
@@ -68,6 +68,7 @@ switch (state)
 			{
 				if (createBullet == false)
 				{
+					instance_create_depth(x + 16 * image_xscale, y - 11, depth - 1, obj_E_GuardianBullet);
 					createBullet = true;
 				}
 			}
@@ -88,7 +89,7 @@ switch (state)
 
 if (shield == noone)
 {
-	shield = instance_create_depth(x, y, depth, obj_E_GuardianShield);
+	shield = instance_create_depth(x, y, depth - 1, obj_E_GuardianShield);
 	shield.core = self;
 }
 

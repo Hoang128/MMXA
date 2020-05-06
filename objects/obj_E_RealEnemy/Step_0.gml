@@ -7,7 +7,7 @@ event_inherited();
 if (damageTimmer > 0) damageTimmer -= global.deltaTime;
 if (hp <= 0) instance_destroy();
 
-if (!collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + RESOLUTION_WIDTH, Y_VIEW + RESOLUTION_HEIGH, self, false, false))
+if (!collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + W_VIEW, Y_VIEW + H_VIEW, self, false, false))
 {
 	if (distance_to_object(parent) > distanceToParentLimit)
 	{

@@ -7,7 +7,7 @@ event_inherited();
 hp = 2;
 damage = 1;
 damageRed = 1;
-destroy_EChain = 3;
+destroy_EChain = 2;
 physicAffected = true;
 shot = false;
 standTimeMax = 150;

@@ -72,8 +72,15 @@ if (damageTimmer <= 0)
 			}
 			else
 			{
-				var xPlace = other.x + other.image_xscale * (other.bbox_right - other.bbox_left) / 2;
 				var yPlace = (other.bbox_top + other.bbox_bottom) / 2;
+				var xPlace = (other.bbox_right + other.bbox_left) / 2;
+				with (other)
+				{
+					while(!place_meeting(xPlace, yPlace, other))
+					{
+						xPlace += image_xscale;
+					}
+				}
 			}
 		
 			if (other.object_index == obj_ZSaber)
@@ -112,39 +119,49 @@ if (damageTimmer <= 0)
 	{
 		//Create collision effect
 		#region
-			
-		if (other.type == WeaponType.SABER)
+		if (guardEffEnable == true)
 		{
-			var xPlace = clamp(other.x + (abs(other.sprite_width) - abs(other.sprite_xoffset)) * 0.75 * other.image_xscale, bbox_left, bbox_right);
-			var yPlace = clamp((other.core.bbox_top + other.core.bbox_bottom) / 2, bbox_top, bbox_bottom);
-		}
-		else
-		{
-			var xPlace = other.x + other.image_xscale * (other.bbox_right - other.bbox_left) / 2;
-			var yPlace = (other.bbox_top + other.bbox_bottom) / 2;
-		}
-		
-		var objColEff = instance_create_depth(xPlace, yPlace, other.depth - 1, obj_ArmorGuardColEff);
-		objColEff.image_xscale = other.image_xscale;
-		#endregion
-		
-		switch(other.object_index)
-		{
-			case obj_XBusterNormal:
+			if (other.type == WeaponType.SABER)
 			{
-				other.bounce = 1;
-				instance_destroy(other);
-			}	break;
+				var xPlace = clamp(other.x + (abs(other.sprite_width) - abs(other.sprite_xoffset)) * 0.75 * other.image_xscale, bbox_left, bbox_right);
+				var yPlace = clamp((other.core.bbox_top + other.core.bbox_bottom) / 2, bbox_top, bbox_bottom);
+			}
+			else
+			{
+				var yPlace = (other.bbox_top + other.bbox_bottom) / 2;
+				var xPlace = (other.bbox_right + other.bbox_left) / 2;
+				with (other)
+				{
+					while(!place_meeting(xPlace, yPlace, other))
+					{
+						xPlace += image_xscale;
+					}
+				}
+				
+			}
+		
+			var objColEff = instance_create_depth(xPlace, yPlace, other.depth - 1, obj_ArmorGuardColEff);
+			objColEff.image_xscale = other.image_xscale;
+			#endregion
+		
+			switch(other.object_index)
+			{
+				case obj_XBusterNormal:
+				{
+					other.bounce = 1;
+					instance_destroy(other);
+				}	break;
 			
-			case obj_ZBusterNor:
-			case obj_ZBusterCharge:
-			case obj_XBusterC1:
-			case obj_XBusterC2:
-				instance_destroy(other);
-			break;
-			case obj_ZSaber:
-				scr_setTimeSlowEff(2, 0.2);
-			break;
+				case obj_ZBusterNor:
+				case obj_ZBusterCharge:
+				case obj_XBusterC1:
+				case obj_XBusterC2:
+					instance_destroy(other);
+				break;
+				case obj_ZSaber:
+					scr_setTimeSlowEff(2, 0.2);
+				break;
+			}
 		}
 	}
 	
