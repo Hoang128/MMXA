@@ -588,6 +588,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							
 								self.x = (dynamicBlock.bbox_right + dynamicBlock.bbox_left) / 2;
 								isClimbing = -1;
+								hspd = 0;
+								hState = HorizontalState.H_MOVE_NONE;
 								vState = VerticalState.V_MOVE_NONE;
 								aState = ActionState.CLIMBING;
 								atkState = AttackState.A_NONE;
