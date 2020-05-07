@@ -37,5 +37,3 @@ if (change == -1)
 }
 
 hspd = move * moveSpd * myDeltaTime * global.deltaTime;
-
-x += hspd;

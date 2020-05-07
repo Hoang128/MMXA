@@ -18,6 +18,13 @@ if (pieceType != noone)
 				obj.vspd = -(random(2) + 4);
 				obj.sprite_index = pieceType;
 				obj.image_index = pieceTime;
+				if (palette != noone)
+				{
+					obj.palette = palette;
+					obj.paletteNumber = paletteNumber;
+					with (obj)
+						scr_PalSwapInitSystem(shd_pal_swapper);
+				}
 				hDir *= -1;
 				hRange += range;
 				pieceTime ++;

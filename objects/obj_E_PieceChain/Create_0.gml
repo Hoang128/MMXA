@@ -11,3 +11,6 @@ waitTime = waitTimeMax;
 hDir = 1;
 hRange = range;
 myDeltaTime = 1;
+
+palette = noone;
+paletteNumber = 0;

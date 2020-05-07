@@ -28,32 +28,35 @@ switch (state)
 	case 1:
 	{
 		guardDir = 90 - image_xscale * 90;
-		if (image_xscale != sign(obj_gameManager.playerCore.x - self.x))
+		if (instance_exists(obj_gameManager.playerCore))
 		{
-			if (sign(obj_gameManager.playerCore.x - self.x) != 0)
+			if (image_xscale != sign(obj_gameManager.playerCore.x - self.x))
 			{
-				sprite_index = spr_GuardianTurnBack;
-				image_index = 0;
-				state = 2;
-			}
-		}
-		else
-		{
-			if (idleTime < idleTimeMax)
-			{
-				idleTime += DELTA_TIME;
+				if (sign(obj_gameManager.playerCore.x - self.x) != 0)
+				{
+					sprite_index = spr_GuardianTurnBack;
+					image_index = 0;
+					state = 2;
+				}
 			}
 			else
 			{
-				if (collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + W_VIEW, Y_VIEW + H_VIEW, self, false, false))
+				if (idleTime < idleTimeMax)
 				{
-					sprite_index = spr_GuardianOpenGuard;
-					image_index = 0;
-					state = 3.1;
+					idleTime += DELTA_TIME;
 				}
 				else
 				{
-					idleTime = 0;
+					if (collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + W_VIEW, Y_VIEW + H_VIEW, self, false, false))
+					{
+						sprite_index = spr_GuardianOpenGuard;
+						image_index = 0;
+						state = 3.1;
+					}
+					else
+					{
+						idleTime = 0;
+					}
 				}
 			}
 		}
@@ -68,7 +71,12 @@ switch (state)
 			{
 				if (createBullet == false)
 				{
-					instance_create_depth(x + 16 * image_xscale, y - 11, depth - 1, obj_E_GuardianBullet);
+					var bullet = instance_create_depth(x + 16 * image_xscale, y - 11, depth - 1, obj_E_GuardianBullet);
+					bullet.image_xscale = image_xscale;
+					if (instance_exists(obj_gameManager.playerCore) && bullet.image_xscale == sign(obj_gameManager.playerCore.x - self.x))
+						bullet.track = true;
+					else	
+						bullet.track = false;
 					createBullet = true;
 				}
 			}
@@ -90,6 +98,8 @@ switch (state)
 if (shield == noone)
 {
 	shield = instance_create_depth(x, y, depth - 1, obj_E_GuardianShield);
+	shield.palette = self.palette;
+	shield.paletteNumber = self.paletteNumber;
 	shield.core = self;
 }
 

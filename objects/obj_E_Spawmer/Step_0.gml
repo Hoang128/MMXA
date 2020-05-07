@@ -15,6 +15,13 @@ if (collision_rectangle(X_ACTIVE_BOX, Y_ACTIVE_BOX, X_ACTIVE_BOX + W_ACTIVE_BOX,
 			{
 				var obj = instance_create_depth(x, y, depth, childObjectType);
 				obj.parent = self;
+				if (childObjectPal != noone)
+				{
+					obj.palette = childObjectPal;
+					obj.paletteNumber = childObjectPalNumber;
+					with (obj)
+						scr_PalSwapInitSystem(shd_pal_swapper);
+				}
 				child = obj;
 			}
 		}

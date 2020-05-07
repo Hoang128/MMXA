@@ -5,3 +5,5 @@
 event_inherited();
 
 childObjectType = obj_E_Guardian_Fixed_Type;
+childObjectPal  = spr_GuardianPal;
+childObjectPalNumber = 0;

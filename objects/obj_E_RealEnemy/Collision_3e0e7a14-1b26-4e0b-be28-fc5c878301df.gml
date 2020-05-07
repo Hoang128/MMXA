@@ -5,6 +5,7 @@ if (damageTimmer == -1)
 	damageTimmer = 0;
 if (damageTimmer <= 0)
 {
+	damageTimmer = other.maxTimmer;
 	var realDamage = 0;
 
 	switch (other.element)
@@ -21,28 +22,24 @@ if (damageTimmer <= 0)
 		{
 			case 0:	
 			{
-				if ((other.bbox_right - self.bbox_left) > 0)
-				{
+				if ((other.x - (bbox_right + bbox_left) / 2) > 0)
 					realDamage = 0;
-				}	
 			}	break;
 			case 180:
 			{
-				if ((other.bbox_left - self.bbox_right) < 0)
-				{
+				if ((other.x - (bbox_right + bbox_left) / 2) < 0)
 					realDamage = 0;
-				}	
 			}	break;
 			case 90:
 			{
-				if ((other.bbox_bottom - self.bbox_top) < 0)
+				if ((other.y - (bbox_top + bbox_bottom) / 2) < 0)
 				{
 					realDamage = 0;
 				}
 			}	break;
 			case 270:
 			{
-				if ((other.bbox_top - self.bbox_bottom) > 0)
+				if ((other.y - (bbox_top + bbox_bottom) / 2) > 0)
 				{
 					realDamage = 0;
 				}
@@ -65,24 +62,12 @@ if (damageTimmer <= 0)
 			//Create collision effect
 			#region
 			
+			var xPlace = clamp(other.x + (abs(other.sprite_width) - abs(other.sprite_xoffset)) * 0.75 * other.image_xscale, bbox_left, bbox_right);
 			if (other.type == WeaponType.SABER)
-			{
-				var xPlace = clamp(other.x + (abs(other.sprite_width) - abs(other.sprite_xoffset)) * 0.75 * other.image_xscale, bbox_left, bbox_right);
 				var yPlace = clamp((other.core.bbox_top + other.core.bbox_bottom) / 2, bbox_top, bbox_bottom);
-			}
 			else
-			{
-				var yPlace = (other.bbox_top + other.bbox_bottom) / 2;
-				var xPlace = (other.bbox_right + other.bbox_left) / 2;
-				with (other)
-				{
-					while(!place_meeting(xPlace, yPlace, other))
-					{
-						xPlace += image_xscale;
-					}
-				}
-			}
-		
+				var yPlace = clamp((other.bbox_top + other.bbox_bottom) / 2, bbox_top, bbox_bottom);
+			
 			if (other.object_index == obj_ZSaber)
 			{
 				randomize();
@@ -121,24 +106,11 @@ if (damageTimmer <= 0)
 		#region
 		if (guardEffEnable == true)
 		{
+			var xPlace = clamp(other.x + (abs(other.sprite_width) - abs(other.sprite_xoffset)) * 0.75 * other.image_xscale, bbox_left, bbox_right);
 			if (other.type == WeaponType.SABER)
-			{
-				var xPlace = clamp(other.x + (abs(other.sprite_width) - abs(other.sprite_xoffset)) * 0.75 * other.image_xscale, bbox_left, bbox_right);
 				var yPlace = clamp((other.core.bbox_top + other.core.bbox_bottom) / 2, bbox_top, bbox_bottom);
-			}
 			else
-			{
-				var yPlace = (other.bbox_top + other.bbox_bottom) / 2;
-				var xPlace = (other.bbox_right + other.bbox_left) / 2;
-				with (other)
-				{
-					while(!place_meeting(xPlace, yPlace, other))
-					{
-						xPlace += image_xscale;
-					}
-				}
-				
-			}
+				var yPlace = clamp((other.bbox_top + other.bbox_bottom) / 2, bbox_top, bbox_bottom);
 		
 			var objColEff = instance_create_depth(xPlace, yPlace, other.depth - 1, obj_ArmorGuardColEff);
 			objColEff.image_xscale = other.image_xscale;
@@ -164,6 +136,4 @@ if (damageTimmer <= 0)
 			}
 		}
 	}
-	
-	damageTimmer = other.maxTimmer;
 }

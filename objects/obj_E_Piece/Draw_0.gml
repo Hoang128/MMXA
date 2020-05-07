@@ -2,6 +2,10 @@
 // You can write your code in this editor
 
 // Inherit the parent event
+if (palette != noone)
+	scr_PalSwapSet(palette, paletteNumber, false);
+
 event_inherited();
 
-draw_text(x,y,string(guardDir));
+if (palette != noone)
+	scr_PalSwapReset();

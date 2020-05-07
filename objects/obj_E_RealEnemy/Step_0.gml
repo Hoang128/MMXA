@@ -55,8 +55,6 @@ if (physicAffected == true)
 			hspd = 0;
 	}
 	
-	x += hspd * DELTA_TIME;
-	
 	#endregion
 	
 	//Vertical
@@ -71,6 +69,8 @@ if (physicAffected == true)
 		vspd = 0;
 	}
 	
-	y += vspd * DELTA_TIME;
 	#endregion
 }
+
+x += hspd * DELTA_TIME;
+y += vspd * DELTA_TIME;

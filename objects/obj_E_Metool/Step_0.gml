@@ -52,15 +52,10 @@ switch (state)
 
 	case 2:
 	{
-		if (!collision_rectangle(x + abs(bbox_right - bbox_left) / 2 * image_xscale, y, x + (abs(bbox_right - bbox_left) / 2 + 1) * image_xscale, y + 1, obj_block, false, false))
-		{
-			image_xscale *= -1;
-			hspd = image_xscale * moveSpd;
-		}
-	
 		if (image_xscale == 1)
 		{
-			if (collision_rectangle(bbox_right, bbox_top, bbox_right + 1, bbox_bottom, obj_block, false, false))
+			if (collision_rectangle(bbox_right, bbox_top, bbox_right + 1, bbox_bottom, obj_block, false, false)
+			|| !collision_rectangle(bbox_right, bbox_bottom, bbox_right + 1, bbox_bottom + 1, obj_block, false, false))
 			{
 				image_xscale = -1;
 				hspd = -1 * moveSpd;
@@ -69,7 +64,8 @@ switch (state)
 	
 		if (image_xscale == -1)
 		{
-			if (collision_rectangle(bbox_left - 1, bbox_top, bbox_left, bbox_bottom, obj_block, false, false))
+			if (collision_rectangle(bbox_left - 1, bbox_top, bbox_left, bbox_bottom, obj_block, false, false)
+			|| !collision_rectangle(bbox_left - 1, bbox_bottom, bbox_left, bbox_bottom + 1, obj_block, false, false))
 			{
 				image_xscale = 1;
 				hspd = 1 * moveSpd;
