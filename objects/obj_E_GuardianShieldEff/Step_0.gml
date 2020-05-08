@@ -16,8 +16,8 @@ else
 				else
 				{
 					self.image_xscale = core.image_xscale;
-					self.x = core.x + 29 * image_xscale;
-					self.y = core.y + 2;
+					self.x = core.x + xPlace * image_xscale;
+					self.y = core.y + yPlace;
 				}
 			}
 		}	break;
@@ -30,8 +30,8 @@ else
 				else
 				{
 					self.image_xscale = core.image_xscale;
-					self.x = core.x + 29 * image_xscale;
-					self.y = core.y - 22;
+					self.x = core.x + xPlace * image_xscale;
+					self.y = core.y + yPlace;
 				}
 			}
 		}	break;

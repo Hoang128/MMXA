@@ -60,6 +60,28 @@
             ]
         },
         {
+            "id": "898f79df-1704-4cfa-b385-cba95ae3036c",
+            "modelName": "GMSpriteFrame",
+            "mvc": "1.0",
+            "SpriteId": "fce0b685-5afc-4426-a8f4-1e5c7dbfccde",
+            "compositeImage": {
+                "id": "f23c7994-8986-47a0-856d-c3e76f847235",
+                "modelName": "GMSpriteImage",
+                "mvc": "1.0",
+                "FrameId": "898f79df-1704-4cfa-b385-cba95ae3036c",
+                "LayerId": "00000000-0000-0000-0000-000000000000"
+            },
+            "images": [
+                {
+                    "id": "e2c1ea0b-4026-4029-bc0c-2beb26862bc3",
+                    "modelName": "GMSpriteImage",
+                    "mvc": "1.0",
+                    "FrameId": "898f79df-1704-4cfa-b385-cba95ae3036c",
+                    "LayerId": "370382c0-d1f7-4c3a-b6f5-673e9e7f28be"
+                }
+            ]
+        },
+        {
             "id": "a29b695c-aa4a-4a01-97e3-9e2a5fa1274a",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
@@ -128,7 +150,7 @@
     "sepmasks": false,
     "swatchColours": null,
     "swfPrecision": 2.525,
-    "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
+    "textureGroupId": "0a758b68-afe6-4dc7-9805-f11fbdaba36c",
     "type": 0,
     "width": 30,
     "xorig": 15,

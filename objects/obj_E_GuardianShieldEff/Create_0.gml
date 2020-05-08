@@ -8,3 +8,5 @@ glow = 1;
 core = noone;
 imgSpd = 0.5;
 top = true;
+xPlace = 0;
+yPlace = 0;
