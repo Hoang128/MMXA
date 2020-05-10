@@ -30,20 +30,6 @@ if (damageTimmer <= 0)
 				if ((other.x - (bbox_right + bbox_left) / 2) < 0)
 					realDamage = 0;
 			}	break;
-			case 90:
-			{
-				if ((other.y - (bbox_top + bbox_bottom) / 2) < 0)
-				{
-					realDamage = 0;
-				}
-			}	break;
-			case 270:
-			{
-				if ((other.y - (bbox_top + bbox_bottom) / 2) > 0)
-				{
-					realDamage = 0;
-				}
-			}	break;
 		}
 	}
 	if (guard == 1)

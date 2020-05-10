@@ -7,7 +7,7 @@ earthQuakeEff = false;
 earthQuakeCounter = 0;
 earthQuakeRange = 3;
 
-dark = 0.75;
+dark = 0;
 glowRatio1 = 0.7;
 glowRatio2 = 0.6;
 glowRatio3 = 0.5;

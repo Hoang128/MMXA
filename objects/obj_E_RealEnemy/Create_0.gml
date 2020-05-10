@@ -11,6 +11,7 @@ iceArmor = 0;
 electArmor = 0;
 distanceToParentLimit = W_ACTIVE_BOX;
 physicAffected = false;
+gravityAffected = false;
 explosionPiece = 0;
 pieceSprite = 0;
 createExplosion = true;

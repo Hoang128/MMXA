@@ -17,27 +17,31 @@ if (!collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + W_VIEW, Y_VIEW + H_VIEW, self,
 	}
 }
 
-if (physicAffected == true)
+//Gravity
+#region
+
+if (gravityAffected)
 {
-	//Gravity
-	#region
-	
 	if (place_meeting(x, y + 1, obj_block))
 	{
-		vspd = 0;
+		if (vspd > 0)
+			vspd = 0;
 	}
 	else
 	{
 		if (vspd < MAX_FALL_AIR)
 		{
-			vspd += GRAVITY_AIR;
+			vspd += GRAVITY_AIR * DELTA_TIME;
 		}
 		else
 			vspd = MAX_FALL_AIR;
 	}
-	
-	#endregion
-	
+}
+
+#endregion
+
+if (physicAffected == true)
+{	
 	//Horizontal
 	#region
 	

@@ -9,6 +9,7 @@ damage = 1;
 damageRed = 1;
 destroy_EChain = 2;
 physicAffected = true;
+gravityAffected = true;
 shot = false;
 standTimeMax = 150;
 standTime = 0;

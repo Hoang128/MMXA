@@ -10,6 +10,7 @@ damageRed = 1;
 guard = 0;
 destroy_EChain = 1;
 physicAffected = true;
+gravityAffected = true;
 moveSpd = 0.5;
 guardTimeMax = 60;
 timeToNextGuardMax = 300;
