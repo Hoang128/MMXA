@@ -575,6 +575,14 @@
             }
         },
         {
+            "Key": "147e6fd1-9982-4bf8-a764-6d8744320579",
+            "Value": {
+                "id": "b7bd7e76-cdab-4fd1-ac54-ccd6cacdc6e1",
+                "resourcePath": "sprites\\spr_redBeetleNormal\\spr_redBeetleNormal.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "14847a30-3b7f-4615-87b1-37506287d2bd",
             "Value": {
                 "id": "c5e749ed-5761-4b64-a734-190cf5c276eb",
@@ -1316,6 +1324,14 @@
                 "id": "7595bcd1-35c1-40d9-a8f3-950118bd311d",
                 "resourcePath": "sprites\\spr_ShotEffXBusterC1\\spr_ShotEffXBusterC1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "372cc540-d64d-479f-9fcb-032b388fe79b",
+            "Value": {
+                "id": "f32cbfdb-5fc5-4755-8215-f1216e6b4587",
+                "resourcePath": "views\\372cc540-d64d-479f-9fcb-032b388fe79b.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2284,6 +2300,14 @@
                 "id": "ffeaf2f1-5d0a-44d3-9857-b96a8d741332",
                 "resourcePath": "rooms\\room_option\\room_option.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "653766f3-bd71-41df-ac60-0e87fb141f49",
+            "Value": {
+                "id": "46563bde-6bd6-4a73-af5c-9f6eeec50bd9",
+                "resourcePath": "views\\653766f3-bd71-41df-ac60-0e87fb141f49.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3943,6 +3967,14 @@
             }
         },
         {
+            "Key": "aa7891d4-349c-490b-9d4f-4c4c0d70af5a",
+            "Value": {
+                "id": "bcd8ebb5-bb88-40f4-8b79-25e351afb9b9",
+                "resourcePath": "sprites\\spr_redBeetleDown\\spr_redBeetleDown.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ab0b06d9-3752-4f33-ac9a-7341e5bf092b",
             "Value": {
                 "id": "75754ccd-7be2-4094-b967-49c7ae339b5f",
@@ -4076,6 +4108,14 @@
                 "id": "59a3e8e5-f9e4-449c-bf11-f333464593b1",
                 "resourcePath": "sounds\\snd_XLandEff\\snd_XLandEff.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "b33183c5-d3de-49d1-83a9-8a1f64714d74",
+            "Value": {
+                "id": "44bd181c-349e-43c0-abe7-cb1bf4657c6c",
+                "resourcePath": "views\\b33183c5-d3de-49d1-83a9-8a1f64714d74.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -4255,6 +4295,14 @@
             }
         },
         {
+            "Key": "bbc29aba-30b1-4aaf-a337-faa7871e250b",
+            "Value": {
+                "id": "e98ef554-56fc-4c93-b0ee-5baa4448b8af",
+                "resourcePath": "objects\\obj_S_RedBeetle\\obj_S_RedBeetle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bc94eb8d-3492-4e01-9eb4-01002e049d55",
             "Value": {
                 "id": "18803691-d6b8-4024-a497-aec5ebf4a8eb",
@@ -4396,6 +4444,14 @@
                 "id": "9e4f96cc-94f7-48eb-b03c-9124a68d457d",
                 "resourcePath": "sprites\\spr_XDying\\spr_XDying.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c2d8b45a-2c17-466d-8cdd-0fd13a311f62",
+            "Value": {
+                "id": "73749ab2-f0a7-41a0-95b7-c0816ae1f8e4",
+                "resourcePath": "objects\\obj_E_RedBeetle\\obj_E_RedBeetle.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -4788,6 +4844,14 @@
                 "id": "662c8179-ed52-4d7d-ac61-d15ca9667159",
                 "resourcePath": "objects\\obj_S_KnotBeret_Stand_Type\\obj_S_KnotBeret_Stand_Type.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d313946f-3820-4557-80ee-b2dcc6fd245a",
+            "Value": {
+                "id": "33e742ad-4475-466f-a711-dc05a027afdf",
+                "resourcePath": "sprites\\spr_redBeetleTurnBack\\spr_redBeetleTurnBack.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
