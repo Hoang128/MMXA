@@ -846,6 +846,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						}
 				
 						atkState = AttackState.A_NONE;
+						canAirDash = 0;
 						vspd = -jumpSpd;
 						airHikeTime -- ;
 					}
