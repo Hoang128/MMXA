@@ -44,8 +44,6 @@ if (backExecute || confirmExecute)
 		}
 		break;
 	}
-	global.wWidth = window_get_width();
-	global.wHeight = window_get_height();
 	backExecute = false;
 	confirmExecute = false;
 }

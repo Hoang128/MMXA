@@ -10,12 +10,21 @@ if (backExecute || confirmExecute)
 	{
 		case 0:
 		{
-			if (window_get_fullscreen() == true) window_set_fullscreen(false);
+			if (window_get_fullscreen() == true) 
+			{
+				window_set_fullscreen(false);
+				global.fullScreen = false;
+			}
 		}
 		break;
 		case 1:
 		{
-			if (window_get_fullscreen() == false) window_set_fullscreen(true);
+			if (window_get_fullscreen() == false) 
+			{
+				window_set_fullscreen(true);
+				window_set_size(global.wWidth, global.wHeight);
+				global.fullScreen = true;
+			}
 		}
 		break;
 	}
