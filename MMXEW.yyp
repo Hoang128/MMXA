@@ -1378,7 +1378,7 @@
             "Key": "3909d55e-3158-44e6-b6e8-8fd929b45400",
             "Value": {
                 "id": "ac2edd5f-af8a-440f-b473-24ebd9057250",
-                "resourcePath": "sprites\\sprite284\\sprite284.yy",
+                "resourcePath": "sprites\\spr_Raiden\\spr_Raiden.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2023,6 +2023,14 @@
             }
         },
         {
+            "Key": "549a29f5-205a-4008-8ee1-435ba2e0cc74",
+            "Value": {
+                "id": "39dff450-e718-4148-86b2-ff5303b01200",
+                "resourcePath": "views\\549a29f5-205a-4008-8ee1-435ba2e0cc74.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "5519f10a-0d78-4ab8-9802-c6e39416d7be",
             "Value": {
                 "id": "4f5ace38-8668-4cf6-9433-ebe63262fb1f",
@@ -2052,6 +2060,14 @@
                 "id": "6a23b97f-6668-40b8-901c-dca59f655385",
                 "resourcePath": "sounds\\snd_ZSkillElectEff\\snd_ZSkillElectEff.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "579b0835-1ea6-4b2b-ae58-40c548d9de1f",
+            "Value": {
+                "id": "354256d2-2eb1-406f-8af2-d0c97f6f52e1",
+                "resourcePath": "objects\\obj_S_Raiden_Fixed_Type\\obj_S_Raiden_Fixed_Type.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3191,6 +3207,14 @@
             }
         },
         {
+            "Key": "87c1746f-3e9a-43de-88ed-625e769f4793",
+            "Value": {
+                "id": "583c6f38-bf04-44dc-a6f1-24cacc445dbf",
+                "resourcePath": "sprites\\spr_RaidenSlash1\\spr_RaidenSlash1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "87f7147a-c6c8-4ab8-825d-c831d4528881",
             "Value": {
                 "id": "0cba8dad-20ca-4b1c-b249-1e17d77f3130",
@@ -3359,6 +3383,14 @@
             }
         },
         {
+            "Key": "8d5eff2b-2abb-42f2-a28e-0874da383854",
+            "Value": {
+                "id": "da8eedc0-296e-4e3d-aa2d-3eafc8ed47ea",
+                "resourcePath": "views\\8d5eff2b-2abb-42f2-a28e-0874da383854.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "8d8e3aa0-5dc9-4b71-a8ac-bd067c236738",
             "Value": {
                 "id": "5212a792-febf-43e4-91bc-8912f5872a39",
@@ -3483,6 +3515,22 @@
             "Value": {
                 "id": "c5c6052d-0d25-4b92-9562-65a8aca8c8f3",
                 "resourcePath": "views\\91f8839c-7d89-4346-93c1-dd4063e7bbb4.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9220b9f7-ca77-48ac-9d1e-8bd0d6d59002",
+            "Value": {
+                "id": "b72423a4-4d0e-43a2-9ed7-e021339d16a8",
+                "resourcePath": "objects\\obj_E_RaidenSlash\\obj_E_RaidenSlash.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9284e330-9c1c-4962-9690-d15ad63a2a87",
+            "Value": {
+                "id": "9dc4a312-0cbc-4145-a6a9-105fc9fb9624",
+                "resourcePath": "views\\9284e330-9c1c-4962-9690-d15ad63a2a87.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -4871,6 +4919,14 @@
             }
         },
         {
+            "Key": "d29b9caa-f12c-41e6-937a-b30ef38cdd83",
+            "Value": {
+                "id": "6cc8b278-f0e0-44d0-8f57-5efd0809c7fd",
+                "resourcePath": "sprites\\spr_RaidenSlashSaber\\spr_RaidenSlashSaber.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d2c5dee1-0a38-4841-8896-bd63f691d548",
             "Value": {
                 "id": "3ed3114d-c10c-4850-b798-afaa525c7c5c",
@@ -5028,6 +5084,14 @@
                 "id": "bbe2f93e-884d-4aec-ae9f-c3aa6571ccdb",
                 "resourcePath": "sounds\\snd_VZJump1\\snd_VZJump1.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "d9ad0c84-b834-4d95-8db8-4a0bf64cd2c0",
+            "Value": {
+                "id": "407f1261-c641-47d6-9cf1-01e5dca78fbc",
+                "resourcePath": "sprites\\spr_RaidenSlash2\\spr_RaidenSlash2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5404,6 +5468,14 @@
                 "id": "a6c3da32-5c5f-4311-9f78-135820cb35da",
                 "resourcePath": "sprites\\spr_ZDying\\spr_ZDying.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "eb0bcccc-530c-4e48-afbf-bf165e337909",
+            "Value": {
+                "id": "7ac35339-3345-4513-b386-bceea0510ffd",
+                "resourcePath": "objects\\obj_E_Raiden_Fixed_Type\\obj_E_Raiden_Fixed_Type.yy",
+                "resourceType": "GMObject"
             }
         },
         {

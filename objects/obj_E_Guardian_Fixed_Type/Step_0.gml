@@ -20,7 +20,13 @@ switch (state)
 		sprite_index = spr_Guardian;
 		image_index = 0;
 		if (instance_exists(obj_gameManager.playerCore))
-			image_xscale = sign(obj_gameManager.playerCore.x - self.x);
+		{
+			if (self.x = obj_gameManager.playerCore.x)	image_xscale = 1;
+			else
+			{
+				image_xscale = sign(obj_gameManager.playerCore.x - self.x);
+			}
+		}
 		guardDir = 90 - image_xscale * 90;
 		state = 1;
 	}	break;
