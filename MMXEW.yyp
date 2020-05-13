@@ -143,10 +143,26 @@
             }
         },
         {
+            "Key": "0319893c-0080-4144-bce4-54f08820e40e",
+            "Value": {
+                "id": "f005a559-0184-4dcf-929b-d6cbc27eb97f",
+                "resourcePath": "objects\\obj_E_SeaHorse\\obj_E_SeaHorse.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "037e027f-d352-431e-8479-44bef42a345d",
             "Value": {
                 "id": "441ecd2c-57b5-404f-b893-3fbdacfe3976",
                 "resourcePath": "sprites\\spr_PalZSaber\\spr_PalZSaber.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "03af75d9-4bcb-4b2b-a677-ac1763a8d07c",
+            "Value": {
+                "id": "79f68907-3676-4336-8f3b-0d913aecc55a",
+                "resourcePath": "sprites\\spr_SeaHorseIdle\\spr_SeaHorseIdle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -315,6 +331,14 @@
             "Value": {
                 "id": "86b75cf8-1612-49f4-8dae-51e3fc6ce1f5",
                 "resourcePath": "objects\\obj_blockIceSlopeL2\\obj_blockIceSlopeL2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "0976b229-46b6-4ce0-83dd-b8bae5bed7b5",
+            "Value": {
+                "id": "bb220fe5-278a-4007-a60e-bde09c837585",
+                "resourcePath": "objects\\obj_E_SeaHorseBullet\\obj_E_SeaHorseBullet.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -644,6 +668,14 @@
                 "id": "3fa20403-7f92-405d-bf68-aa23cf97ecd9",
                 "resourcePath": "sounds\\snd_XDashEff\\snd_XDashEff.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "1738a52d-4b85-47c2-82d8-1ce5110a8c98",
+            "Value": {
+                "id": "47c354bf-1c10-4ec7-b526-6654ad8a0ffe",
+                "resourcePath": "sprites\\spr_SeaHorsePiece\\spr_SeaHorsePiece.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1175,6 +1207,14 @@
             }
         },
         {
+            "Key": "31db2e84-bb8f-4064-b777-10c0bd6a6ea6",
+            "Value": {
+                "id": "ed3898af-0fc9-425d-ad65-2cce0f99867c",
+                "resourcePath": "views\\31db2e84-bb8f-4064-b777-10c0bd6a6ea6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "31f544a0-f11a-46d9-aef0-cfa87fd0dccc",
             "Value": {
                 "id": "f02bd1d5-e6e6-41e4-bba0-45a64fff17eb",
@@ -1259,6 +1299,14 @@
             "Value": {
                 "id": "e4aec5ac-fba4-4461-aa0e-131bf88ed55f",
                 "resourcePath": "sprites\\spr_knotBeretRun\\spr_knotBeretRun.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "34f0b0b3-103a-4524-88a0-c81f00cbaac9",
+            "Value": {
+                "id": "11b162d8-6b4d-4508-a247-8b428bcb8dd1",
+                "resourcePath": "sprites\\spr_SeaHorseShot\\spr_SeaHorseShot.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1388,6 +1436,14 @@
                 "id": "ef48c7a2-277a-44cb-84e6-7cacb791e8a3",
                 "resourcePath": "views\\39cfe497-c4f0-4093-b583-4eeda2c2e78f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "39d2cc8d-aade-4a1e-8404-645353cbbccb",
+            "Value": {
+                "id": "46082c8f-efbc-4cb3-857e-c124dbe8de9f",
+                "resourcePath": "objects\\obj_S_SeaHorse\\obj_S_SeaHorse.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1887,6 +1943,14 @@
             }
         },
         {
+            "Key": "4d016d0a-47eb-4f4f-9831-627d349016ce",
+            "Value": {
+                "id": "bb530d81-3501-404c-8403-2ce87984260c",
+                "resourcePath": "views\\4d016d0a-47eb-4f4f-9831-627d349016ce.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "4d69de37-3a7f-4547-af79-123019e0eef2",
             "Value": {
                 "id": "e278f8e4-ec53-4d32-b672-da1de76e814c",
@@ -2324,6 +2388,14 @@
                 "id": "54915239-6149-4857-b5e5-29c53b9e65bb",
                 "resourcePath": "sounds\\snd_VZChargeSlash\\snd_VZChargeSlash.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "63ac4504-708c-4fee-b154-b396cf4914cc",
+            "Value": {
+                "id": "4b3f49cd-b6cc-4c5b-8a6c-f3266dd6bbb2",
+                "resourcePath": "views\\63ac4504-708c-4fee-b154-b396cf4914cc.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2860,6 +2932,14 @@
                 "id": "a4bfc6c4-2aec-42db-9496-3692c5d757a6",
                 "resourcePath": "objects\\obj_flareSmall\\obj_flareSmall.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "78085294-0030-479d-8f21-504542db7149",
+            "Value": {
+                "id": "44b1ccb6-a9c1-4edd-ad95-c77cf57be00a",
+                "resourcePath": "sprites\\spr_SeaHorseBullet2\\spr_SeaHorseBullet2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3543,6 +3623,14 @@
             }
         },
         {
+            "Key": "92f555d9-73cf-4c79-abeb-cfcf890dd988",
+            "Value": {
+                "id": "b9cf1a4d-3810-4c3c-844a-d17d0417b670",
+                "resourcePath": "sprites\\sprite289\\sprite289.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "93046586-e7c0-479b-827a-54d1292177da",
             "Value": {
                 "id": "116be419-0048-47d6-83dd-6d0f3c00a21e",
@@ -3719,6 +3807,14 @@
             }
         },
         {
+            "Key": "9a603fb3-13cf-465d-98b4-dc0cedfeea18",
+            "Value": {
+                "id": "3a1a6144-d7e1-4571-a8d6-3c8acbdbac90",
+                "resourcePath": "sprites\\spr_SeaHorseBullet1\\spr_SeaHorseBullet1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9a64ac67-4b58-4171-85d8-07252e052eea",
             "Value": {
                 "id": "bc4f75b5-d1cf-4203-a819-ab4378432eb4",
@@ -3788,6 +3884,14 @@
                 "id": "f42bc3e4-78f5-411d-8267-47022c5947d6",
                 "resourcePath": "scripts\\scr_playerXChangeShotSprite\\scr_playerXChangeShotSprite.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9d2423ec-5cf8-4f6d-aa4f-69865ad4f3b2",
+            "Value": {
+                "id": "73507339-f452-46c2-aef7-32cbbf55ff6b",
+                "resourcePath": "views\\9d2423ec-5cf8-4f6d-aa4f-69865ad4f3b2.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -4316,6 +4420,14 @@
                 "id": "c4a7c741-3b92-4ebd-aed2-a8205ad4de18",
                 "resourcePath": "scripts\\scr_PalSwapSet\\scr_PalSwapSet.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b855e6b9-b364-424f-b6da-c2a4f969a043",
+            "Value": {
+                "id": "211cc66b-5ebd-4cae-927f-ed0c002e9885",
+                "resourcePath": "sprites\\spr_SeaHorseChange\\spr_SeaHorseChange.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5492,6 +5604,14 @@
                 "id": "869bf74e-eaff-48a9-8675-eec0fc2c996e",
                 "resourcePath": "scripts\\scr_ConsumeEnergyCapsule\\scr_ConsumeEnergyCapsule.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ebaf16e0-f8e7-4aeb-9ad9-9cfbc68992b6",
+            "Value": {
+                "id": "b58b4fc7-a632-4515-a0f4-fb5f46f996ed",
+                "resourcePath": "sprites\\spr_SeaHorseSpin\\spr_SeaHorseSpin.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

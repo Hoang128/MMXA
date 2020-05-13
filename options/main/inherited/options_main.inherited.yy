@@ -17,7 +17,7 @@
                     "targets": 461609314234257646,
                     "autocrop": true,
                     "border": 2,
-                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "groupParent": "7c87b910-fc46-4057-afeb-98f1a8b13dd8",
                     "mipsToGenerate": 0,
                     "scaled": true
                 }
@@ -32,7 +32,7 @@
                     "targets": 461609314234257646,
                     "autocrop": true,
                     "border": 2,
-                    "groupParent": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
+                    "groupParent": "7c87b910-fc46-4057-afeb-98f1a8b13dd8",
                     "mipsToGenerate": 0,
                     "scaled": true
                 }
@@ -47,7 +47,7 @@
                     "targets": 461609314234257646,
                     "autocrop": true,
                     "border": 2,
-                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "groupParent": "9851f183-c525-46ea-9b90-4b849a381815",
                     "mipsToGenerate": 0,
                     "scaled": true
                 }
@@ -74,6 +74,81 @@
                     "modelName": "GMTextureGroup",
                     "mvc": "1.0",
                     "groupName": "grpEnemies",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 6,
+                "Value": {
+                    "id": "f7e79ecc-c732-4bee-8665-86c1ead3a564",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpItems",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 7,
+                "Value": {
+                    "id": "7c87b910-fc46-4057-afeb-98f1a8b13dd8",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpPlayer",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 8,
+                "Value": {
+                    "id": "9851f183-c525-46ea-9b90-4b849a381815",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpUI",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 9,
+                "Value": {
+                    "id": "1fd103f2-d410-4fc8-94f2-15e14096c049",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpPhysics",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 10,
+                "Value": {
+                    "id": "898fd6be-797d-427a-92ff-fd7f155601e0",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpEffect",
                     "targets": 461609314234257646,
                     "autocrop": true,
                     "border": 2,
