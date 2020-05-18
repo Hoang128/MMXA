@@ -48,7 +48,7 @@ switch (state)
 	
 	case 2:
 	{
-		if (distance_to_point(xPlace, yPlace) < moveSpd)
+		if (distance_to_point(xPlace, yPlace) < moveSpd/2)
 		{
 			sprite_index = spr_cyberTriangle;
 			

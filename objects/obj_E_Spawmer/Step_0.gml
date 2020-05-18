@@ -15,6 +15,8 @@ if (collision_rectangle(X_ACTIVE_BOX, Y_ACTIVE_BOX, X_ACTIVE_BOX + W_ACTIVE_BOX,
 			{
 				var obj = instance_create_depth(x, y, depth, childObjectType);
 				obj.parent = self;
+				obj.image_xscale = image_xscale;
+				obj.image_yscale = image_yscale;
 				if (childObjectPal != noone)
 				{
 					obj.palette = childObjectPal;
