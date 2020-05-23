@@ -4,4 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-iceSlideSlope = -3.5;
+iceSlideSlope = -4.5;
