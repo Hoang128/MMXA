@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-hp = 5;
+hp = 500;
 
 damage = 1;
 damageRed = 1;

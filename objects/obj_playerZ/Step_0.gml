@@ -187,7 +187,13 @@ if (activateState != ActivateState.DEACTIVATE)
 					var shotEff = instance_create_depth(x + xPlace * image_xscale, y + yPlace, depth - 1, obj_ShotEffZBusterNor);
 					shotEff.image_xscale = image_xscale;
 					shotEff.busterType = busterType;
-					busterType = noone;
+					if (busterType == obj_ZThunderBlaster)
+					{
+						sprite_index = spr_ZShotHoldThunderBlaster;
+						image_index = 0;
+					}
+					else
+						busterType = noone;
 				}
 			}
 		}
@@ -553,6 +559,46 @@ if (activateState != ActivateState.DEACTIVATE)
 								instance_destroy(obj_ZSaber);
 						}
 					}
+				}
+			}
+			
+			//Thunder Blast
+			if ((keyboard_check(global.keyUp)) && (!keyboard_check(global.keyDown)))
+			{
+				if (vState == VerticalState.V_ON_GROUND)
+				{
+					if (!instance_exists(obj_ZThunderBlaster))
+					{
+						if (atkState < AttackState.A_STRICT_ATTACK_LV3)
+						{
+							audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
+							scr_MeeleWeaponDestroy(obj_ZSaberImage);
+							sprite_index = spr_ZShotNorG;
+							
+							scr_SetIceSlideSpd(hspd, true);
+							
+							hspd = 0;
+							aState = ActionState.IDLE;
+							atkState = AttackState.A_STRICT_ATTACK_LV3;
+							image_index = 0;
+							busterType = obj_ZThunderBlaster;
+							if (instance_exists(obj_ZSaber)) 
+								instance_destroy(obj_ZSaber);
+						}
+					}
+				}
+			}
+		}
+		
+		if (!keyboard_check(global.keySpAtk))
+		{
+			if (sprite_index == spr_ZShotHoldThunderBlaster && busterType = obj_ZThunderBlaster)
+			{
+				if ((instance_exists(obj_ZThunderBlaster)) && (obj_ZThunderBlaster.sprite_index == spr_ZThunderBlasterDamage))
+				{
+					busterType = noone;
+					sprite_index = spr_ZShotNorG;
+					image_index = 8;	
 				}
 			}
 		}

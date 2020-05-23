@@ -775,6 +775,14 @@
             }
         },
         {
+            "Key": "1be19541-8560-4130-b255-186233069621",
+            "Value": {
+                "id": "0d8b5b1d-9658-4ba9-8a27-17fd97431a92",
+                "resourcePath": "objects\\obj_ZThunderBlaster\\obj_ZThunderBlaster.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1c1af90f-c363-4fef-a640-2b2b42791a9c",
             "Value": {
                 "id": "2f61dc7f-5002-4b9c-9332-23cf4e8e6d46",
@@ -1159,6 +1167,14 @@
             }
         },
         {
+            "Key": "2ed9aaa6-cf0c-4d8a-a04e-5f880cde620d",
+            "Value": {
+                "id": "e1fec702-7039-4b1e-b673-de735feeb48a",
+                "resourcePath": "sprites\\spr_ZThunderBlasterStart\\spr_ZThunderBlasterStart.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2f1fc136-c487-401d-830a-4e134898556b",
             "Value": {
                 "id": "dd7f35f9-20c0-432a-af44-a8e70522e2d5",
@@ -1276,6 +1292,14 @@
                 "id": "4688bf2e-7a64-476b-8b59-e0961cefbe5e",
                 "resourcePath": "objects\\obj_ZDeathEff\\obj_ZDeathEff.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "324cde87-f57d-4b6f-88a4-d91daea13901",
+            "Value": {
+                "id": "a6cc5a27-97b0-4c31-853b-95bbde2f55fc",
+                "resourcePath": "sprites\\spr_ZShotHoldThunderBlaster\\spr_ZShotHoldThunderBlaster.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1587,6 +1611,14 @@
             "Value": {
                 "id": "baa03c31-85c8-426d-8899-a36c2cbf82b8",
                 "resourcePath": "sprites\\spr_HRastBlasterIdle\\spr_HRastBlasterIdle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3bc3cf57-e68c-41a0-bef2-e87c4f497a89",
+            "Value": {
+                "id": "810b0c85-df37-441c-bed4-cb5d29925f0b",
+                "resourcePath": "sprites\\spr_ZThunderBlasterDamage\\spr_ZThunderBlasterDamage.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2367,6 +2399,14 @@
             }
         },
         {
+            "Key": "5dfa5f3c-8025-4182-81b2-1610143b2d98",
+            "Value": {
+                "id": "38cd5877-527c-47d7-a55e-e3b3b6e0d0d6",
+                "resourcePath": "views\\5dfa5f3c-8025-4182-81b2-1610143b2d98.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "5eb0cf0e-2f62-4a5c-8274-f6781abbaeae",
             "Value": {
                 "id": "30547ba3-2941-4eb1-8bfa-ee5d56496ae6",
@@ -2476,6 +2516,14 @@
                 "id": "d3c3e738-ecc0-4fa8-8356-e8e1440f3d37",
                 "resourcePath": "sprites\\spr_ZLand\\spr_ZLand.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "639f2a04-f254-44a2-96c4-391a6996f36e",
+            "Value": {
+                "id": "128ee69c-7e11-4c26-81cb-5141bffd6a7e",
+                "resourcePath": "objects\\obj_ZThunderBlasterEndEff\\obj_ZThunderBlasterEndEff.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2907,6 +2955,14 @@
             "Value": {
                 "id": "6fc58b78-d3ef-4d77-b736-682b8b2f127f",
                 "resourcePath": "sprites\\spr_XDashKick1\\spr_XDashKick1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "72d62a0e-9c13-4084-a671-9c3627ab39e0",
+            "Value": {
+                "id": "f51868eb-3eca-4aa8-bb69-a63594242808",
+                "resourcePath": "sprites\\spr_ZThunderBlasterEnd\\spr_ZThunderBlasterEnd.yy",
                 "resourceType": "GMSprite"
             }
         },

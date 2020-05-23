@@ -12,7 +12,8 @@
         "9f2f1f70-9cb2-44d0-9a64-23926620a753",
         "fa5d47da-aa05-4c8f-b04e-28b0acf441db",
         "763a0c57-00a6-4aa1-a68c-dd902abb55ec",
-        "3cbd73ef-6e60-4382-8026-5827147bf549"
+        "3cbd73ef-6e60-4382-8026-5827147bf549",
+        "324cde87-f57d-4b6f-88a4-d91daea13901"
     ],
     "filterType": "GMSprite",
     "folderName": "Buster Core",

@@ -16,25 +16,28 @@ if (damageTimmer <= 0)
 		case Element.ELECT:		realDamage = other.damage - electArmor;		break;
 	}
 	if (realDamage < 0)	realDamage = 0;
-	if (guard == 0.5)
+	if (other.isGuardBreaker == false)
 	{
-		switch (guardDir)
+		if (guard == 0.5)
 		{
-			case 0:	
+			switch (guardDir)
 			{
-				if ((other.x - (bbox_right + bbox_left) / 2) > 0)
-					realDamage = 0;
-			}	break;
-			case 180:
-			{
-				if ((other.x - (bbox_right + bbox_left) / 2) < 0)
-					realDamage = 0;
-			}	break;
+				case 0:	
+				{
+					if ((other.x - (bbox_right + bbox_left) / 2) > 0)
+						realDamage = 0;
+				}	break;
+				case 180:
+				{
+					if ((other.x - (bbox_right + bbox_left) / 2) < 0)
+						realDamage = 0;
+				}	break;
+			}
 		}
-	}
-	if (guard == 1)
-	{
-		realDamage = 0;
+		if (guard == 1)
+		{
+			realDamage = 0;
+		}
 	}
 	if (realDamage > 0)
 	{

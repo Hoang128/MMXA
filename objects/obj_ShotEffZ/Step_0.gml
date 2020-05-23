@@ -3,39 +3,43 @@
 if visible==0 visible=1;
 image_xscale=core.image_xscale;
 
-if core.sprite_index==spr_ZShotNorG{
-	xPlace=xPlaceNor*core.image_xscale;
-    yPlace=yPlaceNor;
-}
+switch (core.sprite_index)
+{
+	case spr_ZShotNorG: 
+	case spr_ZShotHoldThunderBlaster: {
+		xPlace=xPlaceNor*core.image_xscale;
+		yPlace=yPlaceNor;
+	}	break;
 
-if core.sprite_index==spr_ZShotNorA{
-	xPlace=xPlaceJmp*core.image_xscale;
-    yPlace=yPlaceJmp;
-}
+	case spr_ZShotNorA: {
+		xPlace=xPlaceJmp*core.image_xscale;
+		yPlace=yPlaceJmp;
+	}	break;
 
-if core.sprite_index==spr_ZShotC1_G{
+	case spr_ZShotC1_G: {
 	xPlace=xPlaceCharge1*core.hDir;
 	yPlace=yPlaceCharge1;
-}
+	}	break;
 
-if core.sprite_index==spr_ZShotC2_G{
-	xPlace=xPlaceCharge2*core.hDir;
-	yPlace=yPlaceCharge2;
-}
+	case spr_ZShotC2_G: {
+		xPlace=xPlaceCharge2*core.hDir;
+		yPlace=yPlaceCharge2;
+	}	break;
 
-if core.sprite_index==spr_ZShotC1_A{
-	xPlace=xPlaceCharge1A*core.hDir;
-	yPlace=yPlaceCharge1A;
-}
+	case spr_ZShotC1_A: {
+		xPlace=xPlaceCharge1A*core.hDir;
+		yPlace=yPlaceCharge1A;
+	}	break;
 
-if core.sprite_index==spr_ZShotC2_A{
-	xPlace=xPlaceCharge2A*core.hDir;
-	yPlace=yPlaceCharge2A;
-}
+	case spr_ZShotC2_A: {
+		xPlace=xPlaceCharge2A*core.hDir;
+		yPlace=yPlaceCharge2A;
+	}	break;
 
-if core.sprite_index==spr_ZShotBarrage{
-	xPlace=xPlaceUltimate*core.hDir;
-	yPlace=yPlaceUltimate;
+	case spr_ZShotBarrage: {
+		xPlace=xPlaceUltimate*core.hDir;
+		yPlace=yPlaceUltimate;
+	}	break;
 }
 
 self.x=core.x+xPlace;
