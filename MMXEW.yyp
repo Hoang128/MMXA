@@ -242,7 +242,7 @@
             "Key": "05ed1777-a5be-4691-95e6-2bc8182ef2b6",
             "Value": {
                 "id": "992c2423-852c-4637-aad6-5b7163fae47e",
-                "resourcePath": "sprites\\sprite195\\sprite195.yy",
+                "resourcePath": "sprites\\spr_JungleBackWall\\spr_JungleBackWall.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1362,7 +1362,7 @@
             "Key": "35380c80-70f0-4c44-ac5f-2b77f4e6aa02",
             "Value": {
                 "id": "829fbd47-5a5f-4362-ac54-c8b5dc761796",
-                "resourcePath": "sprites\\sprite196\\sprite196.yy",
+                "resourcePath": "sprites\\spr_JungleSky\\spr_JungleSky.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2090,7 +2090,7 @@
             "Key": "50316aaa-8f5a-452d-a834-c237ae158a74",
             "Value": {
                 "id": "67d2e008-60a8-4d00-9742-50cb53854301",
-                "resourcePath": "sprites\\sprite199\\sprite199.yy",
+                "resourcePath": "sprites\\spr_JunglePlatformTree\\spr_JunglePlatformTree.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2370,7 +2370,7 @@
             "Key": "5eb0cf0e-2f62-4a5c-8274-f6781abbaeae",
             "Value": {
                 "id": "30547ba3-2941-4eb1-8bfa-ee5d56496ae6",
-                "resourcePath": "sprites\\sprite202\\sprite202.yy",
+                "resourcePath": "sprites\\spr_JungleEarth\\spr_JungleEarth.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2434,7 +2434,7 @@
             "Key": "60e14bb5-13e0-42e1-9f53-72c72856669c",
             "Value": {
                 "id": "3aa69956-d16d-42cc-8934-2a6461265fef",
-                "resourcePath": "sprites\\sprite197\\sprite197.yy",
+                "resourcePath": "sprites\\spr_JunglePlatform\\spr_JunglePlatform.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4194,7 +4194,7 @@
             "Key": "a6acf7b5-d92d-40cd-b07f-c7e0b60a2427",
             "Value": {
                 "id": "75e8257f-a6b1-458b-8b9a-336b757c496a",
-                "resourcePath": "sprites\\sprite201\\sprite201.yy",
+                "resourcePath": "sprites\\sprJungleBackTree\\sprJungleBackTree.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4330,7 +4330,7 @@
             "Key": "ad859c69-7f57-4a90-9411-6555c32cdf7a",
             "Value": {
                 "id": "ac0a9bc7-ccaf-4315-b193-646843a1be98",
-                "resourcePath": "sprites\\sprite200\\sprite200.yy",
+                "resourcePath": "sprites\\spr_JungleThornsTree\\spr_JungleThornsTree.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4354,7 +4354,7 @@
             "Key": "b01639a9-92b6-42cd-b64d-84a828909ff1",
             "Value": {
                 "id": "565e72b4-230c-4a39-bd21-1506b40aca5b",
-                "resourcePath": "sprites\\sprite203\\sprite203.yy",
+                "resourcePath": "sprites\\spr_JungleParallaxWaterFall\\spr_JungleParallaxWaterFall.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6139,14 +6139,6 @@
             "Value": {
                 "id": "5b33fc00-b605-412f-9fd4-6d280aab027e",
                 "resourcePath": "sprites\\spr_XShotClimb\\spr_XShotClimb.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "f90dea50-b45e-447d-bf8d-c059b489ca84",
-            "Value": {
-                "id": "a2ab991f-4b1f-4f1c-92a3-271eabf7531e",
-                "resourcePath": "sprites\\sprite198\\sprite198.yy",
                 "resourceType": "GMSprite"
             }
         },

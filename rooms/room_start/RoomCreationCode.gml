@@ -61,7 +61,7 @@ room_speed = 60;
 global.deltaTime = 1; //Using for slow-time effect
 
 //Default Config******************************************************************************************
-//Default Resolution
+//Default Graphics config
 global.wWidth = 1280;
 global.wHeight = 720;
 global.fullScreen = 0;

@@ -2,11 +2,14 @@ if (file_exists("config.ini"))
 {
 	ini_open("config.ini");
 	
-	if (ini_section_exists("window"))
+	if (os_type == os_windows)
 	{
-		global.wWidth = ini_read_real("window", "window_width", 1280);
-		global.wHeight = ini_read_real("window", "window_height", 720);
-		global.fullScreen = ini_read_real("window", "window_mode", 0);
+		if (ini_section_exists("window"))
+		{
+			global.wWidth = ini_read_real("window", "window_width", 1280);
+			global.wHeight = ini_read_real("window", "window_height", 720);
+			global.fullScreen = ini_read_real("window", "window_mode", 0);
+		}
 	}
 	
 	if (ini_section_exists("sounds"))
@@ -37,9 +40,16 @@ if (file_exists("config.ini"))
 	ini_close();
 	
 	//Setup Sound & Graphics
-	window_set_size(global.wWidth, global.wHeight);
-	if (global.fullScreen == 1)	window_set_fullscreen(true);
-	else						window_set_fullscreen(false);
+	if (os_type == os_windows)
+	{
+		window_set_size(global.wWidth, global.wHeight);
+		if (global.fullScreen == 1)	
+			window_set_fullscreen(true);
+		else						
+		{
+			window_set_fullscreen(false);
+		}
+	}
 
 	audio_master_gain(global.masterVolume);
 	audio_emitter_gain(global.BGM_Emitter, global.BGMVolume);
