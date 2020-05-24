@@ -195,7 +195,13 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				sprite_index = sprJump3;
 				image_index = 0;
-			
+				
+				if (instance_exists(obj_PlayerWeaponMeele))
+				{
+					scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
+					atkState = AttackState.A_NONE;
+				}
+				
 				aState = ActionState.IDLE;
 				vState = VerticalState.V_MOVE_FALLING;
 			}

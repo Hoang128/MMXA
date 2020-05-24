@@ -17,6 +17,9 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	if (canAirDash == 0) airHikeTime = 0;
 	
+	//Not on ground anymore when on air
+	
+	
 	//Change attack sprite from jump to land
 	#region
 	if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))

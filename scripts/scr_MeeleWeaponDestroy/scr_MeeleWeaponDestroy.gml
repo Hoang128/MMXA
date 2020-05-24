@@ -11,4 +11,14 @@ switch (obj_ImageWeapon)
 			instance_destroy(obj_ZSaber);
 	}
 	break;
+	
+	case obj_PlayerWeaponMeeleImage:
+	{
+		if (instance_exists(obj_PlayerWeaponMeeleImage))
+			instance_destroy(obj_PlayerWeaponMeeleImage);
+		
+		if (instance_exists(obj_PlayerWeaponMeele))
+			instance_destroy(obj_PlayerWeaponMeele);
+	}
+	break;
 }
