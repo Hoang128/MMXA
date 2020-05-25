@@ -10,4 +10,5 @@ if (instance_exists(obj_ZChronoField))
 			myDeltaTime *= obj_ZChronoField.slowRatio;
 	}
 	else myDeltaTime = 1;
-}
+}	
+else myDeltaTime = 1;

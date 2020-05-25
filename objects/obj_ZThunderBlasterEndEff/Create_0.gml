@@ -6,3 +6,4 @@ event_inherited();
 
 imgSpd = 0.5;
 init = 0;
+glow = 1;

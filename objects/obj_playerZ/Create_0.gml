@@ -14,8 +14,8 @@ slashWaitTime = 2;
 canChargeTimmerMax = 2;
 
 chargeCoreLv1Limit = 40;
-chargeCoreLv2Limit = 80;
-chargeCoreLv3Limit = 120;
+chargeCoreLv2Limit = 90;
+chargeCoreLv3Limit = 140;
 chargeCoreLvLimit = 3;
 
 //Initialize parents sprites***************************************************************************************************************************************
