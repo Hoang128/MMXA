@@ -14,3 +14,4 @@ moveSpd = 6;
 timeShot = maxTimeShot;
 timeEffect = maxTimeEffect;
 radius = minRadius;
+imgSpd = 0;

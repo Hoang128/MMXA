@@ -3,3 +3,4 @@
 glow = 0;
 
 myDeltaTime = 1;
+imgSpd = 0;

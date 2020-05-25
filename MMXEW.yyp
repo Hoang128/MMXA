@@ -3807,6 +3807,14 @@
             }
         },
         {
+            "Key": "92e091a8-5d9b-4edd-932f-545114307c2b",
+            "Value": {
+                "id": "d1173b10-95ae-497a-9fe1-b3b9ef492354",
+                "resourcePath": "sprites\\spr_ZChrono\\spr_ZChrono.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "92f555d9-73cf-4c79-abeb-cfcf890dd988",
             "Value": {
                 "id": "b9cf1a4d-3810-4c3c-844a-d17d0417b670",
@@ -4484,6 +4492,14 @@
                 "id": "22364372-37ef-48e4-a069-7908fdc14a88",
                 "resourcePath": "objects\\obj_ShotEffZBusterCharge\\obj_ShotEffZBusterCharge.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b3125c84-e04f-4a7a-a779-d6f9e9335e77",
+            "Value": {
+                "id": "0d4b9e00-011a-43d5-a787-5ce12152d5b4",
+                "resourcePath": "sprites\\spr_ZChronoEnd\\spr_ZChronoEnd.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6020,6 +6036,14 @@
                 "id": "b28674de-0ce1-4006-9538-f52ef3c1d1b9",
                 "resourcePath": "sounds\\snd_VXDie\\snd_VXDie.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "f1aa19dd-7ea3-4ada-9b4b-82072e3cef73",
+            "Value": {
+                "id": "399e614e-7693-47a9-ac4a-060530950e5a",
+                "resourcePath": "sprites\\spr_ZChronoStart\\spr_ZChronoStart.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

@@ -17,6 +17,7 @@ if (phase == 0)
 
 if (phase == 1)
 {
+	if (imgSpd == 0) imgSpd = 0.5;
 	if (radius < maxRadius) radius += myDeltaTime * global.deltaTime * increaseRadiusSpd;
 	else phase = 2;
 }
@@ -30,11 +31,12 @@ if (phase == 2)
 	else
 	{
 		phase = 3;
+		sprite_index = spr_ZChronoEnd;
+		image_index = 0;
 	}
 }
 
 if (phase == 3)
 {
 	if (radius > 0) radius -= myDeltaTime * global.deltaTime * increaseRadiusSpd;
-	else instance_destroy();
 }
