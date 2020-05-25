@@ -38,8 +38,8 @@ if (roomTrans != -1)
 		{
 			switch (roomTrans)
 			{
-				case noone: room_restart();		break;
-				default:	room_restart();
+				case noone: room_goto(room_over);		break;
+				default:	room_goto(room_over);
 			}
 		}
 	}

@@ -1,0 +1,1 @@
+global.isStage = false;

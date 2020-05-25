@@ -5015,6 +5015,14 @@
             }
         },
         {
+            "Key": "c931f1ac-7d72-4cbb-9458-2f0c21c1b287",
+            "Value": {
+                "id": "c2bc7bfd-b5e2-4ee0-a999-15f52876865d",
+                "resourcePath": "objects\\obj_menuGameOver\\obj_menuGameOver.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c932bf4e-e518-4d86-b975-7ea154572f23",
             "Value": {
                 "id": "126ea142-421a-442e-995f-a264cc9237a5",
@@ -5172,6 +5180,14 @@
                 "id": "9639252e-d3f3-48bb-9d3c-bc25621e4b42",
                 "resourcePath": "objects\\obj_PlayerWeapon\\obj_PlayerWeapon.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "cfb3a6af-eed8-4048-bf70-1d8083d1d294",
+            "Value": {
+                "id": "ddb2fce3-de1d-43ca-bae0-12a880804a2b",
+                "resourcePath": "views\\cfb3a6af-eed8-4048-bf70-1d8083d1d294.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -6332,6 +6348,14 @@
                 "id": "68859b23-0f43-421f-85f6-b939a96fed76",
                 "resourcePath": "sounds\\snd_XBusterCharge1\\snd_XBusterCharge1.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "ff52bc34-5d11-4c6e-91ff-a7e889d88957",
+            "Value": {
+                "id": "61ec0830-ff20-4b89-91c4-0a674e897671",
+                "resourcePath": "rooms\\room_over\\room_over.yy",
+                "resourceType": "GMRoom"
             }
         },
         {

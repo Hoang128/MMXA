@@ -2,6 +2,7 @@
 
 event_inherited();
 
+image_alpha = 0.5;
 minRadius = 5;
 maxRadius = 64;
 maxTimeEffect = 120;
