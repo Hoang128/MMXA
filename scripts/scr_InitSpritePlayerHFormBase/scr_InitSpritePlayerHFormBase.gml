@@ -32,6 +32,8 @@ switch argument0
 		sprClimb3 = spr_XClimbEnd;
 		sprStun1 = spr_XStun1;
 		sprStun2 = spr_XStun2;
+		sprWiredStart = spr_ZWiredStart;
+		sprWired = spr_ZWired;
 		#endregion
 	}
 	break;
@@ -68,6 +70,8 @@ switch argument0
 		sprClimb3 = spr_ZClimbEnd
 		sprStun1 = spr_ZStun1;
 		sprStun2 = spr_ZStun2;
+		sprWiredStart = spr_ZWiredStart;
+		sprWired = spr_ZWired;
 		#endregion
 	}
 	break;

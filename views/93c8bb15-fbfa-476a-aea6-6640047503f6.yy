@@ -16,7 +16,10 @@
         "40e575e9-69a6-4366-8879-14157c513b6a",
         "01e4f990-a8ef-429d-8ddf-d541f29d1401",
         "32e186fd-7dc1-47e2-be2e-3b745578fb63",
-        "c68740f5-3770-4caf-acc9-5b90719f8eff"
+        "c68740f5-3770-4caf-acc9-5b90719f8eff",
+        "4f73b066-9c83-4acd-90cb-a542a0ed5501",
+        "4ca5ffcf-37e4-4b7d-85d9-1076f6c370b9",
+        "438a5227-452b-40f6-b926-933d8ec66871"
     ],
     "filterType": "GMObject",
     "folderName": "Basic",

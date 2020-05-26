@@ -23,6 +23,7 @@ enum ActionState
 	DUCKING,
 	WALLKICK,
 	DASHKICK,
+	WIRING,
 	
 	WAITING //Only ride armor
 }
@@ -136,4 +137,12 @@ enum WeaponType
 	BEAM,
 	BULLET,
 	OTHER
+}
+
+//Initialize Wire type***********************************************************************************************************************************************
+enum WireType
+{
+	NONE,
+	HORIZONTAL,
+	VERTICAL
 }

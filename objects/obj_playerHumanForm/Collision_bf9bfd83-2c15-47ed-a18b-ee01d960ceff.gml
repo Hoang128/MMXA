@@ -4,6 +4,8 @@ if ((activateState == ActivateState.ACTIVATE && stunType == AttackState.A_NONE) 
 	if (stunTime <= 0)
 	{
 		aState = ActionState.STUNNING;
+		dashPhase = 0;
+		dashSpd = 0;
 		stunType = other.stunType;
 		switch(stunType)
 		{

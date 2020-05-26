@@ -43,6 +43,11 @@ stunSprLoop1 = 0;
 stunSprLoop2 = 1;
 blinkMax = 10;
 timeWaitToDestroy = 10;
+yDistanceToWirer = 44;
+wireType = WireType.NONE;
+wirer = noone;
+wireTimeMax = 10;
+wireTime = 0;
 
 //Default state
 weight = WeighType.MEDIUM;
@@ -57,6 +62,7 @@ yBeam = -1;
 hspd = 0;
 vspd = 0;
 hDir = 1;
+vDir = 1;
 canAirDash = 1;
 dashPhase = 0;
 dashTime = 0;

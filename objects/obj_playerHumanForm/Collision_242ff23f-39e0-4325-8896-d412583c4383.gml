@@ -1,4 +1,7 @@
 /// @description Dead Zone
 
 if (weight < WeighType.MASSIVE)
-	hp = 0;
+{
+	if (stunTime <= 0)
+		hp = 0;
+}

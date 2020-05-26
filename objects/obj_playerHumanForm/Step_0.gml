@@ -354,6 +354,13 @@ if (activateState != ActivateState.DEACTIVATE)
 		stunTime = 0;
 	}
 	
+	if (wireTime > 0)
+	{
+		wireTime -= DELTA_TIME;
+	}
+	else
+		wireTime = 0;
+		
 	#endregion
 	
 	//Passive with enviroment----------------------------------------------------------------------------------
@@ -389,7 +396,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (hMove != 0)
 		{
 			//Normal run
-			if((aState != ActionState.DASHING) && (aState != ActionState.CLIMBING))
+			if((aState != ActionState.DASHING) && (aState != ActionState.CLIMBING) && (aState != ActionState.WIRING))
 			{
 				if (atkState < AttackState.A_STRICT_ATTACK_LV2)
 					hDir = hMove;
@@ -474,7 +481,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							{
 								if (atkState < AttackState.A_STRICT_ATTACK)
 								{
-									if ((aState != ActionState.SLIDING) && (canSlide))
+									if ((aState != ActionState.SLIDING) && (aState != ActionState.WIRING) && (canSlide))
 									{
 										if (!place_meeting(x + hDir, y, obj_blockNoSlide) && !place_meeting(x + hDir, y, obj_blockIceNoSlide))
 										{
@@ -497,7 +504,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			else
 			//Cancel Dash by run
 			{
-				if (aState != ActionState.CLIMBING)
+				if ((aState != ActionState.CLIMBING) && (aState != ActionState.WIRING))
 				{
 					if (hMove * hDir < 0)
 					{	
@@ -750,14 +757,135 @@ if (activateState != ActivateState.DEACTIVATE)
 		
 		#endregion
 		
+		//Wiring-----------------------------------------------------------------------------------------------
+		#region
+		
+		if (aState == ActionState.WIRING)
+		{
+			var moveUp = keyboard_check(global.keyUp); 
+			var moveDown = keyboard_check(global.keyDown);
+			var vMove = moveDown - moveUp;
+			
+			with (wirer)
+			{
+				x = core.x;
+				y = core.y - core.yDistanceToWirer;
+			}
+
+			switch(wireType)
+			{
+				case WireType.HORIZONTAL:
+				{
+					if (dashPhase == 0)
+					{
+						if (!place_meeting(x + hDir * runSpd, y, obj_block) && collision_rectangle(wirer.x + hDir * 4, wirer.y + 1, wirer.x + hDir * (4 + runSpd), wirer.y - 1, obj_wire, false, false))
+						{
+							if (hMove != 0)
+								hState = HorizontalState.H_MOVE_FORWARD;
+							else
+								hState = HorizontalState.H_MOVE_NONE;
+							hspd = hMove * runSpd;
+						}
+						else
+						{
+							hspd = 0;
+							hState = HorizontalState.H_MOVE_NONE;
+						}
+					vspd = 0;
+					}
+				}	
+				break;
+				
+				case WireType.VERTICAL:
+				{
+					hspd = 0;
+					if (dashPhase == 0)
+					{
+						if (!place_meeting(x, y + vMove * runSpd, obj_block) && collision_rectangle(wirer.x - 1, wirer.y + vMove * 4, wirer.x + 1, wirer.y + vMove * (4 + runSpd), obj_wire, false, false))
+						{
+							if (vMove > 0)
+								vState = VerticalState.V_MOVE_DOWN;
+							else if (vMove < 0)
+								vState = VerticalState.V_MOVE_UP;
+							else
+								vState = VerticalState.V_MOVE_NONE;
+							vspd = vMove * runSpd;
+						}
+						else
+						{
+							vspd = 0;
+							vState = VerticalState.V_MOVE_NONE;
+						}
+					}
+				}	
+				break;
+			}
+			
+		}
+		
+		if (aState != ActionState.WIRING)
+		{
+			if (keyboard_check(global.keyUp))
+			{
+				if (collision_rectangle(x - 1, bbox_top, x + 1, bbox_top + 8, obj_wire, false, true))
+				{
+					if (wireTime == 0)
+					{
+						sprite_index = spr_ZWiredStart;
+						image_index = 0;
+						var wire = collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_top + 8, obj_wire, false, true);
+						if (place_meeting(x, y + 1, obj_block))
+							y--;
+						
+					
+						hspd = 0;
+						vspd = 0;
+						switch (wire.object_index)
+						{
+							case obj_wireHorizontal:	
+							{
+								wireType = WireType.HORIZONTAL;
+								
+								x = clamp(x, wire.bbox_left, wire.bbox_right);
+								y = wire.y + yDistanceToWirer;
+							}	break;
+							case obj_wireVertical:
+							{
+								wireType = WireType.VERTICAL;
+								
+								x = wire.x;
+								y = clamp(y, wire.bbox_bottom + yDistanceToWirer, wire.bbox_top + yDistanceToWirer);
+							}	break;
+							case noone:					
+							{
+								wireType = WireType.NONE;		
+							}	break;
+						}
+						wirer = instance_create_depth(x, y - yDistanceToWirer, depth, obj_wirer);
+						wirer.core = self;
+						canAirDash = 1;
+						dashPhase = 0;
+						dashTime = 0;
+						vState = VerticalState.V_MOVE_NONE;
+						hState = HorizontalState.H_MOVE_NONE;
+						aState = ActionState.WIRING;
+					}
+				}
+			}
+		}
+		
+		#endregion
+		
 		//Dashing----------------------------------------------------------------------------------------------
 		#region
 		
 		//Start dash
 		var wallIsAHead = (place_meeting(x + hDir, y, obj_block) && (!place_meeting(x + hDir, y, obj_slope) && !place_meeting(x + hDir, y, obj_blockIceSlope)));
-		if (keyboard_check_pressed(global.keyDash) && (!wallIsAHead))
+		var downWallIsAhead = (place_meeting(x, y + 1, obj_block));
+		var upWallIsAhead = (place_meeting(x, y - 1, obj_block));
+		if ((aState != ActionState.CLIMBING) && (aState != ActionState.WIRING) && (atkState < AttackState.A_STRICT_ATTACK_LV3))
 		{
-			if ((aState != ActionState.CLIMBING) && (atkState < AttackState.A_STRICT_ATTACK_LV3))
+			if (keyboard_check_pressed(global.keyDash) && (!wallIsAHead))
 			{
 				if (aState != ActionState.JUMPDASHING)
 				{
@@ -792,12 +920,53 @@ if (activateState != ActivateState.DEACTIVATE)
 				}
 			}
 		}
-		
-		//Dash time decrease
-		if (aState == ActionState.DASHING)
+		else if ((aState == ActionState.WIRING) && (atkState < AttackState.A_STRICT_ATTACK_LV3))
 		{
-			hspd = dashSpd * hDir;
-			if (dashTime > 0) dashTime -= DELTA_TIME;
+			if (keyboard_check_pressed(global.keyDash))
+			{
+				if (wireType == WireType.HORIZONTAL)
+				{
+					if (!wallIsAHead)
+					{
+						if (collision_rectangle(wirer.x + hDir * (4 + dashSpdPhase2 - 1), wirer.y + 1, wirer.x + hDir * (4 + dashSpdPhase2), wirer.y - 1, obj_wire, false, false))
+						{
+							dashPhase = 2;
+							dashTime = maxDashTime / 2;
+							if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+							hState = HorizontalState.H_MOVE_FORWARD;
+						}
+					}
+				}
+				if (wireType == WireType.VERTICAL)
+				{
+					if (keyboard_check(global.keyUp))
+					{
+						if (!upWallIsAhead)
+						{
+							if (collision_rectangle(wirer.x - 1, wirer.y - (4 + dashSpdPhase2 - 1), wirer.x + 1, wirer.y - (4 + dashSpdPhase2), obj_wire, false, false))
+							{
+								dashPhase = 2;
+								dashTime = maxDashTime / 2;
+								vDir = -1;
+								vState = VerticalState.V_MOVE_UP;
+							}
+						}
+					}
+					if (keyboard_check(global.keyDown))
+					{
+						if (!downWallIsAhead)
+						{
+							if (collision_rectangle(wirer.x - 1, wirer.y + (4 + dashSpdPhase2 - 1), wirer.x + 1, wirer.y + (4 + dashSpdPhase2), obj_wire, false, false))
+							{
+								dashPhase = 2;
+								dashTime = maxDashTime / 2;
+								vDir = 1;
+								vState = VerticalState.V_MOVE_DOWN;
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		//Dash phase speed
@@ -808,11 +977,41 @@ if (activateState != ActivateState.DEACTIVATE)
 			default: dashSpd = 0; break;
 		}
 		
+		//Dash time decrease
+		if ((aState == ActionState.DASHING) || (aState == ActionState.WIRING))
+		{
+			if (dashTime > 0) 
+			{
+				if (aState == ActionState.WIRING)
+				{
+					if (wireType == WireType.VERTICAL)
+					{
+						hspd = 0;
+						vspd = dashSpd * vDir;
+					}
+					if (wireType == WireType.HORIZONTAL)
+					{
+						hspd = dashSpd * hDir;
+						vspd = 0;
+					}
+				}
+				else	hspd = dashSpd * hDir;
+				dashTime -= DELTA_TIME;
+			}
+		}
+		else	
+		{
+			if (aState != ActionState.JUMPDASHING)
+				dashPhase = 0;
+		}
+		
 		//End dash
 		var wallIsAHead = ((place_meeting(x + hDir, y, obj_block)) && (!place_meeting(x + hDir, y, obj_slope) && !place_meeting(x + hDir, y, obj_blockIceSlope)));
-		if (keyboard_check_released(global.keyDash) || (wallIsAHead) || (dashTime <= 0))
+		var downWallIsAhead = (place_meeting(x, y + 1, obj_block));
+		var upWallIsAhead = (place_meeting(x, y - 1, obj_block));
+		if (aState == ActionState.DASHING)
 		{
-			if (aState == ActionState.DASHING)
+			if (keyboard_check_released(global.keyDash) || (wallIsAHead) || (dashTime <= 0))
 			{
 				if (vState != VerticalState.V_ON_GROUND)
 				{
@@ -835,6 +1034,39 @@ if (activateState != ActivateState.DEACTIVATE)
 				hspd = 0;
 				aState = ActionState.IDLE;
 				hState = HorizontalState.H_MOVE_NONE;
+			}
+		}
+		if (aState == ActionState.WIRING)
+		{
+			switch (wireType)
+			{
+				case WireType.HORIZONTAL:
+				{
+					if (dashSpd > 0)
+					{
+						var hOnWire = collision_rectangle(wirer.x + hDir * (4 + dashSpdPhase2 - 1), wirer.y + 1, wirer.x + hDir * (4 + dashSpdPhase2), wirer.y - 1, obj_wire, false, false);
+						if (keyboard_check_released(global.keyDash) || (wallIsAHead) || (!hOnWire) || (dashTime <= 0))
+						{
+							hspd = 0;
+							hState = HorizontalState.H_MOVE_NONE;
+							dashPhase = 0;
+						}
+					}
+				}	break;
+				
+				case WireType.VERTICAL:
+				{
+					if (dashSpd > 0)
+					{
+						var vOnWire = collision_rectangle(wirer.x - 1, wirer.y + vDir * (4 + dashSpdPhase2 - 1), wirer.x + 1, wirer.y + vDir * (4 + dashSpdPhase2), obj_wire, false, false)
+						if (keyboard_check_released(global.keyDash) || (upWallIsAhead) || (downWallIsAhead) || (!vOnWire) || (dashTime <= 0))
+						{
+							vspd = 0;
+							vState = VerticalState.V_MOVE_NONE;
+							dashPhase = 0;
+						}
+					}
+				}	break;
 			}
 		}
 		
@@ -893,6 +1125,41 @@ if (activateState != ActivateState.DEACTIVATE)
 						vState = VerticalState.V_MOVE_FALLING;
 						aState = ActionState.IDLE;
 						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+					}
+				}
+				
+				//Jump down from a wire
+				if (aState == ActionState.WIRING)
+				{
+					if (sprite_index == sprWired)
+					{
+						sprite_index = sprJump1;
+						image_index = 0;
+						audio_play_sound_on(global.SFX_Emitter, sndJumpEff, 0, 0);
+						var randVoiceJump = random(4);
+						if (randVoiceJump <= 3)
+						{
+							if (randVoiceJump > 2) audio_play_sound_on(global.SFX_Emitter, sndVoiceJump1, 0, 0);
+							else if (randVoiceJump >1) audio_play_sound_on(global.SFX_Emitter, sndVoiceJump2, 0, 0);
+							else audio_play_sound_on(global.SFX_Emitter, sndVoiceJump3, 0, 0);
+						}
+				
+						canJump = 0;
+						if (keyboard_check(global.keyDown))
+							vspd = 0;
+						else
+							vspd = -jumpSpd;
+						if (keyboard_check(global.keyDash))
+						{
+							aState = ActionState.JUMPDASHING;
+						}
+						else
+							aState = ActionState.IDLE;
+						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+						wireType = WireType.NONE;
+						wirer = noone;
+						wireTime = wireTimeMax;
+						vState = VerticalState.V_MOVE_FALLING;
 					}
 				}
 				
