@@ -62,7 +62,7 @@
                     "targets": 461609314234257646,
                     "autocrop": true,
                     "border": 2,
-                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "groupParent": "11fd15f5-258b-4c97-b120-e2181464b38f",
                     "mipsToGenerate": 0,
                     "scaled": true
                 }
@@ -153,6 +153,81 @@
                     "autocrop": true,
                     "border": 2,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 11,
+                "Value": {
+                    "id": "474a8ad7-c068-443e-ba52-cc50951b4ff5",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpX6Junkyard",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "11fd15f5-258b-4c97-b120-e2181464b38f",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 12,
+                "Value": {
+                    "id": "11fd15f5-258b-4c97-b120-e2181464b38f",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpStage",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 13,
+                "Value": {
+                    "id": "3ae02468-d00a-44da-a32f-878a7d6de847",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpX6MagmaZone",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "11fd15f5-258b-4c97-b120-e2181464b38f",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 14,
+                "Value": {
+                    "id": "244f32b0-7dfd-4b99-a50c-4ffc877c8064",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpX6InamiTemple",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "11fd15f5-258b-4c97-b120-e2181464b38f",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 15,
+                "Value": {
+                    "id": "63261cfb-dccd-4da2-b49e-28903ab999f3",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpX6AreaZero",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "11fd15f5-258b-4c97-b120-e2181464b38f",
                     "mipsToGenerate": 0,
                     "scaled": true
                 }
