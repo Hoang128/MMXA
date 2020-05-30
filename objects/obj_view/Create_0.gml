@@ -13,5 +13,4 @@ view_enabled = true;
 view_visible = true;
 
 scr_InitCamera();
-
 //Create UI support

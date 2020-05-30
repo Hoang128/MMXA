@@ -12,3 +12,6 @@ enum CameraState
 
 state = CameraState.NORMAL;
 playerCore = noone;
+
+moveMode = 1;
+moveSpd = 8;

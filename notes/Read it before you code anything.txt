@@ -1,4 +1,4 @@
 + any use hspd for horizontal speed moving and vspd for vertical speed moving.
-+ use myDeltaTime and global.deltaTime for every action that require move speed and counters.
++ use myDeltaTime and global.deltaTime (or DELTA_TIME) for every action that require move speed and counters.
   example 1: hspd = 4; --> hspd = 4*myDeltaTime*global.deltaTime;
-  example 2: counter -- --> counter -= myDeltaTime*global.deltaTime;
+  example 2: counter -- --> counter -= DELTA_TIME;

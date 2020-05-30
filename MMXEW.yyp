@@ -919,6 +919,14 @@
             }
         },
         {
+            "Key": "205110cb-a833-41f4-903b-59f1c414a9d6",
+            "Value": {
+                "id": "19aa7e4f-8f15-4829-81c0-9b06a25e46b0",
+                "resourcePath": "objects\\obj_limitZone\\obj_limitZone.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "207e735a-9323-493b-820e-fb2745a11e5d",
             "Value": {
                 "id": "213177bd-af81-416d-b54a-f934501167b7",
@@ -1052,6 +1060,14 @@
                 "id": "bb1073fa-976a-4982-b561-646b6c0b135f",
                 "resourcePath": "sounds\\snd_VZSwitch\\snd_VZSwitch.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "27f6cef2-7860-44b4-9691-9fb32a85a159",
+            "Value": {
+                "id": "51f9f112-9403-4dd8-b5d8-1c973de68987",
+                "resourcePath": "views\\27f6cef2-7860-44b4-9691-9fb32a85a159.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2356,6 +2372,14 @@
                 "id": "6a23b97f-6668-40b8-901c-dca59f655385",
                 "resourcePath": "sounds\\snd_ZSkillElectEff\\snd_ZSkillElectEff.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "574a9dcf-448d-4812-906b-b877bb9f81d9",
+            "Value": {
+                "id": "9df812fc-bd14-4503-8815-5eab9175a98b",
+                "resourcePath": "views\\574a9dcf-448d-4812-906b-b877bb9f81d9.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -5891,6 +5915,14 @@
             "Value": {
                 "id": "bb8af7c7-3c29-40ec-a9b8-268dd8cdc59f",
                 "resourcePath": "sprites\\spr_DGuardianShot_Shield\\spr_DGuardianShot_Shield.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "dfff3232-2a13-49b0-b16b-73705809f3c7",
+            "Value": {
+                "id": "f0c1666b-f219-4e20-a55a-4a5f7d5be982",
+                "resourcePath": "sprites\\spr_limitZone\\spr_limitZone.yy",
                 "resourceType": "GMSprite"
             }
         },
