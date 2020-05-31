@@ -1,102 +1,129 @@
 /// @description Follow the right object
 // You can write your code in this editor
-playerCore = obj_gameManager.playerCore;
 if (instance_exists(playerCore))
-depth = playerCore.depth - 1;
-
-switch state
 {
-	case CameraState.NORMAL:
-	{
-		if (instance_exists(playerCore))
-		{
-			if (playerCore.activateState != ActivateState.DEACTIVATE)
-			{
-				var xPlayer = (playerCore.bbox_right + playerCore.bbox_left) / 2;
-				var yPlayer = (playerCore.bbox_top + playerCore.bbox_bottom) / 2;
-				
-				if (moveMode == 2)
-				{
-					if (distance_to_point(xPlayer, yPlayer) > moveSpd)
-					{
-						move_towards_point(xPlayer, yPlayer, moveSpd * global.deltaTime);
-					}
-					else
-						moveMode = 1;
-				}
-						
-				if (moveMode == 1)
-				{
-					x = xPlayer;
-					y = yPlayer;
-				}
-				
-				if (collision_rectangle(playerCore.bbox_left, playerCore.bbox_top, playerCore.bbox_right, playerCore.bbox_bottom, obj_limitZone, false, true))
-				{
-					state = CameraState.LOCK_REGION;
-					moveMode = 2;
-				}
-			}
-		}
-	}	break;
+	playerCore = obj_gameManager.playerCore;
+	if (instance_exists(playerCore))
+	depth = playerCore.depth - 1;
 	
-	case CameraState.LOCK_REGION:
+	switch state
 	{
-		if (instance_exists(playerCore))
+		case CameraState.NORMAL:
 		{
-			var zone = collision_rectangle(playerCore.bbox_left, playerCore.bbox_top, playerCore.bbox_right, playerCore.bbox_bottom, obj_limitZone, false, true);
-			if (zone)
+			if (collision_rectangle(playerCore.bbox_left, playerCore.bbox_top, playerCore.bbox_right, playerCore.bbox_bottom, obj_limitZone, false, true))
 			{
-				var xPlayer = (playerCore.bbox_right + playerCore.bbox_left) / 2;
-				var yPlayer = (playerCore.bbox_top + playerCore.bbox_bottom) / 2;
-				
-				//Limit camera x position
-				if (zone.verticalLock == true)
-				{
-					xPlayer = clamp(xPlayer, zone.x + W_NATIVE_RESOLUTION/2, zone.x + zone.bbox_width - W_NATIVE_RESOLUTION/2);
-					if (zone.bbox_width < W_NATIVE_RESOLUTION)
-					{
-						xPlayer = zone.x + zone.bbox_width/2;
-					}
-				}
-	
-				//Limit camera y position
-				if (zone.horizontalLock == true)
-				{
-					yPlayer = clamp(yPlayer, zone.y + H_NATIVE_RESOLUTION/2, zone.y + zone.bbox_height - H_NATIVE_RESOLUTION/2);
-					if (zone.bbox_height < H_NATIVE_RESOLUTION)
-					{
-						yPlayer = zone.y + zone.bbox_height/2;
-					}
-				}
-				
-				if (moveMode == 2)
-				{
-					if (distance_to_point(xPlayer, yPlayer) > moveSpd)
-					{
-						move_towards_point(xPlayer, yPlayer, moveSpd * global.deltaTime);
-					}
-					else
-						moveMode = 1;
-				}
-					
-				if (moveMode == 1)
-				{
-					x = xPlayer;
-					y = yPlayer;
-				}
+				state = CameraState.LOCK_REGION;
+				moveMode = 2;
 			}
-			else
+		}	break;
+	
+		case CameraState.LOCK_REGION:
+		{
+			if (!collision_rectangle(playerCore.bbox_left, playerCore.bbox_top, playerCore.bbox_right, playerCore.bbox_bottom, obj_limitZone, false, true))
 			{
 				state = CameraState.NORMAL;
 				moveMode = 2;
 			}
-		}
-	}	break;	
+		}	break;	
 
-	case CameraState.FAILURE:
-	default:
+		case CameraState.FAILURE:
+		default:
+		{
+			//Don't do anything ?
+		}	break;
+	}
+	
+	var xPlayer = (playerCore.bbox_right + playerCore.bbox_left) / 2;
+	var yPlayer = (playerCore.bbox_top + playerCore.bbox_bottom) / 2;
+
+	//Lock zone
+	#region
+	
+	var zone = collision_rectangle(playerCore.bbox_left, playerCore.bbox_top, playerCore.bbox_right, playerCore.bbox_bottom, obj_limitZone, false, true);
+	if (zone)
 	{
-		//Don't do anything ?
-	}	break;
+		//Limit camera x position
+		if (zone.verticalLock == true)
+		{
+			if (zone.bbox_width < W_NATIVE_RESOLUTION)
+			{
+				xPlayer = zone.x + zone.bbox_width/2;
+			}
+			else
+			{
+				if (xPlayer < zone.x + W_NATIVE_RESOLUTION/2)
+					xPlayer = zone.x + W_NATIVE_RESOLUTION/2;
+				if (xPlayer > zone.x + zone.bbox_width - W_NATIVE_RESOLUTION/2)
+					xPlayer = zone.x + zone.bbox_width - W_NATIVE_RESOLUTION/2;
+			}
+		}
+	
+		//Limit camera y position
+		if (zone.horizontalLock == true)
+		{
+			if (zone.bbox_height < H_NATIVE_RESOLUTION)
+			{
+				yPlayer = zone.y + zone.bbox_height/2;
+			}
+			else
+			{
+				if (yPlayer < zone.y + H_NATIVE_RESOLUTION/2)
+					yPlayer = zone.y + H_NATIVE_RESOLUTION/2;
+				if (yPlayer > zone.y + zone.bbox_height - H_NATIVE_RESOLUTION/2)
+					yPlayer = zone.y + zone.bbox_height - H_NATIVE_RESOLUTION/2
+			}
+		}
+	}
+	
+	#endregion
+
+	//Lock gate
+	#region
+	var _list = ds_list_create();
+	var _num = collision_rectangle_list(X_VIEW, Y_VIEW, X_VIEW + W_NATIVE_RESOLUTION, Y_VIEW + H_NATIVE_RESOLUTION, obj_gate, false, false, _list, true);
+	if (_num == 1)
+	{
+		var gateObj = ds_list_find_value(_list, 0);
+		var gateCenter = (gateObj.bbox_right + gateObj.bbox_left) / 2;
+		if (gateObj.isOpening == false)
+		{
+			var distance = gateCenter - x;
+			if (distance > 0)
+			{
+				if (xPlayer > gateCenter + (gateObj.bbox_right - gateObj.bbox_left) - W_NATIVE_RESOLUTION/2)
+				{
+					xPlayer = gateCenter + (gateObj.bbox_right - gateObj.bbox_left) - W_NATIVE_RESOLUTION/2;
+				}
+			}
+			else
+			{
+				if (xPlayer < gateCenter - (gateObj.bbox_right - gateObj.bbox_left) + W_NATIVE_RESOLUTION/2)
+				{
+					xPlayer = gateCenter - (gateObj.bbox_right - gateObj.bbox_left) + W_NATIVE_RESOLUTION/2;
+				}
+			}
+		 }
+	}
+	else if (_num > 1)
+	{
+		
+	}
+	
+	#endregion
+
+	if (moveMode == 2)
+	{
+		if (distance_to_point(xPlayer, yPlayer) > moveSpd)
+		{
+			move_towards_point(xPlayer, yPlayer, moveSpd * global.deltaTime);
+		}
+		else
+			moveMode = 1;
+	}
+						
+	if (moveMode == 1)
+	{
+		x = xPlayer;
+		y = yPlayer;
+	}
 }

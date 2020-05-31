@@ -1,2 +1,0 @@
-horizontalLock = true;
-verticalLock = false;
