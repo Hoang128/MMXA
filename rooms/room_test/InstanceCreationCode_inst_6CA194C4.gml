@@ -1,0 +1,2 @@
+horizontalLock = true;
+verticalLock = false;

@@ -44,45 +44,52 @@ switch state
 	{
 		if (instance_exists(playerCore))
 		{
-			if (playerCore.activateState != ActivateState.DEACTIVATE)
+			var zone = collision_rectangle(playerCore.bbox_left, playerCore.bbox_top, playerCore.bbox_right, playerCore.bbox_bottom, obj_limitZone, false, true);
+			if (zone)
 			{
-				var zone = collision_rectangle(playerCore.bbox_left, playerCore.bbox_top, playerCore.bbox_right, playerCore.bbox_bottom, obj_limitZone, false, true);
-				if (zone)
+				var xPlayer = (playerCore.bbox_right + playerCore.bbox_left) / 2;
+				var yPlayer = (playerCore.bbox_top + playerCore.bbox_bottom) / 2;
+				
+				//Limit camera x position
+				if (zone.verticalLock == true)
 				{
-					//Limit camera x position
-					var xPlayer = clamp(playerCore.x, zone.x + W_NATIVE_RESOLUTION/2, zone.x + zone.bbox_width - W_NATIVE_RESOLUTION/2);
+					xPlayer = clamp(xPlayer, zone.x + W_NATIVE_RESOLUTION/2, zone.x + zone.bbox_width - W_NATIVE_RESOLUTION/2);
 					if (zone.bbox_width < W_NATIVE_RESOLUTION)
 					{
 						xPlayer = zone.x + zone.bbox_width/2;
 					}
+				}
 	
-					//Limit camera y position
-					var yPlayer = clamp(playerCore.y, zone.y + H_NATIVE_RESOLUTION/2, zone.y + zone.bbox_height - H_NATIVE_RESOLUTION/2);
+				//Limit camera y position
+				if (zone.horizontalLock == true)
+				{
+					yPlayer = clamp(yPlayer, zone.y + H_NATIVE_RESOLUTION/2, zone.y + zone.bbox_height - H_NATIVE_RESOLUTION/2);
 					if (zone.bbox_height < H_NATIVE_RESOLUTION)
 					{
 						yPlayer = zone.y + zone.bbox_height/2;
 					}
-					if (moveMode == 2)
-					{
-						if (distance_to_point(xPlayer, yPlayer) > moveSpd)
-						{
-							move_towards_point(xPlayer, yPlayer, moveSpd * global.deltaTime);
-						}
-						else
-							moveMode = 1;
-					}
-					
-					if (moveMode == 1)
-					{
-						x = xPlayer;
-						y = yPlayer;
-					}
 				}
-				else
+				
+				if (moveMode == 2)
 				{
-					state = CameraState.NORMAL;
-					moveMode = 2;
+					if (distance_to_point(xPlayer, yPlayer) > moveSpd)
+					{
+						move_towards_point(xPlayer, yPlayer, moveSpd * global.deltaTime);
+					}
+					else
+						moveMode = 1;
 				}
+					
+				if (moveMode == 1)
+				{
+					x = xPlayer;
+					y = yPlayer;
+				}
+			}
+			else
+			{
+				state = CameraState.NORMAL;
+				moveMode = 2;
 			}
 		}
 	}	break;	

@@ -19,6 +19,19 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	//Not on ground anymore when on air
 	
+	//Charge slash earth quake
+	#region
+	
+	if (sprite_index == spr_ZSlashCharge_G)
+	{
+		if (image_index > 7)
+		{
+			if (!scr_isQuake())
+				scr_SetQuake(30);
+		}
+	}
+	
+	#endregion
 	
 	//Change attack sprite from jump to land
 	#region

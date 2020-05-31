@@ -14,3 +14,5 @@ view_visible = true;
 
 scr_InitCamera();
 //Create UI support
+
+quake = 0;
