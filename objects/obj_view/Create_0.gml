@@ -1,5 +1,5 @@
 /// @description Init
-instance_create_depth(x, y, depth + 1, obj_cameraMan);
+playerCore = noone;
 instance_create_depth(x, y, depth + 100, obj_HUD);
 instance_create_depth(x, y, depth + 200, obj_globalEffManager);
 
@@ -14,5 +14,18 @@ view_visible = true;
 
 scr_InitCamera();
 //Create UI support
+
+enum CameraState
+{
+	CUTSCENE,
+	NORMAL,
+	LOCK_REGION,
+	FAILURE
+};
+
+moveMode = CameraState.NORMAL;
+moveSpd = 8;
+
+state = CameraState.NORMAL;
 
 quake = 0;

@@ -223,10 +223,10 @@ switch (sprite_index)
 		vState = VerticalState.V_ON_GROUND;
 		activateState = ActivateState.ACTIVATE;
 		vspd = 0;
-		if (instance_exists(obj_cameraMan))
+		if (instance_exists(obj_view))
 		{
-			obj_cameraMan.state = CameraState.NORMAL;
-			obj_cameraMan.playerCore = self;
+			obj_view.state = CameraState.NORMAL;
+			obj_view.playerCore = self;
 			obj_gameManager.playerCore = self;
 		}
 		
