@@ -29,3 +29,6 @@ moveSpd = 8;
 state = CameraState.NORMAL;
 
 quake = 0;
+
+xPlayer = 0;
+yPlayer = 0;

@@ -2,6 +2,8 @@
 
 event_inherited();
 
+obj_view.state = CameraState.FAILURE;
+
 if (aState == ActionState.DYING)
 {
 	audio_play_sound_on(global.SFX_Emitter, sndVoiceDie, 0, 0);

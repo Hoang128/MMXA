@@ -12,5 +12,4 @@ objToDeactivate.activateState = ActivateState.DEACTIVATE;
 
 objToActivate.activateState = stateToActivate;
 
-obj_cameraMan.playerCore = objToActivate;
 obj_gameManager.playerCore = objToActivate;

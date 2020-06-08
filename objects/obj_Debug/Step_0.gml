@@ -108,15 +108,15 @@ if (keyboard_check(ord("Q")))
 	{
 		if (!instance_exists(obj_changePlayer))
 		{
-			if (instance_exists(obj_cameraMan.playerCore))
+			if (instance_exists(obj_gameManager.playerCore))
 			{
-				if (obj_cameraMan.playerCore.sprite_index == obj_cameraMan.playerCore.sprStand)
+				if (obj_gameManager.playerCore.sprite_index == obj_gameManager.playerCore.sprStand)
 				{
-					var objChange = instance_create_depth(x, obj_cameraMan.playerCore.y, depth, obj_changePlayer);
-					objChange.playerChangeFrom = obj_cameraMan.playerCore;
-					if (obj_cameraMan.playerCore.object_index == obj_playerX) 
+					var objChange = instance_create_depth(x, obj_gameManager.playerCore.y, depth, obj_changePlayer);
+					objChange.playerChangeFrom = obj_gameManager.playerCore;
+					if (obj_gameManager.playerCore.object_index == obj_playerX) 
 						objChange.playerChangeTo = obj_playerZ;
-					if (obj_cameraMan.playerCore.object_index == obj_playerZ) 
+					if (obj_gameManager.playerCore.object_index == obj_playerZ) 
 						objChange.playerChangeTo = obj_playerX;
 				}
 			}

@@ -263,13 +263,16 @@ switch (state)
 		{
 			if (!place_meeting(x, y + 1, obj_block) && abs(vspd) < (GRAVITY_AIR))
 			{
-				if ((self.y - obj_gameManager.playerCore.y) < 8)
-					sprite_index = spr_walkCannonJumpShotDown;
-				else
-					sprite_index = spr_walkCannonJumpShotUp;
-				image_index = 0;
-				gravityAffected = false;
-				state = 4;
+				if (instance_exists(obj_gameManager.playerCore))
+				{
+					if ((self.y - obj_gameManager.playerCore.y) < 8)
+						sprite_index = spr_walkCannonJumpShotDown;
+					else
+						sprite_index = spr_walkCannonJumpShotUp;
+					image_index = 0;
+					gravityAffected = false;
+					state = 4;
+				}
 			}
 		}
 	}	break;

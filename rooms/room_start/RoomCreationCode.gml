@@ -2,6 +2,8 @@
 scr_InitializeMacros();
 scr_InitializeEnumStates();
 
+global.BGM_current = noone;
+
 global.font = fontDebug;
 
 global.debugging = true;

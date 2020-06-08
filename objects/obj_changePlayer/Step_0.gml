@@ -2,7 +2,7 @@
 
 if (init == false)
 {
-	obj_cameraMan.state = CameraState.FAILURE;
+	obj_view.state = CameraState.FAILURE;
 	
 	with (playerChangeFrom)
 	{
