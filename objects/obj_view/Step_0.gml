@@ -38,6 +38,77 @@ if (playerCore != noone)
 	
 	#endregion
 	
+	//Lock gate
+	#region
+
+	var _list = ds_list_create();
+	var _num = collision_rectangle_list(X_VIEW, Y_VIEW, X_VIEW + W_NATIVE_RESOLUTION, Y_VIEW + H_NATIVE_RESOLUTION, obj_gate, false, false, _list, true);
+	if (_num > 0)
+	{
+		if (_num == 1)
+		{
+			var gateObj = ds_list_find_value(_list, 0);
+			var gateCenter = (gateObj.bbox_right + gateObj.bbox_left) / 2;
+			if (gateObj.state != gateState.UNLOCKING)
+			{
+				var distance = gateCenter - x;
+				if (distance > 16)
+				{
+					if (xPlayer > gateCenter + 16 - W_NATIVE_RESOLUTION/2)
+					{
+						xPlayer = gateCenter + 16 - W_NATIVE_RESOLUTION/2;
+					}
+				}
+				else if (distance < -16)
+				{
+					if (xPlayer < gateCenter - 16 + W_NATIVE_RESOLUTION/2)
+					{
+						xPlayer = gateCenter - 16 + W_NATIVE_RESOLUTION/2;
+					}
+				}
+			}
+			else
+				xPlayer = (playerCore.bbox_right + playerCore.bbox_left) / 2;
+		}
+		else if (_num > 1)
+		{
+			var _minX = room_width;
+			var _maxX = 0;
+			var allLock = true;
+			for (var i = 0; i < ds_list_size(_list); ++i)
+			{
+				if (ds_list_find_value(_list, i).state == gateState.UNLOCKING)
+				{
+					allLock = false;
+					break;
+				}
+				if ((ds_list_find_value(_list, i).x + 16) > _maxX)
+					_maxX = ds_list_find_value(_list, i).x;
+				if ((ds_list_find_value(_list, i).x + 16) < _minX)
+					_minX = ds_list_find_value(_list, i).x;
+			}
+			if (allLock)
+			{
+				if ((_maxX - _minX) > W_NATIVE_RESOLUTION)
+				{
+					if (xPlayer > _maxX + 16 - W_NATIVE_RESOLUTION/2)
+						xPlayer = _maxX + 16 - W_NATIVE_RESOLUTION/2;
+					if (xPlayer < _minX - 16 + W_NATIVE_RESOLUTION/2)
+						xPlayer = _minX - 16 + W_NATIVE_RESOLUTION/2;
+				}
+				else
+				{
+					if (state != CameraState.LOCK_REGION)
+						xPlayer = (_maxX + 16 + _minX + 16) / 2;
+				}
+			}
+			else
+				xPlayer = (playerCore.bbox_right + playerCore.bbox_left) / 2;
+		}
+	}
+	
+	#endregion
+	
 	//Lock zone
 	#region
 	
@@ -78,7 +149,7 @@ if (playerCore != noone)
 	}
 	
 	#endregion
-
+	
 	//Move speed
 	#region
 	
