@@ -1,10 +1,10 @@
 /// @description Change elem in real-time
 playerCore = obj_gameManager.playerCore;
 
-if (playerCore != noone)
+if (instance_exists(playerCore))
 {	
-	xPlayer = (playerCore.bbox_right + playerCore.bbox_left) / 2;
-	yPlayer =  playerCore.bbox_bottom;
+	xPos = (playerCore.bbox_right + playerCore.bbox_left) / 2;
+	yPos =  playerCore.bbox_bottom;
 	
 	//Set camera state
 	#region
@@ -54,21 +54,21 @@ if (playerCore != noone)
 				var distance = gateCenter - x;
 				if (distance > 16)
 				{
-					if (xPlayer > gateCenter + 16 - W_NATIVE_RESOLUTION/2)
+					if (xPos > gateCenter + 16 - W_NATIVE_RESOLUTION/2)
 					{
-						xPlayer = gateCenter + 16 - W_NATIVE_RESOLUTION/2;
+						xPos = gateCenter + 16 - W_NATIVE_RESOLUTION/2;
 					}
 				}
 				else if (distance < -16)
 				{
-					if (xPlayer < gateCenter - 16 + W_NATIVE_RESOLUTION/2)
+					if (xPos < gateCenter - 16 + W_NATIVE_RESOLUTION/2)
 					{
-						xPlayer = gateCenter - 16 + W_NATIVE_RESOLUTION/2;
+						xPos = gateCenter - 16 + W_NATIVE_RESOLUTION/2;
 					}
 				}
 			}
 			else
-				xPlayer = (playerCore.bbox_right + playerCore.bbox_left) / 2;
+				xPos = (playerCore.bbox_right + playerCore.bbox_left) / 2;
 		}
 		else if (_num > 1)
 		{
@@ -91,19 +91,19 @@ if (playerCore != noone)
 			{
 				if ((_maxX - _minX) > W_NATIVE_RESOLUTION)
 				{
-					if (xPlayer > _maxX + 16 - W_NATIVE_RESOLUTION/2)
-						xPlayer = _maxX + 16 - W_NATIVE_RESOLUTION/2;
-					if (xPlayer < _minX - 16 + W_NATIVE_RESOLUTION/2)
-						xPlayer = _minX - 16 + W_NATIVE_RESOLUTION/2;
+					if (xPos > _maxX + 16 - W_NATIVE_RESOLUTION/2)
+						xPos = _maxX + 16 - W_NATIVE_RESOLUTION/2;
+					if (xPos < _minX - 16 + W_NATIVE_RESOLUTION/2)
+						xPos = _minX - 16 + W_NATIVE_RESOLUTION/2;
 				}
 				else
 				{
 					if (state != CameraState.LOCK_REGION)
-						xPlayer = (_maxX + 16 + _minX + 16) / 2;
+						xPos = (_maxX + 16 + _minX + 16) / 2;
 				}
 			}
 			else
-				xPlayer = (playerCore.bbox_right + playerCore.bbox_left) / 2;
+				xPos = (playerCore.bbox_right + playerCore.bbox_left) / 2;
 		}
 	}
 	
@@ -120,14 +120,14 @@ if (playerCore != noone)
 		{
 			if (zone.bbox_width < W_NATIVE_RESOLUTION)
 			{
-				xPlayer = zone.x + zone.bbox_width/2;
+				xPos = zone.x + zone.bbox_width/2;
 			}
 			else
 			{
-				if (xPlayer < zone.x + W_NATIVE_RESOLUTION/2)
-					xPlayer = zone.x + W_NATIVE_RESOLUTION/2;
-				if (xPlayer > zone.x + zone.bbox_width - W_NATIVE_RESOLUTION/2)
-					xPlayer = zone.x + zone.bbox_width - W_NATIVE_RESOLUTION/2;
+				if (xPos < zone.x + W_NATIVE_RESOLUTION/2)
+					xPos = zone.x + W_NATIVE_RESOLUTION/2;
+				if (xPos > zone.x + zone.bbox_width - W_NATIVE_RESOLUTION/2)
+					xPos = zone.x + zone.bbox_width - W_NATIVE_RESOLUTION/2;
 			}
 		}
 	
@@ -136,14 +136,14 @@ if (playerCore != noone)
 		{
 			if (zone.bbox_height < H_NATIVE_RESOLUTION)
 			{
-				yPlayer = zone.y + zone.bbox_height/2;
+				yPos = zone.y + zone.bbox_height/2;
 			}
 			else
 			{
-				if (yPlayer < zone.y + H_NATIVE_RESOLUTION/2)
-					yPlayer = zone.y + H_NATIVE_RESOLUTION/2;
-				if (yPlayer > zone.y + zone.bbox_height - H_NATIVE_RESOLUTION/2)
-					yPlayer = zone.y + zone.bbox_height - H_NATIVE_RESOLUTION/2
+				if (yPos < zone.y + H_NATIVE_RESOLUTION/2)
+					yPos = zone.y + H_NATIVE_RESOLUTION/2;
+				if (yPos > zone.y + zone.bbox_height - H_NATIVE_RESOLUTION/2)
+					yPos = zone.y + zone.bbox_height - H_NATIVE_RESOLUTION/2
 			}
 		}
 	}
@@ -155,15 +155,15 @@ if (playerCore != noone)
 	
 	if (moveMode == 1)
 	{
-		x = xPlayer;
-		y = yPlayer;
+		x = xPos;
+		y = yPos;
 	}
 	
 	if (moveMode == 2)
 	{
-		if (distance_to_point(xPlayer, yPlayer) > moveSpd)
+		if (distance_to_point(xPos, yPos) > moveSpd)
 		{
-			move_towards_point(xPlayer, yPlayer, moveSpd * global.deltaTime);
+			move_towards_point(xPos, yPos, moveSpd * global.deltaTime);
 		}
 		else
 		{
@@ -173,14 +173,17 @@ if (playerCore != noone)
 	
 	#endregion
 	
-	camera_set_view_pos(view_camera, xPlayer - W_VIEW/2, yPlayer - H_VIEW/2);
+	if (!zone || zone.vFixedCam == false)
+		camera_set_view_pos(view_camera, xPos - W_VIEW/2, camera_get_view_y(view_camera));
+	else
+		camera_set_view_pos(view_camera, xPos - W_VIEW/2, yPos - H_VIEW/2);
 }
 else
 {
 	if (state == CameraState.FAILURE)
 	{
-		x = xPlayer;
-		y = yPlayer;
+		x = xPos;
+		y = yPos;
 	}
 }
 

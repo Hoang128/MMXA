@@ -30,5 +30,5 @@ state = CameraState.NORMAL;
 
 quake = 0;
 
-xPlayer = 0;
-yPlayer = 0;
+xPos = 0;
+yPos = 0;

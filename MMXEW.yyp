@@ -647,6 +647,14 @@
             }
         },
         {
+            "Key": "142a9879-3e33-4720-ad86-3bc7e89458d4",
+            "Value": {
+                "id": "cb6711d8-2f88-49ff-a57b-70d0c7fb6f0d",
+                "resourcePath": "sprites\\spr_gateCommonUnlock\\spr_gateCommonUnlock.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "143627a6-ad2e-4366-ab55-cf05c3905235",
             "Value": {
                 "id": "53330c53-4467-4e73-b12b-2990d17b6ff8",
@@ -796,6 +804,14 @@
                 "id": "a08856c5-c10d-477d-a928-1f326c57e578",
                 "resourcePath": "tilesets\\tile_X6Junkyard_Backwall\\tile_X6Junkyard_Backwall.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "1aeac973-816a-4a06-8c30-714158184717",
+            "Value": {
+                "id": "02940217-accd-46c4-9af0-0b67f6f83961",
+                "resourcePath": "views\\1aeac973-816a-4a06-8c30-714158184717.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2196,6 +2212,14 @@
                 "id": "77b815f7-56ab-44ce-80a0-a58310e2140c",
                 "resourcePath": "scripts\\scr_MeeleWeaponDestroy\\scr_MeeleWeaponDestroy.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4c8df99d-7d75-4394-8c49-93eb2dc7d9e8",
+            "Value": {
+                "id": "4261b4c8-c731-444e-98c3-5d3cd8deaeb7",
+                "resourcePath": "sounds\\snd_moveGate\\snd_moveGate.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -4727,6 +4751,14 @@
             }
         },
         {
+            "Key": "af6dfa89-7880-442b-abe1-7dc720c296a4",
+            "Value": {
+                "id": "c766c516-cd9b-4e72-bcd6-508ba6560b5f",
+                "resourcePath": "sounds\\snd_spinGate\\snd_spinGate.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "af985271-323f-4e4b-a6a9-507cbaf283ea",
             "Value": {
                 "id": "b557b0f6-7967-43e3-9d8a-1b80ee757085",
@@ -6407,6 +6439,14 @@
             }
         },
         {
+            "Key": "ede3f41e-d9c7-4f94-8a9f-f6018bfb6800",
+            "Value": {
+                "id": "9f596135-b0bb-4ee7-8bb2-13270e63e67c",
+                "resourcePath": "sprites\\spr_gateBossUnlock\\spr_gateBossUnlock.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ee236ccc-b391-491b-8b18-7252a390f958",
             "Value": {
                 "id": "3e62e680-b664-47b1-998c-0242c8320457",
@@ -6655,6 +6695,14 @@
             }
         },
         {
+            "Key": "f61efc54-ad1b-4af3-9567-111e0faa76bc",
+            "Value": {
+                "id": "1071e1e5-797a-400f-8bee-94aa0451f689",
+                "resourcePath": "scripts\\scr_playerBackToIdle\\scr_playerBackToIdle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f68eba7e-8845-47d0-b636-5d6c5a7a6e68",
             "Value": {
                 "id": "1aecd189-a255-4124-8824-6ae04b81b083",
@@ -6885,6 +6933,7 @@
         "7c69365c-a3e2-462a-96ad-b79288d746ff",
         "d7e4e745-18ee-4256-a3de-ae50cc335b68",
         "fff2ea87-eb25-46c5-aecb-75696be04e5f",
+        "f61efc54-ad1b-4af3-9567-111e0faa76bc",
         "bde8392f-6330-47e0-a68b-0e2e6195c91a",
         "a3bf0979-ecca-4d53-8b5c-be768e539034",
         "9a64ac67-4b58-4171-85d8-07252e052eea",
