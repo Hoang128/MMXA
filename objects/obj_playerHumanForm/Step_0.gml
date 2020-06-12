@@ -191,25 +191,28 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		if (vState == VerticalState.V_ON_GROUND)
 		{
-			if (!place_meeting(x, y + maxDisDetectSlopeAbove, obj_block))
+			if (aState != ActionState.STARTDOWN)
 			{
-				sprite_index = sprJump3;
-				image_index = 0;
-				
-				if (instance_exists(obj_PlayerWeaponMeele))
+				if (!place_meeting(x, y + maxDisDetectSlopeAbove, obj_block))
 				{
-					scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
-					atkState = AttackState.A_NONE;
+					sprite_index = sprJump3;
+					image_index = 0;
+				
+					if (instance_exists(obj_PlayerWeaponMeele))
+					{
+						scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
+						atkState = AttackState.A_NONE;
+					}
+				
+					aState = ActionState.IDLE;
+					vState = VerticalState.V_MOVE_FALLING;
 				}
-				
-				aState = ActionState.IDLE;
-				vState = VerticalState.V_MOVE_FALLING;
-			}
-			else
-			{
-				while (!place_meeting(x, y + 1, obj_block))
+				else
 				{
-					y++;
+					while (!place_meeting(x, y + 1, obj_block))
+					{
+						y++;
+					}
 				}
 			}
 		}
@@ -364,6 +367,8 @@ if (activateState != ActivateState.DEACTIVATE)
 	#endregion
 	
 	//Passive with enviroment----------------------------------------------------------------------------------
+	#region
+	
 	switch(inWater)
 	{
 		case InLiquid.FULL:
@@ -378,6 +383,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 	}
 	
+	#endregion
 
 	#endregion
 	//*********************************************************************************************************

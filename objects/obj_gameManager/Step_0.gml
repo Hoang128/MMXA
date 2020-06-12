@@ -17,6 +17,8 @@ else
 	instance_activate_object(obj_E_Spawmer);
 	instance_activate_object(obj_dynamicBlock);
 	instance_activate_object(obj_block);
+	instance_activate_object(obj_effScreen);
+	instance_activate_object(obj_UI);
 	instance_activate_object(playerCore);
 	instance_activate_region(X_ACTIVE_BOX, Y_ACTIVE_BOX, X_ACTIVE_BOX + W_ACTIVE_BOX, Y_ACTIVE_BOX + H_ACTIVE_BOX, true);
 	
@@ -39,7 +41,13 @@ if (roomTrans != -1)
 		{
 			switch (roomTrans)
 			{
-				case noone: room_goto(room_over);		break;
+				case noone: 
+				{
+					if (lives < 0)
+						room_goto(room_over);
+					else
+						room_restart();
+				}	break;
 				default:	room_goto(room_over);
 			}
 		}

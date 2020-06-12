@@ -3,7 +3,7 @@
 
 //Initialize parameter
 font = fnt_UIBoldSmall;
-lineNumber = 3;
+lineNumber = 1;
 background = 0;
 lineSpace = 16;
 xStartSpace = 4;

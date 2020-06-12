@@ -24,7 +24,7 @@ enum ActionState
 	WALLKICK,
 	DASHKICK,
 	WIRING,
-	
+	STARTDOWN,
 	WAITING //Only ride armor
 }
 

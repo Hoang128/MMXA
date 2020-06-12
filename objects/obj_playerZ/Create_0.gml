@@ -4,6 +4,7 @@
 event_inherited();
 
 //Initialize Parameters********************************************************************************************************************************************
+weight = WeighType.MEDIUM;
 hp = global.hpMax[1];
 wp = global.wpMax[1];
 atkSpriteTimeMax = 60;
@@ -43,6 +44,3 @@ canCharge = 0;
 canChargeTimmer = 0;
 chargeCore = 0;
 chargeCoreLv = 0;
-
-//Sound Beam-down
-audio_play_sound_on(global.SFX_Emitter, sndBeamDown, 0, 0);

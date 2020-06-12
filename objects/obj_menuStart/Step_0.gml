@@ -6,6 +6,11 @@ event_inherited();
 
 if (lineExecute[1])
 {
+	with(obj_gameManager)
+	{
+		global.xSpawmLocation = x;
+		global.ySpawmLocation = y;
+	}
 	room_goto(room_test);
 }
 

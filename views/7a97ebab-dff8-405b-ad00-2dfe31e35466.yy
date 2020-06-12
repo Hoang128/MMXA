@@ -7,7 +7,8 @@
         "ebf62235-634f-4267-bc80-b608ac021a9a",
         "9ebd79a1-42f9-46f4-8660-aef43b30ce12",
         "46def8dc-e993-4322-9194-f2b63782706c",
-        "b992b0f1-3cbd-4ea2-aa1e-a47512921c9c"
+        "b992b0f1-3cbd-4ea2-aa1e-a47512921c9c",
+        "87e3de5d-35fe-44a2-9641-271830741709"
     ],
     "filterType": "GMObject",
     "folderName": "Root menu",

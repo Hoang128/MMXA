@@ -1,6 +1,21 @@
 /// @description Animated end stuff
 switch (sprite_index)
 {
+	case sprStand:
+	{
+		if (aState == ActionState.STARTDOWN)
+		{
+			if (!instance_exists(obj_effOpening_Black))
+			{
+				obj_view.state = CameraState.NORMAL;
+				obj_gameManager.playerCore = self;
+				activateState = ActivateState.ACTIVATE;
+				aState = ActionState.IDLE;
+			}
+		}
+	}
+	break;
+	
 	case sprRunStart:
 	{
 		sprite_index = sprRun;
@@ -226,7 +241,6 @@ switch (sprite_index)
 		if (instance_exists(obj_view))
 		{
 			obj_view.state = CameraState.NORMAL;
-			obj_view.playerCore = self;
 			obj_gameManager.playerCore = self;
 		}
 		

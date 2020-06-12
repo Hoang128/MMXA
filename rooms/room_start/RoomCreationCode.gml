@@ -11,6 +11,14 @@ global.debugging = true;
 global.isStage = false;
 
 //Default parameter***************************************************************************************
+//Default Lives
+lives = 2;
+
+//Default Spawm location
+global.xSpawmLocation = 0;
+global.ySpawmLocation = 0;
+global.airSpawm = true;
+
 //Default HP & MP
 global.hpMax[0] = 16;
 global.hpMax[1] = 16;

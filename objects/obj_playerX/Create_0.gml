@@ -4,6 +4,7 @@
 event_inherited();
 
 //Initialize Parameters
+weight = WeighType.MEDIUM;
 hp = global.hpMax[0];
 wp = global.wpMax[0];
 atkSpriteTimeMax = 20;
@@ -34,6 +35,3 @@ scr_InitStatePlayer(weight);
 atkSpriteTime = 0;
 busterOnRow = 0;
 resetBusterOnRowMax = 0;
-
-//Sound Beam-down
-audio_play_sound_on(global.SFX_Emitter, snd_XBeamDownEff, 0, 0);

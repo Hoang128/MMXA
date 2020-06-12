@@ -8,14 +8,15 @@ if (global.debugging)
 
 //Init for start room
 
+instance_create_depth(x, y, depth, obj_effOpening_Black);
+
 if (global.isStage)
 {
-	instance_create_depth(x, y, depth, obj_view);
+	instance_create_depth(x, y, -1500, obj_fMenuMapName);
 	instance_create_depth(x, y, depth, obj_globalEffManager);
-	instance_create_depth(x, y, -100, obj_playerZ);
+	instance_create_depth(global.xSpawmLocation, global.ySpawmLocation, depth, obj_view);
+	instance_create_depth(global.xSpawmLocation, global.ySpawmLocation, -100, obj_playerZ);
 }
-
-instance_create_depth(x, y, depth, obj_effOpening_Black);
 
 roomTrans = -1;
 timeWaitTrans = timeWaitTransMax;
