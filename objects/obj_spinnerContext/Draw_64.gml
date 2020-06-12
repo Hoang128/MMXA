@@ -11,6 +11,7 @@ if (active)
 }
 else
 {
-	draw_set_color(c_white);
+	if (enable)	draw_set_color(c_white);
+	else		draw_set_color(c_gray);
 	draw_text(x, y, string(context[cursor]));
 }

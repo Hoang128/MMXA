@@ -11,6 +11,7 @@ triangleWidth = 20;
 triangleHeight = 32;
 line = 0;
 parent = noone;
+enable = 1;
 
 context[0] = "A";
 context[1] = "B";
