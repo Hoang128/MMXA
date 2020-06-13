@@ -12,8 +12,11 @@ if (instance_exists(obj_gameManager.playerCore))
 				if ((bbox_bottom >= obj_gameManager.playerCore.bbox_bottom) && (bbox_top <= obj_gameManager.playerCore.bbox_top))
 				if (obj_gameManager.playerCore.hDir == sign(self.x - obj_gameManager.playerCore.x))
 				{
-					scr_playerBackToIdle();
-					phase = 1;
+					if (lock == false)
+					{
+						scr_playerBackToIdle();
+						phase = 1;
+					}
 				}
 			}
 		}	break;

@@ -62,6 +62,12 @@ global.zCore[2] = ItemState.USING;
 global.zForm[1] = ItemState.USING;
 global.zSaber[1] = ItemState.USING;
 
+//Default Key
+global.keyRed = ItemState.UNLOCK;	//For debug
+global.keyBlue = ItemState.UNLOCK;
+global.keyOrange = ItemState.UNLOCK;
+global.keyPurple = ItemState.LOCK;
+
 //Default Weather Effect
 global.glow = 0;
 
