@@ -1,18 +1,15 @@
 /// @description Init
+//Time slow
 timeSlowEff = false;
 timeSlowCounter = 0;
 timeSlowRatio = 1;
 
+//Earth Quake
 earthQuakeEff = false;
 earthQuakeCounter = 0;
 earthQuakeRange = 3;
 
-dark = 0;
-glowRatio1 = 0.7;
-glowRatio2 = 0.6;
-glowRatio3 = 0.5;
-glowRadiusBonus = 8;
-
-glowSurface = surface_create(camera_get_view_width(view_camera), camera_get_view_height(view_camera));
+//Glow
+instance_create_depth(x, y, depth, obj_glowEff);
 
 myDeltaTime = 1;

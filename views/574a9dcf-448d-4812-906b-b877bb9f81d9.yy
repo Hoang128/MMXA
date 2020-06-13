@@ -4,7 +4,8 @@
     "mvc": "1.1",
     "name": "574a9dcf-448d-4812-906b-b877bb9f81d9",
     "children": [
-        "205110cb-a833-41f4-903b-59f1c414a9d6"
+        "a5f51dc8-a6c2-4a45-9424-0b4ef1ecfecc",
+        "2ac4a87f-75b7-4a2c-99b2-5a55039a363d"
     ],
     "filterType": "GMObject",
     "folderName": "Zones",

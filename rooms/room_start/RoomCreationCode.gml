@@ -62,6 +62,10 @@ global.zCore[2] = ItemState.USING;
 global.zForm[1] = ItemState.USING;
 global.zSaber[1] = ItemState.USING;
 
+//Default Weather Effect
+global.glow = 0;
+
+
 //Create Manager Object
 if (!instance_exists(obj_gameManager))
 	instance_create_depth(64, 96, -1000000, obj_gameManager);
