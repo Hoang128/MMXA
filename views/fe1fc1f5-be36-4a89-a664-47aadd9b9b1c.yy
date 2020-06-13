@@ -15,7 +15,7 @@
         "f9fc8943-8235-4d54-bbf5-c8a3a8bbe90c"
     ],
     "filterType": "GMSprite",
-    "folderName": "Web Spidus",
+    "folderName": "Web Spider",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

@@ -3,19 +3,35 @@ if (instance_exists(obj_gameManager.playerCore))
 {
 	if (obj_gameManager.playerCore.weight < WeighType.MASSIVE)
 	{
-		with(obj_gameManager.playerCore)
+		if (playerAffect == true)
 		{
-			if (obj_gameManager.playerCore.aState != ActionState.WIRING)
+			with(obj_gameManager.playerCore)
 			{
-				if (place_meeting(x, y + 1, obj_blockIce) || place_meeting(x, y + 1, obj_blockIceSlope))
+				if (obj_gameManager.playerCore.aState != ActionState.WIRING)
 				{
-					other.playerOnIce = true;
-					if (place_meeting(x, y + 1, obj_blockIceSlope))
+					if (place_meeting(x, y + 1, obj_blockIce) || place_meeting(x, y + 1, obj_blockIceSlope))
 					{
-						other.iceSlideSlope = instance_nearest(x, y + 1, obj_blockIceSlope).iceSlideSlope;
+						other.playerOnIce = true;
+						if (place_meeting(x, y + 1, obj_blockIceSlope))
+						{
+							other.iceSlideSlope = instance_nearest(x, y + 1, obj_blockIceSlope).iceSlideSlope;
+						}
+						else
+						{
+							if (other.iceSlideSlope != 0)
+							{
+								if (!(sign(hspd) * sign(other.iceSlideSlope) == -1 && place_meeting(x, y + 1, obj_block)))
+								{
+									other.iceSlideSpd = other.iceSlideSlope;
+									other.iceSlideAcr = abs(other.iceSlideSpd) / 40;
+								}
+							}
+							other.iceSlideSlope = 0;
+						}
 					}
 					else
 					{
+						other.playerOnIce = false;
 						if (other.iceSlideSlope != 0)
 						{
 							if (!(sign(hspd) * sign(other.iceSlideSlope) == -1 && place_meeting(x, y + 1, obj_block)))
@@ -29,23 +45,10 @@ if (instance_exists(obj_gameManager.playerCore))
 				}
 				else
 				{
-					other.playerOnIce = false;
-					if (other.iceSlideSlope != 0)
-					{
-						if (!(sign(hspd) * sign(other.iceSlideSlope) == -1 && place_meeting(x, y + 1, obj_block)))
-						{
-							other.iceSlideSpd = other.iceSlideSlope;
-							other.iceSlideAcr = abs(other.iceSlideSpd) / 40;
-						}
-					}
-					other.iceSlideSlope = 0;
-				}
-			}
-			else
-			{
-				other.iceSlideSpd = 0;
-				other.iceSlideAcr = 0;
+					other.iceSlideSpd = 0;
+					other.iceSlideAcr = 0;
 				
+				}
 			}
 		}
 		

@@ -12,6 +12,7 @@ switch weightPlayer
 		{
 			aState = ActionState.BEAMDOWN;
 			sprite_index = sprFlash;
+			image_index = 0;
 			switch(object_index)
 			{
 				case obj_playerX:
@@ -29,13 +30,10 @@ switch weightPlayer
 			aState = ActionState.STARTDOWN;
 			vState = VerticalState.V_ON_GROUND;
 			sprite_index = sprStand;
-			move_contact_solid(270, 0);
+			image_index = 5;
 		}
 		hState = HorizontalState.H_MOVE_NONE;
 		atkState = AttackState.A_NONE;
-		
-		
-		image_index = 0;
 	}
 	break;
 }

@@ -2042,7 +2042,7 @@
             "Key": "4492a06c-0913-41f0-abb2-2ec7cecca3fe",
             "Value": {
                 "id": "44a1c9fc-b77e-4bb6-ac56-6b4443f2c632",
-                "resourcePath": "rooms\\roomJunkyard\\roomJunkyard.yy",
+                "resourcePath": "rooms\\room_Junkyard\\room_Junkyard.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -4292,6 +4292,14 @@
                 "id": "c1413042-10d9-4336-b60d-e9fcfa0788ba",
                 "resourcePath": "sprites\\spr_XDuck2\\spr_XDuck2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "955ba77b-b058-4af9-be14-f69cec1c7a4c",
+            "Value": {
+                "id": "fa8861cb-1c1d-4545-a4fd-4a7f18fcbe54",
+                "resourcePath": "objects\\obj_gateRegion\\obj_gateRegion.yy",
+                "resourceType": "GMObject"
             }
         },
         {

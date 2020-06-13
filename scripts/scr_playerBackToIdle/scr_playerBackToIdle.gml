@@ -25,5 +25,12 @@ with(obj_playerHumanForm)
 	atkState = AttackState.A_NONE;
 	dashTime = 0;
 	dashSpd = 0;
+	with(obj_iceController)
+	{
+		playerAffect = false;
+		iceSlideAcr = 0;
+		iceSlideSlope = 0;
+		iceSlideSpd = 0;
+	}
 	activateState = ActivateState.HALF_ACTIVATE;
 }
