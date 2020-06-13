@@ -4783,6 +4783,14 @@
             }
         },
         {
+            "Key": "aced6b26-0cca-4c1d-8847-43aed742a655",
+            "Value": {
+                "id": "d7d7ddd3-c567-463f-9d73-3f10517b1af8",
+                "resourcePath": "views\\aced6b26-0cca-4c1d-8847-43aed742a655.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "ad859c69-7f57-4a90-9411-6555c32cdf7a",
             "Value": {
                 "id": "ac0a9bc7-ccaf-4315-b193-646843a1be98",
@@ -6964,6 +6972,14 @@
                 "id": "ba13a070-b035-47d3-9922-431f531ee6e1",
                 "resourcePath": "sprites\\spr_ZThunberBlast\\spr_ZThunberBlast.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ff0c42d9-9443-4a59-8e8f-7c92df355e46",
+            "Value": {
+                "id": "41571ae1-219a-4873-8d86-185b6a9fe416",
+                "resourcePath": "objects\\obj_playerHUD\\obj_playerHUD.yy",
+                "resourceType": "GMObject"
             }
         },
         {

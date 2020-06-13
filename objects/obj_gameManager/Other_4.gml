@@ -12,6 +12,7 @@ instance_create_depth(x, y, depth, obj_effOpening_Black);
 
 if (global.isStage)
 {
+	instance_create_depth(x, y, -1500, obj_playerHUD);
 	instance_create_depth(x, y, -1500, obj_fMenuMapName);
 	instance_create_depth(x, y, depth, obj_globalEffManager);
 	instance_create_depth(global.xSpawmLocation, global.ySpawmLocation, depth, obj_view);
