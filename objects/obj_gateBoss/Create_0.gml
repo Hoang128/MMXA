@@ -13,3 +13,4 @@ imgSpd = 0;
 sndEff = 0;
 
 lock = false;
+

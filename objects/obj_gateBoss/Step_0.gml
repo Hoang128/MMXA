@@ -126,12 +126,42 @@ if (instance_exists(obj_gameManager.playerCore))
 				block = instance_create_depth(bbox_left, bbox_top, depth + 1, obj_block);
 				block.image_xscale = 2;
 				block.image_yscale = 4;
-				
-				with(obj_gameManager.playerCore)
-					activateState = ActivateState.ACTIVATE;
-				
 				state = gateState.LOCKING;
-				phase = 0;
+				
+				var bossZone = collision_rectangle(obj_gameManager.playerCore.bbox_left, obj_gameManager.playerCore.bbox_top, obj_gameManager.playerCore.bbox_right, obj_gameManager.playerCore.bbox_bottom, obj_limitZoneBoss, false, false);
+				if (bossZone)
+				{
+					with(bossZone)
+					{
+						if (phase == -1)
+						{
+							scr_BGMStop();
+							phase = 0;
+							with(obj_gateBoss)
+							{
+								if(place_meeting(x, y + 1, bossZone) 
+								|| place_meeting(x, y - 1, bossZone) 
+								|| place_meeting(x + 1, y, bossZone)
+								|| place_meeting(x - 1, y, bossZone))
+								{
+									phase = 7;
+								}
+							}
+						}
+						else
+						{
+							other.phase = 0;
+							with(obj_gameManager.playerCore)
+								activateState = ActivateState.ACTIVATE;
+						}
+					}
+				}
+				else
+				{
+					phase = 0;
+					with(obj_gameManager.playerCore)
+						activateState = ActivateState.ACTIVATE;
+				}
 			}
 			
 			if (image_index < 14)

@@ -9,3 +9,17 @@ if (instance_exists(obj_ZChronoField))
 	else myDeltaTime = 1;
 }
 else myDeltaTime = 1;
+
+if (damageTimmer > 0) damageTimmer -= global.deltaTime;
+
+if (blinkTime > 0)
+{
+	if (blink > 0) blink -= DELTA_TIME;
+	else blink = blinkMax;
+	blinkTime -= DELTA_TIME;
+}
+else
+{
+	blink = 0;
+	blinkTime = 0;
+}

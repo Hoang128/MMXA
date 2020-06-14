@@ -4,7 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-if (damageTimmer > 0) damageTimmer -= global.deltaTime;
 if (hp <= 0) instance_destroy();
 
 if (!collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + W_VIEW, Y_VIEW + H_VIEW, self, false, false))

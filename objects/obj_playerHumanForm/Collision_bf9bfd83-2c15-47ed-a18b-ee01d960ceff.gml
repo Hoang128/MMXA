@@ -1,5 +1,5 @@
 /// @description Hurt
-if ((activateState == ActivateState.ACTIVATE && stunType == AttackState.A_NONE) || (activateState == ActivateState.HALF_ACTIVATE && stunType == StunType.CAPTURED))
+if ((activateState == ActivateState.ACTIVATE && stunType == StunType.STUN_NONE) || (activateState == ActivateState.HALF_ACTIVATE && stunType == StunType.CAPTURED))
 {
 	if (stunTime <= 0)
 	{

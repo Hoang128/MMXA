@@ -1,0 +1,1 @@
+boss = obj_dynamo;

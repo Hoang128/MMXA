@@ -1,20 +1,22 @@
 /// @description Insert description here
 // You can write your code in this editor
+var realDamage = 0;
 
 if (damageTimmer == -1) 
 	damageTimmer = 0;
 if (damageTimmer <= 0)
 {
 	damageTimmer = other.maxTimmer;
-	var realDamage = 0;
 
 	switch (other.element)
 	{
-		case Element.NEUTRAL:	realDamage = other.damage - neutralArmor;	break;
+		case Element.NEUTRAL:	realDamage = other.damage;					break;
+		case Element.DARK:		realDamage = other.damage - darkArmor;		break;
 		case Element.FIRE:		realDamage = other.damage - fireArmor;		break;
 		case Element.ICE:		realDamage = other.damage - iceArmor;		break;
 		case Element.ELECT:		realDamage = other.damage - electArmor;		break;
 	}
+	realDamage -= neutralArmor;
 	if (realDamage < 0)	realDamage = 0;
 	if (other.isGuardBreaker == false)
 	{
@@ -44,8 +46,14 @@ if (damageTimmer <= 0)
 		hp -= realDamage;
 		
 		//Create Effect
+		
+		//Blink effect
+		blinkTime = blinkTimeMax;
+		
+		//Slow effect
 		if (other.slowTime == true) 
 			scr_setTimeSlowEff(2, 0.2);
+		
 		if (other.collisionEff != noone)
 		{
 			//Create collision effect

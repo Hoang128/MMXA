@@ -4,7 +4,8 @@
     "mvc": "1.1",
     "name": "a5f51dc8-a6c2-4a45-9424-0b4ef1ecfecc",
     "children": [
-        "205110cb-a833-41f4-903b-59f1c414a9d6"
+        "205110cb-a833-41f4-903b-59f1c414a9d6",
+        "38b38897-6b4f-4cd7-a574-1648728d9e97"
     ],
     "filterType": "GMObject",
     "folderName": "Camera Zone",

@@ -124,6 +124,7 @@ enum StunType
 enum Element
 {
 	NEUTRAL,
+	DARK,
 	FIRE,
 	ICE,
 	ELECT

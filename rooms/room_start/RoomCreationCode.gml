@@ -2,7 +2,7 @@
 scr_InitializeMacros();
 scr_InitializeEnumStates();
 
-global.BGM_current = noone;
+global.BGM_stage = noone;
 
 global.font = fontDebug;
 

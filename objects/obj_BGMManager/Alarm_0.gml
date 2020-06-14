@@ -1,7 +1,7 @@
 /// @description Insert description here
 
-if (global.BGM_current != noone)
+if (currentBGM != noone)
 {
-	bgm = audio_play_sound_on(global.BGM_Emitter,global.BGM_current,0,0);
+	bgm = audio_play_sound_on(global.BGM_Emitter,currentBGM,0,0);
 	if init init--;
 }

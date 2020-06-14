@@ -1,4 +1,4 @@
 /// @description 
 
-audio_stop_sound(global.BGM_current);
+audio_stop_sound(currentBGM);
 alarm[0]=1;

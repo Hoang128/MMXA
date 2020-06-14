@@ -1,3 +1,3 @@
 global.isStage = false;
 
-global.BGM_current = noone;
+global.BGM_stage = noone;

@@ -1,3 +1,4 @@
 global.isStage = true;
-global.glow = 0.2;
-scr_BGMSet(bgm_MMZ3_Prismastic,0.50,104.00);
+global.glow = 0;
+global.BGM_stage = bgm_MMZ3_Prismastic;
+scr_BGMSet(global.BGM_stage, true);

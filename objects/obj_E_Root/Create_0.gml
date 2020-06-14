@@ -20,3 +20,17 @@ shield = 0;
 glow = 0;
 palette = noone;
 paletteNumber = 0;
+blink = 0;
+blinkMax = 4;
+blinkTime = 0;
+blinkTimeMax = 4;
+
+damageTimmer = -1;
+neutralArmor = 0;
+darkArmor = 0;
+fireArmor = 0;
+iceArmor = 0;
+electArmor = 0;
+guardDir = 0;
+guard = 0;
+guardEffEnable = true;
