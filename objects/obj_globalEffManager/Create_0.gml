@@ -10,6 +10,6 @@ earthQuakeCounter = 0;
 earthQuakeRange = 3;
 
 //Glow
-instance_create_depth(x, y, depth, obj_glowEff);
+instance_create_depth(x, y, -1000, obj_glowEff);
 
 myDeltaTime = 1;

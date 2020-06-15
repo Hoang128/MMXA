@@ -9,7 +9,8 @@
         "0529f303-6bd9-4ff6-894a-bc2a0bfdc719",
         "b46da5c1-8282-4086-96eb-d74f52eb28e2",
         "f6baa9ea-d93e-4591-9679-ce55e582e572",
-        "0a17aea5-3af5-4f6f-a84f-83563e3373ad"
+        "0a17aea5-3af5-4f6f-a84f-83563e3373ad",
+        "ab608231-d8a8-43de-b430-fdee1563a1fa"
     ],
     "filterType": "GMSound",
     "folderName": "UI",

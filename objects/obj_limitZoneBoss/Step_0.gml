@@ -11,10 +11,11 @@ else
 	{
 		case 0:
 		{
-			if (!instance_exists(boss))
-				instance_create_depth(X_VIEW + W_VIEW - (obj_gameManager.playerCore.x - X_VIEW), obj_gameManager.playerCore.y, obj_gameManager.playerCore.depth, boss);
-			with(obj_gameManager.playerCore)
-				activateState = ActivateState.ACTIVATE;
+			if (!instance_exists(obj_bossManager))
+			{
+				var bossMgr = instance_create_depth(X_VIEW + W_VIEW - (obj_gameManager.playerCore.x - X_VIEW), obj_gameManager.playerCore.y, obj_gameManager.playerCore.depth, obj_bossManager);
+				bossMgr.boss = self.boss;
+			}
 		}	break;
 		case 1:
 		{

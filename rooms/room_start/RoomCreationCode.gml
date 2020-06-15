@@ -63,10 +63,10 @@ global.zForm[1] = ItemState.USING;
 global.zSaber[1] = ItemState.USING;
 
 //Default Key
-global.keyRed = ItemState.UNLOCK;	//For debug
-global.keyBlue = ItemState.UNLOCK;
-global.keyOrange = ItemState.UNLOCK;
-global.keyPurple = ItemState.LOCK;
+global.keyCardRed = ItemState.UNLOCK;	//For debug
+global.keyCardBlue = ItemState.UNLOCK;
+global.keyCardOrange = ItemState.UNLOCK;
+global.keyCardPurple = ItemState.LOCK;
 
 //Default Weather Effect
 global.glow = 0;
@@ -88,6 +88,7 @@ global.fullScreen = 0;
 
 //Default Key Blind
 global.keyStart = vk_enter;
+global.keyBack = vk_escape;
 global.keyUp = vk_up;
 global.keyDown = vk_down;
 global.keyLeft = vk_left;

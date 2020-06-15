@@ -3,3 +3,5 @@
 
 arcStory = StoryArc.PROLOGUE;
 chapterStory = 0;
+missionStory = 0;
+phase = 0;

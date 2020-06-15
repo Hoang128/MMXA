@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 
-if (global.keyRed == ItemState.UNLOCK)
+if (global.keyCardRed == ItemState.UNLOCK)
 	lock = false;
 else
 	lock = true;

@@ -137,6 +137,7 @@ if (instance_exists(obj_gameManager.playerCore))
 						{
 							scr_BGMStop();
 							phase = 0;
+							
 							with(obj_gateBoss)
 							{
 								if(place_meeting(x, y + 1, bossZone) 

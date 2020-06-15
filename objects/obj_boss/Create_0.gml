@@ -16,11 +16,6 @@ hitNumberMax = 2;
 inviTime = 0;
 inviTimeMax = 300;
 
-bgm = bgm_ZLCrash;
-/*
-Intro X5
-bgmIntro = 3.0;
-bgmLoop = 44.5;
-*/
+bgm = bgm_X5VSBoss;
 
 init = false;
