@@ -25,7 +25,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	//Passive**************************************************************************************************
 	#region
 	
-	//Sprite with negative speed-------------------------------------------------------------------------------
+	//Sprite---------------------------------------------------------------------------------------------------
 	#region
 	
 	if (image_speed < 0)
@@ -52,6 +52,11 @@ if (activateState != ActivateState.DEACTIVATE)
 				image_index = 0;
 			}
 		}
+	}
+	
+	if (weight < WeighType.MASSIVE)
+	{
+		scr_playerChangeStandSprite(object_index);
 	}
 	
 	#endregion

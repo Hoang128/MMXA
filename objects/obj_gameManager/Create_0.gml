@@ -1,6 +1,7 @@
 /// @description Init
 
 instance_create_depth(0, 0, depth, obj_SoundManager);
+instance_create_depth(0, 0, depth, obj_storyManager);
 
 //Key counters
 canSetFullScreen = true;

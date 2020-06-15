@@ -147,3 +147,16 @@ enum WireType
 	HORIZONTAL,
 	VERTICAL
 }
+
+//Initialize Story's Arc*********************************************************************************************************************************************
+enum StoryArc
+{
+	PROLOGUE,
+	FIRSTFOUR,
+	MIDARC,
+	LASTFOUR,
+	FORTRESS,
+	FINAL,
+	EPILOGUE,
+	FREEROAM
+}

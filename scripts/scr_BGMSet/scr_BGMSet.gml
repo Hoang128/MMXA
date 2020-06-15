@@ -1,4 +1,4 @@
-/// @description Intialize BGM set: scr_BGMSet(BGM, intro, loop)
+/// @description Intialize BGM set: scr_BGMSet(BGM, is stage theme)
 /// @function Intialize BGM set: scrBGM_set
 /// @param BGM
 /// @param is stage theme

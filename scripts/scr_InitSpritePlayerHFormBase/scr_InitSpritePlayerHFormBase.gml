@@ -7,7 +7,6 @@ switch argument0
 		sprBeamDown = spr_XBeamDown;
 		sprBeamUp = spr_XBeamUp;
 		sprStand = spr_XStand;
-		sprDying = spr_XDying;
 		sprLand = spr_XLand;
 		sprRunStart = spr_XRunStart;
 		sprRun = spr_XRun;
@@ -45,7 +44,6 @@ switch argument0
 		sprBeamDown = spr_ZBeamDown;
 		sprBeamUp = spr_ZBeamUp;
 		sprStand = spr_ZStand;
-		sprDying = spr_ZDying;
 		sprLand = spr_ZLand;
 		sprRunStart = spr_ZRunStart;
 		sprRun = spr_ZRun;
