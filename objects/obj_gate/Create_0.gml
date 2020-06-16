@@ -10,3 +10,13 @@ enum gateState
 	UNLOCKING,
 	CLOSING
 }
+
+state = gateState.LOCKING;
+phase = 0;
+waitTimeOpenMax = 30;
+waitTimeOpen = 0;
+imgSpd = 0;
+sndEff = 0;
+distanceToCloseGate = 16;
+
+lock = false;

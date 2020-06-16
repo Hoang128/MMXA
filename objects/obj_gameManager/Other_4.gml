@@ -7,16 +7,21 @@ if (global.debugging)
 }
 
 //Init for start room
-
 instance_create_depth(x, y, depth, obj_effOpening_Black);
 
+//Layer create
+lPlayer = layer_create(0);
+lBullet = layer_create(-100);
+lEnemy  = layer_create(50);
+
+//Init Object
 if (global.isStage)
 {
 	instance_create_depth(x, y, -2000, obj_playerHUD);
 	instance_create_depth(x, y, -2000, obj_fMenuMapName);
 	instance_create_depth(x, y, -1000, obj_globalEffManager);
 	instance_create_depth(global.xSpawmLocation, global.ySpawmLocation, depth, obj_view);
-	var player = instance_create_depth(global.xSpawmLocation, global.ySpawmLocation, -100, obj_playerZ);
+	var player = instance_create_layer(global.xSpawmLocation, global.ySpawmLocation, lPlayer, obj_playerZ);
 	if (global.xSpawmLocation < 64)	
 	{
 		player.hDir = 1;

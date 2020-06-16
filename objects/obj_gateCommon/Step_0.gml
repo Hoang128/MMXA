@@ -91,16 +91,20 @@ if (instance_exists(obj_gameManager.playerCore))
 			if (!collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_gameManager.playerCore, false, false))
 			{
 				waitTimeOpen = 0;
-				
-				with (obj_gameManager.playerCore)
+				var distance = abs((bbox_right + bbox_left) / 2 - (obj_gameManager.playerCore.bbox_right + obj_gameManager.playerCore.bbox_left) / 2);
+				distance -= (bbox_right - bbox_left) / 2 + (obj_gameManager.playerCore.bbox_right - obj_gameManager.playerCore.bbox_left) / 2;
+				if (distance >= distanceToCloseGate)
 				{
-					sprite_index = sprRunEnd;
-					image_index = 0;
+					with (obj_gameManager.playerCore)
+					{
+						sprite_index = sprRunEnd;
+						image_index = 0;
 					
-					hspd = 0;
-					hState = HorizontalState.H_MOVE_NONE;
+						hspd = 0;
+						hState = HorizontalState.H_MOVE_NONE;
+					}
+					phase = 5;
 				}
-				phase = 5;
 			}
 		}	break;
 		

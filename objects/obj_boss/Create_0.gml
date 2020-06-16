@@ -19,3 +19,5 @@ inviTimeMax = 300;
 bgm = bgm_X5VSBoss;
 
 init = false;
+
+depth = layer_get_depth(obj_gameManager.lEnemy);

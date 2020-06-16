@@ -983,6 +983,14 @@
             }
         },
         {
+            "Key": "1f45422f-0ea1-413a-82e1-f72fd542d181",
+            "Value": {
+                "id": "eab66519-1e20-4acc-bbe9-36819c08d047",
+                "resourcePath": "sprites\\spr_dynamoBeamDown\\spr_dynamoBeamDown.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1f9fc8ca-022c-4684-b64a-04e6695e0771",
             "Value": {
                 "id": "15e0743b-d94c-4882-8dc9-842139310db0",
@@ -1428,6 +1436,14 @@
                 "id": "39991060-762e-4ef6-b5f8-c4130c11e576",
                 "resourcePath": "objects\\obj_ChargeEffLv2\\obj_ChargeEffLv2.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3105a2fd-7330-4874-9df0-6723427a719c",
+            "Value": {
+                "id": "e49c553c-d358-4392-a987-7c4975b57d91",
+                "resourcePath": "views\\3105a2fd-7330-4874-9df0-6723427a719c.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -5667,6 +5683,14 @@
             "Value": {
                 "id": "12721aba-07e7-41e7-9ef0-fd0ede192a7c",
                 "resourcePath": "sprites\\spr_DGuardianTurnBack_Shield\\spr_DGuardianTurnBack_Shield.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c360c0a4-f757-433b-abc1-f2de84e75eda",
+            "Value": {
+                "id": "ecc82fd2-741b-495e-ab5d-1d67ee539ce9",
+                "resourcePath": "sprites\\spr_dynamoBeam\\spr_dynamoBeam.yy",
                 "resourceType": "GMSprite"
             }
         },

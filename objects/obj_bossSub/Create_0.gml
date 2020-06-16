@@ -9,3 +9,5 @@ darkArmor = 0;
 fireArmor = 0;
 iceArmor = 0;
 electArmor = 0;
+
+depth = layer_get_depth(obj_gameManager.lEnemy);

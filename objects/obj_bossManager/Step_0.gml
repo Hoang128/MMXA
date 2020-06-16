@@ -12,12 +12,13 @@ switch (phase)
 		{
 			wait = 0;
 			phase = 1;
-			scr_setCutscene(obj_cutsceneBossDynamo);
+			if (bossCutscene != noone)
+				scr_setCutscene(bossCutscene);
 		}
 	}	break;
 	case 1:
 	{
-		if (!instance_exists(obj_cutsceneBossDynamo))
+		if (!instance_exists(bossCutscene))
 		{
 			phase = 2;
 			instance_create_depth(X_VIEW, Y_VIEW, -1500, obj_warningEff);
