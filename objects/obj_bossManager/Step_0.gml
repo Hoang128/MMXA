@@ -23,15 +23,47 @@ switch (phase)
 	{
 		if (!instance_exists(obj_cutsceneManager))
 		{
-			phase = 2;
+			phase = 1.5;
+		}
+	}	break;
+	case 1.5:
+	{
+		if (wait < waitTimeMax)
+		{
+			wait++;
+		}
+		else
+		{
 			instance_create_depth(X_VIEW, Y_VIEW, -1500, obj_warningEff);
+			wait = 0;
+			phase = 2;
 		}
 	}	break;
 	case 2:
 	{
 		if (!instance_exists(obj_warningEff))
 		{
+			phase = 2.5;
+		}
+	}	break;
+	case 2.5:
+	{
+		if (wait < waitTimeMax)
+			wait++;
+		else
+		{
+			wait = 0;
 			phase = 3;
+		}
+	}	break;
+	case 3.5:
+	{
+		if (wait < waitTimeMax)
+			wait++;
+		else
+		{
+			wait = 0;
+			phase = 4;
 		}
 	}	break;
 	case 4:

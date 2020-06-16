@@ -6,7 +6,7 @@
 switch (sprite_index)
 {
 	case spr_dynamoBeam:
-	case spr_dynamoBeamDown:	imgSpd = 0.5;	break;
+	case spr_dynamoBeamDown:	imgSpd = 0.3;	break;
 	case spr_dynamoStand:		imgSpd = 0.2;	break;
 }
 

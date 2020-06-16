@@ -3,7 +3,7 @@
 
 phase = 0;
 
-waitTime1 = 30;
+waitTime1 = 60;
 wait = waitTime1;
+waitTimeMax = 60;
 boss = noone;
-bossCutscene = noone;

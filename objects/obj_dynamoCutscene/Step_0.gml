@@ -7,7 +7,7 @@ switch(phase)
 		image_xscale = sign(X_VIEW + W_VIEW/2 - x);
 		if (sprite_index == spr_dynamoBeam)
 		{
-			vspd = 2;
+			vspd = 6;
 			if (!place_meeting(x, y, obj_block))
 			{
 				phase = 1;
@@ -16,8 +16,9 @@ switch(phase)
 	}	break;
 	case 1:
 	{
-		if (place_meeting(x, y + 1, obj_block))
+		if (place_meeting(x, y + vspd, obj_block))
 		{
+			move_contact_solid(270, 0);
 			vspd = 0;
 			sprite_index = spr_dynamoBeamDown;
 			image_index = 0;

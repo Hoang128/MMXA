@@ -25,7 +25,7 @@ if (init == false)
 		else
 		{
 			hp = hpMax;
-			obj_bossManager.phase = 4;
+			obj_bossManager.phase = 3.5;
 			state = 0;
 			scr_BGMSet(bgm_X5VSBoss, false);
 			init = true;
