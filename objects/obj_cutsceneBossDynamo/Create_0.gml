@@ -5,3 +5,4 @@
 event_inherited();
 
 activePlayerWhenDie = false;
+phaseMax = 1;

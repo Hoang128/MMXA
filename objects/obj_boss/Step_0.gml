@@ -5,8 +5,32 @@
 
 if (init == false)
 {
-	scr_BGMSet(bgm, false);
-	init = true;
+	if (obj_bossManager.phase == 3)
+	{
+		if (hp < hpMax)
+		{
+			if (!instance_exists(obj_bossHUD))
+			{
+				instance_create_layer(x, y, obj_gameManager.lHUD, obj_bossHUD);
+			}
+			if (sprite_index != sprGainHp)
+			{
+				sprite_index = sprGainHp;
+				image_index = 0;
+			}
+			if (!audio_is_paused(snd_gainHp))
+				audio_play_sound_on(global.SFX_Emitter, snd_gainHp, false, false);
+			hp+=gainHpSpd;
+		}
+		else
+		{
+			hp = hpMax;
+			obj_bossManager.phase = 4;
+			state = 0;
+			scr_BGMSet(bgm_X5VSBoss, false);
+			init = true;
+		}
+	}
 }
 else
 {

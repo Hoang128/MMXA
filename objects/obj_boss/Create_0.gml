@@ -4,6 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
+hp = 0;
+hpMax = 64;
+
 neutralArmor = 0;
 darkArmor = 0;
 fireArmor = 0;
@@ -17,6 +20,8 @@ inviTime = 0;
 inviTimeMax = 300;
 
 bgm = bgm_X5VSBoss;
+sprGainHp = noone;
+gainHpSpd = 0.5;
 
 init = false;
 

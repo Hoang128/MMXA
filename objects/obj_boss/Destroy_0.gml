@@ -3,3 +3,6 @@
 
 // Inherit the parent event
 event_inherited();
+
+if (instance_exists(obj_bossHUD))
+	instance_destroy(obj_bossHUD);

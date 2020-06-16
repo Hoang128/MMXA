@@ -12,13 +12,16 @@ switch (phase)
 		{
 			wait = 0;
 			phase = 1;
-			if (bossCutscene != noone)
-				scr_setCutscene(bossCutscene);
+			switch(boss)
+			{
+				case obj_dynamo:	scr_setCutscene(obj_cutsceneBossDynamo);	break;
+				default:			phase = 2;									break;
+			}
 		}
 	}	break;
 	case 1:
 	{
-		if (!instance_exists(bossCutscene))
+		if (!instance_exists(obj_cutsceneManager))
 		{
 			phase = 2;
 			instance_create_depth(X_VIEW, Y_VIEW, -1500, obj_warningEff);
@@ -28,27 +31,26 @@ switch (phase)
 	{
 		if (!instance_exists(obj_warningEff))
 		{
-			instance_create_depth(x, y, depth, boss);
 			phase = 3;
 		}
 	}	break;
-	case 3:
+	case 4:
 	{
 		with(obj_gameManager.playerCore)
 		{
 			activateState = ActivateState.ACTIVATE;
 		}
-		phase = 4;
+		phase = 5;
 	}	break;
-	case 4:
+	case 5:
 	{
 		if (!instance_exists(boss))
 		{
 			scr_BGMStop();
-			phase = 5;
+			phase = 6;
 		}
 	}	break;
-	case 5:
+	case 6:
 	{
 		instance_destroy();
 	}	break;

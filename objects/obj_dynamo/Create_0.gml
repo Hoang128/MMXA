@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
-hp = 64;
+hpMax = 64;
 damage = 2;
 damageRed = 1;
+
+sprGainHp = spr_dynamoStand;
