@@ -14,6 +14,13 @@ if (instance_exists(obj_gameManager.playerCore))
 				{
 					if (lock == false)
 					{
+						with(obj_iceController)
+						{
+							playerAffect = false;
+							iceSlideAcr = 0;
+							iceSlideSlope = 0;
+							iceSlideSpd = 0;
+						}
 						scr_playerBackToIdle();
 						phase = 1;
 					}
