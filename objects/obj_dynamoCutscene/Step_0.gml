@@ -25,6 +25,25 @@ switch(phase)
 			phase = 2;
 		}
 	}	break;
+	case 4:
+	{
+		sprite_index = spr_dynamoBeamDown;
+		image_index = 8;
+		phase = 5;
+	}	break;
+	case 5:
+	{
+		if (image_index < 1 )
+		{
+			sprite_index = spr_dynamoBeam;
+			vspd = -6;
+			phase = 6;
+		}
+	}	break;
+	case 6:
+	{
+		scr_destroyObjOutOfCamera(self);
+	}
 }
 
 x += hspd * DELTA_TIME;

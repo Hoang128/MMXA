@@ -2,7 +2,10 @@
 // You can write your code in this editor
 if (sprite_index == spr_dynamoBeamDown)
 {
-	sprite_index = spr_dynamoStand;
-	image_index = 0;
-	phase = 3;
+	if (phase == 2)
+	{
+		sprite_index = spr_dynamoStand;
+		image_index = 0;
+		phase = 3;
+	}
 }

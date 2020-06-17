@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_effScreen",
     "eventList": [
-        
+        {
+            "id": "23be9797-59e7-453c-a21d-41aec9a4f61c",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "f7d38603-ff3c-47e7-88cf-c3365db8e006"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

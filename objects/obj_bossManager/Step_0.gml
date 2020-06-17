@@ -84,6 +84,36 @@ switch (phase)
 	}	break;
 	case 6:
 	{
+		if (!instance_exists(obj_bossLose))
+			phase = 6.5;
+	}	break;
+	case 6.5:
+	{
+		if (wait < waitTimeMax * 2)
+			wait++;
+		else
+		{
+			wait = 0;
+			phase = 7;
+		}
+	}	break;
+	case 7:
+	{
+		if (!instance_exists(obj_cutsceneManager))
+			phase = 7.5;
+	}	break;
+	case 7.5:
+	{
+		if (wait < waitTimeMax)
+			wait++;
+		else
+		{
+			wait = 0;
+			phase = 8;
+		}
+	}	break;
+	case 8:
+	{
 		instance_destroy();
 	}	break;
 }

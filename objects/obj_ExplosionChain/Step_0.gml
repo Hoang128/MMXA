@@ -7,7 +7,8 @@ if (chainNumber < chainMax)
 	}
 	else
 	{
-		instance_create_depth(x - rangeMax + random(rangeMax * 2), y - rangeMax + random(rangeMax * 2), depth, obj_Explosion);
+		var explosion = instance_create_depth(x - rangeMax + random(rangeMax * 2), y - rangeMax + random(rangeMax * 2), depth, obj_Explosion);
+		explosion.makeSound = self.makeSound;
 		chainTime = 0;
 		chainNumber++;
 	}

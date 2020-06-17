@@ -21,7 +21,9 @@ inviTimeMax = 300;
 
 bgm = bgm_X5VSBoss;
 sprGainHp = noone;
+objLose = noone;
 gainHpSpd = 0.5;
+aliveAfterLose = false;
 
 init = false;
 

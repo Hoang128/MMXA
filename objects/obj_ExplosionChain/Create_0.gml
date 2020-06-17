@@ -9,3 +9,4 @@ chainTimeMax = 5;
 
 chainNumber = 0;
 chainTime = 0;
+makeSound = true;

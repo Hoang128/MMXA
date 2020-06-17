@@ -6,8 +6,12 @@
 switch (sprite_index)
 {
 	case spr_dynamoBeam:
-	case spr_dynamoBeamDown:	imgSpd = 0.3;	break;
-	case spr_dynamoStand:		imgSpd = 0.2;	break;
+	case spr_dynamoBeamDown:	
+	{
+		if (phase == 5)	imgSpd = -0.3;	
+		else			imgSpd = 0.3;
+	}	break;
+	case spr_dynamoStand:		imgSpd = 0.1;	break;
 }
 
 event_inherited();

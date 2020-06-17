@@ -11,7 +11,9 @@
         "a6f32a59-cbf1-430e-af5f-4214d7a10902",
         "db2a8065-abb9-4fc1-a9ce-214bafe62ad8",
         "4f6b9545-94d0-4d4c-bf37-4397d58cd8f7",
-        "c23d3474-09f3-42cb-883a-8187cd34ebbf"
+        "c23d3474-09f3-42cb-883a-8187cd34ebbf",
+        "ebb19fff-a4ac-4da1-825b-5265ce593ed7",
+        "31d4c1e9-e3be-4f64-af12-68f46e0aa2ef"
     ],
     "filterType": "GMObject",
     "folderName": "Normal",
