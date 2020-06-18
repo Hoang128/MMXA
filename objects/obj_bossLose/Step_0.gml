@@ -24,7 +24,7 @@ switch (phase)
 				eChain.y = y - explosionRange / 3 + explosionRange / 3 * j;
 				eChain.makeSound = false;
 				eChain.dropItem = false;
-				eChain.chainMax = 30;
+				eChain.chainMax = 35;
 				eChain.chainTimeMax = 10;
 				eChain.rangeMax = explosionRange / 3;
 			}
