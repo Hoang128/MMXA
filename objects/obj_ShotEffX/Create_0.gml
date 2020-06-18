@@ -7,3 +7,5 @@ event_inherited();
 frameShot = 3;
 busterObject = noone;
 visible = 0;
+followPlayer = true;
+init = false;

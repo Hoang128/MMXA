@@ -33,5 +33,6 @@ scr_InitStatePlayer(weight);
 
 //Initialize Inside Variables
 atkSpriteTime = 0;
+inShotFrame = false;
 busterOnRow = 0;
 resetBusterOnRowMax = 0;

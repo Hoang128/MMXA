@@ -25,4 +25,5 @@ yPlaceCharge2A=-26;
 xPlaceUltimate=24;
 yPlaceUltimate=-32;
 
-core=obj_playerZ;
+
+init = false;

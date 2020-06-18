@@ -10,3 +10,5 @@ busterObject = obj_XBusterC2;
 frameShot = 4;
 
 audio_play_sound_on(global.SFX_Emitter, snd_XBusterCharge2, 0, 0);
+
+followPlayer = false;

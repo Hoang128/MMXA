@@ -10,7 +10,14 @@ switch (sprite_index)
 	{
 		sprite_index = spr_XStand;
 		image_index = 0;
-		atkState = AttackState.A_NONE;
+		scr_playerXChangeShotSprite(object_index, false, true);
+	}	break;
+	
+	case spr_XShotStand:
+	{
+		sprite_index = spr_XStand;
+		image_index = 0;
+		atkSpriteTime = 0;
 		scr_playerXChangeShotSprite(object_index, false, true);
 	}	break;
 
@@ -18,7 +25,6 @@ switch (sprite_index)
 	{
 		sprite_index = spr_XDuck2;
 		image_index = 0;
-		atkState = AttackState.A_NONE;
 		scr_playerXChangeShotSprite(object_index, false, true);
 	}	break;
 
@@ -26,7 +32,6 @@ switch (sprite_index)
 	{
 		sprite_index = spr_XClimb;
 		image_index = 4;
-		atkState = AttackState.A_NONE;
 		scr_playerXChangeShotSprite(object_index, false, true);
 	}	break;
 }

@@ -29,10 +29,12 @@ if (activateState != ActivateState.DEACTIVATE)
 	if (atkSpriteTime > 0) atkSpriteTime -= DELTA_TIME;
 	else 
 	{
-		if (sprite_index != spr_XCShotStand && sprite_index != spr_XCShotDuck)
-			scr_playerXChangeShotSprite(object_index, false, false);
-		atkSpriteTime = 0;
-		atkState = AttackState.A_NONE;
+		if (inShotFrame == true)
+		{
+			if (sprite_index != spr_XCShotStand && sprite_index != spr_XCShotDuck)
+				scr_playerXChangeShotSprite(object_index, false, false);
+			atkSpriteTime = 0;
+		}
 	}
 	
 	//Active*******************************************************************************************************

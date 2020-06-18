@@ -202,7 +202,8 @@ if (activateState != ActivateState.DEACTIVATE)
 					}
 					var shotEff = instance_create_depth(x + xPlace * image_xscale, y + yPlace, depth - 1, obj_ShotEffZBusterNor);
 					shotEff.image_xscale = image_xscale;
-					shotEff.busterType = busterType;
+					shotEff.busterType = busterType
+					shotEff.core = self;
 					if (busterType == obj_ZThunderBlaster)
 					{
 						sprite_index = spr_ZShotHoldThunderBlaster;
@@ -236,6 +237,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				var shotEff = instance_create_depth(x + xPlace * image_xscale, y + yPlace, depth - 1, obj_ShotEffZBusterCharge);
 				shotEff.image_xscale = image_xscale;
 				shotEff.busterType = busterType;
+				shotEff.core = self;
 				busterType = noone;
 			}
 		}
@@ -262,6 +264,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				var shotEff = instance_create_depth(x + xPlace * image_xscale, y + yPlace, depth - 1, obj_ShotEffZBusterCharge);
 				shotEff.image_xscale = image_xscale;
 				shotEff.busterType = busterType;
+				shotEff.core = self;
 				busterType = noone;
 			}
 		}

@@ -22,6 +22,11 @@ switch (obj)
 						image_index = 0;
 					}
 				}	break;
+				case spr_XShotStand:
+				{
+					sprite_index = spr_XShotStand;
+					image_index = 0;
+				}	break;
 				case sprDuck2:		
 				{
 					if (charge == false)
@@ -76,6 +81,8 @@ switch (obj)
 			sprSlide2 = spr_XShotSlide2;
 			sprDashKick1 = spr_XShotJump2;
 			sprDashKick2 = spr_XShotJump2;
+			
+			inShotFrame = true;
 		}
 		
 		if (attackMode == false)
@@ -119,6 +126,9 @@ switch (obj)
 			sprSlide2 = spr_XSlide2;
 			sprDashKick1 = spr_XDashKick1;
 			sprDashKick2 = spr_XDashKick2;
+			
+			atkState = AttackState.A_NONE;
+			inShotFrame = false;
 		}
 	}	break;
 }
