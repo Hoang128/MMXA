@@ -11,7 +11,7 @@ event_inherited();
 
 //Initialize parameter
 font = fnt_UIBoldSmall;
-lineNumber = 14;
+lineNumber = 12;
 lineNumberVisible = 8;
 background = c_dkgray;
 lineSpace = 48;
@@ -35,13 +35,11 @@ lineContext[6] = "Special attack";
 lineContext[7] = "Jump";
 lineContext[8] = "Dash";
 lineContext[9] = "Giga attack";
-lineContext[10] = "Character key 1";
-lineContext[11] = "Character key 2";
-lineContext[12] = "Change weapon L";
-lineContext[13] = "Change weapon R";
-lineContext[14] = "Map";
+lineContext[10] = "Map";
+lineContext[11] = "Change weapon L";
+lineContext[12] = "Change weapon R";
 
-for (var i = 1; i <= 14; i++)
+for (var i = 1; i <= 12; i++)
 {
 	keyChangeContext[i] = instance_create_depth(xKeyContext, 0, depth - 1, obj_keyChangeContext);
 	keyChangeContext[i].keyId = i;

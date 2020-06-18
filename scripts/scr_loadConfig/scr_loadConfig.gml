@@ -30,11 +30,10 @@ if (file_exists("config.ini"))
 		global.keyDash = ini_read_real("keyboard", "dash", ord("Z"));
 		global.keyJump = ini_read_real("keyboard", "jump", ord("X"));
 		global.keyGiga = ini_read_real("keyboard", "giga", vk_space);
-		global.keyChar1 = ini_read_real("keyboard", "key_char_1", ord("D"));
-		global.keyChar2 = ini_read_real("keyboard", "key_char_2", ord("F"));
+		global.keyMap = ini_read_real("keyboard", "map", ord("D"));
 		global.keyChangeL = ini_read_real("keyboard", "key_change_l", ord("A"));
 		global.keyChangeR = ini_read_real("keyboard", "key_change_r", ord("S"));
-		global.keyMap = ini_read_real("keyboard", "map", vk_tab);
+		
 	}
 	
 	ini_close();

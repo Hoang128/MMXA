@@ -98,11 +98,9 @@ global.keySpAtk = ord("V");
 global.keyDash = ord("Z");
 global.keyJump = ord("X");
 global.keyGiga = vk_space;
-global.keyChar1 = ord("D");
-global.keyChar2 = ord("F");
+global.keyMap = ord("D");
 global.keyChangeL = ord("A");
 global.keyChangeR = ord("S");
-global.keyMap = vk_tab;
 
 //Default volume
 global.masterVolume=1;

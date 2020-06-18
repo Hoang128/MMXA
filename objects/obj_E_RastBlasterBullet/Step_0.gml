@@ -16,9 +16,14 @@ if (init == false)
 {
 	if (track == true)
 	{
-		var xx = (obj_gameManager.playerCore.bbox_right + obj_gameManager.playerCore.bbox_left) / 2;
-		var yy = (obj_gameManager.playerCore.bbox_bottom + obj_gameManager.playerCore.bbox_top) / 2;
-		direction = point_direction(self.x, self.y, xx, yy);
+		if (instance_exists(obj_gameManager.playerCore))
+		{
+			var xx = (obj_gameManager.playerCore.bbox_right + obj_gameManager.playerCore.bbox_left) / 2;
+			var yy = (obj_gameManager.playerCore.bbox_bottom + obj_gameManager.playerCore.bbox_top) / 2;
+			direction = point_direction(self.x, self.y, xx, yy);
+		}
+		else
+			direction = 90 - 90 * image_xscale;
 	}
 	else
 	{

@@ -15,11 +15,9 @@ if (init == false)
 		case 7:		keyCode = global.keyJump;		break;
 		case 8:		keyCode = global.keyDash;		break;
 		case 9:		keyCode = global.keyGiga;		break;
-		case 10:	keyCode = global.keyChar1;		break;
-		case 11:	keyCode = global.keyChar2;		break;
-		case 12:	keyCode = global.keyChangeL;	break;
-		case 13:	keyCode = global.keyChangeR;	break;
-		case 14:	keyCode = global.keyMap;		break;
+		case 10:	keyCode = global.keyMap;		break;
+		case 11:	keyCode = global.keyChangeL;	break;
+		case 12:	keyCode = global.keyChangeR;	break;
 		default:	keyCode = noone;				break;
 	}
 	init = true;

@@ -11,23 +11,17 @@ if (charConfiguration > 0)
 		case 1:
 		{
 			lineContext[5] = "X - Buster";
-			lineContext[6] = "Element weapon 1";
-			lineContext[10] = "Element weapon 2";
-			lineContext[11] = "Use fusion elf";
+			lineContext[6] = "Element weapon";
 		}	break;
 		case 2:
 		{
 			lineContext[5] = "Z - Saber";
-			lineContext[6] = "Special Attack";
-			lineContext[10] = "Use fusion elf 1";
-			lineContext[11] = "Use fusion elf 2";
+			lineContext[6] = "Buster Attack";
 		}	break;
 		case 3:
 		{
-			lineContext[5] = "Main weapon attack 1";
-			lineContext[6] = "Main weapon attack 1";
-			lineContext[10] = "Sub weapon attack 2";
-			lineContext[11] = "Sub weapon attack 2";
+			lineContext[5] = "Main weapon attack";
+			lineContext[6] = "Sub weapon attack";
 		}	break;
 	}
 	charConfiguration = -1;
@@ -38,7 +32,7 @@ if (backExecute)
 	instance_destroy();
 }
 
-for(var i = 1; i <= 14; i++)
+for(var i = 1; i <= 12; i++)
 {
 	if(lineExecute[i])
 	{
