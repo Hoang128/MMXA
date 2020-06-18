@@ -21,7 +21,7 @@ glow = 0;
 palette = noone;
 paletteNumber = 0;
 blink = 0;
-blinkMax = 4;
+blinkMax = 8;
 blinkTime = 0;
 blinkTimeMax = 4;
 

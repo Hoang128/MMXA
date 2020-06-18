@@ -18,7 +18,7 @@ switch (sprite_index)
 		sprite_index = spr_XStand;
 		image_index = 0;
 		atkSpriteTime = 0;
-		scr_playerXChangeShotSprite(object_index, false, true);
+		scr_playerXChangeShotSprite(object_index, false, false);
 	}	break;
 
 	case spr_XCShotDuck:

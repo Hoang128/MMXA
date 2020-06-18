@@ -122,6 +122,8 @@ if (activateState != ActivateState.DEACTIVATE)
 						}
 						atkState = AttackState.A_NORMAL_ATTACK;
 						chargeNormal = 0;
+						waitShot = waitShotLong;
+						busterOnRow = 0;
 					}
 				}
 				else
@@ -151,6 +153,8 @@ if (activateState != ActivateState.DEACTIVATE)
 						}
 						atkState = AttackState.A_NORMAL_ATTACK;
 						chargeNormal = 0;	
+						waitShot = waitShotMax;
+						busterOnRow = 0;
 					}
 				}
 			}

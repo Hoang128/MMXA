@@ -15,6 +15,7 @@ chargeLv2Limit = 100; //Time hold attack button to show lv2 charge effect
 busterOnRowMax = 3;
 waitShotNormal = 3;
 waitShotLong = 15;
+waitShotMax = 30;
 waitShot = 0;
 
 //Initialize sprite

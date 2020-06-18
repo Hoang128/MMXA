@@ -9,5 +9,6 @@ collisionEff = obj_flareSlash;
 glow = 0;
 core = noone;
 direction = 0;
+hit = 0;
 
 type = WeaponType.SABER;

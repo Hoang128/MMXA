@@ -3,6 +3,3 @@
 
 // Inherit the parent event
 event_inherited();
-
-draw_text(x, y, string(hp));
-draw_text(x, y + 4, string(damageTimmer));

@@ -11,7 +11,8 @@ if (init == false)
 		{
 			if (!instance_exists(obj_bossHUD))
 			{
-				instance_create_layer(x, y, obj_gameManager.lHUD, obj_bossHUD);
+				var objBossHUD = instance_create_layer(x, y, obj_gameManager.lHUD, obj_bossHUD);
+				objBossHUD.core = self;
 			}
 			if (sprite_index != sprGainHp)
 			{
@@ -44,13 +45,17 @@ else
 
 	if (inviTime > 0)
 	{
-		if (blink > 0) blink -= DELTA_TIME;
-		else blink = blinkMax;
-		blinkTime -= DELTA_TIME;
+		blinkTime = blinkTimeMax;
+		inviTime -= DELTA_TIME;
 	}
 	else
 	{
-		blink = 0;
-		blinkTime = 0;
+		if (invi == true)
+		{
+			invi = false;
+			blink = 0;
+			blinkTime = 0;
+			inviTime = 0;
+		}
 	}
 }

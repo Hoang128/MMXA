@@ -11,7 +11,7 @@ switch (sprite_index)
 		if (phase == 5)	imgSpd = -0.3;	
 		else			imgSpd = 0.3;
 	}	break;
-	case spr_dynamoStand:		imgSpd = 0.1;	break;
+	case spr_dynamoStand:		imgSpd = 0.15;	break;
 }
 
 event_inherited();

@@ -10,6 +10,7 @@ switch (obj_ImageWeapon)
 		
 		obj_ZSaber.state = state;
 		obj_ZSaber.setupState = true;
+		obj_ZSaber.hit = 0;
 	}
 	break;
 }

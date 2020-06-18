@@ -22,8 +22,12 @@ with(obj_playerHumanForm)
 		}		
 	}
 	
+	hspd = 0;
 	atkState = AttackState.A_NONE;
 	dashTime = 0;
 	dashSpd = 0;
 	activateState = ActivateState.HALF_ACTIVATE;
+	
+	keyboard_key_release(global.keyLeft);
+	keyboard_key_release(global.keyRight);
 }

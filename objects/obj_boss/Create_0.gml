@@ -13,11 +13,9 @@ fireArmor = 0;
 iceArmor = 0;
 electArmor = 0;
 
-hitCounter = 0;
-hitNumberMax = 2;
-
+invi = false;
 inviTime = 0;
-inviTimeMax = 300;
+inviTimeMax = 150;
 
 bgm = bgm_X5VSBoss;
 sprGainHp = noone;
