@@ -4,4 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-cutsceneLose = obj_cutsceneBossDynamoLose;
+cutsceneLose = obj_cutBossDynamoLose;

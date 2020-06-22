@@ -14,6 +14,7 @@ lPlayer = layer_create(0);
 lBullet = layer_create(-100);
 lEnemy  = layer_create(50);
 lHUD    = layer_create(-5000);
+lUI		= layer_create(-6000);
 
 //Init Object
 if (global.isStage)

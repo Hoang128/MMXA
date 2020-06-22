@@ -122,4 +122,13 @@ if (keyboard_check(ord("Q")))
 			}
 		}
 	}
+	
+	//Test message
+	if (keyboard_check_pressed(ord("M")))
+	{
+		if (!instance_exists(obj_menuMessageText))
+		{
+			instance_create_layer(x, y, obj_gameManager.lUI, obj_menuMessageText);
+		}
+	}
 }

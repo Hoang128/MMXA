@@ -1,0 +1,1 @@
+scr_createTextMessage("We meet again, Hunter! Came here for elves too ?");

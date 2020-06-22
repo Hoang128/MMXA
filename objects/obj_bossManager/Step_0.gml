@@ -14,7 +14,7 @@ switch (phase)
 			phase = 1;
 			switch(boss)
 			{
-				case obj_dynamo:	scr_setCutscene(obj_cutsceneBossDynamo);	break;
+				case obj_dynamo:	scr_setCutscene(obj_cutBossDynamo);	break;
 				default:			phase = 2;									break;
 			}
 		}
