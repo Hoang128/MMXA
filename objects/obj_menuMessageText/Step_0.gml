@@ -49,8 +49,18 @@ else
 					{
 						if (bustShotImg != noone)
 						{
-							phase = 1;
-							animPhase = 2;
+							if (bustShotXScale < 1)
+							{
+								bustShotXScale += bustShotAnimSpd;
+								bustShotYScale += bustShotAnimSpd;
+							}
+							else
+							{
+								bustShotXScale = 1;
+								bustShotYScale = 1;
+								phase = 1;
+								animPhase = 2;
+							}
 						}
 						else
 						{
@@ -110,6 +120,17 @@ else
 				{
 					if (bustShotImg != noone)
 					{
+						if (bustShotXScale > 0)
+						{
+							bustShotXScale -= bustShotAnimSpd;
+							bustShotYScale -= bustShotAnimSpd;
+						}
+						else
+						{
+							bustShotXScale = 0;
+							bustShotYScale = 0;
+							animPhase = 1;
+						}
 					}
 					else
 						animPhase = 1;

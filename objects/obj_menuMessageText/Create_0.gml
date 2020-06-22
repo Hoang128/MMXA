@@ -12,13 +12,6 @@ haveStartAnim = true;
 animPhase = 0;
 animXPixelSpd = 128;
 
-bustShotImg = noone;
-bustShot = fa_left;
-bustShotX = 8;
-bustShotY = 8;
-bustShotW = 192;
-bustShotH = 192;
-
 xEndSpace = 8;
 borderSpace = 32;
 widthMax = VIEW_WIDTH - borderSpace * 2;
@@ -26,6 +19,16 @@ heightMax = 180;
 width = 0;
 height = 0;
 lineW = 0;
+
+bustShotImg = spr_bs_dynamo;
+bustShot = fa_left;
+bustShotX = 8;
+bustShotY = heightMax - 8;
+bustShotW = 192;
+//bustShotH = 192;
+bustShotXScale = 0;
+bustShotYScale = 0;
+bustShotAnimSpd = 0.2;
 
 phase = 0;
 

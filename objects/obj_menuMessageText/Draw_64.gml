@@ -12,6 +12,11 @@ if (background != noone)
 	draw_set_alpha(1);
 }
 
+if (bustShotImg != noone)
+{
+	draw_sprite_ext(bustShotImg, 0, x + bustShotX, y + bustShotY, bustShotXScale, bustShotYScale, 0, c_white, 1);
+}
+
 if (phase == 1)
 {
 	if (shadow == 1)
