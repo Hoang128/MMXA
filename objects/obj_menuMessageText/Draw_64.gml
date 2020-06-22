@@ -5,6 +5,9 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_font(font);
 
+draw_text(0, 0, string(charCursor));
+draw_text(0, 16, string(charCursorMax));
+
 if (background != noone)
 {
 	draw_set_alpha(backgroundAlpha);

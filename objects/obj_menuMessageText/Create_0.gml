@@ -20,17 +20,17 @@ width = 0;
 height = 0;
 lineW = 0;
 
-bustShotImg = spr_bs_dynamo;
+bustShotImg = noone;
 bustShot = fa_left;
 bustShotX = 8;
 bustShotY = heightMax - 8;
 bustShotW = 192;
-//bustShotH = 192;
 bustShotXScale = 0;
 bustShotYScale = 0;
 bustShotAnimSpd = 0.2;
 
 phase = 0;
+init = 0;
 
 x = borderSpace;
 y = borderSpace;
@@ -38,8 +38,7 @@ y = borderSpace;
 contextRevealSpd = 0.5;
 charCursor = 0;
 charCursorMax = 0;
-contextNumber = 2;
+contextNumber = 1;
 contextCurrent = 0;
 messageIndex = "";
-lineContext[0] = "Test asiug uhoqwai hgniol awsnhgi owqh ngio nwaio gbw ahni ogn aw iob nai owhngbioa whn oivblaw soig";
-lineContext[1] = "I wish i were a bird!";
+lineContext[0] = "Test";

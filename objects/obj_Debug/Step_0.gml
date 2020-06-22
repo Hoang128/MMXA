@@ -126,9 +126,16 @@ if (keyboard_check(ord("Q")))
 	//Test message
 	if (keyboard_check_pressed(ord("M")))
 	{
-		if (!instance_exists(obj_menuMessageText))
-		{
-			instance_create_layer(x, y, obj_gameManager.lUI, obj_menuMessageText);
-		}
+		scr_createTextMessChain(
+			scr_createTextMessage(
+				spr_bs_dynamo,
+				"Hello everynyan! How are you? Fine thank you!",
+				"I wish i were a bird!"
+			),
+			scr_createTextMessage(
+				spr_bs_dynamo,
+				"Nico Nico nii!"
+			)
+		);
 	}
 }

@@ -1,12 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-if (init == false)
-{
-	
-	init = true;
-}
-else
+if (init == 1)
 {
 	switch(phase)
 	{
@@ -76,7 +70,6 @@ else
 		
 		case 1:
 		{
-			//for testing
 			if (charCursorMax == 0)
 			{
 				charCursorMax = string_length(lineContext[contextCurrent]);
@@ -99,16 +92,16 @@ else
 			}
 			if (keyboard_check_pressed(global.keyJump))
 			{
-				if (contextCurrent < (contextNumber - 1))
+				if (charCursor == charCursorMax)
 				{
-					if (charCursor == charCursorMax)
+					if (contextCurrent < (contextNumber - 1))
 					{
 						contextCurrent++;
 						charCursorMax = 0;
 					}
+					else
+						phase = 2;
 				}
-				else
-					phase = 2;
 			}
 		}	break;
 		

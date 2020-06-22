@@ -615,6 +615,14 @@
             }
         },
         {
+            "Key": "10804321-8e34-4507-aeda-4709b4dbff44",
+            "Value": {
+                "id": "192cf113-635a-4466-9493-35a58a169260",
+                "resourcePath": "objects\\obj_menuMessTextChain\\obj_menuMessTextChain.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "10a932c3-930b-44a0-84e2-ff0f78c998a3",
             "Value": {
                 "id": "ca6abb02-32dc-419c-a96f-aa9776913c62",
@@ -1980,6 +1988,14 @@
                 "id": "5bb07aa1-c32e-4949-96e1-762fefe7aaec",
                 "resourcePath": "sprites\\spr_ZShotC3_A\\spr_ZShotC3_A.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3d00496e-9df6-415e-b5ab-b6dd719666bf",
+            "Value": {
+                "id": "84adb677-2d32-4b94-8aea-70a4f5156355",
+                "resourcePath": "scripts\\scr_createTextMessChain\\scr_createTextMessChain.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -7887,7 +7903,8 @@
         "ebfbc0f3-8ea3-44df-a804-5f4bac4441d6",
         "f94fc98c-e90a-423a-a680-d4fb6e10cd7e",
         "a3b6f953-aa7f-4184-b477-ecce56538c22",
-        "2dc539c7-cbcf-4968-9898-b91f6315f86a"
+        "2dc539c7-cbcf-4968-9898-b91f6315f86a",
+        "3d00496e-9df6-415e-b5ab-b6dd719666bf"
     ],
     "tutorial": ""
 }
