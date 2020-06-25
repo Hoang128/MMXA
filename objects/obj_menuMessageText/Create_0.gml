@@ -34,6 +34,7 @@ init = 0;
 
 x = borderSpace;
 y = borderSpace;
+lineW = borderSpace + widthMax - (x + 2 * bustShotX + bustShotW) - xEndSpace * 2;
 
 contextRevealSpd = 0.5;
 charCursor = 0;

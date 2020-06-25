@@ -21,10 +21,28 @@ switch(phase)
 		{
 			if (obj_dynamoCutscene.phase == 3)
 			{
+				scr_messDynamoStart();
+				phase = 2;
+			}
+		}
+	}	break;
+	
+	case 2:
+	{
+		if (!instance_exists(obj_menuMessTextChain))
+			phase = 3;
+	}	break;
+	
+	case 3:
+	{
+		if (instance_exists(obj_dynamoCutscene))
+		{
+			if (obj_dynamoCutscene.phase == 3)
+			{
 				var boss = instance_create_depth(obj_dynamoCutscene.x, obj_dynamoCutscene.y, obj_gameManager.lEnemy, obj_dynamo);
 				boss.image_xscale = obj_dynamoCutscene.image_xscale;
 				instance_destroy(obj_dynamoCutscene);
-				phase = 2;
+				phase = 4;
 			}
 		}
 	}	break;

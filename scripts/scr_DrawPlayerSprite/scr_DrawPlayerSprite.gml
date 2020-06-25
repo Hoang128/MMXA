@@ -12,7 +12,7 @@ switch (object)
 	}
 	case obj_playerZ:
 	{
-		scr_PalSwapSet(myPal, 2, false);
+		scr_PalSwapSet(myPal, 0, false);
 
 		draw_self();
 

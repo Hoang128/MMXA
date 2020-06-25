@@ -15,8 +15,8 @@ if (setupState)
 		case SaberState.SABER_LAND_SLASH:		{ sprite_index = spr_ZSaberHBSlashLand;		maxTimmer = 1;	slowTime = true;  }	break;
 		case SaberState.SABER_DUCK_SLASH:		{ sprite_index = spr_ZSaberHBSlashDuck;		maxTimmer = 2;	slowTime = true;  }	break;
 		case SaberState.SABER_SPIN_SLASH:		{ sprite_index = spr_ZSaberHBSlashSpin;		maxTimmer = 3;	slowTime = true;  }	break;
-		case SaberState.SABER_SLIDE_SLASH:		{ sprite_index = spr_ZSaberHBSlashSlide;	maxTimmer = 8;	slowTime = false; }	break;
-		case SaberState.SABER_CLIMB_SLASH:		{ sprite_index = spr_ZSaberHBSlashClimb;	maxTimmer = 8;	slowTime = false; }	break;
+		case SaberState.SABER_SLIDE_SLASH:		{ sprite_index = spr_ZSaberHBSlashSlide;	maxTimmer = 8;	slowTime = true;  }	break;
+		case SaberState.SABER_CLIMB_SLASH:		{ sprite_index = spr_ZSaberHBSlashClimb;	maxTimmer = 8;	slowTime = true;  }	break;
 		case SaberState.SABER_CHARGE_SLASH:		
 		{ 
 			slowTime = true;

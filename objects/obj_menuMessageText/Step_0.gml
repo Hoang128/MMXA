@@ -24,13 +24,11 @@ if (init == 1)
 							{
 								xStartSpace = x + 2 * bustShotX + bustShotW;
 								yStartSpace = 8;
-								lineW = borderSpace + widthMax - xStartSpace - xEndSpace;
 							}
 							else
 							{
 								xStartSpace = 8;
 								yStartSpace = 8;
-								lineW = borderSpace + widthMax - xStartSpace - xEndSpace - (2 * bustShotX + bustShotW);
 							}
 							width  = widthMax;
 							height = heightMax;

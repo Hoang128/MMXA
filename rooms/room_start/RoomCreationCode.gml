@@ -60,7 +60,7 @@ for(i = 0; i <=4; i++)
 //Default Zero
 global.zCore[2] = ItemState.USING;
 global.zForm[1] = ItemState.USING;
-global.zSaber[1] = ItemState.USING;
+global.zSaber[2] = ItemState.USING;
 
 //Default Key
 global.keyCardRed = ItemState.UNLOCK;	//For debug
