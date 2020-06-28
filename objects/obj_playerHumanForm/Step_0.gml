@@ -59,6 +59,14 @@ if (activateState != ActivateState.DEACTIVATE)
 		scr_playerChangeStandSprite(object_index);
 	}
 	
+	if (sprite_index == sprDash3)
+	{
+		if (dashTime == 0)
+		{
+			hspd = image_xscale * (5 - image_index) * 0.2 * dashSpdPhase2;
+		}
+	}
+	
 	#endregion
 	
 	//Collision------------------------------------------------------------------------------------------------
@@ -200,6 +208,14 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				if (!place_meeting(x, y + maxDisDetectSlopeAbove, obj_block))
 				{
+					if (sprite_index == sprDash3)
+					{
+						if (dashTime == 0)
+						{
+							hspd = 0;
+						}
+					}
+					
 					sprite_index = sprJump3;
 					image_index = 0;
 				
@@ -208,7 +224,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
 						atkState = AttackState.A_NONE;
 					}
-				
+					
 					aState = ActionState.IDLE;
 					vState = VerticalState.V_MOVE_FALLING;
 				}
@@ -1042,7 +1058,10 @@ if (activateState != ActivateState.DEACTIVATE)
 					
 					scr_SetIceSlideSpd(hspd, true);
 				}
-				hspd = 0;
+				if (dashTime > 0)
+					hspd = 0;
+				else
+					dashTime = 0;
 				aState = ActionState.IDLE;
 				hState = HorizontalState.H_MOVE_NONE;
 			}

@@ -81,6 +81,9 @@ switch (sprite_index)
 
 	case sprDash3:
 	{
+		hspd = 0;
+		dashTime = 0;
+		
 		sprite_index = sprStand;
 		image_index = 0;
 	}
