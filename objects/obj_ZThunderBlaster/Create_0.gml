@@ -5,7 +5,7 @@
 event_inherited();
 
 collisionSFX = snd_RWeaponColEnemyEff;
-collisionEff = obj_ZBusterColEffLv1;
+collisionEff = obj_BusterColEffLv1;
 
 damage = 1;
 maxTimmer = 8;

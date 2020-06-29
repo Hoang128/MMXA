@@ -5,5 +5,5 @@
 event_inherited();
 
 damage = 4;
-collisionEff = obj_ZBusterColEffLv2;
+collisionEff = obj_BusterColEffLv2;
 

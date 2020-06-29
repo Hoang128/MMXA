@@ -1045,8 +1045,8 @@ if (activateState != ActivateState.DEACTIVATE)
 					sprite_index = sprJump3;
 					image_index = 0;
 					
-					dashPhase = 0;
-					
+					hspd = 0;
+					dashTime = 0;
 					vState = VerticalState.V_MOVE_FALLING;
 				}
 				else
@@ -1054,14 +1054,14 @@ if (activateState != ActivateState.DEACTIVATE)
 					sprite_index = sprDash3;
 					image_index = 0;
 					
-					dashPhase = 0;
+					if (dashTime > 0)
+						hspd = 0;
+					else
+						dashTime = 0;
 					
 					scr_SetIceSlideSpd(hspd, true);
 				}
-				if (dashTime > 0)
-					hspd = 0;
-				else
-					dashTime = 0;
+				dashPhase = 0;
 				aState = ActionState.IDLE;
 				hState = HorizontalState.H_MOVE_NONE;
 			}

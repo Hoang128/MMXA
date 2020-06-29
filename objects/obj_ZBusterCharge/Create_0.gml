@@ -4,7 +4,7 @@ event_inherited();
 
 damage = 5;
 collisionSFX = snd_RWeaponColEnemyEff;
-collisionEff = obj_ZBusterColEffLv2;
+collisionEff = obj_BusterColEffLv2;
 flyTime = 20;
 moveSpd = 8;
 maxTimmer = 4;

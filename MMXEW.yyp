@@ -1002,7 +1002,7 @@
             "Key": "1d6ca261-2f19-49d4-8abc-835cb0ad1928",
             "Value": {
                 "id": "95eefe16-3031-40ec-924c-47d8a0ffef22",
-                "resourcePath": "objects\\obj_ZBusterColEffLv1\\obj_ZBusterColEffLv1.yy",
+                "resourcePath": "objects\\obj_BusterColEffLv1\\obj_BusterColEffLv1.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1051,6 +1051,14 @@
             "Value": {
                 "id": "eab66519-1e20-4acc-bbe9-36819c08d047",
                 "resourcePath": "sprites\\spr_dynamoBeamDown\\spr_dynamoBeamDown.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "1f4c10dd-d96e-45a9-9ebe-3a7973022ed4",
+            "Value": {
+                "id": "0a3a6353-5002-4514-89ba-c6c8eda6c1b6",
+                "resourcePath": "sprites\\spr_PalZBuster\\spr_PalZBuster.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5786,7 +5794,7 @@
             "Key": "b9e79ebb-ee17-403e-ad95-26bb967f8698",
             "Value": {
                 "id": "b98cb00d-f25e-4cca-a869-2d0d90a55111",
-                "resourcePath": "objects\\obj_ZBusterColEffLv2\\obj_ZBusterColEffLv2.yy",
+                "resourcePath": "objects\\obj_BusterColEffLv2\\obj_BusterColEffLv2.yy",
                 "resourceType": "GMObject"
             }
         },

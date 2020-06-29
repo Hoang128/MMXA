@@ -7,7 +7,9 @@
         "cf9e2513-7d7d-4cdd-8936-12d6f12d8fed",
         "bee899b2-7d7e-428c-afc3-00443ceec252",
         "9ed5e7ab-1a6b-458b-b6d8-7cd6c3da1b77",
-        "1d2558fc-3ca0-46e0-bafb-de6c74e7d60f"
+        "1d2558fc-3ca0-46e0-bafb-de6c74e7d60f",
+        "1d6ca261-2f19-49d4-8abc-835cb0ad1928",
+        "b9e79ebb-ee17-403e-ad95-26bb967f8698"
     ],
     "filterType": "GMObject",
     "folderName": "Weapon Template",
