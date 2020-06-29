@@ -6,9 +6,7 @@
     "children": [
         "055af38c-3b92-4b27-926f-18087b5d6616",
         "d4aa4387-eb24-4b9c-8d4f-8ce8c0b59155",
-        "ecadea99-1fee-4c99-a9cf-0b98f6fa43cd",
-        "79b7701b-81ac-435b-8440-1d6f48d10007",
-        "137b0cb3-9668-4ef5-808b-76609df419c6"
+        "ecadea99-1fee-4c99-a9cf-0b98f6fa43cd"
     ],
     "filterType": "GMSprite",
     "folderName": "Effect",

@@ -13,7 +13,7 @@ yPlaceNor=-22;
 xPlaceJmp=30;
 yPlaceJmp=-24;
 
-xPlaceCharge1=48;
+xPlaceCharge1=42;
 yPlaceCharge1=-19;
 xPlaceCharge2=43;
 yPlaceCharge2=-21;
