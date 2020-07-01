@@ -29,6 +29,7 @@ switch argument0
 			case sprBeamUp:			image_speed = 0.3; break;
 			case sprStun1:			image_speed = 0.7; break;
 			case sprStun2:			image_speed = 0.3; break;
+			case sprWired:			image_speed = 0; break;
 			
 			default:				image_speed = 0.5; break;
 		}
@@ -65,6 +66,7 @@ switch argument0
 			case sprBeamUp:			image_speed = 0.3; break;
 			case sprStun1:			image_speed = 0.7; break;
 			case sprStun2:			image_speed = 0.3; break;
+			case sprWired:			image_speed = 0; break;
 			
 			//Zero only
 			case spr_ZDoubleJump:	image_speed = 0.35; break;

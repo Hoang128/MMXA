@@ -795,57 +795,111 @@ if (activateState != ActivateState.DEACTIVATE)
 			
 			with (wirer)
 			{
-				x = core.x;
+				x = core.x - core.xDistanceToWirer * core.image_xscale;
 				y = core.y - core.yDistanceToWirer;
 			}
-
-			switch(wireType)
+			
+			if ((sprite_index != sprWiredStartH) && (sprite_index != sprWiredStartV))
 			{
-				case WireType.HORIZONTAL:
+				switch(wireType)
 				{
-					if (dashPhase == 0)
+					case WireType.HORIZONTAL:
 					{
-						if (!place_meeting(x + hDir * runSpd, y, obj_block) && collision_rectangle(wirer.x + hDir * 4, wirer.y + 1, wirer.x + hDir * (4 + runSpd), wirer.y - 1, obj_wire, false, false))
+						if (dashPhase == 0)
 						{
-							if (hMove != 0)
-								hState = HorizontalState.H_MOVE_FORWARD;
+							if (!place_meeting(x + hDir * runSpd, y, obj_block) && collision_rectangle(wirer.x + hDir * 4, wirer.y + 1, wirer.x + hDir * (4 + runSpd), wirer.y - 1, obj_wire, false, false))
+							{
+								if (hMove != 0)
+								{
+									if (sprite_index == sprWired)
+									{
+										sprite_index = sprWiredForward;
+										image_index = 0;
+									}
+									hState = HorizontalState.H_MOVE_FORWARD;
+								}
+								else
+								{
+									if (sprite_index != sprWired)
+									{
+										sprite_index = sprWired;
+										image_index = 0;
+									}
+									hState = HorizontalState.H_MOVE_NONE;
+								}
+								
+								hspd = hMove * runSpd;
+							}
 							else
+							{
+								if (sprite_index != sprWired)
+								{
+									sprite_index = sprWired;
+									image_index = 0;
+								}
+								
+								hspd = 0;
 								hState = HorizontalState.H_MOVE_NONE;
-							hspd = hMove * runSpd;
+							}
+						vspd = 0;
 						}
-						else
-						{
-							hspd = 0;
-							hState = HorizontalState.H_MOVE_NONE;
-						}
-					vspd = 0;
-					}
-				}	
-				break;
+					}	
+					break;
 				
-				case WireType.VERTICAL:
-				{
-					hspd = 0;
-					if (dashPhase == 0)
+					case WireType.VERTICAL:
 					{
-						if (!place_meeting(x, y + vMove * runSpd, obj_block) && collision_rectangle(wirer.x - 1, wirer.y + vMove * 4, wirer.x + 1, wirer.y + vMove * (4 + runSpd), obj_wire, false, false))
+						hspd = 0;
+						if (dashPhase == 0)
 						{
-							if (vMove > 0)
-								vState = VerticalState.V_MOVE_DOWN;
-							else if (vMove < 0)
-								vState = VerticalState.V_MOVE_UP;
+							if (!place_meeting(x, y + vMove * runSpd, obj_block) && collision_rectangle(wirer.x - 1, wirer.y + vMove * 4, wirer.x + 1, wirer.y + vMove * (4 + runSpd), obj_wire, false, false))
+							{
+								if (vMove > 0)
+									vState = VerticalState.V_MOVE_DOWN;
+								else if (vMove < 0)
+									vState = VerticalState.V_MOVE_UP;
+								else
+									vState = VerticalState.V_MOVE_NONE;
+								vspd = vMove * runSpd;
+								if (vspd < 0)
+								{
+									if (sprite_index != sprWiredUp)
+									{
+										sprite_index = sprWiredUp;
+										image_index = 0;
+									}
+								}
+								if (vspd > 0)
+								{
+									if (sprite_index != sprWiredDown)
+									{
+										sprite_index = sprWiredDown;
+										image_index = 0;
+									}
+								}
+								if (vspd == 0)
+								{
+									if (sprite_index != sprWired)
+									{
+										sprite_index = sprWired;
+										image_index = 0;
+									}
+								}
+							}
 							else
+							{
+								if (sprite_index != sprWired)
+								{
+									sprite_index = sprWired;
+									image_index = 0;
+								}
+								
+								vspd = 0;
 								vState = VerticalState.V_MOVE_NONE;
-							vspd = vMove * runSpd;
+							}
 						}
-						else
-						{
-							vspd = 0;
-							vState = VerticalState.V_MOVE_NONE;
-						}
-					}
-				}	
-				break;
+					}	
+					break;
+				}
 			}
 			
 		}
@@ -858,8 +912,6 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if (wireTime == 0)
 					{
-						sprite_index = spr_ZWiredStart;
-						image_index = 0;
 						var wire = collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_top + 8, obj_wire, false, true);
 						if (place_meeting(x, y + 1, obj_block))
 							y--;
@@ -872,23 +924,43 @@ if (activateState != ActivateState.DEACTIVATE)
 							case obj_wireHorizontal:	
 							{
 								wireType = WireType.HORIZONTAL;
-								
+								sprite_index = sprWiredStartH;
+								image_index = 0;
 								x = clamp(x, wire.bbox_left, wire.bbox_right);
 								y = wire.y + yDistanceToWirer;
+								
+								while(collision_rectangle(bbox_left - 1, bbox_top, bbox_left, bbox_bottom, obj_block, false, true))
+								{
+									x ++;
+								}
+						
+								while(collision_rectangle(bbox_right, bbox_top, bbox_right + 1, bbox_bottom, obj_block, false, true))
+								{
+									x --;
+								}
+								
 							}	break;
 							case obj_wireVertical:
 							{
 								wireType = WireType.VERTICAL;
-								
+								sprite_index = sprWiredStartV;
+								image_index = 0;
 								x = wire.x;
 								y = clamp(y, wire.bbox_bottom + yDistanceToWirer, wire.bbox_top + yDistanceToWirer);
+								
+								while(place_meeting(x, y + 1, obj_block))
+								{
+									y--;
+								}
+								
 							}	break;
 							case noone:					
 							{
 								wireType = WireType.NONE;		
 							}	break;
 						}
-						wirer = instance_create_depth(x, y - yDistanceToWirer, depth, obj_wirer);
+						
+						wirer = instance_create_depth(x, y - yDistanceToWirer, depth - 1, objWire);
 						wirer.core = self;
 						canAirDash = 1;
 						dashPhase = 0;
@@ -972,6 +1044,11 @@ if (activateState != ActivateState.DEACTIVATE)
 						{
 							if (collision_rectangle(wirer.x - 1, wirer.y - (4 + dashSpdPhase2 - 1), wirer.x + 1, wirer.y - (4 + dashSpdPhase2), obj_wire, false, false))
 							{
+								if (sprite_index != sprWiredUp)
+								{
+									sprite_index = sprWiredUp;
+									image_index = 0;
+								}
 								dashPhase = 2;
 								dashTime = maxDashTime / 2;
 								vDir = -1;
@@ -985,6 +1062,11 @@ if (activateState != ActivateState.DEACTIVATE)
 						{
 							if (collision_rectangle(wirer.x - 1, wirer.y + (4 + dashSpdPhase2 - 1), wirer.x + 1, wirer.y + (4 + dashSpdPhase2), obj_wire, false, false))
 							{
+								if (sprite_index != sprWiredDown)
+								{
+									sprite_index = sprWiredDown;
+									image_index = 0;
+								}
 								dashPhase = 2;
 								dashTime = maxDashTime / 2;
 								vDir = 1;
@@ -1077,6 +1159,8 @@ if (activateState != ActivateState.DEACTIVATE)
 						var hOnWire = collision_rectangle(wirer.x + hDir * (4 + dashSpdPhase2 - 1), wirer.y + 1, wirer.x + hDir * (4 + dashSpdPhase2), wirer.y - 1, obj_wire, false, false);
 						if (keyboard_check_released(global.keyDash) || (wallIsAHead) || (!hOnWire) || (dashTime <= 0))
 						{
+							sprite_index = sprWired;
+							image_index = 0;
 							hspd = 0;
 							hState = HorizontalState.H_MOVE_NONE;
 							dashPhase = 0;
@@ -1091,6 +1175,8 @@ if (activateState != ActivateState.DEACTIVATE)
 						var vOnWire = collision_rectangle(wirer.x - 1, wirer.y + vDir * (4 + dashSpdPhase2 - 1), wirer.x + 1, wirer.y + vDir * (4 + dashSpdPhase2), obj_wire, false, false)
 						if (keyboard_check_released(global.keyDash) || (upWallIsAhead) || (downWallIsAhead) || (!vOnWire) || (dashTime <= 0))
 						{
+							sprite_index = sprWired;
+							image_index = 0;
 							vspd = 0;
 							vState = VerticalState.V_MOVE_NONE;
 							dashPhase = 0;
@@ -1161,7 +1247,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				//Jump down from a wire
 				if (aState == ActionState.WIRING)
 				{
-					if (sprite_index == sprWired)
+					if (sprite_index != sprWiredStart)
 					{
 						sprite_index = sprJump1;
 						image_index = 0;

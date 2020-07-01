@@ -13,6 +13,9 @@ yPlaceDashEff = -4;
 airHikeTimeMax = 1;
 slashWaitTime = 2;
 canChargeTimmerMax = 2;
+yDistanceToWirer = 60;
+xDistanceToWirer = 0;
+objWire = obj_ZWirer;
 
 chargeCoreLv1Limit = 40;
 chargeCoreLv2Limit = 90;

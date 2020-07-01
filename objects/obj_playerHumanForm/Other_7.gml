@@ -207,19 +207,11 @@ switch (sprite_index)
 	}
 	break;
 	
-	case sprWiredStart:
+	case sprWiredStartH:
+	case sprWiredStartV:
 	{
 		sprite_index = sprWired;
 		image_index = 0;
-	}
-	break;
-	
-	case sprWired:
-	{
-		if (hspd == 0 && vspd == 0)
-			image_index = 2;
-		else
-			image_index = 0;
 	}
 	break;
 	

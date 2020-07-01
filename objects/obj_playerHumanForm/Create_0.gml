@@ -43,11 +43,13 @@ stunSprLoop1 = 0;
 stunSprLoop2 = 1;
 blinkMax = 10;
 timeWaitToDestroy = 10;
+xDistanceToWirer = 0;
 yDistanceToWirer = 44;
 wireType = WireType.NONE;
 wirer = noone;
 wireTimeMax = 10;
 wireTime = 0;
+objWire = noone;
 
 //Default state
 weight = WeighType.MEDIUM;
@@ -113,6 +115,13 @@ sprClimb2 = noone;
 sprClimb3 = noone;
 sprStun1 = noone;
 sprStun2 = noone;
+sprWired = noone;
+sprWiredDown = noone;
+sprWiredUp = noone;
+sprWiredStart = noone;
+sprWiredStartH = noone;
+sprWiredStartV = noone;
+sprWiredForward = noone;
 
 //Initialize sound fx
 sndVoiceDie = noone;
