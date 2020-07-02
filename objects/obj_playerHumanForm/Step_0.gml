@@ -219,9 +219,13 @@ if (activateState != ActivateState.DEACTIVATE)
 					sprite_index = sprJump3;
 					image_index = 0;
 				
-					if (instance_exists(obj_PlayerWeaponMeele))
+					if (atkState > AttackState.A_NORMAL_ATTACK)
 					{
-						scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
+						if (instance_exists(obj_PlayerWeaponMeele))
+						{
+							scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
+						
+						}
 						atkState = AttackState.A_NONE;
 					}
 					
