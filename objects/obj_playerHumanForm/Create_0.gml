@@ -43,7 +43,6 @@ stunSprLoop1 = 0;
 stunSprLoop2 = 1;
 blinkMax = 10;
 timeWaitToDestroy = 10;
-xDistanceToWirer = 0;
 yDistanceToWirer = 44;
 wireType = WireType.NONE;
 wirer = noone;

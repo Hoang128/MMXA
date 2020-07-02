@@ -17,6 +17,7 @@ waitShotNormal = 3;
 waitShotLong = 15;
 waitShotMax = 30;
 waitShot = 0;
+yDistanceToWirer = 44;
 objWire = obj_XWirer;
 
 //Initialize sprite

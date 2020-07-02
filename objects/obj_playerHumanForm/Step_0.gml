@@ -795,7 +795,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			
 			with (wirer)
 			{
-				x = core.x - core.xDistanceToWirer * core.image_xscale;
+				x = core.x;
 				y = core.y - core.yDistanceToWirer;
 			}
 			
