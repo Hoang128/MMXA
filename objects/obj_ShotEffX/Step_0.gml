@@ -61,6 +61,21 @@ if (init == false)
 			xPlace=23*core.hDir;
 			yPlace=-31;
 		}	break;
+		case spr_XShotWired:
+		{
+			xPlace=21*core.hDir;
+			yPlace=-23;
+		}	break;
+		case spr_XShotWiredStartHorizontal:
+		{
+			xPlace=22*core.hDir;
+			yPlace=-22;
+		}	break;
+		case spr_XShotWiredStartVertical:
+		{
+			xPlace=22*core.hDir;
+			yPlace=-20;
+		}	break;
 	//if core.sprite_index=spr_x_ua_dash_up_shot {
 	//   xPlace=22*core.hDir;
 	//   yPlace=-24;

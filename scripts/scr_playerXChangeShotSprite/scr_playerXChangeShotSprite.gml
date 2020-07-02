@@ -40,28 +40,34 @@ switch (obj)
 						image_index = 0;
 					}
 				}	break;
-				case sprRunStart:	sprite_index = spr_XShotRunStart;	break;
-				case sprRun:		sprite_index = spr_XShotRun;		break;
-				case sprRunEnd:		sprite_index = spr_XShotRunEnd;		break;
-				case sprJump1:		sprite_index = spr_XShotJump1;		break;
-				case sprJump2:		sprite_index = spr_XShotJump2;		break;
-				case sprJump3:		sprite_index = spr_XShotJump3;		break;
-				case sprJump4:		sprite_index = spr_XShotJump4;		break;
-				case sprDash1:		sprite_index = spr_XShotDash1;		break;
-				case sprDash2:		sprite_index = spr_XShotDash2;		break;
-				case sprDash3:		sprite_index = spr_XShotDash3;		break;
-				case sprWallKick:	sprite_index = spr_XShotWallKick;	break;
-				case sprLand:		sprite_index = spr_XShotLand;		break;
+				case sprRunStart:		sprite_index = spr_XShotRunStart;				break;
+				case sprRun:			sprite_index = spr_XShotRun;					break;
+				case sprRunEnd:			sprite_index = spr_XShotRunEnd;					break;
+				case sprJump1:			sprite_index = spr_XShotJump1;					break;
+				case sprJump2:			sprite_index = spr_XShotJump2;					break;
+				case sprJump3:			sprite_index = spr_XShotJump3;					break;
+				case sprJump4:			sprite_index = spr_XShotJump4;					break;
+				case sprDash1:			sprite_index = spr_XShotDash1;					break;
+				case sprDash2:			sprite_index = spr_XShotDash2;					break;
+				case sprDash3:			sprite_index = spr_XShotDash3;					break;
+				case sprWallKick:		sprite_index = spr_XShotWallKick;				break;
+				case sprLand:			sprite_index = spr_XShotLand;					break;
+				case sprWired:
+				case sprWiredForward:
+				case sprWiredUp:
+				case sprWiredDown:		sprite_index = spr_XShotWired;					break;
+				case sprWiredStartH:	sprite_index = spr_XShotWiredStartHorizontal;	break;
+				case sprWiredStartV:	sprite_index = spr_XShotWiredStartVertical;		break;
 				case sprClimb2:		
 				{
 					sprite_index = spr_XShotClimb;		
 					image_index = 0;
 					image_speed = 0;
 				}	break;
-				case sprSlide1:		sprite_index = spr_XShotSlide1;		break;
-				case sprSlide2:		sprite_index = spr_XShotSlide2;		break;
+				case sprSlide1:			sprite_index = spr_XShotSlide1;					break;
+				case sprSlide2:			sprite_index = spr_XShotSlide2;					break;
 				case sprDashKick1:
-				case sprDashKick2:	sprite_index = spr_XShotJump2;		break;
+				case sprDashKick2:		sprite_index = spr_XShotJump2;					break;
 			}
 			sprStand = spr_XShotStand;
 			sprDuck2 = spr_XShotDuck;
@@ -81,6 +87,12 @@ switch (obj)
 			sprSlide2 = spr_XShotSlide2;
 			sprDashKick1 = spr_XShotJump2;
 			sprDashKick2 = spr_XShotJump2;
+			sprWired = spr_XShotWired;
+			sprWiredForward = spr_XShotWired;
+			sprWiredUp = spr_XShotWired;
+			sprWiredDown = spr_XShotWired;
+			sprWiredStartH = spr_XShotWiredStartHorizontal;
+			sprWiredStartV = spr_XShotWiredStartVertical;
 			
 			inShotFrame = true;
 		}
@@ -89,24 +101,30 @@ switch (obj)
 		{
 			switch (sprite_index)
 			{
-				case sprStand:		sprite_index = spr_XStand;		break;
-				case sprRunStart:	sprite_index = spr_XRunStart;	break;
-				case sprRun:		sprite_index = spr_XRun;		break;
-				case sprRunEnd:		sprite_index = spr_XRunEnd;		break;
-				case sprJump1:		sprite_index = spr_XJump1;		break;
-				case sprJump2:		sprite_index = spr_XJump2;		break;
-				case sprJump3:		sprite_index = spr_XJump3;		break;
-				case sprJump4:		sprite_index = spr_XJump4;		break;
-				case sprDash1:		sprite_index = spr_XDash1;		break;
-				case sprDash2:		sprite_index = spr_XDash2;		break;
-				case sprDash3:		sprite_index = spr_XDash3;		break;
-				case sprDuck2:		sprite_index = spr_XDuck2;		break;
-				case sprWallKick:	sprite_index = spr_XWallKick;	break;
-				case sprLand:		sprite_index = spr_XLand;		break;
-				case sprSlide1:		sprite_index = spr_XSlide1;		break;
-				case sprSlide2:		sprite_index = spr_XSlide2;		break;
-				case sprDashKick1:	sprite_index = spr_XDashKick1;	break;
-				case sprDashKick2:	sprite_index = spr_XDashKick2;	break;
+				case sprStand:			sprite_index = spr_XStand;					break;
+				case sprRunStart:		sprite_index = spr_XRunStart;				break;
+				case sprRun:			sprite_index = spr_XRun;					break;
+				case sprRunEnd:			sprite_index = spr_XRunEnd;					break;
+				case sprJump1:			sprite_index = spr_XJump1;					break;
+				case sprJump2:			sprite_index = spr_XJump2;					break;
+				case sprJump3:			sprite_index = spr_XJump3;					break;
+				case sprJump4:			sprite_index = spr_XJump4;					break;
+				case sprDash1:			sprite_index = spr_XDash1;					break;
+				case sprDash2:			sprite_index = spr_XDash2;					break;
+				case sprDash3:			sprite_index = spr_XDash3;					break;
+				case sprDuck2:			sprite_index = spr_XDuck2;					break;
+				case sprWallKick:		sprite_index = spr_XWallKick;				break;
+				case sprLand:			sprite_index = spr_XLand;					break;
+				case sprSlide1:			sprite_index = spr_XSlide1;					break;
+				case sprSlide2:			sprite_index = spr_XSlide2;					break;
+				case sprDashKick1:		sprite_index = spr_XDashKick1;				break;
+				case sprDashKick2:		sprite_index = spr_XDashKick2;				break;
+				case sprWired:			sprite_index = spr_XWired;					break;
+				case sprWiredForward:	sprite_index = spr_XWiredForward;			break;
+				case sprWiredUp:		sprite_index = spr_XWiredForward;			break;
+				case sprWiredDown:		sprite_index = spr_XWiredDown;				break;
+				case sprWiredStartH:	sprite_index = spr_XWiredStartHorizontal;	break;
+				case sprWiredStartV:	sprite_index = spr_XWiredStartVertical;		break;
 			}
 			sprStand = spr_XStand;
 			sprRunStart = spr_XRunStart;
@@ -126,6 +144,12 @@ switch (obj)
 			sprSlide2 = spr_XSlide2;
 			sprDashKick1 = spr_XDashKick1;
 			sprDashKick2 = spr_XDashKick2;
+			sprWired = spr_XWired;
+			sprWiredForward = spr_XWiredForward;
+			sprWiredUp = spr_XWiredUp;
+			sprWiredDown = spr_XWiredDown;
+			sprWiredStartH = spr_XWiredStartHorizontal;
+			sprWiredStartV = spr_XWiredStartVertical;
 			
 			atkState = AttackState.A_NONE;
 			inShotFrame = false;
