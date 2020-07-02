@@ -12,7 +12,7 @@ switch(sprite_index)
 		image_index = 0;
 	}	break;
 
-	case sprite_index == spr_ZSlashEnd_G:
+	case spr_ZSlashEnd_G:
 	{	
 		if (atkState != AttackState.A_NONE)
 			atkState = AttackState.A_NONE;
