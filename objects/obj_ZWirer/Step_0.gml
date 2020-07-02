@@ -6,7 +6,7 @@ event_inherited();
 
 if (instance_exists(core))
 {
-	if ((core.hspd != 0) || (core.vspd != 0))
+	if ((core.hspd != 0) || (core.vspd != 0) || (core.atkState != AttackState.A_NONE))
 	{
 		visible = 1;
 	}

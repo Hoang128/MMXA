@@ -17,7 +17,8 @@
         "7a2cdec5-df6c-4618-a009-2d938c45137a",
         "943fdb8b-567d-43f6-b4ca-d3be9b3fee15",
         "64b7d940-9e91-4108-8410-067df47ad91a",
-        "69607168-f8e1-4b95-b8de-32aa66fefe24"
+        "69607168-f8e1-4b95-b8de-32aa66fefe24",
+        "34ca4201-83fd-424a-8d86-bcbefb303d20"
     ],
     "filterType": "GMSprite",
     "folderName": "Image",

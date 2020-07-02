@@ -10,6 +10,8 @@ if (activateState != ActivateState.DEACTIVATE)
 	#region
 	
 	//Air hike
+	#region
+	
 	if ((vState == VerticalState.V_ON_GROUND) || (aState == ActionState.WALLKICK) || (aState == ActionState.CLIMBING) || (aState == ActionState.SLIDING))
 	{
 		airHikeTime = airHikeTimeMax;
@@ -17,8 +19,8 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	if (canAirDash == 0) airHikeTime = 0;
 	
-	//Not on ground anymore when on air
-	
+	#endregion
+
 	//Charge slash earth quake
 	#region
 	
@@ -404,39 +406,65 @@ if (activateState != ActivateState.DEACTIVATE)
 				else
 				{
 					//Slide Slash
-					if ((aState == ActionState.SLIDING) && (sprite_index == sprSlide2))
+					if (aState == ActionState.SLIDING)
 					{
-						if (atkState == AttackState.A_NONE)
+						if (sprite_index == sprSlide2)
 						{
-							sprite_index = spr_ZSlashSlide;
-							image_index = 0;
-							audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo1, 0, 0);
-							audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
+							if (atkState == AttackState.A_NONE)
+							{
+								sprite_index = spr_ZSlashSlide;
+								image_index = 0;
+								audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo1, 0, 0);
+								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
 							
-							hspd = 0;
-							atkState = AttackState.A_NORMAL_ATTACK;
+								hspd = 0;
+								atkState = AttackState.A_NORMAL_ATTACK;
 							
-							scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_SLIDE_SLASH, self);
+								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_SLIDE_SLASH, self);
+							}
 						}
 					}
 					
 					//Climb Slash
-					if ((aState == ActionState.CLIMBING) && (sprite_index == sprClimb2))
+					if (aState == ActionState.CLIMBING)
 					{
-						if (atkState == AttackState.A_NONE)
+						if (sprite_index == sprClimb2)
 						{
-							sprite_index = spr_ZSlashClimb;
+							if (atkState == AttackState.A_NONE)
+							{
+								sprite_index = spr_ZSlashClimb;
+								image_index = 0;
+								image_speed = 0;
+								audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo1, 0, 0);
+								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
+							
+								vspd = 0;
+								isClimbing = 0;
+								vState = VerticalState.V_MOVE_NONE;
+								atkState = AttackState.A_STRICT_ATTACK_LV2;
+							
+								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_CLIMB_SLASH, self);
+							}
+						}
+					}
+					
+					//Wire Slash
+					if (aState == ActionState.WIRING)
+					{
+						if ((sprite_index != sprWiredStartH) && (sprite_index != sprWiredStartV) && (sprite_index != spr_ZSlashWired))
+						{
+							sprite_index = spr_ZSlashWired;
 							image_index = 0;
-							image_speed = 0;
 							audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo1, 0, 0);
 							audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
 							
 							vspd = 0;
-							isClimbing = 0;
+							hspd = 0;
 							vState = VerticalState.V_MOVE_NONE;
+							hState = HorizontalState.H_MOVE_NONE;
 							atkState = AttackState.A_STRICT_ATTACK_LV2;
 							
-							scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_CLIMB_SLASH, self);
+							scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_WIRE_SLASH, self);
 						}
 					}
 				}

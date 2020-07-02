@@ -803,7 +803,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				y = core.y - core.yDistanceToWirer;
 			}
 			
-			if ((sprite_index != sprWiredStartH) && (sprite_index != sprWiredStartV))
+			if ((sprite_index != sprWiredStartH) && (sprite_index != sprWiredStartV) && (atkState <= AttackState.A_NORMAL_ATTACK))
 			{
 				switch(wireType)
 				{

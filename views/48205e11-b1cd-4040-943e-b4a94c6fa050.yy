@@ -8,9 +8,7 @@
         "2dcf6f6e-5a6a-4791-bbe4-44730ff3f5d3",
         "279be89f-2e41-41fd-be53-ed2c23fc1d69",
         "8e358919-e89d-43b8-abb0-6230ecdd47af",
-        "af5a8c85-6129-4ba2-a3b6-a581c8d183d8",
-        "4f2a1701-ff07-4b45-b132-d8b7ee550134",
-        "34ca4201-83fd-424a-8d86-bcbefb303d20"
+        "af5a8c85-6129-4ba2-a3b6-a581c8d183d8"
     ],
     "filterType": "GMSprite",
     "folderName": "Wire Frames",

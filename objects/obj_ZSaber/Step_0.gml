@@ -20,15 +20,13 @@ if (setupState)
 		case SaberState.SABER_CHARGE_SLASH:		
 		{ 
 			slowTime = true;
-			if (global.zSaber[1] == ItemState.USING)
-			{
-				sprite_index = spr_ZSaberHBSlashCharge;	
-				maxTimmer = 3; 
-				damage = 2;
-			}
+			sprite_index = spr_ZSaberHBSlashCharge;	
+			maxTimmer = 3; 
+			damage = 2;
 		}	break;
 		case SaberState.SABER_CHARGE_COMBO_G:	{ sprite_index = spr_ZSaberHBSlashShotC3_G;	maxTimmer = 2; slowTime = true; damage = 2; } break;
 		case SaberState.SABER_CHARGE_COMBO_A:	{ sprite_index = spr_ZSaberHBSlashShotC3_A;	maxTimmer = 2; slowTime = true; damage = 2; } break;
+		case SaberState.SABER_WIRE_SLASH:		{ sprite_index = spr_ZSaberHBSlashWired;    maxTimmer = 8; slowTime = true; }			  break;
 	}
 	
 	setupState = false;

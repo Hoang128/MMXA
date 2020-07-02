@@ -1738,7 +1738,7 @@
             "Key": "34ca4201-83fd-424a-8d86-bcbefb303d20",
             "Value": {
                 "id": "82609079-0e07-4af7-aaa8-7a6559b22051",
-                "resourcePath": "sprites\\sprite394\\sprite394.yy",
+                "resourcePath": "sprites\\spr_ZSaberSlashWired\\spr_ZSaberSlashWired.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2690,7 +2690,7 @@
             "Key": "4f2a1701-ff07-4b45-b132-d8b7ee550134",
             "Value": {
                 "id": "df57e194-174e-40bc-8661-2fc5ce50e3d4",
-                "resourcePath": "sprites\\sprite393\\sprite393.yy",
+                "resourcePath": "sprites\\spr_ZSlashWired\\spr_ZSlashWired.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7980,6 +7980,14 @@
                 "id": "e829553e-8a4e-4c47-83f8-2989b1f0a564",
                 "resourcePath": "objects\\obj_ShotEffZBusterNor\\obj_ShotEffZBusterNor.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f8ea51de-98dd-42a2-872e-ad023ddb293a",
+            "Value": {
+                "id": "7ee593ae-625a-4c54-9d76-317a62a1d6e2",
+                "resourcePath": "sprites\\spr_ZSaberHBSlashWired\\spr_ZSaberHBSlashWired.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
