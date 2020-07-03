@@ -51,10 +51,10 @@ switch argument0
 			case sprDash1:			image_speed = 0.5; break;
 			case sprDash2:			image_speed = 0.6; break;
 			case sprDash3:			image_speed = 0.3; break;
-			case sprJump1:			image_speed = 0.5; break;
+			case sprJump1:			image_speed = 0.3; break;
 			case sprJump3:			image_speed = 0.5; break;
-			case sprJump2: 
-			case sprJump4:			image_speed = 1; break;
+			case sprJump2:			image_speed = 0.5; break;
+			case sprJump4:			image_speed = 0.5; break;
 			case sprSlide1:			image_speed = 0.4; break;
 			case sprWallKick:		image_speed = 0.5; break;
 			case sprDashKick1:		image_speed = 0.6; break;
