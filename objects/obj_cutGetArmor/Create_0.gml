@@ -6,3 +6,5 @@ event_inherited();
 
 waitTime = 0;
 waitTimeMax = 60;
+
+phaseMax = 4;

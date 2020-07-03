@@ -5,7 +5,8 @@
     "name": "86a59c7b-f591-4b21-80ea-72b8f11ff3f5",
     "children": [
         "7737a25c-5197-4df0-89c7-e678ad0d1ce6",
-        "e4677dfa-1531-4da5-9e2a-6633554ec079"
+        "e4677dfa-1531-4da5-9e2a-6633554ec079",
+        "b6cf9845-e485-406e-b3c1-4f445000527b"
     ],
     "filterType": "GMObject",
     "folderName": "Capsule",

@@ -359,6 +359,14 @@
             }
         },
         {
+            "Key": "08712432-6ac6-4e15-8840-56ae654b86d9",
+            "Value": {
+                "id": "f3214850-a2de-4e11-9446-cc13c70ccbf5",
+                "resourcePath": "objects\\obj_triggerCapsuleEventZone\\obj_triggerCapsuleEventZone.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0898c051-48d5-4e82-8903-bf3bf95a4578",
             "Value": {
                 "id": "819070e1-e7c0-4525-b364-a40fd3e07555",
@@ -1535,6 +1543,14 @@
             }
         },
         {
+            "Key": "2edd7203-f28a-431f-b6de-71213596c15a",
+            "Value": {
+                "id": "3e1e8ca5-0d22-4644-81fd-9fbeec1aef6f",
+                "resourcePath": "views\\2edd7203-f28a-431f-b6de-71213596c15a.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "2f1fc136-c487-401d-830a-4e134898556b",
             "Value": {
                 "id": "dd7f35f9-20c0-432a-af44-a8e70522e2d5",
@@ -2164,6 +2180,14 @@
                 "id": "0e8af5fd-1cce-4774-8a10-7bab2a4b9c7f",
                 "resourcePath": "sounds\\snd_VZSlashCombo2\\snd_VZSlashCombo2.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "3e85031b-f3c7-40f8-a980-c6926f73c7c6",
+            "Value": {
+                "id": "aab7b048-1101-455b-bf56-ace56b6f394d",
+                "resourcePath": "views\\3e85031b-f3c7-40f8-a980-c6926f73c7c6.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -4927,6 +4951,14 @@
             }
         },
         {
+            "Key": "92391ee7-a9ce-4779-9ed0-e5e6437c6209",
+            "Value": {
+                "id": "26428a37-d17a-48e0-901c-d65756e9697a",
+                "resourcePath": "scripts\\scr_messDrLight\\scr_messDrLight.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9284e330-9c1c-4962-9690-d15ad63a2a87",
             "Value": {
                 "id": "9dc4a312-0cbc-4145-a6a9-105fc9fb9624",
@@ -5979,6 +6011,14 @@
             "Value": {
                 "id": "abb3a6a6-ce79-4c5d-8a82-6d5f40f60d76",
                 "resourcePath": "objects\\obj_XWirer\\obj_XWirer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b6cf9845-e485-406e-b3c1-4f445000527b",
+            "Value": {
+                "id": "a173b9b3-6c97-4c3c-a8ff-3279c41659f6",
+                "resourcePath": "objects\\obj_CapsuleDrLightProjection\\obj_CapsuleDrLightProjection.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -7703,6 +7743,14 @@
             }
         },
         {
+            "Key": "ec285325-f834-4815-9035-48a5dd678547",
+            "Value": {
+                "id": "e3e63aa7-49bc-46c8-b914-f433aa9d105d",
+                "resourcePath": "sprites\\spr_bs_drLight\\spr_bs_drLight.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ecadea99-1fee-4c99-a9cf-0b98f6fa43cd",
             "Value": {
                 "id": "849c3911-0de6-465a-a529-e6a742ed7dbd",
@@ -8424,7 +8472,8 @@
         "f94fc98c-e90a-423a-a680-d4fb6e10cd7e",
         "a3b6f953-aa7f-4184-b477-ecce56538c22",
         "2dc539c7-cbcf-4968-9898-b91f6315f86a",
-        "3d00496e-9df6-415e-b5ab-b6dd719666bf"
+        "3d00496e-9df6-415e-b5ab-b6dd719666bf",
+        "92391ee7-a9ce-4779-9ed0-e5e6437c6209"
     ],
     "tutorial": ""
 }

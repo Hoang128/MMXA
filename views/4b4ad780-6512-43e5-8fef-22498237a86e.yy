@@ -6,7 +6,8 @@
     "children": [
         "5301de59-9e89-45e2-8297-f1924cfb360d",
         "2dc539c7-cbcf-4968-9898-b91f6315f86a",
-        "3d00496e-9df6-415e-b5ab-b6dd719666bf"
+        "3d00496e-9df6-415e-b5ab-b6dd719666bf",
+        "2edd7203-f28a-431f-b6de-71213596c15a"
     ],
     "filterType": "GMScript",
     "folderName": "Message Text",

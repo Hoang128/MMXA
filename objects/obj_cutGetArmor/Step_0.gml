@@ -22,10 +22,46 @@ if (instance_exists(obj_Capsule))
 		}	break;
 		case 1:
 		{
-			
+			if (instance_exists(obj_Capsule))
+			{
+				if (obj_Capsule.phase == 0)
+				{
+					obj_Capsule.phase = 1;
+					phase = 2;
+				}
+			}
 		}	break;
 		case 2:
 		{
+			if (instance_exists(obj_CapsuleDrLightProjection))
+			{
+				if (obj_CapsuleDrLightProjection.imgSpd > 0)
+				{
+					scr_messDrLight();
+					phase = 3;
+				}
+			}
+		}	break;
+		case 3:
+		{
+			if (!instance_exists(obj_menuMessTextChain))
+			{
+				phase = 4;
+			}
+		}	break;
+		case 4:
+		{
+			if (instance_exists(obj_Capsule))
+			{
+				if (obj_Capsule.phase == 3)
+				{
+					obj_Capsule.phase = 4;
+				}
+				if (obj_Capsule.phase == 5)
+				{
+					phase = 5;
+				}
+			}
 		}	break;
 	}
 }
