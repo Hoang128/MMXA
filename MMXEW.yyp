@@ -2543,6 +2543,14 @@
             }
         },
         {
+            "Key": "49f988d5-2dfe-4a77-80c9-3e506b91d33c",
+            "Value": {
+                "id": "8dc7ad74-d137-4b21-b964-1f37111c9248",
+                "resourcePath": "sprites\\spr_TriggerCapsuleZone\\spr_TriggerCapsuleZone.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "49fb3218-ed99-44a1-bc70-b1ba0211b458",
             "Value": {
                 "id": "a2a82639-537e-4576-bf0a-3485c031d964",
@@ -3780,6 +3788,14 @@
                 "id": "95b19475-2f02-4909-82b0-99f5ec4b01ad",
                 "resourcePath": "sprites\\spr_ZSaberSlashLand\\spr_ZSaberSlashLand.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "707c0a28-e1d3-4797-a8ef-db4155aa67bd",
+            "Value": {
+                "id": "246fe71b-1e4c-421e-b0d6-50af834b00fa",
+                "resourcePath": "objects\\obj_cutGetArmor\\obj_cutGetArmor.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5575,6 +5591,14 @@
             }
         },
         {
+            "Key": "a88618be-baf6-4b9a-8545-868041f2b5ea",
+            "Value": {
+                "id": "23276cee-d192-46c2-af77-d1d0859b9371",
+                "resourcePath": "views\\a88618be-baf6-4b9a-8545-868041f2b5ea.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "a891fc78-55e5-4af8-bc48-f43a9bb976f6",
             "Value": {
                 "id": "e4d3c553-1df1-4cad-b51f-f5390b10dd6d",
@@ -5619,6 +5643,14 @@
             "Value": {
                 "id": "9b9058df-aeed-4462-aeda-585d07ae5125",
                 "resourcePath": "views\\aaea6f03-758b-42c4-a0df-e21f50186796.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ab05ae0e-b5ad-4856-a7ba-33ec2ccf4ec7",
+            "Value": {
+                "id": "539aabd6-8470-40aa-ad6f-484d4ae201d6",
+                "resourcePath": "views\\ab05ae0e-b5ad-4856-a7ba-33ec2ccf4ec7.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -7087,6 +7119,14 @@
             }
         },
         {
+            "Key": "d9a5878c-cc26-4042-8fd4-2aa8a8118b84",
+            "Value": {
+                "id": "1ae4c139-88d7-457c-aef7-daf21ce31be9",
+                "resourcePath": "objects\\obj_triggerSceneZone\\obj_triggerSceneZone.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d9ad0c84-b834-4d95-8db8-4a0bf64cd2c0",
             "Value": {
                 "id": "407f1261-c641-47d6-9cf1-01e5dca78fbc",
@@ -7412,6 +7452,14 @@
                 "id": "bed1db85-0cd8-4211-866f-43d0f3a4cdac",
                 "resourcePath": "sprites\\spr_slopeR2Ice\\spr_slopeR2Ice.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e4677dfa-1531-4da5-9e2a-6633554ec079",
+            "Value": {
+                "id": "f61950bd-4230-4c56-9bb0-d90734907a1d",
+                "resourcePath": "objects\\obj_CapsuleGreenField\\obj_CapsuleGreenField.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -8039,6 +8087,14 @@
             }
         },
         {
+            "Key": "f6df622e-6aa8-4374-b1d4-6a0393a18666",
+            "Value": {
+                "id": "01d81927-1866-4e58-ba66-d575bedf3b2a",
+                "resourcePath": "views\\f6df622e-6aa8-4374-b1d4-6a0393a18666.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "f6fe4f80-b776-45f9-8b8a-df72aefefcc4",
             "Value": {
                 "id": "6bac15aa-0479-4ca3-90c6-5751e35fa905",
@@ -8115,6 +8171,14 @@
             "Value": {
                 "id": "5b33fc00-b605-412f-9fd4-6d280aab027e",
                 "resourcePath": "sprites\\spr_XShotClimb\\spr_XShotClimb.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f90d699b-220e-45d7-9ad0-ba7666673e1f",
+            "Value": {
+                "id": "6591fd64-5a2a-41ca-8c7a-d80c0f2241ec",
+                "resourcePath": "sprites\\spr_TriggerCutsceneZone\\spr_TriggerCutsceneZone.yy",
                 "resourceType": "GMSprite"
             }
         },

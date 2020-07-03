@@ -77,6 +77,7 @@ switch argument0
 			case spr_ZSlashEnd_A:	image_speed = 1; break;
 			case spr_ZSlashLand:	image_speed = 1; break;
 			
+			case spr_ZSlashWired:
 			case spr_ZShotNorA:
 			case spr_ZShotNorG:
 			case spr_ZShotHoldThunderBlaster:
