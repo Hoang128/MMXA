@@ -37,6 +37,11 @@ if instance_exists(obj_BGMManager){
 				global.BGM_intro = 3.00;
 				global.BGM_loop = 44.50;
 			}	break;
+			case bgm_DrLight:
+			{
+				global.BGM_intro = 00.00;
+				global.BGM_loop = 14.00;
+			}	break;
 			default:
 			{
 				show_message("BGM is not resigned its intro and loop length in scr_BGMSet() function!");

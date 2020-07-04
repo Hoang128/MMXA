@@ -3247,6 +3247,14 @@
             }
         },
         {
+            "Key": "5f5a4c57-a9ea-49ac-9660-4999c2c6e24a",
+            "Value": {
+                "id": "b33ee790-75f7-4ea9-863f-db99e619604a",
+                "resourcePath": "sounds\\bgm_DrLight\\bgm_DrLight.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "5f641168-9773-4fd1-ac28-49a018479aa3",
             "Value": {
                 "id": "9c7abcae-f6f8-4851-bbf3-5995875355f4",

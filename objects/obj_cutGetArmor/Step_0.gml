@@ -59,6 +59,7 @@ if (instance_exists(obj_Capsule))
 				}
 				if (obj_Capsule.phase == 5)
 				{
+					scr_BGMSet(global.BGM_stage, true);
 					phase = 5;
 				}
 			}

@@ -10,6 +10,7 @@ switch (phase)
 	{
 		if (greenF.phase == 0)
 		{
+			scr_BGMStop();
 			greenF.phase = 1;
 		}
 		
@@ -21,6 +22,7 @@ switch (phase)
 		{
 			waitTime = 0;
 			phase = 2;
+			scr_BGMSet(bgm_DrLight, false);
 		}
 	}	break;
 	case 2:
@@ -46,6 +48,9 @@ switch (phase)
 			instance_destroy(obj_CapsuleDrLightProjection);
 		}
 		if (!instance_exists(greenF))
+		{
+			scr_BGMStop();
 			phase = 5;
+		}
 	}	break;
 }
