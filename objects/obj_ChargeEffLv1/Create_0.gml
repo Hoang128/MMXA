@@ -10,3 +10,4 @@ init = false;
 intro = 1.400;
 loop = 0.800;
 bgmLength = intro + loop;
+imgSpd = 0.5;

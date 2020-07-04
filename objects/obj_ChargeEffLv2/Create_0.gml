@@ -5,4 +5,4 @@
 event_inherited();
 
 core = noone;
-imgSpd = 1;
+imgSpd = 0.5;
