@@ -4,6 +4,7 @@ event_inherited();
 sprite_index = noone;
 image_alpha = 1;
 image_speed = 0;
+imgSpd = 0;
 
 fadeSpd = 0.05;
 
