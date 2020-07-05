@@ -31,3 +31,24 @@ if (setupState)
 	
 	setupState = false;
 }
+else
+{
+	if (state == SaberState.SABER_CHARGE_SLASH)
+	{
+		if (global.zSaber[2] == ItemState.USING)
+		{
+			if ((image_index >= 7) && (image_index <= 8))
+			{
+				if (!instance_exists(obj_ZCrescent))
+				{
+					var objCrescent = instance_create_depth(x + image_xscale * 60, y - 32, depth - 1, obj_ZCrescent);
+					objCrescent.image_xscale = image_xscale;
+				}
+			}
+		}
+		if (global.zSaber[3] == ItemState.USING)
+		{
+		
+		}
+	}
+}

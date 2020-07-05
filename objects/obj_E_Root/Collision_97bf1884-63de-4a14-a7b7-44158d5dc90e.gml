@@ -62,6 +62,17 @@ if (damageTimmer <= 0)
 			scr_setTimeSlowEff(2, 0.2);
 		
 		scr_createEnemyColDamageEff();
+		
+		if (other.type == WeaponType.BUSTER)
+		{
+			if (other.object_index == obj_XBusterNormal)
+				instance_destroy(other);
+			else
+			{
+				if (hp > 0)
+					instance_destroy(other);
+			}
+		}
 	}
 	else
 	{

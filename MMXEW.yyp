@@ -2663,6 +2663,14 @@
             }
         },
         {
+            "Key": "4c8eec80-67e0-4d3e-9d01-5ea3a6eb84aa",
+            "Value": {
+                "id": "abe86582-44a8-4b12-8463-e3a9c5a2bbec",
+                "resourcePath": "views\\4c8eec80-67e0-4d3e-9d01-5ea3a6eb84aa.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "4ca5ffcf-37e4-4b7d-85d9-1076f6c370b9",
             "Value": {
                 "id": "352e44f5-cd45-4737-b5fa-b94c323a2ebb",
@@ -3724,6 +3732,14 @@
                 "id": "d98af077-adb4-4f58-8e48-a015e17ab034",
                 "resourcePath": "fonts\\fnt_UIBoldBig\\fnt_UIBoldBig.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "6e054265-0ba1-496d-8374-13bf9b03a639",
+            "Value": {
+                "id": "aa6f3faa-975b-4e0b-aca3-c43848ad9e3a",
+                "resourcePath": "objects\\obj_ZCrescent\\obj_ZCrescent.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -4895,6 +4911,14 @@
             }
         },
         {
+            "Key": "8fe5caa7-e9f0-4037-9616-e46846bbc89b",
+            "Value": {
+                "id": "0733d6f3-52a8-429a-8d1e-6988af45ac91",
+                "resourcePath": "sprites\\spr_ZSlicer\\spr_ZSlicer.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "900679a9-5b01-45d5-abed-d59fa4ba969f",
             "Value": {
                 "id": "3eb4c237-88fb-4097-8620-6557c6e3c605",
@@ -5003,6 +5027,14 @@
             "Value": {
                 "id": "b9cf1a4d-3810-4c3c-844a-d17d0417b670",
                 "resourcePath": "sprites\\spr_VRastBlasterShot\\spr_VRastBlasterShot.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "93016409-7091-484f-8c4b-cf1643e82029",
+            "Value": {
+                "id": "6ae1a45c-435e-4441-8ce2-0f14220a6025",
+                "resourcePath": "sprites\\spr_ZCrescent\\spr_ZCrescent.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6156,6 +6188,14 @@
                 "id": "a03030f7-e4cb-48d4-ad21-bf50794007b3",
                 "resourcePath": "views\\bb536bfd-0751-41ec-8d24-c7d64e0d8d2b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "bb794fd1-51f7-4193-b0b8-71a7e796c752",
+            "Value": {
+                "id": "7d60e8bd-8f3c-483f-b597-f7692361c9f0",
+                "resourcePath": "sprites\\spr_ZCrescentPal\\spr_ZCrescentPal.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

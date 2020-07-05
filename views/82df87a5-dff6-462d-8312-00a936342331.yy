@@ -12,7 +12,8 @@
         "3b256367-14eb-4145-a06f-5de28df79524",
         "de6e8113-99bb-4022-82c5-0919ea6f3b0a",
         "5caaa7c9-72b9-422d-bddd-603383075e0f",
-        "1f4c10dd-d96e-45a9-9ebe-3a7973022ed4"
+        "1f4c10dd-d96e-45a9-9ebe-3a7973022ed4",
+        "bb794fd1-51f7-4193-b0b8-71a7e796c752"
     ],
     "filterType": "GMSprite",
     "folderName": "Palette",

@@ -7,5 +7,6 @@ bullet = 1;
 touchPlayer = false;
 destroyAfterTouch = false;
 damageTimmer = -1;
+size = 1;
 
 depth = layer_get_depth(obj_gameManager.lBullet);
