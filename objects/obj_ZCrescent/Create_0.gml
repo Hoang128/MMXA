@@ -9,7 +9,7 @@ loopTime = 0;
 loopTimeMax = 20;
 imgSpd = 0.5;
 
-rotAngleSelf = 60;
+rotAngleSelf = 45;
 rotAngle = 5;
 
 glow = 1;

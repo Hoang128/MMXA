@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+scr_destroyObjOutOfCamera(self);
+
 if (init == true)
 {
 	xCenter= x-image_xscale*16;

@@ -26,10 +26,13 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	if (sprite_index == spr_ZSlashCharge_G)
 	{
-		if (image_index > 7)
+		if ((image_index >= 7) && (image_index <= 10))
 		{
-			if (!scr_isQuake())
-				scr_SetQuake(30);
+			if (global.zSaber[1] == ItemState.USING)
+			{
+				if (!scr_isQuake())
+					scr_SetQuake(15);
+			}
 		}
 	}
 	
