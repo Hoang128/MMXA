@@ -1360,8 +1360,11 @@ if (activateState != ActivateState.DEACTIVATE)
 					{
 						if (atkState < AttackState.A_STRICT_ATTACK)
 						{
-							sprite_index = sprJump3;
-							image_index = 0;
+							if (sprite_index == sprJump2)
+							{
+								sprite_index = sprJump3;
+								image_index = 0;
+							}
 						}
 						vspd = 0;
 					}

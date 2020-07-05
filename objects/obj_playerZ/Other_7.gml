@@ -8,8 +8,7 @@ switch(sprite_index)
 {
 	case spr_ZDoubleJump:
 	{
-		sprite_index = sprJump4;
-		image_index = 0;
+		image_index = 3;
 	}	break;
 
 	case spr_ZSlashEnd_G:
