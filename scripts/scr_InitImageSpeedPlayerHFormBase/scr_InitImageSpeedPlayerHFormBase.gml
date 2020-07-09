@@ -70,9 +70,9 @@ switch argument0
 			
 			//Zero only
 			case spr_ZDoubleJump:	image_speed = 0.35; break;
-			case spr_ZSlashCombo1:	image_speed = 0.7; break;
-			case spr_ZSlashCombo2:	image_speed = 0.7; break;
-			case spr_ZSaberCombo3:	image_speed = 0.7; break;
+			case spr_ZSlashCombo1:	image_speed = 0.5; break;
+			case spr_ZSlashCombo2:	image_speed = 0.5; break;
+			case spr_ZSaberCombo3:	image_speed = 0.5; break;
 			case spr_ZSlashJump:	image_speed = 1; break;
 			case spr_ZSlashEnd_A:	image_speed = 1; break;
 			case spr_ZSlashLand:	image_speed = 1; break;

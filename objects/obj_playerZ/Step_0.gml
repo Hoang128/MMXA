@@ -280,14 +280,6 @@ if (activateState != ActivateState.DEACTIVATE)
 	//Passive Counters
 	#region
 	
-	if (canCharge == 1)
-	{
-		if (canChargeTimmer > 0)
-		{
-			canChargeTimmer -= DELTA_TIME;
-		}
-	}
-	
 	#endregion
 	
 	#endregion
@@ -483,13 +475,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		
 		if (keyboard_check(global.keyAtk))
 		{
-			if (canCharge)
-			{
-				if (chargeNormal == 0) 
-					chargeNormal += DELTA_TIME;
-			}
-			
-			if ((chargeNormal > 0) && (chargeNormal < chargeLv2Limit))
+			if ((chargeNormal >= 0) && (chargeNormal < chargeLv2Limit))
 			{
 				chargeNormal += DELTA_TIME;
 				if (chargeNormal >= chargeLv1Limit)
@@ -555,7 +541,6 @@ if (activateState != ActivateState.DEACTIVATE)
 				
 				scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_CHARGE_SLASH, self);
 			}
-			canCharge = 0;
 			chargeNormal = 0;
 		}
 		

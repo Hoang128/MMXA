@@ -42,7 +42,5 @@ airHikeTime = 1;
 standCombo = 0;
 canSlash = 1;
 busterType = noone;
-canCharge = 0;
-canChargeTimmer = 0;
 chargeCore = 0;
 chargeCoreLv = 0;
