@@ -124,13 +124,10 @@ else{
 			scr_LOG_INFO("Char Vertical State = " + str_vState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Attack State = " + str_atkState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char In Water State = " + str_inWaterState, debugTextColorF, debugTextColorB);
-			scr_LOG_INFO("Char Health Point = " + string(obj_playerHumanForm.hp), debugTextColorF, debugTextColorB);
-			if (instance_exists(obj_iceController))
-			{
-				scr_LOG_INFO("Ice Slide Speed = " + string(obj_iceController.iceSlideSpd), debugTextColorF, debugTextColorB);
-				scr_LOG_INFO("Ice Slide Slope = " + string(obj_iceController.iceSlideSlope), debugTextColorF, debugTextColorB);
-				scr_LOG_INFO("Ice Slide Accleration = " + string(obj_iceController.iceSlideAcr), debugTextColorF, debugTextColorB);
-			}
+			scr_LOG_INFO("Char Horizontal Speed = " + string(obj_playerHumanForm.hspd), debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char Vertical Speed = " + string(obj_playerHumanForm.vspd), debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char Wall kick time 2 = " + string(obj_playerHumanForm.wallKickTime2), debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char Last wall kick side = " + string(obj_playerHumanForm.lastWallKickSide), debugTextColorF, debugTextColorB);
 		}
 		#endregion
 	}

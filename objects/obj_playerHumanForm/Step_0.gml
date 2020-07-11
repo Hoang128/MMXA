@@ -22,7 +22,7 @@ if (hp <= 0)
 
 if (activateState != ActivateState.DEACTIVATE)
 {
-	//Passive**************************************************************************************************
+	//Passive Before Action************************************************************************************
 	#region
 	
 	//Sprite---------------------------------------------------------------------------------------------------
@@ -64,6 +64,163 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (dashTime == 0)
 		{
 			hspd = image_xscale * (5 - image_index) * 0.2 * dashSpdPhase2;
+		}
+	}
+	
+	#endregion
+	
+	//Wall kick && Dash kick-----------------------------------------------------------------------------------
+	#region
+	
+	if (aState == ActionState.DASHKICK)
+	{
+		if (dashKickFlyTime <= 0)
+		{
+			if (atkState < AttackState.A_STRICT_ATTACK)
+			{
+				sprite_index = sprJump2;
+				image_index = 0;
+			}
+			
+			hState = HorizontalState.H_MOVE_NONE;
+			vState = VerticalState.V_MOVE_FALLING;
+			aState = ActionState.JUMPDASHING;
+		}
+		else
+		{
+			dashKickFlyTime -= DELTA_TIME;
+		}
+		
+		if (hState == HorizontalState.H_MOVE_PASSIVE)
+		{
+			if (collision_rectangle(bbox_left, bbox_top - 1, bbox_right, bbox_top,obj_block, false, true))
+			{
+				sprite_index = sprJump2;
+				image_index = 0;
+				
+				hState = HorizontalState.H_MOVE_NONE;
+				vState = VerticalState.V_MOVE_FALLING;
+				aState = ActionState.JUMPDASHING;
+			}
+			if (dashKickTime <= 0)
+			{
+				var hMoveL = keyboard_check(global.keyLeft);
+				var hMoveR = keyboard_check(global.keyRight);
+		
+				var hMove = hMoveR - hMoveL;
+				
+				if (hMove * hDir <= 0)
+				{
+					if (sprite_index != sprJump2)
+					{
+						sprite_index = sprJump2;
+						image_index = 0;
+					}
+				}
+				
+				hspd = 0;
+				canSlide = 1;
+				hState = HorizontalState.H_MOVE_NONE;
+			}
+			else 
+			{
+				hDir = sign(hspd);
+				dashKickTime -= DELTA_TIME;
+			}
+		}
+	}
+	
+	if (aState == ActionState.WALLKICK)
+	{
+		if (hState == HorizontalState.H_MOVE_PASSIVE)
+		{
+			if ((wallKickTime <= 0) ||(collision_rectangle(bbox_left, bbox_top - 1, bbox_right, bbox_top,obj_block, false, true)))
+			{
+				if (atkState < AttackState.A_STRICT_ATTACK)
+				{
+					sprite_index = sprJump2;
+					image_index = 0;
+				}
+				if (wallKickTime2 == 0) wallKickTime2 = wallKickTimeMax2;
+				hspd = 0;
+				canSlide = 1;
+				hState = HorizontalState.H_MOVE_NONE;
+				vState = VerticalState.V_MOVE_FALLING;
+			}
+			else if (wallKickTime > 0) wallKickTime -= DELTA_TIME;
+		}
+		else
+		{
+			if (wallKickTime2 > 0) 
+			{
+				if ((hspd != 0) && (lastWallKickSide != 0))
+				{
+					if (hDir == lastWallKickSide)
+						hspd = 0;
+					else
+					{
+						if (lastWallKickSide != 0)
+							lastWallKickSide = 0;
+					}
+				}
+				wallKickTime2 -= DELTA_TIME;
+			}
+		}
+	}
+	
+	#endregion
+	
+	//Passive Counters-----------------------------------------------------------------------------------------
+	#region
+	
+	if (canJump == 0)
+	{
+		if (canJumpWait < 0)
+		{
+			canJump = 1;
+			canJumpWait = canJumpWaitMax;
+		}
+		else
+		{
+			canJumpWait -= DELTA_TIME;
+		}
+	}
+	
+	if (stunTime > 0)
+	{
+		if (blink > 0) blink -= DELTA_TIME;
+		else blink = blinkMax;
+		stunTime -= DELTA_TIME;
+	}
+	else
+	{
+		blink = 0;
+		stunTime = 0;
+	}
+	
+	if (wireTime > 0)
+	{
+		wireTime -= DELTA_TIME;
+	}
+	else
+		wireTime = 0;
+		
+	#endregion
+	
+	//Passive with enviroment----------------------------------------------------------------------------------
+	#region
+	
+	switch(inWater)
+	{
+		case InLiquid.FULL:
+		{
+			grav = GRAVITY_WATER;
+			maxGrav = MAX_FALL_WATER;
+		}	break;
+		default:
+		{
+			grav = GRAVITY_AIR;
+			maxGrav = MAX_FALL_AIR;
 		}
 	}
 	
@@ -270,146 +427,6 @@ if (activateState != ActivateState.DEACTIVATE)
 	}
 	#endregion
 	
-	//Wall kick && Dash kick-----------------------------------------------------------------------------------
-	#region
-	
-	if (aState == ActionState.DASHKICK)
-	{
-		if (dashKickFlyTime <= 0)
-		{
-			if (atkState < AttackState.A_STRICT_ATTACK)
-			{
-				sprite_index = sprJump2;
-				image_index = 0;
-			}
-			
-			hState = HorizontalState.H_MOVE_NONE;
-			vState = VerticalState.V_MOVE_FALLING;
-			aState = ActionState.JUMPDASHING;
-		}
-		else
-		{
-			dashKickFlyTime -= DELTA_TIME;
-		}
-		
-		if (hState == HorizontalState.H_MOVE_PASSIVE)
-		{
-			if (place_meeting(x, y - 1, obj_block))
-			{
-				sprite_index = sprJump2;
-				image_index = 0;
-				
-				hState = HorizontalState.H_MOVE_NONE;
-				vState = VerticalState.V_MOVE_FALLING;
-				aState = ActionState.JUMPDASHING;
-			}
-			if (dashKickTime <= 0)
-			{
-				var hMoveL = keyboard_check(global.keyLeft);
-				var hMoveR = keyboard_check(global.keyRight);
-		
-				var hMove = hMoveR - hMoveL;
-				
-				if (hMove * hDir <= 0)
-				{
-					if (sprite_index != sprJump2)
-					{
-						sprite_index = sprJump2;
-						image_index = 0;
-					}
-				}
-				
-				hspd = 0;
-				canSlide = 1;
-				hState = HorizontalState.H_MOVE_NONE;
-			}
-			else 
-			{
-				hDir = sign(hspd);
-				dashKickTime -= DELTA_TIME;
-			}
-		}
-	}
-	
-	if (aState == ActionState.WALLKICK)
-	{
-		if (hState == HorizontalState.H_MOVE_PASSIVE)
-		{
-			if ((wallKickTime <= 0) || place_meeting(x, y - 1, obj_block))
-			{
-				if (atkState < AttackState.A_STRICT_ATTACK)
-				{
-					sprite_index = sprJump2;
-					image_index = 0;
-				}
-
-				hspd = 0;
-				canSlide = 1;
-				hState = HorizontalState.H_MOVE_NONE;
-				vState = VerticalState.V_MOVE_FALLING;
-			}
-			else if (wallKickTime > 0) wallKickTime -= DELTA_TIME;
-		}
-	}
-	
-	#endregion
-	
-	//Passive Counters-----------------------------------------------------------------------------------------
-	#region
-	
-	if (canJump == 0)
-	{
-		if (canJumpWait < 0)
-		{
-			canJump = 1;
-			canJumpWait = canJumpWaitMax;
-		}
-		else
-		{
-			canJumpWait -= DELTA_TIME;
-		}
-	}
-	
-	if (stunTime > 0)
-	{
-		if (blink > 0) blink -= DELTA_TIME;
-		else blink = blinkMax;
-		stunTime -= DELTA_TIME;
-	}
-	else
-	{
-		blink = 0;
-		stunTime = 0;
-	}
-	
-	if (wireTime > 0)
-	{
-		wireTime -= DELTA_TIME;
-	}
-	else
-		wireTime = 0;
-		
-	#endregion
-	
-	//Passive with enviroment----------------------------------------------------------------------------------
-	#region
-	
-	switch(inWater)
-	{
-		case InLiquid.FULL:
-		{
-			grav = GRAVITY_WATER;
-			maxGrav = MAX_FALL_WATER;
-		}	break;
-		default:
-		{
-			grav = GRAVITY_AIR;
-			maxGrav = MAX_FALL_AIR;
-		}
-	}
-	
-	#endregion
-
 	#endregion
 	//*********************************************************************************************************
 	
@@ -538,7 +555,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				if ((aState != ActionState.CLIMBING) && (aState != ActionState.WIRING))
 				{
 					if (hMove * hDir < 0)
-					{	
+					{
 						hDir = hMove;
 						if (vState == VerticalState.V_MOVE_NONE)
 						{
@@ -1321,6 +1338,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						
 							var wkEff = instance_create_depth(x + image_xscale * (bbox_right - bbox_left) / 2, y - 4, depth - 1, obj_flareSmall);
 							wkEff.image_xscale = self.image_xscale;
+							lastWallKickSide = hDir;
 							canJump = 0;
 							hspd = -hDir*hWallKickSpd;
 							vspd = -wallKickSpd;
@@ -1341,7 +1359,11 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (sprite_index == sprJump2 && vspd >= 0) 
 		{
 			if (aState == ActionState.WALLKICK)
+			{
+				lastWallKickSide = 0;
+				wallKickTime2 = 0;
 				aState = ActionState.IDLE;
+			}
 			if (atkState < AttackState.A_STRICT_ATTACK)
 			{
 				sprite_index = sprJump3;
