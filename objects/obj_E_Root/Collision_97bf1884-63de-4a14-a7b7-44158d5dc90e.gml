@@ -57,10 +57,6 @@ if (damageTimmer <= 0)
 		if (blinkTime == 0)
 			blinkTime = blinkTimeMax;
 		
-		//Slow effect
-		if (other.slowTime == true) 
-			scr_setTimeSlowEff(2, 0.2);
-		
 		scr_createEnemyColDamageEff();
 		
 		if (other.type == WeaponType.BUSTER)

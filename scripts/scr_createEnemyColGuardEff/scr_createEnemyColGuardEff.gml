@@ -1,3 +1,6 @@
+if (other.slowTime == true)
+	scr_setTimeSlowEff(2, 0.2);
+
 if (guardEffEnable == true)
 {
 	var xPlace = clamp(other.x + (abs(other.sprite_width) - abs(other.sprite_xoffset)) * 0.75 * other.image_xscale, bbox_left, bbox_right);
@@ -21,10 +24,12 @@ if (guardEffEnable == true)
 		case obj_ZBusterCharge:
 		case obj_XBusterC1:
 		case obj_XBusterC2:
+		{
 			instance_destroy(other);
-		break;
-		case obj_ZSaber:
-			scr_setTimeSlowEff(2, 0.2);
-		break;
+		}	break;
+		default:
+		{
+			
+		}	break;
 	}
 }

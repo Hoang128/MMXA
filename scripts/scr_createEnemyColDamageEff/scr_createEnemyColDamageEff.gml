@@ -1,5 +1,8 @@
 if (other.collisionEff != noone)
 {
+	if (other.slowTime == true) 
+		scr_setTimeSlowEff(2, 0.2);
+	
 	//Create collision effect
 	#region
 			
