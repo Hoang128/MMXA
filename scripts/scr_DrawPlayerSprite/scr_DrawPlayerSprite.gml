@@ -10,6 +10,15 @@ switch (object)
 		scr_PalSwapReset();
 		break;
 	}
+	case obj_playerXUA:
+	{
+		//scr_PalSwapSet(myPal, 0, false);
+
+		draw_self();
+
+		//scr_PalSwapReset();
+		break;
+	}
 	case obj_playerZ:
 	{
 		scr_PalSwapSet(myPal, 0, false);

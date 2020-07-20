@@ -61,8 +61,6 @@ switch (sprite_index)
 			dashEff.core = self;
 			dashEff.xPlace = xPlaceDashEff;
 			dashEff.yPlace = yPlaceDashEff;
-			if (object_index == obj_playerX) dashEff.sprite_index = spr_XDashEff;
-			else if (object_index == obj_playerZ) dashEff.sprite_index = spr_ZDashEff;
 		
 			if (vState == VerticalState.V_ON_GROUND)
 			{

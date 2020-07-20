@@ -1,6 +1,7 @@
 switch argument0
 {
 	case obj_playerX:
+	case obj_playerXUA:
 	{
 		#region
 		switch sprite_index

@@ -41,6 +41,47 @@ switch argument0
 	}
 	break;
 	
+	case obj_playerXUA:
+	{
+		#region
+		sprFlash = spr_XFlash;
+		sprBeamDown = spr_XUABeamDown;
+		sprBeamUp = spr_XBeamUp;
+		sprStand = spr_XUAStand;
+		sprLand = spr_XUALand;
+		sprRunStart = spr_XUARunStart;
+		sprRun = spr_XUARun;
+		sprRunEnd = spr_XUARunEnd;
+		sprDash1 = spr_XUADash1;
+		sprDash2 = spr_XUADash2;
+		sprDash3 = spr_XUADash3;
+		sprJump1 = spr_XUAJump1;
+		sprJump2 = spr_XUAJump2;
+		sprJump3 = spr_XUAJump3;
+		sprJump4 = spr_XUAJump4;
+		sprDuck1 = spr_XUADuck1;
+		sprDuck2 = spr_XUADuck2;
+		sprDuck3 = spr_XUADuck3;
+		sprSlide1 = spr_XUASlide1;
+		sprSlide2 = spr_XUASlide2;
+		sprWallKick = spr_XUAWallKick;
+		sprDashKick1 = spr_XUADashKick1;
+		sprDashKick2 = spr_XUADashKick2;
+		sprClimb1 = spr_XUAClimbStart;
+		sprClimb2 = spr_XUAClimb;
+		sprClimb3 = spr_XUAClimbEnd;
+		sprStun1 = spr_XUAStun1;
+		sprStun2 = spr_XUAStun2;
+		sprWiredStartH = spr_XWiredStartHorizontal;
+		sprWiredStartV = spr_XWiredStartVertical;
+		sprWired = spr_XWired;
+		sprWiredForward = spr_XWiredForward;
+		sprWiredUp = spr_XWiredUp;
+		sprWiredDown = spr_XWiredDown;
+		#endregion
+	}
+	break;
+	
 	case obj_playerZ:
 	{
 		#region

@@ -1,6 +1,7 @@
 switch argument0
 {
 	case obj_playerX:
+	case obj_playerXUA:
 	{
 		#region
 		sndVoiceDie = snd_VXDie;
