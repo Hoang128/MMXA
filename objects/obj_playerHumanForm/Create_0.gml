@@ -87,6 +87,27 @@ stunSprLoop = 0;
 blink = 0;
 myPal = noone;
 
+keyFoward = 0;
+
+UN_DashKeyEnable = false;
+UF_DashKeyEnable = false;
+DN_DashKeyEnable = false;
+DF_DashKeyEnable = false;
+
+UN_JumpKeyEnable = false;
+UF_JumpKeyEnable = false;
+DN_JumpKeyEnable = false;
+DF_JumpKeyEnable = false;
+
+UN_DashFlag = false;
+UF_DashFlag = false;
+DN_DashFlag = false;
+DF_DashFlag = false;
+UN_JumpFlag = false;
+UF_JumpFlag = false;
+DN_JumpFlag = false;
+DF_JumpFlag = false;
+
 //Initialize sprite
 sprFlash = noone;
 sprBeamDown = noone;

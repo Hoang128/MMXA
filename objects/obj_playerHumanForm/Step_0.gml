@@ -25,6 +25,21 @@ if (activateState != ActivateState.DEACTIVATE)
 	//Passive Before Action************************************************************************************
 	#region
 	
+	//Key------------------------------------------------------------------------------------------------------
+	switch (hDir)
+	{
+		case 1:
+		{
+			if (keyboard_check(global.keyRight))	keyFoward = true;
+			else									keyFoward = false;
+		}	break;
+		case -1:
+		{
+			if (keyboard_check(global.keyLeft))		keyFoward = true;
+			else									keyFoward = false;
+		}	break;
+	}
+	
 	//Sprite---------------------------------------------------------------------------------------------------
 	#region
 	
@@ -1005,37 +1020,61 @@ if (activateState != ActivateState.DEACTIVATE)
 		var upWallIsAhead = (place_meeting(x, y - 1, obj_block));
 		if ((aState != ActionState.CLIMBING) && (aState != ActionState.WIRING) && (atkState < AttackState.A_STRICT_ATTACK_LV3))
 		{
-			if (keyboard_check_pressed(global.keyDash) && (!wallIsAHead))
+			if (keyboard_check_pressed(global.keyDash))
 			{
-				if (aState != ActionState.JUMPDASHING)
+				if ((UN_DashKeyEnable == true) && (keyboard_check(global.keyUp) && !keyboard_check(global.keyDown)))
 				{
-					if (vState != VerticalState.V_ON_GROUND)
+					UN_DashFlag = true;
+				}
+				if ((UF_DashKeyEnable == true) && (keyboard_check(global.keyUp) && !keyboard_check(global.keyDown) && (keyFoward)))
+				{
+					UF_DashFlag = true;
+					UN_DashFlag = false;
+				}
+				if ((DN_DashKeyEnable == true) && (keyboard_check(global.keyDown) && !keyboard_check(global.keyUp)))
+				{
+					DN_DashFlag = true;
+				}
+				if ((DF_DashKeyEnable == true) && (keyboard_check(global.keyDown) && !keyboard_check(global.keyUp) && (keyFoward)))
+				{
+					DF_DashFlag = true;
+					DN_DashFlag = false;
+				}
+				if ((DF_DashFlag == false) && (DN_DashFlag == false) && (UF_DashFlag == false) && (UN_DashFlag == false))
+				{
+					if (!wallIsAHead)
 					{
-						if (canAirDash)
+						if (aState != ActionState.JUMPDASHING)
 						{
-							sprite_index = sprDash1;
-							image_index = 2;
+							if (vState != VerticalState.V_ON_GROUND)
+							{
+								if (canAirDash)
+								{
+									sprite_index = sprDash1;
+									image_index = 2;
 							
-							dashPhase = 1;
-							dashTime = maxAirDashTime;
-							vspd = 0;
-							if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
-							vState = VerticalState.V_MOVE_NONE;
-							hState = HorizontalState.H_MOVE_FORWARD;
-							aState = ActionState.DASHING;
-							canAirDash = 0;
-						}
-					}
-					else
-					{
-						sprite_index = sprDash1;
-						image_index = 0;
+									dashPhase = 1;
+									dashTime = maxAirDashTime;
+									vspd = 0;
+									if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+									vState = VerticalState.V_MOVE_NONE;
+									hState = HorizontalState.H_MOVE_FORWARD;
+									aState = ActionState.DASHING;
+									canAirDash = 0;
+								}
+							}
+							else
+							{
+								sprite_index = sprDash1;
+								image_index = 0;
 						
-						dashPhase = 1;
-						dashTime = maxDashTime;
-						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
-						hState = HorizontalState.H_MOVE_FORWARD;
-						aState = ActionState.DASHING;
+								dashPhase = 1;
+								dashTime = maxDashTime;
+								if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+								hState = HorizontalState.H_MOVE_FORWARD;
+								aState = ActionState.DASHING;
+							}
+						}
 					}
 				}
 			}
@@ -1220,27 +1259,48 @@ if (activateState != ActivateState.DEACTIVATE)
 			
 			if (vState == VerticalState.V_ON_GROUND)
 			{
-				sprite_index = sprJump1;
-				image_index = 0;
-				audio_play_sound_on(global.SFX_Emitter, sndJumpEff, 0, 0);
-				var randVoiceJump = random(4);
-				if (randVoiceJump <= 3)
+				if ((UN_JumpKeyEnable == true) && (keyboard_check(global.keyUp) && !keyboard_check(global.keyDown)))
 				{
-					if (randVoiceJump > 2) audio_play_sound_on(global.SFX_Emitter, sndVoiceJump1, 0, 0);
-					else if (randVoiceJump >1) audio_play_sound_on(global.SFX_Emitter, sndVoiceJump2, 0, 0);
-					else audio_play_sound_on(global.SFX_Emitter, sndVoiceJump3, 0, 0);
+					UN_JumpFlag = true;
 				}
+				if ((UF_JumpKeyEnable == true) && (keyboard_check(global.keyUp) && !keyboard_check(global.keyDown) && (keyFoward)))
+				{
+					UF_JumpFlag = true;
+					UN_JumpFlag = false;
+				}
+				if ((DN_JumpKeyEnable == true) && (keyboard_check(global.keyDown) && !keyboard_check(global.keyUp)))
+				{
+					DN_JumpFlag = true;
+				}
+				if ((DF_JumpKeyEnable == true) && (keyboard_check(global.keyDown) && !keyboard_check(global.keyUp) && (keyFoward)))
+				{
+					DF_JumpFlag = true;
+					DN_JumpFlag = false;
+				}
+				if ((UN_JumpFlag == false) && (UF_JumpFlag == false) && (DN_JumpFlag == false) && (DF_JumpFlag == false))
+				{
+					sprite_index = sprJump1;
+					image_index = 0;
+					audio_play_sound_on(global.SFX_Emitter, sndJumpEff, 0, 0);
+					var randVoiceJump = random(4);
+					if (randVoiceJump <= 3)
+					{
+						if (randVoiceJump > 2) audio_play_sound_on(global.SFX_Emitter, sndVoiceJump1, 0, 0);
+						else if (randVoiceJump >1) audio_play_sound_on(global.SFX_Emitter, sndVoiceJump2, 0, 0);
+						else audio_play_sound_on(global.SFX_Emitter, sndVoiceJump3, 0, 0);
+					}
 				
-				canJump = 0;
-				vspd = -jumpSpd;
-				if (keyboard_check(global.keyDash))
-				{
-					aState = ActionState.JUMPDASHING;
+					canJump = 0;
+					vspd = -jumpSpd;
+					if (keyboard_check(global.keyDash))
+					{
+						aState = ActionState.JUMPDASHING;
+					}
+					else
+						aState = ActionState.IDLE;
+					if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+					vState = VerticalState.V_MOVE_FALLING;
 				}
-				else
-					aState = ActionState.IDLE;
-				if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
-				vState = VerticalState.V_MOVE_FALLING;
 			}
 			
 			#endregion

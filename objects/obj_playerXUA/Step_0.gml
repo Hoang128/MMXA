@@ -41,5 +41,12 @@ if (activateState != ActivateState.DEACTIVATE)
 	if (activateState == ActivateState.ACTIVATE)
 	{
 		///Action script
+		
+		//Special Moves--------------------------------------------------------------------------------------------
+		//Vertical Dash
+		if (UF_DashFlag == true)
+		{
+			UF_DashFlag = false;
+		}
 	}
 }
