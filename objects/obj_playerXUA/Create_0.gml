@@ -21,6 +21,8 @@ yDistanceToWirer = 44;
 objWire = obj_XWirer;
 UN_DashKeyEnable = true;
 maxDashUpTime = 32;
+dashUpSpd1 = 0.5;
+dashUpSpd2 = 5;
 
 //Initialize sprite
 scr_InitSpritePlayerHFormBase(obj_playerXUA);

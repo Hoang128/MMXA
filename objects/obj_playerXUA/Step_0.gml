@@ -69,17 +69,5 @@ if (activateState != ActivateState.DEACTIVATE)
 			}
 			UN_DashFlag = false;
 		}
-		
-		if ((aState == ActionState.DASHING) || (aState == ActionState.WIRING))
-		{
-			if (dashTime > 0) 
-			{
-				if (aState != ActionState.WIRING)
-				{
-					if ((vDashDir != 0) && (hState != HorizontalState.H_MOVE_FORWARD))
-						vspd = dashSpd * vDashDir;
-				}
-			}
-		}
 	}
 }
