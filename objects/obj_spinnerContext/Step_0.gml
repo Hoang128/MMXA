@@ -1,8 +1,11 @@
 /// @description Handle
 
 if (!instance_exists(parent)) instance_destroy();
-if (parent.lineEnable[line] == 1)	enable = 1;
-else								enable = 0;
+else
+{
+	if (parent.lineEnable[line] == 1)	enable = 1;
+	else								enable = 0;
+}
 if (active)
 {
 	if (keyboard_check_pressed(global.keyLeft))

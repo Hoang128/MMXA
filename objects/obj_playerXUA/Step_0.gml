@@ -46,6 +46,17 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Vertical Dash
 		if (UF_DashFlag == true)
 		{
+				sprite_index = sprDash1;
+				image_index = 2;
+							
+				dashPhase = 1;
+				dashTime = maxAirDashTime;
+				vspd = 0;
+				if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+				vState = VerticalState.V_MOVE_NONE;
+				hState = HorizontalState.H_MOVE_FORWARD;
+				aState = ActionState.DASHING;
+				canAirDash = 0;
 			UF_DashFlag = false;
 		}
 	}
