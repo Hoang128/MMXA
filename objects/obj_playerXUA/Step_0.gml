@@ -44,20 +44,42 @@ if (activateState != ActivateState.DEACTIVATE)
 		
 		//Special Moves--------------------------------------------------------------------------------------------
 		//Vertical Dash
-		if (UF_DashFlag == true)
+		if (UN_DashFlag == true)
 		{
-				sprite_index = sprDash1;
-				image_index = 2;
-							
-				dashPhase = 1;
-				dashTime = maxAirDashTime;
-				vspd = 0;
-				if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
-				vState = VerticalState.V_MOVE_NONE;
-				hState = HorizontalState.H_MOVE_FORWARD;
-				aState = ActionState.DASHING;
-				canAirDash = 0;
-			UF_DashFlag = false;
+			if (vState != VerticalState.V_ON_GROUND)
+			{
+				if (aState != ActionState.JUMPDASHING)
+				{
+					if (canAirDash == true)
+					{
+						sprite_index = spr_XUADashUp1;
+						image_index = 0;
+					
+						dashPhase = 1;
+						dashTime = maxDashUpTime;
+						hspd = 0;
+						vDashDir = -1;
+						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+						vState = VerticalState.V_MOVE_UP;
+						hState = HorizontalState.H_MOVE_NONE;
+						aState = ActionState.DASHING;
+						canAirDash = 0;
+					}
+				}
+			}
+			UN_DashFlag = false;
+		}
+		
+		if ((aState == ActionState.DASHING) || (aState == ActionState.WIRING))
+		{
+			if (dashTime > 0) 
+			{
+				if (aState != ActionState.WIRING)
+				{
+					if ((vDashDir != 0) && (hState != HorizontalState.H_MOVE_FORWARD))
+						vspd = dashSpd * vDashDir;
+				}
+			}
 		}
 	}
 }

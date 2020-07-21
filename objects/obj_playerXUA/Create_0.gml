@@ -19,7 +19,8 @@ waitShotMax = 30;
 waitShot = 0;
 yDistanceToWirer = 44;
 objWire = obj_XWirer;
-UF_DashKeyEnable = true;
+UN_DashKeyEnable = true;
+maxDashUpTime = 32;
 
 //Initialize sprite
 scr_InitSpritePlayerHFormBase(obj_playerXUA);

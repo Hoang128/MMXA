@@ -1171,7 +1171,11 @@ if (activateState != ActivateState.DEACTIVATE)
 						vspd = 0;
 					}
 				}
-				else	hspd = dashSpd * hDir;
+				else	
+				{
+					if ((hState == HorizontalState.H_MOVE_FORWARD) && (vDashDir == 0))
+						hspd = dashSpd * hDir;
+				}
 				dashTime -= DELTA_TIME;
 			}
 		}
@@ -1187,32 +1191,51 @@ if (activateState != ActivateState.DEACTIVATE)
 		var upWallIsAhead = (place_meeting(x, y - 1, obj_block));
 		if (aState == ActionState.DASHING)
 		{
-			if (keyboard_check_released(global.keyDash) || (wallIsAHead) || (dashTime <= 0))
+			if (hState != HorizontalState.H_MOVE_NONE)
 			{
-				if (vState != VerticalState.V_ON_GROUND)
+				if (keyboard_check_released(global.keyDash) || (wallIsAHead) || (dashTime <= 0))
+				{
+					if (vState != VerticalState.V_ON_GROUND)
+					{
+						sprite_index = sprJump3;
+						image_index = 0;
+					
+						hspd = 0;
+						dashTime = 0;
+						vState = VerticalState.V_MOVE_FALLING;
+					}
+					else
+					{
+						sprite_index = sprDash3;
+						
+						image_index = 0;
+					
+						if (dashTime > 0)
+							hspd = 0;
+						else
+							dashTime = 0;
+					
+						scr_SetIceSlideSpd(hspd, true);
+					}
+					dashPhase = 0;
+					aState = ActionState.IDLE;
+					hState = HorizontalState.H_MOVE_NONE;
+				}
+			}
+			
+			if (vDashDir != 0)
+			{
+				if (keyboard_check_released(global.keyDash) || (upWallIsAhead) || (dashTime <= 0))
 				{
 					sprite_index = sprJump3;
 					image_index = 0;
 					
-					hspd = 0;
+					vspd = 0;
 					dashTime = 0;
+					aState = ActionState.IDLE;
 					vState = VerticalState.V_MOVE_FALLING;
+					vDashDir = 0;
 				}
-				else
-				{
-					sprite_index = sprDash3;
-					image_index = 0;
-					
-					if (dashTime > 0)
-						hspd = 0;
-					else
-						dashTime = 0;
-					
-					scr_SetIceSlideSpd(hspd, true);
-				}
-				dashPhase = 0;
-				aState = ActionState.IDLE;
-				hState = HorizontalState.H_MOVE_NONE;
 			}
 		}
 		if (aState == ActionState.WIRING)

@@ -64,6 +64,7 @@ hspd = 0;
 vspd = 0;
 hDir = 1;
 vDir = 1;
+vDashDir = 0;
 canAirDash = 1;
 dashPhase = 0;
 dashTime = 0;
