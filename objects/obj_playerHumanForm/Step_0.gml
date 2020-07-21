@@ -26,6 +26,8 @@ if (activateState != ActivateState.DEACTIVATE)
 	#region
 	
 	//Key------------------------------------------------------------------------------------------------------
+	#region
+	
 	switch (hDir)
 	{
 		case 1:
@@ -39,6 +41,8 @@ if (activateState != ActivateState.DEACTIVATE)
 			else									keyFoward = false;
 		}	break;
 	}
+	
+	#endregion
 	
 	//Sprite---------------------------------------------------------------------------------------------------
 	#region
@@ -567,27 +571,30 @@ if (activateState != ActivateState.DEACTIVATE)
 			else
 			//Cancel Dash by run
 			{
-				if ((aState != ActionState.CLIMBING) && (aState != ActionState.WIRING))
+				if (aState == ActionState.DASHING)
 				{
-					if (hMove * hDir < 0)
+					if (hState != HorizontalState.H_MOVE_NONE)
 					{
-						hDir = hMove;
-						if (vState == VerticalState.V_MOVE_NONE)
+						if (hMove * hDir < 0)
 						{
-							sprite_index = sprJump3;
-							image_index = 0;
-							hspd = 0;
-							vState = VerticalState.V_MOVE_FALLING;
-						}
-						else
-						{
-							sprite_index = sprDash3;
-							image_index = 0;
+							hDir = hMove;
+							if (vState == VerticalState.V_MOVE_NONE)
+							{
+								sprite_index = sprJump3;
+								image_index = 0;
+								hspd = 0;
+								vState = VerticalState.V_MOVE_FALLING;
+							}
+							else
+							{
+								sprite_index = sprDash3;
+								image_index = 0;
 							
-							scr_SetIceSlideSpd(hspd, true);
-							hspd = 0;
+								scr_SetIceSlideSpd(hspd, true);
+								hspd = 0;
+							}
+							aState = ActionState.IDLE;
 						}
-						aState = ActionState.IDLE;
 					}
 				}
 				else hDir = hMove;
