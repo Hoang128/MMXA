@@ -89,6 +89,16 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	#endregion
 	
+	//Sliding--------------------------------------------------------------------------------------------------
+	#region
+	
+	if (aState == ActionState.SLIDING)
+	{
+		move_contact_solid(90 - 90 * hDir, 0);
+	}
+	
+	#endregion
+	
 	//Wall kick && Dash kick-----------------------------------------------------------------------------------
 	#region
 	
@@ -1236,7 +1246,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					{
 						sprite_index = sprJump3;
 						image_index = 0;
-					
+						
 						hspd = 0;
 						dashTime = 0;
 						dashSpd = 0;
@@ -1248,12 +1258,13 @@ if (activateState != ActivateState.DEACTIVATE)
 						sprite_index = sprDash3;
 						
 						image_index = 0;
-					
+						
+						scr_SetIceSlideSpd(hspd, true);
+						
 						if (dashTime > 0)
 							hspd = 0;
 						else
 							dashTime = 0;
-						scr_SetIceSlideSpd(hspd, true);
 					}
 					dashPhase = 0;
 					aState = ActionState.IDLE;

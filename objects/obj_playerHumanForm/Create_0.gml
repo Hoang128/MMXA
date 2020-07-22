@@ -60,6 +60,7 @@ hState = HorizontalState.H_MOVE_NONE;
 atkState = AttackState.A_NONE;
 
 //Inside Variable
+playerHumanForm = true;
 yBeam = -1;
 hspd = 0;
 vspd = 0;

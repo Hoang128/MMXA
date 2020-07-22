@@ -45,7 +45,7 @@ if (solid)
 			if (place_meeting(x - hsp, y, other))
 			{
 				other.playerOther = other.id;
-				if (!collision_rectangle(x + bbox_width / 2 * sign(other.hspd), bbox_top, x + (bbox_width / 2 + 1) * sign(other.hspd), bbox_bottom, obj_block, false, true))
+				if (!collision_rectangle(x + bbox_width / 2 * sign(other.hspd), bbox_top, x + (bbox_width / 2 + hsp) * sign(other.hspd), bbox_bottom, obj_block, false, true))
 				{
 					x += hsp;
 				}
@@ -58,7 +58,7 @@ if (solid)
 			
 			if (place_meeting(x, y + 1, other))
 			{
-				if (!collision_rectangle(x + bbox_width / 2 * sign(other.hspd), bbox_top, x + (bbox_width / 2 + 1) * sign(other.hspd), bbox_bottom, obj_block, false, true))
+				if (!collision_rectangle(x + bbox_width / 2 * sign(other.hspd), bbox_top, x + (bbox_width / 2 + hsp) * sign(other.hspd), bbox_bottom, obj_block, false, true))
 				{
 					x += other.hspd;
 				}

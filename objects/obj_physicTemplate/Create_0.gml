@@ -12,3 +12,5 @@ inWater = 0;
 imgSpd = 0;
 
 myDeltaTime = 1;
+
+playerHumanForm = false;
