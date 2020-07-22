@@ -494,16 +494,21 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			if ((chargeNormal >= 0) && (chargeNormal < chargeLv2Limit))
 			{
-				chargeNormal += DELTA_TIME;
-				if (chargeNormal >= chargeLv1Limit)
+				if (chargeCore == 0)
 				{
-					if (!instance_exists(obj_ZChargeEffLv1))
+					chargeNormal += DELTA_TIME;
+					if (chargeNormal >= chargeLv1Limit)
 					{
-						var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_ZChargeEffLv1);
-						objChargeEff.core = self;
-						objChargeEff.chargeParameter = self.chargeNormal;
+						if (!instance_exists(obj_ZChargeEffLv1))
+						{
+							var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_ZChargeEffLv1);
+							objChargeEff.core = self;
+							objChargeEff.chargeParameter = self.chargeNormal;
+						}
 					}
 				}
+				else
+					chargeNormal = 0;
 			}
 			
 			if (chargeNormal >= chargeLv2Limit)
@@ -635,7 +640,8 @@ if (activateState != ActivateState.DEACTIVATE)
 						if (atkState < AttackState.A_STRICT_ATTACK_LV3)
 						{
 							audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
-							scr_MeeleWeaponDestroy(obj_ZSaberImage);
+							if (instance_exists(obj_ZSaberImage))
+								scr_MeeleWeaponDestroy(obj_ZSaberImage);
 							sprite_index = spr_ZShotNorG;
 							
 							scr_SetIceSlideSpd(hspd, true);
@@ -707,8 +713,6 @@ if (activateState != ActivateState.DEACTIVATE)
 									atkState = AttackState.A_STRICT_ATTACK_LV3;
 									image_index = 0;
 									busterType = obj_ZBusterNor;
-									if (instance_exists(obj_ZSaber)) 
-										instance_destroy(obj_ZSaber);
 								}
 							}
 							else
@@ -726,8 +730,6 @@ if (activateState != ActivateState.DEACTIVATE)
 									vState = VerticalState.V_MOVE_FALLING;
 									image_index = 0;
 									busterType = obj_ZBusterNor;
-									if (instance_exists(obj_ZSaber)) 
-										instance_destroy(obj_ZSaber);
 								}
 							}
 						}
@@ -743,6 +745,8 @@ if (activateState != ActivateState.DEACTIVATE)
 								image_index = 0;
 								audio_play_sound_on(global.SFX_Emitter, snd_VZShotC3, 0, 0);
 								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash3, 0, 0);
+								
+								scr_MeeleWeaponDestroy(obj_ZSaberImage);
 								
 								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_CHARGE_COMBO_G, self);
 								
@@ -768,6 +772,8 @@ if (activateState != ActivateState.DEACTIVATE)
 								audio_play_sound_on(global.SFX_Emitter, snd_VZShotC3, 0, 0);
 								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash3, 0, 0);
 								
+								scr_MeeleWeaponDestroy(obj_ZSaberImage);
+								
 								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_CHARGE_COMBO_A, self);
 								
 								if (aState == ActionState.DASHING)
@@ -789,6 +795,8 @@ if (activateState != ActivateState.DEACTIVATE)
 								sprite_index = spr_ZShotC2_G;
 								image_index = 0;
 								audio_play_sound_on(global.SFX_Emitter, snd_VZShotC2, 0, 0);
+								
+								scr_MeeleWeaponDestroy(obj_ZSaberImage);
 								
 								scr_SetIceSlideSpd(hspd, true);
 								
@@ -817,6 +825,7 @@ if (activateState != ActivateState.DEACTIVATE)
 								image_index = 0;
 								audio_play_sound_on(global.SFX_Emitter, snd_VZShotC2, 0, 0);
 								
+								scr_MeeleWeaponDestroy(obj_ZSaberImage);
 						
 								if (aState == ActionState.DASHING)
 									aState = ActionState.IDLE;
@@ -839,7 +848,11 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (keyboard_check(global.keyGiga) && (global.zCore[2] == ItemState.USING))
 		{
 			if (chargeCore == 0)
-				chargeCore += DELTA_TIME;
+			{
+				if (chargeNormal <= 0)
+					chargeCore += DELTA_TIME;
+				else chargeCore = 0;
+			}
 			
 			if ((chargeCore > 0) && (chargeCore < chargeCoreLv3Limit))
 			{
@@ -916,6 +929,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							image_index = 0;
 							audio_play_sound_on(global.SFX_Emitter, snd_VZShotC1, 0, 0);
 							
+							scr_MeeleWeaponDestroy(obj_ZSaberImage);
+							
 							scr_SetIceSlideSpd(hspd, true);
 							
 							hspd = 0;
@@ -935,6 +950,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							sprite_index = spr_ZShotC1_A;
 							image_index = 0;
 							audio_play_sound_on(global.SFX_Emitter, snd_VZShotC1, 0, 0);
+							
+							scr_MeeleWeaponDestroy(obj_ZSaberImage);
 						
 							atkState = AttackState.A_STRICT_ATTACK;
 							if (aState == ActionState.DASHING)
