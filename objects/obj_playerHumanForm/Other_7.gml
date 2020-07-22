@@ -54,6 +54,7 @@ switch (sprite_index)
 	case sprDash1:
 	{
 		dashPhase = 2;
+		dashSpd = dashSpdPhase2;
 		if (self.weight != WeighType.MASSIVE)
 		{
 			var dashEff = instance_create_depth(x + xPlaceDashEff * image_xscale, y + yPlaceDashEff, depth - 1, obj_PlayerDashEff);
@@ -81,6 +82,9 @@ switch (sprite_index)
 	{
 		hspd = 0;
 		dashTime = 0;
+		dashSpd = 0;
+		hState = HorizontalState.H_MOVE_NONE;
+		aState = ActionState.IDLE;
 		
 		sprite_index = sprStand;
 		image_index = 0;

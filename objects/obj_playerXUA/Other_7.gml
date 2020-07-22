@@ -38,6 +38,7 @@ switch (sprite_index)
 	case spr_XUADashUp1:
 	{
 		dashPhase = 2;
+		dashSpd = dashSpdPhase2;
 		/*
 			var dashEff = instance_create_depth(x + xPlaceDashEff * image_xscale, y + yPlaceDashEff, depth - 1, obj_PlayerDashEff);
 			dashEff.image_xscale = self.image_xscale;

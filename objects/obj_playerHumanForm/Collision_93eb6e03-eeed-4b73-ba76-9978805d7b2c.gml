@@ -15,6 +15,11 @@ if (activateState == ActivateState.ACTIVATE)
 				y -= 2;
 				hspd = 0;
 				vspd = 0;
+				if (dashSpd > 0)
+				{
+					dashSpd = 0;
+					dashTime = 0;
+				}
 				isClimbing = 1;
 				vState = VerticalState.V_MOVE_NONE;
 				hState = HorizontalState.H_MOVE_NONE;

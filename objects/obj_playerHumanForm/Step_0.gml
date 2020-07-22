@@ -82,7 +82,8 @@ if (activateState != ActivateState.DEACTIVATE)
 	{
 		if (dashTime == 0)
 		{
-			hspd = image_xscale * (5 - image_index) * 0.2 * dashSpdPhase2;
+			dashSpd = (5 - image_index) * 0.2 * dashSpdPhase2;
+			hspd = hDir * dashSpd;
 		}
 	}
 	
@@ -373,7 +374,6 @@ if (activateState != ActivateState.DEACTIVATE)
 					{
 						y++;
 					}
-					canAirDash = 1;
 					vState = VerticalState.V_ON_GROUND;
 				}
 			}
@@ -384,12 +384,11 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				if (!place_meeting(x, y + maxDisDetectSlopeAbove, obj_block))
 				{
-					if (sprite_index == sprDash3)
+					if (dashSpd > 0)
 					{
-						if (dashTime == 0)
-						{
-							hspd = 0;
-						}
+						hspd = 0;
+						dashSpd = 0;
+						canAirDash = 1;
 					}
 					
 					sprite_index = sprJump3;
@@ -406,6 +405,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					}
 					
 					aState = ActionState.IDLE;
+					hState = HorizontalState.H_MOVE_NONE;
 					vState = VerticalState.V_MOVE_FALLING;
 				}
 				else
@@ -557,6 +557,11 @@ if (activateState != ActivateState.DEACTIVATE)
 											audio_play_sound_on(global.SFX_Emitter, sndSlideEff, 0, 0);
 										
 											if (!canAirDash) canAirDash = 1;
+											if (dashSpd > 0)
+											{
+												dashSpd = 0;
+												dashTime = 0;
+											}
 											vState = VerticalState.V_MOVE_DOWN;
 											aState = ActionState.SLIDING;
 											atkState = AttackState.A_NONE;
@@ -672,6 +677,11 @@ if (activateState != ActivateState.DEACTIVATE)
 								self.x = (dynamicBlock.bbox_right + dynamicBlock.bbox_left) / 2;
 								isClimbing = -1;
 								hspd = 0;
+								if (dashSpd > 0)
+								{
+									dashSpd = 0;
+									dashTime = 0;
+								}
 								hState = HorizontalState.H_MOVE_NONE;
 								vState = VerticalState.V_MOVE_NONE;
 								aState = ActionState.CLIMBING;
@@ -683,6 +693,16 @@ if (activateState != ActivateState.DEACTIVATE)
 							{
 								sprite_index = sprDuck1;
 								image_index = 0;
+								
+								if (atkState > AttackState.A_NORMAL_ATTACK)
+								{
+									if (instance_exists(obj_PlayerWeaponMeele))
+									{
+										scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
+						
+									}
+									atkState = AttackState.A_NONE;
+								}
 				
 								hspd = 0;
 								hState = HorizontalState.H_MOVE_NONE;
@@ -694,7 +714,17 @@ if (activateState != ActivateState.DEACTIVATE)
 						{
 							sprite_index = sprDuck1;
 							image_index = 0;
-				
+							
+							if (atkState > AttackState.A_NORMAL_ATTACK)
+							{
+								if (instance_exists(obj_PlayerWeaponMeele))
+								{
+									scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
+						
+								}
+								atkState = AttackState.A_NONE;
+							}
+							
 							hspd = 0;
 							hState = HorizontalState.H_MOVE_NONE;
 							aState = ActionState.DUCKING;
@@ -1061,6 +1091,7 @@ if (activateState != ActivateState.DEACTIVATE)
 									image_index = 2;
 							
 									dashPhase = 1;
+									dashSpd = dashSpdPhase1;
 									dashTime = maxAirDashTime;
 									vspd = 0;
 									if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
@@ -1076,6 +1107,7 @@ if (activateState != ActivateState.DEACTIVATE)
 								image_index = 0;
 						
 								dashPhase = 1;
+								dashSpd = dashSpdPhase1;
 								dashTime = maxDashTime;
 								if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
 								hState = HorizontalState.H_MOVE_FORWARD;
@@ -1097,6 +1129,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						if (collision_rectangle(wirer.x + hDir * (4 + dashSpdPhase2 - 1), wirer.y + 1, wirer.x + hDir * (4 + dashSpdPhase2), wirer.y - 1, obj_wire, false, false))
 						{
 							dashPhase = 2;
+							dashSpd = dashSpdPhase2;
 							dashTime = maxDashTime / 2;
 							if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
 							hState = HorizontalState.H_MOVE_FORWARD;
@@ -1117,6 +1150,7 @@ if (activateState != ActivateState.DEACTIVATE)
 									image_index = 0;
 								}
 								dashPhase = 2;
+								dashSpd = dashSpdPhase2;
 								dashTime = maxDashTime / 2;
 								vDir = -1;
 								vState = VerticalState.V_MOVE_UP;
@@ -1135,6 +1169,7 @@ if (activateState != ActivateState.DEACTIVATE)
 									image_index = 0;
 								}
 								dashPhase = 2;
+								dashSpd = dashSpdPhase2;
 								dashTime = maxDashTime / 2;
 								vDir = 1;
 								vState = VerticalState.V_MOVE_DOWN;
@@ -1143,14 +1178,6 @@ if (activateState != ActivateState.DEACTIVATE)
 					}
 				}
 			}
-		}
-		
-		//Dash phase speed
-		switch dashPhase
-		{
-			case 1: dashSpd = dashSpdPhase1; break;
-			case 2: dashSpd = dashSpdPhase2; break;
-			default: dashSpd = 0; break;
 		}
 		
 		//Dash time decrease
@@ -1175,6 +1202,8 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if ((hState == HorizontalState.H_MOVE_FORWARD) && (vDashDir == 0))
 						hspd = dashSpd * hDir;
+					if ((hState != HorizontalState.H_MOVE_FORWARD) && (vDashDir != 0))
+						vspd = dashSpd * vDashDir;
 				}
 				dashTime -= DELTA_TIME;
 			}
@@ -1202,7 +1231,9 @@ if (activateState != ActivateState.DEACTIVATE)
 					
 						hspd = 0;
 						dashTime = 0;
+						dashSpd = 0;
 						vState = VerticalState.V_MOVE_FALLING;
+						hState = HorizontalState.H_MOVE_NONE;
 					}
 					else
 					{
@@ -1214,12 +1245,10 @@ if (activateState != ActivateState.DEACTIVATE)
 							hspd = 0;
 						else
 							dashTime = 0;
-					
 						scr_SetIceSlideSpd(hspd, true);
 					}
 					dashPhase = 0;
 					aState = ActionState.IDLE;
-					hState = HorizontalState.H_MOVE_NONE;
 				}
 			}
 			
@@ -1321,6 +1350,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					}
 				
 					canJump = 0;
+					hspd = 0;
 					vspd = -jumpSpd;
 					if (keyboard_check(global.keyDash))
 					{

@@ -56,6 +56,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						image_index = 0;
 					
 						dashPhase = 1;
+						dashSpd = dashUpSpdPhase1;
 						dashTime = maxDashUpTime;
 						hspd = 0;
 						vDashDir = -1;
