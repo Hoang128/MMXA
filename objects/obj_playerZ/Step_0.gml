@@ -317,6 +317,12 @@ if (activateState != ActivateState.DEACTIVATE)
 								scr_SetIceSlideSpd(hspd, true);
 								
 								hspd = 0;
+								if (dashSpd > 0)
+								{
+									dashSpd = 0;
+									dashTime = 0;
+								}
+								
 								atkState = AttackState.A_STRICT_ATTACK_LV2;
 								
 								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_COMBO_1, self);
@@ -334,6 +340,12 @@ if (activateState != ActivateState.DEACTIVATE)
 								scr_SetIceSlideSpd(hspd, true);
 								
 								hspd = 0;
+								if (dashSpd > 0)
+								{
+									dashSpd = 0;
+									dashTime = 0;
+								}
+								
 								atkState = AttackState.A_STRICT_ATTACK_LV2;
 
 								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_LAND_SLASH, self);
@@ -455,6 +467,11 @@ if (activateState != ActivateState.DEACTIVATE)
 							
 							vspd = 0;
 							hspd = 0;
+							if (dashSpd > 0)
+							{
+								dashSpd = 0;
+								dashTime = 0;
+							}
 							vState = VerticalState.V_MOVE_NONE;
 							hState = HorizontalState.H_MOVE_NONE;
 							atkState = AttackState.A_STRICT_ATTACK_LV2;
@@ -519,6 +536,12 @@ if (activateState != ActivateState.DEACTIVATE)
 					scr_SetIceSlideSpd(hspd, true);
 					
 					hspd = 0;
+					if (dashSpd > 0)
+					{
+						dashSpd = 0;
+						dashTime = 0;
+					}
+								
 					hState = HorizontalState.H_MOVE_NONE;
 					atkState = AttackState.A_STRICT_ATTACK_LV4;
 					
@@ -567,6 +590,11 @@ if (activateState != ActivateState.DEACTIVATE)
 							scr_SetIceSlideSpd(hspd, true);
 							
 							hspd = 0;
+							if (dashSpd > 0)
+							{
+								dashSpd = 0;
+								dashTime = 0;
+							}
 							aState = ActionState.IDLE;
 							atkState = AttackState.A_STRICT_ATTACK_LV3;
 							image_index = 0;
@@ -613,6 +641,11 @@ if (activateState != ActivateState.DEACTIVATE)
 							scr_SetIceSlideSpd(hspd, true);
 							
 							hspd = 0;
+							if (dashSpd > 0)
+							{
+								dashSpd = 0;
+								dashTime = 0;
+							}
 							aState = ActionState.IDLE;
 							atkState = AttackState.A_STRICT_ATTACK_LV3;
 							image_index = 0;
@@ -665,6 +698,11 @@ if (activateState != ActivateState.DEACTIVATE)
 									scr_SetIceSlideSpd(hspd, true);
 							
 									hspd = 0;
+									if (dashSpd > 0)
+									{
+										dashSpd = 0;
+										dashTime = 0;
+									}
 									aState = ActionState.IDLE;
 									atkState = AttackState.A_STRICT_ATTACK_LV3;
 									image_index = 0;
@@ -711,6 +749,11 @@ if (activateState != ActivateState.DEACTIVATE)
 								scr_SetIceSlideSpd(hspd, true);
 								
 								hspd = 0;
+								if (dashSpd > 0)
+								{
+									dashSpd = 0;
+									dashTime = 0;
+								}
 								aState = ActionState.IDLE;
 								atkState = AttackState.A_STRICT_ATTACK_LV3;
 								chargeCore = 0;
@@ -750,6 +793,11 @@ if (activateState != ActivateState.DEACTIVATE)
 								scr_SetIceSlideSpd(hspd, true);
 								
 								hspd = 0;
+								if (dashSpd > 0)
+								{
+									dashSpd = 0;
+									dashTime = 0;
+								}
 								aState = ActionState.IDLE;
 								atkState = AttackState.A_STRICT_ATTACK_LV3;
 								if (chargeCoreLv == 3)
@@ -871,6 +919,11 @@ if (activateState != ActivateState.DEACTIVATE)
 							scr_SetIceSlideSpd(hspd, true);
 							
 							hspd = 0;
+							if (dashSpd > 0)
+							{
+								dashSpd = 0;
+								dashTime = 0;
+							}
 							aState = ActionState.IDLE;
 							atkState = AttackState.A_STRICT_ATTACK_LV3;
 						}

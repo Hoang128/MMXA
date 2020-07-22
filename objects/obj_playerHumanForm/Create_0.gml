@@ -12,6 +12,7 @@ dashSpdPhase2 = 5; //Dash speed when dash
 jumpDashSpd = 4.5; //Jump Dash speed
 maxDashTime = 43; //Dash time
 maxAirDashTime = 21; //Air dash time
+crossDashAngle = 0; //CrossDashAngle (angle with horizontal line)
 jumpSpd = 7; //Jump speed
 grav = GRAVITY_AIR; //Gravity Accleration
 maxGrav = MAX_FALL_AIR; //Max fall speed
