@@ -1,7 +1,7 @@
 /// @description Handle
 if (instance_exists(obj_ZChronoField))
 {
-	if ((distance_to_object(obj_ZChronoField) < obj_ZChronoField.radius) && (obj_ZChronoField.phase > 0))
+	if ((distance_to_point(obj_ZChronoField.x, obj_ZChronoField.y) < obj_ZChronoField.radius) && (obj_ZChronoField.phase > 0))
 	{
 		if (myDeltaTime == 1)
 			myDeltaTime *= obj_ZChronoField.slowRatio;
