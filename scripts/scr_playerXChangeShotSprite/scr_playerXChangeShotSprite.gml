@@ -231,6 +231,9 @@ switch (obj)
 				case sprDashUp1:		sprite_index = spr_XUADashUp1Shot;				break;
 				case sprDashUp2:		sprite_index = spr_XUADashUp2Shot;				break;
 				case sprDashUp3:		sprite_index = spr_XUADashUp3Shot;				break;
+				case sprHover:			sprite_index = spr_XUAHoverShot;					break;
+				case sprHoverFw:		sprite_index = spr_XUAHoverFWShot;					break;
+				case sprHoverBw:		sprite_index = spr_XUAHoverBWShot;					break;
 			}
 			sprStand = spr_XUAStandShot;
 			sprDuck2 = spr_XUADuckShot;
@@ -260,6 +263,9 @@ switch (obj)
 			sprDashUp1 = spr_XUADashUp1Shot;
 			sprDashUp2 = spr_XUADashUp2Shot;
 			sprDashUp3 = spr_XUADashUp3Shot;
+			sprHover = spr_XUAHoverShot;
+			sprHoverFw = spr_XUAHoverFWShot;
+			sprHoverBw = spr_XUAHoverBWShot;
 			
 			inShotFrame = true;
 		}
@@ -296,6 +302,9 @@ switch (obj)
 				case sprDashUp1:		sprite_index = spr_XUADashUp1;				break;
 				case sprDashUp2:		sprite_index = spr_XUADashUp2;				break;
 				case sprDashUp3:		sprite_index = spr_XUADashUp3;				break;
+				case sprHover:			sprite_index = spr_XUAHover;				break;
+				case sprHoverFw:		sprite_index = spr_XUAHoverFw;				break;
+				case sprHoverBw:		sprite_index = spr_XUAHoverBw;				break;
 			}
 			sprStand = spr_XUAStand;
 			sprRunStart = spr_XUARunStart;
@@ -325,6 +334,9 @@ switch (obj)
 			sprDashUp1 = spr_XUADashUp1;
 			sprDashUp2 = spr_XUADashUp2;
 			sprDashUp3 = spr_XUADashUp3;
+			sprHover = spr_XUAHover;
+			sprHoverFw = spr_XUAHoverFw;
+			sprHoverBw = spr_XUAHoverBw;
 			
 			atkState = AttackState.A_NONE;
 			inShotFrame = false;

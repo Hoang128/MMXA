@@ -23,6 +23,7 @@ UN_DashKeyEnable = true;
 maxDashUpTime = 32;
 dashUpSpdPhase1 = 0.5;
 dashUpSpdPhase2 = 5;
+hoverTimeMax = 60;
 
 //Initialize sprite
 scr_InitSpritePlayerHFormBase(obj_playerXUA);
@@ -43,3 +44,4 @@ atkSpriteTime = 0;
 inShotFrame = false;
 busterOnRow = 0;
 resetBusterOnRowMax = 0;
+hoverTime = 0;

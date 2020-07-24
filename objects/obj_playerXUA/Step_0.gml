@@ -37,6 +37,26 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 	}
 	
+	if (aState == ActionState.HOVER)
+	{
+		if (hoverTime > 0)
+		{
+			hoverTime -= DELTA_TIME;
+		}
+		else
+		{
+			sprite_index = sprJump4;
+			image_index = 0;
+		
+			hState = HorizontalState.H_MOVE_NONE;
+			vState = VerticalState.V_MOVE_FALLING;
+			aState = ActionState.IDLE;
+			hspd = 0;
+			vspd = 0;
+			hoverTime = 0;
+		}
+	}
+	
 	//Active*******************************************************************************************************
 	if (activateState == ActivateState.ACTIVATE)
 	{
@@ -69,6 +89,33 @@ if (activateState != ActivateState.DEACTIVATE)
 				}
 			}
 			UN_DashFlag = false;
+		}
+		
+		//Hover
+		if (keyboard_check_pressed(global.keyJump))
+		{
+			if ((aState != ActionState.HOVER) && (hoverTime == 0))
+			{
+				if (vState == VerticalState.V_MOVE_FALLING)
+				{
+					if (vspd >= 0)
+					{
+						sprite_index = sprHover;
+						image_index = 0;
+						
+						hoverTime = hoverTimeMax;
+						hspd = 0;
+						vspd = 0;
+						hState = HorizontalState.H_MOVE_NONE;
+						vState = VerticalState.V_MOVE_NONE;
+						aState = ActionState.HOVER;
+					}
+				}
+			}
+			else
+			{
+				hoverTime = 0;
+			}
 		}
 		
 		//Attack---------------------------------------------------------------------------------------------------

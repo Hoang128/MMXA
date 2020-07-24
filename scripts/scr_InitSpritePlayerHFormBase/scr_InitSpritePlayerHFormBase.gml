@@ -81,6 +81,9 @@ switch argument0
 		sprDashUp1 = spr_XUADashUp1;
 		sprDashUp2 = spr_XUADashUp2;
 		sprDashUp3 = spr_XUADashUp3;
+		sprHover = spr_XUAHover;
+		sprHoverFw = spr_XUAHoverFw;
+		sprHoverBw = spr_XUAHoverBw;
 		#endregion
 	}
 	break;
