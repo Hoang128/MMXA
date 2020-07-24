@@ -39,13 +39,9 @@ switch (sprite_index)
 	{
 		dashPhase = 2;
 		dashSpd = dashUpSpdPhase2;
-		/*
-			var dashEff = instance_create_depth(x + xPlaceDashEff * image_xscale, y + yPlaceDashEff, depth - 1, obj_PlayerDashEff);
-			dashEff.image_xscale = self.image_xscale;
-			dashEff.core = self;
-			dashEff.xPlace = xPlaceDashEff;
-			dashEff.yPlace = yPlaceDashEff;
-		*/
+		var dashEff = instance_create_depth(x, bbox_bottom + 4, depth - 1, obj_XUADashUpEff);
+		dashEff.image_xscale = self.image_xscale;
+		dashEff.core = self;
 	
 		audio_play_sound_on(global.SFX_Emitter, sndDashEff, 0, 0);
 		sprite_index = sprDashUp2;

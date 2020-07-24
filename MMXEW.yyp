@@ -3175,6 +3175,14 @@
             }
         },
         {
+            "Key": "547b37bf-c7ae-4365-af21-680c34f41cbb",
+            "Value": {
+                "id": "11a0b608-6852-481b-8038-c802035cee5b",
+                "resourcePath": "objects\\obj_XUADashUpEff\\obj_XUADashUpEff.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "549a29f5-205a-4008-8ee1-435ba2e0cc74",
             "Value": {
                 "id": "39dff450-e718-4148-86b2-ff5303b01200",
