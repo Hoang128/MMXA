@@ -42,7 +42,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	{
 		#region
 		
-		scr_playerXAttack(object_index);
+		scr_playerXNormalAttack(object_index);
 		
 		#endregion
 	}

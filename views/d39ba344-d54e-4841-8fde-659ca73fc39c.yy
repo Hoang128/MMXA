@@ -11,7 +11,7 @@
         "92671900-d9a1-4239-880e-a50ea897c64e"
     ],
     "filterType": "GMSprite",
-    "folderName": "Ultimate",
+    "folderName": "Unique",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

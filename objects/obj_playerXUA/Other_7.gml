@@ -6,14 +6,14 @@ event_inherited();
 
 switch (sprite_index)
 {
-	case spr_XCShotStand:
+	case spr_XUAStandCShot:
 	{
 		sprite_index = spr_XUAStand;
 		image_index = 0;
 		scr_playerXChangeShotSprite(object_index, false, true);
 	}	break;
 	
-	case spr_XShotStand:
+	case spr_XUAStandShot:
 	{
 		sprite_index = spr_XUAStand;
 		image_index = 0;
@@ -21,24 +21,24 @@ switch (sprite_index)
 		scr_playerXChangeShotSprite(object_index, false, false);
 	}	break;
 
-	case spr_XCShotDuck:
+	case spr_XUADuckCShot:
 	{
 		sprite_index = spr_XUADuck2;
 		image_index = 0;
 		scr_playerXChangeShotSprite(object_index, false, true);
 	}	break;
 
-	case spr_XShotClimb:
+	case spr_XUAClimbShot:
 	{
 		sprite_index = spr_XUAClimb;
 		image_index = 4;
 		scr_playerXChangeShotSprite(object_index, false, true);
 	}	break;
 	
-	case spr_XUADashUp1:
+	case sprDashUp1:
 	{
 		dashPhase = 2;
-		dashSpd = dashSpdPhase2;
+		dashSpd = dashUpSpdPhase2;
 		/*
 			var dashEff = instance_create_depth(x + xPlaceDashEff * image_xscale, y + yPlaceDashEff, depth - 1, obj_PlayerDashEff);
 			dashEff.image_xscale = self.image_xscale;
@@ -48,11 +48,11 @@ switch (sprite_index)
 		*/
 	
 		audio_play_sound_on(global.SFX_Emitter, sndDashEff, 0, 0);
-		sprite_index = spr_XUADashUp2;
+		sprite_index = sprDashUp2;
 		image_index = 0;
 	}	break;
 	
-	case spr_XUADashUp3:
+	case sprDashUp3:
 	{
 		sprite_index = sprJump3;
 		image_index = 0;

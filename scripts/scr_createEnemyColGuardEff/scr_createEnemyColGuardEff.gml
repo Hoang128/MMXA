@@ -24,6 +24,7 @@ if (guardEffEnable == true)
 		case obj_ZBusterCharge:
 		case obj_XBusterC1:
 		case obj_XBusterC2:
+		case obj_PlasmaBuster:
 		{
 			instance_destroy(other);
 		}	break;

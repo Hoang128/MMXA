@@ -31,7 +31,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	{
 		if (inShotFrame == true)
 		{
-			if (sprite_index != spr_XCShotStand && sprite_index != spr_XCShotDuck)
+			if (sprite_index != spr_XUAStandCShot && sprite_index != spr_XUADuckCShot)
 				scr_playerXChangeShotSprite(object_index, false, false);
 			atkSpriteTime = 0;
 		}
@@ -52,7 +52,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if (canAirDash == true)
 					{
-						sprite_index = spr_XUADashUp1;
+						sprite_index = sprDashUp1;
 						image_index = 0;
 					
 						dashPhase = 1;
@@ -62,6 +62,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						vDashDir = -1;
 						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
 						vState = VerticalState.V_MOVE_UP;
+						hState = VerticalState.V_MOVE_NONE;
 						aState = ActionState.DASHING;
 						canAirDash = 0;
 					}
@@ -69,5 +70,13 @@ if (activateState != ActivateState.DEACTIVATE)
 			}
 			UN_DashFlag = false;
 		}
+		
+		//Attack---------------------------------------------------------------------------------------------------
+		//Normal attack
+		#region
+		
+		scr_playerXNormalAttack(object_index);
+		
+		#endregion
 	}
 }

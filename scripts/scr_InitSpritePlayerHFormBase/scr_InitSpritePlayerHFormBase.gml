@@ -78,6 +78,9 @@ switch argument0
 		sprWiredForward = spr_XWiredForward;
 		sprWiredUp = spr_XWiredUp;
 		sprWiredDown = spr_XWiredDown;
+		sprDashUp1 = spr_XUADashUp1;
+		sprDashUp2 = spr_XUADashUp2;
+		sprDashUp3 = spr_XUADashUp3;
 		#endregion
 	}
 	break;
