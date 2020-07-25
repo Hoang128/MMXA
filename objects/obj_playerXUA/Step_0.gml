@@ -123,7 +123,9 @@ if (activateState != ActivateState.DEACTIVATE)
 								{
 									sprite_index = sprHover;
 									image_index = 0;
-								
+									var objHover = instance_create_depth(x, y, depth + 1, obj_XHoverEff);
+									objHover.core = self;
+									
 									canChangeHDir = false;
 									canHover = 0;
 									canAirDash = 0;

@@ -7567,6 +7567,14 @@
             }
         },
         {
+            "Key": "d1ec2721-02a6-4e3b-8447-477ead511110",
+            "Value": {
+                "id": "36ccf676-7d0e-408e-a4b4-f4be3c5c8e4d",
+                "resourcePath": "objects\\obj_XHoverEff\\obj_XHoverEff.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d1ef09a2-2f67-44d5-ac1b-322b645ecee4",
             "Value": {
                 "id": "30f258e8-baa9-48f5-837f-d7cb3fc05ce7",
