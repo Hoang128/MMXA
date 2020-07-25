@@ -20,6 +20,7 @@ if (activateState == ActivateState.ACTIVATE)
 					dashSpd = 0;
 					dashTime = 0;
 				}
+				canAirDash = 1;
 				isClimbing = 1;
 				vState = VerticalState.V_MOVE_NONE;
 				hState = HorizontalState.H_MOVE_NONE;

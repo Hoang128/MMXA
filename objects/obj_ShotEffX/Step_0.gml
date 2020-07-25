@@ -123,7 +123,7 @@ if (init == false)
 	if(core.sprite_index == spr_XShotSlide1 
 	|| core.sprite_index == spr_XShotSlide2
 	|| core.sprite_index == spr_XUASlide1Shot
-	|| core.sprite_index == spr_XUASlide1Shot)
+	|| core.sprite_index == spr_XUASlide2Shot)
 	   self.image_xscale = -core.hDir;
 	else
 	   self.image_xscale = core.hDir;

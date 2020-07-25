@@ -88,6 +88,7 @@ chargeNormal = 0
 stunTime = 0;
 stunSprLoop = 0;
 blink = 0;
+canChangeHDir = true;
 myPal = noone;
 
 keyFoward = 0;

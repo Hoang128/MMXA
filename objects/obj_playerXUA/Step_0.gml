@@ -37,6 +37,10 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 	}
 	
+	//Hover
+	if (canHover > 1)	
+		canHover--;
+	
 	if (aState == ActionState.HOVER)
 	{
 		if (hoverTime > 0)
@@ -47,13 +51,23 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			sprite_index = sprJump4;
 			image_index = 0;
-		
+			
+			canChangeHDir = true;
 			hState = HorizontalState.H_MOVE_NONE;
 			vState = VerticalState.V_MOVE_FALLING;
 			aState = ActionState.IDLE;
 			hspd = 0;
 			vspd = 0;
 			hoverTime = 0;
+		}
+	}
+	
+	if ((aState == ActionState.SLIDING) || (vState == VerticalState.V_ON_GROUND) || (aState == ActionState.CLIMBING))
+	{
+		if (canHover <= 0)
+		{
+			canChangeHDir = true;
+			canHover = 1;
 		}
 	}
 	
@@ -94,27 +108,79 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Hover
 		if (keyboard_check_pressed(global.keyJump))
 		{
+			
 			if ((aState != ActionState.HOVER) && (hoverTime == 0))
 			{
-				if (vState == VerticalState.V_MOVE_FALLING)
+				if (aState != ActionState.JUMPDASHING)
 				{
-					if (vspd >= 0)
+					if (vState == VerticalState.V_MOVE_FALLING)
 					{
-						sprite_index = sprHover;
-						image_index = 0;
-						
-						hoverTime = hoverTimeMax;
-						hspd = 0;
-						vspd = 0;
-						hState = HorizontalState.H_MOVE_NONE;
-						vState = VerticalState.V_MOVE_NONE;
-						aState = ActionState.HOVER;
+						if (canAirDash)
+						{
+							if (vspd >= 0)
+							{
+								if (canHover == 1)
+								{
+									sprite_index = sprHover;
+									image_index = 0;
+								
+									canChangeHDir = false;
+									canHover = 0;
+									canAirDash = 0;
+									hoverTime = hoverTimeMax;
+									hspd = 0;
+									vspd = 0;
+									hState = HorizontalState.H_MOVE_NONE;
+									vState = VerticalState.V_MOVE_NONE;
+									aState = ActionState.HOVER;
+								}
+							}
+						}
 					}
 				}
 			}
 			else
 			{
 				hoverTime = 0;
+			}
+		}
+		
+		if (aState == ActionState.HOVER)
+		{
+			var hMoveL = keyboard_check(global.keyLeft);
+			var hMoveR = keyboard_check(global.keyRight);
+		
+			var hMove = hMoveR - hMoveL;
+		
+			if (hMove != 0)
+			{
+				if (hoverTime > (hoverTimeMax / 4))
+					hoverTime = hoverTimeMax / 4;
+				if (hMove == hDir)
+				{
+					if (sprite_index != sprHoverFw)
+					{
+						sprite_index = sprHoverFw;
+						image_index = 0;
+					}
+				}
+				if (hMove = -hDir)
+				{
+					if (sprite_index != sprHoverBw)
+					{
+						sprite_index = sprHoverBw;
+						image_index = 0;
+					}
+				}
+				hspd = hMove * hoverMoveSpd;
+			}
+			else
+			{
+				if (sprite_index != sprHover)
+				{
+					sprite_index = sprHover;
+					hspd = 0;
+				}
 			}
 		}
 		

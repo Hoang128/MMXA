@@ -476,7 +476,10 @@ if (activateState != ActivateState.DEACTIVATE)
 			if((aState != ActionState.DASHING) && (aState != ActionState.CLIMBING) && (aState != ActionState.WIRING))
 			{
 				if (atkState < AttackState.A_STRICT_ATTACK_LV2)
-					hDir = hMove;
+				{
+					if (canChangeHDir == true)
+						hDir = hMove;
+				}
 				if (aState != ActionState.DUCKING)
 				{
 					var wallIsAHead = (place_meeting(x + hDir, y, obj_block) && (!place_meeting(x + hDir, y, obj_slope) && !place_meeting(x + hDir, y, obj_blockIceSlope)));
@@ -534,13 +537,15 @@ if (activateState != ActivateState.DEACTIVATE)
 								dashSpd = 0;
 								scr_SetIceSlideSpd(hspd, false);
 								hState = HorizontalState.H_MOVE_FORWARD;
-								aState = ActionState.IDLE;
+								if (aState != ActionState.HOVER)
+									aState = ActionState.IDLE;
 							}
 						}
 					}
 					else
 					{
-						hDir = hMove;
+						if (canChangeHDir == true)
+							hDir = hMove;
 						hspd = 0;
 						hState = HorizontalState.H_MOVE_NONE;
 							
@@ -567,7 +572,7 @@ if (activateState != ActivateState.DEACTIVATE)
 											sprite_index = sprSlide1;
 											image_index = 0;
 											audio_play_sound_on(global.SFX_Emitter, sndSlideEff, 0, 0);
-										
+											
 											if (!canAirDash) canAirDash = 1;
 											if (dashSpd > 0)
 											{
@@ -594,7 +599,8 @@ if (activateState != ActivateState.DEACTIVATE)
 					{
 						if (hMove * hDir < 0)
 						{
-							hDir = hMove;
+							if (canChangeHDir == true)
+								hDir = hMove;
 							if (vState == VerticalState.V_MOVE_NONE)
 							{
 								sprite_index = sprJump3;
@@ -615,7 +621,11 @@ if (activateState != ActivateState.DEACTIVATE)
 						}
 					}
 				}
-				else hDir = hMove;
+				else 
+				{
+					if (canChangeHDir == true)
+						hDir = hMove;
+				}
 			}
 		}
 		else
@@ -1402,6 +1412,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						sprite_index = sprJump3;
 						image_index = 0;
 						
+						canHover = 3;
 						canJump = 0;
 						vState = VerticalState.V_MOVE_FALLING;
 						aState = ActionState.IDLE;
@@ -1424,7 +1435,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							else if (randVoiceJump >1) audio_play_sound_on(global.SFX_Emitter, sndVoiceJump2, 0, 0);
 							else audio_play_sound_on(global.SFX_Emitter, sndVoiceJump3, 0, 0);
 						}
-				
+						
+						canHover = 3;
 						canJump = 0;
 						if (keyboard_check(global.keyDown))
 							vspd = 0;

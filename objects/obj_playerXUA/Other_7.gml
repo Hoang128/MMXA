@@ -53,4 +53,10 @@ switch (sprite_index)
 		sprite_index = sprJump3;
 		image_index = 0;
 	}	break;
+	
+	case sprHoverFw:
+	case sprHoverBw:
+	{
+		image_index = 1;
+	}	break;
 }
