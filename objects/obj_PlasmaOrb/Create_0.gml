@@ -4,9 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
-maxTimmer = 10;
-damage = 0.5;
-collisionEff = obj_BusterColEffLv1;
+maxTimmer = 5;
+damage = 0.2;
+collisionEff = obj_BusterColEffLv2;
 collisionSFX = snd_RWeaponColEnemyEff;
 
 existTime = 60;
