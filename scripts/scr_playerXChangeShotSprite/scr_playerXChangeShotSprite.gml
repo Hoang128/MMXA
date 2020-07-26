@@ -62,6 +62,8 @@ switch (obj)
 				case sprWiredStartV:	sprite_index = spr_XShotWiredStartVertical;		break;
 				case sprClimb2:		
 				{
+					vspd = 0;
+					vState = VerticalState.V_MOVE_NONE;
 					sprite_index = spr_XShotClimb;		
 					image_index = 0;
 					image_speed = 0;
@@ -219,6 +221,8 @@ switch (obj)
 				case sprWiredStartV:	sprite_index = spr_XShotWiredStartVertical;		break;
 				case sprClimb2:		
 				{
+					vspd = 0;
+					vState = VerticalState.V_MOVE_NONE;
 					sprite_index = spr_XUAClimbShot;		
 					image_index = 0;
 					image_speed = 0;

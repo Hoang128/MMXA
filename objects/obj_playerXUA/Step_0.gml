@@ -96,7 +96,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						vDashDir = -1;
 						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
 						vState = VerticalState.V_MOVE_UP;
-						hState = VerticalState.V_MOVE_NONE;
+						hState = HorizontalState.H_MOVE_NONE;
 						aState = ActionState.DASHING;
 						canAirDash = 0;
 					}

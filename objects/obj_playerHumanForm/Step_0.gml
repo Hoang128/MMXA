@@ -777,6 +777,7 @@ if (activateState != ActivateState.DEACTIVATE)
 									dynamicBlock = noone;
 								}
 								canJump = 0;
+								canHover = 3;
 								vState = VerticalState.V_MOVE_FALLING;
 								aState = ActionState.IDLE;
 								atkState = AttackState.A_NONE;
@@ -846,7 +847,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						var moveUp = keyboard_check(global.keyUp); 
 						var moveDown = keyboard_check(global.keyDown);
 						var vMove = moveDown - moveUp;
-					
+
 						if (vMove != 0)
 						{
 							if (vState == VerticalState.V_MOVE_NONE)
