@@ -62,7 +62,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 	}
 	
-	if ((aState == ActionState.SLIDING) || (vState == VerticalState.V_ON_GROUND) || (aState == ActionState.CLIMBING))
+	if ((aState == ActionState.SLIDING) || (vState == VerticalState.V_ON_GROUND) || (aState == ActionState.CLIMBING) || (aState == ActionState.WIRING))
 	{
 		if (canHover <= 0)
 		{

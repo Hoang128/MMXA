@@ -64,6 +64,7 @@ switch (obj)
 				{
 					vspd = 0;
 					vState = VerticalState.V_MOVE_NONE;
+					isClimbing = 0;
 					sprite_index = spr_XShotClimb;		
 					image_index = 0;
 					image_speed = 0;
@@ -216,13 +217,14 @@ switch (obj)
 				case sprWired:
 				case sprWiredForward:
 				case sprWiredUp:
-				case sprWiredDown:		sprite_index = spr_XShotWired;					break;
-				case sprWiredStartH:	sprite_index = spr_XShotWiredStartHorizontal;	break;
-				case sprWiredStartV:	sprite_index = spr_XShotWiredStartVertical;		break;
+				case sprWiredDown:		sprite_index = spr_XUAWiredShot;				break;
+				case sprWiredStartH:	sprite_index = spr_XUAWiredStartHorizontalShot;	break;
+				case sprWiredStartV:	sprite_index = spr_XUAWiredStartVerticalShot;	break;
 				case sprClimb2:		
 				{
 					vspd = 0;
 					vState = VerticalState.V_MOVE_NONE;
+					isClimbing = 0;
 					sprite_index = spr_XUAClimbShot;		
 					image_index = 0;
 					image_speed = 0;
@@ -257,12 +259,12 @@ switch (obj)
 			sprSlide2 = spr_XUASlide2Shot;
 			sprDashKick1 = spr_XUAJump2Shot;
 			sprDashKick2 = spr_XUAJump2Shot;
-			sprWired = spr_XShotWired;
-			sprWiredForward = spr_XShotWired;
-			sprWiredUp = spr_XShotWired;
-			sprWiredDown = spr_XShotWired;
-			sprWiredStartH = spr_XShotWiredStartHorizontal;
-			sprWiredStartV = spr_XShotWiredStartVertical;
+			sprWired = spr_XUAWiredShot;
+			sprWiredForward = spr_XUAWiredShot;
+			sprWiredUp = spr_XUAWiredShot;
+			sprWiredDown = spr_XUAWiredShot;
+			sprWiredStartH = spr_XUAWiredStartHorizontalShot;
+			sprWiredStartV = spr_XUAWiredStartVerticalShot;
 			
 			sprDashUp1 = spr_XUADashUp1Shot;
 			sprDashUp2 = spr_XUADashUp2Shot;
@@ -296,12 +298,12 @@ switch (obj)
 				case sprSlide2:			sprite_index = spr_XUASlide2;				break;
 				case sprDashKick1:		sprite_index = spr_XUADashKick1;			break;
 				case sprDashKick2:		sprite_index = spr_XUADashKick2;			break;
-				case sprWired:			sprite_index = spr_XWired;					break;
-				case sprWiredForward:	sprite_index = spr_XWiredForward;			break;
-				case sprWiredUp:		sprite_index = spr_XWiredForward;			break;
-				case sprWiredDown:		sprite_index = spr_XWiredDown;				break;
-				case sprWiredStartH:	sprite_index = spr_XWiredStartHorizontal;	break;
-				case sprWiredStartV:	sprite_index = spr_XWiredStartVertical;		break;
+				case sprWired:			sprite_index = spr_XUAWired;				break;
+				case sprWiredForward:	sprite_index = spr_XUAWiredForward;			break;
+				case sprWiredUp:		sprite_index = spr_XUAWiredForward;			break;
+				case sprWiredDown:		sprite_index = spr_XUAWiredDown;			break;
+				case sprWiredStartH:	sprite_index = spr_XUAWiredStartHorizontal;	break;
+				case sprWiredStartV:	sprite_index = spr_XUAWiredStartVertical;	break;
 				
 				case sprDashUp1:		sprite_index = spr_XUADashUp1;				break;
 				case sprDashUp2:		sprite_index = spr_XUADashUp2;				break;
@@ -328,12 +330,12 @@ switch (obj)
 			sprSlide2 = spr_XUASlide2;
 			sprDashKick1 = spr_XUADashKick1;
 			sprDashKick2 = spr_XUADashKick2;
-			sprWired = spr_XWired;
-			sprWiredForward = spr_XWiredForward;
-			sprWiredUp = spr_XWiredUp;
-			sprWiredDown = spr_XWiredDown;
-			sprWiredStartH = spr_XWiredStartHorizontal;
-			sprWiredStartV = spr_XWiredStartVertical;
+			sprWired = spr_XUAWired;
+			sprWiredForward = spr_XUAWiredForward;
+			sprWiredUp = spr_XUAWiredUp;
+			sprWiredDown = spr_XUAWiredDown;
+			sprWiredStartH = spr_XUAWiredStartHorizontal;
+			sprWiredStartV = spr_XUAWiredStartVertical;
 			
 			sprDashUp1 = spr_XUADashUp1;
 			sprDashUp2 = spr_XUADashUp2;

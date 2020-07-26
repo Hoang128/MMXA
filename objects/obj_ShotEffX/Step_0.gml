@@ -82,16 +82,19 @@ if (init == false)
 			yPlace=-31;
 		}	break;
 		case spr_XShotWired:
+		case spr_XUAWiredShot:
 		{
 			xPlace=21*core.hDir;
 			yPlace=-23;
 		}	break;
 		case spr_XShotWiredStartHorizontal:
+		case spr_XUAWiredStartHorizontalShot:
 		{
 			xPlace=22*core.hDir;
 			yPlace=-22;
 		}	break;
 		case spr_XShotWiredStartVertical:
+		case spr_XUAWiredStartVerticalShot:
 		{
 			xPlace=22*core.hDir;
 			yPlace=-20;

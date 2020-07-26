@@ -731,6 +731,7 @@ if (activateState != ActivateState.DEACTIVATE)
 								}
 				
 								hspd = 0;
+								dashSpd = 0;
 								hState = HorizontalState.H_MOVE_NONE;
 								aState = ActionState.DUCKING;
 							}
@@ -752,6 +753,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							}
 							
 							hspd = 0;
+							dashSpd = 0;
 							hState = HorizontalState.H_MOVE_NONE;
 							aState = ActionState.DUCKING;
 						}
