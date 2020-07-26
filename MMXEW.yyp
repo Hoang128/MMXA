@@ -1399,6 +1399,14 @@
             }
         },
         {
+            "Key": "2726fa98-3b66-4e5b-bb3c-f73b0b3506c4",
+            "Value": {
+                "id": "1716c4c3-b87b-4c6e-9a9d-eaee52b368a6",
+                "resourcePath": "sprites\\spr_XUAWiredForward\\spr_XUAWiredForward.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "279be89f-2e41-41fd-be53-ed2c23fc1d69",
             "Value": {
                 "id": "56caf1e8-121c-46c4-9099-88fb5408e22b",
@@ -1492,6 +1500,14 @@
                 "id": "a6e1e393-769f-4791-8225-a55ca6690423",
                 "resourcePath": "sounds\\snd_VXHurt2\\snd_VXHurt2.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "2903635b-f34f-404a-acc0-93f16e4f13f6",
+            "Value": {
+                "id": "39f0d028-3663-4d9a-8279-79c57c8ae9f2",
+                "resourcePath": "sprites\\spr_XUAWiredStartHorizontal\\spr_XUAWiredStartHorizontal.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1844,6 +1860,14 @@
                 "id": "a6cc5a27-97b0-4c31-853b-95bbde2f55fc",
                 "resourcePath": "sprites\\spr_ZShotHoldThunderBlaster\\spr_ZShotHoldThunderBlaster.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3261c990-fd22-49a3-a3ee-bdbfd570a512",
+            "Value": {
+                "id": "9cd75210-b444-4429-bf46-06418255c330",
+                "resourcePath": "views\\3261c990-fd22-49a3-a3ee-bdbfd570a512.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3163,6 +3187,14 @@
             "Value": {
                 "id": "f5cde611-9824-4ab1-b19b-c2088ca159ef",
                 "resourcePath": "sprites\\spr_XNoveStrikeDmg\\spr_XNoveStrikeDmg.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "53818f29-5d7b-423f-aa0d-74aba7c9b984",
+            "Value": {
+                "id": "377ee5d5-9dbc-47ba-8b44-68deefbd330c",
+                "resourcePath": "sprites\\spr_XUAWiredDown\\spr_XUAWiredDown.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4647,6 +4679,14 @@
             }
         },
         {
+            "Key": "7b07a5cd-62b8-4983-9455-efb6f6e9ebca",
+            "Value": {
+                "id": "b0e508e4-5985-48b1-b02f-f54cdaf2daab",
+                "resourcePath": "sprites\\spr_PalXUAShot\\spr_PalXUAShot.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7b3a7744-4066-4e14-9784-8ceab05c167a",
             "Value": {
                 "id": "f6245463-7456-4124-bfc1-96b9299b35a2",
@@ -5919,6 +5959,14 @@
             }
         },
         {
+            "Key": "9cd50e15-2f94-4c02-85d1-d95512203784",
+            "Value": {
+                "id": "973f3afe-38e8-465b-bc13-592b0921def9",
+                "resourcePath": "sprites\\spr_XUAWiredUp\\spr_XUAWiredUp.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9ced7f9a-bc8e-40e3-87fd-13aa8093a9f3",
             "Value": {
                 "id": "f42bc3e4-78f5-411d-8267-47022c5947d6",
@@ -6879,6 +6927,14 @@
             }
         },
         {
+            "Key": "bc8d6e2f-f307-4223-9dc2-6029840ffe45",
+            "Value": {
+                "id": "e0825794-f63b-4d30-aa3e-950f7097af1a",
+                "resourcePath": "sprites\\spr_XUAWIredStartVertical\\spr_XUAWIredStartVertical.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bc94eb8d-3492-4e01-9eb4-01002e049d55",
             "Value": {
                 "id": "18803691-d6b8-4024-a497-aec5ebf4a8eb",
@@ -7500,6 +7556,14 @@
                 "id": "a62fbf07-6401-426d-aee0-310e376ed0f9",
                 "resourcePath": "objects\\obj_flareGround\\obj_flareGround.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ce6e757c-24a0-4e14-88da-c4b1afbdc645",
+            "Value": {
+                "id": "4d361e2b-4272-4db6-a1e9-ec3863e07534",
+                "resourcePath": "sprites\\spr_XUAWired\\spr_XUAWired.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

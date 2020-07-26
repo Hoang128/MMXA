@@ -78,7 +78,12 @@ if (activateState != ActivateState.DEACTIVATE)
 	if (sprite_index == spr_XUANovaStrike2)
 	{
 		if (novaTime > 0)
-			novaTime -= DELTA_TIME;
+		{
+			if (place_meeting(x + hDir, y, obj_block))
+				novaTime = 0;
+			else
+				novaTime -= DELTA_TIME;
+		}
 		else
 		{
 			novaTime = 0;
