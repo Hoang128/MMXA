@@ -75,7 +75,9 @@ if (damageTimmer <= 0)
 							{
 								orbCanCreate --;
 								canCreateOrb -= waitTimeToCreateOrb * DELTA_TIME;
-								instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth, obj_PlasmaOrb);
+								var xPlace = clamp(x + (abs(sprite_width) - abs(sprite_xoffset)) * 0.75 * image_xscale, other.bbox_left, other.bbox_right);
+								var yPlace = clamp((bbox_top + bbox_bottom) / 2, other.bbox_top, other.bbox_bottom);
+								instance_create_depth(xPlace, yPlace, depth, obj_PlasmaOrb);
 							}
 						}
 					}
@@ -97,7 +99,9 @@ if (damageTimmer <= 0)
 					{
 						orbCanCreate--;
 						canCreateOrb -= waitTimeToCreateOrb * DELTA_TIME;
-						instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth, obj_PlasmaOrb);
+						var xPlace = clamp(x + (abs(sprite_width) - abs(sprite_xoffset)) * 0.75 * image_xscale, other.bbox_left, other.bbox_right);
+						var yPlace = clamp((bbox_top + bbox_bottom) / 2, other.bbox_top, other.bbox_bottom);
+						instance_create_depth(xPlace, yPlace, depth, obj_PlasmaOrb);
 					}
 				}
 			}
