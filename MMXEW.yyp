@@ -7895,6 +7895,14 @@
             }
         },
         {
+            "Key": "d75c2c82-0caa-48cc-8da7-f9fd2e7274c7",
+            "Value": {
+                "id": "243dfd7c-d389-457a-a098-b71dcf7d455c",
+                "resourcePath": "sprites\\spr_PalXUA\\spr_PalXUA.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d79b4beb-735b-48e6-ba08-ac844374b769",
             "Value": {
                 "id": "6a039ae3-2091-4c9b-a1c2-a21277d985b5",

@@ -9,6 +9,11 @@ if (myPalSprite != noone)
 		scr_PalSwapSet(myPalSprite, 1, false);
 	}
 	
+	if (core.object_index == obj_playerXUA)
+	{
+		scr_PalSwapSet(myPalSprite, 1 ,false);
+	}
+	
 	if (core.object_index == obj_playerZ)
 	{
 		scr_PalSwapSet(myPalSprite, 1, false);
