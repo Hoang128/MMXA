@@ -466,122 +466,125 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Key Left Right---------------------------------------------------------------------------------------
 		#region
 		
-		var hMoveL = keyboard_check(global.keyLeft);
-		var hMoveR = keyboard_check(global.keyRight);
-		
-		var hMove = hMoveR - hMoveL;
-		if (hMove != 0)
+		if (aState != ActionState.SP_MOVE)
 		{
-			//Normal run
-			if((aState != ActionState.DASHING) && (aState != ActionState.CLIMBING) && (aState != ActionState.WIRING))
+			var hMoveL = keyboard_check(global.keyLeft);
+			var hMoveR = keyboard_check(global.keyRight);
+		
+			var hMove = hMoveR - hMoveL;
+			if (hMove != 0)
 			{
-				if (atkState < AttackState.A_STRICT_ATTACK_LV2)
+				//Normal run
+				if((aState != ActionState.DASHING) && (aState != ActionState.CLIMBING) && (aState != ActionState.WIRING))
 				{
-					if (canChangeHDir == true)
-						hDir = hMove;
-				}
-				if (aState != ActionState.DUCKING)
-				{
-					var wallIsAHead = (place_meeting(x + hDir, y, obj_block) && (!place_meeting(x + hDir, y, obj_slope) && !place_meeting(x + hDir, y, obj_blockIceSlope)));
-					if (!wallIsAHead)
-					{
-						//Jump dash
-						if (aState == ActionState.JUMPDASHING)
-						{
-							if (atkState < AttackState.A_STRICT_ATTACK_LV2)
-							{
-								hspd = hDir * jumpDashSpd;
-								hState = HorizontalState.H_MOVE_FORWARD;
-							}
-						}
-						
-						//Wall kick
-						else if (aState == ActionState.WALLKICK)
-						{
-							if (hState != HorizontalState.H_MOVE_PASSIVE)
-							{
-								hspd = hDir * runSpd;
-								hState = HorizontalState.H_MOVE_FORWARD;
-							}
-							//else hDir = sign(hspd);
-						}
-						
-						//Dash kick
-						else if (aState == ActionState.DASHKICK)
-						{
-							if (hState != HorizontalState.H_MOVE_PASSIVE)
-							{	
-								hspd = hDir * dashSpdPhase2;
-								hState = HorizontalState.H_MOVE_FORWARD;
-							}
-							else hDir = sign(hspd);
-						}
-						
-						//Run
-						else
-						{
-							if (atkState < AttackState.A_STRICT_ATTACK_LV2)
-							{
-								if ((aState == ActionState.IDLE) && (vState == VerticalState.V_ON_GROUND)) 
-								{
-									if (atkState < AttackState.A_STRICT_ATTACK)
-									{
-										if ((sprite_index != sprRunStart) && (sprite_index != sprRun))
-										{
-											sprite_index = sprRunStart;
-											image_index = 0;
-										}
-									}
-								}
-								hspd = hDir * runSpd;
-								dashSpd = 0;
-								scr_SetIceSlideSpd(hspd, false);
-								hState = HorizontalState.H_MOVE_FORWARD;
-								if (aState != ActionState.HOVER)
-									aState = ActionState.IDLE;
-							}
-						}
-					}
-					else
+					if (atkState < AttackState.A_STRICT_ATTACK_LV2)
 					{
 						if (canChangeHDir == true)
 							hDir = hMove;
-						hspd = 0;
-						hState = HorizontalState.H_MOVE_NONE;
-							
-						//Stop run if see wall
-						if (vState == VerticalState.V_ON_GROUND)
+					}
+					if (aState != ActionState.DUCKING)
+					{
+						var wallIsAHead = (place_meeting(x + hDir, y, obj_block) && (!place_meeting(x + hDir, y, obj_slope) && !place_meeting(x + hDir, y, obj_blockIceSlope)));
+						if (!wallIsAHead)
 						{
-							if (sprite_index == sprRun || sprite_index == sprRunStart)
+							//Jump dash
+							if (aState == ActionState.JUMPDASHING)
 							{
-								sprite_index = sprRunEnd;
-								image_index = 0;
+								if (atkState < AttackState.A_STRICT_ATTACK_LV2)
+								{
+									hspd = hDir * jumpDashSpd;
+									hState = HorizontalState.H_MOVE_FORWARD;
+								}
+							}
+						
+							//Wall kick
+							else if (aState == ActionState.WALLKICK)
+							{
+								if (hState != HorizontalState.H_MOVE_PASSIVE)
+								{
+									hspd = hDir * runSpd;
+									hState = HorizontalState.H_MOVE_FORWARD;
+								}
+								//else hDir = sign(hspd);
+							}
+						
+							//Dash kick
+							else if (aState == ActionState.DASHKICK)
+							{
+								if (hState != HorizontalState.H_MOVE_PASSIVE)
+								{	
+									hspd = hDir * dashSpdPhase2;
+									hState = HorizontalState.H_MOVE_FORWARD;
+								}
+								else hDir = sign(hspd);
+							}
+						
+							//Run
+							else
+							{
+								if (atkState < AttackState.A_STRICT_ATTACK_LV2)
+								{
+									if ((aState == ActionState.IDLE) && (vState == VerticalState.V_ON_GROUND)) 
+									{
+										if (atkState < AttackState.A_STRICT_ATTACK)
+										{
+											if ((sprite_index != sprRunStart) && (sprite_index != sprRun))
+											{
+												sprite_index = sprRunStart;
+												image_index = 0;
+											}
+										}
+									}
+									hspd = hDir * runSpd;
+									dashSpd = 0;
+									scr_SetIceSlideSpd(hspd, false);
+									hState = HorizontalState.H_MOVE_FORWARD;
+									if (aState != ActionState.HOVER)
+										aState = ActionState.IDLE;
+								}
 							}
 						}
 						else
-						{			
-							//Slide
-							if(weight != WeighType.MASSIVE)
+						{
+							if (canChangeHDir == true)
+								hDir = hMove;
+							hspd = 0;
+							hState = HorizontalState.H_MOVE_NONE;
+							
+							//Stop run if see wall
+							if (vState == VerticalState.V_ON_GROUND)
 							{
-								if (atkState < AttackState.A_STRICT_ATTACK)
+								if (sprite_index == sprRun || sprite_index == sprRunStart)
 								{
-									if ((aState != ActionState.SLIDING) && (aState != ActionState.WIRING) && (canSlide))
+									sprite_index = sprRunEnd;
+									image_index = 0;
+								}
+							}
+							else
+							{			
+								//Slide
+								if(weight != WeighType.MASSIVE)
+								{
+									if (atkState < AttackState.A_STRICT_ATTACK)
 									{
-										if (!place_meeting(x + hDir, y, obj_blockNoSlide) && !place_meeting(x + hDir, y, obj_blockIceNoSlide))
+										if ((aState != ActionState.SLIDING) && (aState != ActionState.WIRING) && (canSlide))
 										{
-											sprite_index = sprSlide1;
-											image_index = 0;
-											audio_play_sound_on(global.SFX_Emitter, sndSlideEff, 0, 0);
-											
-											if (!canAirDash) canAirDash = 1;
-											if (dashSpd > 0)
+											if (!place_meeting(x + hDir, y, obj_blockNoSlide) && !place_meeting(x + hDir, y, obj_blockIceNoSlide))
 											{
-												dashSpd = 0;
-												dashTime = 0;
+												sprite_index = sprSlide1;
+												image_index = 0;
+												audio_play_sound_on(global.SFX_Emitter, sndSlideEff, 0, 0);
+											
+												if (!canAirDash) canAirDash = 1;
+												if (dashSpd > 0)
+												{
+													dashSpd = 0;
+													dashTime = 0;
+												}
+												vState = VerticalState.V_MOVE_DOWN;
+												aState = ActionState.SLIDING;
+												atkState = AttackState.A_NONE;
 											}
-											vState = VerticalState.V_MOVE_DOWN;
-											aState = ActionState.SLIDING;
-											atkState = AttackState.A_NONE;
 										}
 									}
 								}
@@ -589,78 +592,78 @@ if (activateState != ActivateState.DEACTIVATE)
 						}
 					}
 				}
-			}
-			else
-			//Cancel Dash by run
-			{
-				if (aState == ActionState.DASHING)
+				else
+				//Cancel Dash by run
 				{
-					if (hState != HorizontalState.H_MOVE_NONE)
+					if (aState == ActionState.DASHING)
 					{
-						if (hMove * hDir < 0)
+						if (hState != HorizontalState.H_MOVE_NONE)
 						{
-							if (canChangeHDir == true)
-								hDir = hMove;
-							if (vState == VerticalState.V_MOVE_NONE)
+							if (hMove * hDir < 0)
 							{
-								sprite_index = sprJump3;
-								image_index = 0;
+								if (canChangeHDir == true)
+									hDir = hMove;
+								if (vState == VerticalState.V_MOVE_NONE)
+								{
+									sprite_index = sprJump3;
+									image_index = 0;
 								
-								vState = VerticalState.V_MOVE_FALLING;
-							}
-							else
-							{
-								sprite_index = sprDash3;
-								image_index = 0;
+									vState = VerticalState.V_MOVE_FALLING;
+								}
+								else
+								{
+									sprite_index = sprDash3;
+									image_index = 0;
 							
-								scr_SetIceSlideSpd(hspd, true);
+									scr_SetIceSlideSpd(hspd, true);
+								}
+								hspd = 0;
+								dashSpd = 0;
+								aState = ActionState.IDLE;
 							}
-							hspd = 0;
-							dashSpd = 0;
-							aState = ActionState.IDLE;
 						}
 					}
-				}
-				else 
-				{
-					if (canChangeHDir == true)
-						hDir = hMove;
-				}
-			}
-		}
-		else
-		{
-			//Stop run
-			if (hState == HorizontalState.H_MOVE_FORWARD)
-			{
-				if (aState != ActionState.DASHING)
-				{
-					if (sprite_index == sprRun || sprite_index == sprRunStart)
+					else 
 					{
-						sprite_index = sprRunEnd;
-						image_index = 0;
+						if (canChangeHDir == true)
+							hDir = hMove;
 					}
-					
-					scr_SetIceSlideSpd(hspd, true);
-					
-					hspd = 0;
-					hState = HorizontalState.H_MOVE_NONE;
 				}
 			}
-			
-			//Stop slide
 			else
 			{
-				if (aState == ActionState.SLIDING)
+				//Stop run
+				if (hState == HorizontalState.H_MOVE_FORWARD)
 				{
-					sprite_index = sprJump3;
-					image_index = 0;
+					if (aState != ActionState.DASHING)
+					{
+						if (sprite_index == sprRun || sprite_index == sprRunStart)
+						{
+							sprite_index = sprRunEnd;
+							image_index = 0;
+						}
+					
+						scr_SetIceSlideSpd(hspd, true);
+					
+						hspd = 0;
+						hState = HorizontalState.H_MOVE_NONE;
+					}
+				}
+			
+				//Stop slide
+				else
+				{
+					if (aState == ActionState.SLIDING)
+					{
+						sprite_index = sprJump3;
+						image_index = 0;
 
-					vspd = slideSpd / 2;
-					vState = VerticalState.V_MOVE_FALLING;
-					aState = ActionState.IDLE;
-					if (atkState < AttackState.A_STRICT_ATTACK_LV2) 
-						atkState = AttackState.A_NONE;
+						vspd = slideSpd / 2;
+						vState = VerticalState.V_MOVE_FALLING;
+						aState = ActionState.IDLE;
+						if (atkState < AttackState.A_STRICT_ATTACK_LV2) 
+							atkState = AttackState.A_NONE;
+					}
 				}
 			}
 		}

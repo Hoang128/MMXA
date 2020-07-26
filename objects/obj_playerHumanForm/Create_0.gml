@@ -89,6 +89,7 @@ stunTime = 0;
 stunSprLoop = 0;
 blink = 0;
 canChangeHDir = true;
+canGetDamage = true;
 myPal = noone;
 
 keyFoward = 0;

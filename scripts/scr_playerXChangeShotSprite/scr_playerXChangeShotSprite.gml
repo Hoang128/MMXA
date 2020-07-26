@@ -212,7 +212,7 @@ switch (obj)
 				case sprDash2:			sprite_index = spr_XUADash2Shot;				break;
 				case sprDash3:			sprite_index = spr_XUADash3Shot;				break;
 				case sprWallKick:		sprite_index = spr_XUAWallKickShot;				break;
-				case sprLand:			sprite_index = spr_XUALandShot;						break;
+				case sprLand:			sprite_index = spr_XUALandShot;					break;
 				case sprWired:
 				case sprWiredForward:
 				case sprWiredUp:

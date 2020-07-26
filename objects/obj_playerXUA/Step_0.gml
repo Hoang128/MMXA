@@ -71,6 +71,28 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 	}
 	
+	//Armor
+	scr_armorPointHandle();
+	
+	//Nova Strike
+	if (sprite_index == spr_XUANovaStrike2)
+	{
+		if (novaTime > 0)
+			novaTime -= DELTA_TIME;
+		else
+		{
+			novaTime = 0;
+			
+			sprite_index = spr_XUANovaStrikeEnd;
+			image_index = 0;
+		
+			hspd = novaStrikeEndHspd * hDir;
+			vspd = novaStrikeEndVspd;
+			hState = HorizontalState.H_MOVE_FORWARD;
+			vState = VerticalState.V_MOVE_DOWN;
+		}
+	}
+	
 	//Active*******************************************************************************************************
 	if (activateState == ActivateState.ACTIVATE)
 	{
@@ -191,6 +213,38 @@ if (activateState != ActivateState.DEACTIVATE)
 		#region
 		
 		scr_playerXNormalAttack(object_index);
+		
+		#endregion
+		
+		//Giga attack
+		#region
+		
+		if (keyboard_check_pressed(global.keyGiga))
+		{
+			if (atkState < AttackState.A_STRICT_ATTACK)
+			{
+				if (ArmorPoint > 0)
+				{
+					if ((aState != ActionState.JUMPDASHING) && (canAirDash) && (canHover))
+					{
+						canGetDamage = false;
+						canAirDash = 0;
+						canHover = 0;
+						dashTime = 0;
+						dashSpd = 0;
+						sprite_index = spr_XUANovaStrike1;
+						image_index = 0;
+						hspd = novaStrikeStartHspd * hDir;
+						vspd = novaStrikeStartVspd;
+						hState = HorizontalState.H_MOVE_NONE;
+						vState = VerticalState.V_MOVE_UP;
+						atkState = AttackState.A_STRICT_ATTACK_LV4;
+						aState = ActionState.SP_MOVE;
+						ArmorPoint--;
+					}
+				}
+			}
+		}
 		
 		#endregion
 	}

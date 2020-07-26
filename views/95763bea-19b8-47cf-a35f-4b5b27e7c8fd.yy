@@ -9,7 +9,8 @@
         "b33036c1-15a3-4692-ba48-4daf149c954a",
         "adbddcd2-f61a-4ba4-8af8-bf89301bf3bc",
         "3a067309-452b-46e7-9466-752b985b536e",
-        "8ce6afa9-0e10-4f87-9b43-8a7e864dffd6"
+        "8ce6afa9-0e10-4f87-9b43-8a7e864dffd6",
+        "919b6991-5b82-431f-b250-7178f6ebc410"
     ],
     "filterType": "GMSound",
     "folderName": "Effect",

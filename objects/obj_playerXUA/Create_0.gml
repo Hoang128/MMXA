@@ -26,6 +26,14 @@ dashUpSpdPhase2 = 5;
 hoverTimeMax = 120;
 hoverMoveSpd = 2;
 canHover = 1;
+ArmorPointMax = 1;
+coolDownAPTimeMax = 120;
+novaTimeMax = 30;
+novaStrikeStartVspd = -2;
+novaStrikeStartHspd = 2;
+novaStrikeSpd = 8;
+novaStrikeEndHspd = 1;
+novaStrikeEndVspd = 1;
 
 //Initialize sprite
 scr_InitSpritePlayerHFormBase(obj_playerXUA);
@@ -47,3 +55,6 @@ inShotFrame = false;
 busterOnRow = 0;
 resetBusterOnRowMax = 0;
 hoverTime = 0;
+ArmorPoint = 1;
+coolDownAPTime = 0;
+novaTime = 0;
