@@ -193,6 +193,12 @@ if (activateState != ActivateState.DEACTIVATE)
 	//Passive Counters-----------------------------------------------------------------------------------------
 	#region
 	
+	if (lowHp == true)
+	{
+		if (hp >= 8)
+			lowHp = false;
+	}
+	
 	if (canJump == 0)
 	{
 		if (canJumpWait < 0)

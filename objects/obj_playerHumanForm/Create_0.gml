@@ -90,6 +90,7 @@ stunSprLoop = 0;
 blink = 0;
 canChangeHDir = true;
 canGetDamage = true;
+lowHp = false;
 myPal = noone;
 
 keyFoward = 0;

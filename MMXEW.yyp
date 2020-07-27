@@ -7903,6 +7903,14 @@
             }
         },
         {
+            "Key": "d56bf260-10f4-40a7-aa1a-e065b98480f9",
+            "Value": {
+                "id": "390f618a-9199-4388-a98e-8ca437aacdce",
+                "resourcePath": "scripts\\scr_playerVoiceLowHp\\scr_playerVoiceLowHp.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d5b344ac-6c31-498e-8680-c33aa88d690a",
             "Value": {
                 "id": "2f7974ad-e270-4692-8706-09a10f780c0f",
@@ -9472,6 +9480,7 @@
         "fff2ea87-eb25-46c5-aecb-75696be04e5f",
         "f61efc54-ad1b-4af3-9567-111e0faa76bc",
         "49740506-ddb5-42c6-a47a-fce748c8e64b",
+        "d56bf260-10f4-40a7-aa1a-e065b98480f9",
         "c4d4f546-c021-46dd-851d-772f2c68b831",
         "bde8392f-6330-47e0-a68b-0e2e6195c91a",
         "a3bf0979-ecca-4d53-8b5c-be768e539034",

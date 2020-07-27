@@ -156,6 +156,15 @@ switch (sprite_index)
 	{
 		if (stunType == StunType.STUN_SOFT)
 		{
+			if (lowHp == false)
+			{
+				if (hp < 8)
+				{
+					scr_playerVoiceLowHp(object_index);
+					lowHp = true;
+				}
+			}
+			
 			if (place_meeting(x, y + 1, obj_block))
 			{
 				vState = VerticalState.V_ON_GROUND;
@@ -184,6 +193,15 @@ switch (sprite_index)
 		{
 			if (stunType == StunType.STUN_NORMAL || stunType == StunType.STUN_SOFT)
 			{
+				if (lowHp == false)
+				{
+					if (hp < 8)
+					{
+						scr_playerVoiceLowHp(object_index);
+						lowHp = true;
+					}
+				}
+				
 				if (place_meeting(x, y + 1, obj_block))
 				{
 					vState = VerticalState.V_ON_GROUND;
