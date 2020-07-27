@@ -42,6 +42,15 @@ if (activateState != ActivateState.DEACTIVATE)
 		}	break;
 	}
 	
+	if (keyboard_check_released(global.keyAtk))
+	{
+		if (aState == ActionState.STUNNING)
+		{
+			if (chargeNormal > 0)
+				chargeNormal = 0;
+		}
+	}
+	
 	#endregion
 	
 	//Sprite---------------------------------------------------------------------------------------------------

@@ -1,10 +1,6 @@
 scr_createTextMessChain(
 	scr_createTextMessage(
 		spr_bs_drLight,
-		"Vào thông ta di! Mega Man X!"
-	),
-	scr_createTextMessage(
-		spr_bs_drLight,
 		"X... We're having serious trouble again... It's like a nightmare for Reploids, with the virus everywhere"
 	),
 	scr_createTextMessage(

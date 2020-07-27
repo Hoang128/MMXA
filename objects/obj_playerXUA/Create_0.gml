@@ -28,10 +28,10 @@ hoverMoveSpd = 2;
 canHover = 1;
 ArmorPointMax = 1;
 coolDownAPTimeMax = 120;
-novaTimeMax = 30;
+novaTimeMax = 25;
 novaStrikeStartVspd = -2.4;
 novaStrikeStartHspd = 2.4;
-novaStrikeSpd = 8;
+novaStrikeSpd = 10;
 novaStrikeEndHspd = 1;
 novaStrikeEndVspd = 1;
 

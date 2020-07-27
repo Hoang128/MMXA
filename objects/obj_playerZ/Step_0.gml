@@ -9,6 +9,22 @@ if (activateState != ActivateState.DEACTIVATE)
 	//Passive******************************************************************************************************
 	#region
 	
+	//Key
+	#region
+	
+	if (keyboard_check_released(global.keyGiga))
+	{
+		if (aState == ActionState.STUNNING)
+		{
+			if (chargeCore > 0)
+			{
+				chargeCore = 0;
+			}
+		}
+	}
+	
+	#endregion
+	
 	//Air hike
 	#region
 	
