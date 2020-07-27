@@ -89,16 +89,6 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	#endregion
 	
-	//Sliding--------------------------------------------------------------------------------------------------
-	#region
-	
-	if (aState == ActionState.SLIDING)
-	{
-		move_contact_solid(90 - 90 * hDir, 0);
-	}
-	
-	#endregion
-	
 	//Wall kick && Dash kick-----------------------------------------------------------------------------------
 	#region
 	
@@ -454,6 +444,16 @@ if (activateState != ActivateState.DEACTIVATE)
 			}
 		}
 	}
+	#endregion
+	
+	//Sliding--------------------------------------------------------------------------------------------------
+	#region
+	
+	if (aState == ActionState.SLIDING)
+	{
+		move_contact_solid(90 - 90 * hDir, 0);
+	}
+	
 	#endregion
 	
 	#endregion

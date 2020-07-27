@@ -232,6 +232,8 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if ((aState != ActionState.JUMPDASHING) && (canAirDash) && (canHover))
 					{
+						if (aState == ActionState.SLIDING)
+							hDir *= -1;
 						canGetDamage = false;
 						canAirDash = 0;
 						canHover = 0;
