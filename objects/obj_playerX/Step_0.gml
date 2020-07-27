@@ -44,6 +44,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		
 		scr_playerXNormalAttack(object_index);
 		
+		scr_playerXSpecialAttack(object_index);
+		
 		#endregion
 	}
 }

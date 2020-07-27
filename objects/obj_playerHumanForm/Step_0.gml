@@ -539,23 +539,26 @@ if (activateState != ActivateState.DEACTIVATE)
 							{
 								if (atkState < AttackState.A_STRICT_ATTACK_LV2)
 								{
-									if ((aState == ActionState.IDLE) && (vState == VerticalState.V_ON_GROUND)) 
+									if (aState != ActionState.SLIDING)
 									{
-										if (atkState < AttackState.A_STRICT_ATTACK)
+										if ((aState == ActionState.IDLE) && (vState == VerticalState.V_ON_GROUND)) 
 										{
-											if ((sprite_index != sprRunStart) && (sprite_index != sprRun))
+											if (atkState < AttackState.A_STRICT_ATTACK)
 											{
-												sprite_index = sprRunStart;
-												image_index = 0;
+												if ((sprite_index != sprRunStart) && (sprite_index != sprRun))
+												{
+													sprite_index = sprRunStart;
+													image_index = 0;
+												}
 											}
 										}
+										hspd = hDir * runSpd;
+										dashSpd = 0;
+										scr_SetIceSlideSpd(hspd, false);
+										hState = HorizontalState.H_MOVE_FORWARD;
+										if (aState != ActionState.HOVER)
+											aState = ActionState.IDLE;
 									}
-									hspd = hDir * runSpd;
-									dashSpd = 0;
-									scr_SetIceSlideSpd(hspd, false);
-									hState = HorizontalState.H_MOVE_FORWARD;
-									if (aState != ActionState.HOVER)
-										aState = ActionState.IDLE;
 								}
 							}
 						}
@@ -640,8 +643,11 @@ if (activateState != ActivateState.DEACTIVATE)
 					}
 					else 
 					{
-						if (canChangeHDir == true)
-							hDir = hMove;
+						if (aState != ActionState.SLIDING)
+						{
+							if (canChangeHDir == true)
+								hDir = hMove;
+						}
 					}
 				}
 			}
@@ -1023,68 +1029,71 @@ if (activateState != ActivateState.DEACTIVATE)
 		
 		if (aState != ActionState.WIRING)
 		{
-			if (keyboard_check(global.keyUp))
+			if (atkState < AttackState.A_STRICT_ATTACK)
 			{
-				if (collision_rectangle(x - 1, bbox_top, x + 1, bbox_top + 8, obj_wire, false, true))
+				if (keyboard_check(global.keyUp))
 				{
-					if (wireTime == 0)
+					if (collision_rectangle(x - 1, bbox_top, x + 1, bbox_top + 8, obj_wire, false, true))
 					{
-						var wire = collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_top + 8, obj_wire, false, true);
-						if (place_meeting(x, y + 1, obj_block))
-							y--;
+						if (wireTime == 0)
+						{
+							var wire = collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_top + 8, obj_wire, false, true);
+							if (place_meeting(x, y + 1, obj_block))
+								y--;
 						
 					
-						hspd = 0;
-						vspd = 0;
-						switch (wire.object_index)
-						{
-							case obj_wireHorizontal:	
+							hspd = 0;
+							vspd = 0;
+							switch (wire.object_index)
 							{
-								wireType = WireType.HORIZONTAL;
-								sprite_index = sprWiredStartH;
-								image_index = 0;
-								x = clamp(x, wire.bbox_left, wire.bbox_right);
-								y = wire.y + yDistanceToWirer;
-								
-								while(collision_rectangle(bbox_left - 1, bbox_top, bbox_left, bbox_bottom, obj_block, false, true))
+								case obj_wireHorizontal:	
 								{
-									x ++;
-								}
+									wireType = WireType.HORIZONTAL;
+									sprite_index = sprWiredStartH;
+									image_index = 0;
+									x = clamp(x, wire.bbox_left, wire.bbox_right);
+									y = wire.y + yDistanceToWirer;
+								
+									while(collision_rectangle(bbox_left - 1, bbox_top, bbox_left, bbox_bottom, obj_block, false, true))
+									{
+										x ++;
+									}
 						
-								while(collision_rectangle(bbox_right, bbox_top, bbox_right + 1, bbox_bottom, obj_block, false, true))
+									while(collision_rectangle(bbox_right, bbox_top, bbox_right + 1, bbox_bottom, obj_block, false, true))
+									{
+										x --;
+									}
+								
+								}	break;
+								case obj_wireVertical:
 								{
-									x --;
-								}
+									wireType = WireType.VERTICAL;
+									sprite_index = sprWiredStartV;
+									image_index = 0;
+									x = wire.x;
+									y = clamp(y, wire.bbox_bottom + yDistanceToWirer, wire.bbox_top + yDistanceToWirer);
 								
-							}	break;
-							case obj_wireVertical:
-							{
-								wireType = WireType.VERTICAL;
-								sprite_index = sprWiredStartV;
-								image_index = 0;
-								x = wire.x;
-								y = clamp(y, wire.bbox_bottom + yDistanceToWirer, wire.bbox_top + yDistanceToWirer);
+									while(place_meeting(x, y + 1, obj_block))
+									{
+										y--;
+									}
 								
-								while(place_meeting(x, y + 1, obj_block))
+								}	break;
+								case noone:					
 								{
-									y--;
-								}
-								
-							}	break;
-							case noone:					
-							{
-								wireType = WireType.NONE;		
-							}	break;
+									wireType = WireType.NONE;		
+								}	break;
+							}
+						
+							wirer = instance_create_depth(x, y - yDistanceToWirer, depth - 1, objWire);
+							wirer.core = self;
+							canAirDash = 1;
+							dashPhase = 0;
+							dashTime = 0;
+							vState = VerticalState.V_MOVE_NONE;
+							hState = HorizontalState.H_MOVE_NONE;
+							aState = ActionState.WIRING;
 						}
-						
-						wirer = instance_create_depth(x, y - yDistanceToWirer, depth - 1, objWire);
-						wirer.core = self;
-						canAirDash = 1;
-						dashPhase = 0;
-						dashTime = 0;
-						vState = VerticalState.V_MOVE_NONE;
-						hState = HorizontalState.H_MOVE_NONE;
-						aState = ActionState.WIRING;
 					}
 				}
 			}

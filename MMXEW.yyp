@@ -4007,6 +4007,14 @@
             }
         },
         {
+            "Key": "68f82d3f-5b90-4d3b-a6f1-6a401961c1c8",
+            "Value": {
+                "id": "09420a89-f8b5-4207-bbe5-4b66b34bb1c7",
+                "resourcePath": "objects\\obj_ZZ\\obj_ZZ.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "69607168-f8e1-4b95-b8de-32aa66fefe24",
             "Value": {
                 "id": "b2ee1d86-ae0d-42d1-ae2a-1f01fe121b95",
@@ -7183,6 +7191,14 @@
             }
         },
         {
+            "Key": "bd15f775-f2ab-4930-854b-d5ae490b404e",
+            "Value": {
+                "id": "3082e9dd-d989-4262-a2c6-d220f990e9e8",
+                "resourcePath": "scripts\\scr_playerXSpecialAttack\\scr_playerXSpecialAttack.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bd7a888b-2000-4d3d-8d07-dccd00b543a7",
             "Value": {
                 "id": "637f6be3-5921-4e3f-a8ea-200e3b813fc6",
@@ -9351,6 +9367,22 @@
             }
         },
         {
+            "Key": "f4695072-f3d7-4c02-bef4-45f51d810fc1",
+            "Value": {
+                "id": "42dbde3f-5a69-421d-a1bf-c3ea8c021779",
+                "resourcePath": "objects\\obj_playerEclipseX\\obj_playerEclipseX.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f53599ff-c84b-4ec1-9ffa-97053c759b14",
+            "Value": {
+                "id": "20494b31-120e-422e-8908-b93c7038ed79",
+                "resourcePath": "objects\\obj_armorImage\\obj_armorImage.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f5612920-e161-434a-ad27-10c842f43125",
             "Value": {
                 "id": "75154104-bd8f-47dd-a329-58573d4c70f6",
@@ -9772,6 +9804,7 @@
         "4c58e84f-cd00-44a1-97d8-c890ed7946ec",
         "7c69365c-a3e2-462a-96ad-b79288d746ff",
         "ef115021-258a-4a9b-9e6a-ac9b39ab8fbe",
+        "bd15f775-f2ab-4930-854b-d5ae490b404e",
         "d7e4e745-18ee-4256-a3de-ae50cc335b68",
         "fff2ea87-eb25-46c5-aecb-75696be04e5f",
         "f61efc54-ad1b-4af3-9567-111e0faa76bc",
