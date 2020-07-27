@@ -31,7 +31,7 @@ coolDownAPTimeMax = 120;
 novaTimeMax = 25;
 novaStrikeStartVspd = -2.4;
 novaStrikeStartHspd = 2.4;
-novaStrikeSpd = 10;
+novaStrikeSpd = 9;
 novaStrikeEndHspd = 1;
 novaStrikeEndVspd = 1;
 

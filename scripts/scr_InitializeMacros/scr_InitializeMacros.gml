@@ -18,5 +18,5 @@
 #macro DELTA_TIME myDeltaTime * global.deltaTime
 #macro GRAVITY_AIR 0.3
 #macro MAX_FALL_AIR 5.5
-#macro GRAVITY_WATER 0.15
-#macro MAX_FALL_WATER 3
+#macro GRAVITY_WATER 0.2
+#macro MAX_FALL_WATER 3.5

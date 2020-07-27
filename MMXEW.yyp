@@ -1186,7 +1186,7 @@
             "Key": "1fddc875-45d0-45cf-a579-77c6bbd13478",
             "Value": {
                 "id": "fafa4ae0-d3e4-4b3c-acd0-6e7cfb7b786c",
-                "resourcePath": "sprites\\sprite513\\sprite513.yy",
+                "resourcePath": "sprites\\spr_airPortLight2\\spr_airPortLight2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1410,7 +1410,7 @@
             "Key": "26cedabe-8737-4ad9-b62e-527dce063ecc",
             "Value": {
                 "id": "4756f205-c528-43d6-ac76-88c91934dd6b",
-                "resourcePath": "sprites\\spr_XUATalk\\spr_XUATalk.yy",
+                "resourcePath": "sprites\\spr_XTalk\\spr_XTalk.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1746,7 +1746,7 @@
             "Key": "2f877dc3-07d3-4a86-a04d-74965d9035d5",
             "Value": {
                 "id": "6b016408-4dbc-44a2-accb-676bd0b01f8b",
-                "resourcePath": "sprites\\sprite512\\sprite512.yy",
+                "resourcePath": "sprites\\spr_airPortLight1\\spr_airPortLight1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2714,7 +2714,7 @@
             "Key": "4683de26-d42b-4cea-a953-fc96f1525dc2",
             "Value": {
                 "id": "f247164e-57fe-48dc-9afb-ba2abe28c988",
-                "resourcePath": "sprites\\spr_XUAStandDown\\spr_XUAStandDown.yy",
+                "resourcePath": "sprites\\spr_XStandDown\\spr_XStandDown.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2834,7 +2834,7 @@
             "Key": "48911206-f2a4-4638-9617-f4614afbe9a9",
             "Value": {
                 "id": "18b84a90-f486-4bfa-8707-1cead5d8960f",
-                "resourcePath": "sprites\\sprite508\\sprite508.yy",
+                "resourcePath": "sprites\\spr_airPortDeepWall2\\spr_airPortDeepWall2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3695,6 +3695,14 @@
             }
         },
         {
+            "Key": "60f9b7f7-95a6-4ee6-8fd9-a2cdeb75d6cb",
+            "Value": {
+                "id": "0d7f1c64-3c83-4e92-8b82-5b42bf1e288f",
+                "resourcePath": "tilesets\\tile_X5AirPortBackWall\\tile_X5AirPortBackWall.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "6101f557-01cc-4713-a697-c8aacca6d095",
             "Value": {
                 "id": "ac794bd8-33fb-45f4-982f-b30cac67e877",
@@ -3986,7 +3994,7 @@
             "Key": "6976ed4b-b3d4-4e92-86a8-44b6cd4cfccf",
             "Value": {
                 "id": "18d8b2b1-7152-4abd-b903-d738c703b53a",
-                "resourcePath": "sprites\\sprite516\\sprite516.yy",
+                "resourcePath": "sprites\\spr_airPortLightAnimated2\\spr_airPortLightAnimated2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4018,7 +4026,7 @@
             "Key": "6b21bae0-754c-4985-8fc8-0a8111dc0bf9",
             "Value": {
                 "id": "0c1998af-7442-49ea-96e2-6b8ef2921609",
-                "resourcePath": "sprites\\sprite514\\sprite514.yy",
+                "resourcePath": "sprites\\spr_airPortLight3\\spr_airPortLight3.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4242,7 +4250,7 @@
             "Key": "6edee2d5-5077-4b09-b75e-75566ed1dee7",
             "Value": {
                 "id": "9c8b9717-547b-47eb-918c-58ff523be54c",
-                "resourcePath": "sprites\\sprite517\\sprite517.yy",
+                "resourcePath": "sprites\\spr_airPortSliderBig\\spr_airPortSliderBig.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4282,7 +4290,7 @@
             "Key": "6fbca7f8-bce9-4484-b147-9061d1f896fd",
             "Value": {
                 "id": "3e3d47dd-0cb7-4cbe-9c40-a32b624b9767",
-                "resourcePath": "sprites\\sprite515\\sprite515.yy",
+                "resourcePath": "sprites\\spr_airPortLightAnimated1\\spr_airPortLightAnimated1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4903,6 +4911,14 @@
             }
         },
         {
+            "Key": "7eebca00-0498-4a8f-9d8c-6ce30dca6584",
+            "Value": {
+                "id": "954bf493-a20a-4046-8d71-7850ec3c4a14",
+                "resourcePath": "tilesets\\tile_X5AirPortDeepWall\\tile_X5AirPortDeepWall.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "7ef10214-8cf3-477f-a973-55ffca676113",
             "Value": {
                 "id": "048c30b3-4ed2-45c5-8500-eeb04a295741",
@@ -4996,14 +5012,6 @@
                 "id": "b3af7593-5c2f-4413-a525-3230b3a4bde3",
                 "resourcePath": "objects\\obj_warningEff\\obj_warningEff.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "81f4f052-40da-4565-95e5-0f16c258f8e6",
-            "Value": {
-                "id": "514b307a-3528-4dd5-bf83-6b02a67e5467",
-                "resourcePath": "sprites\\sprite510\\sprite510.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -5610,7 +5618,7 @@
             "Key": "90e11b44-8a88-4b48-aa62-ebee86a99076",
             "Value": {
                 "id": "ee5b0ec6-dbff-4de9-90f3-4724aadb245b",
-                "resourcePath": "sprites\\sprite522\\sprite522.yy",
+                "resourcePath": "sprites\\spr_airPortLight5\\spr_airPortLight5.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6106,7 +6114,7 @@
             "Key": "9def23e0-1f90-4999-ba53-2be62a5aa565",
             "Value": {
                 "id": "7ca2cb8e-d1bb-4c74-847b-bbc8fc495826",
-                "resourcePath": "sprites\\sprite509\\sprite509.yy",
+                "resourcePath": "sprites\\spr_airPortSliderFrame\\spr_airPortSliderFrame.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6186,7 +6194,7 @@
             "Key": "a08b81d3-beab-42a7-9e32-2057a1a8ba7e",
             "Value": {
                 "id": "2f9013a7-8b01-476e-b43f-f617b28cce01",
-                "resourcePath": "sprites\\spr_XUAStandUp\\spr_XUAStandUp.yy",
+                "resourcePath": "sprites\\spr_XStandUp\\spr_XStandUp.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6524,6 +6532,14 @@
                 "id": "9144b86b-6255-4b54-b60f-a2f5c6e4d76d",
                 "resourcePath": "objects\\obj_playerX\\obj_playerX.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ac3ce130-97c7-4bf1-a740-7fe7b4d44422",
+            "Value": {
+                "id": "1232327d-2ff7-497a-ac07-d34f1b424fb1",
+                "resourcePath": "tilesets\\tile_X5AirPortWall\\tile_X5AirPortWall.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -6994,7 +7010,7 @@
             "Key": "b9d3b86d-7283-4100-b785-8aee4ab0cf01",
             "Value": {
                 "id": "66ed7636-198b-4455-bf1c-542f9a976bb4",
-                "resourcePath": "sprites\\sprite518\\sprite518.yy",
+                "resourcePath": "sprites\\spr_airPortLightAnimated3\\spr_airPortLightAnimated3.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7012,6 +7028,22 @@
                 "id": "a03030f7-e4cb-48d4-ad21-bf50794007b3",
                 "resourcePath": "views\\bb536bfd-0751-41ec-8d24-c7d64e0d8d2b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "bb575f45-272a-42e4-8d0b-5a8dffc335a0",
+            "Value": {
+                "id": "649f38cb-5ebe-4526-a06f-9f662871518d",
+                "resourcePath": "tilesets\\tile_X5AirPortSliderFrame\\tile_X5AirPortSliderFrame.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "bb6e2205-a6f2-49fa-a0ad-34f8f20fb358",
+            "Value": {
+                "id": "6145ddec-fe21-40ef-bd92-1257710e57ba",
+                "resourcePath": "tilesets\\tile_X5AirPortPlatform\\tile_X5AirPortPlatform.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -7210,7 +7242,7 @@
             "Key": "c153a4fe-c6ec-40b1-aff8-374627e1fa5d",
             "Value": {
                 "id": "7e7e4f6f-7fa6-47e4-a868-d7db0df10d74",
-                "resourcePath": "sprites\\sprite519\\sprite519.yy",
+                "resourcePath": "sprites\\spr_airPortLightAnimated4\\spr_airPortLightAnimated4.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8511,6 +8543,14 @@
             }
         },
         {
+            "Key": "e2796d5f-464f-439d-935c-4d99e9cfb186",
+            "Value": {
+                "id": "a96fa8f4-94b4-4295-a4f4-f35d9de84d0b",
+                "resourcePath": "views\\e2796d5f-464f-439d-935c-4d99e9cfb186.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "e2c77dd1-561e-4c72-8edc-b89a20f2c513",
             "Value": {
                 "id": "3aa9b0cf-16e2-4833-9e1e-6ec7db463fce",
@@ -8658,7 +8698,7 @@
             "Key": "e60ed09e-c756-41d5-8db9-933d45fe8de4",
             "Value": {
                 "id": "74fbc536-09bc-4a27-86f2-cbd00a97334c",
-                "resourcePath": "sprites\\sprite521\\sprite521.yy",
+                "resourcePath": "sprites\\spr_airPortLightAnimated5\\spr_airPortLightAnimated5.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8682,7 +8722,7 @@
             "Key": "e6f25bbb-aaa1-4ed7-affa-e9ad50ee3fcf",
             "Value": {
                 "id": "043d7f36-d612-436b-8986-93e426c88cb6",
-                "resourcePath": "sprites\\sprite507\\sprite507.yy",
+                "resourcePath": "sprites\\spr_airPortDeepWall1\\spr_airPortDeepWall1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -9506,7 +9546,7 @@
             "Key": "fdf3be48-10bc-4c89-8a22-c93a120f22f4",
             "Value": {
                 "id": "eb5060c9-752d-4230-ae2e-8560f1965441",
-                "resourcePath": "sprites\\sprite520\\sprite520.yy",
+                "resourcePath": "sprites\\spr_airPortLight4\\spr_airPortLight4.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -9514,7 +9554,7 @@
             "Key": "fe08c681-6699-43fe-9f0d-047db351df90",
             "Value": {
                 "id": "8975d1b4-74f9-4449-a0be-5f7cad87cffb",
-                "resourcePath": "sprites\\sprite511\\sprite511.yy",
+                "resourcePath": "sprites\\spr_airPortWall\\spr_airPortWall.yy",
                 "resourceType": "GMSprite"
             }
         },

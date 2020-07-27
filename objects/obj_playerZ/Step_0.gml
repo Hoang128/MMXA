@@ -573,7 +573,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					
 					if (canAirDash)
 						canAirDash = 0;
-					if (aState == ActionState.DASHING)
+					if ((aState == ActionState.DASHING) || (aState == ActionState.CLIMBING))
 						aState = ActionState.IDLE;
 					atkState = AttackState.A_STRICT_ATTACK;
 				}
