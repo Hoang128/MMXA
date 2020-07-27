@@ -12,7 +12,7 @@
         "c6394500-fd7a-421d-ae75-1accb7c3591d"
     ],
     "filterType": "GMSprite",
-    "folderName": "Moves",
+    "folderName": "Special Moves",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

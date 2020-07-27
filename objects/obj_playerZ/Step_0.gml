@@ -633,7 +633,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							sprite_index = spr_ZShotNorA;
 						
 							busterType = obj_ZBusterNor;
-							if (aState == ActionState.DASHING)
+							if ((aState == ActionState.DASHING) || (aState == ActionState.CLIMBING) || (aState == ActionState.SLIDING))
 								aState = ActionState.IDLE;
 							atkState = AttackState.A_STRICT_ATTACK;
 							vState = VerticalState.V_MOVE_FALLING;
@@ -740,7 +740,7 @@ if (activateState != ActivateState.DEACTIVATE)
 									sprite_index = spr_ZShotNorA;
 						
 									busterType = obj_ZBusterNor;
-									if (aState == ActionState.DASHING)
+									if ((aState == ActionState.DASHING) || (aState == ActionState.CLIMBING) || (aState == ActionState.SLIDING))
 										aState = ActionState.IDLE;
 									atkState = AttackState.A_STRICT_ATTACK;
 									vState = VerticalState.V_MOVE_FALLING;
@@ -792,7 +792,7 @@ if (activateState != ActivateState.DEACTIVATE)
 								
 								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_CHARGE_COMBO_A, self);
 								
-								if (aState == ActionState.DASHING)
+								if ((aState == ActionState.DASHING) || (aState == ActionState.CLIMBING) || (aState == ActionState.SLIDING))
 									aState = ActionState.IDLE;
 								atkState = AttackState.A_STRICT_ATTACK;
 								vState = VerticalState.V_MOVE_FALLING;
@@ -843,7 +843,7 @@ if (activateState != ActivateState.DEACTIVATE)
 								
 								scr_MeeleWeaponDestroy(obj_ZSaberImage);
 						
-								if (aState == ActionState.DASHING)
+								if ((aState == ActionState.DASHING) || (aState == ActionState.CLIMBING) || (aState == ActionState.SLIDING))
 									aState = ActionState.IDLE;
 								atkState = AttackState.A_STRICT_ATTACK;
 								vState = VerticalState.V_MOVE_FALLING;
@@ -970,7 +970,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							scr_MeeleWeaponDestroy(obj_ZSaberImage);
 						
 							atkState = AttackState.A_STRICT_ATTACK;
-							if (aState == ActionState.DASHING)
+							if ((aState == ActionState.DASHING) || (aState == ActionState.CLIMBING) || (aState == ActionState.SLIDING))
 								aState = ActionState.IDLE;
 							vState = VerticalState.V_MOVE_FALLING;
 						}
