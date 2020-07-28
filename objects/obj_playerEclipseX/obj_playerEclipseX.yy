@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_playerEclipseX",
     "eventList": [
-        
+        {
+            "id": "bd4fd111-2726-4ee7-9bcb-b1892b073da4",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "f4695072-f3d7-4c02-bef4-45f51d810fc1"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

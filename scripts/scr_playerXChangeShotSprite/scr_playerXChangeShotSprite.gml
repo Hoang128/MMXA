@@ -4,6 +4,7 @@ var charge = argument2;
 switch (obj)
 {
 	case obj_playerX:
+	case obj_playerEclipseX:
 	{
 		#region
 		

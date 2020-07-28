@@ -13,8 +13,9 @@ if (instance_exists(obj_gameManager.playerCore))
 
 	switch(obj_gameManager.playerCore)
 	{
-		case obj_playerX:
+		case obj_playerEclipseX:
 		{
+			draw_sprite_part(draw_rectangle_color(6, 6, 70, 22, c_yellow, c_yellow, c_red, c_red, false), 0, 0, 0, 16, 64/obj_playerEclipseX.hp, 6, 6);
 		}	break;
 		case obj_playerZ:
 		{

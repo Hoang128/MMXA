@@ -4,8 +4,11 @@ if (init == false)
 	switch (core.object_index)
 	{
 		case obj_playerX:
-		case obj_playerXUA:	sprite_index = spr_XDashEff;	break;
-		case obj_playerZ:	sprite_index = spr_ZDashEff;	break;
+		case obj_playerXUA:
+		case obj_playerEclipseX: 
+			sprite_index = spr_XDashEff;	break;
+		case obj_playerZ:	
+			sprite_index = spr_ZDashEff;	break;
 	}
 }
 else

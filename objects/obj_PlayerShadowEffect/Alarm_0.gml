@@ -7,6 +7,7 @@ if (instance_exists(core))
 {
 	switch core.object_index
 	{
+		case obj_playerEclipseX:
 		case obj_playerX:		myPalSprite = spr_PalXShadow;	break;
 		case obj_playerZ:		myPalSprite = spr_PalZShadow;	break;
 		case obj_playerXUA:		myPalSprite = spr_PalXUAShadow;	break;

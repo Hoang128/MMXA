@@ -57,7 +57,7 @@ switch (sprite_index)
 		dashSpd = dashSpdPhase2;
 		if (self.weight != WeighType.MASSIVE)
 		{
-			var dashEff = instance_create_depth(x + xPlaceDashEff * image_xscale, y + yPlaceDashEff, depth - 1, obj_PlayerDashEff);
+			var dashEff = instance_create_depth(x + xPlaceDashEff * image_xscale, y + yPlaceDashEff, depth - 5, obj_PlayerDashEff);
 			dashEff.image_xscale = self.image_xscale;
 			dashEff.core = self;
 			dashEff.xPlace = xPlaceDashEff;
@@ -96,7 +96,7 @@ switch (sprite_index)
 		sprite_index = sprSlide2;
 		image_index = 0;
 	
-		var slideEff = instance_create_depth(x + 16 * image_xscale, y + 12, depth - 1, obj_vDust);
+		var slideEff = instance_create_depth(x + 16 * image_xscale, y + 12, depth - 5, obj_vDust);
 		slideEff.image_xscale = image_xscale;
 		slideEff.xPlace = 16;
 		slideEff.yPlace = 12;

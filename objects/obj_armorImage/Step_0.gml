@@ -1,0 +1,96 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+if (instance_exists(core))
+{
+	switch (Foot)
+	{
+		//No Armor
+		case 0:	FootImg = noone; break;
+	
+		//Solar Foot
+		case 1:
+		{
+			switch (core.sprite_index)
+			{
+				//Basic frames
+				case spr_XStand:			FootImg = spr_FXSStand;				break;
+				case spr_XDying:			FootImg = spr_FXSDying;				break;
+				case spr_XShotRunStart:
+				case spr_XRunStart:			FootImg = spr_FXSRunStart;			break;
+				case spr_XShotRun:
+				case spr_XRun:				FootImg = spr_FXSRun;				break;
+				case spr_XShotRunEnd:
+				case spr_XRunEnd:			FootImg = spr_FXSRunEnd;			break;
+				case spr_XShotJump1:
+				case spr_XJump1:			FootImg = spr_FXSJump1;				break;
+				case spr_XShotJump2:
+				case spr_XJump2:			FootImg = spr_FXSJump2;				break;
+				case spr_XShotJump3:
+				case spr_XJump3:			FootImg = spr_FXSJump3;				break;
+				case spr_XShotJump4:
+				case spr_XJump4:			FootImg = spr_FXSJump4;				break;
+				case spr_XShotLand:
+				case spr_XLand:				FootImg = spr_FXSLand;				break;
+				case spr_XShotDash1:
+				case spr_XDash1:			FootImg = spr_FXSDash1;				break;
+				case spr_XShotDash2:
+				case spr_XDash2:			FootImg = spr_FXSDash2;				break;
+				case spr_XShotDash3:
+				case spr_XDash3:			FootImg = spr_FXSDash3;				break;
+				case spr_XShotSlide1:
+				case spr_XSlide1:			FootImg = spr_FXSSlide1;			break;
+				case spr_XShotSlide2:
+				case spr_XSlide2:			FootImg = spr_FXSSlide2;			break;
+				case spr_XShotWallKick:
+				case spr_XWallKick:			FootImg = spr_FXSWallKick;			break;
+				case spr_XDashKick1:		FootImg = spr_FXSDashKick1;			break;
+				case spr_XDashKick2:		FootImg = spr_FXSDashKick2;			break;
+				case spr_XDuck1:			FootImg = spr_FXSDuck1;				break;
+				case spr_XShotDuck:
+				case spr_XDuck2:			FootImg = spr_FXSDuck2;				break;
+				case spr_XDuck3:			FootImg = spr_FXSDuck3;				break;
+				case spr_XClimbStart:		FootImg = spr_FXSClimbStart;		break;
+				case spr_XClimb:			FootImg = spr_FXSClimb;				break;
+				case spr_XClimbEnd:			FootImg = spr_FXSClimbEnd;			break;
+				//case spr_XStun0:			FootImg = spr_FXSStun0;				break;
+				case spr_XStun1:			FootImg = spr_FXSStun1;				break;
+				case spr_XStun2:			FootImg = spr_FXSStun2;				break;
+				case spr_XStandUp:			FootImg = spr_FXSStandUp;			break;
+				case spr_XStandDown:		FootImg = spr_FXSStandDown;			break;
+				case spr_XTalk:				FootImg = spr_FXSTalk;				break;
+				
+				//Wire frames
+				case spr_XWiredForward:
+				case spr_XWiredUp:
+				case spr_XWiredDown:
+				case spr_XWired:		
+				case spr_XShotWired:	
+											FootImg = spr_FXSWired;				break;
+				case spr_XWiredStartHorizontal:
+				case spr_XWiredStartVertical:
+				case spr_XShotWiredStartHorizontal:
+				case spr_XShotWiredStartVertical:
+											FootImg = spr_FXSWiredStart;		break;
+				default:					FootImg = noone;
+			}
+		}
+	
+		//Lunar Foot
+		case 2:
+		{
+		
+		}	break;
+	
+	}
+	
+	x = core.x;
+	y = core.y;
+	depth = core.depth - 1;
+	image_speed = 0;
+	image_index = core.image_index;
+	image_xscale = core.image_xscale;
+	image_yscale = core.image_yscale;
+	image_alpha = core.image_alpha;
+}
+else instance_destroy();

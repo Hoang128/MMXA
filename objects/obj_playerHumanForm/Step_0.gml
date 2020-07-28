@@ -1498,7 +1498,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							image_index = 0;
 							audio_play_sound_on(global.SFX_Emitter, sndVoiceWallKick, 0, 0);
 						
-							var wkEff = instance_create_depth(x + image_xscale * (bbox_right - bbox_left) / 2, y - 4, depth - 1, obj_flareSmall);
+							var wkEff = instance_create_depth(x + image_xscale * (bbox_right - bbox_left) / 2, y - 4, depth - 5, obj_flareSmall);
 							wkEff.image_xscale = self.image_xscale;
 							canJump = 0;
 							hspd = 0;
@@ -1522,7 +1522,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							image_index = 0;
 							audio_play_sound_on(global.SFX_Emitter, sndVoiceWallKick, 0, 0);
 						
-							var wkEff = instance_create_depth(x + image_xscale * (bbox_right - bbox_left) / 2, y - 4, depth - 1, obj_flareSmall);
+							var wkEff = instance_create_depth(x + image_xscale * (bbox_right - bbox_left) / 2, y - 4, depth - 5, obj_flareSmall);
 							wkEff.image_xscale = self.image_xscale;
 							lastWallKickSide = hDir;
 							canJump = 0;
