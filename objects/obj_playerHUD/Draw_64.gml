@@ -11,11 +11,11 @@ if (instance_exists(obj_gameManager.playerCore))
 	scr_LOG_INFO(string(obj_gameManager.playerCore.hp),c_white, c_black);
 	scr_LOG_INFO(string(lives),c_white, c_black);
 
-	switch(obj_gameManager.playerCore)
+	switch(obj_gameManager.playerCore.object_index)
 	{
 		case obj_playerEclipseX:
 		{
-			draw_sprite_part(draw_rectangle_color(6, 6, 70, 22, c_yellow, c_yellow, c_red, c_red, false), 0, 0, 0, 16, 64/obj_playerEclipseX.hp, 6, 6);
+			scr_LOG_INFO(string(obj_gameManager.playerCore.ArmorPoint),c_white, c_black);
 		}	break;
 		case obj_playerZ:
 		{

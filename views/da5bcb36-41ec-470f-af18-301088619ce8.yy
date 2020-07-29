@@ -4,7 +4,8 @@
     "mvc": "1.1",
     "name": "da5bcb36-41ec-470f-af18-301088619ce8",
     "children": [
-        "68f82d3f-5b90-4d3b-a6f1-6a401961c1c8"
+        "68f82d3f-5b90-4d3b-a6f1-6a401961c1c8",
+        "fcf57437-bf0a-4314-be9d-fac171939b44"
     ],
     "filterType": "GMObject",
     "folderName": "Solar Armor",
