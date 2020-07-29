@@ -126,7 +126,7 @@ else{
 			scr_LOG_INFO("Char In Water State = " + str_inWaterState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Horizontal Speed = " + string(obj_playerHumanForm.hspd), debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Vertical Speed = " + string(obj_playerHumanForm.vspd), debugTextColorF, debugTextColorB);
-			scr_LOG_INFO("Char Wall kick time 2 = " + string(obj_playerHumanForm.wallKickTime2), debugTextColorF, debugTextColorB);
+			scr_LOG_INFO("Char vDashDir = " + string(obj_playerHumanForm.vDashDir), debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Last wall kick side = " + string(obj_playerHumanForm.lastWallKickSide), debugTextColorF, debugTextColorB);
 		}
 		#endregion

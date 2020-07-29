@@ -338,32 +338,38 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			if (aState != ActionState.BEAMDOWN)
 			{
-				if (atkState <= AttackState.A_NORMAL_ATTACK)
+				if !((aState == ActionState.DASHING) && (vDashDir == -1))
 				{
-					sprite_index = sprLand;
-					image_index = 0;
-				}
-				audio_play_sound_on(global.SFX_Emitter, sndLandEff, 0, 0);
-			
-				canSlide = 0;
-				if (aState == ActionState.JUMPDASHING)
-				{
-					if (dashPhase > 0)
+					if (atkState <= AttackState.A_NORMAL_ATTACK)
 					{
-						dashSpd = 0;
-						dashPhase = 0;
+						sprite_index = sprLand;
+						image_index = 0;
 					}
+					audio_play_sound_on(global.SFX_Emitter, sndLandEff, 0, 0);
+			
+					canSlide = 0;
+					if (aState == ActionState.JUMPDASHING)
+					{
+						if (dashPhase > 0)
+						{
+							dashSpd = 0;
+							dashPhase = 0;
+						}
+					}
+					if (!canAirDash)
+						canAirDash = 1;
+						
+					vState = VerticalState.V_ON_GROUND;
+					aState = ActionState.IDLE;
 				}
-				if (!canAirDash)
-					canAirDash = 1;
 			}
 			else
 			{
 				if (sprite_index = sprFlash)
 					sprite_index = sprBeamDown;
+				vState = VerticalState.V_ON_GROUND;
+				aState = ActionState.IDLE;
 			}
-			vState = VerticalState.V_ON_GROUND;
-			aState = ActionState.IDLE;
 		}
 	}
 	else
@@ -381,7 +387,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		if (vState == VerticalState.V_MOVE_NONE)
 		{
-			if (aState == ActionState.DASHING)
+			if (vDashDir == 0)
 			{
 				if (place_meeting(x, y + maxDisDetectSlopeAbove, obj_block))
 				{
@@ -621,7 +627,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							{
 								if (canChangeHDir == true)
 									hDir = hMove;
-								if (vState == VerticalState.V_MOVE_NONE)
+								if (vState != VerticalState.V_ON_GROUND)
 								{
 									sprite_index = sprJump3;
 									image_index = 0;
@@ -1259,8 +1265,8 @@ if (activateState != ActivateState.DEACTIVATE)
 						vspd = dashSpd * vDashDir;
 					if ((hState == HorizontalState.H_MOVE_FORWARD) && (vDashDir != 0))
 					{
-						hspd = hDir * dashSpd * cos(crossDashAngle);
-						vspd = vDashDir * dashSpd * sin(crossDashAngle);
+						hspd = hDir * dashSpd * cos(degtorad(crossDashAngle));
+						vspd = vDashDir * dashSpd * sin(degtorad(crossDashAngle));
 					}
 				}
 				dashTime -= DELTA_TIME;
@@ -1326,6 +1332,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					vDashDir = 0;
 				}
 			}
+			
 		}
 		if (aState == ActionState.WIRING)
 		{

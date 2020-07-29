@@ -125,8 +125,11 @@ switch (sprite_index)
 
 	case sprDashKick1:
 	{
-		sprite_index = sprDashKick2;
-		image_index = 0;
+		if (aState == ActionState.DASHKICK)
+		{
+			sprite_index = sprDashKick2;
+			image_index = 0;
+		}
 	}
 	break;
 	

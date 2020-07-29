@@ -104,7 +104,11 @@ if (activateState != ActivateState.DEACTIVATE)
 		///Action script
 		
 		//Special Moves--------------------------------------------------------------------------------------------
+		#region
+		
 		//Vertical Dash
+		#region
+		
 		if (UN_DashFlag == true)
 		{
 			if (vState != VerticalState.V_ON_GROUND)
@@ -132,7 +136,11 @@ if (activateState != ActivateState.DEACTIVATE)
 			UN_DashFlag = false;
 		}
 		
+		#endregion
+		
 		//Hover
+		#region
+		
 		if (keyboard_check_pressed(global.keyJump))
 		{
 			
@@ -212,6 +220,11 @@ if (activateState != ActivateState.DEACTIVATE)
 				}
 			}
 		}
+		
+		#endregion
+		
+		#endregion
+		
 		
 		//Attack---------------------------------------------------------------------------------------------------
 		//Normal attack
