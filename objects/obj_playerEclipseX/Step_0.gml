@@ -82,7 +82,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						if (usedFArmorPointFlag == false)
 						{
 							ArmorPoint--;
-							dashTime = maxAirDashTime * 1.5;
+							dashTime = maxAirDashTime * 1.2;
 							if (ArmorPoint > 0)
 							{
 								if (canAirDash == 0)

@@ -637,7 +637,9 @@ if (activateState != ActivateState.DEACTIVATE)
 								{
 									sprite_index = sprJump3;
 									image_index = 0;
-								
+									
+									if (vDashDir == -1)
+										vspd = -2;
 									vState = VerticalState.V_MOVE_FALLING;
 								}
 								else
@@ -1335,6 +1337,8 @@ if (activateState != ActivateState.DEACTIVATE)
 					image_index = 0;
 					if (vDashDir == 1)
 						vspd = 0;
+					else
+						vspd = -2;
 					dashSpd = 0;
 					dashTime = 0;
 					aState = ActionState.IDLE;
