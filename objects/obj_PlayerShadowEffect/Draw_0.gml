@@ -4,7 +4,7 @@
 // Inherit the parent event
 if (myPalSprite != noone)
 {
-	if (core.object_index == obj_playerX)
+	if ((core.object_index == obj_playerX) || (core.object_index == obj_playerEclipseX))
 	{
 		scr_PalSwapSet(myPalSprite, 1, false);
 	}

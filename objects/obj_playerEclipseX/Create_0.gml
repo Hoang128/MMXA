@@ -5,6 +5,10 @@
 // Inherit the parent event
 event_inherited();
 
+//Special Frames
+sprDashCrossDown1 = spr_XDashCrossDown1;
+sprDashCrossDown2 = spr_XDashCrossDown2;
+
 //Armor
 partHead = 0;
 partArms = 0;
@@ -19,12 +23,14 @@ objArmor.Foot = partFoot;
 objArmor.core = self;
 
 //Parameters
-ArmorPointMax = 2;
+dashCrossSpd1 = 1;
+dashCrossSpd2 = 6;
+ArmorPointMax = 4;
 coolDownAPTimeMax = 120;
 coolDownAPTimeSlow = 180;
 
 //Inside Variables
 canUseArmorPoint = true;
-ArmorPoint = 2;
+ArmorPoint = 4;
 usedFArmorPointFlag = false;
 coolDownAPTime = 0;

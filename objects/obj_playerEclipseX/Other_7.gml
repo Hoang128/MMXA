@@ -5,7 +5,7 @@ if (sprite_index == sprDash1)
 {
 	if (usedFArmorPointFlag)
 	{
-		var objSolarDashImpactEff = instance_create_depth(x + image_xscale * abs(bbox_right - bbox_left) / 2, (bbox_bottom + bbox_top) / 2, depth - 1, obj_solarDashImpactEff);
+		var objSolarDashImpactEff = instance_create_depth(x + image_xscale * 40, (bbox_bottom + bbox_top) / 2, depth - 1, obj_solarDashImpactEff);
 		objSolarDashImpactEff.image_xscale = image_xscale;
 		objSolarDashImpactEff.depth = depth - 10;
 	}
@@ -23,11 +23,40 @@ switch (sprite_index)
 			image_index = 0;
 			
 			dashPhase = 2;
-			dashSpd = dashSpdPhase2;
-			//var dashEff = instance_create_depth(x, bbox_bottom + 4, depth - 1, obj_XUADashUpEff);
-			//dashEff.image_xscale = self.image_xscale;
-			//dashEff.core = self;
+			dashSpd = dashCrossSpd2;
+			var dashEff = instance_create_depth(x - 24 * image_xscale, y + 5, depth - 1, obj_PlayerDashEff);
+			dashEff.core = self;
+			dashEff.image_angle = 90 - 45 * image_xscale;
+			
+			if (usedFArmorPointFlag)
+			{
+				var objSolarDashImpactEff = instance_create_depth(x + image_xscale * 40 * 1/sqrt(2), (bbox_bottom + bbox_top) / 2 - 40 * 1/sqrt(2), depth - 1, obj_solarDashImpactEff);
+				objSolarDashImpactEff.depth = depth - 10;
+				objSolarDashImpactEff.image_angle = 90 - 45 * image_xscale;
+			}
+			audio_play_sound_on(global.SFX_Emitter, sndDashEff, 0, 0);
+		}
+	}	break;
 	
+	case sprDashCrossDown1:
+	{
+		if (aState == ActionState.DASHING)
+		{
+			sprite_index = sprDashCrossDown2;
+			image_index = 0;
+			
+			dashPhase = 2;
+			dashSpd = dashCrossSpd2;
+			var dashEff = instance_create_depth(x - image_xscale * 18, y - 36, depth - 1, obj_PlayerDashEff);
+			dashEff.core = self;
+			dashEff.image_angle = 270 + 45 * image_xscale;
+			
+			if (usedFArmorPointFlag)
+			{
+				var objSolarDashImpactEff = instance_create_depth(x + image_xscale * 40 * 1/sqrt(2), (bbox_bottom + bbox_top) / 2 + 40 * 1/sqrt(2), depth - 1, obj_solarDashImpactEff);
+				objSolarDashImpactEff.depth = depth - 10;
+				objSolarDashImpactEff.image_angle = 270 + 45 * image_xscale;
+			}
 			audio_play_sound_on(global.SFX_Emitter, sndDashEff, 0, 0);
 		}
 	}	break;

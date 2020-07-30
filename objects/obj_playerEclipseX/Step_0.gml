@@ -28,9 +28,9 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Solar Foot
 		case 1:
 		{
-			UN_DashKeyEnable = false;
-			UF_DashKeyEnable = true;
-			DN_DashKeyEnable = false;
+			UN_DashKeyEnable = true;
+			UF_DashKeyEnable = false;
+			DN_DashKeyEnable = true;
 			DF_DashKeyEnable = false;
 
 			UN_JumpKeyEnable = false;
@@ -63,7 +63,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	if (partFoot == 1)
 	{
-		if (((sprite_index == sprDash1) || (sprite_index == sprDashKick1)) && (aState == ActionState.DASHING))
+		if (((sprite_index == sprDash1) || (sprite_index == sprDashCrossDown1) || (sprite_index == sprDashKick1)) && (aState == ActionState.DASHING))
 		{
 			if (ArmorPoint > 0)
 			{
@@ -104,7 +104,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	{
 		#region
 		
-		if (UF_DashFlag == true)
+		if (UN_DashFlag == true)
 		{
 			if (aState != ActionState.JUMPDASHING)
 			{
@@ -114,9 +114,9 @@ if (activateState != ActivateState.DEACTIVATE)
 					image_index = 1;
 					
 					dashPhase = 1;
-					dashSpd = dashSpdPhase1;
+					dashSpd = dashCrossSpd1;
 					dashTime = maxAirDashTime;
-					crossDashAngle = 30;
+					crossDashAngle = 45;
 					vDashDir = -1;
 					if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
 					vState = VerticalState.V_MOVE_UP;
@@ -125,7 +125,31 @@ if (activateState != ActivateState.DEACTIVATE)
 					canAirDash = 0;
 				}
 			}
-			UF_DashFlag = false;
+			UN_DashFlag = false;
+		}
+		
+		if (DN_DashFlag == true)
+		{
+			if ((aState != ActionState.JUMPDASHING) && (vState != VerticalState.V_ON_GROUND))
+			{
+				if (canAirDash == 1)
+				{
+					sprite_index = sprDashCrossDown1;
+					image_index = 0;
+					
+					dashPhase = 1;
+					dashSpd = dashCrossSpd1;
+					dashTime = maxAirDashTime;
+					crossDashAngle = 45;
+					vDashDir = 1;
+					if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+					vState = VerticalState.V_MOVE_UP;
+					hState = HorizontalState.H_MOVE_FORWARD;
+					aState = ActionState.DASHING;
+					canAirDash = 0;
+				}
+			}
+			DN_DashFlag = false;
 		}
 		
 		#endregion

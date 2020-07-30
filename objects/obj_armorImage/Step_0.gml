@@ -68,6 +68,10 @@ if (instance_exists(core))
 				case spr_XUpAtk:			FootImg = spr_FXSUpAtk;				break;
 				case spr_XShotClimb:		FootImg = spr_FXSShotClimb;			break;
 				
+				//Special move frames
+				case spr_XDashCrossDown1:	FootImg = spr_FXSDashCrossDown1;	break;
+				case spr_XDashCrossDown2:	FootImg = spr_FXSDashCrossDown2;	break;
+				
 				//Wire frames
 				case spr_XWiredForward:
 				case spr_XWiredUp:

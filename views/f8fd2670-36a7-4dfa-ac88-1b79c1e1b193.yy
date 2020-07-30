@@ -10,7 +10,10 @@
         "e1487f50-55a1-4f95-ba83-085bf009ff63",
         "84ceee90-9920-431f-ae19-3665cd10f87a",
         "108625a5-5122-42ec-9d71-635058ba03e4",
-        "ad3873e6-6eef-48d3-8455-4e99656212cb"
+        "ad3873e6-6eef-48d3-8455-4e99656212cb",
+        "e1f96544-cf84-4c9d-8c4c-fec4d378cd6c",
+        "08212f5e-2969-4333-ab2a-bef9cd207030",
+        "b5828089-0037-4188-a4cb-5017945117d4"
     ],
     "filterType": "GMSprite",
     "folderName": "Special Moves",
