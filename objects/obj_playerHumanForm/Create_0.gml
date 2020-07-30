@@ -92,6 +92,7 @@ canChangeHDir = true;
 canGetDamage = true;
 lowHp = false;
 myPal = noone;
+canUseDownJ = 1;
 
 keyFoward = 0;
 

@@ -9,9 +9,25 @@ if (object_index == obj_playerEclipseX)
 				(partBody == 1) &&
 				(partFoot == 1))
 			{
-				coolDownAPTime = coolDownAPTimeSlow;
+				coolDownSpd = coolDownSpdSlow;
 				canUseArmorPoint = false;
 			}
+		}
+	}
+	
+	if (partFoot == 1)
+	{
+		if (sprite_index == spr_XEImpactDown)
+		{
+			if (timeInImpactDown == 0)
+			{
+				coolDownSpd = coolDownSpdCharge;
+			}
+		}
+		else
+		{
+			if (canUseArmorPoint)	coolDownSpd = coolDownSpdNormal;
+			else					coolDownSpd = coolDownSpdSlow;
 		}
 	}
 }
@@ -19,13 +35,13 @@ if (object_index == obj_playerEclipseX)
 if (ArmorPoint < ArmorPointMax)
 {
 	if (coolDownAPTime > 0)
-		coolDownAPTime -= DELTA_TIME;
+		coolDownAPTime -= DELTA_TIME * coolDownSpd;
 	else
 	{
 		ArmorPoint++;
 		coolDownAPTime = coolDownAPTimeMax;
 		if (canUseArmorPoint == false)
-			coolDownAPTime = coolDownAPTimeSlow;
+			coolDownSpd = coolDownSpdSlow;
 	}
 }
 else

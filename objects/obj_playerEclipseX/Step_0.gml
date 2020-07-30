@@ -63,6 +63,14 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	if (partFoot == 1)
 	{
+		if (sprite_index == spr_XEImpactDown)
+		{
+			if (timeInImpactDown > 0)
+				timeInImpactDown -= DELTA_TIME;
+			else
+				timeInImpactDown = 0;
+		}
+		
 		if (((sprite_index == sprDash1) || (sprite_index == sprDashCrossDown1) || (sprite_index == sprDashKick1)) && (aState == ActionState.DASHING))
 		{
 			if (ArmorPoint > 0)
@@ -89,6 +97,8 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 		if (aState != ActionState.DASHING)
 		{
+			if (isCrossDashing)
+				isCrossDashing = false;
 			if (vDashDir != 0)
 				vDashDir = 0;
 			if (usedFArmorPointFlag == true)
@@ -110,6 +120,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				if (canAirDash == 1)
 				{
+					scr_playerXChangeShotSprite(object_index, false ,false);
 					sprite_index = sprDashKick1;
 					image_index = 1;
 					
@@ -118,6 +129,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					dashTime = maxAirDashTime;
 					crossDashAngle = 45;
 					vDashDir = -1;
+					isCrossDashing = true;
 					if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
 					vState = VerticalState.V_MOVE_UP;
 					hState = HorizontalState.H_MOVE_FORWARD;
@@ -134,6 +146,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				if (canAirDash == 1)
 				{
+					scr_playerXChangeShotSprite(object_index, false ,false);
 					sprite_index = sprDashCrossDown1;
 					image_index = 0;
 					
@@ -142,6 +155,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					dashTime = maxAirDashTime;
 					crossDashAngle = 45;
 					vDashDir = 1;
+					isCrossDashing = true;
 					if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
 					vState = VerticalState.V_MOVE_UP;
 					hState = HorizontalState.H_MOVE_FORWARD;
@@ -152,6 +166,81 @@ if (activateState != ActivateState.DEACTIVATE)
 			DN_DashFlag = false;
 		}
 		
+		if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))
+		{
+			if (aState == ActionState.SP_MOVE)
+			{
+				if (sprite_index == spr_XESlamDown)
+				{
+					sprite_index = spr_XEImpactDown;
+					image_index = 0;
+					
+					scr_SetQuake(30);
+					instance_create_depth(x, bbox_bottom, depth - 1, obj_solarSlamDownEff);
+					
+					var obj1 = instance_create_depth(x + 16, bbox_bottom + 2, depth - 1, obj_sideDust);
+					obj1.image_xscale = -1;
+					
+					var obj1 = instance_create_depth(x - 16, bbox_bottom + 2, depth - 1, obj_sideDust);
+					obj1.image_xscale = 1;
+					
+					timeInImpactDown = minTimeInImpactDown;
+					vState = VerticalState.V_ON_GROUND;
+				}
+			}
+		}
+		
 		#endregion
+	}
+	
+	if (activateState == ActivateState.ACTIVATE)
+	{
+		if (partFoot == 1)
+		{
+			if (keyboard_check_pressed(global.keyJump) && keyboard_check(global.keyDown))
+			{
+				if (canUseDownJ == 1)
+				{
+					if ((vState != VerticalState.V_ON_GROUND) && (aState != ActionState.SP_MOVE))
+					{
+						scr_playerXChangeShotSprite(object_index, false ,false);
+						sprite_index = spr_XESlamDown;
+						image_index = 0;
+					
+						var objSolarDashImpactEff = instance_create_depth(x, bbox_bottom + 16, depth - 1, obj_solarDashImpactEff);
+						objSolarDashImpactEff.depth = depth - 10;
+						objSolarDashImpactEff.image_angle = 270;
+					
+						audio_play_sound_on(global.SFX_Emitter, sndDashEff, 0, 0);
+					
+						dashSpd = 0;
+						dashTime = 0;
+						hspd = 0;
+						vspd = 6;
+						vDashDir = 1;
+						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+						vState = VerticalState.V_MOVE_DOWN;
+						hState = HorizontalState.H_MOVE_NONE;
+						aState = ActionState.SP_MOVE;
+					}
+				}
+			}
+			
+			if (sprite_index == spr_XEImpactDown)
+			{
+				if (timeInImpactDown == 0)
+				{
+					if (!keyboard_check(global.keyDown) || (ArmorPoint == ArmorPointMax))
+					{
+						sprite_index = sprStand;
+						image_index = 0;
+						
+						coolDownAPTime = coolDownAPTimeMax;
+						
+						aState = ActionState.IDLE;
+					}
+				}
+			}
+		}
 	}
 }

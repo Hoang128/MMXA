@@ -26,11 +26,18 @@ objArmor.core = self;
 dashCrossSpd1 = 1;
 dashCrossSpd2 = 6;
 ArmorPointMax = 4;
-coolDownAPTimeMax = 120;
-coolDownAPTimeSlow = 180;
+coolDownAPTimeMax = 240;
+coolDownSpdSlow = 1;
+coolDownSpdNormal = 2;
+coolDownSpdCharge = 40;
+minTimeInImpactDown = 10;
+
 
 //Inside Variables
+coolDownSpd = 2;
 canUseArmorPoint = true;
 ArmorPoint = 4;
 usedFArmorPointFlag = false;
 coolDownAPTime = 0;
+timeInImpactDown = 0;
+isCrossDashing = false;

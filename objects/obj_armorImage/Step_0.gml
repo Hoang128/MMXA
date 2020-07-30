@@ -71,6 +71,8 @@ if (instance_exists(core))
 				//Special move frames
 				case spr_XDashCrossDown1:	FootImg = spr_FXSDashCrossDown1;	break;
 				case spr_XDashCrossDown2:	FootImg = spr_FXSDashCrossDown2;	break;
+				case spr_XESlamDown:		FootImg = spr_FXSSlamDown;			break;
+				case spr_XEImpactDown:		FootImg = spr_FXSImpactDown;		break;
 				
 				//Wire frames
 				case spr_XWiredForward:

@@ -240,6 +240,9 @@ if (activateState != ActivateState.DEACTIVATE)
 	else
 		wireTime = 0;
 		
+	if (canUseDownJ < 1)
+		canUseDownJ += DELTA_TIME;
+		
 	#endregion
 	
 	//Passive with enviroment----------------------------------------------------------------------------------
@@ -334,41 +337,44 @@ if (activateState != ActivateState.DEACTIVATE)
 	if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))
 	{
 		vspd = 0;
-		if ((vState != VerticalState.V_ON_GROUND) && (aState != ActionState.CLIMBING) && (aState != ActionState.STUNNING))
+		if (aState != ActionState.SP_MOVE)
 		{
-			if (aState != ActionState.BEAMDOWN)
+			if ((vState != VerticalState.V_ON_GROUND) && (aState != ActionState.CLIMBING) && (aState != ActionState.STUNNING))
 			{
-				if !((aState == ActionState.DASHING) && (vDashDir == -1))
+				if (aState != ActionState.BEAMDOWN)
 				{
-					if (atkState <= AttackState.A_NORMAL_ATTACK)
+					if !((aState == ActionState.DASHING) && (vDashDir == -1))
 					{
-						sprite_index = sprLand;
-						image_index = 0;
-					}
-					audio_play_sound_on(global.SFX_Emitter, sndLandEff, 0, 0);
-			
-					canSlide = 0;
-					if (aState == ActionState.JUMPDASHING)
-					{
-						if (dashPhase > 0)
+						if (atkState <= AttackState.A_NORMAL_ATTACK)
 						{
-							dashSpd = 0;
-							dashPhase = 0;
+							sprite_index = sprLand;
+							image_index = 0;
 						}
-					}
-					if (!canAirDash)
-						canAirDash = 1;
+						audio_play_sound_on(global.SFX_Emitter, sndLandEff, 0, 0);
+			
+						canSlide = 0;
+						if (aState == ActionState.JUMPDASHING)
+						{
+							if (dashPhase > 0)
+							{
+								dashSpd = 0;
+								dashPhase = 0;
+							}
+						}
+						if (!canAirDash)
+							canAirDash = 1;
 						
+						vState = VerticalState.V_ON_GROUND;
+						aState = ActionState.IDLE;
+					}
+				}
+				else
+				{
+					if (sprite_index = sprFlash)
+						sprite_index = sprBeamDown;
 					vState = VerticalState.V_ON_GROUND;
 					aState = ActionState.IDLE;
 				}
-			}
-			else
-			{
-				if (sprite_index = sprFlash)
-					sprite_index = sprBeamDown;
-				vState = VerticalState.V_ON_GROUND;
-				aState = ActionState.IDLE;
 			}
 		}
 	}
@@ -809,6 +815,7 @@ if (activateState != ActivateState.DEACTIVATE)
 									dynamicBlock = noone;
 								}
 								canJump = 0;
+								canUseDownJ = -3;
 								canHover = 3;
 								vState = VerticalState.V_MOVE_FALLING;
 								aState = ActionState.IDLE;
@@ -1162,15 +1169,18 @@ if (activateState != ActivateState.DEACTIVATE)
 							}
 							else
 							{
-								sprite_index = sprDash1;
-								image_index = 0;
+								if (aState != ActionState.SP_MOVE)
+								{
+									sprite_index = sprDash1;
+									image_index = 0;
 						
-								dashPhase = 1;
-								dashSpd = dashSpdPhase1;
-								dashTime = maxDashTime;
-								if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
-								hState = HorizontalState.H_MOVE_FORWARD;
-								aState = ActionState.DASHING;
+									dashPhase = 1;
+									dashSpd = dashSpdPhase1;
+									dashTime = maxDashTime;
+									if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+									hState = HorizontalState.H_MOVE_FORWARD;
+									aState = ActionState.DASHING;
+								}
 							}
 						}
 					}
@@ -1323,8 +1333,8 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					sprite_index = sprJump3;
 					image_index = 0;
-					
-					vspd = 0;
+					if (vDashDir == 1)
+						vspd = 0;
 					dashSpd = 0;
 					dashTime = 0;
 					aState = ActionState.IDLE;
@@ -1389,48 +1399,51 @@ if (activateState != ActivateState.DEACTIVATE)
 			
 			if (vState == VerticalState.V_ON_GROUND)
 			{
-				if ((UN_JumpKeyEnable == true) && (keyboard_check(global.keyUp) && !keyboard_check(global.keyDown)))
+				if (aState != ActionState.SP_MOVE)
 				{
-					UN_JumpFlag = true;
-				}
-				if ((UF_JumpKeyEnable == true) && (keyboard_check(global.keyUp) && !keyboard_check(global.keyDown) && (keyFoward)))
-				{
-					UF_JumpFlag = true;
-					UN_JumpFlag = false;
-				}
-				if ((DN_JumpKeyEnable == true) && (keyboard_check(global.keyDown) && !keyboard_check(global.keyUp)))
-				{
-					DN_JumpFlag = true;
-				}
-				if ((DF_JumpKeyEnable == true) && (keyboard_check(global.keyDown) && !keyboard_check(global.keyUp) && (keyFoward)))
-				{
-					DF_JumpFlag = true;
-					DN_JumpFlag = false;
-				}
-				if ((UN_JumpFlag == false) && (UF_JumpFlag == false) && (DN_JumpFlag == false) && (DF_JumpFlag == false))
-				{
-					sprite_index = sprJump1;
-					image_index = 0;
-					audio_play_sound_on(global.SFX_Emitter, sndJumpEff, 0, 0);
-					var randVoiceJump = random(4);
-					if (randVoiceJump <= 3)
+					if ((UN_JumpKeyEnable == true) && (keyboard_check(global.keyUp) && !keyboard_check(global.keyDown)))
 					{
-						if (randVoiceJump > 2) audio_play_sound_on(global.SFX_Emitter, sndVoiceJump1, 0, 0);
-						else if (randVoiceJump >1) audio_play_sound_on(global.SFX_Emitter, sndVoiceJump2, 0, 0);
-						else audio_play_sound_on(global.SFX_Emitter, sndVoiceJump3, 0, 0);
+						UN_JumpFlag = true;
 					}
+					if ((UF_JumpKeyEnable == true) && (keyboard_check(global.keyUp) && !keyboard_check(global.keyDown) && (keyFoward)))
+					{
+						UF_JumpFlag = true;
+						UN_JumpFlag = false;
+					}
+					if ((DN_JumpKeyEnable == true) && (keyboard_check(global.keyDown) && !keyboard_check(global.keyUp)))
+					{
+						DN_JumpFlag = true;
+					}
+					if ((DF_JumpKeyEnable == true) && (keyboard_check(global.keyDown) && !keyboard_check(global.keyUp) && (keyFoward)))
+					{
+						DF_JumpFlag = true;
+						DN_JumpFlag = false;
+					}
+					if ((UN_JumpFlag == false) && (UF_JumpFlag == false) && (DN_JumpFlag == false) && (DF_JumpFlag == false))
+					{
+						sprite_index = sprJump1;
+						image_index = 0;
+						audio_play_sound_on(global.SFX_Emitter, sndJumpEff, 0, 0);
+						var randVoiceJump = random(4);
+						if (randVoiceJump <= 3)
+						{
+							if (randVoiceJump > 2) audio_play_sound_on(global.SFX_Emitter, sndVoiceJump1, 0, 0);
+							else if (randVoiceJump >1) audio_play_sound_on(global.SFX_Emitter, sndVoiceJump2, 0, 0);
+							else audio_play_sound_on(global.SFX_Emitter, sndVoiceJump3, 0, 0);
+						}
 				
-					canJump = 0;
-					hspd = 0;
-					vspd = -jumpSpd;
-					if (keyboard_check(global.keyDash))
-					{
-						aState = ActionState.JUMPDASHING;
+						canJump = 0;
+						hspd = 0;
+						vspd = -jumpSpd;
+						if (keyboard_check(global.keyDash))
+						{
+							aState = ActionState.JUMPDASHING;
+						}
+						else
+							aState = ActionState.IDLE;
+						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+						vState = VerticalState.V_MOVE_FALLING;
 					}
-					else
-						aState = ActionState.IDLE;
-					if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
-					vState = VerticalState.V_MOVE_FALLING;
 				}
 			}
 			
@@ -1449,6 +1462,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						sprite_index = sprJump3;
 						image_index = 0;
 						
+						canUseDownJ = -3;
 						canHover = 3;
 						canJump = 0;
 						vState = VerticalState.V_MOVE_FALLING;
@@ -1473,6 +1487,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							else audio_play_sound_on(global.SFX_Emitter, sndVoiceJump3, 0, 0);
 						}
 						
+						canUseDownJ = -3;
 						canHover = 3;
 						canJump = 0;
 						if (keyboard_check(global.keyDown))
