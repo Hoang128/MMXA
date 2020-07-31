@@ -175,7 +175,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					sprite_index = spr_XEImpactDown;
 					image_index = 0;
 					
-					scr_SetQuake(30);
+					scr_SetQuake(15);
 					instance_create_depth(x, bbox_bottom, depth - 1, obj_solarSlamDownEff);
 					
 					var obj1 = instance_create_depth(x + 16, bbox_bottom + 2, depth - 1, obj_sideDust);

@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "05e14048-c377-46fe-88b3-a245f83c2a82",
+            "Value": {
+                "id": "6c4f26c3-57f4-4f7b-87c3-f3894b4418aa",
+                "resourcePath": "sprites\\spr_XEJumpBack1\\spr_XEJumpBack1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "05e94733-db14-499d-b506-f432585ce8cb",
             "Value": {
                 "id": "4807fc85-c610-4ab8-adf2-11c1cc8c1e31",
@@ -468,6 +476,14 @@
                 "id": "bb220fe5-278a-4007-a60e-bde09c837585",
                 "resourcePath": "objects\\obj_E_SeaHorseBullet\\obj_E_SeaHorseBullet.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "0991c930-d415-4584-a1f9-5c08c1a383e3",
+            "Value": {
+                "id": "23b16f33-030b-422c-a31a-6b6d56303620",
+                "resourcePath": "sprites\\spr_XSJumpBack3\\spr_XSJumpBack3.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1911,6 +1927,14 @@
             }
         },
         {
+            "Key": "2eb7722e-ab00-430a-a1ef-6e6ac99c5d45",
+            "Value": {
+                "id": "dbe68130-94d9-4cd1-af82-5e4016114d29",
+                "resourcePath": "sprites\\spr_FXSJumpBack3\\spr_FXSJumpBack3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2ebbeb4f-1653-4f3a-b03a-3207eb643291",
             "Value": {
                 "id": "067952e9-ccbe-4aaf-be95-e8aa1152fc36",
@@ -3159,6 +3183,14 @@
             }
         },
         {
+            "Key": "49e490e1-30c6-41d3-b3ab-5b6e61bf4f31",
+            "Value": {
+                "id": "d83ed381-5dcd-45fa-aa94-9ac4f1c9769d",
+                "resourcePath": "sprites\\spr_XSJumpBack1\\spr_XSJumpBack1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "49f988d5-2dfe-4a77-80c9-3e506b91d33c",
             "Value": {
                 "id": "8dc7ad74-d137-4b21-b964-1f37111c9248",
@@ -3868,6 +3900,14 @@
                 "id": "72a0982a-b943-4282-b36b-8f6159cad538",
                 "resourcePath": "sounds\\snd_VZSougenmu2\\snd_VZSougenmu2.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "5bb21974-b897-4de8-b62c-9e65d0707d70",
+            "Value": {
+                "id": "d99932ec-32a6-432b-932c-d3e53b87ba98",
+                "resourcePath": "sprites\\spr_FXSJumpBack2\\spr_FXSJumpBack2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6703,6 +6743,14 @@
             }
         },
         {
+            "Key": "9e527be6-2fa1-42c3-b72a-a3b85cf730d6",
+            "Value": {
+                "id": "57935370-e223-4a1b-896a-21b2f9bb1a14",
+                "resourcePath": "sprites\\spr_XSJumpBack2\\spr_XSJumpBack2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9ebd79a1-42f9-46f4-8660-aef43b30ce12",
             "Value": {
                 "id": "29e727a1-1482-47db-bbd0-09a512fd7a61",
@@ -8607,6 +8655,14 @@
             }
         },
         {
+            "Key": "d16c8823-9e93-4b7c-860b-a7c742882f85",
+            "Value": {
+                "id": "32eca6b0-dcb7-4241-a44e-82a7884bfbe3",
+                "resourcePath": "sprites\\spr_XEJumpBack2\\spr_XEJumpBack2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d16da2c3-5fe5-4c3d-9e32-be1514591ccc",
             "Value": {
                 "id": "3d133a7f-1e6f-4f3c-ba1b-d88bd500c59f",
@@ -8770,7 +8826,7 @@
             "Key": "d3b4014a-2854-4176-b0b9-0cf22a7db290",
             "Value": {
                 "id": "f05fde70-02b6-4312-b596-ab8938f3eae3",
-                "resourcePath": "sprites\\spr_XECrashBack\\spr_XECrashBack.yy",
+                "resourcePath": "sprites\\spr_XEJumpBack3\\spr_XEJumpBack3.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -10172,6 +10228,14 @@
                 "id": "23259a8b-2c5a-4045-b3d8-c499e6b1eea0",
                 "resourcePath": "objects\\obj_slopeL3\\obj_slopeL3.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f5acf5d5-a2c4-41aa-8db4-72de1d55086b",
+            "Value": {
+                "id": "3b0b4f13-b474-4157-9cac-e597c671407b",
+                "resourcePath": "sprites\\spr_FXSJumpBack1\\spr_FXSJumpBack1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

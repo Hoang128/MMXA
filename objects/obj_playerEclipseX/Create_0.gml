@@ -30,7 +30,7 @@ coolDownAPTimeMax = 240;
 coolDownSpdSlow = 1;
 coolDownSpdNormal = 2;
 coolDownSpdCharge = 40;
-minTimeInImpactDown = 10;
+minTimeInImpactDown = 20;
 
 
 //Inside Variables

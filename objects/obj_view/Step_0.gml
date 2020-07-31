@@ -190,6 +190,6 @@ else
 
 if (quake > 0)
 {
-	camera_set_view_pos(view_camera, X_VIEW, Y_VIEW + random_range(-2,2));
+	camera_set_view_pos(view_camera, X_VIEW, Y_VIEW + random_range(-1,1));
 	quake -= global.deltaTime;
 }
