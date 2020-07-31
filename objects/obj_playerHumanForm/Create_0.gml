@@ -93,6 +93,8 @@ canGetDamage = true;
 lowHp = false;
 myPal = noone;
 canUseDownJ = 1;
+canBeHit = true;
+inAir = InAir.NORMAL;
 
 keyFoward = 0;
 

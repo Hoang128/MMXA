@@ -257,8 +257,24 @@ if (activateState != ActivateState.DEACTIVATE)
 		}	break;
 		default:
 		{
-			grav = GRAVITY_AIR;
-			maxGrav = MAX_FALL_AIR;
+			switch (inAir)
+			{
+				case InAir.NORMAL:
+				{
+					grav = GRAVITY_AIR;
+					maxGrav = MAX_FALL_AIR;
+				}	break;
+				case InAir.LIGHT_BOOST:
+				{
+					grav = GRAVITY_AIR/3;
+					maxGrav = MAX_FALL_AIR/3;
+				}	break;
+				case InAir.WINDY:
+				{
+					grav = WIND_BOOST;
+					maxGrav = WIND_BOOST;
+				}	break;
+				}
 		}
 	}
 	

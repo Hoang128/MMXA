@@ -15,6 +15,11 @@ event_inherited();
 
 switch (sprite_index)
 {
+	case spr_XEJumpBack1:
+	{
+		sprite_index = spr_XEJumpBack2;
+	}	break;
+	
 	case sprDashKick1:
 	{
 		if (aState == ActionState.DASHING)
@@ -60,5 +65,16 @@ switch (sprite_index)
 			audio_play_sound_on(global.SFX_Emitter, sndDashEff, 0, 0);
 		}
 	}	break;
+	
+	case spr_XEJumpBack3:
+	{
+		sprite_index = sprJump4;
+		image_index = 0;
+		
+		canBeHit = true;
+		inAir = InAir.NORMAL;
+		activateState = ActivateState.ACTIVATE;
+		aState = ActionState.IDLE;
+	}
 }
 

@@ -20,3 +20,4 @@
 #macro MAX_FALL_AIR 5.5
 #macro GRAVITY_WATER 0.2
 #macro MAX_FALL_WATER 3.5
+#macro WIND_BOOST -1;

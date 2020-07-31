@@ -63,6 +63,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	if (partFoot == 1)
 	{
+		//Impact count down
 		if (sprite_index == spr_XEImpactDown)
 		{
 			if (timeInImpactDown > 0)
@@ -71,6 +72,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				timeInImpactDown = 0;
 		}
 		
+		//Active ignite dash
 		if (((sprite_index == sprDash1) || (sprite_index == sprDashCrossDown1) || (sprite_index == sprDashKick1)) && (aState == ActionState.DASHING))
 		{
 			if (ArmorPoint > 0)
@@ -94,7 +96,21 @@ if (activateState != ActivateState.DEACTIVATE)
 				}
 			}
 		}
-	
+		
+		//Jump back
+		if (vspd >=0)
+		{
+			if (sprite_index == spr_XEJumpBack2)
+			{
+				sprite_index = spr_XEJumpBack3;
+				image_index = 0;
+			
+				hspd = 0;
+				vspd = 0;
+			}
+		}
+		
+		//Disable flags
 		if (aState != ActionState.DASHING)
 		{
 			if (isCrossDashing)
