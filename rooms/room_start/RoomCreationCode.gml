@@ -86,7 +86,7 @@ global.wWidth = 1280;
 global.wHeight = 720;
 global.fullScreen = 0;
 
-//Default Key Blind
+//Default Keyboard Blind
 global.keyStart = vk_enter;
 global.keyBack = vk_escape;
 global.keyUp = vk_up;

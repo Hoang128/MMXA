@@ -71,11 +71,9 @@ else
 						case 7:		global.keyJump = keyCode;		break;
 						case 8:		global.keyDash = keyCode;		break;
 						case 9:		global.keyGiga = keyCode;		break;
-						case 10:	global.keyChar1 = keyCode;		break;
-						case 11:	global.keyChar2 = keyCode;		break;
-						case 12:	global.keyChangeL = keyCode;	break;
-						case 13:	global.keyChangeR = keyCode;	break;
-						case 14:	global.keyMap = keyCode;		break;
+						case 10:	global.keyMap = keyCode;		break;
+						case 11:	global.keyChangeL = keyCode;	break;
+						case 12:	global.keyChangeR = keyCode;	break;
 					}
 					core.active = 1;
 					core.lineExecute[keyId] = false;

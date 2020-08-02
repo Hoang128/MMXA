@@ -53,3 +53,30 @@ if (roomTrans != -1)
 		}
 	}
 }
+
+//Gamepad
+//if (gamepad_is_supported())
+//{
+//	if (gamepad_is_connected(0))
+//	{
+		
+//		//Default Keypad Blind
+//		global.keyStart = vk_enter;
+//		global.keyBack = vk_escape;
+//		global.keyUp = vk_up;
+//		global.keyDown = vk_down;
+//		global.keyLeft = vk_left;
+//		global.keyRight = vk_right;
+//		global.keyAtk = ord("C");
+//		global.keySpAtk = ord("V");
+//		global.keyDash = ord("Z");
+//		global.keyJump = ord("X");
+//		global.keyGiga = vk_space;
+//		global.keyMap = ord("D");
+//		global.keyChangeL = ord("A");
+//		global.keyChangeR = ord("S");
+//	}
+//	else
+//	{
+//	}
+//}
