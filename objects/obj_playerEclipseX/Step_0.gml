@@ -81,17 +81,24 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if !((vState == VerticalState.V_ON_GROUND) && (vDashDir == 0))
 					{
-						if (usedFArmorPointFlag == false)
+						if (usedFirstAirDash == false)
 						{
-							ArmorPoint--;
-							dashTime = maxAirDashTime * 1.2;
-							if (ArmorPoint > 0)
-							{
-								if (canAirDash == 0)
-									canAirDash = 1;
-							}	
-							usedFArmorPointFlag = true;
+							usedFirstAirDash = true;
 						}
+						else
+						{
+							if (usedFArmorPointFlag == false)
+							{
+								ArmorPoint--;
+								dashTime = maxAirDashTime * 1.2;
+								usedFArmorPointFlag = true;
+							}
+						}
+						if (ArmorPoint > 0)
+						{
+							if (canAirDash == 0)
+								canAirDash = 1;
+						}	
 					}
 				}
 			}
@@ -128,6 +135,9 @@ if (activateState != ActivateState.DEACTIVATE)
 	//Solar Active-------------------------------------------------------------------------------------------------------------------------------------------------
 	if (partFoot == 1)
 	{
+		#region
+		
+		//Cross Dash
 		#region
 		
 		if (UN_DashFlag == true)
@@ -182,6 +192,11 @@ if (activateState != ActivateState.DEACTIVATE)
 			DN_DashFlag = false;
 		}
 		
+		#endregion
+		
+		//Impact down
+		#region
+		
 		if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))
 		{
 			if (aState == ActionState.SP_MOVE)
@@ -207,12 +222,17 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		
 		#endregion
+		
+		#endregion
 	}
 	
 	if (activateState == ActivateState.ACTIVATE)
 	{
 		if (partFoot == 1)
 		{
+			//Slam down
+			#region
+		
 			if (keyboard_check_pressed(global.keyJump) && keyboard_check(global.keyDown))
 			{
 				if (canUseDownJ == 1)
@@ -257,6 +277,8 @@ if (activateState != ActivateState.DEACTIVATE)
 					}
 				}
 			}
+			
+			#endregion
 		}
 	}
 }

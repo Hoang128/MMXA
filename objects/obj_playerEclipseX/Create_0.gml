@@ -34,6 +34,11 @@ minTimeInImpactDown = 20;
 
 
 //Inside Variables
+ignitionMode = false;
+SolarDrive = false;
+freezeMode = false;
+LunarDrive = false;
+usedFirstAirDash = false;
 coolDownSpd = 2;
 canUseArmorPoint = true;
 ArmorPoint = 4;

@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "03c5ce65-8d1b-4e95-97b0-17a73affe085",
+            "Value": {
+                "id": "5a9b34e4-e701-450e-af48-6bf6c6faaa6b",
+                "resourcePath": "objects\\obj_HUDAP\\obj_HUDAP.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "03cbbe44-cfd7-4c0c-bafd-186bd923ec06",
             "Value": {
                 "id": "7ca18ce4-7b73-4b93-ac4b-6e3b61de092d",
