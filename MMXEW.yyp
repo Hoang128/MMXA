@@ -2943,6 +2943,14 @@
             }
         },
         {
+            "Key": "435fd189-b740-4e28-bf67-2205366ae8d0",
+            "Value": {
+                "id": "3a0f7472-5eea-4bbc-b712-03ba3cd29abd",
+                "resourcePath": "sprites\\spr_HUDXAPFrameUA\\spr_HUDXAPFrameUA.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "43767c52-226e-4e07-8c51-405e05bf11aa",
             "Value": {
                 "id": "718683fd-f861-41a2-a7cb-6b78a03dcd36",

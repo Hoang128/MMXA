@@ -332,7 +332,7 @@
                     "targets": 461609314234257646,
                     "autocrop": true,
                     "border": 2,
-                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "groupParent": "11fd15f5-258b-4c97-b120-e2181464b38f",
                     "mipsToGenerate": 0,
                     "scaled": true
                 }
@@ -347,7 +347,22 @@
                     "targets": 461609314234257646,
                     "autocrop": true,
                     "border": 2,
-                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "groupParent": "7c87b910-fc46-4057-afeb-98f1a8b13dd8",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 24,
+                "Value": {
+                    "id": "b6d100ea-4a62-4bc4-ad1e-c73f4a8aeade",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpHUD",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "9851f183-c525-46ea-9b90-4b849a381815",
                     "mipsToGenerate": 0,
                     "scaled": true
                 }

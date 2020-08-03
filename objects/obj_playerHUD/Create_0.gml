@@ -7,5 +7,8 @@ indHPMax = 0;
 indWP = 0;
 indWPMax = 0;
 
+timeChangeHPMax = 240;
+timeChangeHP = timeChangeHPMax;
+
 xPlace = 16;
 yPlace = 8;

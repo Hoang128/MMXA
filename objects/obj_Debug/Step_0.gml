@@ -112,6 +112,7 @@ if (keyboard_check(ord("Q")))
 			{
 				if (obj_gameManager.playerCore.sprite_index == obj_gameManager.playerCore.sprStand)
 				{
+					instance_destroy(obj_playerHUD);
 					var objChange = instance_create_depth(x, obj_gameManager.playerCore.y, depth, obj_changePlayer);
 					objChange.playerChangeFrom = obj_gameManager.playerCore;
 					if (obj_gameManager.playerCore.object_index == obj_playerEclipseX) 
@@ -121,21 +122,5 @@ if (keyboard_check(ord("Q")))
 				}
 			}
 		}
-	}
-	
-	//Test message
-	if (keyboard_check_pressed(ord("M")))
-	{
-		scr_createTextMessChain(
-			scr_createTextMessage(
-				spr_bs_dynamo,
-				"Hello everynyan! How are you? Fine thank you!",
-				"I wish i were a bird!"
-			),
-			scr_createTextMessage(
-				spr_bs_dynamo,
-				"Nico Nico nii!"
-			)
-		);
 	}
 }
