@@ -1,8 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-x = 64;
-y = 64;
-xPlace = 0;
-yPlace = 0;
-lineSpace = 32;
+transAnim = false;
+indHP = 0;
+indHPMax = 0;
+indWP = 0;
+indWPMax = 0;
+
+xPlace = 16;
+yPlace = 8;

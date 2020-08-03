@@ -6,6 +6,13 @@ switch weightPlayer
 	default:
 	{
 		//Default state
+		var objHUD = instance_create_depth(x, y, layer_get_depth(obj_gameManager.lHUD), obj_playerHUD);
+		objHUD.core = self;
+		objHUD.indHP = hp;
+		objHUD.indHPMax = hpMax;
+		objHUD.indWP = wp;
+		objHUD.indWPMax = wpMax;
+		
 		vspd = beamSpd;
 		activateState = ActivateState.DEACTIVATE;
 		if (global.airSpawm == true)

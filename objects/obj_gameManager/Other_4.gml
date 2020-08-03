@@ -19,7 +19,6 @@ lUI		= layer_create(-6000);
 //Init Object
 if (global.isStage)
 {
-	instance_create_depth(x, y, lHUD, obj_playerHUD);
 	instance_create_depth(x, y, lHUD, obj_fMenuMapName);
 	instance_create_depth(x, y, -1000, obj_globalEffManager);
 	instance_create_depth(global.xSpawmLocation, global.ySpawmLocation, depth, obj_view);

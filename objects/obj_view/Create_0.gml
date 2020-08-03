@@ -1,6 +1,5 @@
 /// @description Init
 playerCore = noone;
-instance_create_depth(x, y, depth + 100, obj_HUD);
 instance_create_depth(x, y, depth + 200, obj_globalEffManager);
 
 if (!global.isStage)

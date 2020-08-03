@@ -5,8 +5,10 @@ event_inherited();
 
 //Initialize Parameters********************************************************************************************************************************************
 weight = WeighType.MEDIUM;
-hp = global.hpMax[1];
-wp = global.wpMax[1];
+hpMax = global.hpMax[1];
+hp = hpMax;
+wpMax = global.wpMax[1];
+wp = wpMax;
 atkSpriteTimeMax = 60;
 xPlaceDashEff = -25;
 yPlaceDashEff = -4;

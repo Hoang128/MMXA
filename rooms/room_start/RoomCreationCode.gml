@@ -23,9 +23,9 @@ global.airSpawm = true;
 global.hpMax[0] = 16;
 global.hpMax[1] = 16;
 global.hpMax[2] = 16;
-global.wpMax[0] = 16;
-global.wpMax[1] = 16;
-global.wpMax[2] = 16;
+global.wpMax[0] = 32;
+global.wpMax[1] = 32;
+global.wpMax[2] = 32;
 
 //Default Elves
 for(i = 0; i < 16; i++)
@@ -39,7 +39,7 @@ for(i = 0; i <= 8; i++)
 	global.xArmor[i] = ItemState.LOCK;
 }
 
-//Zero Core(5 Core: Ultimate, Saber, Buster, Light, Shadow, Omega)
+//Zero Core(5 Core: Ultimate, Saber, Buster, Stardust, Shadow, Omega)
 for(i = 0; i <= 4; i++)
 {
 	global.zCore[i] = ItemState.LOCK;

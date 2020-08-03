@@ -7,6 +7,7 @@ if (aState == ActionState.DYING)
 	
 	if (weight < WeighType.MASSIVE)
 	{
+		instance_destroy(obj_playerHUD);
 		lives--;
 	}
 }
