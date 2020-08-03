@@ -81,24 +81,28 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if !((vState == VerticalState.V_ON_GROUND) && (vDashDir == 0))
 					{
-						if (usedFirstAirDash == false)
+						if (dashed == false)
 						{
-							usedFirstAirDash = true;
-						}
-						else
-						{
-							if (usedFArmorPointFlag == false)
+							if (usedFirstAirDash == true)
 							{
-								ArmorPoint--;
-								dashTime = maxAirDashTime * 1.2;
-								usedFArmorPointFlag = true;
+								if (usedFArmorPointFlag == false)
+								{
+									ArmorPoint--;
+									dashTime = maxAirDashTime * 1.2;
+									usedFArmorPointFlag = true;
+								}
 							}
+							else
+							{
+								usedFirstAirDash = true;
+							}
+							if (ArmorPoint > 0)
+							{
+								if (canAirDash == 0)
+									canAirDash = 1;
+							}	
+							dashed = true;
 						}
-						if (ArmorPoint > 0)
-						{
-							if (canAirDash == 0)
-								canAirDash = 1;
-						}	
 					}
 				}
 			}
@@ -120,6 +124,13 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Disable flags
 		if (aState != ActionState.DASHING)
 		{
+			if ((vState == VerticalState.V_ON_GROUND) || (aState == ActionState.SLIDING) || (aState == ActionState.WIRING))
+			{
+				if (usedFirstAirDash == true)
+					usedFirstAirDash = false;
+			}
+			if (dashed)
+				dashed = false;
 			if (isCrossDashing)
 				isCrossDashing = false;
 			if (vDashDir != 0)

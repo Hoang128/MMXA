@@ -26,10 +26,10 @@ objArmor.core = self;
 dashCrossSpd1 = 1;
 dashCrossSpd2 = 6;
 ArmorPointMax = 4;
-coolDownAPTimeMax = 240;
+coolDownAPTimeMax = 480;
 coolDownSpdSlow = 1;
 coolDownSpdNormal = 2;
-coolDownSpdCharge = 40;
+coolDownSpdCharge = 80;
 minTimeInImpactDown = 20;
 
 
@@ -39,6 +39,7 @@ SolarDrive = false;
 freezeMode = false;
 LunarDrive = false;
 usedFirstAirDash = false;
+dashed = false;
 coolDownSpd = 2;
 canUseArmorPoint = true;
 ArmorPoint = 4;
