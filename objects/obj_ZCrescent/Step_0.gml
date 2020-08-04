@@ -13,11 +13,11 @@ if (init == true)
 else
 {
 	if (image_angle < 360)
-		image_angle +=rotAngleSelf * image_xscale;
+		image_angle +=rotAngleSelf * image_xscale * DELTA_TIME;
 	else
 		image_angle = 0;
 
-	angle -= rotAngle*image_xscale;
+	angle -= rotAngle*image_xscale * DELTA_TIME;
 	x = lengthdir_x(distance, angle) + xCenter;
 	y = lengthdir_y(distance, angle) + yCenter;
 

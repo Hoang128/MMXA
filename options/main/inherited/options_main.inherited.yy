@@ -347,7 +347,7 @@
                     "targets": 461609314234257646,
                     "autocrop": true,
                     "border": 2,
-                    "groupParent": "7c87b910-fc46-4057-afeb-98f1a8b13dd8",
+                    "groupParent": "4e8e8901-b074-4e17-a919-0d18344a9c9b",
                     "mipsToGenerate": 0,
                     "scaled": true
                 }

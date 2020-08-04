@@ -92,7 +92,7 @@ canChangeHDir = true;
 canGetDamage = true;
 lowHp = false;
 myPal = noone;
-canUseDownJ = 1;
+canUseJumpButton = 1;
 canBeHit = true;
 inAir = InAir.NORMAL;
 

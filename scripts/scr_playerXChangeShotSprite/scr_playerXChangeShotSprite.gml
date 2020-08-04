@@ -74,6 +74,7 @@ switch (obj)
 				case sprSlide2:			sprite_index = spr_XShotSlide2;					break;
 				case sprDashKick1:
 				case sprDashKick2:		sprite_index = spr_XShotJump2;					break;
+				case sprHover:			sprite_index = spr_XEHoverShot;					break;
 			}
 			sprStand = spr_XShotStand;
 			sprDuck2 = spr_XShotDuck;
@@ -99,6 +100,7 @@ switch (obj)
 			sprWiredDown = spr_XShotWired;
 			sprWiredStartH = spr_XShotWiredStartHorizontal;
 			sprWiredStartV = spr_XShotWiredStartVertical;
+			sprHover = spr_XEHoverShot;
 			
 			inShotFrame = true;
 		}
@@ -131,6 +133,7 @@ switch (obj)
 				case sprWiredDown:		sprite_index = spr_XWiredDown;				break;
 				case sprWiredStartH:	sprite_index = spr_XWiredStartHorizontal;	break;
 				case sprWiredStartV:	sprite_index = spr_XWiredStartVertical;		break;
+				case sprHover:			sprite_index = spr_XEHover;					break;
 			}
 			sprStand = spr_XStand;
 			sprRunStart = spr_XRunStart;
@@ -156,6 +159,7 @@ switch (obj)
 			sprWiredDown = spr_XWiredDown;
 			sprWiredStartH = spr_XWiredStartHorizontal;
 			sprWiredStartV = spr_XWiredStartVertical;
+			sprHover = spr_XEHover;
 			
 			atkState = AttackState.A_NONE;
 			inShotFrame = false;

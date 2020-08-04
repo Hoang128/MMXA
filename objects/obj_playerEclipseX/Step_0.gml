@@ -138,6 +138,12 @@ if (activateState != ActivateState.DEACTIVATE)
 			if (usedFArmorPointFlag == true)
 				usedFArmorPointFlag = false;
 		}
+		
+		if (aState == ActionState.DASHING)
+		{
+			if (inAir != InAir.NORMAL)
+				inAir = InAir.NORMAL;
+		}
 	}
 		
 	#endregion
@@ -241,12 +247,61 @@ if (activateState != ActivateState.DEACTIVATE)
 	{
 		if (partFoot == 1)
 		{
+			//Hover
+			#region
+			
+			if (keyboard_check_pressed(global.keyJump) && !keyboard_check(global.keyDown))
+			{
+				if (canUseJumpButton == 1)
+				{
+					if (sprite_index == spr_XEHover)
+					{
+						sprite_index = sprJump4;
+						image_index = 0;
+						
+						canUseJumpButton = -3;
+						hspd = 0;
+						vspd = 0;
+						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+						vState = VerticalState.V_MOVE_FALLING;
+						hState = HorizontalState.H_MOVE_NONE;
+						aState = ActionState.IDLE;
+					}
+				}
+			}
+			if (keyboard_check_pressed(global.keyJump) && !keyboard_check(global.keyDown))
+			{
+				if (sprite_index != spr_XEHover)
+				{
+					if (canUseJumpButton == 1)
+					{
+						if ((vState != VerticalState.V_ON_GROUND) && (aState != ActionState.SP_MOVE))
+						{
+							sprite_index = spr_XEHover;
+							image_index = 0;
+							
+							canUseJumpButton = -3;
+							dashSpd = 0;
+							dashTime = 0;
+							hspd = 0;
+							vspd = 1;
+							if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+							vState = VerticalState.V_MOVE_DOWN;
+							hState = HorizontalState.H_MOVE_NONE;
+							aState = ActionState.IDLE;
+						}
+					}
+				}
+			}
+			
+			#endregion
+			
 			//Slam down
 			#region
 		
 			if (keyboard_check_pressed(global.keyJump) && keyboard_check(global.keyDown))
 			{
-				if (canUseDownJ == 1)
+				if (canUseJumpButton == 1)
 				{
 					if ((vState != VerticalState.V_ON_GROUND) && (aState != ActionState.SP_MOVE))
 					{

@@ -57,6 +57,14 @@ for(i = 0; i <=4; i++)
 	global.zSaber[i] = ItemState.LOCK;
 }
 
+//Weapons
+for(i = 0; i <= 8; i++)
+{
+	global.weapon[i] = ItemState.LOCK;
+}
+global.weapon[0] = ItemState.USING;
+global.weapon[8] = ItemState.USING;
+
 //Default Zero
 global.zCore[2] = ItemState.USING;
 global.zForm[1] = ItemState.USING;

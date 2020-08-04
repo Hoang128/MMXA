@@ -46,12 +46,13 @@ scr_InitSoundPlayerHFromBase(obj_playerXUA);
 
 //Initialize shader
 scr_PalSwapInitSystem(shd_pal_swapper);
-myPal = spr_PalX;
+myPal = spr_PalXUA;
 
 //Initialize states
 scr_InitStatePlayer(weight);
 
 //Initialize Inside Variables
+currentWeapon = 0;
 atkSpriteTime = 0;
 inShotFrame = false;
 busterOnRow = 0;

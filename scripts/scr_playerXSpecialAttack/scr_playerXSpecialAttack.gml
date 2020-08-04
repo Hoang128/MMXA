@@ -4,14 +4,35 @@ switch (XType)
 {
 	case obj_playerX:
 	{
-		exit;
+		switch (currentWeapon)
+		{
+			case 8:
+			{
+				scr_XAtk8Dark();
+			}	break;
+			default:	break;
+		}
 	}	break;
 	case obj_playerXUA:
 	{
-		exit;
+		switch (currentWeapon)
+		{
+			case 8:
+			{
+				scr_XAtk8Dark();
+			}	break;
+			default:	break;
+		}
 	}	break;
 	case obj_playerEclipseX:
 	{
-		exit;
+		switch (currentWeapon)
+		{
+			case 8:
+			{
+				scr_XAtk8Dark();
+			}	break;
+			default:	break;
+		}
 	}	break;
 }

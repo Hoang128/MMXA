@@ -5,9 +5,9 @@
 
 //Collision with enemies when dash
 var activeDashEff = false;
-if (aState == ActionState.DASHING)
+if (partFoot == 1)
 {
-	if (usedFArmorPointFlag == true)
+	if ((aState == ActionState.DASHING) || (sprite_index == spr_XESlamDown))
 	{
 		if (other.bullet == 0)
 		{
@@ -18,7 +18,7 @@ if (aState == ActionState.DASHING)
 			{
 				if (vDashDir == 0)
 				{
-					if (collision_rectangle(bbox_right - 16, bbox_top, bbox_right, bbox_bottom, other, false, false))
+					if (collision_rectangle(bbox_right - 4, bbox_top, bbox_right, bbox_bottom, other, false, false))
 					{
 						canBeHit = false;
 						activeDashEff = true;
@@ -27,7 +27,7 @@ if (aState == ActionState.DASHING)
 			
 				else if (vDashDir == 1)
 				{
-					if (collision_rectangle(bbox_right, bbox_top + 8, bbox_left + 8, bbox_bottom, other, false, false))
+					if (collision_rectangle(bbox_right, bbox_top + 8, bbox_left, bbox_bottom, other, false, false))
 					{
 						canBeHit = false;
 						activeDashEff = true;
@@ -36,7 +36,7 @@ if (aState == ActionState.DASHING)
 			
 				else if (vDashDir == -1)
 				{
-					if (collision_rectangle(bbox_right, bbox_top, bbox_left + 8, bbox_bottom - 8, other, false, false))
+					if (collision_rectangle(bbox_right, bbox_top, bbox_left, bbox_bottom - 8, other, false, false))
 					{
 						canBeHit = false;
 						activeDashEff = true;
@@ -53,7 +53,7 @@ if (aState == ActionState.DASHING)
 			{
 				if (vDashDir == 0)
 				{
-					if (collision_rectangle(bbox_left, bbox_top, bbox_left + 8, bbox_bottom, other, false, false))
+					if (collision_rectangle(bbox_left, bbox_top, bbox_left + 4, bbox_bottom, other, false, false))
 					{
 						canBeHit = false;
 						activeDashEff = true;
@@ -62,7 +62,7 @@ if (aState == ActionState.DASHING)
 			
 				else if (vDashDir == 1)
 				{
-					if (collision_rectangle(bbox_left, bbox_top + 8, bbox_right - 8, bbox_bottom, other, false, false))
+					if (collision_rectangle(bbox_left, bbox_top + 8, bbox_right, bbox_bottom, other, false, false))
 					{
 						canBeHit = false;
 						activeDashEff = true;
@@ -71,7 +71,7 @@ if (aState == ActionState.DASHING)
 			
 				else if (vDashDir == -1)
 				{
-					if (collision_rectangle(bbox_left, bbox_top, bbox_right - 8, bbox_bottom - 8, other, false, false))
+					if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom - 8, other, false, false))
 					{
 						canBeHit = false;
 						activeDashEff = true;
@@ -93,12 +93,15 @@ if (activeDashEff == true)
 			sprite_index = spr_XEJumpBack1;
 			image_index = 0;
 			
+			if (usedFArmorPointFlag)
+				ArmorPoint++;
+			if (keyFoward == true)
+				hDir *= -1;
 			hspd = -2 * hDir;
 			vspd = -3;
 			dashSpd = 0;
 			dashTime = 0;
 			inAir = InAir.LIGHT_BOOST;
-			activateState = ActivateState.HALF_ACTIVATE;
 			aState = ActionState.SP_MOVE;
 			hState = HorizontalState.H_MOVE_NONE;
 			vState = VerticalState.V_MOVE_FALLING;

@@ -73,6 +73,11 @@ if (instance_exists(core))
 				case spr_XDashCrossDown2:	FootImg = spr_FXSDashCrossDown2;	break;
 				case spr_XESlamDown:		FootImg = spr_FXSSlamDown;			break;
 				case spr_XEImpactDown:		FootImg = spr_FXSImpactDown;		break;
+				case spr_XEJumpBack1:		FootImg = spr_FXSJumpBack1;			break;
+				case spr_XEJumpBack2:		FootImg = spr_FXSJumpBack2;			break;
+				case spr_XEJumpBack3:		FootImg = spr_FXSJumpBack3;			break;
+				case spr_XEHoverShot:		FootImg = spr_FXSHoverShot;			break;
+				case spr_XEHover:			FootImg = spr_FXSHover;				break;
 				
 				//Wire frames
 				case spr_XWiredForward:

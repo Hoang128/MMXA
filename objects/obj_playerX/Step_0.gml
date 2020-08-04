@@ -42,6 +42,8 @@ if (activateState != ActivateState.DEACTIVATE)
 	{
 		#region
 		
+		scr_XSwitchWeapon();
+		
 		scr_playerXNormalAttack(object_index);
 		
 		scr_playerXSpecialAttack(object_index);

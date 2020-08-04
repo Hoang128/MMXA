@@ -37,6 +37,7 @@ myPal = spr_PalX;
 scr_InitStatePlayer(weight);
 
 //Initialize Inside Variables
+currentWeapon = 0;
 atkSpriteTime = 0;
 inShotFrame = false;
 busterOnRow = 0;

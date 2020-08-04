@@ -68,13 +68,27 @@ switch (sprite_index)
 	
 	case spr_XEJumpBack3:
 	{
-		sprite_index = sprJump4;
-		image_index = 0;
+		if (!keyboard_check(global.keyJump))
+		{
+			sprite_index = sprJump4;
+			image_index = 0;
 		
-		canBeHit = true;
-		inAir = InAir.NORMAL;
-		activateState = ActivateState.ACTIVATE;
-		aState = ActionState.IDLE;
+			canBeHit = true;
+			inAir = InAir.NORMAL;
+			activateState = ActivateState.ACTIVATE;
+			aState = ActionState.IDLE;
+		}
+		else
+		{
+			sprite_index = spr_XEHover;
+			image_index = 0;
+			
+			canBeHit = true;
+			inAir = InAir.NORMAL;
+			vState = VerticalState.V_MOVE_DOWN;
+			activateState = ActivateState.ACTIVATE;
+			aState = ActionState.IDLE;
+		}
 	}
 }
 

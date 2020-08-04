@@ -3,7 +3,7 @@ switch (object)
 {
 	case obj_playerX:
 	{
-		scr_PalSwapSet(myPal, 0, false);
+		scr_PalSwapSet(myPal, currentWeapon, false);
 
 		draw_self();
 
@@ -12,7 +12,7 @@ switch (object)
 	}
 	case obj_playerXUA:
 	{
-		//scr_PalSwapSet(myPal, 0, false);
+		scr_PalSwapSet(myPal, currentWeapon, false);
 
 		draw_self();
 

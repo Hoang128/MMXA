@@ -14,4 +14,9 @@ ArmsImg = noone;
 BodyImg = noone;
 FootImg = noone;
 
+HeadImgInd = 0;
+ArmsImgInd = 0;
+BodyImgInd = 0;
+FootImgInd = 0;
+
 core = noone;

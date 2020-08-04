@@ -240,8 +240,8 @@ if (activateState != ActivateState.DEACTIVATE)
 	else
 		wireTime = 0;
 		
-	if (canUseDownJ < 1)
-		canUseDownJ += DELTA_TIME;
+	if (canUseJumpButton < 1)
+		canUseJumpButton += DELTA_TIME;
 		
 	#endregion
 	
@@ -833,7 +833,7 @@ if (activateState != ActivateState.DEACTIVATE)
 									dynamicBlock = noone;
 								}
 								canJump = 0;
-								canUseDownJ = -3;
+								canUseJumpButton = -3;
 								canHover = 3;
 								vState = VerticalState.V_MOVE_FALLING;
 								aState = ActionState.IDLE;
@@ -1451,7 +1451,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							else if (randVoiceJump >1) audio_play_sound_on(global.SFX_Emitter, sndVoiceJump2, 0, 0);
 							else audio_play_sound_on(global.SFX_Emitter, sndVoiceJump3, 0, 0);
 						}
-				
+						canUseJumpButton = -3;
 						canJump = 0;
 						hspd = 0;
 						vspd = -jumpSpd;
@@ -1482,7 +1482,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						sprite_index = sprJump3;
 						image_index = 0;
 						
-						canUseDownJ = -3;
+						canUseJumpButton = -3;
 						canHover = 3;
 						canJump = 0;
 						vState = VerticalState.V_MOVE_FALLING;
@@ -1507,7 +1507,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							else audio_play_sound_on(global.SFX_Emitter, sndVoiceJump3, 0, 0);
 						}
 						
-						canUseDownJ = -3;
+						canUseJumpButton = -3;
 						canHover = 3;
 						canJump = 0;
 						if (keyboard_check(global.keyDown))
@@ -1542,6 +1542,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						
 							var wkEff = instance_create_depth(x + image_xscale * (bbox_right - bbox_left) / 2, y - 4, depth - 5, obj_flareSmall);
 							wkEff.image_xscale = self.image_xscale;
+							canUseJumpButton = -3;
 							canJump = 0;
 							hspd = 0;
 							vspd = 0;
@@ -1567,6 +1568,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							var wkEff = instance_create_depth(x + image_xscale * (bbox_right - bbox_left) / 2, y - 4, depth - 5, obj_flareSmall);
 							wkEff.image_xscale = self.image_xscale;
 							lastWallKickSide = hDir;
+							canUseJumpButton = -3;
 							canJump = 0;
 							hspd = -hDir*hWallKickSpd;
 							vspd = -wallKickSpd;

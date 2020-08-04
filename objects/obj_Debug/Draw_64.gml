@@ -127,7 +127,10 @@ else{
 			scr_LOG_INFO("Char Horizontal Speed = " + string(obj_playerHumanForm.hspd), debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Vertical Speed = " + string(obj_playerHumanForm.vspd), debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char vDashDir = " + string(obj_playerHumanForm.vDashDir), debugTextColorF, debugTextColorB);
-			scr_LOG_INFO("Char Last wall kick side = " + string(obj_playerHumanForm.lastWallKickSide), debugTextColorF, debugTextColorB);
+			if (instance_exists(obj_playerX))
+			{
+				scr_LOG_INFO("Char current weapon = " + string(obj_playerHumanForm.currentWeapon), debugTextColorF, debugTextColorB);
+			}
 		}
 		#endregion
 	}
