@@ -8,7 +8,7 @@ image_yscale = 0;
 
 phase = 0;
 time = 0;
-existTime = 3600;
+existTime = 1200;
 imgSpd = 0.5;
 
 sizeSpd = 0.2;

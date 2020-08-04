@@ -28,7 +28,7 @@ switch (sprite_index)
 			image_index = 0;
 			
 			dashPhase = 2;
-			dashSpd = dashCrossSpd2;
+			dashSpd = dashSpdPhase2;
 			var dashEff = instance_create_depth(x - 24 * image_xscale, y + 5, depth - 1, obj_PlayerDashEff);
 			dashEff.core = self;
 			dashEff.image_angle = 90 - 45 * image_xscale;
@@ -51,7 +51,7 @@ switch (sprite_index)
 			image_index = 0;
 			
 			dashPhase = 2;
-			dashSpd = dashCrossSpd2;
+			dashSpd = dashSpdPhase2;
 			var dashEff = instance_create_depth(x - image_xscale * 18, y - 36, depth - 1, obj_PlayerDashEff);
 			dashEff.core = self;
 			dashEff.image_angle = 270 + 45 * image_xscale;

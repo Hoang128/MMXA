@@ -8815,6 +8815,14 @@
             }
         },
         {
+            "Key": "cd4946a0-97a0-44ad-a04c-e91f1814db37",
+            "Value": {
+                "id": "bba96f77-1e5f-405e-b09c-b79effbbca85",
+                "resourcePath": "shaders\\snd_colorInvert\\snd_colorInvert.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "cd78d632-332a-4448-835e-13c2e370d501",
             "Value": {
                 "id": "00fa6a68-fede-4216-b1c5-00544b60fbec",

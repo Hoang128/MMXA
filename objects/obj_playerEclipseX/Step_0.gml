@@ -87,6 +87,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							{
 								if (usedFArmorPointFlag == false)
 								{
+									solarDashTime--;
 									ArmorPoint--;
 									dashTime = maxAirDashTime * 1.2;
 									usedFArmorPointFlag = true;
@@ -126,6 +127,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			if ((vState == VerticalState.V_ON_GROUND) || (aState == ActionState.SLIDING) || (aState == ActionState.WIRING))
 			{
+				if (solarDashTime < maxSolarDashTime)
+					solarDashTime = maxSolarDashTime;
 				if (usedFirstAirDash == true)
 					usedFirstAirDash = false;
 			}
@@ -137,12 +140,6 @@ if (activateState != ActivateState.DEACTIVATE)
 				vDashDir = 0;
 			if (usedFArmorPointFlag == true)
 				usedFArmorPointFlag = false;
-		}
-		
-		if (aState == ActionState.DASHING)
-		{
-			if (inAir != InAir.NORMAL)
-				inAir = InAir.NORMAL;
 		}
 	}
 		
@@ -163,21 +160,24 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				if (canAirDash == 1)
 				{
-					scr_playerXChangeShotSprite(object_index, false ,false);
-					sprite_index = sprDashKick1;
-					image_index = 1;
+					if (solarDashTime > 0)
+					{
+						scr_playerXChangeShotSprite(object_index, false ,false);
+						sprite_index = sprDashKick1;
+						image_index = 1;
 					
-					dashPhase = 1;
-					dashSpd = dashCrossSpd1;
-					dashTime = maxAirDashTime;
-					crossDashAngle = 45;
-					vDashDir = -1;
-					isCrossDashing = true;
-					if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
-					vState = VerticalState.V_MOVE_UP;
-					hState = HorizontalState.H_MOVE_FORWARD;
-					aState = ActionState.DASHING;
-					canAirDash = 0;
+						dashPhase = 1;
+						dashSpd = dashSpdPhase1;
+						dashTime = maxAirDashTime;
+						crossDashAngle = 45;
+						vDashDir = -1;
+						isCrossDashing = true;
+						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+						vState = VerticalState.V_MOVE_UP;
+						hState = HorizontalState.H_MOVE_FORWARD;
+						aState = ActionState.DASHING;
+						canAirDash = 0;
+					}
 				}
 			}
 			UN_DashFlag = false;
@@ -189,21 +189,24 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				if (canAirDash == 1)
 				{
-					scr_playerXChangeShotSprite(object_index, false ,false);
-					sprite_index = sprDashCrossDown1;
-					image_index = 0;
+					if (solarDashTime > 0)
+					{
+						scr_playerXChangeShotSprite(object_index, false ,false);
+						sprite_index = sprDashCrossDown1;
+						image_index = 0;
 					
-					dashPhase = 1;
-					dashSpd = dashCrossSpd1;
-					dashTime = maxAirDashTime;
-					crossDashAngle = 45;
-					vDashDir = 1;
-					isCrossDashing = true;
-					if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
-					vState = VerticalState.V_MOVE_UP;
-					hState = HorizontalState.H_MOVE_FORWARD;
-					aState = ActionState.DASHING;
-					canAirDash = 0;
+						dashPhase = 1;
+						dashSpd = dashSpdPhase1;
+						dashTime = maxAirDashTime;
+						crossDashAngle = 45;
+						vDashDir = 1;
+						isCrossDashing = true;
+						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
+						vState = VerticalState.V_MOVE_UP;
+						hState = HorizontalState.H_MOVE_FORWARD;
+						aState = ActionState.DASHING;
+						canAirDash = 0;
+					}
 				}
 			}
 			DN_DashFlag = false;
@@ -246,56 +249,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	if (activateState == ActivateState.ACTIVATE)
 	{
 		if (partFoot == 1)
-		{
-			//Hover
-			#region
-			
-			if (keyboard_check_pressed(global.keyJump) && !keyboard_check(global.keyDown))
-			{
-				if (canUseJumpButton == 1)
-				{
-					if (sprite_index == spr_XEHover)
-					{
-						sprite_index = sprJump4;
-						image_index = 0;
-						
-						canUseJumpButton = -3;
-						hspd = 0;
-						vspd = 0;
-						if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
-						vState = VerticalState.V_MOVE_FALLING;
-						hState = HorizontalState.H_MOVE_NONE;
-						aState = ActionState.IDLE;
-					}
-				}
-			}
-			if (keyboard_check_pressed(global.keyJump) && !keyboard_check(global.keyDown))
-			{
-				if (sprite_index != spr_XEHover)
-				{
-					if (canUseJumpButton == 1)
-					{
-						if ((vState != VerticalState.V_ON_GROUND) && (aState != ActionState.SP_MOVE))
-						{
-							sprite_index = spr_XEHover;
-							image_index = 0;
-							
-							canUseJumpButton = -3;
-							dashSpd = 0;
-							dashTime = 0;
-							hspd = 0;
-							vspd = 1;
-							if (atkState != AttackState.A_NONE) atkState = AttackState.A_NONE;
-							vState = VerticalState.V_MOVE_DOWN;
-							hState = HorizontalState.H_MOVE_NONE;
-							aState = ActionState.IDLE;
-						}
-					}
-				}
-			}
-			
-			#endregion
-			
+		{	
 			//Slam down
 			#region
 		

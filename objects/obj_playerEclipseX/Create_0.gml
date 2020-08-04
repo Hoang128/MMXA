@@ -24,8 +24,7 @@ objArmor.Foot = partFoot;
 objArmor.core = self;
 
 //Parameters
-dashCrossSpd1 = 1;
-dashCrossSpd2 = 6;
+maxSolarDashTime = 2;
 ArmorPointMax = 4;
 coolDownAPTimeMax = 480;
 coolDownSpdSlow = 1;
@@ -39,6 +38,7 @@ ignitionMode = false;
 SolarDrive = false;
 freezeMode = false;
 LunarDrive = false;
+solarDashTime = 2;
 usedFirstAirDash = false;
 dashed = false;
 coolDownSpd = 2;
