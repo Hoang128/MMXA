@@ -12,7 +12,8 @@ if (activateState == ActivateState.ACTIVATE)
 				image_index = 0;
 				
 				x = (other.bbox_right + other.bbox_left) / 2;
-				y -= 2;
+				if (place_meeting (x, y + 1, obj_block))
+					y -= 3;
 				hspd = 0;
 				vspd = 0;
 				if (dashSpd > 0)

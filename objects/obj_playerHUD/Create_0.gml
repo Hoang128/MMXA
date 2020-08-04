@@ -13,6 +13,9 @@ indAP = 0;
 indAPMax = 0;
 for (var i = 0; i < 4; i++)
 	AP[i] = noone;
+indAPXUAProgress = 0;
+indAPXUAImg = 15;
+indAPXUAImgSpd = 0.5;
 
 timeChangeHPMax = 240;
 timeChangeHP = timeChangeHPMax;

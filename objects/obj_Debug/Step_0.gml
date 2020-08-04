@@ -115,10 +115,14 @@ if (keyboard_check(ord("Q")))
 					instance_destroy(obj_playerHUD);
 					var objChange = instance_create_depth(x, obj_gameManager.playerCore.y, depth, obj_changePlayer);
 					objChange.playerChangeFrom = obj_gameManager.playerCore;
-					if (obj_gameManager.playerCore.object_index == obj_playerEclipseX) 
+					if (obj_gameManager.playerCore.object_index == obj_playerXUA)
 						objChange.playerChangeTo = obj_playerZ;
 					if (obj_gameManager.playerCore.object_index == obj_playerZ) 
-						objChange.playerChangeTo = obj_playerEclipseX;
+						objChange.playerChangeTo = obj_playerXUA;
+					//if (obj_gameManager.playerCore.object_index == obj_playerEclipseX) 
+					//	objChange.playerChangeTo = obj_playerZ;
+					//if (obj_gameManager.playerCore.object_index == obj_playerZ) 
+					//	objChange.playerChangeTo = obj_playerEclipseX;
 				}
 			}
 		}

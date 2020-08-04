@@ -16,7 +16,7 @@ switch (object)
 
 		draw_self();
 
-		//scr_PalSwapReset();
+		scr_PalSwapReset();
 		break;
 	}
 	case obj_playerZ:

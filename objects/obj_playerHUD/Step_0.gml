@@ -54,6 +54,20 @@ else
 	//Unique animation*********************************************************************************************************************************************
 	switch (core.object_index)
 	{
+		case obj_playerXUA:
+		{
+			indAP = core.ArmorPoint;
+			
+			if (indAP == 0)
+				indAPXUAProgress = floor(16 - (core.coolDownAPTime / core.coolDownAPTimeMax * 16));
+			if (indAP == 1)
+			{
+				if (indAPXUAImg <= 16)
+					indAPXUAImg += indAPXUAImgSpd;
+				else
+					indAPXUAImg = 15;
+			}
+		}	break;
 		case obj_playerEclipseX:
 		{
 			//Eclipse Armor point handle

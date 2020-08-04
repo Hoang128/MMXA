@@ -409,15 +409,18 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 		if (vState == VerticalState.V_MOVE_NONE)
 		{
-			if (vDashDir == 0)
+			if (aState != ActionState.CLIMBING)
 			{
-				if (place_meeting(x, y + maxDisDetectSlopeAbove, obj_block))
+				if (vDashDir == 0)
 				{
-					while (!place_meeting(x, y + 1, obj_block))
+					if (place_meeting(x, y + maxDisDetectSlopeAbove, obj_block))
 					{
-						y++;
+						while (!place_meeting(x, y + 1, obj_block))
+						{
+							y++;
+						}
+						vState = VerticalState.V_ON_GROUND;
 					}
-					vState = VerticalState.V_ON_GROUND;
 				}
 			}
 		}
@@ -874,7 +877,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			if (place_meeting(x, y + 1, obj_block))
 			{
-				if (sprite_index == sprClimb2)
+				if ((sprite_index == sprClimb2) && (keyboard_check(global.keyDown)))
 				{
 					sprite_index = sprClimb1;
 					image_index = 3;

@@ -69,8 +69,23 @@ if (instance_exists(obj_gameManager.playerCore))
 			#endregion
 		}	break;
 
-		case obj_playerX:
 		case obj_playerXUA:
+		{
+			#region
+			
+			draw_sprite(spr_HUDXUAFrame, 0, X_VIEW + xPlace, Y_VIEW + yPlace);
+			if (indAP == 0)
+			{
+				draw_sprite(spr_HUDXUAP, indAPXUAProgress, X_VIEW + xPlace + 19, Y_VIEW + yPlace + 19);
+			}
+			else
+			{
+				draw_sprite(spr_HUDXUAP, indAPXUAImg, X_VIEW + xPlace + 19, Y_VIEW + yPlace + 19);
+			}
+		
+			#endregion
+		}	break;
+		case obj_playerX:
 		case obj_playerEclipseX:
 		{
 			#region
