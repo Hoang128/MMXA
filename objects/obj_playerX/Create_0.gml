@@ -19,6 +19,8 @@ waitShotNormal = 3;
 waitShotLong = 15;
 waitShotMax = 30;
 waitShot = 0;
+waitShotSpecial = 0;
+waitShotSpecialSet = 0;
 yDistanceToWirer = 44;
 objWire = obj_XWirer;
 
@@ -42,3 +44,4 @@ atkSpriteTime = 0;
 inShotFrame = false;
 busterOnRow = 0;
 resetBusterOnRowMax = 0;
+chargeWeapon = 0;

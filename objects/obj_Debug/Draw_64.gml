@@ -127,9 +127,9 @@ else{
 			scr_LOG_INFO("Char Horizontal Speed = " + string(obj_playerHumanForm.hspd), debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Vertical Speed = " + string(obj_playerHumanForm.vspd), debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char vDashDir = " + string(obj_playerHumanForm.vDashDir), debugTextColorF, debugTextColorB);
-			if (instance_exists(obj_playerX))
+			if (instance_exists(obj_playerXUA))
 			{
-				scr_LOG_INFO("Char current weapon = " + string(obj_playerHumanForm.currentWeapon), debugTextColorF, debugTextColorB);
+				scr_LOG_INFO("Charge Weapon = " + string(obj_playerXUA.chargeWeapon), debugTextColorF, debugTextColorB);
 			}
 		}
 		#endregion

@@ -48,3 +48,4 @@ usedFArmorPointFlag = false;
 coolDownAPTime = 0;
 timeInImpactDown = 0;
 isCrossDashing = false;
+chargeWeapon = 0;

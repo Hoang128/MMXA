@@ -172,7 +172,7 @@
     "sepmasks": false,
     "swatchColours": null,
     "swfPrecision": 2.525,
-    "textureGroupId": "4e8e8901-b074-4e17-a919-0d18344a9c9b",
+    "textureGroupId": "993951f8-5bd7-4f7a-9d4f-31e272fa0690",
     "type": 0,
     "width": 50,
     "xorig": 31,

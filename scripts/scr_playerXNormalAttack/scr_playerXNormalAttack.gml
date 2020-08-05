@@ -68,7 +68,6 @@ else
 							{
 								var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_XChargeEffLv1);
 								objChargeEff.core = self;
-								objChargeEff.chargeParameter = self.chargeNormal;
 							}
 						}
 					}
@@ -79,7 +78,6 @@ else
 						{
 							var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_XChargeEffLv2);
 							objChargeEff.core = self;
-							objChargeEff.chargeParameter = self.chargeNormal;
 						}
 					}
 				}

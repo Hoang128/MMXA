@@ -21,4 +21,4 @@ yCenter = y;
 distance = 0;
 maxDistance = 36;
 angle = 0;
-distanceSpd = 1;
+distanceSpd = 2;

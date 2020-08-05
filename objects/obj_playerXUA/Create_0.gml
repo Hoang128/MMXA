@@ -39,6 +39,7 @@ novaStrikeStartHspd = 2.4;
 novaStrikeSpd = 9;
 novaStrikeEndHspd = 1;
 novaStrikeEndVspd = 1;
+chargeWeapon = 0;
 
 //Initialize sprite
 scr_InitSpritePlayerHFormBase(obj_playerXUA);
