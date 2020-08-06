@@ -2,6 +2,10 @@ var XType = argument0;
 
 switch (currentWeapon)
 {
+	case 7:
+	{
+		scr_XAtk7Time();
+	}	break;
 	case 8:
 	{
 		scr_XAtk8Dark();

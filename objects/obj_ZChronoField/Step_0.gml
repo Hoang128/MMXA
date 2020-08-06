@@ -6,7 +6,7 @@ if (phase == 0)
 	{
 		timeShot -= myDeltaTime * global.deltaTime;
 		
-		x += image_xscale * moveSpd * myDeltaTime * global.deltaTime;
+		x += image_xscale * moveSpd * DELTA_TIME;
 		if ((distance_to_object(obj_E_RealEnemy) < radius) || (distance_to_object(obj_E_Shield) < radius)) 
 			phase = 1;
 	}
@@ -19,7 +19,7 @@ if (phase == 0)
 if (phase == 1)
 {
 	if (imgSpd == 0) imgSpd = 0.5;
-	if (radius < maxRadius) radius += myDeltaTime * global.deltaTime * increaseRadiusSpd;
+	if (radius < maxRadius) radius += DELTA_TIME * increaseRadiusSpd;
 	else phase = 2;
 }
 

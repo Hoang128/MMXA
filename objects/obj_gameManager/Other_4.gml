@@ -11,7 +11,7 @@ instance_create_depth(x, y, depth, obj_effOpening_Black);
 
 //Layer create
 lPlayer = layer_create(0);
-lBullet = layer_create(-100);
+lBullet = layer_create(40);
 lEnemy  = layer_create(50);
 lHUD    = layer_create(-5000);
 lUI		= layer_create(-6000);

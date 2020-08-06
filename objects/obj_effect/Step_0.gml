@@ -12,3 +12,7 @@ if (instance_exists(obj_ZChronoField))
 	else myDeltaTime = 1;
 }	
 else myDeltaTime = 1;
+
+if (sprite_index == noone)
+	visible = 0;
+else visible = 1;

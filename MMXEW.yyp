@@ -1503,6 +1503,14 @@
             }
         },
         {
+            "Key": "216e3eba-e2a6-484f-9f9b-9aba01343aa7",
+            "Value": {
+                "id": "6e5c4f71-eead-45a1-9268-1eafa0023c58",
+                "resourcePath": "objects\\obj_XW7chronoForceImage\\obj_XW7chronoForceImage.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "21a785f9-76fa-40b4-806d-d4e45231a114",
             "Value": {
                 "id": "ab62f5a6-145f-432c-97c6-08c274280f8a",
@@ -1991,6 +1999,14 @@
             }
         },
         {
+            "Key": "2e45b81d-7e3c-4b55-bebc-03e04ac5dc35",
+            "Value": {
+                "id": "9a1ec5a4-932c-44c9-9a03-0c4bf8a21dc3",
+                "resourcePath": "objects\\obj_PlayerWeaponTime\\obj_PlayerWeaponTime.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2e61ebf7-6feb-47a6-a3a0-76f470063eec",
             "Value": {
                 "id": "45c3d88d-7d8d-42b7-bdc3-4676df4bf5ed",
@@ -2171,6 +2187,14 @@
             "Value": {
                 "id": "31af7cda-cd57-4cf2-a0c0-534a034f8abc",
                 "resourcePath": "sprites\\spr_walkCannonShotUp\\spr_walkCannonShotUp.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "31ca17d4-22f3-4d69-afdd-fd28d8e8b201",
+            "Value": {
+                "id": "5c4cede8-f027-4901-bff5-05b0f4c5485d",
+                "resourcePath": "sprites\\spr_XW7TimeRearImg\\spr_XW7TimeRearImg.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3635,6 +3659,14 @@
             "Value": {
                 "id": "857184e1-1605-49da-8d14-cdeb313ed934",
                 "resourcePath": "views\\50d28c0d-8f5c-433f-a43c-968ff8d01676.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5145ef78-3b79-4356-b03a-b8f12a263b47",
+            "Value": {
+                "id": "e26f3c8f-9440-40eb-bf47-f81ddcad9774",
+                "resourcePath": "views\\5145ef78-3b79-4356-b03a-b8f12a263b47.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -6095,6 +6127,14 @@
             }
         },
         {
+            "Key": "893bdc9d-8a75-41be-9b5d-7e9aac405258",
+            "Value": {
+                "id": "74a02794-f9f0-47ca-98e8-0cb299a51e4a",
+                "resourcePath": "scripts\\scr_XAtk7Time\\scr_XAtk7Time.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "89df6074-7ad9-4179-b66a-5b254c2f2021",
             "Value": {
                 "id": "66dec7c6-529f-4e5e-8acd-00169d0f75b1",
@@ -8295,6 +8335,14 @@
             }
         },
         {
+            "Key": "bfd6d453-5c38-422f-a4e3-d81b5951b31f",
+            "Value": {
+                "id": "31c4c7af-30a4-401b-a9cc-546dbe6fc29d",
+                "resourcePath": "views\\bfd6d453-5c38-422f-a4e3-d81b5951b31f.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "bff8a4fe-3fd5-4315-babb-cea843f3e121",
             "Value": {
                 "id": "c7835007-5e1e-4a67-a809-6324aafbe783",
@@ -8874,7 +8922,7 @@
             "Key": "cd4946a0-97a0-44ad-a04c-e91f1814db37",
             "Value": {
                 "id": "bba96f77-1e5f-405e-b09c-b79effbbca85",
-                "resourcePath": "shaders\\snd_colorInvert\\snd_colorInvert.yy",
+                "resourcePath": "shaders\\shd_colorInvert\\shd_colorInvert.yy",
                 "resourceType": "GMShader"
             }
         },
@@ -9932,6 +9980,14 @@
                 "id": "068b2a30-dd55-4b0d-bf5e-361f6210f58c",
                 "resourcePath": "sounds\\snd_explosionBoss\\snd_explosionBoss.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "e4adf6ec-1881-4a5d-be20-a2505be8494a",
+            "Value": {
+                "id": "43f50f39-43e7-4af4-b122-6e24d97d1a7e",
+                "resourcePath": "scripts\\scr_drawSurfaceAllObject\\scr_drawSurfaceAllObject.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -11159,6 +11215,7 @@
         "5dac1eb5-0407-4406-8bca-51caab1bec09",
         "c4fb2845-f18d-4e76-9354-c255d7790f2b",
         "07e54ed5-9f49-44c3-9f04-b78f3ac36398",
+        "893bdc9d-8a75-41be-9b5d-7e9aac405258",
         "bde8392f-6330-47e0-a68b-0e2e6195c91a",
         "a3bf0979-ecca-4d53-8b5c-be768e539034",
         "9a64ac67-4b58-4171-85d8-07252e052eea",
@@ -11190,6 +11247,7 @@
         "9a522c54-3c1b-4fcf-b225-f7bc76e9a835",
         "ebfbc0f3-8ea3-44df-a804-5f4bac4441d6",
         "f94fc98c-e90a-423a-a680-d4fb6e10cd7e",
+        "e4adf6ec-1881-4a5d-be20-a2505be8494a",
         "a3b6f953-aa7f-4184-b477-ecce56538c22",
         "2dc539c7-cbcf-4968-9898-b91f6315f86a",
         "3d00496e-9df6-415e-b5ab-b6dd719666bf",

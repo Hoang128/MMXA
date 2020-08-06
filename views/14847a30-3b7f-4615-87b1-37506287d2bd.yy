@@ -6,7 +6,8 @@
     "children": [
         "9a522c54-3c1b-4fcf-b225-f7bc76e9a835",
         "ebfbc0f3-8ea3-44df-a804-5f4bac4441d6",
-        "f94fc98c-e90a-423a-a680-d4fb6e10cd7e"
+        "f94fc98c-e90a-423a-a680-d4fb6e10cd7e",
+        "e4adf6ec-1881-4a5d-be20-a2505be8494a"
     ],
     "filterType": "GMScript",
     "folderName": "In-game stuffs",
