@@ -9,7 +9,10 @@
         "a121e3e0-ae11-45b8-95dd-b1fbeafd7436",
         "539eb4f4-edca-40c3-be4b-baabb5df3e83",
         "6121ad36-3933-45b9-b896-5d510464b94f",
-        "475cae87-6475-4032-b26c-8087891d868b"
+        "475cae87-6475-4032-b26c-8087891d868b",
+        "aa39537f-6ff7-46e1-8146-f8018c392f28",
+        "c3a3730f-61ea-4ecb-bce4-736eed8652f1",
+        "32ecd2a2-e289-4739-9d50-40ad6e382ebc"
     ],
     "filterType": "GMSound",
     "folderName": "Weapon",

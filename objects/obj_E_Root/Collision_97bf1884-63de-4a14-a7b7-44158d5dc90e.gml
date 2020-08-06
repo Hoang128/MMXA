@@ -86,6 +86,12 @@ if (damageTimmer <= 0)
 					instance_destroy(other);
 			}
 		}
+		
+		if (other.object_index == obj_XW6TornadoMissle)
+		{
+			other.createOrb = true;
+			instance_destroy(other);
+		}
 	}
 	else
 	{

@@ -11,5 +11,6 @@ yPlace = 0;
 core = noone;
 
 collisionEff = obj_BusterColEffLv1;
+collisionSFX = snd_RWeaponColEnemyEff;
 
 imgSpd = 0.5;

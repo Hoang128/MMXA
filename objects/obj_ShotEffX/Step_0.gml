@@ -149,6 +149,7 @@ if ((image_index > frameShot - 1) && (image_index < frameShot))
 	{
 		if (busterObject != noone)
 		{
+			audio_play_sound_on(global.SFX_Emitter, shotSFX, false, false);
 			var buster = instance_create_depth(x, y, depth - 1, busterObject);
 			buster.image_xscale = image_xscale;
 			bulletCreate = true;

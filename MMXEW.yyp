@@ -2335,6 +2335,14 @@
             }
         },
         {
+            "Key": "32ecd2a2-e289-4739-9d50-40ad6e382ebc",
+            "Value": {
+                "id": "6a5ef724-2e85-4051-8d10-634f154a5779",
+                "resourcePath": "sounds\\snd_XSkill6TornadoEff\\snd_XSkill6TornadoEff.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "3332eeee-eec1-4ec9-9d21-92a592efb2cc",
             "Value": {
                 "id": "0b14f279-2315-4a97-a68b-7a251b0df391",
@@ -2364,6 +2372,14 @@
                 "id": "ea96251d-b561-4cb1-8ca2-ab3596fb139e",
                 "resourcePath": "sprites\\spr_FXSDuck3\\spr_FXSDuck3.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3420768d-644f-4f51-abc9-ae3066d34ebf",
+            "Value": {
+                "id": "d4642bf7-398f-4dc6-b879-c6926acec337",
+                "resourcePath": "objects\\obj_XW6TornadoOrb\\obj_XW6TornadoOrb.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2980,6 +2996,14 @@
                 "id": "c01fcd8a-2ffd-4b8f-b76f-6934d9cabc87",
                 "resourcePath": "sprites\\spr_XUADying\\spr_XUADying.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "418402c0-ab3b-4c5e-8aba-17fd46b25b35",
+            "Value": {
+                "id": "91bc22f5-49ac-411d-9a22-ef5834f84df3",
+                "resourcePath": "objects\\obj_XW6ShotEff\\obj_XW6ShotEff.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -4044,6 +4068,14 @@
                 "id": "650795ed-4cfb-4149-91cf-96f8fdf1b143",
                 "resourcePath": "objects\\obj_waterSidePulseEff\\obj_waterSidePulseEff.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "590e4d62-2a3f-4414-ada1-8d881c824618",
+            "Value": {
+                "id": "8c92fc9e-c682-4dd5-9565-59961aefd678",
+                "resourcePath": "scripts\\scr_XAtk6Tornado\\scr_XAtk6Tornado.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -7511,6 +7543,14 @@
             }
         },
         {
+            "Key": "aa39537f-6ff7-46e1-8146-f8018c392f28",
+            "Value": {
+                "id": "62ae0cf7-08d0-4137-872c-b37dd3d4a256",
+                "resourcePath": "sounds\\snd_XSkill6TornadoMissleStart\\snd_XSkill6TornadoMissleStart.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "aa4f502b-7c96-4f85-b2f6-653ce4a34997",
             "Value": {
                 "id": "548490b3-ec4e-4a3b-957a-7d4e7acd91f0",
@@ -8540,6 +8580,14 @@
                 "id": "2318c55d-96ed-4357-93f7-fc3274b21072",
                 "resourcePath": "sprites\\spr_Capsule\\spr_Capsule.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c3a3730f-61ea-4ecb-bce4-736eed8652f1",
+            "Value": {
+                "id": "e45cd507-1071-4333-bc79-beb4ca00144b",
+                "resourcePath": "sounds\\snd_XSkill6Shot\\snd_XSkill6Shot.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -9935,6 +9983,14 @@
             }
         },
         {
+            "Key": "e21eaa0c-d6b8-47ed-b548-d2cc6edbfef0",
+            "Value": {
+                "id": "32638437-5c60-461c-ae0a-e996a7bf438f",
+                "resourcePath": "objects\\obj_XW6MutilMissleCreater\\obj_XW6MutilMissleCreater.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e22dee90-6957-4cc1-84b7-5a01cf731a80",
             "Value": {
                 "id": "645fc901-0da9-4975-9d03-b23a28d3f051",
@@ -11312,6 +11368,7 @@
         "c4fb2845-f18d-4e76-9354-c255d7790f2b",
         "07e54ed5-9f49-44c3-9f04-b78f3ac36398",
         "893bdc9d-8a75-41be-9b5d-7e9aac405258",
+        "590e4d62-2a3f-4414-ada1-8d881c824618",
         "bde8392f-6330-47e0-a68b-0e2e6195c91a",
         "a3bf0979-ecca-4d53-8b5c-be768e539034",
         "9a64ac67-4b58-4171-85d8-07252e052eea",

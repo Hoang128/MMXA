@@ -8,4 +8,4 @@ glow = 1;
 imgSpd = 0.5;
 busterObject = obj_XBusterNormal;
 
-audio_play_sound_on(global.SFX_Emitter, snd_XBusterNormal, 0, 0);
+shotSFX =  snd_XBusterNormal;

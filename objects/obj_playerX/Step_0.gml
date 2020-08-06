@@ -23,6 +23,13 @@ else
 		busterOnRow = 0;
 }
 
+if (waitShotSpecial > 0)
+	waitShotSpecial -= DELTA_TIME;
+else
+{
+	waitShotSpecial = 0;
+}
+
 if (activateState != ActivateState.DEACTIVATE)
 {
 	//Passive******************************************************************************************************

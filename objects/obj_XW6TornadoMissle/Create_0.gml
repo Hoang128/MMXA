@@ -8,7 +8,12 @@ damage = 1;
 target = noone;
 init = false;
 firstDir = 0;
-spd = 2;
-phase = 0;
+spd = 1.5;
+phase = 1;
 nonTargetTime = 0;
-nonTargetTimeMax = 60;
+nonTargetTimeMax = 30;
+targetList = ds_list_create();
+createOrb = false;
+dir = 1;
+
+audio_play_sound_on(global.SFX_Emitter, snd_XSkill6TornadoMissleStart, false, false);

@@ -4,7 +4,10 @@
     "mvc": "1.1",
     "name": "ac34ecc4-74e0-4c55-8a74-a5eecd63f56e",
     "children": [
-        "6e561c6f-6ba8-44e5-bb2e-66b8aecb3dca"
+        "6e561c6f-6ba8-44e5-bb2e-66b8aecb3dca",
+        "418402c0-ab3b-4c5e-8aba-17fd46b25b35",
+        "3420768d-644f-4f51-abc9-ae3066d34ebf",
+        "e21eaa0c-d6b8-47ed-b548-d2cc6edbfef0"
     ],
     "filterType": "GMObject",
     "folderName": "Tornado",

@@ -4,6 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
+shotSFX = noone;
 frameShot = 3;
 busterObject = noone;
 visible = 0;
