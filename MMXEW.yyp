@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "026a6fea-f372-49dc-97be-314dd3dc7e2a",
+            "Value": {
+                "id": "f3a7beb5-932f-4267-be00-cec5396de2d6",
+                "resourcePath": "sprites\\spr_XW6ShotEff\\spr_XW6ShotEff.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "026f3aa3-81ca-421d-9553-d393d89df33e",
             "Value": {
                 "id": "e8980c69-3fbe-40cc-98d9-7416df40a18c",
@@ -447,6 +455,14 @@
             }
         },
         {
+            "Key": "08702238-4ed0-4e1b-9a0a-0dfb28b315a6",
+            "Value": {
+                "id": "aaf1a9db-c958-4128-a7e7-15265efa776b",
+                "resourcePath": "sprites\\spr_XW6WIndEffOuter\\spr_XW6WIndEffOuter.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "08712432-6ac6-4e15-8840-56ae654b86d9",
             "Value": {
                 "id": "f3214850-a2de-4e11-9446-cc13c70ccbf5",
@@ -580,6 +596,14 @@
                 "id": "51cb918f-3d08-4923-9f3b-06a709439a41",
                 "resourcePath": "sounds\\snd_ZSlideEff\\snd_ZSlideEff.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "0bea221c-8d54-47c0-a519-540e5255b160",
+            "Value": {
+                "id": "14145a89-5ff3-44d8-9201-4ac4ee4c6fff",
+                "resourcePath": "sprites\\spr_XW6TornadoMissle2\\spr_XW6TornadoMissle2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -828,6 +852,14 @@
                 "id": "e6982b2b-207e-4f1f-a574-78235a7d0f3a",
                 "resourcePath": "views\\11ba103e-0c00-44dd-984a-d773db7d48ea.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "11efabca-bc71-4078-9515-7dc155186f55",
+            "Value": {
+                "id": "bdd5d6f9-43e8-4f96-a84c-ffe5b94b6000",
+                "resourcePath": "sprites\\spr_XW6WindOrb2\\spr_XW6WindOrb2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3215,6 +3247,14 @@
             }
         },
         {
+            "Key": "4780f30e-3433-4e6e-9e52-8cbf3e739c6a",
+            "Value": {
+                "id": "f18355d3-c5eb-4bde-8236-79ba2aadff7c",
+                "resourcePath": "sprites\\spr_XW6WindOrb3\\spr_XW6WindOrb3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4781eff1-ebcc-468e-b212-c49b5c314f44",
             "Value": {
                 "id": "1ed847da-2080-4f1f-9343-3b437d6f9436",
@@ -4586,7 +4626,7 @@
             "Key": "68f82d3f-5b90-4d3b-a6f1-6a401961c1c8",
             "Value": {
                 "id": "09420a89-f8b5-4207-bbe5-4b66b34bb1c7",
-                "resourcePath": "objects\\obj_ZZ\\obj_ZZ.yy",
+                "resourcePath": "objects\\obj_solarDashDamageEff\\obj_solarDashDamageEff.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -4851,6 +4891,14 @@
             "Value": {
                 "id": "5a053b7b-4d73-4a87-83d5-1c2d387fe9ff",
                 "resourcePath": "objects\\obj_solarSlamDownEff\\obj_solarSlamDownEff.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6e561c6f-6ba8-44e5-bb2e-66b8aecb3dca",
+            "Value": {
+                "id": "aeec8059-ce77-4410-8f64-96eb264ed4db",
+                "resourcePath": "objects\\obj_XW6TornadoMissle\\obj_XW6TornadoMissle.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -6567,6 +6615,14 @@
             }
         },
         {
+            "Key": "92f1fc77-a047-4f4a-9d96-cb244317dff7",
+            "Value": {
+                "id": "57e4b5ed-60ad-4330-8de0-f6d8e11f3094",
+                "resourcePath": "sprites\\spr_XW6WindOrb1\\spr_XW6WindOrb1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "92f555d9-73cf-4c79-abeb-cfcf890dd988",
             "Value": {
                 "id": "b9cf1a4d-3810-4c3c-844a-d17d0417b670",
@@ -6682,7 +6738,7 @@
             "Key": "9584ca8d-b34a-4bc9-ab38-27d57e48c931",
             "Value": {
                 "id": "f1a80dcd-7304-4bf4-b062-458158c1c4ed",
-                "resourcePath": "sprites\\sprite658\\sprite658.yy",
+                "resourcePath": "sprites\\spr_XSolarDashDamageEff\\spr_XSolarDashDamageEff.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7532,6 +7588,14 @@
                 "id": "8a59bb5f-4a75-4cfc-a470-fbe6ec94f67c",
                 "resourcePath": "sprites\\spr_XSDuck1\\spr_XSDuck1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ac34ecc4-74e0-4c55-8a74-a5eecd63f56e",
+            "Value": {
+                "id": "48a9d87e-19e6-4158-92bd-67c3fa20db1e",
+                "resourcePath": "views\\ac34ecc4-74e0-4c55-8a74-a5eecd63f56e.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -9127,6 +9191,14 @@
             }
         },
         {
+            "Key": "d1e01819-918c-417b-8177-16410e7bd593",
+            "Value": {
+                "id": "63706f72-8e5b-4792-b1bb-e0da63a8e0d2",
+                "resourcePath": "views\\d1e01819-918c-417b-8177-16410e7bd593.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "d1ec2721-02a6-4e3b-8447-477ead511110",
             "Value": {
                 "id": "36ccf676-7d0e-408e-a4b4-f4be3c5c8e4d",
@@ -9316,6 +9388,14 @@
                 "id": "390f618a-9199-4388-a98e-8ca437aacdce",
                 "resourcePath": "scripts\\scr_playerVoiceLowHp\\scr_playerVoiceLowHp.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d59adfb2-e180-4375-9c64-835ce2c2108a",
+            "Value": {
+                "id": "7d9cd459-eacd-4c01-858d-b385c479a6dc",
+                "resourcePath": "sprites\\spr_XW6TornadoMissle1\\spr_XW6TornadoMissle1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -10167,6 +10247,14 @@
             }
         },
         {
+            "Key": "e9d53264-4b9d-4fa3-9457-724196547500",
+            "Value": {
+                "id": "d0ac1012-e042-40dd-b5c3-2a7ad5fc12ba",
+                "resourcePath": "sprites\\spr_XW6WindEff\\spr_XW6WindEff.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e9e4d3e6-d77c-4642-9f23-05030c217dc8",
             "Value": {
                 "id": "5f51b207-7b73-464f-87f9-99e6caea93d7",
@@ -11011,6 +11099,14 @@
             "Value": {
                 "id": "52dfcc1b-cf87-4b6d-94f8-19fe2ae47a82",
                 "resourcePath": "sprites\\spr_ZSaberSlashSpin\\spr_ZSaberSlashSpin.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fb09d5d6-82c0-4953-8e16-f4a32fd42489",
+            "Value": {
+                "id": "2be16ccd-4804-4bf3-9c7e-3f06b5179385",
+                "resourcePath": "sprites\\spr_XW6WindEffEnd\\spr_XW6WindEffEnd.yy",
                 "resourceType": "GMSprite"
             }
         },

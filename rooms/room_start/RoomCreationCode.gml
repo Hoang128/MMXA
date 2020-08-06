@@ -63,6 +63,7 @@ for(i = 0; i <= 8; i++)
 	global.weapon[i] = ItemState.LOCK;
 }
 global.weapon[0] = ItemState.USING;
+global.weapon[6] = ItemState.USING;
 global.weapon[7] = ItemState.USING;
 global.weapon[8] = ItemState.USING;
 

@@ -3,8 +3,17 @@
 
 if (sprite_index == sprDash1)
 {
-	if (usedFArmorPointFlag)
+	if (ArmorPoint > 0)
 	{
+		var objSolarDashDmgEff = instance_create_depth(x + image_xscale * 40, (bbox_bottom + bbox_top) / 2, depth - 1, obj_solarDashDamageEff);
+		objSolarDashDmgEff.core = self;
+		objSolarDashDmgEff.xPlace = 40;
+		objSolarDashDmgEff.yPlace = (bbox_bottom + bbox_top) / 2 - y;
+		objSolarDashDmgEff.image_xscale = image_xscale;
+		objSolarDashDmgEff.depth = depth - 15;
+	}
+	if (usedFArmorPointFlag)
+	{	
 		var objSolarDashImpactEff = instance_create_depth(x + image_xscale * 40, (bbox_bottom + bbox_top) / 2, depth - 1, obj_solarDashImpactEff);
 		objSolarDashImpactEff.image_xscale = image_xscale;
 		objSolarDashImpactEff.depth = depth - 10;
@@ -33,6 +42,15 @@ switch (sprite_index)
 			dashEff.core = self;
 			dashEff.image_angle = 90 - 45 * image_xscale;
 			
+			if (ArmorPoint > 0)
+			{
+				var objSolarDashDmgEff = instance_create_depth(x + image_xscale * 40 * 1/sqrt(2), (bbox_bottom + bbox_top) / 2 - 40 * 1/sqrt(2), depth - 1, obj_solarDashDamageEff);
+				objSolarDashDmgEff.core = self;
+				objSolarDashDmgEff.xPlace = 40 * 1/sqrt(2);
+				objSolarDashDmgEff.yPlace = (bbox_bottom + bbox_top) / 2 - 40 * 1/sqrt(2) - y;
+				objSolarDashDmgEff.depth = depth - 15;
+				objSolarDashDmgEff.image_angle = 90 - 45 * image_xscale;
+			}
 			if (usedFArmorPointFlag)
 			{
 				var objSolarDashImpactEff = instance_create_depth(x + image_xscale * 40 * 1/sqrt(2), (bbox_bottom + bbox_top) / 2 - 40 * 1/sqrt(2), depth - 1, obj_solarDashImpactEff);
@@ -56,6 +74,15 @@ switch (sprite_index)
 			dashEff.core = self;
 			dashEff.image_angle = 270 + 45 * image_xscale;
 			
+			if (ArmorPoint > 0)
+			{
+				var objSolarDashDmgEff = instance_create_depth(x + image_xscale * 40 * 1/sqrt(2), (bbox_bottom + bbox_top) / 2 + 40 * 1/sqrt(2), depth - 1, obj_solarDashDamageEff);
+				objSolarDashDmgEff.core = self;
+				objSolarDashDmgEff.xPlace = 40 * 1/sqrt(2);
+				objSolarDashDmgEff.yPlace = (bbox_bottom + bbox_top) / 2 + 40 * 1/sqrt(2) - y;
+				objSolarDashDmgEff.depth = depth - 15;
+				objSolarDashDmgEff.image_angle = 270 + 45 * image_xscale;
+			}
 			if (usedFArmorPointFlag)
 			{
 				var objSolarDashImpactEff = instance_create_depth(x + image_xscale * 40 * 1/sqrt(2), (bbox_bottom + bbox_top) / 2 + 40 * 1/sqrt(2), depth - 1, obj_solarDashImpactEff);

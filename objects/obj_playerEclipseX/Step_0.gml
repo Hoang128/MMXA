@@ -262,7 +262,16 @@ if (activateState != ActivateState.DEACTIVATE)
 						scr_playerXChangeShotSprite(object_index, false ,false);
 						sprite_index = spr_XESlamDown;
 						image_index = 0;
-					
+						
+						if (ArmorPoint > 0)
+						{
+							var objSolarDashDmgEff = instance_create_depth(x, bbox_bottom + 16, depth - 1, obj_solarDashDamageEff);
+							objSolarDashDmgEff.core = self;
+							objSolarDashDmgEff.xPlace = 0;
+							objSolarDashDmgEff.yPlace = bbox_bottom + 16 - y;
+							objSolarDashDmgEff.depth = depth - 15;
+							objSolarDashDmgEff.image_angle = 270;
+						}
 						var objSolarDashImpactEff = instance_create_depth(x, bbox_bottom + 16, depth - 1, obj_solarDashImpactEff);
 						objSolarDashImpactEff.depth = depth - 10;
 						objSolarDashImpactEff.image_angle = 270;
