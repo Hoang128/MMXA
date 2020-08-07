@@ -153,7 +153,8 @@ if (activateState != ActivateState.DEACTIVATE)
 			}
 			else 
 			{
-				hDir = sign(hspd);
+				if (sign(hspd) != 0)
+					hDir = sign(hspd);
 				dashKickTime -= DELTA_TIME;
 			}
 		}

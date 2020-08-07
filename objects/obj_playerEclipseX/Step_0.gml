@@ -217,11 +217,11 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Impact down
 		#region
 		
-		if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))
+		if (sprite_index == spr_XESlamDown)
 		{
 			if (aState == ActionState.SP_MOVE)
 			{
-				if (sprite_index == spr_XESlamDown)
+				if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))
 				{
 					sprite_index = spr_XEImpactDown;
 					image_index = 0;
@@ -237,6 +237,13 @@ if (activateState != ActivateState.DEACTIVATE)
 					
 					timeInImpactDown = minTimeInImpactDown;
 					vState = VerticalState.V_ON_GROUND;
+				}
+				else
+				{
+					var hMove = keyboard_check(global.keyRight) - keyboard_check(global.keyLeft);
+					
+					if (hMove != 0)
+						hDir = hMove;
 				}
 			}
 		}
