@@ -9,6 +9,8 @@ if (!init)
 else
 {
 	scr_destroyObjOutOfCamera(self);
+	
+	//Image direction
 	if image_xscale == 1
 	   image_angle = direction;
 	else
@@ -17,6 +19,22 @@ else
 	   image_yscale = -1;
 	   image_angle = - direction;
 	}
+	
+	//Create effect
+	if (createWindTime < createWindMax)
+		createWindTime += DELTA_TIME;
+	else
+	{
+		var objWind = instance_create_depth(x, y, depth + 1, obj_XW6TornadoEff);
+		objWind.image_xscale = image_xscale;
+		objWind.image_yscale = image_yscale;
+		objWind.image_angle = image_angle;
+		createWindTime = 0;
+	}
+	
+	createWindMax = ceil(constBalance / spd);
+	
+	//Phase non target
 	if (phase == 1)
 	{
 		if (nonTargetTime < nonTargetTimeMax)
@@ -28,6 +46,8 @@ else
 			phase = 2;
 		}
 	}
+	
+	//Phase have target
 	if (phase == 2)
 	{
 		if ((direction >= 90 && direction < 270))	dir = -1;
@@ -70,5 +90,5 @@ else
 		}
 	}
 	spd += DELTA_TIME;
-	motion_add(direction, spd / 300);
+	motion_add(direction, spd / 300 * DELTA_TIME);
 }

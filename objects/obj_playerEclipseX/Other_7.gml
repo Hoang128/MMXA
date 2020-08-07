@@ -5,9 +5,9 @@ if (sprite_index == sprDash1)
 {
 	if (ArmorPoint > 0)
 	{
-		var objSolarDashDmgEff = instance_create_depth(x + image_xscale * 40, (bbox_bottom + bbox_top) / 2, depth - 1, obj_solarDashDamageEff);
+		var objSolarDashDmgEff = instance_create_depth(x + image_xscale * 26, (bbox_bottom + bbox_top) / 2, depth - 1, obj_solarDashDamageEff);
 		objSolarDashDmgEff.core = self;
-		objSolarDashDmgEff.xPlace = 40;
+		objSolarDashDmgEff.xPlace = 26;
 		objSolarDashDmgEff.yPlace = (bbox_bottom + bbox_top) / 2 - y;
 		objSolarDashDmgEff.image_xscale = image_xscale;
 		objSolarDashDmgEff.depth = depth - 15;
@@ -44,10 +44,10 @@ switch (sprite_index)
 			
 			if (ArmorPoint > 0)
 			{
-				var objSolarDashDmgEff = instance_create_depth(x + image_xscale * 40 * 1/sqrt(2), (bbox_bottom + bbox_top) / 2 - 40 * 1/sqrt(2), depth - 1, obj_solarDashDamageEff);
+				var objSolarDashDmgEff = instance_create_depth(x + image_xscale * 26 * 1/sqrt(2), (bbox_bottom + bbox_top) / 2 - 26 * 1/sqrt(2), depth - 1, obj_solarDashDamageEff);
 				objSolarDashDmgEff.core = self;
-				objSolarDashDmgEff.xPlace = 40 * 1/sqrt(2);
-				objSolarDashDmgEff.yPlace = (bbox_bottom + bbox_top) / 2 - 40 * 1/sqrt(2) - y;
+				objSolarDashDmgEff.xPlace = 24 * 1/sqrt(2);
+				objSolarDashDmgEff.yPlace = (bbox_bottom + bbox_top) / 2 - 26 * 1/sqrt(2) - y;
 				objSolarDashDmgEff.depth = depth - 15;
 				objSolarDashDmgEff.image_angle = 90 - 45 * image_xscale;
 			}
@@ -76,10 +76,10 @@ switch (sprite_index)
 			
 			if (ArmorPoint > 0)
 			{
-				var objSolarDashDmgEff = instance_create_depth(x + image_xscale * 40 * 1/sqrt(2), (bbox_bottom + bbox_top) / 2 + 40 * 1/sqrt(2), depth - 1, obj_solarDashDamageEff);
+				var objSolarDashDmgEff = instance_create_depth(x + image_xscale * 26 * 1/sqrt(2), (bbox_bottom + bbox_top) / 2 + 26 * 1/sqrt(2), depth - 1, obj_solarDashDamageEff);
 				objSolarDashDmgEff.core = self;
-				objSolarDashDmgEff.xPlace = 40 * 1/sqrt(2);
-				objSolarDashDmgEff.yPlace = (bbox_bottom + bbox_top) / 2 + 40 * 1/sqrt(2) - y;
+				objSolarDashDmgEff.xPlace = 26 * 1/sqrt(2);
+				objSolarDashDmgEff.yPlace = (bbox_bottom + bbox_top) / 2 + 26 * 1/sqrt(2) - y;
 				objSolarDashDmgEff.depth = depth - 15;
 				objSolarDashDmgEff.image_angle = 270 + 45 * image_xscale;
 			}

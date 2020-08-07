@@ -265,10 +265,10 @@ if (activateState != ActivateState.DEACTIVATE)
 						
 						if (ArmorPoint > 0)
 						{
-							var objSolarDashDmgEff = instance_create_depth(x, bbox_bottom + 16, depth - 1, obj_solarDashDamageEff);
+							var objSolarDashDmgEff = instance_create_depth(x + 2 * image_xscale, bbox_bottom + 4, depth - 1, obj_solarDashDamageEff);
 							objSolarDashDmgEff.core = self;
-							objSolarDashDmgEff.xPlace = 0;
-							objSolarDashDmgEff.yPlace = bbox_bottom + 16 - y;
+							objSolarDashDmgEff.xPlace = 2;
+							objSolarDashDmgEff.yPlace = bbox_bottom + 4 - y;
 							objSolarDashDmgEff.depth = depth - 15;
 							objSolarDashDmgEff.image_angle = 270;
 						}

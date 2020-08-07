@@ -415,6 +415,14 @@
             }
         },
         {
+            "Key": "07d0363c-e334-4680-9c81-8bd8c3a3559e",
+            "Value": {
+                "id": "e5b9b77f-d62a-4cb6-bf42-81bb901141c2",
+                "resourcePath": "objects\\obj_XW6TornadoEff\\obj_XW6TornadoEff.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "07e54ed5-9f49-44c3-9f04-b78f3ac36398",
             "Value": {
                 "id": "f09508de-ed42-468b-8ef9-d6555047faac",
@@ -1107,6 +1115,14 @@
             "Value": {
                 "id": "0af52dfc-91b7-41c1-9f25-be0835e14478",
                 "resourcePath": "objects\\obj_spinnerWindowSize\\obj_spinnerWindowSize.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "1788875f-8ff3-4058-a068-0b55cc3f0054",
+            "Value": {
+                "id": "acb54c25-6c89-4611-b690-150a583c152e",
+                "resourcePath": "objects\\obj_XW6TornadoOuterEff\\obj_XW6TornadoOuterEff.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -6212,6 +6228,14 @@
                 "id": "74a02794-f9f0-47ca-98e8-0cb299a51e4a",
                 "resourcePath": "scripts\\scr_XAtk7Time\\scr_XAtk7Time.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "896d8cab-497d-40bc-bc5a-4f9b14bd5dbb",
+            "Value": {
+                "id": "983067a6-f9ba-474d-b6b3-f37780365d3f",
+                "resourcePath": "objects\\obj_GlobalSoundListener\\obj_GlobalSoundListener.yy",
+                "resourceType": "GMObject"
             }
         },
         {

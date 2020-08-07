@@ -1,1 +1,1 @@
-scr_playerXSpecialWShot(false, obj_XW6ShotEff, 90, atkSpriteTimeMax);
+scr_playerXSpecialWShot(false, obj_XW6ShotEff, 60, atkSpriteTimeMax);
