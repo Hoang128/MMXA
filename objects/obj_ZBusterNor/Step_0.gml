@@ -15,7 +15,7 @@ if (flyTime > 0)
 		var colWallObj = instance_create_depth(xPlace , y, depth - 1, collisionEff);
 		colWallObj.image_xscale = image_xscale;
 		colWallObj.from = self.object_index;
-		colWallObj.myPalette = spr_PalZBuster;
+		colWallObj.myPalette = spr_PalBusterColEff;
 		instance_destroy();
 	}
 	flyTime -= DELTA_TIME;

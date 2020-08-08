@@ -14,12 +14,13 @@ if (guardEffEnable == true)
 		
 	switch(other.object_index)
 	{
+		case obj_SolarBusterNormal:
 		case obj_XBusterNormal:
 		{
 			other.bounce = 1;
 			instance_destroy(other);
 		}	break;
-			
+
 		case obj_ZBusterNor:
 		case obj_ZBusterCharge:
 		case obj_XBusterC1:

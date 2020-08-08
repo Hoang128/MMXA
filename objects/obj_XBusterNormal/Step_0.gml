@@ -13,6 +13,6 @@ if place_meeting(x, y, obj_block)
 	var colWallObj = instance_create_depth(xPlace , y, depth - 1, collisionEff);
 	colWallObj.image_xscale = image_xscale;
 	colWallObj.from = self.object_index;
-	colWallObj.myPalette = spr_PalXBuster;
+	colWallObj.myPalette = spr_PalBusterColEff;
 	instance_destroy();
 }

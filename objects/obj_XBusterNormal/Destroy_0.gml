@@ -11,7 +11,8 @@ if (bounce == 1)
 	if (random(2) > 1)
 		bounceUp = -1;
 	
-	var obj = instance_create_depth(x, y, depth, obj_XBusterNormalBounce);
+	var obj = instance_create_depth(x, y, depth, obj_BusterNormalBounce);
+	obj.sprite_index = bounceSpr;
 	obj.image_angle = startAngle - bounceUp * (random(30) + 30);
 	obj.direction = obj.image_angle;
 	obj.moveSpd = moveSpd;

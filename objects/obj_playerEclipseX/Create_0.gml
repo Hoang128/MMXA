@@ -12,7 +12,7 @@ sprHover          = spr_XEHover;
 
 //Armor
 partHead = 0;
-partArms = 0;
+partArms = 1;
 partBody = 0;
 partFoot = 1;
 

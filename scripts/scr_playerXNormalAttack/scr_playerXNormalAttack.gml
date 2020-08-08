@@ -25,9 +25,18 @@ else
 								scr_playerXChangeShotSprite(object_index, true, false);
 								if (sprite_index != spr_XClimbStart && sprite_index != spr_XClimbEnd)
 								{
-									var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffXBuster);
-									obj.core = self;
-									atkSpriteTime = atkSpriteTimeMax;
+									if (partArms != 1)
+									{
+										var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffXBuster);
+										obj.core = self;
+										atkSpriteTime = atkSpriteTimeMax;
+									}
+									else
+									{
+										var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffSolarBuster);
+										obj.core = self;
+										atkSpriteTime = atkSpriteTimeMax;
+									}
 						
 									if (sprite_index == spr_XShotClimb)
 									{

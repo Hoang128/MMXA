@@ -5,6 +5,8 @@ if (instance_exists(core))
 {
 	switch (Foot)
 	{
+		#region
+		
 		//No Armor
 		case 0:	FootImg = noone; break;
 	
@@ -100,7 +102,85 @@ if (instance_exists(core))
 		{
 		
 		}	break;
+		
+		#endregion
+	}
 	
+	switch (Arms)
+	{
+		#region
+		
+		//No Armor
+		case 0:	FootImg = noone; break;
+	
+		//Solar Foot
+		case 1:
+		{
+			switch (core.sprite_index)
+			{
+				//Basic frames
+				case spr_XStand:			ArmsImg = spr_AXSStand;				break;
+				case spr_XDying:			ArmsImg = spr_AXSDying;				break;
+				case spr_XRunStart:			ArmsImg = spr_AXSRunStart;			break;
+				case spr_XRun:				ArmsImg = spr_AXSRun;				break;
+				case spr_XRunEnd:			ArmsImg = spr_AXSRunEnd;			break;
+				case spr_XJump1:			ArmsImg = spr_AXSJump1;				break;
+				case spr_XJump2:			ArmsImg = spr_AXSJump2;				break;
+				case spr_XJump3:			ArmsImg = spr_AXSJump3;				break;
+				case spr_XJump4:			ArmsImg = spr_AXSJump4;				break;
+				case spr_XLand:				ArmsImg = spr_AXSLand;				break;
+				case spr_XDash1:			ArmsImg = spr_AXSDash1;				break;
+				case spr_XDash2:			ArmsImg = spr_AXSDash2;				break;
+				case spr_XDash3:			ArmsImg = spr_AXSDash3;				break;
+				case spr_XSlide1:			ArmsImg = spr_AXSSlide1;			break;
+				case spr_XSlide2:			ArmsImg = spr_AXSSlide2;			break;
+				case spr_XWallKick:			ArmsImg = spr_AXSWallKick;			break;
+				case spr_XDashKick1:		ArmsImg = spr_AXSDashKick1;			break;
+				case spr_XDashKick2:		ArmsImg = spr_AXSDashKick2;			break;
+				case spr_XDuck1:			ArmsImg = spr_AXSDuck1;				break;
+				case spr_XDuck2:			ArmsImg = spr_AXSDuck2;				break;
+				case spr_XDuck3:			ArmsImg = spr_AXSDuck3;				break;
+				case spr_XClimbStart:		ArmsImg = spr_AXSClimbStart;		break;
+				case spr_XClimb:			ArmsImg = spr_AXSClimb;				break;
+				case spr_XClimbEnd:			ArmsImg = spr_AXSClimbEnd;			break;
+				case spr_XStun1:			ArmsImg = spr_AXSStun1;				break;
+				case spr_XStun2:			ArmsImg = spr_AXSStun2;				break;
+				//case spr_XStun0:			FootImg = spr_AXSStun0;				break;
+				
+				//Attack frames
+				
+				//Special move frames
+				//case spr_XDashCrossDown1:	FootImg = spr_FXSDashCrossDown1;	break;
+				//case spr_XDashCrossDown2:	FootImg = spr_FXSDashCrossDown2;	break;
+				//case spr_XESlamDown:		FootImg = spr_FXSSlamDown;			break;
+				//case spr_XEImpactDown:	FootImg = spr_FXSImpactDown;		break;
+				//case spr_XEJumpBack1:		FootImg = spr_FXSJumpBack1;			break;
+				//case spr_XEJumpBack2:		FootImg = spr_FXSJumpBack2;			break;
+				//case spr_XEJumpBack3:		FootImg = spr_FXSJumpBack3;			break;
+				//case spr_XEHoverShot:		FootImg = spr_FXSHoverShot;			break;
+				//case spr_XEHover:			FootImg = spr_FXSHover;				break;
+				
+				//Wire frames
+				case spr_XWiredForward:
+				case spr_XWiredUp:
+				case spr_XWiredDown:
+				case spr_XWired:		
+											FootImg = spr_AXSWired;				break;
+				case spr_XWiredStartHorizontal:
+											FootImg = spr_AXSWiredStartHorizontal;		break;
+				case spr_XWiredStartVertical:
+											FootImg = spr_AXSWiredStartVertical;		break;
+				default:					ArmsImg = noone;
+			}
+		}
+	
+		//Lunar Foot
+		case 2:
+		{
+		
+		}	break;
+		
+		#endregion
 	}
 	
 	x = core.x;
