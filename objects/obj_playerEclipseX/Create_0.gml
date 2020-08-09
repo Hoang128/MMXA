@@ -8,7 +8,6 @@ event_inherited();
 //Special Frames
 sprDashCrossDown1 = spr_XDashCrossDown1;
 sprDashCrossDown2 = spr_XDashCrossDown2;
-sprHover          = spr_XEHover;
 
 //Armor
 partHead = 0;

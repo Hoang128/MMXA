@@ -121,11 +121,6 @@ if (init == false)
 			xPlace=17*core.hDir;
 			yPlace=-24;
 		}	break;
-		case spr_XEHoverShot:
-		{
-			xPlace = 17*core.hDir;
-			yPlace = -24;
-		}	break;
 	}
 	
 	if(core.sprite_index == spr_XShotSlide1 

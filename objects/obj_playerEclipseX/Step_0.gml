@@ -109,19 +109,6 @@ if (activateState != ActivateState.DEACTIVATE)
 			}
 		}
 		
-		//Jump back
-		if (vspd >=0)
-		{
-			if (sprite_index == spr_XEJumpBack2)
-			{
-				sprite_index = spr_XEJumpBack3;
-				image_index = 0;
-			
-				hspd = 0;
-				vspd = 0;
-			}
-		}
-		
 		//Disable flags
 		if (aState != ActionState.DASHING)
 		{

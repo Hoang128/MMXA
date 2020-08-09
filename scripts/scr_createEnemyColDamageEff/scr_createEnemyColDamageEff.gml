@@ -33,21 +33,6 @@ if (other.collisionEff != noone)
 			var objColEff = instance_create_depth(xPlace, yPlace, other.depth - 1, other.collisionEff);
 			objColEff.image_xscale = other.image_xscale;
 			objColEff.from = other.object_index;
-			switch(other.object_index)
-			{
-				case	obj_XBusterC1:
-				case	obj_XBusterC2:
-				case	obj_XBusterNormal:	
-				{
-					objColEff.myPalette = spr_PalXBuster;
-				}	break;
-				case	obj_ZBusterCharge:
-				case	obj_ZThunderBlaster:
-				case	obj_ZBusterNor:		
-				{
-					objColEff.myPalette = spr_PalZBuster;
-				}	break;
-			}
 		}
 	}
 	#endregion
