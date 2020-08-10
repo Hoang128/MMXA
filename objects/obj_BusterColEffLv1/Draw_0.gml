@@ -9,7 +9,11 @@ if (myPalette != noone)
 		case	obj_XBusterC1:
 		case	obj_XBusterC2:
 		case	obj_XBusterNormal:			pal = 0;	break;
-		case	obj_SolarBusterNormal:		pal = 1;	break;
+		case	obj_solarDashDamageEff:
+		case	obj_SolarBusterNormal:
+		case	obj_SolarBusterC1:	
+		case	obj_SolarBusterC2:
+		case	obj_SolarBusterC3:			pal = 1;	break;
 		case	obj_ZBusterCharge:
 		case	obj_ZThunderBlaster:
 		case	obj_ZBusterNor:				pal = 2;	break;

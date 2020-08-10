@@ -126,10 +126,10 @@ else{
 			scr_LOG_INFO("Char In Water State = " + str_inWaterState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Horizontal Speed = " + string(obj_playerHumanForm.hspd), debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Vertical Speed = " + string(obj_playerHumanForm.vspd), debugTextColorF, debugTextColorB);
-			scr_LOG_INFO("Char vDashDir = " + string(obj_playerHumanForm.vDashDir), debugTextColorF, debugTextColorB);
-			if (instance_exists(obj_playerXUA))
+			if (instance_exists(obj_playerEclipseX))
 			{
-				scr_LOG_INFO("Charge Weapon = " + string(obj_playerXUA.chargeWeapon), debugTextColorF, debugTextColorB);
+				scr_LOG_INFO("Charge Stack  = " + string(obj_playerEclipseX.chargeStack), debugTextColorF, debugTextColorB);
+				scr_LOG_INFO("Charge Normal = " + string(obj_playerEclipseX.chargeNormal), debugTextColorF, debugTextColorB);
 			}
 		}
 		#endregion

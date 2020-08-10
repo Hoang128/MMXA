@@ -88,5 +88,77 @@ switch (sprite_index)
 			audio_play_sound_on(global.SFX_Emitter, sndDashEff, 0, 0);
 		}
 	}	break;
+	
+	case spr_XEDoubleShot1_A:
+	{
+		if (comboStack == false)
+		{
+			if (vspd <= 0)
+				sprite_index = sprJump2;
+			else
+				sprite_index = sprJump4;
+			image_index = 0;
+		
+			atkState = AttackState.A_NONE;
+		}
+		else
+		{
+			sprite_index = spr_XEDoubleShot2_A;
+			image_index = 0;
+			
+			createSolarChargeEff = false;
+			comboStack = false;
+			dashSpd = 0;
+			dashTime = 0;
+			atkState = AttackState.A_STRICT_ATTACK;
+		}
+	}	break;
+	
+	case spr_XEDoubleShot1_G:
+	{
+		if (comboStack == false)
+		{
+			sprite_index = sprStand;
+			image_index = 0;
+		
+			atkState = AttackState.A_NONE;
+		}
+		else
+		{
+			sprite_index = spr_XEDoubleShot2_G;
+			image_index = 0;
+			
+			hspd = 0;
+			hState = HorizontalState.H_MOVE_NONE;
+			createSolarChargeEff = false;
+			comboStack = false;
+			dashSpd = 0;
+			dashTime = 0;
+			atkState = AttackState.A_STRICT_ATTACK_LV3;
+		}
+	}	break;
+	
+	case spr_XEDoubleShot2_A:
+	{
+		if (vspd <= 0)
+			sprite_index = sprJump2;
+		else
+			sprite_index = sprJump4;
+		image_index = 0;
+		
+		atkState = AttackState.A_NONE;
+		chargeNormal = 0;
+		chargeStack = 0;
+	}	break;
+	
+	case spr_XEDoubleShot2_G:
+	{
+		sprite_index = sprStand;
+		image_index = 0;
+		
+		atkState = AttackState.A_NONE;
+		chargeNormal = 0;
+		chargeStack = 0;
+	}	break;
 }
 

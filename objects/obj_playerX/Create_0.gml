@@ -20,7 +20,6 @@ waitShotLong = 15;
 waitShotMax = 30;
 waitShot = 0;
 waitShotSpecial = 0;
-waitShotSpecialSet = 0;
 yDistanceToWirer = 44;
 objWire = obj_XWirer;
 

@@ -15,12 +15,16 @@ scr_InitImageSpeedPlayerHFormBase(obj_playerX);
 
 switch(sprite_index)
 {
-	case spr_XShotStand:	image_speed = 0.5; break;
+	case spr_XShotStand:		image_speed = 0.5; break;
 	case spr_XCShotStand:
-	case spr_XCShotDuck:	image_speed = 0.8; break;
-	case spr_XShotClimb:	image_speed = 0.3; break;
+	case spr_XCShotDuck:		image_speed = 0.8; break;
+	case spr_XShotClimb:		image_speed = 0.3; break;
 	case sprDashCrossDown1:
-	case sprDashCrossDown2:	image_speed = 0.5; break;
+	case sprDashCrossDown2:		image_speed = 0.5; break;
+	case spr_XEDoubleShot1_A:
+	case spr_XEDoubleShot1_G:
+	case spr_XEDoubleShot2_A:
+	case spr_XEDoubleShot2_G:	image_speed = 0.5; break;
 }
 
 image_speed *= DELTA_TIME;

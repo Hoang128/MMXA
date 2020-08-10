@@ -22,7 +22,7 @@ if (global.isStage)
 	instance_create_depth(x, y, lHUD, obj_fMenuMapName);
 	instance_create_depth(x, y, -1000, obj_globalEffManager);
 	instance_create_depth(global.xSpawmLocation, global.ySpawmLocation, depth, obj_view);
-	var player = instance_create_layer(global.xSpawmLocation, global.ySpawmLocation, lPlayer, obj_playerZ);
+	var player = instance_create_layer(global.xSpawmLocation, global.ySpawmLocation, lPlayer, obj_playerEclipseX);
 	if (global.xSpawmLocation < 64)	
 	{
 		player.hDir = 1;

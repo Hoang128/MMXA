@@ -3,5 +3,15 @@
 
 // Inherit the parent event
 event_inherited();
-
-if (core.chargeNormal <= 0) instance_destroy();
+if ((core.object_index == obj_playerX) 
+||	(core.object_index == obj_playerXUA)
+||	(core.object_index == obj_playerEclipseX && core.partArms != 1))
+{
+	if (core.chargeNormal <= 0) 
+		instance_destroy();
+}
+else
+{
+	if ((core.chargeNormal >= 0) && (core.chargeNormal < core.chargeSolarLv1Limit))
+		instance_destroy();
+}

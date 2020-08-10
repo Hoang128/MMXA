@@ -30,6 +30,9 @@ coolDownSpdSlow = 1;
 coolDownSpdNormal = 2;
 coolDownSpdCharge = 80;
 minTimeInImpactDown = 20;
+chargeSolarLv1Limit = 40;
+chargeSolarLv2Limit = 100;
+chargeSolarLv3Limit = 160;
 
 
 //Inside Variables
@@ -38,6 +41,7 @@ SolarDrive = false;
 freezeMode = false;
 LunarDrive = false;
 solarDashTime = 2;
+createSolarChargeEff = false;
 usedFirstAirDash = false;
 dashed = false;
 coolDownSpd = 2;
@@ -48,3 +52,5 @@ coolDownAPTime = 0;
 timeInImpactDown = 0;
 isCrossDashing = false;
 chargeWeapon = 0;
+chargeStack = 0;
+comboStack = false;

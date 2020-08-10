@@ -447,6 +447,14 @@
             }
         },
         {
+            "Key": "08327265-387f-4add-8575-4e81464fc2ac",
+            "Value": {
+                "id": "2b8f2916-d814-462f-825e-579c3cfda6c4",
+                "resourcePath": "objects\\obj_SolarBusterC2\\obj_SolarBusterC2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0843983f-ea74-4a07-b761-a2efdb84ed1f",
             "Value": {
                 "id": "1ef047ec-ba53-4f43-98e8-d9463e62a1c9",
@@ -1983,6 +1991,14 @@
             }
         },
         {
+            "Key": "2b978510-1ab9-44b7-ac3e-60dc7f3c8577",
+            "Value": {
+                "id": "5dc8b402-4b76-42fb-9d0a-00cb7e51472f",
+                "resourcePath": "objects\\obj_ShotEffSolarBusterC2\\obj_ShotEffSolarBusterC2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2c3ca3c4-b7b8-4ac7-84e9-ed5e7846c38f",
             "Value": {
                 "id": "f82c3e3b-9ba3-44a8-acec-3d5d580d1823",
@@ -2843,6 +2859,14 @@
             "Value": {
                 "id": "9eff0256-eaea-48c4-87be-0b85d035ff4d",
                 "resourcePath": "sprites\\spr_XUAClimbShot\\spr_XUAClimbShot.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3c501410-0905-42d6-90f4-75673c93ba52",
+            "Value": {
+                "id": "fa416f9e-1937-4c73-bde9-54110b3288fe",
+                "resourcePath": "sprites\\spr_SolarBusterC3\\spr_SolarBusterC3.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4647,6 +4671,14 @@
             }
         },
         {
+            "Key": "6652d0d1-86cf-4bce-a0dc-6c7e3ddd832a",
+            "Value": {
+                "id": "979ac92c-3a45-4c0f-afcb-6b15ce33132b",
+                "resourcePath": "sprites\\spr_SolarBusterC2\\spr_SolarBusterC2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "665ecb10-3b9e-4a05-81ef-3aca1c665565",
             "Value": {
                 "id": "6cfbd101-587d-4b73-bf4c-fe69fa206015",
@@ -5484,6 +5516,14 @@
                 "id": "46988b23-7459-4cf8-91a4-090730ff211a",
                 "resourcePath": "views\\7651827d-da9e-42b1-8a54-8f634f50ebce.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "76941696-b55a-4df0-8178-41773bd348ec",
+            "Value": {
+                "id": "34263a5b-3e18-4f34-93d0-2afab2911fc4",
+                "resourcePath": "objects\\obj_ShotEffSolarBusterC1\\obj_ShotEffSolarBusterC1.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -6716,6 +6756,14 @@
                 "id": "d77c0581-7252-4b36-8d9b-b4acd75815e5",
                 "resourcePath": "sounds\\snd_NovaStrikeEff\\snd_NovaStrikeEff.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "91a9710e-fc97-48d2-9d2f-c6dfcfd56190",
+            "Value": {
+                "id": "cdfdeb73-2560-4741-9d96-e67880cc7922",
+                "resourcePath": "objects\\obj_SolarBusterC1\\obj_SolarBusterC1.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -8019,6 +8067,14 @@
             "Value": {
                 "id": "22364372-37ef-48e4-a069-7908fdc14a88",
                 "resourcePath": "objects\\obj_ShotEffZBusterCharge\\obj_ShotEffZBusterCharge.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b30a710a-223d-4b69-899a-5f5cbfadfbf5",
+            "Value": {
+                "id": "ec362606-8f04-4387-af08-512dd918c190",
+                "resourcePath": "objects\\obj_ShotEffSolarBusterC3\\obj_ShotEffSolarBusterC3.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -10695,6 +10751,14 @@
             }
         },
         {
+            "Key": "ecea5217-800b-42f8-bcef-e8793a50776a",
+            "Value": {
+                "id": "55f631df-ec98-47a5-85e2-27eca4e771dc",
+                "resourcePath": "objects\\obj_SolarBusterC3\\obj_SolarBusterC3.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ed02692d-3ce4-4c4e-b6c2-ba25901865ea",
             "Value": {
                 "id": "cfee112b-3821-4633-a53c-7d4d53afd8b7",
@@ -11044,6 +11108,14 @@
                 "id": "13e42845-6030-4c20-a408-f14669a5cece",
                 "resourcePath": "sounds\\snd_waterEff\\snd_waterEff.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "f39f27d0-7c1d-40b4-9852-2007dd064ddc",
+            "Value": {
+                "id": "cdf6e300-2883-44df-be89-1fd78a761cb9",
+                "resourcePath": "sprites\\spr_SolarBusterC1\\spr_SolarBusterC1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

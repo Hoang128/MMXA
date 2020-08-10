@@ -132,6 +132,70 @@ if (activateState != ActivateState.DEACTIVATE)
 		
 	#endregion
 	
+	//Arms Effects
+	#region
+	
+	if (place_meeting(x, y + 1, obj_block) || (place_meeting(x, y + 1, dynamicBlock) && dynamicBlock.solid == 1))
+	{
+		//Charge shot 1
+		if (sprite_index == spr_XEDoubleShot1_A)
+		{
+			sprite_index = spr_XEDoubleShot1_G;
+			
+			scr_SetIceSlideSpd(hspd, true);
+			
+			hspd = 0;
+			hState = AttackState.A_NONE;
+			atkState = AttackState.A_STRICT_ATTACK_LV3;
+		}
+		
+		//Charge shot 2
+		if (sprite_index == spr_XEDoubleShot2_A)
+		{
+			sprite_index = spr_XEDoubleShot2_G;
+			
+			scr_SetIceSlideSpd(hspd, true);
+			
+			hspd = 0;
+			hState = AttackState.A_NONE;
+			atkState = AttackState.A_STRICT_ATTACK_LV3;
+		}
+	}
+	
+	if ((sprite_index == spr_XEDoubleShot1_G) || (sprite_index == spr_XEDoubleShot1_A))
+	{
+		if ((image_index >= 2) && (image_index <= 3))
+		{
+			if (createSolarChargeEff == false)
+			{
+				audio_play_sound_on(global.SFX_Emitter, snd_VXChargeShot1, 0, 0);
+				if (chargeStack == 2)
+					var obj = obj_ShotEffSolarBusterC1;
+				else if (chargeStack == 3)
+					var obj = obj_ShotEffSolarBusterC2;
+				var objSolarChargeEff = instance_create_depth(x, y, depth - 10, obj);
+				objSolarChargeEff.core = self;
+				createSolarChargeEff = true;
+			}
+		}
+	}
+	
+	if ((sprite_index == spr_XEDoubleShot2_G) || (sprite_index == spr_XEDoubleShot2_A))
+	{
+		if ((image_index >= 2) && (image_index <= 3))
+		{
+			if (createSolarChargeEff == false)
+			{
+				audio_play_sound_on(global.SFX_Emitter, snd_VXChargeShot2, 0, 0);
+				var objSolarChargeEff = instance_create_depth(x, y, depth - 10, obj_ShotEffSolarBusterC3);
+				objSolarChargeEff.core = self;
+				createSolarChargeEff = true;
+			}
+		}
+	}
+	
+	#endregion
+	
 	//Active*******************************************************************************************************************************************************
 	//Solar Active-------------------------------------------------------------------------------------------------------------------------------------------------
 	if (partFoot == 1)

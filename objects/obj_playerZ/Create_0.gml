@@ -21,7 +21,6 @@ objWire = obj_ZWirer;
 chargeCoreLv1Limit = 40;
 chargeCoreLv2Limit = 90;
 chargeCoreLv3Limit = 140;
-chargeCoreLvLimit = 3;
 
 //Initialize parents sprites***************************************************************************************************************************************
 scr_InitSpritePlayerHFormBase(obj_playerZ);

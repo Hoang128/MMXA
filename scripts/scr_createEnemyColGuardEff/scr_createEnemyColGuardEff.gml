@@ -26,6 +26,9 @@ if (guardEffEnable == true)
 		case obj_XBusterC1:
 		case obj_XBusterC2:
 		case obj_PlasmaBuster:
+		case obj_SolarBusterC1:
+		case obj_SolarBusterC2:
+		case obj_SolarBusterC3:
 		{
 			instance_destroy(other);
 		}	break;

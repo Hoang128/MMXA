@@ -155,11 +155,11 @@ if (instance_exists(core))
 				case spr_XWiredUp:
 				case spr_XWiredDown:
 				case spr_XWired:		
-											FootImg = spr_AXSWired;				break;
+											ArmsImg = spr_AXSWired;				break;
 				case spr_XWiredStartHorizontal:
-											FootImg = spr_AXSWiredStartHorizontal;		break;
+											ArmsImg = spr_AXSWiredStartHorizontal;		break;
 				case spr_XWiredStartVertical:
-											FootImg = spr_AXSWiredStartVertical;		break;
+											ArmsImg = spr_AXSWiredStartVertical;		break;
 				default:					ArmsImg = noone;
 			}
 		}

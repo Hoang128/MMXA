@@ -59,7 +59,7 @@ if (init == false)
 		case spr_XUARunEndShot:
 		{
 			xPlace=22*core.hDir;
-			yPlace=-28;
+			yPlace=-30;
 		}	break;
 		case spr_XShotWallKick: 
 		case spr_XUAWallKickShot:
@@ -120,6 +120,26 @@ if (init == false)
 		{
 			xPlace=17*core.hDir;
 			yPlace=-24;
+		}	break;
+		case spr_XEDoubleShot1_G:
+		{
+			xPlace = 21*core.hDir;
+			yPlace = -24;
+		}	break;
+		case spr_XEDoubleShot2_G:
+		{
+			xPlace = 21*core.hDir;
+			yPlace = -24;
+		}	break;
+		case spr_XEDoubleShot1_A:
+		{
+			xPlace = 21*core.hDir;
+			yPlace = -24;
+		}	break;
+		case spr_XEDoubleShot2_A:
+		{
+			xPlace = 21*core.hDir;
+			yPlace = -24;
 		}	break;
 	}
 	
