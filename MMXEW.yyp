@@ -351,6 +351,14 @@
             }
         },
         {
+            "Key": "066db58e-e02e-4ede-a90c-3f3dcaff6d05",
+            "Value": {
+                "id": "564bb821-accc-46b7-a91e-22c211057a6e",
+                "resourcePath": "objects\\obj_SolarBusterC2Eff1\\obj_SolarBusterC2Eff1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "067db3fd-6267-4649-b0ac-49fc78b39aea",
             "Value": {
                 "id": "dfdb595e-734c-4bd6-8eba-75d20a2000ce",
@@ -779,6 +787,14 @@
             "Value": {
                 "id": "286128f5-3c5d-4d6e-b9f6-d6dccd7dfb98",
                 "resourcePath": "sprites\\spr_slopeL2Ice\\spr_slopeL2Ice.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "0f80bf39-c52e-4870-b281-059270adbcc8",
+            "Value": {
+                "id": "6da093d3-6dec-4595-a2a1-c397c9e230a7",
+                "resourcePath": "sprites\\spr_SolarBusterC2Core\\spr_SolarBusterC2Core.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2866,7 +2882,7 @@
             "Key": "3c501410-0905-42d6-90f4-75673c93ba52",
             "Value": {
                 "id": "fa416f9e-1937-4c73-bde9-54110b3288fe",
-                "resourcePath": "sprites\\spr_SolarBusterC3\\spr_SolarBusterC3.yy",
+                "resourcePath": "sprites\\spr_SolarBusterC2\\spr_SolarBusterC2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4674,7 +4690,7 @@
             "Key": "6652d0d1-86cf-4bce-a0dc-6c7e3ddd832a",
             "Value": {
                 "id": "979ac92c-3a45-4c0f-afcb-6b15ce33132b",
-                "resourcePath": "sprites\\spr_SolarBusterC2\\spr_SolarBusterC2.yy",
+                "resourcePath": "sprites\\spr_SolarBusterC3\\spr_SolarBusterC3.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7731,6 +7747,14 @@
             "Value": {
                 "id": "e4d3c553-1df1-4cad-b51f-f5390b10dd6d",
                 "resourcePath": "sprites\\spr_waterPulseEff\\spr_waterPulseEff.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a8fbdb75-0118-4a10-abbe-f1fb3224a149",
+            "Value": {
+                "id": "5f48d3f7-e6d5-46c4-aac6-300b1f9fa7d9",
+                "resourcePath": "sprites\\spr_SolarBusterC2Lv2\\spr_SolarBusterC2Lv2.yy",
                 "resourceType": "GMSprite"
             }
         },

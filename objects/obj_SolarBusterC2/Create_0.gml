@@ -9,3 +9,5 @@ moveSpd = 6;
 
 collisionSFX = snd_RWeaponColEnemyEff;
 collisionEff = obj_BusterColEffLv2;
+
+init = false;
