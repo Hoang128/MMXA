@@ -2,6 +2,28 @@ var XType = argument0;
 
 switch (currentWeapon)
 {
+	case 0:
+	{
+		if (XType == obj_playerEclipseX)
+		{
+			//Solar Charge Upgrade
+			if (partArms == 1)
+			{
+				#region
+			
+				if (keyboard_check_pressed(global.keySpAtk))
+				{
+					if (ArmorPoint > 0)
+					{
+						upgradeChargeStack++;
+						ArmorPoint--;
+					}
+				}
+			
+				#endregion
+			}
+		}
+	}	break;
 	case 6:
 	{
 		scr_XAtk6Tornado();

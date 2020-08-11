@@ -6,7 +6,8 @@
     "children": [
         "de667944-8782-4f9e-a9d8-a631d7dbff0f",
         "5145ef78-3b79-4356-b03a-b8f12a263b47",
-        "ac34ecc4-74e0-4c55-8a74-a5eecd63f56e"
+        "ac34ecc4-74e0-4c55-8a74-a5eecd63f56e",
+        "7b8c34b5-a179-4c9a-91fa-40ba2f24b9d8"
     ],
     "filterType": "GMObject",
     "folderName": "Element Weapon",

@@ -6,7 +6,8 @@
     "children": [
         "d72bc454-536d-420a-ac13-b05cca03a9ff",
         "79535c5e-c82a-4830-bb19-c7b8d237b786",
-        "d1e01819-918c-417b-8177-16410e7bd593"
+        "d1e01819-918c-417b-8177-16410e7bd593",
+        "eb8a5105-efb2-4fc4-b6c4-6927f611b607"
     ],
     "filterType": "GMSprite",
     "folderName": "Element Weapon",

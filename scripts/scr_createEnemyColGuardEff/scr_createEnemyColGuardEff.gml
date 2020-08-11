@@ -21,6 +21,25 @@ if (guardEffEnable == true)
 			instance_destroy(other);
 		}	break;
 
+		case obj_SolarBusterC3:
+		{
+			if (other.level == 1)
+				instance_destroy(other);
+			else
+			{
+				with (other)
+				{
+					if (moveSpd != 0)
+					{
+						damage = 0.2;
+						maxTimmer = 10;
+						moveSpd = 0;
+						lv2ExistTime--;
+					}
+				}
+			}
+		}	break;
+		
 		case obj_ZBusterNor:
 		case obj_ZBusterCharge:
 		case obj_XBusterC1:
@@ -28,7 +47,6 @@ if (guardEffEnable == true)
 		case obj_PlasmaBuster:
 		case obj_SolarBusterC1:
 		case obj_SolarBusterC2:
-		case obj_SolarBusterC3:
 		{
 			instance_destroy(other);
 		}	break;

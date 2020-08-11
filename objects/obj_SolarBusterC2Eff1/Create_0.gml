@@ -9,3 +9,6 @@ core = noone;
 imgSpd = 0.5;
 xPlace = 0;
 yPlace = 0;
+
+createObjTime = 0;
+createObjTimeMax = 2;

@@ -65,7 +65,20 @@ if (damageTimmer <= 0)
 				instance_destroy(other);
 			else
 			{
-				if (other.object_index == obj_PlasmaBuster)
+				if ((other.object_index == obj_SolarBusterC3) && (other.level == 2))
+				{
+					with (other)
+					{
+						if (moveSpd != 0)
+						{
+							damage = 0.2;
+							maxTimmer = 10;
+							moveSpd = 0;
+							lv2ExistTime--;
+						}
+					}
+				}
+				else if (other.object_index == obj_PlasmaBuster)
 				{
 					with (other)
 					{
@@ -82,7 +95,7 @@ if (damageTimmer <= 0)
 						}
 					}
 				}
-				if (hp > 0)
+				else if (hp > 0)
 					instance_destroy(other);
 			}
 		}

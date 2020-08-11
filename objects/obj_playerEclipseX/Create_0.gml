@@ -54,3 +54,4 @@ isCrossDashing = false;
 chargeWeapon = 0;
 chargeStack = 0;
 comboStack = false;
+upgradeChargeStack = 0;

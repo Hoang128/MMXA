@@ -3551,6 +3551,14 @@
             }
         },
         {
+            "Key": "4aa68697-0c5e-4664-9b03-0f40ffc4d66b",
+            "Value": {
+                "id": "9f8da6e2-410b-4d65-a4bc-cba1dd8f07fe",
+                "resourcePath": "sprites\\spr_WPFireEff\\spr_WPFireEff.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4acbe117-5337-4815-a357-c623ead86a1c",
             "Value": {
                 "id": "c55b58c4-79c8-4f21-bc25-daa3eb6632cb",
@@ -3820,6 +3828,14 @@
                 "id": "4bdd5bda-f656-4ecb-8370-8f01e76038a5",
                 "resourcePath": "tilesets\\tile_X6InamiTemple_Back\\tile_X6InamiTemple_Back.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "4f4fed4b-1394-47b1-b03c-1439d492e56f",
+            "Value": {
+                "id": "3276f598-b465-49a5-afe2-04b7552bdfb0",
+                "resourcePath": "objects\\obj_WPFireEff\\obj_WPFireEff.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5087,6 +5103,14 @@
             }
         },
         {
+            "Key": "6e1efc99-27ab-4380-aa87-5a40f269728d",
+            "Value": {
+                "id": "252832eb-f3aa-49f7-8537-e32a3891077e",
+                "resourcePath": "objects\\obj_SolarBusterC2Eff2\\obj_SolarBusterC2Eff2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6e1fa3c1-dd1c-4299-88c5-f37c67d4e7cf",
             "Value": {
                 "id": "5a053b7b-4d73-4a87-83d5-1c2d387fe9ff",
@@ -5780,6 +5804,14 @@
                 "id": "5ba31f11-c60a-4355-9a62-f4f5f450a7b6",
                 "resourcePath": "objects\\obj_ZSaberSlashEff\\obj_ZSaberSlashEff.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7b8c34b5-a179-4c9a-91fa-40ba2f24b9d8",
+            "Value": {
+                "id": "6442bb7d-f6d8-4985-a345-e3295a36fb32",
+                "resourcePath": "views\\7b8c34b5-a179-4c9a-91fa-40ba2f24b9d8.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -9871,6 +9903,14 @@
             }
         },
         {
+            "Key": "d8b5cb9b-43e4-4fd8-9404-2757ec940489",
+            "Value": {
+                "id": "f084151b-491d-4b9e-b7d3-734fbdf679a2",
+                "resourcePath": "sprites\\spr_WPFireEffEnd\\spr_WPFireEffEnd.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d91a7534-e527-4f41-a474-beb1ed5ab28b",
             "Value": {
                 "id": "9e131746-69c3-4464-a950-dc00fb90a2db",
@@ -10639,6 +10679,14 @@
             }
         },
         {
+            "Key": "ea832b04-8e90-418b-bb68-08e90cd23940",
+            "Value": {
+                "id": "d398c86a-3264-4ac4-bd89-e72645c6939c",
+                "resourcePath": "sprites\\spr_WPFireEffStart\\spr_WPFireEffStart.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ea9ac27a-8511-4bca-87b9-c266a2bc8b59",
             "Value": {
                 "id": "6908c397-f063-40de-aefd-c451cdce1c92",
@@ -10684,6 +10732,14 @@
                 "id": "869bf74e-eaff-48a9-8675-eec0fc2c996e",
                 "resourcePath": "scripts\\scr_ConsumeEnergyCapsule\\scr_ConsumeEnergyCapsule.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "eb8a5105-efb2-4fc4-b6c4-6927f611b607",
+            "Value": {
+                "id": "ab9d4550-2b17-4755-a08d-65fe9b56b7c7",
+                "resourcePath": "views\\eb8a5105-efb2-4fc4-b6c4-6927f611b607.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

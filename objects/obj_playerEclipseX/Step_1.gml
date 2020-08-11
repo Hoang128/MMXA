@@ -24,7 +24,7 @@ switch(sprite_index)
 	case spr_XEDoubleShot1_A:
 	case spr_XEDoubleShot1_G:
 	case spr_XEDoubleShot2_A:
-	case spr_XEDoubleShot2_G:	image_speed = 0.5; break;
+	case spr_XEDoubleShot2_G:	image_speed = 0.3; break;
 }
 
 image_speed *= DELTA_TIME;
