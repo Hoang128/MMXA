@@ -4,4 +4,6 @@
 // Inherit the parent event
 
 if (canBeHit == true)
+{
 	event_inherited();
+}

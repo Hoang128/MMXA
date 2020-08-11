@@ -7,6 +7,6 @@ scr_destroyObjOutOfCamera(self);
 if (init == 0)
 {
 	visible = 1;
-	motion_set(direction, moveSpd);
 	init = 1;
 }
+motion_set(direction, moveSpd * DELTA_TIME);

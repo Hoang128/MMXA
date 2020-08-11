@@ -204,6 +204,7 @@ else
 						{
 							if (!instance_exists(obj_XChargeEffLv1))
 							{
+								if (chargeStack > 0)	chargeStack = 0;
 								var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_XChargeEffLv1);
 								objChargeEff.core = self;
 							}
@@ -301,8 +302,16 @@ else
 									}
 									if (sprite_index != spr_XClimbStart && sprite_index != spr_XClimbEnd)
 									{
-										var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffSolarBusterC3);
-										obj.core = self;
+										if (chargeStack == 3)
+										{
+											var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffSolarBusterC3);
+											obj.core = self;
+										}
+										else if (chargeStack == 2)
+										{
+											var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffSolarBusterC2);
+											obj.core = self;
+										}
 
 										atkSpriteTime = atkSpriteTimeMax;
 										if (sprite_index == spr_XShotClimb)
@@ -313,9 +322,9 @@ else
 										}
 										atkState = AttackState.A_NORMAL_ATTACK;
 									}
+									chargeNormal = 0;
+									chargeStack = 0;
 								}
-								chargeNormal = 0;
-								chargeStack = 0;
 							}
 						}
 					}

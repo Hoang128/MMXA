@@ -14,12 +14,29 @@ if (isCharged = false)
 {
 	if (keyboard_check_pressed(global.keySpAtk))
 	{
-		if ((aState != ActionState.SP_MOVE) && (isCrossDashing == false))
+		if (aState != ActionState.SP_MOVE)
 		{
 			if (atkState < AttackState.A_STRICT_ATTACK)
 			{
 				if (waitShotSpecial == 0)
 				{
+					if (object_index == obj_playerEclipseX)
+					{
+						if (isCrossDashing == true)
+						{
+							sprite_index = sprJump3;
+							image_index = 0;
+							if (vDashDir == 1)
+								vspd = 0;
+							else
+								vspd = -2;
+							dashSpd = 0;
+							dashTime = 0;
+							aState = ActionState.IDLE;
+							vState = VerticalState.V_MOVE_FALLING;
+							vDashDir = 0;
+						}
+					}
 					scr_playerXChangeShotSprite(object_index, true, false);
 					if (sprite_index != spr_XClimbStart && sprite_index != spr_XClimbEnd)
 					{
@@ -45,10 +62,27 @@ else
 {
 	if (keyboard_check_released(global.keySpAtk))
 	{
-		if ((aState != ActionState.SP_MOVE) && !((object_index == obj_playerEclipseX) && (isCrossDashing == false)))
+		if (aState != ActionState.SP_MOVE)
 		{
 			if (chargeWeapon >= chargeLv2Limit)
 			{
+				if (object_index == obj_playerEclipseX)
+				{
+					if (isCrossDashing == true)
+					{
+						sprite_index = sprJump3;
+						image_index = 0;
+						if (vDashDir == 1)
+							vspd = 0;
+						else
+							vspd = -2;
+						dashSpd = 0;
+						dashTime = 0;
+						aState = ActionState.IDLE;
+						vState = VerticalState.V_MOVE_FALLING;
+						vDashDir = 0;
+					}
+				}
 				scr_playerXChangeShotSprite(object_index, true, true);
 				randomize();
 				var r = random(4);

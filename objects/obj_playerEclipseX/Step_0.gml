@@ -187,7 +187,11 @@ if (activateState != ActivateState.DEACTIVATE)
 			if (createSolarChargeEff == false)
 			{
 				audio_play_sound_on(global.SFX_Emitter, snd_VXChargeShot2, 0, 0);
-				var objSolarChargeEff = instance_create_depth(x, y, depth - 10, obj_ShotEffSolarBusterC3);
+				if (chargeStack == 2)
+					var obj = obj_ShotEffSolarBusterC2;
+				else if (chargeStack == 3)
+					var obj = obj_ShotEffSolarBusterC3;
+				var objSolarChargeEff = instance_create_depth(x, y, depth - 10, obj);
 				objSolarChargeEff.core = self;
 				createSolarChargeEff = true;
 				chargeNormal = 0;
