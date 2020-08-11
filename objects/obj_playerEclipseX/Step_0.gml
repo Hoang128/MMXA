@@ -190,6 +190,8 @@ if (activateState != ActivateState.DEACTIVATE)
 				var objSolarChargeEff = instance_create_depth(x, y, depth - 10, obj_ShotEffSolarBusterC3);
 				objSolarChargeEff.core = self;
 				createSolarChargeEff = true;
+				chargeNormal = 0;
+				chargeStack = 0;
 			}
 		}
 	}

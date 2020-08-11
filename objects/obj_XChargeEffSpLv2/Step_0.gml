@@ -5,4 +5,7 @@
 event_inherited();
 myPal = core.myPal;
 palNum = core.currentWeapon;
-if (core.chargeWeapon <= 0) instance_destroy();
+if (instance_exists(core))
+{
+	if (core.chargeWeapon <= 0) instance_destroy();
+}

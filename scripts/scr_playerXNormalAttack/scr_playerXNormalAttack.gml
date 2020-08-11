@@ -229,7 +229,7 @@ else
 					{
 						if (chargeNormal == -2)
 						{
-							if ((sprite_index == spr_XEDoubleShot1_G) || (sprite_index == spr_XEDoubleShot2_G))
+							if ((sprite_index == spr_XEDoubleShot1_G) || (sprite_index == spr_XEDoubleShot1_A))
 							{
 								if (image_index > 4)
 								{
@@ -315,6 +315,7 @@ else
 									}
 								}
 								chargeNormal = 0;
+								chargeStack = 0;
 							}
 						}
 					}
