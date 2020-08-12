@@ -16,6 +16,11 @@ switch (currentWeapon)
 					if (ArmorPoint > 0)
 					{
 						upgradeChargeStack++;
+						if (!instance_exists(obj_SolarChargeEff))
+						{
+							var objCStackEff = instance_create_depth(x, bbox_top + (bbox_bottom) / 2, depth - 5, obj_SolarChargeEff);
+							objCStackEff.core = self;
+						}
 						ArmorPoint--;
 					}
 				}
