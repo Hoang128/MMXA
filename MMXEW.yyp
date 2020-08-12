@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "0580349b-fed0-447c-a766-aa400ba98422",
+            "Value": {
+                "id": "21c959b5-ebc4-448c-b3a6-26520020d280",
+                "resourcePath": "sprites\\spr_RHWorldLava\\spr_RHWorldLava.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "05e94733-db14-499d-b506-f432585ce8cb",
             "Value": {
                 "id": "4807fc85-c610-4ab8-adf2-11c1cc8c1e31",
@@ -508,6 +516,14 @@
                 "id": "c3e3d616-ed34-4e2d-ba1e-d65d9f110191",
                 "resourcePath": "sprites\\spr_ZSaberHBSlashShotC3_G\\spr_ZSaberHBSlashShotC3_G.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "08e13a45-008a-4367-960c-60e4227875b9",
+            "Value": {
+                "id": "3e8b5d04-8e1d-469e-865d-8d6a20fab547",
+                "resourcePath": "views\\08e13a45-008a-4367-960c-60e4227875b9.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -795,6 +811,14 @@
             "Value": {
                 "id": "6da093d3-6dec-4595-a2a1-c397c9e230a7",
                 "resourcePath": "sprites\\spr_SolarBusterC2Core\\spr_SolarBusterC2Core.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "0f8f77cc-422f-44aa-8b05-0f704e124686",
+            "Value": {
+                "id": "96f229c8-116c-4894-95e3-c9b2963bcd45",
+                "resourcePath": "sprites\\spr_amazonAreaPlatformCave\\spr_amazonAreaPlatformCave.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2135,6 +2159,14 @@
             }
         },
         {
+            "Key": "2e6fb5a6-c5d3-4fc0-88bb-26c964f0bb1d",
+            "Value": {
+                "id": "81dc3b3a-65c5-4f35-8ac5-d875c1e72919",
+                "resourcePath": "tilesets\\tile_X5RHWorldLava\\tile_X5RHWorldLava.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "2e7294e1-90aa-47ce-bb61-65f3c7ea8dfd",
             "Value": {
                 "id": "4908ae8f-7f89-4320-856c-10e74978396a",
@@ -2423,6 +2455,14 @@
             }
         },
         {
+            "Key": "32ecb7a1-a2a5-48c3-9571-7c2c93231f24",
+            "Value": {
+                "id": "b72917f6-31ef-4721-97d6-227ef5df4532",
+                "resourcePath": "sprites\\spr_RHWorldPlatform\\spr_RHWorldPlatform.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "32ecd2a2-e289-4739-9d50-40ad6e382ebc",
             "Value": {
                 "id": "6a5ef724-2e85-4051-8d10-634f154a5779",
@@ -2532,6 +2572,14 @@
                 "id": "829fbd47-5a5f-4362-ac54-c8b5dc761796",
                 "resourcePath": "sprites\\spr_JungleSky\\spr_JungleSky.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "358a034a-1beb-4f45-8767-126481000e21",
+            "Value": {
+                "id": "676d6486-3f4b-4540-b726-618b43253523",
+                "resourcePath": "tilesets\\tile_X5RHWorldPlatform\\tile_X5RHWorldPlatform.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -2759,6 +2807,14 @@
             }
         },
         {
+            "Key": "3abe48d1-18b3-4380-a7ec-440b5b05671d",
+            "Value": {
+                "id": "7252b6cb-ba6f-4e3b-a053-ef0719295a72",
+                "resourcePath": "sprites\\spr_amazonAreaPlatformNormal\\spr_amazonAreaPlatformNormal.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3ac9f9a9-6ce5-4563-b6e4-96cfe7358a87",
             "Value": {
                 "id": "14e7828e-d4d5-4130-bf9d-8d506a2a3cb4",
@@ -2828,6 +2884,14 @@
                 "id": "8eb8a608-3c05-4a07-846a-a2f512949277",
                 "resourcePath": "views\\3b58febd-39e1-475c-8772-191002250597.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3b5ab52e-5327-4275-ae35-c3d0ebfe5816",
+            "Value": {
+                "id": "01a5696b-ac44-47a4-9815-fdd7cd00a30f",
+                "resourcePath": "tilesets\\tile_X5ElecTrapPlatform\\tile_X5ElecTrapPlatform.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -3455,6 +3519,14 @@
             }
         },
         {
+            "Key": "486c9ee7-872c-40b8-b7bc-22ddaa55b5b6",
+            "Value": {
+                "id": "06c098a3-8820-4fc8-a9f5-dd69e8b2bb89",
+                "resourcePath": "tilesets\\tile_X5RHWorldLavaWall\\tile_X5RHWorldLavaWall.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "487f71fe-07fc-427a-b582-b4610d984e7a",
             "Value": {
                 "id": "4714b0a9-b3ad-4a3a-bd53-a9fad474ccd1",
@@ -3867,6 +3939,14 @@
             "Value": {
                 "id": "67d2e008-60a8-4d00-9742-50cb53854301",
                 "resourcePath": "sprites\\spr_JunglePlatformTree\\spr_JunglePlatformTree.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "509d8d9f-29a1-48aa-96c7-e87c0d862325",
+            "Value": {
+                "id": "fa681322-187b-4a4e-b633-3ed434a6efdd",
+                "resourcePath": "sprites\\spr_electTrapBackWall\\spr_electTrapBackWall.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4540,6 +4620,14 @@
                 "id": "ac794bd8-33fb-45f4-982f-b30cac67e877",
                 "resourcePath": "sprites\\spr_teleportGate\\spr_teleportGate.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "61154bc3-0074-4768-9159-7e9f35c8eb8d",
+            "Value": {
+                "id": "de204a77-fa5c-4865-a4da-fbd6ca2e57c8",
+                "resourcePath": "views\\61154bc3-0074-4768-9159-7e9f35c8eb8d.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -5303,6 +5391,14 @@
             }
         },
         {
+            "Key": "70b1f8c5-e3d9-4f49-9a37-3b5fa62b8eca",
+            "Value": {
+                "id": "c1b7ea0a-090a-4499-9dae-75fbfdd76a94",
+                "resourcePath": "sprites\\spr_electTrapPlatform2\\spr_electTrapPlatform2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "70fadd0a-97c3-400c-bed8-176307644823",
             "Value": {
                 "id": "e6a04f1c-dbef-4781-a6ba-2c943769e639",
@@ -5487,6 +5583,14 @@
             }
         },
         {
+            "Key": "7479e19d-3868-4d23-940e-ec8a4bce3da6",
+            "Value": {
+                "id": "c870e78b-40e5-472e-af3d-4c7557d7197a",
+                "resourcePath": "sprites\\spr_electTrapDeepWall\\spr_electTrapDeepWall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "747b1188-5345-4c6e-b687-2cfa3b4e0fbe",
             "Value": {
                 "id": "d9404f90-03d6-4dac-bdb4-37d56ecac5df",
@@ -5651,6 +5755,14 @@
             "Value": {
                 "id": "44b1ccb6-a9c1-4edd-ad95-c77cf57be00a",
                 "resourcePath": "sprites\\spr_SeaHorseBullet2\\spr_SeaHorseBullet2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "786cbc30-583f-41ff-a89d-bf62d7b5c482",
+            "Value": {
+                "id": "a42c3094-adae-4cd0-b2fa-f18e1aee019d",
+                "resourcePath": "sprites\\spr_earthStageMoon\\spr_earthStageMoon.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5927,6 +6039,14 @@
             }
         },
         {
+            "Key": "7e395096-ef28-4639-b038-905cc575daca",
+            "Value": {
+                "id": "d5f142e0-ad62-45bf-be3c-adff97e03946",
+                "resourcePath": "tilesets\\tile_X6AmazonAreaBack\\tile_X6AmazonAreaBack.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "7e55bdc7-faa7-46f1-960b-4540105b17e8",
             "Value": {
                 "id": "f402ed05-c8a4-442a-9662-fd38f439509c",
@@ -5983,11 +6103,27 @@
             }
         },
         {
+            "Key": "7f558ac1-ea3f-4860-a6af-416dabeb268a",
+            "Value": {
+                "id": "36539d67-73f6-46e2-b616-28572b652e01",
+                "resourcePath": "sprites\\spr_amazonAreaBack\\spr_amazonAreaBack.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8031c64a-a72c-4346-b520-ea67cfdd978b",
             "Value": {
                 "id": "41569a03-2380-46cf-81d9-f50866651b98",
                 "resourcePath": "sprites\\spr_knotBeretGrenade\\spr_knotBeretGrenade.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "80902ea8-0e02-466c-afda-084bcd341f92",
+            "Value": {
+                "id": "e4b51a79-8aac-45ac-b777-c61633d0796f",
+                "resourcePath": "tilesets\\tile_X5RHWorldRockWall\\tile_X5RHWorldRockWall.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -6052,6 +6188,14 @@
                 "id": "b3af7593-5c2f-4413-a525-3230b3a4bde3",
                 "resourcePath": "objects\\obj_warningEff\\obj_warningEff.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "81dbfc27-f238-4154-a5a0-b0e3db830c30",
+            "Value": {
+                "id": "27824937-f0e0-4c35-9715-5871754d49c9",
+                "resourcePath": "tilesets\\tile_X5RHWorldVWall\\tile_X5RHWorldVWall.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -6164,6 +6308,14 @@
                 "id": "b298bfdc-0ca9-4cbe-ac4e-343f27c800ef",
                 "resourcePath": "sprites\\spr_FXSJump4\\spr_FXSJump4.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "836563df-6a56-4003-af7c-474020133f42",
+            "Value": {
+                "id": "ff0ffd44-730d-4aab-9dc1-b4b13fab2e49",
+                "resourcePath": "views\\836563df-6a56-4003-af7c-474020133f42.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -6895,6 +7047,14 @@
             }
         },
         {
+            "Key": "9283a6c4-da22-444b-9db6-21074ebe915b",
+            "Value": {
+                "id": "4226cc66-0f06-4d84-83cf-d8758678cb20",
+                "resourcePath": "tilesets\\tile_X5ElectTrapBackWall\\tile_X5ElectTrapBackWall.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "9284e330-9c1c-4962-9690-d15ad63a2a87",
             "Value": {
                 "id": "9dc4a312-0cbc-4145-a6a9-105fc9fb9624",
@@ -7127,6 +7287,14 @@
             }
         },
         {
+            "Key": "96dfd9c1-e56d-47e9-8cf4-58101a1731a5",
+            "Value": {
+                "id": "6e269014-f613-4fe7-aab0-2ca532d081a2",
+                "resourcePath": "tilesets\\tile_X5ElecTrapPlatform2\\tile_X5ElecTrapPlatform2.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "971b7bf0-ae89-41f8-be00-889bea79750d",
             "Value": {
                 "id": "2e5ee18d-8f32-4fce-b73a-88b6ddae739a",
@@ -7199,6 +7367,14 @@
             }
         },
         {
+            "Key": "9872b701-e94d-4d4b-a0f3-5bdda2d01ff8",
+            "Value": {
+                "id": "0cc40842-64ff-43fd-afa8-a5b2bed87e14",
+                "resourcePath": "views\\9872b701-e94d-4d4b-a0f3-5bdda2d01ff8.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "98bb968c-2f2f-40db-adc7-bac11a41e4a1",
             "Value": {
                 "id": "4975e35f-0ebe-4232-9068-4c6b1451c9b9",
@@ -7228,6 +7404,14 @@
                 "id": "1c23884f-ce52-4e9a-bd29-a87f86bc69fc",
                 "resourcePath": "views\\992dda25-7f56-4746-b015-98e74df2c291.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9979e669-6567-4aa2-8474-0a13f6eb0553",
+            "Value": {
+                "id": "0084f8b1-846f-405f-9c1f-a0122da918d0",
+                "resourcePath": "tilesets\\tile_X6AmazonAreaPlatformNormal\\tile_X6AmazonAreaPlatformNormal.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -7276,6 +7460,22 @@
                 "id": "bc4f75b5-d1cf-4203-a819-ab4378432eb4",
                 "resourcePath": "scripts\\scr_BGMSet\\scr_BGMSet.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9a940ac7-0d3b-4f15-9d4d-8822f3b9a92e",
+            "Value": {
+                "id": "1e4d010b-a2f8-49e8-becc-995d67d619f3",
+                "resourcePath": "sprites\\spr_RHWorldRockWall\\spr_RHWorldRockWall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9b1f06ea-5a1c-43ad-a4e3-e31713b974be",
+            "Value": {
+                "id": "32e0c5ec-6786-4fb4-9da4-9dd5239c6419",
+                "resourcePath": "sprites\\spr_RHWorldDeepLava\\spr_RHWorldDeepLava.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -8071,6 +8271,14 @@
             }
         },
         {
+            "Key": "b07fc232-3c59-4c18-b334-a14af52bb421",
+            "Value": {
+                "id": "652361c2-1630-45d1-851f-f0d607bb3cf0",
+                "resourcePath": "sprites\\spr_RHWorldDeepLava2\\spr_RHWorldDeepLava2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b094d4d8-2562-40ec-9f89-2c75d85220f1",
             "Value": {
                 "id": "69684a47-2375-4cd1-88aa-4627639a5535",
@@ -8551,6 +8759,14 @@
             }
         },
         {
+            "Key": "bc3d5b75-ee8f-4e1f-a6ea-0d399a2bd6cb",
+            "Value": {
+                "id": "4682ad8d-7144-4848-b835-b84600240ed8",
+                "resourcePath": "sprites\\spr_RHWorldVWall\\spr_RHWorldVWall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bc6c5437-4490-4384-ab37-e6c178f679ac",
             "Value": {
                 "id": "4fe36bfa-33cc-4489-b321-b88c08c3c52b",
@@ -8724,6 +8940,14 @@
                 "id": "864d455e-7fb6-4ea8-aad0-25f73aa7578b",
                 "resourcePath": "objects\\obj_XDeathEff\\obj_XDeathEff.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bfb8a9b8-9b4a-49cd-9e04-cc9296a7b2e1",
+            "Value": {
+                "id": "3ad556b2-990a-477a-bd88-ba991c02d940",
+                "resourcePath": "views\\bfb8a9b8-9b4a-49cd-9e04-cc9296a7b2e1.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -9727,6 +9951,14 @@
             }
         },
         {
+            "Key": "d41cc378-e4da-479d-9fb9-ccc3096feb84",
+            "Value": {
+                "id": "e3884cd6-b03d-482d-9223-62f24ead0052",
+                "resourcePath": "views\\d41cc378-e4da-479d-9fb9-ccc3096feb84.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "d4aa4387-eb24-4b9c-8d4f-8ce8c0b59155",
             "Value": {
                 "id": "58f50623-7e06-4a53-bf52-17ef118eebf5",
@@ -10127,6 +10359,14 @@
             }
         },
         {
+            "Key": "dcb7ffda-6e8d-47e2-b100-51f9a368a609",
+            "Value": {
+                "id": "3d3690df-664a-4ee9-ad35-9ed2368c85fa",
+                "resourcePath": "views\\dcb7ffda-6e8d-47e2-b100-51f9a368a609.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "dcd5aaeb-2d2d-4ab6-a9a4-ff560efbfeb7",
             "Value": {
                 "id": "bf0fc6ae-2f50-4cae-8ce7-9ed3d5ff10ea",
@@ -10252,6 +10492,14 @@
                 "id": "bb8af7c7-3c29-40ec-a9b8-268dd8cdc59f",
                 "resourcePath": "sprites\\spr_DGuardianShot_Shield\\spr_DGuardianShot_Shield.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "dfebd5cf-b286-41b8-b6d5-fa35524cfc8a",
+            "Value": {
+                "id": "c3bbb008-fa44-4966-b6d6-abc257e9dd6a",
+                "resourcePath": "tilesets\\tile_X6AmazonAreaPlatformCave\\tile_X6AmazonAreaPlatformCave.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -10611,6 +10859,14 @@
             "Value": {
                 "id": "76938f5a-0078-413a-83d7-9c421b406e74",
                 "resourcePath": "sprites\\spr_GuardianEff\\spr_GuardianEff.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e8104bd9-4790-4b0d-9c4f-c2cd8ba6b30b",
+            "Value": {
+                "id": "b1144f5b-4770-4ed0-9214-59bce05adfda",
+                "resourcePath": "sprites\\spr_RHWorldLavaWall\\spr_RHWorldLavaWall.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -11231,6 +11487,14 @@
             }
         },
         {
+            "Key": "f3edafb6-7a26-4e13-9369-02039e08e72b",
+            "Value": {
+                "id": "a175d2a2-eb86-494c-be57-d558eacf1b54",
+                "resourcePath": "sprites\\spr_electTrapPlatform\\spr_electTrapPlatform.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "3fe88caf-a18f-4fda-9802-c2b5510bc862",
@@ -11491,6 +11755,14 @@
             "Value": {
                 "id": "cc82d1bc-1c2e-4c0c-986f-be133b3a319f",
                 "resourcePath": "views\\f8fd2670-36a7-4dfa-ac88-1b79c1e1b193.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f903c840-cf05-4e4a-941a-d6e4c8905016",
+            "Value": {
+                "id": "bbdc2e6d-0055-4288-80b9-51d61b13c654",
+                "resourcePath": "views\\f903c840-cf05-4e4a-941a-d6e4c8905016.yy",
                 "resourceType": "GMFolder"
             }
         },

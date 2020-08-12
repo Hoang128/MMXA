@@ -16,6 +16,7 @@ switch (currentWeapon)
 					if (ArmorPoint > 0)
 					{
 						upgradeChargeStack++;
+						audio_play_sound_on(global.SFX_Emitter, snd_UISelectPart, false ,false);
 						if (!instance_exists(obj_SolarChargeEff))
 						{
 							var objCStackEff = instance_create_depth(x, bbox_top + (bbox_bottom) / 2, depth - 5, obj_SolarChargeEff);

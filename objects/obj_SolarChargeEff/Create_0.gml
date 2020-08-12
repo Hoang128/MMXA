@@ -5,5 +5,4 @@
 event_inherited();
 
 imgSpd = 0.5;
-
-audio_play_sound_on(global.SFX_Emitter, snd_UISelectPart, false ,false);
+image_alpha = 0.8;

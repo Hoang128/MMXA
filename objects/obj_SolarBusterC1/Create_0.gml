@@ -5,7 +5,7 @@
 event_inherited();
 
 damage = 3;
-moveSpd = 6;
+moveSpd = 8;
 
 collisionSFX = snd_RWeaponColEnemyEff;
 collisionEff = obj_BusterColEffLv2;

@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-moveSpd = 6;
+moveSpd = 8;
 damage = 1.5;
 bounceSpr = spr_SolarBusterNormal;
 imgSpd = 0.3;

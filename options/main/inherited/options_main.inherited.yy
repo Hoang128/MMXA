@@ -456,6 +456,66 @@
                     "mipsToGenerate": 0,
                     "scaled": true
                 }
+            },
+            {
+                "Key": 31,
+                "Value": {
+                    "id": "71615db7-9d0b-47c8-8dc7-03f106ee3c73",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpX5ElectricTrap",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "11fd15f5-258b-4c97-b120-e2181464b38f",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 32,
+                "Value": {
+                    "id": "a6df60bc-0245-4543-9f5d-63c523b69863",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpX5RedHotWorld",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "11fd15f5-258b-4c97-b120-e2181464b38f",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 33,
+                "Value": {
+                    "id": "e40be3c0-16a8-4b96-84c1-69a98010ed65",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpX5EarthBase",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "11fd15f5-258b-4c97-b120-e2181464b38f",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 34,
+                "Value": {
+                    "id": "24c562aa-0848-40e9-91d1-8fe688d74286",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "grpX6AmazonArea",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "11fd15f5-258b-4c97-b120-e2181464b38f",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
             }
         ],
         "Checksum": "ࢺ懜璙ᓆ锯翋꤯맫",
