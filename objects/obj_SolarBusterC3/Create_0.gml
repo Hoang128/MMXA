@@ -18,6 +18,8 @@ if (instance_exists(obj_gameManager.playerCore))
 	{
 		obj_gameManager.playerCore.upgradeChargeStack--;
 		level = 2;
+		sprite_index = spr_SolarBusterC3Lv2;
+		moveSpd = 10;
 	}
 }
 

@@ -22,6 +22,14 @@ switch (currentWeapon)
 							var objCStackEff = instance_create_depth(x, bbox_top + (bbox_bottom) / 2, depth - 5, obj_SolarChargeEff);
 							objCStackEff.core = self;
 						}
+						else
+						{
+							with (obj_SolarChargeEff)
+							{
+								sprite_index = spr_SolarChargeEff;
+								image_index = 0;
+							}
+						}
 						ArmorPoint--;
 					}
 				}

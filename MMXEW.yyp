@@ -3687,6 +3687,14 @@
             }
         },
         {
+            "Key": "4be8ce4e-2e11-4e73-8f8c-a6a45c677205",
+            "Value": {
+                "id": "72a2641f-b79b-4ea9-b57e-cc150c25b284",
+                "resourcePath": "sprites\\spr_SolarChargeEff2\\spr_SolarChargeEff2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4c25ac9e-35dc-4bb0-8d32-d92a11bb3624",
             "Value": {
                 "id": "e4393585-6bba-42bb-bb78-41b844d1cd8a",
@@ -5452,6 +5460,14 @@
                 "id": "f17e3ea4-a3a1-48fe-a726-c9fde6286a5c",
                 "resourcePath": "views\\71c778a3-edb0-4d57-8f4a-9902ad5da5b2.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "71dfa6f3-ec05-4924-9d2c-f368044900d7",
+            "Value": {
+                "id": "d6631fa4-ea10-40fe-93de-71337c510557",
+                "resourcePath": "sprites\\spr_SolarBusterC3Lv2\\spr_SolarBusterC3Lv2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
