@@ -33,8 +33,7 @@
         "8ede5dc9-b445-4ee5-8d27-1ded7d970a97",
         "0ed29fb5-c186-4da0-af19-be26a5e1bb6e",
         "f294a166-bf74-421f-8573-eba96dd4c6a1",
-        "351e81ce-dd8f-4f1e-a803-3e5a57da4ad5",
-        "4acbe117-5337-4815-a357-c623ead86a1c"
+        "351e81ce-dd8f-4f1e-a803-3e5a57da4ad5"
     ],
     "filterType": "GMSprite",
     "folderName": "Foots",

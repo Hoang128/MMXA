@@ -13,7 +13,13 @@
         "d372fb32-0ad2-414e-a66b-94e4a1848821",
         "549a29f5-205a-4008-8ee1-435ba2e0cc74",
         "63ac4504-708c-4fee-b154-b396cf4914cc",
-        "9d2423ec-5cf8-4f6d-aa4f-69865ad4f3b2"
+        "9d2423ec-5cf8-4f6d-aa4f-69865ad4f3b2",
+        "1bf0173b-898c-425b-bb97-930489d65987",
+        "e9beca21-1ba8-417e-9dfd-6dff840d13b5",
+        "7330e039-fd84-4edd-8313-9b5c8f40893c",
+        "16bd5a25-220e-4cfe-965e-6094694d04d5",
+        "cecba5a1-f4de-437f-8e9d-92a28896016d",
+        "ff4403ed-ced7-42f8-a1a9-577d7d66c9a4"
     ],
     "filterType": "GMSprite",
     "folderName": "Creep",

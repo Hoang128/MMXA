@@ -143,6 +143,18 @@ if (instance_exists(core))
 				//case spr_XStun0:			FootImg = spr_AXSStun0;				break;
 				
 				//Attack frames
+				case spr_XShotStand:		ArmsImg = spr_AXSShotStand;			break;
+				case spr_XCShotStand:		ArmsImg = spr_AXSCShotStand;		break;
+				case spr_XShotRun:			ArmsImg = spr_AXSShotRun;			break;
+				case spr_XShotRunStart:		ArmsImg = spr_AXSShotRunStart;		break;
+				case spr_XShotRunEnd:		ArmsImg = spr_AXSShotRunEnd;		break;
+				case spr_XShotDuck:			ArmsImg = spr_AXSShotDuck;			break;
+				case spr_XCShotDuck:		ArmsImg = spr_AXSCShotDuck;			break;
+				case spr_XShotJump1:		ArmsImg = spr_AXSShotJump1;			break;
+				case spr_XShotJump2:		ArmsImg = spr_AXSShotJump2;			break;
+				case spr_XShotJump3:		ArmsImg = spr_AXSShotJump3;			break;
+				case spr_XShotJump4:		ArmsImg = spr_AXSShotJump4;			break;
+				case spr_XShotLand:			ArmsImg = spr_AXSShotLand;			break;
 				
 				//Special move frames
 				case spr_XDashCrossDown1:	ArmsImg = spr_AXSDashCrossDown1;	break;
