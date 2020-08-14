@@ -69,12 +69,17 @@ if (instance_exists(core))
 				case spr_X2SideAtk:			FootImg = spr_FXS2SideAtk;			break;
 				case spr_XUpAtk:			FootImg = spr_FXSUpAtk;				break;
 				case spr_XShotClimb:		FootImg = spr_FXSShotClimb;			break;
+				case spr_XImpactAtk:		FootImg = spr_FXSImpactAtk;			break;
 				
 				//Special move frames
 				case spr_XDashCrossDown1:	FootImg = spr_FXSDashCrossDown1;	break;
 				case spr_XDashCrossDown2:	FootImg = spr_FXSDashCrossDown2;	break;
 				case spr_XESlamDown:		FootImg = spr_FXSSlamDown;			break;
 				case spr_XEImpactDown:		FootImg = spr_FXSImpactDown;		break;
+				case spr_XEDoubleShot1_G:	FootImg = spr_FXSDoubleShot1_G;		break;
+				case spr_XEDoubleShot2_G:	FootImg = spr_FXSDoubleShot2_G;		break;
+				case spr_XEDoubleShot1_A:	FootImg = spr_FXSDoubleShot1_A;		break;
+				case spr_XEDoubleShot2_A:	FootImg = spr_FXSDoubleShot2_A;		break;
 				
 				//Wire frames
 				case spr_XWiredForward:
@@ -155,12 +160,32 @@ if (instance_exists(core))
 				case spr_XShotJump3:		ArmsImg = spr_AXSShotJump3;			break;
 				case spr_XShotJump4:		ArmsImg = spr_AXSShotJump4;			break;
 				case spr_XShotLand:			ArmsImg = spr_AXSShotLand;			break;
+				case spr_XShotDash1:		ArmsImg = spr_AXSShotDash1;			break;
+				case spr_XShotDash2:		ArmsImg = spr_AXSShotDash2;			break;
+				case spr_XShotDash3:		ArmsImg = spr_AXSShotDash3;			break;
+				case spr_XShotSlide1:		ArmsImg = spr_AXSShotSlide1;		break;
+				case spr_XShotSlide2:		ArmsImg = spr_AXSShotSlide2;		break;
+				case spr_XShotWallKick:		ArmsImg = spr_AXSShotWallKick;		break;
+				case spr_XShotWired:		ArmsImg = spr_AXSShotWired;			break;
+				case spr_XShotWiredStartHorizontal:
+											ArmsImg = spr_AXSShotWiredStartHorizontal;		
+																				break;
+				case spr_XShotWiredStartVertical:
+											ArmsImg = spr_AXSShotWiredStartVertical;		
+																				break;
+				case spr_X2SideAtk:			ArmsImg = spr_AXS2SideAtk;			break;
+				case spr_XShotClimb:		ArmsImg = spr_AXSShotClimb;			break;
+				case spr_XImpactAtk:		ArmsImg = spr_AXSImpactAtk;			break;
 				
 				//Special move frames
 				case spr_XDashCrossDown1:	ArmsImg = spr_AXSDashCrossDown1;	break;
 				case spr_XDashCrossDown2:	ArmsImg = spr_AXSDashCrossDown2;	break;
 				case spr_XESlamDown:		ArmsImg = spr_AXSSlamDown;			break;
 				case spr_XEImpactDown:		ArmsImg = spr_AXSImpactDown;		break;
+				case spr_XEDoubleShot1_G:	ArmsImg = spr_AXSDoubleShot1_G;		break;
+				case spr_XEDoubleShot2_G:	ArmsImg = spr_AXSDoubleShot2_G;		break;
+				case spr_XEDoubleShot1_A:	ArmsImg = spr_AXSDoubleShot1_A;		break;
+				case spr_XEDoubleShot2_A:	ArmsImg = spr_AXSDoubleShot2_A;		break;
 				
 				//Wire frames
 				case spr_XWiredForward:

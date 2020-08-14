@@ -167,7 +167,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			if (createSolarChargeEff == false)
 			{
-				audio_play_sound_on(global.SFX_Emitter, snd_VXChargeShot1, 0, 0);
+				audio_play_sound_on(global.SFX_Emitter, snd_VXChargeShot2, 0, 0);
 				if (chargeStack == 2)
 					var obj = obj_ShotEffSolarBusterC1;
 				else if (chargeStack == 3)
@@ -185,7 +185,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			if (createSolarChargeEff == false)
 			{
-				audio_play_sound_on(global.SFX_Emitter, snd_VXChargeShot2, 0, 0);
+				audio_play_sound_on(global.SFX_Emitter, snd_VXChargeShot3, 0, 0);
 				if (chargeStack == 2)
 					var obj = obj_ShotEffSolarBusterC2;
 				else if (chargeStack == 3)

@@ -9,7 +9,8 @@
         "b06be93a-c942-48b9-9144-e4a5891517f6",
         "3cef87ee-24c0-4293-b9fb-253236dd9aff",
         "084832cc-cd4e-4cdc-88ed-54e1e28b4016",
-        "1ec26ac1-6baa-4202-b0ac-53cb1fa5798c"
+        "1ec26ac1-6baa-4202-b0ac-53cb1fa5798c",
+        "e4e475d3-8704-4c0c-8edd-0b7600a7235f"
     ],
     "filterType": "GMSprite",
     "folderName": "Foot",
