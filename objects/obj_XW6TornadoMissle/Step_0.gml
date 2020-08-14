@@ -4,6 +4,7 @@ if (!init)
 {
 	dir = image_xscale;
 	direction = 90 - image_xscale * 90 + firstDir;
+	motion_set(direction, spd);
 	init = true;
 }
 else
