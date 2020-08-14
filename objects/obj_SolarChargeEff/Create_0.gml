@@ -4,5 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-imgSpd = 0.3;
+imgSpd = 0.5;
 image_alpha = 0.8;
