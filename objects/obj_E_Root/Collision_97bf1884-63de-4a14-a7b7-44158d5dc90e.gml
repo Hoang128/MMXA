@@ -103,7 +103,8 @@ if (damageTimmer <= 0)
 			}
 		}
 		
-		if (other.object_index == obj_XW6TornadoMissle)
+		if ((other.object_index == obj_XW6TornadoMissle)
+		||	(other.object_index == obj_XW6TornadoMissleCharge))
 		{
 			other.createOrb = true;
 			instance_destroy(other);

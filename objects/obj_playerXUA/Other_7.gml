@@ -6,6 +6,11 @@ event_inherited();
 
 switch (sprite_index)
 {
+	case sprImpactAtk:
+	{
+		image_index = 6;
+	}	break;
+	
 	case spr_XUAStandCShot:
 	{
 		sprite_index = spr_XUAStand;

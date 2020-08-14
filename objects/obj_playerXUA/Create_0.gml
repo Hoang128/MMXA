@@ -66,3 +66,4 @@ ArmorPoint = 1;
 coolDownAPTime = 0;
 coolDownSpd = coolDownSpdNormal;
 novaTime = 0;
+impactAtkTime = 0;

@@ -55,3 +55,4 @@ chargeWeapon = 0;
 chargeStack = 0;
 comboStack = false;
 upgradeChargeStack = 0;
+impactAtkTime = 0;

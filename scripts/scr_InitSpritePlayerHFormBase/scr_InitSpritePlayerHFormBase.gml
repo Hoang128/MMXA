@@ -37,6 +37,9 @@ switch argument0
 		sprWiredForward = spr_XWiredForward;
 		sprWiredUp = spr_XWiredUp;
 		sprWiredDown = spr_XWiredDown;
+		sprImpactAtk = spr_XImpactAtk;
+		spr2SideAtk = spr_X2SideAtk;
+		sprUpAtk = spr_XUpAtk;
 		#endregion
 	}
 	break;
@@ -84,6 +87,9 @@ switch argument0
 		sprHover = spr_XUAHover;
 		sprHoverFw = spr_XUAHoverFw;
 		sprHoverBw = spr_XUAHoverBw;
+		sprImpactAtk = spr_XUAImpactAtk;
+		spr2SideAtk = spr_XUA2SideAtk;
+		sprUpAtk = spr_XUAUpAtk;
 		#endregion
 	}
 	break;

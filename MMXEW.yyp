@@ -9479,6 +9479,14 @@
             }
         },
         {
+            "Key": "bf0991a8-ddfa-4dc5-8e79-f8478d085999",
+            "Value": {
+                "id": "6a72645d-69a9-4b2d-a85e-910197a1ed0d",
+                "resourcePath": "objects\\obj_XW6TornadoMissleCharge\\obj_XW6TornadoMissleCharge.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bf3560b9-b14f-4ff2-96f8-019285231e4d",
             "Value": {
                 "id": "864d455e-7fb6-4ea8-aad0-25f73aa7578b",
@@ -9771,6 +9779,14 @@
             "Value": {
                 "id": "08adbb88-da02-4dc1-acc0-0a83655abc17",
                 "resourcePath": "scripts\\scr_XAtk8Dark\\scr_XAtk8Dark.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c4fb9cf4-016d-4d6f-a85b-a89c4037285d",
+            "Value": {
+                "id": "dce2c61f-2bd2-4df4-ab8b-c38747e55c74",
+                "resourcePath": "scripts\\scr_playerXImpactAttack\\scr_playerXImpactAttack.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -10116,6 +10132,14 @@
                 "id": "fd0c5488-be2c-43d8-b71a-2712ece0ef0f",
                 "resourcePath": "sprites\\spr_AXSImpactDown\\spr_AXSImpactDown.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cc3fefb9-de03-49dc-8ff4-585c62afcca6",
+            "Value": {
+                "id": "66da84d8-7ce8-458f-8165-808e7f94ecc1",
+                "resourcePath": "scripts\\scr_XAtk6TornadoCharge\\scr_XAtk6TornadoCharge.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -11075,6 +11099,14 @@
             "Value": {
                 "id": "6573844c-033f-4d7c-90ad-3f285046fd16",
                 "resourcePath": "objects\\obj_E_GuardianShieldEngine\\obj_E_GuardianShieldEngine.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "de444967-7a6d-42bb-a914-047e95acecae",
+            "Value": {
+                "id": "82872ab6-5d7a-443f-ae8a-e6c077d2e7c7",
+                "resourcePath": "objects\\obj_XW6TornadoCharge\\obj_XW6TornadoCharge.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -12788,11 +12820,13 @@
         "ef115021-258a-4a9b-9e6a-ac9b39ab8fbe",
         "bd15f775-f2ab-4930-854b-d5ae490b404e",
         "e1994802-730b-4412-aa97-2021c97a07cf",
+        "c4fb9cf4-016d-4d6f-a85b-a89c4037285d",
         "5dac1eb5-0407-4406-8bca-51caab1bec09",
         "c4fb2845-f18d-4e76-9354-c255d7790f2b",
         "07e54ed5-9f49-44c3-9f04-b78f3ac36398",
         "893bdc9d-8a75-41be-9b5d-7e9aac405258",
         "590e4d62-2a3f-4414-ada1-8d881c824618",
+        "cc3fefb9-de03-49dc-8ff4-585c62afcca6",
         "bde8392f-6330-47e0-a68b-0e2e6195c91a",
         "a3bf0979-ecca-4d53-8b5c-be768e539034",
         "9a64ac67-4b58-4171-85d8-07252e052eea",

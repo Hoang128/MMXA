@@ -84,6 +84,10 @@ if ((XType == obj_playerXUA) || ((XType == obj_playerEclipseX) && (partArms != 0
 	
 		switch (currentWeapon)
 		{
+			case 6:
+			{
+				scr_XAtk6TornadoCharge();
+			}	break;
 			case 8:
 			{
 				scr_XAtk8DarkCharge();

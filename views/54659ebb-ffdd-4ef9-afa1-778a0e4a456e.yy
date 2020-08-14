@@ -8,7 +8,8 @@
         "c4fb2845-f18d-4e76-9354-c255d7790f2b",
         "07e54ed5-9f49-44c3-9f04-b78f3ac36398",
         "893bdc9d-8a75-41be-9b5d-7e9aac405258",
-        "590e4d62-2a3f-4414-ada1-8d881c824618"
+        "590e4d62-2a3f-4414-ada1-8d881c824618",
+        "cc3fefb9-de03-49dc-8ff4-585c62afcca6"
     ],
     "filterType": "GMScript",
     "folderName": "Element Weapon",

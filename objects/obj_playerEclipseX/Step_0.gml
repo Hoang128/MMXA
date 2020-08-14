@@ -7,8 +7,37 @@ event_inherited();
 if (activateState != ActivateState.DEACTIVATE)
 {
 	//Passive******************************************************************************************************************************************************
+	//Normal Flags-------------------------------------------------------------------------------------------------------------------------------------------------
+	//Impact Attack
+	#region
 	
-	//ArmorFlags---------------------------------------------------------------------------------------------------------------------------------------------------
+	if (sprite_index == sprImpactAtk)
+	{
+		if (impactAtkTime > 0)
+			impactAtkTime -= DELTA_TIME;
+		else
+		{
+			aState = ActionState.IDLE;
+			if (activateState == ActivateState.HALF_ACTIVATE)
+				activateState = ActivateState.ACTIVATE;
+			if (vState == VerticalState.V_ON_GROUND)
+			{
+				sprite_index = sprStand;
+				image_index = 0;
+			}
+			else
+			{
+				sprite_index = sprJump4;
+				image_index = 0;
+				vState = VerticalState.V_MOVE_FALLING;
+			}
+			impactAtkTime = 0;
+		}
+	}
+	
+	#endregion
+	
+	//Armor Flags--------------------------------------------------------------------------------------------------------------------------------------------------
 	switch (partFoot)
 	{
 		//Normal Foot
