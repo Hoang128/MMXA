@@ -21,4 +21,4 @@ if (instance_exists(obj_gameManager.playerCore))
 	}
 }
 
-init = false;
+createEff = false;

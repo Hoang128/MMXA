@@ -232,7 +232,7 @@ else
 						{
 							if ((sprite_index == spr_XEDoubleShot1_G) || (sprite_index == spr_XEDoubleShot1_A))
 							{
-								if (image_index > 4)
+								if (image_index > 2)
 								{
 									if (comboStack == false)
 										comboStack = true;

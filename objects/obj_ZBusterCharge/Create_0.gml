@@ -14,3 +14,5 @@ effWidthNumber = 4;
 effWidthRange = (bbox_bottom - bbox_top) / (effWidthNumber - 1);
 
 timmer = maxTimmer;
+
+init = false;

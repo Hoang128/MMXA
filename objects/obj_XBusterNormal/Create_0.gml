@@ -11,3 +11,5 @@ createEff = false;
 imgSpd = 0.5;
 bounce = 0;
 bounceSpr = spr_XBusterNormal;
+
+init = false;

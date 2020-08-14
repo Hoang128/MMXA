@@ -89,7 +89,6 @@ if (activateState != ActivateState.DEACTIVATE)
 								{
 									solarDashTime--;
 									ArmorPoint--;
-									dashTime = maxAirDashTime * 1.2;
 									usedFArmorPointFlag = true;
 								}
 							}

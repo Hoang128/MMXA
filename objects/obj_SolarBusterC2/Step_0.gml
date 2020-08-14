@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-if (!init)
+if (!createEff)
 {
 	if (level == 1)
 	{
@@ -22,5 +22,5 @@ if (!init)
 		objEff.yPlace = 0;
 		objEff.core = self;
 	}
-	init = true;
+	createEff = true;
 }
