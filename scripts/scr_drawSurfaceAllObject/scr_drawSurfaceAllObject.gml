@@ -45,10 +45,10 @@ with (obj_ShotEffX)				visible = 1;
 with (obj_ShotEffZ)				visible = 1;
 
 gpu_set_blendmode(bm_src_color);
-draw_sprite_ext(spr_XW7TimeRearImg, 0, 0, 0, 1, 1, 0, c_white, 1);
-draw_sprite_ext(spr_XW7TimeRearImg, 0, surfW, 0, 1, 1, 270, c_white, 1);
-draw_sprite_ext(spr_XW7TimeRearImg, 0, surfW, surfH, 1, 1, 180, c_white, 1);
-draw_sprite_ext(spr_XW7TimeRearImg, 0, 0, surfH, 1, 1, 90, c_white, 1);
+draw_sprite_ext(spr_XW7TimeRearImg, 0, 0, 0, 1 / 64 * radius, 1 / 64 * radius, 0, c_white, 1);
+draw_sprite_ext(spr_XW7TimeRearImg, 0, surfW, 0, 1 / 64 * radius, 1 / 64 * radius, 270, c_white, 1);
+draw_sprite_ext(spr_XW7TimeRearImg, 0, surfW, surfH, 1 / 64 * radius, 1 / 64 * radius, 180, c_white, 1);
+draw_sprite_ext(spr_XW7TimeRearImg, 0, 0, surfH, 1 / 64 * radius, 1 / 64 * radius, 90, c_white, 1);
 gpu_set_blendmode(bm_normal);
 
 surface_reset_target();

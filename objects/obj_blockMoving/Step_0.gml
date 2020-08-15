@@ -1,12 +1,12 @@
 /// @description Handle
 
 // Slow time
-if (instance_exists(obj_ZChronoField))
+if (instance_exists(obj_PlayerWeaponTime))
 {
-	if ((distance_to_object(obj_ZChronoField) < obj_ZChronoField.radius) && (obj_ZChronoField.phase > 0))
+	if ((distance_to_object(obj_PlayerWeaponTime) < obj_PlayerWeaponTime.radius) && (obj_PlayerWeaponTime.phase > 0))
 	{
 		if (myDeltaTime == 1)
-			myDeltaTime *= obj_ZChronoField.slowRatio;
+			myDeltaTime *= obj_PlayerWeaponTime.slowRatio;
 	}
 	else myDeltaTime = 1;
 }

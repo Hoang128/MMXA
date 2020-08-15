@@ -20,4 +20,7 @@ dashTime = 0;
 impactAtkTime = time;
 
 if (objPerform != noone)
-	instance_create_depth(x, y, depth, objPerform);
+{
+	if (!instance_exists(objPerform))
+		instance_create_depth(x, y, depth, objPerform);
+}

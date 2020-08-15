@@ -1730,7 +1730,7 @@
             "Key": "216e3eba-e2a6-484f-9f9b-9aba01343aa7",
             "Value": {
                 "id": "6e5c4f71-eead-45a1-9268-1eafa0023c58",
-                "resourcePath": "objects\\obj_XW7chronoForceImage\\obj_XW7chronoForceImage.yy",
+                "resourcePath": "objects\\obj_XW7chronoForce\\obj_XW7chronoForce.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -4580,6 +4580,14 @@
                 "id": "650795ed-4cfb-4149-91cf-96f8fdf1b143",
                 "resourcePath": "objects\\obj_waterSidePulseEff\\obj_waterSidePulseEff.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5909dc83-50a8-4183-b1d6-30ba89afd192",
+            "Value": {
+                "id": "02445ab8-a911-4db5-b677-f79606c20c66",
+                "resourcePath": "scripts\\scr_XAtk7TimeCharge\\scr_XAtk7TimeCharge.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -11295,6 +11303,14 @@
             }
         },
         {
+            "Key": "e225b8b5-647b-4426-a813-c5224392f212",
+            "Value": {
+                "id": "caefd3a9-b030-432d-9397-3373edcae31c",
+                "resourcePath": "objects\\obj_XW7ChronoForceCharge\\obj_XW7ChronoForceCharge.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e22dee90-6957-4cc1-84b7-5a01cf731a80",
             "Value": {
                 "id": "645fc901-0da9-4975-9d03-b23a28d3f051",
@@ -12825,6 +12841,7 @@
         "c4fb2845-f18d-4e76-9354-c255d7790f2b",
         "07e54ed5-9f49-44c3-9f04-b78f3ac36398",
         "893bdc9d-8a75-41be-9b5d-7e9aac405258",
+        "5909dc83-50a8-4183-b1d6-30ba89afd192",
         "590e4d62-2a3f-4414-ada1-8d881c824618",
         "cc3fefb9-de03-49dc-8ff4-585c62afcca6",
         "bde8392f-6330-47e0-a68b-0e2e6195c91a",

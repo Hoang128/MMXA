@@ -88,6 +88,10 @@ if ((XType == obj_playerXUA) || ((XType == obj_playerEclipseX) && (partArms != 0
 			{
 				scr_XAtk6TornadoCharge();
 			}	break;
+			case 7:
+			{
+				scr_XAtk7TimeCharge();
+			}
 			case 8:
 			{
 				scr_XAtk8DarkCharge();
