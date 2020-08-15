@@ -45,3 +45,13 @@ canSlash = 1;
 busterType = noone;
 chargeCore = 0;
 chargeCoreLv = 0;
+
+USlashEnable = true;
+DSlashEnable = true;
+FSlashEnable = false;
+ThrustEnable = false;
+
+cmdUSlashFlag = false;
+cmdDSlashFlag = false;
+cmdFSlashFlag = false;
+cmdThrustFlag = false;

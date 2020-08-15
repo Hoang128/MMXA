@@ -315,56 +315,80 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if ((aState == ActionState.IDLE) || (aState == ActionState.DASHING))
 					{
-						if (sprite_index != sprLand)
+						if ((USlashEnable == true) && (keyboard_check(global.keyUp) && !keyboard_check(global.keyDown) && (!keyFoward)))
 						{
-							if (standCombo < 3)
-							{
-								standCombo++;
-							}
-							aState = ActionState.IDLE;
-					
-							if (atkState == AttackState.A_NONE)
-							{
-								sprite_index = spr_ZSlashCombo1;
-								image_index = 0;
-								audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo1, 0, 0);
-								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
-								
-								scr_SetIceSlideSpd(hspd, true);
-								
-								hspd = 0;
-								if (dashSpd > 0)
-								{
-									dashSpd = 0;
-									dashTime = 0;
-								}
-								
-								atkState = AttackState.A_STRICT_ATTACK_LV2;
-								
-								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_COMBO_1, self);
-							}
+							cmdUSlashFlag = true;
+							cmdDSlashFlag = false;
+							cmdFSlashFlag = false;
+							cmdThrustFlag = false;
 						}
-						else
+						if ((DSlashEnable == true) && (!keyboard_check(global.keyUp) && !keyboard_check(global.keyDown) && (aState == ActionState.DASHING)))
 						{
-							if (atkState == AttackState.A_NONE)
+							cmdUSlashFlag = false;
+							cmdDSlashFlag = true;
+							cmdFSlashFlag = false;
+							cmdThrustFlag = false;
+						}
+						if ((FSlashEnable == true) && (!keyboard_check(global.keyUp) && !keyboard_check(global.keyDown) && (keyFoward) && (aState != ActionState.DASHING)))
+						{
+							cmdUSlashFlag = false;
+							cmdDSlashFlag = false;
+							cmdFSlashFlag = true;
+							cmdThrustFlag = false;
+						}
+						if (cmdDSlashFlag == false && cmdFSlashFlag == false && cmdUSlashFlag == false)
+						{
+							if (sprite_index != sprLand)
 							{
-								sprite_index = spr_ZSlashLand;
-								image_index = 0;
-								audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
-								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
-								
-								scr_SetIceSlideSpd(hspd, true);
-								
-								hspd = 0;
-								if (dashSpd > 0)
+								if (standCombo < 3)
 								{
-									dashSpd = 0;
-									dashTime = 0;
+									standCombo++;
 								}
+								aState = ActionState.IDLE;
+					
+								if (atkState == AttackState.A_NONE)
+								{
+									sprite_index = spr_ZSlashCombo1;
+									image_index = 0;
+									audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo1, 0, 0);
+									audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
 								
-								atkState = AttackState.A_STRICT_ATTACK_LV2;
+									scr_SetIceSlideSpd(hspd, true);
+								
+									hspd = 0;
+									if (dashSpd > 0)
+									{
+										dashSpd = 0;
+										dashTime = 0;
+									}
+								
+									atkState = AttackState.A_STRICT_ATTACK_LV2;
+								
+									scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_COMBO_1, self);
+								}
+							}
+							else
+							{
+								if (atkState == AttackState.A_NONE)
+								{
+									sprite_index = spr_ZSlashLand;
+									image_index = 0;
+									audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
+									audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
+								
+									scr_SetIceSlideSpd(hspd, true);
+								
+									hspd = 0;
+									if (dashSpd > 0)
+									{
+										dashSpd = 0;
+										dashTime = 0;
+									}
+								
+									atkState = AttackState.A_STRICT_ATTACK_LV2;
 
-								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_LAND_SLASH, self);
+									scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_LAND_SLASH, self);
+								}
 							}
 						}
 					}
@@ -389,38 +413,55 @@ if (activateState != ActivateState.DEACTIVATE)
 				//JumpSlash
 				else if (vState == VerticalState.V_MOVE_FALLING)
 				{
-					if ((sprite_index != spr_ZDoubleJump) && !keyboard_check(global.keyUp))
+					if ((DSlashEnable == false) && (!keyboard_check(global.keyUp) && !keyboard_check(global.keyDown) && (aState == ActionState.DASHING)))
 					{
-						if (atkState == AttackState.A_NONE)
-						{
-							sprite_index = spr_ZSlashJump;
-							image_index = 0;
-							randomize();
-							if (random(2) > 1.2)
-								audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
-							audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
-							
-							hspd = 0;
-							atkState = AttackState.A_STRICT_ATTACK;
-							
-							scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_JUMP_SLASH, self);
-						}
+						cmdUSlashFlag = false;
+						cmdDSlashFlag = true;
+						cmdFSlashFlag = false;
+						cmdThrustFlag = false;
 					}
-					else
+					if ((ThrustEnable == false) && (!keyboard_check(global.keyUp) && keyboard_check(global.keyDown) && (aState != ActionState.DASHING)))
 					{
-						if (atkState == AttackState.A_NONE)
+						cmdUSlashFlag = false;
+						cmdDSlashFlag = false;
+						cmdFSlashFlag = false;
+						cmdThrustFlag = true;
+					}
+					if (cmdDSlashFlag == false && cmdThrustFlag == false)
+					{
+						if ((sprite_index != spr_ZDoubleJump) && !keyboard_check(global.keyUp))
 						{
-							sprite_index = spr_ZSlashSpin;
-							image_index = 0;
-							randomize();
-							if (random(2) > 1.2)
-								audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
-							audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
+							if (atkState == AttackState.A_NONE)
+							{
+								sprite_index = spr_ZSlashJump;
+								image_index = 0;
+								randomize();
+								if (random(2) > 1.2)
+									audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
+								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
 							
-							hspd = 0;
-							atkState = AttackState.A_STRICT_ATTACK;
+								hspd = 0;
+								atkState = AttackState.A_STRICT_ATTACK;
 							
-							scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_SPIN_SLASH, self);
+								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_JUMP_SLASH, self);
+							}
+						}
+						else
+						{
+							if (atkState == AttackState.A_NONE)
+							{
+								sprite_index = spr_ZSlashSpin;
+								image_index = 0;
+								randomize();
+								if (random(2) > 1.2)
+									audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
+								audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash2, 0, 0);
+							
+								hspd = 0;
+								atkState = AttackState.A_STRICT_ATTACK;
+							
+								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_SPIN_SLASH, self);
+							}
 						}
 					}
 				}
@@ -593,6 +634,24 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Special attack
 		#region
 		
+		//Saber
+		#region
+		
+		if (cmdUSlashFlag == true)
+		{
+			cmdUSlashFlag = false;
+		}
+		
+		if (cmdDSlashFlag == true)
+		{
+			cmdDSlashFlag = false;
+		}
+		
+		#endregion
+		
+		//Buster
+		#region
+		
 		if (keyboard_check_pressed(global.keySpAtk))
 		{
 			//Chrono Field
@@ -692,6 +751,8 @@ if (activateState != ActivateState.DEACTIVATE)
 				}
 			}
 		}
+		
+		#endregion
 		
 		#endregion
 		

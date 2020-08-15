@@ -16,3 +16,13 @@ timeShot = maxTimeShot;
 timeEffect = maxTimeEffect;
 radius = minRadius;
 imgSpd = 0;
+
+timeFSurf = noone;
+
+surfW = 1;
+surfH = 1;
+
+xPlace = x;
+yPlace = y;
+
+alarm[0] = 1;

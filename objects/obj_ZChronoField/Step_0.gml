@@ -20,7 +20,11 @@ if (phase == 1)
 {
 	if (imgSpd == 0) imgSpd = 0.5;
 	if (radius < maxRadius) radius += DELTA_TIME * increaseRadiusSpd;
-	else phase = 2;
+	else 
+	{
+		radius = maxRadius++;
+		phase = 2;
+	}
 }
 
 if (phase == 2)
@@ -39,5 +43,16 @@ if (phase == 2)
 
 if (phase == 3)
 {
-	if (radius > 0) radius -= myDeltaTime * global.deltaTime * increaseRadiusSpd;
+	if (radius > 1) radius -= DELTA_TIME * increaseRadiusSpd;
+}
+
+surfW = radius * 2;
+surfH = radius * 2;
+xPlace = x;
+yPlace = y;
+
+if (surface_exists(timeFSurf))
+{
+	surface_free(timeFSurf);
+	scr_drawSurfaceAllObject();
 }
