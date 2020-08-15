@@ -639,6 +639,14 @@
             }
         },
         {
+            "Key": "0b9edf5e-2eb0-4ceb-9a5b-2aa3fefc6434",
+            "Value": {
+                "id": "511d12d5-2026-4ab2-9241-ddb5b5663676",
+                "resourcePath": "objects\\obj_IceSaber\\obj_IceSaber.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0ba10a02-6344-4f82-a8fe-4543e0a16ab6",
             "Value": {
                 "id": "51cb918f-3d08-4923-9f3b-06a709439a41",
@@ -1708,6 +1716,14 @@
                 "id": "5a39909b-d835-423c-953e-374f2af252ac",
                 "resourcePath": "sprites\\spr_DrLightProjection\\spr_DrLightProjection.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "203cb79e-4320-4b26-87c2-da65585c63ee",
+            "Value": {
+                "id": "a2b44ba7-dd90-4db8-a280-b9aec476b0aa",
+                "resourcePath": "sounds\\snd_ZIceSaberEff\\snd_ZIceSaberEff.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -2887,10 +2903,26 @@
             }
         },
         {
+            "Key": "385d8361-809f-4dae-9f1e-5bcc6a07fe78",
+            "Value": {
+                "id": "60ba4071-84fb-4598-b4ae-5ec226e1772d",
+                "resourcePath": "objects\\obj_FlameSaberImage\\obj_FlameSaberImage.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "38b38897-6b4f-4cd7-a574-1648728d9e97",
             "Value": {
                 "id": "00eee827-7549-4c1b-b971-8ccbfa6bbbe2",
                 "resourcePath": "objects\\obj_limitZoneBoss\\obj_limitZoneBoss.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "38c3dc61-cfcb-47b4-a09a-6c78331939f6",
+            "Value": {
+                "id": "0cdf8aae-c6c5-4cf7-b4e1-9bc9acd78309",
+                "resourcePath": "objects\\obj_FlameSaber\\obj_FlameSaber.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -4244,6 +4276,14 @@
                 "id": "857184e1-1605-49da-8d14-cdeb313ed934",
                 "resourcePath": "views\\50d28c0d-8f5c-433f-a43c-968ff8d01676.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "510b7a37-001b-40b3-9d0d-5820cef35f54",
+            "Value": {
+                "id": "6045b3dd-584d-4ce2-b435-3ef4160aaa9d",
+                "resourcePath": "sounds\\snd_ZFlameSaberEff\\snd_ZFlameSaberEff.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -8687,6 +8727,14 @@
             }
         },
         {
+            "Key": "ac33382a-2024-41eb-81ed-da2b7e741d68",
+            "Value": {
+                "id": "6e4b4346-a742-400e-bb89-87c737735a6d",
+                "resourcePath": "objects\\obj_IceSaberImage\\obj_IceSaberImage.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ac34ecc4-74e0-4c55-8a74-a5eecd63f56e",
             "Value": {
                 "id": "48a9d87e-19e6-4158-92bd-67c3fa20db1e",
@@ -9196,6 +9244,14 @@
                 "id": "63139f33-321d-4eef-9c36-baf95d814d57",
                 "resourcePath": "views\\b7f512e9-a212-4e31-873b-b8aa821c377c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b83dee96-4aab-4246-be68-46d4384e9da8",
+            "Value": {
+                "id": "1813fbef-b92b-465e-9a97-115efa5ca62b",
+                "resourcePath": "sprites\\spr_ZIceSaberHitBox\\spr_ZIceSaberHitBox.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

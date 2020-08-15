@@ -364,10 +364,10 @@ if (activateState != ActivateState.DEACTIVATE)
 					{
 						if (atkState <= AttackState.A_NORMAL_ATTACK)
 						{
+							audio_play_sound_on(global.SFX_Emitter, sndLandEff, 0, 0);
 							sprite_index = sprLand;
 							image_index = 0;
 						}
-						audio_play_sound_on(global.SFX_Emitter, sndLandEff, 0, 0);
 			
 						canSlide = 0;
 						if (aState == ActionState.JUMPDASHING)
@@ -381,8 +381,11 @@ if (activateState != ActivateState.DEACTIVATE)
 						if (!canAirDash)
 							canAirDash = 1;
 						
-						vState = VerticalState.V_ON_GROUND;
-						aState = ActionState.IDLE;
+						if (vState != VerticalState.V_MOVE_UP)
+						{
+							vState = VerticalState.V_ON_GROUND;
+							aState = ActionState.IDLE;
+						}
 					}
 				}
 				else

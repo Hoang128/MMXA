@@ -63,6 +63,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			sprite_index = spr_ZSlashLand;
 			
+			audio_play_sound_on(global.SFX_Emitter, sndLandEff, false, false);
+			
 			scr_SetIceSlideSpd(hspd, true);
 			
 			atkState = AttackState.A_STRICT_ATTACK_LV2;
@@ -75,6 +77,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (sprite_index == spr_ZSlashSpin)
 		{
 			sprite_index = sprLand;
+			
+			audio_play_sound_on(global.SFX_Emitter, sndLandEff, false, false);
 			
 			scr_SetIceSlideSpd(hspd, true);
 			
@@ -89,6 +93,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			sprite_index = spr_ZSlashCharge_G;
 			
+			audio_play_sound_on(global.SFX_Emitter, sndLandEff, false, false);
+			
 			scr_SetIceSlideSpd(hspd, true);
 			
 			hspd = 0;
@@ -100,6 +106,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (sprite_index == spr_ZShotNorA)
 		{
 			sprite_index = spr_ZShotNorG;
+			
+			audio_play_sound_on(global.SFX_Emitter, sndLandEff, false, false);
 			
 			scr_SetIceSlideSpd(hspd, true);
 			
@@ -113,6 +121,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			sprite_index = spr_ZShotC1_G;
 			
+			audio_play_sound_on(global.SFX_Emitter, sndLandEff, false, false);
+			
 			scr_SetIceSlideSpd(hspd, true);
 			
 			hspd = 0;
@@ -125,6 +135,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			sprite_index = spr_ZShotC2_G;
 			
+			audio_play_sound_on(global.SFX_Emitter, sndLandEff, false, false);
+			
 			scr_SetIceSlideSpd(hspd, true);
 			
 			hspd = 0;
@@ -136,6 +148,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (sprite_index == spr_ZShotC3_A)
 		{
 			sprite_index = spr_ZShotC3_G;
+			
+			audio_play_sound_on(global.SFX_Emitter, sndLandEff, false, false);
 			
 			scr_SetIceSlideSpd(hspd, true);
 			
@@ -295,6 +309,47 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	//Passive Counters
 	#region
+	
+	
+	#endregion
+	
+	//Ex-Skill
+	#region
+	
+	if (sprite_index == spr_ZSlashUp)
+	{
+		if (upperSlashTime < upperSlashTimeMax)
+		{
+			chargeNormal = 0;
+			if (image_index > 16)
+				image_index = 3;
+			if (image_index >= 3)
+			{
+				if (playSFXUpperSlash == false)
+				{
+					audio_play_sound_on(global.SFX_Emitter, snd_VZSlashUp, false, false);
+					audio_play_sound_on(global.SFX_Emitter, snd_ZIceSaberEff, false, false);
+					playSFXUpperSlash = true;
+				}
+				if (!keyboard_check(global.keyAtk) || place_meeting(x, y - 1, obj_block))
+				{
+					upperSlashTime = upperSlashTimeMax;
+				}
+				hspd = upperSlashHspd * (upperSlashTimeMax - upperSlashTime) / upperSlashTimeMax * hDir;
+				vspd = -power(upperSlashVspd * (upperSlashTimeMax - upperSlashTime) / upperSlashTimeMax, 3);
+			}
+			upperSlashTime += DELTA_TIME;
+		}
+		else
+		{
+			if (image_index < 17)
+			{
+				hspd = 0;
+				vspd = 0;
+				image_index = 17;
+			}
+		}
+	}
 	
 	#endregion
 	
@@ -639,7 +694,28 @@ if (activateState != ActivateState.DEACTIVATE)
 		
 		if (cmdUSlashFlag == true)
 		{
-			cmdUSlashFlag = false;
+			if (sprite_index != spr_ZSlashUp)
+			{
+				sprite_index = spr_ZSlashUp;
+				image_index = 0;
+			
+				if (instance_exists(obj_PlayerWeaponMeeleImage))
+					scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
+				scr_MeeleWeaponCreate(obj_IceSaberImage, noone, self);
+			
+				atkState = AttackState.A_STRICT_ATTACK_LV4;
+				aState = ActionState.IDLE;
+				vState = VerticalState.V_MOVE_UP;
+				hState = HorizontalState.H_MOVE_FORWARD;
+				canClimb = false;
+				upperSlashTime = 0;
+				playSFXUpperSlash = false;
+				dashSpd = 0;
+				dashTime = 0;
+				vspd = 0;
+				hspd = 0;
+				cmdUSlashFlag = false;
+			}
 		}
 		
 		if (cmdDSlashFlag == true)
@@ -679,8 +755,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							atkState = AttackState.A_STRICT_ATTACK_LV3;
 							image_index = 0;
 							busterType = obj_ZChronoField;
-							if (instance_exists(obj_ZSaber)) 
-								instance_destroy(obj_ZSaber);
+							if (instance_exists(obj_PlayerWeaponMeeleImage)) 
+								scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
 						}
 					}
 					else
@@ -698,8 +774,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							vState = VerticalState.V_MOVE_FALLING;
 							image_index = 0;
 							busterType = obj_ZChronoField;
-							if (instance_exists(obj_ZSaber)) 
-								instance_destroy(obj_ZSaber);
+							if (instance_exists(obj_PlayerWeaponMeeleImage)) 
+								scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
 						}
 					}
 				}
@@ -715,8 +791,8 @@ if (activateState != ActivateState.DEACTIVATE)
 						if (atkState < AttackState.A_STRICT_ATTACK_LV3)
 						{
 							audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
-							if (instance_exists(obj_ZSaberImage))
-								scr_MeeleWeaponDestroy(obj_ZSaberImage);
+							if (instance_exists(obj_PlayerWeaponMeeleImage)) 
+								scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
 							sprite_index = spr_ZShotNorG;
 							
 							scr_SetIceSlideSpd(hspd, true);
@@ -731,8 +807,8 @@ if (activateState != ActivateState.DEACTIVATE)
 							atkState = AttackState.A_STRICT_ATTACK_LV3;
 							image_index = 0;
 							busterType = obj_ZThunderBlaster;
-							if (instance_exists(obj_ZSaber)) 
-								instance_destroy(obj_ZSaber);
+							if (instance_exists(obj_PlayerWeaponMeeleImage)) 
+								scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
 						}
 					}
 				}

@@ -81,6 +81,7 @@ dashKickTime = 0;
 dashKickFlyTime = 0;
 shadowCreateTime = shadowCreateTimeMax;
 isClimbing = 0;
+canClimb = true;
 dynamicBlock = noone;
 xPlaceDashEff = 0;
 yPlaceDashEff = 0;

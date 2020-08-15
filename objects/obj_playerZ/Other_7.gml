@@ -197,4 +197,20 @@ switch(sprite_index)
 		sprite_index = sprWired;
 		image_index = 0;
 	}	break;
+	
+	case spr_ZSlashUp:
+	{
+		sprite_index = sprJump4;
+		image_index = 0;
+		
+		scr_MeeleWeaponDestroy(obj_IceSaberImage);
+		aState = ActionState.IDLE;
+		vState = VerticalState.V_MOVE_FALLING;
+		hState = HorizontalState.H_MOVE_NONE;
+		atkState = AttackState.A_NONE;
+		canClimb = true;
+		hspd = 0;
+		vspd = 0;
+		upperSlashTime = 0;
+	}	break;
 }

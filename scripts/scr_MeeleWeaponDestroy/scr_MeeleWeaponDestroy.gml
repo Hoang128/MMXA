@@ -12,6 +12,26 @@ switch (obj_ImageWeapon)
 	}
 	break;
 	
+	case obj_IceSaberImage:
+	{
+		if (instance_exists(obj_IceSaberImage))
+			instance_destroy(obj_IceSaberImage);
+		
+		if (instance_exists(obj_IceSaber))
+			instance_destroy(obj_IceSaber);
+	}
+	break;
+	
+	case obj_FlameSaberImage:
+	{
+		if (instance_exists(obj_FlameSaberImage))
+			instance_destroy(obj_FlameSaberImage);
+		
+		if (instance_exists(obj_FlameSaber))
+			instance_destroy(obj_FlameSaber);
+	}
+	break;
+	
 	case obj_PlayerWeaponMeeleImage:
 	{
 		if (instance_exists(obj_PlayerWeaponMeeleImage))

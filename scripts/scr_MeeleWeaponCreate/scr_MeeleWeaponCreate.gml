@@ -13,6 +13,23 @@ switch (obj_ImageWeapon)
 		var objSaber = instance_create_depth(x, y, depth - 2, obj_ZSaber);
 		objSaber.state = weaponState;
 		objSaber.core = core;
-	}
-	break;
+	}	break;
+	
+	case obj_IceSaberImage:
+	{
+		var objSaberImage = instance_create_depth(x, y, depth - 1, obj_IceSaberImage);
+		objSaberImage.core = core;
+		
+		var objSaber = instance_create_depth(x, y, depth - 2, obj_IceSaber);
+		objSaber.core = core;
+	}	break;
+	
+	case obj_FlameSaberImage:
+	{
+		var objSaberImage = instance_create_depth(x, y, depth - 1, obj_FlameSaberImage);
+		objSaberImage.core = core;
+		
+		var objSaber = instance_create_depth(x, y, depth - 2, obj_FlameSaber);
+		objSaber.core = core;
+	}	break;
 }

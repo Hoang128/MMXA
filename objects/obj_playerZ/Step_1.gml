@@ -14,4 +14,9 @@ image_xscale = hDir;
 
 scr_InitImageSpeedPlayerHFormBase(obj_playerZ);
 
+switch (sprite_index)
+{
+	case spr_ZSlashUp:	image_speed = 0.5;	break;
+}
+
 image_speed *= global.deltaTime;

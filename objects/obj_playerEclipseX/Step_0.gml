@@ -170,6 +170,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			sprite_index = spr_XEDoubleShot1_G;
 			
+			audio_play_sound_on(global.SFX_Emitter, sndLandEff, false, false);
+			
 			scr_SetIceSlideSpd(hspd, true);
 			
 			hspd = 0;
@@ -181,6 +183,8 @@ if (activateState != ActivateState.DEACTIVATE)
 		if (sprite_index == spr_XEDoubleShot2_A)
 		{
 			sprite_index = spr_XEDoubleShot2_G;
+			
+			audio_play_sound_on(global.SFX_Emitter, sndLandEff, false, false);
 			
 			scr_SetIceSlideSpd(hspd, true);
 			
@@ -313,6 +317,8 @@ if (activateState != ActivateState.DEACTIVATE)
 					
 					scr_SetQuake(15);
 					instance_create_depth(x, bbox_bottom, depth - 1, obj_solarSlamDownEff);
+					
+					audio_play_sound_on(global.SFX_Emitter, sndLandEff, false, false);
 					
 					var obj1 = instance_create_depth(x + 16, bbox_bottom + 2, depth - 1, obj_sideDust);
 					obj1.image_xscale = -1;

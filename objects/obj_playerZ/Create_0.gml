@@ -55,3 +55,10 @@ cmdUSlashFlag = false;
 cmdDSlashFlag = false;
 cmdFSlashFlag = false;
 cmdThrustFlag = false;
+
+//Skill variable
+upperSlashHspd = 1.5;
+upperSlashVspd = 2;
+upperSlashTimeMax = 60;
+upperSlashTime = 0;
+playSFXUpperSlash = false;
