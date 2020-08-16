@@ -13,7 +13,9 @@ if (myPalette != noone)
 		case	obj_SolarBusterNormal:
 		case	obj_SolarBusterC1:	
 		case	obj_SolarBusterC2:
-		case	obj_SolarBusterC3:			pal = 1;	break;
+		case	obj_SolarBusterC3:	
+		case	obj_ZFlame:
+		case	obj_WPFireEff:				pal = 1;	break;
 		case	obj_ZBusterCharge:
 		case	obj_ZThunderBlaster:
 		case	obj_ZBusterNor:				pal = 2;	break;
