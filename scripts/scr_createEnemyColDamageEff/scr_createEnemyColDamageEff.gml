@@ -16,6 +16,8 @@ if (other.collisionEff != noone)
 	{
 		case obj_ZSaber:
 		case obj_ZCrescent:
+		case obj_ZIceSpyke:
+		case obj_IceSaber:
 		{
 			randomize();
 			var effAngle = random(60) * 3;

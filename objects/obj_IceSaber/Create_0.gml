@@ -9,3 +9,6 @@ maxTimmer = 4;
 damage = 1;
 type = WeaponType.SABER;
 slowTime = true;
+
+createSpikeWait = 0;
+createSpikeWaitMax = 30;

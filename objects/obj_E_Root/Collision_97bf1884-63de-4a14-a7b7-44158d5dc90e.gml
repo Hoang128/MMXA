@@ -103,6 +103,12 @@ if (damageTimmer <= 0)
 			}
 		}
 		
+		if (other.object_index == obj_ZIceSpyke)
+		{
+			other.createEff = true;
+			instance_destroy(other);
+		}
+		
 		if ((other.object_index == obj_XW6TornadoMissle)
 		||	(other.object_index == obj_XW6TornadoMissleCharge))
 		{
