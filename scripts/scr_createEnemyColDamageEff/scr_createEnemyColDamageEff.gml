@@ -17,16 +17,17 @@ if (other.collisionEff != noone)
 		case obj_ZSaber:
 		case obj_ZCrescent:
 		case obj_ZIceSpyke:
-		case obj_IceSaber:
+		case obj_ZIceSaber:
+		case obj_ZFlameSaber:
 		{
 			randomize();
 			var effAngle = random(60) * 3;
 		
-			var objColEff = instance_create_depth(xPlace, yPlace, other.depth - 1, other.collisionEff);
+			var objColEff = instance_create_depth(xPlace, yPlace, -10, other.collisionEff);
 			objColEff.image_angle = effAngle;
 			objColEff.image_xscale = other.image_xscale;
 			
-			var objZEff = instance_create_depth(xPlace, yPlace, other.depth - 2, obj_ZSaberSlashEff);
+			var objZEff = instance_create_depth(xPlace, yPlace, -10, obj_ZSaberSlashEff);
 			objZEff.image_angle = effAngle;
 		}	break;
 		

@@ -21,3 +21,7 @@
 #macro GRAVITY_WATER 0.2
 #macro MAX_FALL_WATER 3.5
 #macro WIND_BOOST -1;
+
+//World Speed
+#macro GAME_SPEED_SLOW 0.2
+#macro GAME_SPEED_NORMAL 1;

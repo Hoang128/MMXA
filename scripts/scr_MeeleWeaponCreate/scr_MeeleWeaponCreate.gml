@@ -15,21 +15,21 @@ switch (obj_ImageWeapon)
 		objSaber.core = core;
 	}	break;
 	
-	case obj_IceSaberImage:
+	case obj_ZIceSaberImage:
 	{
-		var objSaberImage = instance_create_depth(x, y, depth - 1, obj_IceSaberImage);
+		var objSaberImage = instance_create_depth(x, y, depth - 1, obj_ZIceSaberImage);
 		objSaberImage.core = core;
 		
-		var objSaber = instance_create_depth(x, y, depth - 2, obj_IceSaber);
+		var objSaber = instance_create_depth(x, y, depth - 2, obj_ZIceSaber);
 		objSaber.core = core;
 	}	break;
 	
-	case obj_FlameSaberImage:
+	case obj_ZFlameSaberImage:
 	{
-		var objSaberImage = instance_create_depth(x, y, depth - 1, obj_FlameSaberImage);
+		var objSaberImage = instance_create_depth(x, y, depth - 1, obj_ZFlameSaberImage);
 		objSaberImage.core = core;
 		
-		var objSaber = instance_create_depth(x, y, depth - 2, obj_FlameSaber);
+		var objSaber = instance_create_depth(x, y, depth - 2, obj_ZFlameSaber);
 		objSaber.core = core;
 	}	break;
 }

@@ -650,7 +650,7 @@
             "Key": "0b9edf5e-2eb0-4ceb-9a5b-2aa3fefc6434",
             "Value": {
                 "id": "511d12d5-2026-4ab2-9241-ddb5b5663676",
-                "resourcePath": "objects\\obj_IceSaber\\obj_IceSaber.yy",
+                "resourcePath": "objects\\obj_ZIceSaber\\obj_ZIceSaber.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -946,7 +946,7 @@
             "Key": "112d4729-824b-417c-ad55-e2da45ec549e",
             "Value": {
                 "id": "c2372e44-83f9-4a84-afcc-2374bea2ac74",
-                "resourcePath": "sprites\\spr_ZFlameSaber\\spr_ZFlameSaber.yy",
+                "resourcePath": "sprites\\spr_ZFlameSaberImage\\spr_ZFlameSaberImage.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2922,7 +2922,7 @@
             "Key": "385d8361-809f-4dae-9f1e-5bcc6a07fe78",
             "Value": {
                 "id": "60ba4071-84fb-4598-b4ae-5ec226e1772d",
-                "resourcePath": "objects\\obj_FlameSaberImage\\obj_FlameSaberImage.yy",
+                "resourcePath": "objects\\obj_ZFlameSaberImage\\obj_ZFlameSaberImage.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2938,7 +2938,7 @@
             "Key": "38c3dc61-cfcb-47b4-a09a-6c78331939f6",
             "Value": {
                 "id": "0cdf8aae-c6c5-4cf7-b4e1-9bc9acd78309",
-                "resourcePath": "objects\\obj_FlameSaber\\obj_FlameSaber.yy",
+                "resourcePath": "objects\\obj_ZFlameSaber\\obj_ZFlameSaber.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -5959,6 +5959,14 @@
             }
         },
         {
+            "Key": "71e6f7c5-9420-4854-9441-b46c25d655bf",
+            "Value": {
+                "id": "1780e66b-97a2-4a90-a25a-0746d06314b1",
+                "resourcePath": "sprites\\spr_ZFlameSlashGround\\spr_ZFlameSlashGround.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "71ec0f73-08f1-42c1-be93-046493a17a2f",
             "Value": {
                 "id": "d2ec01a0-433c-48eb-8321-221fd4987d36",
@@ -8786,7 +8794,7 @@
             "Key": "ac33382a-2024-41eb-81ed-da2b7e741d68",
             "Value": {
                 "id": "6e4b4346-a742-400e-bb89-87c737735a6d",
-                "resourcePath": "objects\\obj_IceSaberImage\\obj_IceSaberImage.yy",
+                "resourcePath": "objects\\obj_ZIceSaberImage\\obj_ZIceSaberImage.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -10743,6 +10751,14 @@
             }
         },
         {
+            "Key": "d36642b3-3c00-476b-ae6d-f09937676fa5",
+            "Value": {
+                "id": "68ef6dff-4542-48bf-8ecc-d6cf96e25789",
+                "resourcePath": "sprites\\spr_ZFlameSlashAir\\spr_ZFlameSlashAir.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d372fb32-0ad2-414e-a66b-94e4a1848821",
             "Value": {
                 "id": "08d0a7b1-1ed2-45f8-9de4-b39e0a8fd6de",
@@ -11874,7 +11890,7 @@
             "Key": "ead31ba8-4adf-4e48-862f-138549729dbe",
             "Value": {
                 "id": "65b2d852-d9f6-481d-9d35-264909655f44",
-                "resourcePath": "sprites\\spr_ZIceSaber\\spr_ZIceSaber.yy",
+                "resourcePath": "sprites\\spr_ZIceSaberImage\\spr_ZIceSaberImage.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -12107,6 +12123,14 @@
             "Value": {
                 "id": "6e3b0526-51eb-4842-99d7-43dd06d64fda",
                 "resourcePath": "sprites\\spr_XUAImpactAtk\\spr_XUAImpactAtk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ee95a39f-07f8-46a9-ba39-8b4396f9fd29",
+            "Value": {
+                "id": "0b5cc367-dd2a-44c7-a0fb-e7bad3df229b",
+                "resourcePath": "sprites\\spr_ZFlameSaberHitBox\\spr_ZFlameSaberHitBox.yy",
                 "resourceType": "GMSprite"
             }
         },

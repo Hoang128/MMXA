@@ -351,6 +351,13 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 	}
 	
+	if (sprite_index == spr_ZSlashDash)
+	{
+		chargeNormal = 0;
+		hspd = dashSpdPhase2 * (18 - image_index) / 18 * hDir;
+		vspd = 0;
+	}
+	
 	#endregion
 	
 	#endregion
@@ -377,14 +384,14 @@ if (activateState != ActivateState.DEACTIVATE)
 							cmdFSlashFlag = false;
 							cmdThrustFlag = false;
 						}
-						if ((DSlashEnable == true) && (!keyboard_check(global.keyUp) && !keyboard_check(global.keyDown) && (aState == ActionState.DASHING)))
+						if ((DSlashEnable == true) && (!keyboard_check(global.keyUp) && !keyboard_check(global.keyDown) && ((aState == ActionState.DASHING) && (sprite_index != sprDash3))))
 						{
 							cmdUSlashFlag = false;
 							cmdDSlashFlag = true;
 							cmdFSlashFlag = false;
 							cmdThrustFlag = false;
 						}
-						if ((FSlashEnable == true) && (!keyboard_check(global.keyUp) && !keyboard_check(global.keyDown) && (keyFoward) && (aState != ActionState.DASHING)))
+						if ((FSlashEnable == true) && (!keyboard_check(global.keyUp) && !keyboard_check(global.keyDown) && (keyFoward) && !((aState == ActionState.DASHING) && (sprite_index != sprDash3))))
 						{
 							cmdUSlashFlag = false;
 							cmdDSlashFlag = false;
@@ -468,14 +475,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				//JumpSlash
 				else if (vState == VerticalState.V_MOVE_FALLING)
 				{
-					if ((DSlashEnable == false) && (!keyboard_check(global.keyUp) && !keyboard_check(global.keyDown) && (aState == ActionState.DASHING)))
-					{
-						cmdUSlashFlag = false;
-						cmdDSlashFlag = true;
-						cmdFSlashFlag = false;
-						cmdThrustFlag = false;
-					}
-					if ((ThrustEnable == false) && (!keyboard_check(global.keyUp) && keyboard_check(global.keyDown) && (aState != ActionState.DASHING)))
+					if ((ThrustEnable == false) && (!keyboard_check(global.keyUp) && keyboard_check(global.keyDown)))
 					{
 						cmdUSlashFlag = false;
 						cmdDSlashFlag = false;
@@ -524,6 +524,17 @@ if (activateState != ActivateState.DEACTIVATE)
 				//Slide & Climb Slash
 				else
 				{
+					if (aState == ActionState.DASHING)
+					{
+						if ((DSlashEnable == true) && (!keyboard_check(global.keyUp) && !keyboard_check(global.keyDown) && (sprite_index != sprDash3)))
+						{
+							cmdUSlashFlag = false;
+							cmdDSlashFlag = true;
+							cmdFSlashFlag = false;
+							cmdThrustFlag = false;
+						}
+					}
+					
 					//Slide Slash
 					if (aState == ActionState.SLIDING)
 					{
@@ -701,7 +712,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			
 				if (instance_exists(obj_PlayerWeaponMeeleImage))
 					scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
-				scr_MeeleWeaponCreate(obj_IceSaberImage, noone, self);
+				scr_MeeleWeaponCreate(obj_ZIceSaberImage, noone, self);
 			
 				atkState = AttackState.A_STRICT_ATTACK_LV4;
 				aState = ActionState.IDLE;
@@ -720,7 +731,27 @@ if (activateState != ActivateState.DEACTIVATE)
 		
 		if (cmdDSlashFlag == true)
 		{
-			cmdDSlashFlag = false;
+			if (sprite_index != spr_ZSlashDash)
+			{
+				sprite_index = spr_ZSlashDash;
+				image_index = 0;
+			
+				if (instance_exists(obj_PlayerWeaponMeeleImage))
+					scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
+				scr_MeeleWeaponCreate(obj_ZFlameSaberImage, noone, self);
+			
+				atkState = AttackState.A_STRICT_ATTACK_LV4;
+				aState = ActionState.IDLE;
+				if (vState != VerticalState.V_ON_GROUND)
+					vState = VerticalState.V_MOVE_NONE;
+				hState = HorizontalState.H_MOVE_FORWARD;
+				canClimb = false;
+				dashSpd = 0;
+				dashTime = 0;
+				vspd = 0;
+				hspd = dashSpdPhase2 * hDir;
+				cmdDSlashFlag = false;
+			}
 		}
 		
 		#endregion

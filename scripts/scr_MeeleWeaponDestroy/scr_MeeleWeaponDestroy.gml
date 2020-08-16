@@ -12,23 +12,23 @@ switch (obj_ImageWeapon)
 	}
 	break;
 	
-	case obj_IceSaberImage:
+	case obj_ZIceSaberImage:
 	{
-		if (instance_exists(obj_IceSaberImage))
-			instance_destroy(obj_IceSaberImage);
+		if (instance_exists(obj_ZIceSaberImage))
+			instance_destroy(obj_ZIceSaberImage);
 		
-		if (instance_exists(obj_IceSaber))
-			instance_destroy(obj_IceSaber);
+		if (instance_exists(obj_ZIceSaber))
+			instance_destroy(obj_ZIceSaber);
 	}
 	break;
 	
-	case obj_FlameSaberImage:
+	case obj_ZFlameSaberImage:
 	{
-		if (instance_exists(obj_FlameSaberImage))
-			instance_destroy(obj_FlameSaberImage);
+		if (instance_exists(obj_ZFlameSaberImage))
+			instance_destroy(obj_ZFlameSaberImage);
 		
-		if (instance_exists(obj_FlameSaber))
-			instance_destroy(obj_FlameSaber);
+		if (instance_exists(obj_ZFlameSaber))
+			instance_destroy(obj_ZFlameSaber);
 	}
 	break;
 	

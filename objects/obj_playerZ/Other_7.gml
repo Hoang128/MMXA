@@ -203,7 +203,7 @@ switch(sprite_index)
 		sprite_index = sprJump4;
 		image_index = 0;
 		
-		scr_MeeleWeaponDestroy(obj_IceSaberImage);
+		scr_MeeleWeaponDestroy(obj_ZIceSaberImage);
 		aState = ActionState.IDLE;
 		vState = VerticalState.V_MOVE_FALLING;
 		hState = HorizontalState.H_MOVE_NONE;
@@ -212,5 +212,27 @@ switch(sprite_index)
 		hspd = 0;
 		vspd = 0;
 		upperSlashTime = 0;
+	}	break;
+	
+	case spr_ZSlashDash:
+	{
+		if (vState == VerticalState.V_ON_GROUND)
+		{
+			sprite_index = sprStand;
+			image_index = 0;
+		}
+		else
+		{
+			sprite_index = sprJump3;
+			image_index = 0;
+			vState = VerticalState.V_MOVE_FALLING;
+		}
+		
+		scr_MeeleWeaponDestroy(obj_ZFlameSaberImage);
+		
+		hState = HorizontalState.H_MOVE_NONE;
+		atkState = AttackState.A_NONE;
+		hspd = 0;
+		vspd = 0;
 	}	break;
 }
