@@ -26,10 +26,15 @@ if ((core != noone) && instance_exists(core))
 			LLimit = bbox_left;
 			RLimit = bbox_left + 4;
 		}
-		var col = collision_rectangle(LLimit, bbox_bottom - 4, RLimit, bbox_bottom + 4, obj_block, false, false);
-		if (col)
+		var col1 = collision_rectangle(LLimit, bbox_bottom - 4, RLimit, bbox_bottom + 4, obj_block, false, false);
+		var col2 = collision_rectangle(LLimit, bbox_bottom - 4, RLimit, bbox_bottom + 4, obj_dynamicBlock, false, false)
+		if (col1)
 		{
-			instance_create_depth((LLimit + RLimit) / 2, col.bbox_top, depth - 1, obj_WPFireEff);
+			instance_create_depth((LLimit + RLimit) / 2, col1.bbox_top, depth - 1, obj_WPFireEff);
+		}
+		else if (col2)
+		{
+			instance_create_depth((LLimit + RLimit) / 2, col2.bbox_top, depth - 1, obj_WPFireEff);
 		}
 		createObjTime = 0;
 	}

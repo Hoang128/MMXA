@@ -735,7 +735,9 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				sprite_index = spr_ZSlashDash;
 				image_index = 0;
-			
+				
+				audio_play_sound_on(global.SFX_Emitter, snd_VZSlashUp, false ,false);
+				
 				if (instance_exists(obj_PlayerWeaponMeeleImage))
 					scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
 				scr_MeeleWeaponCreate(obj_ZFlameSaberImage, noone, self);

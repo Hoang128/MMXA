@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
+sfx = snd_MWeaponColEnemyEff;
+
 imgSpd = 0.5;
 damage = 0.2;
 maxTimmer = 10;

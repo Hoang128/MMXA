@@ -4319,6 +4319,14 @@
             }
         },
         {
+            "Key": "512053fd-28ac-4ab0-a0f6-b5f9d8be2a60",
+            "Value": {
+                "id": "e7bcae71-e30e-44e4-90fe-b908af72f60c",
+                "resourcePath": "objects\\obj_ZFlame\\obj_ZFlame.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5145ef78-3b79-4356-b03a-b8f12a263b47",
             "Value": {
                 "id": "e26f3c8f-9440-40eb-bf47-f81ddcad9774",
@@ -12092,6 +12100,14 @@
                 "id": "0007e7e9-a766-4e00-9e56-130431f3f8fa",
                 "resourcePath": "sprites\\spr_XSShotWiredStartVertical\\spr_XSShotWiredStartVertical.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ee47ff71-61dd-42d0-b27c-4591646f292f",
+            "Value": {
+                "id": "3f3983f5-12eb-49d6-a89f-7617f7a608ea",
+                "resourcePath": "objects\\obj_ZFlameAir\\obj_ZFlameAir.yy",
+                "resourceType": "GMObject"
             }
         },
         {
