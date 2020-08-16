@@ -9,6 +9,6 @@ if (createSpikeWait < createSpikeWaitMax)
 else
 {
 	randomize();
-	instance_create_depth(x + 20 * image_xscale + random(8), y, depth + 1, obj_ZIceSpyke);
+	instance_create_depth(x + 26 * image_xscale + random(8), y - 16, depth + 1, obj_ZIceSpyke);
 	createSpikeWait = 0;
 }
