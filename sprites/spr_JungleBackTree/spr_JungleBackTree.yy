@@ -2,7 +2,7 @@
     "id": "a6acf7b5-d92d-40cd-b07f-c7e0b60a2427",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sprJungleBackTree",
+    "name": "spr_JungleBackTree",
     "For3D": false,
     "HTile": false,
     "VTile": false,

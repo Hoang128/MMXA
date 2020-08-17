@@ -6,7 +6,8 @@
     "children": [
         "ed02692d-3ce4-4c4e-b6c2-ba25901865ea",
         "e3c7065e-8670-479e-a543-8ca96be683ca",
-        "d502664d-3797-4c08-ad35-7518d7fa4a42"
+        "d502664d-3797-4c08-ad35-7518d7fa4a42",
+        "cf751b61-9bd3-4699-b147-5f9a45e9b8a8"
     ],
     "filterType": "GMSprite",
     "folderName": "Stage Sprites",

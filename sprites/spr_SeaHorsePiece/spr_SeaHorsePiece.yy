@@ -11,7 +11,7 @@
     "bbox_right": 21,
     "bbox_top": 0,
     "bboxmode": 0,
-    "colkind": 1,
+    "colkind": 0,
     "coltolerance": 0,
     "edgeFiltering": false,
     "frames": [
@@ -125,7 +125,7 @@
     "playbackSpeed": 60,
     "playbackSpeedType": 0,
     "premultiplyAlpha": false,
-    "sepmasks": false,
+    "sepmasks": true,
     "swatchColours": null,
     "swfPrecision": 2.525,
     "textureGroupId": "0a758b68-afe6-4dc7-9805-f11fbdaba36c",

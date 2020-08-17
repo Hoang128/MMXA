@@ -197,7 +197,7 @@ else
 				
 				if (keyboard_check(global.keyAtk))
 				{
-					if ((chargeNormal >= 0) && (chargeNormal < chargeSolarLv3Limit))
+					if ((chargeNormal >= 0) && (chargeNormal < chargeSolarLv4Limit))
 					{
 						chargeNormal += DELTA_TIME;
 						if (chargeNormal >= chargeSolarLv1Limit)
@@ -218,9 +218,9 @@ else
 							}
 						}
 					}
-					if (chargeNormal >= chargeSolarLv3Limit)
+					if (chargeNormal >= chargeSolarLv4Limit)
 					{
-						chargeNormal = chargeSolarLv3Limit;
+						chargeNormal = chargeSolarLv4Limit;
 					}
 				}
 				
@@ -334,23 +334,26 @@ else
 				{
 					if (chargeNormal > chargeSolarLv1Limit)
 					{
-						if (chargeNormal >= chargeSolarLv3Limit)
+						if (chargeNormal >= chargeSolarLv4Limit)
 						{
 							chargeStack = 3;
 						}
 				
-						if ((chargeNormal >= chargeSolarLv2Limit) && (chargeNormal < chargeSolarLv3Limit))
+						if ((chargeNormal >= chargeSolarLv3Limit) && (chargeNormal < chargeSolarLv4Limit))
 						{
 							chargeStack = 2;
 						}
 				
-						if ((chargeNormal >= chargeSolarLv1Limit) && (chargeNormal < chargeSolarLv2Limit))
+						if ((chargeNormal >= chargeSolarLv1Limit) && (chargeNormal < chargeSolarLv3Limit))
 						{
-							chargeStack = 1;
+							if (chargeNormal >= chargeSolarLv2Limit)
+								chargeStack = 1.5;
+							else
+								chargeStack = 1;
 						}
 						chargeNormal = -1;
 						
-						if (chargeStack == 1)
+						if ((chargeStack == 1) || (chargeStack == 1.5))
 						{
 							if (aState != ActionState.SP_MOVE)
 							{
@@ -382,7 +385,10 @@ else
 								}
 								if (sprite_index != spr_XClimbStart && sprite_index != spr_XClimbEnd)
 								{
-									var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffSolarBusterC1);
+									if (chargeStack == 1)
+										var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffSolarBusterC1)
+									else
+										var obj = instance_create_depth(x, y, depth - 1, obj_ShotEffSolarBusterC2)
 									obj.core = self;
 
 									atkSpriteTime = atkSpriteTimeMax;
@@ -400,7 +406,7 @@ else
 								else	chargeNormal = 0;
 							}	else	chargeNormal = 0;
 						}
-						else if (chargeStack > 1)
+						else if (chargeStack > 1.5)
 						{
 							if (aState != ActionState.SP_MOVE)
 							{

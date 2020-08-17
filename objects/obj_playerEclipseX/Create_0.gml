@@ -31,8 +31,9 @@ coolDownSpdNormal = 2;
 coolDownSpdCharge = 80;
 minTimeInImpactDown = 20;
 chargeSolarLv1Limit = 40;
-chargeSolarLv2Limit = 100;
-chargeSolarLv3Limit = 160;
+chargeSolarLv2Limit = 80;
+chargeSolarLv3Limit = 120;
+chargeSolarLv4Limit = 160;
 
 
 //Inside Variables
