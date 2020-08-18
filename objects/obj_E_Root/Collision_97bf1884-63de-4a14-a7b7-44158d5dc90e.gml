@@ -42,6 +42,9 @@ if (damageTimmer <= 0)
 		}
 	}
 	
+	if (guard == 2)
+		realDamage = 0;
+	
 	if (other.type == WeaponType.SABER)
 	{
 		other.hit++;
