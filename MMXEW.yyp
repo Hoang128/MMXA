@@ -11695,6 +11695,14 @@
             }
         },
         {
+            "Key": "e20567f7-2dfe-4439-a181-e2b68b8bb8ba",
+            "Value": {
+                "id": "7d8e7d72-391d-4750-a5d2-5cd8d249d19d",
+                "resourcePath": "objects\\obj_E_BattonBoneBomb\\obj_E_BattonBoneBomb.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e21eaa0c-d6b8-47ed-b548-d2cc6edbfef0",
             "Value": {
                 "id": "32638437-5c60-461c-ae0a-e996a7bf438f",

@@ -14,8 +14,10 @@ moveSpd2 = 3;
 pieceSprite = spr_BBoneB81Pieces;
 pieceNumber = 4;
 
+bomb = noone;
+
 imgSpd = 0.5;
 
 explosion = 1;
 
-yPlace = -48;
+yPlace = -64;

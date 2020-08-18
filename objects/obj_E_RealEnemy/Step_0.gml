@@ -6,13 +6,16 @@ event_inherited();
 
 if (hp <= 0) instance_destroy();
 
-if (!collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + W_VIEW, Y_VIEW + H_VIEW, self, false, false))
+if (parent != noone)
 {
-	if (distance_to_object(parent) > distanceToParentLimit)
+	if (!collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + W_VIEW, Y_VIEW + H_VIEW, self, false, false))
 	{
-		createExplosion = false;
-		parent.child = noone;
-		instance_destroy();
+		if (distance_to_object(parent) > distanceToParentLimit)
+		{
+			createExplosion = false;
+			parent.child = noone;
+			instance_destroy();
+		}
 	}
 }
 

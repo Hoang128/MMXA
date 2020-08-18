@@ -11,5 +11,6 @@ explosionPiece = 0;
 pieceSprite = 0;
 createExplosion = true;
 maxDisDetectSlopeAbove = 4; //Distance to detect slope on the ground
+canDropItem = true;
 
 depth = layer_get_depth(obj_gameManager.lEnemy);
