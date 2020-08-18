@@ -2831,6 +2831,14 @@
             }
         },
         {
+            "Key": "363f33f5-b753-4600-8015-c6077551deaf",
+            "Value": {
+                "id": "b032ec4e-b70d-4c1f-a6be-b174e216ab87",
+                "resourcePath": "objects\\obj_E_BattonBoneB82\\obj_E_BattonBoneB82.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "36911205-37f4-4b3e-8db4-40c5e57bc47b",
             "Value": {
                 "id": "ed18f786-726b-42fc-9ce1-6f978f981c43",
@@ -3564,6 +3572,14 @@
                 "id": "97e30ed8-948b-4d4b-bbff-8780eff84c81",
                 "resourcePath": "sprites\\spr_ECapsuleLv2_Drop\\spr_ECapsuleLv2_Drop.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "421a5e6a-b801-4d6c-a836-6437023dde3a",
+            "Value": {
+                "id": "3ee6ab31-7cb7-4af5-9b04-1022c144426e",
+                "resourcePath": "views\\421a5e6a-b801-4d6c-a836-6437023dde3a.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -5191,6 +5207,14 @@
             }
         },
         {
+            "Key": "630b32df-1f75-472c-b7dd-650d1153da48",
+            "Value": {
+                "id": "b53ffe44-7efc-4e26-8094-2c82aff19b15",
+                "resourcePath": "objects\\obj_S_BattonBoneB81\\obj_S_BattonBoneB81.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6356f1e8-d13f-4ee5-9ccb-7ea0c55bdb64",
             "Value": {
                 "id": "e879a64f-804c-44aa-9a44-8645c14f0162",
@@ -5775,6 +5799,14 @@
             }
         },
         {
+            "Key": "6e6322c4-858c-4120-97b5-834f23381df6",
+            "Value": {
+                "id": "088f041f-f190-4869-9205-63272143aff5",
+                "resourcePath": "sprites\\spr_BBoneB81Pieces\\spr_BBoneB81Pieces.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6e814670-7c50-428c-8968-9adf05f397c3",
             "Value": {
                 "id": "99649509-339a-43a0-9fd7-14f3bc31b5bd",
@@ -6035,6 +6067,14 @@
             "Value": {
                 "id": "d2ec01a0-433c-48eb-8321-221fd4987d36",
                 "resourcePath": "sprites\\spr_AXSStun0\\spr_AXSStun0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "722308e2-f787-4803-98d8-de988f634a77",
+            "Value": {
+                "id": "fae80159-b524-4437-9e87-411096275c21",
+                "resourcePath": "sprites\\spr_BBoneB81Eyes\\spr_BBoneB81Eyes.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7258,7 +7298,7 @@
             "Key": "8913ab4b-6191-4d06-b2fd-b95f012f353a",
             "Value": {
                 "id": "d8eaf40f-3d9c-4173-a6c7-b010b0bfd35f",
-                "resourcePath": "sprites\\sprite278\\sprite278.yy",
+                "resourcePath": "sprites\\spr_BBoneB81DropBomb\\spr_BBoneB81DropBomb.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8203,6 +8243,14 @@
             "Value": {
                 "id": "06417c4a-4baa-435a-a111-dab8358cbe16",
                 "resourcePath": "sprites\\spr_FXSDash3\\spr_FXSDash3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9ba2ba8b-cac8-401d-8d72-a12f4430211a",
+            "Value": {
+                "id": "1bf62470-c87d-406a-8cb8-2ededff33c8a",
+                "resourcePath": "sprites\\spr_BBoneBomb\\spr_BBoneBomb.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -10047,6 +10095,14 @@
             }
         },
         {
+            "Key": "c4490c21-0a3e-4dc4-b849-55b92f738e9d",
+            "Value": {
+                "id": "384b77dc-b29e-479c-ba63-6cb7c4ccef1b",
+                "resourcePath": "objects\\obj_E_BattonBoneB81\\obj_E_BattonBoneB81.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c44b928d-3a85-40ab-bc53-9277c566379e",
             "Value": {
                 "id": "6b0de505-e771-4ae0-a1b6-25102f57de3b",
@@ -11223,6 +11279,14 @@
             }
         },
         {
+            "Key": "da469ef7-ec91-4713-9f3d-b09ba4fa18fd",
+            "Value": {
+                "id": "263e9974-7833-44bb-ac46-e0e1ee53ae02",
+                "resourcePath": "sprites\\spr_BBoneB81FlyAway\\spr_BBoneB81FlyAway.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "da5bcb36-41ec-470f-af18-301088619ce8",
             "Value": {
                 "id": "6b59cb67-bdab-4e83-bda5-16e482650a8b",
@@ -11951,6 +12015,14 @@
             }
         },
         {
+            "Key": "e89d11bb-28e7-4b93-b275-68cf60809672",
+            "Value": {
+                "id": "fef95bbf-e86f-4d94-8403-ff1c916b7ade",
+                "resourcePath": "views\\e89d11bb-28e7-4b93-b275-68cf60809672.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "e90ffce1-7542-4ff0-9e8f-796e97eaeb49",
             "Value": {
                 "id": "0bd7c106-2de1-458c-8481-89a64f0152f6",
@@ -12164,6 +12236,14 @@
                 "id": "849c3911-0de6-465a-a529-e6a742ed7dbd",
                 "resourcePath": "sprites\\spr_ZChargeEff2\\spr_ZChargeEff2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ecb4248b-bde4-43e1-9f6b-67c7cf1dfc88",
+            "Value": {
+                "id": "821837ee-c856-4660-bf4e-5ccc8195194a",
+                "resourcePath": "objects\\obj_S_BattonBoneB82\\obj_S_BattonBoneB82.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -12723,6 +12803,14 @@
             "Value": {
                 "id": "a384c888-d29b-4aa4-a297-fd25b098ac59",
                 "resourcePath": "sprites\\spr_XSJump1\\spr_XSJump1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f656100e-908b-41a8-b25a-7a412fe900da",
+            "Value": {
+                "id": "89754205-479e-47bc-8ed2-92bc3b40c31e",
+                "resourcePath": "sprites\\spr_BBoneB81CarryBomb\\spr_BBoneB81CarryBomb.yy",
                 "resourceType": "GMSprite"
             }
         },
