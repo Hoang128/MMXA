@@ -8,11 +8,11 @@ if (!instance_exists(core))
 	instance_destroy();
 else
 {
-	if (core.engine != self)
+	if (core.engine != self.id)
 		instance_destroy();
 	else
 	{
-		x = core.x - 26 * image_xscale;
+		x = core.x - 26 * core.image_xscale;
 		y = core.y - 9;
 	}
 }

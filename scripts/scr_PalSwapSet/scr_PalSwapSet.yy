@@ -1,8 +1,12 @@
 {
-    "id": "b7d0e6b2-03f3-4860-97dd-a63104070941",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scr_PalSwapSet",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Shaders",
+    "path": "folders/Scripts/Shaders.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scr_PalSwapSet",
+  "tags": [],
+  "resourceType": "GMScript",
 }

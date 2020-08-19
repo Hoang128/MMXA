@@ -1,8 +1,12 @@
 {
-    "id": "5909dc83-50a8-4183-b1d6-30ba89afd192",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scr_XAtk7TimeCharge",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Element Weapon",
+    "path": "folders/Scripts/Player/X Only/Element Weapon.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scr_XAtk7TimeCharge",
+  "tags": [],
+  "resourceType": "GMScript",
 }

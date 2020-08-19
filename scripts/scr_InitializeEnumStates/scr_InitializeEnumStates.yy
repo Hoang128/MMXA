@@ -1,8 +1,12 @@
 {
-    "id": "821a7116-4bc2-4cc0-ad2f-965f291f314d",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scr_InitializeEnumStates",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Initialize",
+    "path": "folders/Scripts/Common/Initialize.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scr_InitializeEnumStates",
+  "tags": [],
+  "resourceType": "GMScript",
 }

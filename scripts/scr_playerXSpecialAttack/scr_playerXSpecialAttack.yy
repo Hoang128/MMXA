@@ -1,8 +1,12 @@
 {
-    "id": "bd15f775-f2ab-4930-854b-d5ae490b404e",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scr_playerXSpecialAttack",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "X Only",
+    "path": "folders/Scripts/Player/X Only.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scr_playerXSpecialAttack",
+  "tags": [],
+  "resourceType": "GMScript",
 }

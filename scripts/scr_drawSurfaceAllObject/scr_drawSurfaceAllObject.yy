@@ -1,8 +1,12 @@
 {
-    "id": "e4adf6ec-1881-4a5d-be20-a2505be8494a",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scr_drawSurfaceAllObject",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "In-game stuffs",
+    "path": "folders/Scripts/Common/In-game stuffs.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scr_drawSurfaceAllObject",
+  "tags": [],
+  "resourceType": "GMScript",
 }

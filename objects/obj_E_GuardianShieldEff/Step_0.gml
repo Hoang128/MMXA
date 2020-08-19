@@ -11,12 +11,12 @@ else
 		case false:
 		{
 			{
-				if (core.shieldEff2 != self)
+				if (core.shieldEff2 != self.id)
 					instance_destroy();
 				else
 				{
 					self.image_xscale = core.image_xscale;
-					self.x = core.x + xPlace * image_xscale;
+					self.x = core.x + xPlace * core.image_xscale;
 					self.y = core.y + yPlace;
 				}
 			}
@@ -25,12 +25,12 @@ else
 		{
 			if (self.top == true)
 			{
-				if (core.shieldEff1 != self)
+				if (core.shieldEff1 != self.id)
 					instance_destroy();
 				else
 				{
 					self.image_xscale = core.image_xscale;
-					self.x = core.x + xPlace * image_xscale;
+					self.x = core.x + xPlace * core.image_xscale;
 					self.y = core.y + yPlace;
 				}
 			}

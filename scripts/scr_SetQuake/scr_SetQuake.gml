@@ -1,6 +1,10 @@
-var quakeTime = argument0;
+function scr_SetQuake(argument0) {
+	var quakeTime = argument0;
 
-with(obj_view)
-{
-	quake = quakeTime;
+	with(obj_view)
+	{
+		quake = quakeTime;
+	}
+
+
 }

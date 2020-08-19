@@ -6,7 +6,7 @@ event_inherited();
 
 if (init == false)
 {
-	var objWindOuter = instance_create_depth(x, y, obj_gameManager.playerCore - 100, obj_XW6TornadoOuterEff);
+	var objWindOuter = instance_create_depth(x, y, obj_gameManager.playerCore.depth - 100, obj_XW6TornadoOuterEff);
 	objWindOuter.image_xscale = image_xscale;
 	objWindOuter.image_yscale = image_yscale;
 	objWindOuter.image_angle = image_angle;

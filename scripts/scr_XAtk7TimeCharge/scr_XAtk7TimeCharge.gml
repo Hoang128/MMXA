@@ -1,11 +1,15 @@
-if (keyboard_check_released(global.keySpAtk))
-{
-	if (chargeWeapon >= chargeLv2Limit)
+function scr_XAtk7TimeCharge() {
+	if (keyboard_check_released(global.keySpAtk))
 	{
-		if (!instance_exists(obj_XW7chronoForce))
+		if (chargeWeapon >= chargeLv2Limit)
 		{
-			scr_playerXImpactAttack(60, obj_XW7ChronoForceCharge);
+			if (!instance_exists(obj_XW7chronoForce))
+			{
+				scr_playerXImpactAttack(60, obj_XW7ChronoForceCharge);
+			}
 		}
+		chargeWeapon = 0;
 	}
-	chargeWeapon = 0;
+
+
 }

@@ -11,12 +11,12 @@ else
 		case false:
 		{
 			{
-				if (core.engineEff2 != self)
+				if (core.engineEff2 != self.id)
 					instance_destroy();
 				else
 				{
 					self.image_xscale = core.image_xscale;
-					self.x = core.x + xPlace * image_xscale;
+					self.x = core.x + xPlace * core.image_xscale;
 					self.y = core.y + yPlace;
 				}
 			}
@@ -25,7 +25,7 @@ else
 		{
 			if (self.top == true)
 			{
-				if (core.engineEff1 != self)
+				if (core.engineEff1 != self.id)
 					instance_destroy();
 				else
 				{

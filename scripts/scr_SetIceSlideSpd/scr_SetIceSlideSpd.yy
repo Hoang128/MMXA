@@ -1,8 +1,12 @@
 {
-    "id": "fff2ea87-eb25-46c5-aecb-75696be04e5f",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scr_SetIceSlideSpd",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Common",
+    "path": "folders/Scripts/Player/Common.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scr_SetIceSlideSpd",
+  "tags": [],
+  "resourceType": "GMScript",
 }

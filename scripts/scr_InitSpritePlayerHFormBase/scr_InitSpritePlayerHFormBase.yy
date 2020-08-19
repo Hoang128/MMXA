@@ -1,8 +1,12 @@
 {
-    "id": "0c6ffadf-9bb7-4fab-a723-23218334728c",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scr_InitSpritePlayerHFormBase",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Init",
+    "path": "folders/Scripts/Player/Init.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scr_InitSpritePlayerHFormBase",
+  "tags": [],
+  "resourceType": "GMScript",
 }

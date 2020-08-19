@@ -1,92 +1,82 @@
 {
-    "id": "f68eba7e-8845-47d0-b636-5d6c5a7a6e68",
-    "modelName": "GMSprite",
-    "mvc": "1.12",
-    "name": "spr_knotBeretFall",
-    "For3D": false,
-    "HTile": false,
-    "VTile": false,
-    "bbox_bottom": 61,
-    "bbox_left": 8,
-    "bbox_right": 68,
-    "bbox_top": 0,
-    "bboxmode": 0,
-    "colkind": 1,
-    "coltolerance": 0,
-    "edgeFiltering": false,
-    "frames": [
-        {
-            "id": "1075410e-c975-4fd8-a033-75fd4a592183",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "f68eba7e-8845-47d0-b636-5d6c5a7a6e68",
-            "compositeImage": {
-                "id": "4919ffd6-3fc1-4365-a226-44090b51e8e9",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "1075410e-c975-4fd8-a033-75fd4a592183",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "62101d05-0c28-4391-aa7a-fbfec093fefc",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "1075410e-c975-4fd8-a033-75fd4a592183",
-                    "LayerId": "07fa2573-6453-40f5-88cd-f8f9846bb4e7"
-                }
-            ]
-        },
-        {
-            "id": "226ed5a3-2e24-4239-b85e-55a60bd86427",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "f68eba7e-8845-47d0-b636-5d6c5a7a6e68",
-            "compositeImage": {
-                "id": "c31c0c11-c90e-468d-bc65-82735e5c72e5",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "226ed5a3-2e24-4239-b85e-55a60bd86427",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "ac3ed5c7-55ff-4294-b083-ee5c1d79d0d9",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "226ed5a3-2e24-4239-b85e-55a60bd86427",
-                    "LayerId": "07fa2573-6453-40f5-88cd-f8f9846bb4e7"
-                }
-            ]
-        }
-    ],
-    "gridX": 0,
-    "gridY": 0,
-    "height": 62,
-    "layers": [
-        {
-            "id": "07fa2573-6453-40f5-88cd-f8f9846bb4e7",
-            "modelName": "GMImageLayer",
-            "mvc": "1.0",
-            "SpriteId": "f68eba7e-8845-47d0-b636-5d6c5a7a6e68",
-            "blendMode": 0,
-            "isLocked": false,
-            "name": "default",
-            "opacity": 100,
-            "visible": true
-        }
-    ],
-    "origin": 9,
-    "originLocked": false,
-    "playbackSpeed": 60,
+  "bboxMode": 0,
+  "collisionKind": 1,
+  "type": 0,
+  "origin": 9,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
+  "bbox_left": 8,
+  "bbox_right": 68,
+  "bbox_top": 0,
+  "bbox_bottom": 61,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "width": 69,
+  "height": 62,
+  "textureGroupId": {
+    "name": "texEnemies",
+    "path": "texturegroups/texEnemies",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"compositeImage":{"FrameId":{"name":"1075410e-c975-4fd8-a033-75fd4a592183","path":"sprites/spr_knotBeretFall/spr_knotBeretFall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1075410e-c975-4fd8-a033-75fd4a592183","path":"sprites/spr_knotBeretFall/spr_knotBeretFall.yy",},"LayerId":{"name":"07fa2573-6453-40f5-88cd-f8f9846bb4e7","path":"sprites/spr_knotBeretFall/spr_knotBeretFall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_knotBeretFall","path":"sprites/spr_knotBeretFall/spr_knotBeretFall.yy",},"resourceVersion":"1.0","name":"1075410e-c975-4fd8-a033-75fd4a592183","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"226ed5a3-2e24-4239-b85e-55a60bd86427","path":"sprites/spr_knotBeretFall/spr_knotBeretFall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"226ed5a3-2e24-4239-b85e-55a60bd86427","path":"sprites/spr_knotBeretFall/spr_knotBeretFall.yy",},"LayerId":{"name":"07fa2573-6453-40f5-88cd-f8f9846bb4e7","path":"sprites/spr_knotBeretFall/spr_knotBeretFall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_knotBeretFall","path":"sprites/spr_knotBeretFall/spr_knotBeretFall.yy",},"resourceVersion":"1.0","name":"226ed5a3-2e24-4239-b85e-55a60bd86427","tags":[],"resourceType":"GMSpriteFrame",},
+  ],
+  "sequence": {
+    "spriteId": {"name":"spr_knotBeretFall","path":"sprites/spr_knotBeretFall/spr_knotBeretFall.yy",},
+    "timeUnits": 1,
+    "playback": 1,
+    "playbackSpeed": 60.0,
     "playbackSpeedType": 0,
-    "premultiplyAlpha": false,
-    "sepmasks": false,
-    "swatchColours": null,
-    "swfPrecision": 2.525,
-    "textureGroupId": "0a758b68-afe6-4dc7-9805-f11fbdaba36c",
-    "type": 0,
-    "width": 69,
-    "xorig": 34,
-    "yorig": 48
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 2.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"ba07933f-31ed-4126-94ea-d61a012cd15a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1075410e-c975-4fd8-a033-75fd4a592183","path":"sprites/spr_knotBeretFall/spr_knotBeretFall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a12296aa-a194-4ecc-afdb-784aa82a10b0","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"226ed5a3-2e24-4239-b85e-55a60bd86427","path":"sprites/spr_knotBeretFall/spr_knotBeretFall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+    ],
+    "visibleRange": {"x":0.0,"y":0.0,},
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1920,
+    "backdropHeight": 1080,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 34,
+    "yorigin": 48,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "parent": {"name":"spr_knotBeretFall","path":"sprites/spr_knotBeretFall/spr_knotBeretFall.yy",},
+    "resourceVersion": "1.3",
+    "name": "",
+    "tags": [],
+    "resourceType": "GMSequence",
+  },
+  "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"07fa2573-6453-40f5-88cd-f8f9846bb4e7","tags":[],"resourceType":"GMImageLayer",},
+  ],
+  "parent": {
+    "name": "Knot Beret",
+    "path": "folders/Sprites/Enemies/Creep/Knot Beret.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "spr_knotBeretFall",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

@@ -1,136 +1,90 @@
 {
-    "id": "c153a4fe-c6ec-40b1-aff8-374627e1fa5d",
-    "modelName": "GMSprite",
-    "mvc": "1.12",
-    "name": "spr_airPortLightAnimated4",
-    "For3D": false,
-    "HTile": false,
-    "VTile": false,
-    "bbox_bottom": 63,
-    "bbox_left": 0,
-    "bbox_right": 3,
-    "bbox_top": 0,
-    "bboxmode": 0,
-    "colkind": 1,
-    "coltolerance": 0,
-    "edgeFiltering": false,
-    "frames": [
-        {
-            "id": "deee922a-1568-4b9f-be54-dde988e12002",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "c153a4fe-c6ec-40b1-aff8-374627e1fa5d",
-            "compositeImage": {
-                "id": "4db5d31d-57f9-430b-934e-66228c58ca17",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "deee922a-1568-4b9f-be54-dde988e12002",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "40d64aa4-f85d-4e4a-8754-e5e42b5f2f60",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "deee922a-1568-4b9f-be54-dde988e12002",
-                    "LayerId": "acb55b64-da9a-4118-b15a-ed448bae08e0"
-                }
-            ]
-        },
-        {
-            "id": "bba1ceb8-62a8-48d5-97dc-c23a0a6624b9",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "c153a4fe-c6ec-40b1-aff8-374627e1fa5d",
-            "compositeImage": {
-                "id": "f1403640-5579-42b4-ba94-cc2ad4a09dce",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "bba1ceb8-62a8-48d5-97dc-c23a0a6624b9",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "4e6abb7f-c00d-4d37-91ab-4598e837393d",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "bba1ceb8-62a8-48d5-97dc-c23a0a6624b9",
-                    "LayerId": "acb55b64-da9a-4118-b15a-ed448bae08e0"
-                }
-            ]
-        },
-        {
-            "id": "c96fbce1-5292-4a63-be90-ca5a4d477ece",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "c153a4fe-c6ec-40b1-aff8-374627e1fa5d",
-            "compositeImage": {
-                "id": "f4af02be-6872-46bc-8fb5-1a60d552aa2c",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "c96fbce1-5292-4a63-be90-ca5a4d477ece",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "afc33b8d-6655-4dda-8062-10a4882ad7a2",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "c96fbce1-5292-4a63-be90-ca5a4d477ece",
-                    "LayerId": "acb55b64-da9a-4118-b15a-ed448bae08e0"
-                }
-            ]
-        },
-        {
-            "id": "5bbacc82-34cc-48e6-b0a2-9cbc7730e0de",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "c153a4fe-c6ec-40b1-aff8-374627e1fa5d",
-            "compositeImage": {
-                "id": "3c0e0827-713e-453e-9f90-9276beec6835",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "5bbacc82-34cc-48e6-b0a2-9cbc7730e0de",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "02b59f06-ecc0-4010-ba75-e5cd611dbabd",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "5bbacc82-34cc-48e6-b0a2-9cbc7730e0de",
-                    "LayerId": "acb55b64-da9a-4118-b15a-ed448bae08e0"
-                }
-            ]
-        }
-    ],
-    "gridX": 0,
-    "gridY": 0,
-    "height": 64,
-    "layers": [
-        {
-            "id": "acb55b64-da9a-4118-b15a-ed448bae08e0",
-            "modelName": "GMImageLayer",
-            "mvc": "1.0",
-            "SpriteId": "c153a4fe-c6ec-40b1-aff8-374627e1fa5d",
-            "blendMode": 0,
-            "isLocked": false,
-            "name": "default",
-            "opacity": 100,
-            "visible": true
-        }
-    ],
-    "origin": 0,
-    "originLocked": false,
-    "playbackSpeed": 60,
+  "bboxMode": 0,
+  "collisionKind": 1,
+  "type": 0,
+  "origin": 0,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
+  "bbox_left": 0,
+  "bbox_right": 3,
+  "bbox_top": 0,
+  "bbox_bottom": 63,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "width": 4,
+  "height": 64,
+  "textureGroupId": {
+    "name": "texStageSprite",
+    "path": "texturegroups/texStageSprite",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"compositeImage":{"FrameId":{"name":"deee922a-1568-4b9f-be54-dde988e12002","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"deee922a-1568-4b9f-be54-dde988e12002","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"LayerId":{"name":"acb55b64-da9a-4118-b15a-ed448bae08e0","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_airPortLightAnimated4","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"resourceVersion":"1.0","name":"deee922a-1568-4b9f-be54-dde988e12002","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"bba1ceb8-62a8-48d5-97dc-c23a0a6624b9","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"bba1ceb8-62a8-48d5-97dc-c23a0a6624b9","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"LayerId":{"name":"acb55b64-da9a-4118-b15a-ed448bae08e0","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_airPortLightAnimated4","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"resourceVersion":"1.0","name":"bba1ceb8-62a8-48d5-97dc-c23a0a6624b9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c96fbce1-5292-4a63-be90-ca5a4d477ece","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c96fbce1-5292-4a63-be90-ca5a4d477ece","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"LayerId":{"name":"acb55b64-da9a-4118-b15a-ed448bae08e0","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_airPortLightAnimated4","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"resourceVersion":"1.0","name":"c96fbce1-5292-4a63-be90-ca5a4d477ece","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5bbacc82-34cc-48e6-b0a2-9cbc7730e0de","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5bbacc82-34cc-48e6-b0a2-9cbc7730e0de","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"LayerId":{"name":"acb55b64-da9a-4118-b15a-ed448bae08e0","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_airPortLightAnimated4","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"resourceVersion":"1.0","name":"5bbacc82-34cc-48e6-b0a2-9cbc7730e0de","tags":[],"resourceType":"GMSpriteFrame",},
+  ],
+  "sequence": {
+    "spriteId": {"name":"spr_airPortLightAnimated4","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},
+    "timeUnits": 1,
+    "playback": 1,
+    "playbackSpeed": 60.0,
     "playbackSpeedType": 0,
-    "premultiplyAlpha": false,
-    "sepmasks": false,
-    "swatchColours": null,
-    "swfPrecision": 2.525,
-    "textureGroupId": "13db665c-432a-4ca3-9aa5-fc620dbe7640",
-    "type": 0,
-    "width": 4,
-    "xorig": 0,
-    "yorig": 0
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 4.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"13340c21-6629-48bb-82be-0ce9135d4902","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"deee922a-1568-4b9f-be54-dde988e12002","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"199e923d-7ae5-408c-ba27-0339252c4b5f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bba1ceb8-62a8-48d5-97dc-c23a0a6624b9","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6d710532-818c-4f92-8cfa-45bde3fff4af","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c96fbce1-5292-4a63-be90-ca5a4d477ece","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"cbe9ea89-9034-4339-b9d7-2754a1ad9225","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5bbacc82-34cc-48e6-b0a2-9cbc7730e0de","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+    ],
+    "visibleRange": {"x":0.0,"y":0.0,},
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1920,
+    "backdropHeight": 1080,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 0,
+    "yorigin": 0,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "parent": {"name":"spr_airPortLightAnimated4","path":"sprites/spr_airPortLightAnimated4/spr_airPortLightAnimated4.yy",},
+    "resourceVersion": "1.3",
+    "name": "",
+    "tags": [],
+    "resourceType": "GMSequence",
+  },
+  "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"acb55b64-da9a-4118-b15a-ed448bae08e0","tags":[],"resourceType":"GMImageLayer",},
+  ],
+  "parent": {
+    "name": "The Skiver",
+    "path": "folders/Sprites/Stage Sprites/X5 Old/The Skiver.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "spr_airPortLightAnimated4",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

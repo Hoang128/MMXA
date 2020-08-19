@@ -1,8 +1,12 @@
 {
-    "id": "af985271-323f-4e4b-a6a9-507cbaf283ea",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scr_InitializeMacros",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Initialize",
+    "path": "folders/Scripts/Common/Initialize.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scr_InitializeMacros",
+  "tags": [],
+  "resourceType": "GMScript",
 }

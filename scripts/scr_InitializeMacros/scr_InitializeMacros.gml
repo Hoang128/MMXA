@@ -1,6 +1,7 @@
-//View
-//#macro RESOLUTION_WIDTH 426
-//#macro RESOLUTION_HEIGH 240
+function scr_InitializeMacros() {
+	//View
+	//#macro RESOLUTION_WIDTH 426
+	//#macro RESOLUTION_HEIGH 240
 #macro W_NATIVE_RESOLUTION 426
 #macro H_NATIVE_RESOLUTION 240
 #macro VIEW_WIDTH 1280
@@ -14,7 +15,7 @@
 #macro W_ACTIVE_BOX camera_get_view_width(view_camera) * 3
 #macro H_ACTIVE_BOX camera_get_view_height(view_camera) * 3
 
-//Gameplay
+	//Gameplay
 #macro DELTA_TIME myDeltaTime * global.deltaTime
 #macro GRAVITY_AIR 0.3
 #macro MAX_FALL_AIR 5.5
@@ -22,6 +23,9 @@
 #macro MAX_FALL_WATER 3.5
 #macro WIND_BOOST -1;
 
-//World Speed
+	//World Speed
 #macro GAME_SPEED_SLOW 0.2
 #macro GAME_SPEED_NORMAL 1;
+
+
+}

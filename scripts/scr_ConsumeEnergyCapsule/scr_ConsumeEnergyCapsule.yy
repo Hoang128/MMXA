@@ -1,8 +1,12 @@
 {
-    "id": "eb81942f-06c8-4656-8939-985df31a48a7",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scr_ConsumeEnergyCapsule",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Consume Items",
+    "path": "folders/Scripts/Player/Consume Items.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scr_ConsumeEnergyCapsule",
+  "tags": [],
+  "resourceType": "GMScript",
 }

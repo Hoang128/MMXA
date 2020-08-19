@@ -67,7 +67,7 @@ if (!instance_exists(core))
 	instance_destroy();
 else
 {
-	if (core.shield != self)
+	if (core.shield != self.id)
 		instance_destroy();
 	else
 	{

@@ -1,8 +1,12 @@
 {
-    "id": "c4fb2845-f18d-4e76-9354-c255d7790f2b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scr_XAtk8Dark",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Element Weapon",
+    "path": "folders/Scripts/Player/X Only/Element Weapon.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scr_XAtk8Dark",
+  "tags": [],
+  "resourceType": "GMScript",
 }

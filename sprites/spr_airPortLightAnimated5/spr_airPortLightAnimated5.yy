@@ -1,114 +1,86 @@
 {
-    "id": "e60ed09e-c756-41d5-8db9-933d45fe8de4",
-    "modelName": "GMSprite",
-    "mvc": "1.12",
-    "name": "spr_airPortLightAnimated5",
-    "For3D": false,
-    "HTile": false,
-    "VTile": false,
-    "bbox_bottom": 37,
-    "bbox_left": 0,
-    "bbox_right": 11,
-    "bbox_top": 0,
-    "bboxmode": 0,
-    "colkind": 1,
-    "coltolerance": 0,
-    "edgeFiltering": false,
-    "frames": [
-        {
-            "id": "0e60f94a-6ea5-4512-a451-1e0113b47e27",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "e60ed09e-c756-41d5-8db9-933d45fe8de4",
-            "compositeImage": {
-                "id": "777aa6ee-33eb-4791-a362-79ffa829281b",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "0e60f94a-6ea5-4512-a451-1e0113b47e27",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "55ff4cec-1b41-4435-a76c-844c4a430a7e",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "0e60f94a-6ea5-4512-a451-1e0113b47e27",
-                    "LayerId": "14f84366-d329-4905-8d9b-edb61478996b"
-                }
-            ]
-        },
-        {
-            "id": "381540b3-7a4f-43d6-8a91-7e35dc9fdf90",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "e60ed09e-c756-41d5-8db9-933d45fe8de4",
-            "compositeImage": {
-                "id": "3510b244-54de-4d9f-8583-132509b507bf",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "381540b3-7a4f-43d6-8a91-7e35dc9fdf90",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "ca64140e-4ee8-4c8d-bdc6-681c22fa421e",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "381540b3-7a4f-43d6-8a91-7e35dc9fdf90",
-                    "LayerId": "14f84366-d329-4905-8d9b-edb61478996b"
-                }
-            ]
-        },
-        {
-            "id": "5c879e16-4dcd-45c2-942d-df2420b34a79",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "e60ed09e-c756-41d5-8db9-933d45fe8de4",
-            "compositeImage": {
-                "id": "49e29220-1d27-4250-92dd-59b874c3588c",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "5c879e16-4dcd-45c2-942d-df2420b34a79",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "a2670c8d-792b-47cf-b5a3-04b14087cafe",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "5c879e16-4dcd-45c2-942d-df2420b34a79",
-                    "LayerId": "14f84366-d329-4905-8d9b-edb61478996b"
-                }
-            ]
-        }
-    ],
-    "gridX": 0,
-    "gridY": 0,
-    "height": 38,
-    "layers": [
-        {
-            "id": "14f84366-d329-4905-8d9b-edb61478996b",
-            "modelName": "GMImageLayer",
-            "mvc": "1.0",
-            "SpriteId": "e60ed09e-c756-41d5-8db9-933d45fe8de4",
-            "blendMode": 0,
-            "isLocked": false,
-            "name": "default",
-            "opacity": 100,
-            "visible": true
-        }
-    ],
-    "origin": 0,
-    "originLocked": false,
-    "playbackSpeed": 60,
+  "bboxMode": 0,
+  "collisionKind": 1,
+  "type": 0,
+  "origin": 0,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
+  "bbox_left": 0,
+  "bbox_right": 11,
+  "bbox_top": 0,
+  "bbox_bottom": 37,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "width": 12,
+  "height": 38,
+  "textureGroupId": {
+    "name": "texStageSprite",
+    "path": "texturegroups/texStageSprite",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"compositeImage":{"FrameId":{"name":"0e60f94a-6ea5-4512-a451-1e0113b47e27","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"0e60f94a-6ea5-4512-a451-1e0113b47e27","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},"LayerId":{"name":"14f84366-d329-4905-8d9b-edb61478996b","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_airPortLightAnimated5","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},"resourceVersion":"1.0","name":"0e60f94a-6ea5-4512-a451-1e0113b47e27","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"381540b3-7a4f-43d6-8a91-7e35dc9fdf90","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"381540b3-7a4f-43d6-8a91-7e35dc9fdf90","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},"LayerId":{"name":"14f84366-d329-4905-8d9b-edb61478996b","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_airPortLightAnimated5","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},"resourceVersion":"1.0","name":"381540b3-7a4f-43d6-8a91-7e35dc9fdf90","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5c879e16-4dcd-45c2-942d-df2420b34a79","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5c879e16-4dcd-45c2-942d-df2420b34a79","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},"LayerId":{"name":"14f84366-d329-4905-8d9b-edb61478996b","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_airPortLightAnimated5","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},"resourceVersion":"1.0","name":"5c879e16-4dcd-45c2-942d-df2420b34a79","tags":[],"resourceType":"GMSpriteFrame",},
+  ],
+  "sequence": {
+    "spriteId": {"name":"spr_airPortLightAnimated5","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},
+    "timeUnits": 1,
+    "playback": 1,
+    "playbackSpeed": 60.0,
     "playbackSpeedType": 0,
-    "premultiplyAlpha": false,
-    "sepmasks": false,
-    "swatchColours": null,
-    "swfPrecision": 2.525,
-    "textureGroupId": "13db665c-432a-4ca3-9aa5-fc620dbe7640",
-    "type": 0,
-    "width": 12,
-    "xorig": 0,
-    "yorig": 0
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 3.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"3c3a3d73-c525-49e2-a6f6-4a60d75a2e98","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0e60f94a-6ea5-4512-a451-1e0113b47e27","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"63f0b2e2-8249-4264-96d3-cdd2347f6fde","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"381540b3-7a4f-43d6-8a91-7e35dc9fdf90","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"946280fe-174d-4427-b11a-6fa1412978e3","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5c879e16-4dcd-45c2-942d-df2420b34a79","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+    ],
+    "visibleRange": {"x":0.0,"y":0.0,},
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1920,
+    "backdropHeight": 1080,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 0,
+    "yorigin": 0,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "parent": {"name":"spr_airPortLightAnimated5","path":"sprites/spr_airPortLightAnimated5/spr_airPortLightAnimated5.yy",},
+    "resourceVersion": "1.3",
+    "name": "",
+    "tags": [],
+    "resourceType": "GMSequence",
+  },
+  "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"14f84366-d329-4905-8d9b-edb61478996b","tags":[],"resourceType":"GMImageLayer",},
+  ],
+  "parent": {
+    "name": "The Skiver",
+    "path": "folders/Sprites/Stage Sprites/X5 Old/The Skiver.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "spr_airPortLightAnimated5",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

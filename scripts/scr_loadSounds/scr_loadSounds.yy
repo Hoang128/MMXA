@@ -1,8 +1,12 @@
 {
-    "id": "e3ede2b6-28bc-40d9-9f52-81eaf556201b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scr_loadSounds",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Files Handle",
+    "path": "folders/Scripts/Common/Files Handle.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scr_loadSounds",
+  "tags": [],
+  "resourceType": "GMScript",
 }

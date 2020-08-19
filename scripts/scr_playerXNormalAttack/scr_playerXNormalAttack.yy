@@ -1,8 +1,12 @@
 {
-    "id": "ef115021-258a-4a9b-9e6a-ac9b39ab8fbe",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scr_playerXNormalAttack",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "X Only",
+    "path": "folders/Scripts/Player/X Only.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scr_playerXNormalAttack",
+  "tags": [],
+  "resourceType": "GMScript",
 }

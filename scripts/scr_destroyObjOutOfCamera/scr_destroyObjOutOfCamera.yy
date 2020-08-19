@@ -1,8 +1,12 @@
 {
-    "id": "ebfbc0f3-8ea3-44df-a804-5f4bac4441d6",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "scr_destroyObjOutOfCamera",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "In-game stuffs",
+    "path": "folders/Scripts/Common/In-game stuffs.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "scr_destroyObjOutOfCamera",
+  "tags": [],
+  "resourceType": "GMScript",
 }
