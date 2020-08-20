@@ -38,10 +38,10 @@ else
 			if (keyboard_check_pressed(vk_anykey))
 			{
 				var currentKey = keyboard_lastkey;
-				for (var i = 1; i <= 14; i++)
+				for (var i = 1; i < 13; i++)
 				{
 					if (i == self.keyId) continue;
-					if (core.keyChangeContext[i].keyCode == currentKey)
+					if (core.keyChangeContext[i].id.keyCode == currentKey)
 					{
 						audio_play_sound_on(global.SFXVolume, soundMove, 0, 0);
 						core.active = 1;
