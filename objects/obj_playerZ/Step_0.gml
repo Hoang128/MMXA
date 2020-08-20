@@ -335,8 +335,14 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					upperSlashTime = upperSlashTimeMax;
 				}
-				hspd = upperSlashHspd * (upperSlashTimeMax - upperSlashTime) / upperSlashTimeMax * hDir;
-				vspd = -power(upperSlashVspd * (upperSlashTimeMax - upperSlashTime) / upperSlashTimeMax, 4);
+				if (upperSlashTime < upperSlashTimeMax * 0.35)
+					hspd = upperSlashHspd * image_xscale;
+				else
+					hspd = 0;
+				if (-power(upperSlashVspd * (upperSlashTimeMax - upperSlashTime) / upperSlashTimeMax, 4) > -2)
+					vspd = -2;
+				else
+					vspd = -power(upperSlashVspd * (upperSlashTimeMax - upperSlashTime) / upperSlashTimeMax, 4);
 			}
 			upperSlashTime += DELTA_TIME;
 		}
