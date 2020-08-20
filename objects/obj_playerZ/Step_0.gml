@@ -325,33 +325,36 @@ if (activateState != ActivateState.DEACTIVATE)
 				image_index = 3;
 			if (image_index >= 3)
 			{
-				if (playSFXUpperSlash == false)
+				if (upperSlashTime < (upperSlashTimeMax * upperSlashTimeH1R))
 				{
-					audio_play_sound_on(global.SFX_Emitter, snd_VZSlashUp, false, false);
-					audio_play_sound_on(global.SFX_Emitter, snd_ZIceSaberEff, false, false);
-					playSFXUpperSlash = true;
+					hspd = hDir * upperSlashHspd * (1 - upperSlashTime / (upperSlashTimeMax * upperSlashTimeH1R));
 				}
-				if (!keyboard_check(global.keyAtk) || place_meeting(x, y - 1, obj_block))
-				{
-					upperSlashTime = upperSlashTimeMax;
-				}
-				if (upperSlashTime < upperSlashTimeMax * 0.35)
-					hspd = upperSlashHspd * image_xscale;
 				else
 					hspd = 0;
-				if (-power(upperSlashVspd * (upperSlashTimeMax - upperSlashTime) / upperSlashTimeMax, 4) > -2)
-					vspd = -2;
+				
+				if (upperSlashTime < (upperSlashTimeMax * upperSlashTimeV1R))
+				{
+					vspd = upperSlashVspd2Start + (upperSlashVspd1Start - upperSlashVspd2Start)  * (1 - upperSlashTime / (upperSlashTimeMax * upperSlashTimeV1R));
+				}
+				
+				else if (upperSlashTime < (upperSlashTimeMax * upperSlashTimeV2R))
+				{
+					vspd = upperSlashVspd2Start;
+				}
+				
 				else
-					vspd = -power(upperSlashVspd * (upperSlashTimeMax - upperSlashTime) / upperSlashTimeMax, 4);
+				{
+					var ratio = 1 - (upperSlashTime * (1 - upperSlashTimeV1R - upperSlashTimeV2R)) / (upperSlashTimeMax * (1 - upperSlashTimeV1R - upperSlashTimeV2R));
+					vspd = upperSlashVspd2Start * (ratio);
+				}
+				upperSlashTime += DELTA_TIME;
 			}
-			upperSlashTime += DELTA_TIME;
 		}
 		else
 		{
 			if (image_index < 17)
 			{
 				hspd = 0;
-				vspd = 0;
 				image_index = 17;
 			}
 		}

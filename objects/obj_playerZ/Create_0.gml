@@ -58,7 +58,11 @@ cmdThrustFlag = false;
 
 //Skill variable
 upperSlashHspd = 2;
-upperSlashVspd = 2.5;
+upperSlashTimeH1R = 0.6;
+upperSlashVspd1Start = -8;
+upperSlashVspd2Start = -2;
+upperSlashTimeV1R = 0.4;
+upperSlashTimeV2R = 0.4;
 upperSlashTimeMax = 40;
 upperSlashTime = 0;
 playSFXUpperSlash = false;

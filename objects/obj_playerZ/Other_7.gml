@@ -210,7 +210,6 @@ switch(sprite_index)
 		atkState = AttackState.A_NONE;
 		canClimb = true;
 		hspd = 0;
-		vspd = 0;
 		upperSlashTime = 0;
 	}	break;
 	
