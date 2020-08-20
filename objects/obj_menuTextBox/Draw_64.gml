@@ -12,7 +12,6 @@ if (background != noone)
 	draw_set_alpha(1);
 }
 
-
 for (var i = 0; i < lineNumber; i++)
 {
 	if (shadow == 1)
