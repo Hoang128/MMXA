@@ -17,8 +17,8 @@
   "width": 43,
   "height": 27,
   "textureGroupId": {
-    "name": "texPlayerZ",
-    "path": "texturegroups/texPlayerZ",
+    "name": "texWeaponZ",
+    "path": "texturegroups/texWeaponZ",
   },
   "swatchColours": null,
   "gridX": 0,

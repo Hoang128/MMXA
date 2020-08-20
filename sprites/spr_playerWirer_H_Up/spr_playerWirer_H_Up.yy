@@ -17,8 +17,8 @@
   "width": 18,
   "height": 17,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "texWait",
+    "path": "texturegroups/texWait",
   },
   "swatchColours": null,
   "gridX": 0,

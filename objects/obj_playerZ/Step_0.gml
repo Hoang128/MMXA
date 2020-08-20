@@ -336,7 +336,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					upperSlashTime = upperSlashTimeMax;
 				}
 				hspd = upperSlashHspd * (upperSlashTimeMax - upperSlashTime) / upperSlashTimeMax * hDir;
-				vspd = -power(upperSlashVspd * (upperSlashTimeMax - upperSlashTime) / upperSlashTimeMax, 3);
+				vspd = -power(upperSlashVspd * (upperSlashTimeMax - upperSlashTime) / upperSlashTimeMax, 4);
 			}
 			upperSlashTime += DELTA_TIME;
 		}

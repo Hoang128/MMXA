@@ -16,7 +16,13 @@ scr_InitImageSpeedPlayerHFormBase(obj_playerZ);
 
 switch (sprite_index)
 {
-	case spr_ZSlashUp:	image_speed = 0.5;	break;
+	case spr_ZSlashUp:	
+	{
+		if ((image_index <= 3) || (image_index >= 17))
+			image_speed = 0.3;
+		else
+			image_speed = 0.5;
+	}	break;
 }
 
 image_speed *= global.deltaTime;
