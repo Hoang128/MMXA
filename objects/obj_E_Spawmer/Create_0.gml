@@ -1,4 +1,5 @@
 /// @description Init
+event_inherited();
 
 childObjectType = noone;
 childObjectPal  = noone;

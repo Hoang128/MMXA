@@ -5,7 +5,10 @@
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_CreepingGunnerNormal",
+    "path": "sprites/spr_CreepingGunnerNormal/spr_CreepingGunnerNormal.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "obj_E_RealEnemy",
@@ -25,12 +28,14 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_E_CreepingGunner","path":"objects/obj_E_CreepingGunner/obj_E_CreepingGunner.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_E_CreepingGunner","path":"objects/obj_E_CreepingGunner/obj_E_CreepingGunner.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_E_CreepingGunner","path":"objects/obj_E_CreepingGunner/obj_E_CreepingGunner.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Creeping Gunner",
-    "path": "folders/Objects/Visible/Enemies/Creep/Creeping Gunner.yy",
+    "name": "E",
+    "path": "folders/Objects/Visible/Enemies/Creep/Creeping Gunner/E.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_E_CreepingGunner",

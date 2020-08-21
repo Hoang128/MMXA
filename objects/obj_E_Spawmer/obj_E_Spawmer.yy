@@ -4,7 +4,10 @@
   "visible": false,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_nonPhysicTemplate",
+    "path": "objects/obj_nonPhysicTemplate/obj_nonPhysicTemplate.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

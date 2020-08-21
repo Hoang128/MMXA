@@ -4,3 +4,24 @@
 // Inherit the parent event
 event_inherited();
 
+hp = 1;
+damage = 1;
+damageRed = 1;
+startDir = 120;
+
+waitTime = 30;
+moveSpd = 3;
+speed = moveSpd;
+moveWiseClock = true;
+
+checkCol = {
+	colC  : noone ,
+	colT  : noone ,
+	colB  : noone ,
+	colL  : noone ,
+	colR  : noone ,
+	col045 : noone ,
+	col135 : noone ,
+	col315 : noone ,
+	col225 : noone 
+};
