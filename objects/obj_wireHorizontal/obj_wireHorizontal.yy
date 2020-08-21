@@ -4,7 +4,7 @@
     "path": "sprites/spr_wireHorizontal/spr_wireHorizontal.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {

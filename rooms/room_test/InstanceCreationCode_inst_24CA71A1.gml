@@ -1,3 +1,3 @@
-roomNew = room_Junkyard;
+roomNew = room_PowerPlant;
 xNew = 56;
-yNew = 736;
+yNew = 4000;

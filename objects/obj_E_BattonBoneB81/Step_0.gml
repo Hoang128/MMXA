@@ -10,14 +10,9 @@ switch (state)
 	{
 		if (instance_exists(obj_gameManager.playerCore))
 		{
-			if ((self.y - obj_gameManager.playerCore.y) < 0)
-				state = 0.5;
-			else
+			if (collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + W_VIEW, Y_VIEW + H_VIEW, self, false, false))
 			{
-				if (collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + W_VIEW, Y_VIEW + H_VIEW, self, false, false))
-				{
-					state = 0.5;	
-				}
+				state = 0.5;	
 			}
 		}
 		else	state = 0.5;

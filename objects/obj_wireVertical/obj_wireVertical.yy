@@ -4,7 +4,7 @@
     "path": "sprites/spr_wireVertical/spr_wireVertical.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {

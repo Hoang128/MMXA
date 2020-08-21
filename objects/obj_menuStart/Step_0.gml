@@ -8,10 +8,10 @@ if (lineExecute[1])
 {
 	with(obj_gameManager)
 	{
-		global.xSpawmLocation = x;
-		global.ySpawmLocation = y;
+		global.xSpawmLocation = 56;
+		global.ySpawmLocation = 3936;
 	}
-	room_goto(room_test);
+	room_goto(room_PowerPlant);
 }
 
 if (lineExecute[3])

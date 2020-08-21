@@ -4,7 +4,7 @@
     "path": "sprites/spr_slopeL3Ice/spr_slopeL3Ice.yy",
   },
   "solid": true,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {

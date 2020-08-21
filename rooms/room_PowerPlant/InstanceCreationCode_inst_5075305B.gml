@@ -1,0 +1,1 @@
+darkLevel = 0.7;

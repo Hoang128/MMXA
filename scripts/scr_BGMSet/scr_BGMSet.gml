@@ -2,19 +2,19 @@
 /// @function Intialize BGM set: scrBGM_set
 /// @param BGM
 /// @param is stage theme
-function scr_BGMSet() {
+function scr_BGMSet(BGM, isStageTheme) {
 	//--------------------------------------------------
 	if instance_exists(obj_BGMManager){
 	    with (obj_BGMManager){
 			audio_stop_sound(currentBGM);
-			if (argument[1] == true)
+			if (isStageTheme == true)
 			{
-				global.BGM_stage = argument[0];
+				global.BGM_stage = BGM;
 				currentBGM = global.BGM_stage;
 			}
 			else
 			{
-				global.BGM_temp = argument[0];
+				global.BGM_temp = BGM;
 				currentBGM = global.BGM_temp;
 			}
 		
@@ -42,6 +42,11 @@ function scr_BGMSet() {
 				{
 					global.BGM_intro = 00.00;
 					global.BGM_loop = 14.00;
+				}	break;
+				case bgm_PowerPlantMain:
+				{
+					global.BGM_intro = 28.00;
+					global.BGM_loop = 79.50;
 				}	break;
 				default:
 				{
