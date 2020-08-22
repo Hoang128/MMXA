@@ -4,7 +4,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_managerInGame",
+    "path": "objects/obj_managerInGame/obj_managerInGame.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

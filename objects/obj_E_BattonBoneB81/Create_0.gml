@@ -14,6 +14,7 @@ moveSpd2 = 3;
 pieceSprite = spr_BBoneB81Pieces;
 pieceNumber = 4;
 
+haveBomb = true;
 bomb = noone;
 
 imgSpd = 0.5;

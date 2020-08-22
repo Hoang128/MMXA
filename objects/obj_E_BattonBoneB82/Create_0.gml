@@ -14,3 +14,5 @@ moveSpd2 = 3;
 imgSpd = 0.5;
 
 yPlace = 8;
+
+haveBomb = false;
