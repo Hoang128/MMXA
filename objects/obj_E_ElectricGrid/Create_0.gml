@@ -14,3 +14,4 @@ moveSpaceCurrent = 0;
 moveDir = 1;
 moveSpd = 0.5;
 imgSpd = 0.5;
+glow = 1;
