@@ -6,8 +6,8 @@ event_inherited();
 
 imgSpd = 0.25;
 vspd = -2;
-drop = 0;
 phase = 1;
+canBeFade = false;
 time = 500;
 timeAlert = 100;
 cycleEffMax = 10;

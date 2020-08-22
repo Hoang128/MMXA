@@ -48,22 +48,25 @@ y += vspd * DELTA_TIME;
 	
 #endregion
 
-if (time > 0)
+if (canBeFade == true)
 {
-	time -= DELTA_TIME;
-	if (time <= timeAlert)
+	if (time > 0)
 	{
-		if (cycleEff < cycleEffMax)
+		time -= DELTA_TIME;
+		if (time <= timeAlert)
 		{
-			if (cycleEff < cycleEffMax / 2) 
-				image_alpha = 0.1;
+			if (cycleEff < cycleEffMax)
+			{
+				if (cycleEff < cycleEffMax / 2) 
+					image_alpha = 0.1;
+				else	
+					image_alpha = 1;
+				cycleEff += DELTA_TIME;
+			}
 			else	
-				image_alpha = 1;
-			cycleEff += DELTA_TIME;
+				cycleEff = 0;
 		}
-		else	
-			cycleEff = 0;
 	}
+	else
+		instance_destroy();
 }
-else
-	instance_destroy();

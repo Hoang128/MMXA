@@ -1,10 +1,10 @@
 function scr_dropItem() {
 	var total = 10;
-	var eCapsuleLv1 = 1.2;
-	var eCapsuleLv2 = 1.2;
-	var wCapsuleLv1 = 1.2;
-	var wCapsuleLv2 = 1.2;
-	var liveUp		= 0.2;
+	var eCapsuleLv1 = 0.5;
+	var eCapsuleLv2 = 0.5;
+	var wCapsuleLv1 = 0.5;
+	var wCapsuleLv2 = 0.5;
+	var liveUp		= 0.05;
 
 	randomize();
 	var dropNumber = random(total);
@@ -13,7 +13,8 @@ function scr_dropItem() {
 	var maxNumber = eCapsuleLv1;
 	if (dropNumber > minNumber && dropNumber < maxNumber)
 	{
-		instance_create_depth(x, y, depth, obj_ECapsuleLv1);
+		var obj = instance_create_depth(x, y, depth, obj_ECapsuleLv1);
+		obj.canBeFade = true;
 		return;
 	}
 
@@ -21,7 +22,8 @@ function scr_dropItem() {
 	maxNumber += eCapsuleLv2;
 	if (dropNumber > minNumber && dropNumber < maxNumber)
 	{
-		instance_create_depth(x, y, depth, obj_ECapsuleLv2);
+		var obj = instance_create_depth(x, y, depth, obj_ECapsuleLv2);
+		obj.canBeFade = true;
 		return;
 	}
 
@@ -29,7 +31,8 @@ function scr_dropItem() {
 	maxNumber += wCapsuleLv1;
 	if (dropNumber > minNumber && dropNumber < maxNumber)
 	{
-		instance_create_depth(x, y, depth, obj_WCapsuleLv1);
+		var obj = instance_create_depth(x, y, depth, obj_WCapsuleLv1);
+		obj.canBeFade = true;
 		return;
 	}
 
@@ -37,7 +40,8 @@ function scr_dropItem() {
 	maxNumber += wCapsuleLv2;
 	if (dropNumber > minNumber && dropNumber < maxNumber)
 	{
-		instance_create_depth(x, y, depth, obj_WCapsuleLv2);
+		var obj = instance_create_depth(x, y, depth, obj_WCapsuleLv2);
+		obj.canBeFade = true;
 		return;
 	}
 
@@ -45,7 +49,8 @@ function scr_dropItem() {
 	maxNumber += liveUp;
 	if (dropNumber > minNumber && dropNumber < maxNumber)
 	{
-		instance_create_depth(x, y, depth, obj_LiveUp);
+		var obj = instance_create_depth(x, y, depth, obj_LiveUp);
+		obj.canBeFade = true;
 		return;
 	}
 

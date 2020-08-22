@@ -9,4 +9,4 @@ image_speed = 0;
 image_index = 0;
 imgSpd = 0;
 
-hp = 8;
+hp = 4;
