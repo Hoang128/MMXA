@@ -48,6 +48,11 @@ function scr_BGMSet(BGM, isStageTheme) {
 					global.BGM_intro = 28.00;
 					global.BGM_loop = 79.50;
 				}	break;
+				case bgm_MMZ3_OldSpaceLife:
+				{
+					global.BGM_intro = 5.50;
+					global.BGM_loop = 103.50;
+				}	break;
 				default:
 				{
 					show_message("BGM is not resigned its intro and loop length in scr_BGMSet() function!");

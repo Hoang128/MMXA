@@ -13,5 +13,5 @@ moveDir = 1;
 moveSpd = 0.5;
 
 vspd = 0;
-
+glow = 1;
 imgSpd = 0.5;

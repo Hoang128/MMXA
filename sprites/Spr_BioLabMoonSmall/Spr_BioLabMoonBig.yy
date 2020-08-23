@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 319,
-  "bbox_top": 0,
-  "bbox_bottom": 111,
+  "bbox_left": 264,
+  "bbox_right": 401,
+  "bbox_top": 16,
+  "bbox_bottom": 158,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 320,
-  "height": 112,
+  "width": 426,
+  "height": 240,
   "textureGroupId": {
     "name": "texBioLab",
     "path": "texturegroups/texBioLab",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"31d18a48-3f15-4300-9f70-de8d85d89b32","path":"sprites/spr_BioLabMoon/spr_BioLabMoon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"31d18a48-3f15-4300-9f70-de8d85d89b32","path":"sprites/spr_BioLabMoon/spr_BioLabMoon.yy",},"LayerId":{"name":"286d62eb-2370-4f3c-96e9-3f025db341b4","path":"sprites/spr_BioLabMoon/spr_BioLabMoon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_BioLabMoon","path":"sprites/spr_BioLabMoon/spr_BioLabMoon.yy",},"resourceVersion":"1.0","name":"31d18a48-3f15-4300-9f70-de8d85d89b32","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"7eb9cf43-a3d6-4aab-9e34-3c91206c8c5f","path":"sprites/Spr_BioLabMoonBig/Spr_BioLabMoonBig.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"7eb9cf43-a3d6-4aab-9e34-3c91206c8c5f","path":"sprites/Spr_BioLabMoonBig/Spr_BioLabMoonBig.yy",},"LayerId":{"name":"6965be2d-e7f6-4c8a-a117-73e608b4f4ba","path":"sprites/Spr_BioLabMoonBig/Spr_BioLabMoonBig.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"Spr_BioLabMoonBig","path":"sprites/Spr_BioLabMoonBig/Spr_BioLabMoonBig.yy",},"resourceVersion":"1.0","name":"7eb9cf43-a3d6-4aab-9e34-3c91206c8c5f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_BioLabMoon","path":"sprites/spr_BioLabMoon/spr_BioLabMoon.yy",},
+    "spriteId": {"name":"Spr_BioLabMoonBig","path":"sprites/Spr_BioLabMoonBig/Spr_BioLabMoonBig.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 60.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"4bd274da-509f-47db-a583-703a72861044","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"31d18a48-3f15-4300-9f70-de8d85d89b32","path":"sprites/spr_BioLabMoon/spr_BioLabMoon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"aa21f36f-17db-4e5a-84e5-db03fdc6b961","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7eb9cf43-a3d6-4aab-9e34-3c91206c8c5f","path":"sprites/Spr_BioLabMoonBig/Spr_BioLabMoonBig.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_BioLabMoon","path":"sprites/spr_BioLabMoon/spr_BioLabMoon.yy",},
+    "parent": {"name":"Spr_BioLabMoonBig","path":"sprites/Spr_BioLabMoonBig/Spr_BioLabMoonBig.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_BioLabMoon",
+    "name": "Spr_BioLabMoonBig",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"286d62eb-2370-4f3c-96e9-3f025db341b4","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6965be2d-e7f6-4c8a-a117-73e608b4f4ba","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Split Mushroom",
     "path": "folders/Sprites/Stage Sprites/X4 Old/Split Mushroom.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_BioLabMoon",
+  "name": "Spr_BioLabMoonBig",
   "tags": [],
   "resourceType": "GMSprite",
 }

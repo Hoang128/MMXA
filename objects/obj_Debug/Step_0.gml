@@ -104,6 +104,13 @@ if (keyboard_check(ord("Q")))
 		}
 	}
 	
+	if (keyboard_check_pressed(vk_numpad0))
+	{
+		room_goto(room_PowerPlantElf);
+		global.xSpawmLocation = 896;
+		global.ySpawmLocation = 848;
+	}
+	
 	if (keyboard_check_pressed(ord("E")))
 	{
 		if (!instance_exists(obj_changePlayer))
