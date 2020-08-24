@@ -50,8 +50,8 @@ function scr_BGMSet(BGM, isStageTheme) {
 				}	break;
 				case bgm_MMZ3_OldSpaceLife:
 				{
-					global.BGM_intro = 5.50;
-					global.BGM_loop = 103.50;
+					global.BGM_intro = 4.75;
+					global.BGM_loop = 103.75;
 				}	break;
 				default:
 				{

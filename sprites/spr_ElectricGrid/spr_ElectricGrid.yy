@@ -72,7 +72,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_ElectricGrid","path":"sprites/spr_ElectricGrid/spr_ElectricGrid.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "spr_ElectricGrid",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -15,3 +15,10 @@ moveSpd = 0.5;
 vspd = 0;
 glow = 1;
 imgSpd = 0.5;
+
+waitTime = 0;
+waitTimeMax = 60;
+
+eY = 24;
+eChild = noone;
+electric = true;

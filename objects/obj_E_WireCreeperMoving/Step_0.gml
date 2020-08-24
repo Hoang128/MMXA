@@ -19,6 +19,25 @@ switch (state)
 	}	break;
 	case 1:
 	{
+		if (!instance_exists(eChild))
+		{
+			if (sprite_index == spr_WiredCreeperDown)
+			{
+				if (position_meeting(x, y + 124, obj_E_WireCreeperMoving))
+				{
+					eChild = instance_create_depth(x, y + eY, depth - 1, obj_E_ElectricBeam);
+					eChild.image_yscale = 1;
+				}
+			}
+			else if (sprite_index == spr_WiredCreeperUp)
+			{
+				if (position_meeting(x, y - 124, obj_E_WireCreeperMoving))
+				{
+					eChild = instance_create_depth(x, y - eY, depth - 1, obj_E_ElectricBeam);
+					eChild.image_yscale = -1;
+				}
+			}
+		}
 		if (moveDir == 1)
 		{
 			if (collision_rectangle(bbox_right, y - 2, bbox_right + 1, y + 2, obj_wire, false, false))
@@ -60,10 +79,29 @@ switch (state)
 		}
 		image_index = 0;
 		moveDir *= -1;
-		
+		if (instance_exists(eChild))
+			instance_destroy(eChild);
 		state = 3;
 	}	break;
+	case 4:
+	{
+		
+		state = 5;
+	}	break;
+	case 5:
+	{
+		if (waitTime < waitTimeMax)
+			waitTime += DELTA_TIME;
+		else
+		{
+			state = 1;
+			waitTime = 0;
+		}
+	}
 }
 
 x += hspd * DELTA_TIME;
 y += vspd * DELTA_TIME;
+
+if (instance_exists(eChild))
+	eChild.x = self.x;

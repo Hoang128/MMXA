@@ -20,6 +20,16 @@ else
 	instance_activate_object(obj_effScreen);
 	instance_activate_object(obj_UI);
 	instance_activate_object(playerCore);
+	
+	//Special Enemies
+	#region
+	
+	instance_activate_object(obj_E_WireCreeperMoving);
+	instance_activate_object(obj_E_ElectricGrid);
+	instance_activate_object(obj_E_ElectricBeam);
+	
+	#endregion
+	
 	instance_activate_region(X_ACTIVE_BOX, Y_ACTIVE_BOX, X_ACTIVE_BOX + W_ACTIVE_BOX, Y_ACTIVE_BOX + H_ACTIVE_BOX, true);
 	
 	activateCount = activateMaxCount;
