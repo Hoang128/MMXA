@@ -1,4 +1,5 @@
 /// @description Intialize Variable
+myDeltaTime = 1;
 bgrDepth = 1;
 customDepth = 0;
 x_Tiled = 1;

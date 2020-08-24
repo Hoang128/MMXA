@@ -17,6 +17,7 @@ else
 	instance_activate_object(obj_E_Spawmer);
 	instance_activate_object(obj_dynamicBlock);
 	instance_activate_object(obj_block);
+	instance_activate_object(obj_deathZone);
 	instance_activate_object(obj_effScreen);
 	instance_activate_object(obj_UI);
 	instance_activate_object(playerCore);
