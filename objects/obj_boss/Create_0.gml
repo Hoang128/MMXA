@@ -17,7 +17,7 @@ invi = false;
 inviTime = 0;
 inviTimeMax = 150;
 
-bgm = bgm_X5VSBoss;
+bgm = bgm_ZLCrash;
 sprGainHp = noone;
 objLose = noone;
 gainHpSpd = 0.5;

@@ -11,3 +11,4 @@ damageRed = 1;
 objLose = obj_dynamoLose;
 sprGainHp = spr_dynamoStand;
 aliveAfterLose = true;
+bgm = bgm_ZLCrash;

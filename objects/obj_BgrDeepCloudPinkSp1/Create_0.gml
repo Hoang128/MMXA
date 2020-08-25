@@ -6,5 +6,5 @@ event_inherited();
 
 customDepth = 1;
 y_Off = -120;
-x_spd = 8;
+x_spd = 6;
 y_Tiled = false;
