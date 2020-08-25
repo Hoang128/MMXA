@@ -310,6 +310,11 @@ if (activateState != ActivateState.DEACTIVATE)
 	//Passive Counters
 	#region
 	
+	if (aState == ActionState.WIRING)
+	{
+		if (airHikeTime == 0)
+			airHikeTime = 1;
+	}
 	
 	#endregion
 	
@@ -322,9 +327,13 @@ if (activateState != ActivateState.DEACTIVATE)
 		{
 			chargeNormal = 0;
 			if (image_index > 16)
-				image_index = 3;
-			if (image_index >= 3)
+				image_index = 4;
+			if (image_index >= 4)
 			{
+				if (!keyboard_check(global.keyAtk))
+				{
+					upperSlashTime = upperSlashTimeMax;
+				}
 				if (upperSlashTime < (upperSlashTimeMax * upperSlashTimeH1R))
 				{
 					hspd = hDir * upperSlashHspd * (1 - upperSlashTime / (upperSlashTimeMax * upperSlashTimeH1R));
@@ -348,6 +357,11 @@ if (activateState != ActivateState.DEACTIVATE)
 					vspd = upperSlashVspd2Start * (ratio);
 				}
 				upperSlashTime += DELTA_TIME;
+			}
+			else if (image_index >= 3)
+			{
+				hspd = (image_index - 3) * upperSlashHspd;
+				vspd = (image_index - 3) * upperSlashVspd1Start;
 			}
 		}
 		else
