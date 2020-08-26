@@ -17,19 +17,19 @@
   "width": 288,
   "height": 240,
   "textureGroupId": {
-    "name": "texBioLab",
-    "path": "texturegroups/texBioLab",
+    "name": "texX4BioLab",
+    "path": "texturegroups/texX4BioLab",
   },
   "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"7eb9cf43-a3d6-4aab-9e34-3c91206c8c5f","path":"sprites/Spr_BioLabMoonScenePink/Spr_BioLabMoonScenePink.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7eb9cf43-a3d6-4aab-9e34-3c91206c8c5f","path":"sprites/Spr_BioLabMoonScenePink/Spr_BioLabMoonScenePink.yy",},"LayerId":{"name":"6965be2d-e7f6-4c8a-a117-73e608b4f4ba","path":"sprites/Spr_BioLabMoonScenePink/Spr_BioLabMoonScenePink.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"Spr_BioLabMoonScenePink","path":"sprites/Spr_BioLabMoonScenePink/Spr_BioLabMoonScenePink.yy",},"resourceVersion":"1.0","name":"7eb9cf43-a3d6-4aab-9e34-3c91206c8c5f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"7eb9cf43-a3d6-4aab-9e34-3c91206c8c5f","path":"sprites/spr_BioLabMoonScenePink/spr_BioLabMoonScenePink.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"7eb9cf43-a3d6-4aab-9e34-3c91206c8c5f","path":"sprites/spr_BioLabMoonScenePink/spr_BioLabMoonScenePink.yy",},"LayerId":{"name":"6965be2d-e7f6-4c8a-a117-73e608b4f4ba","path":"sprites/spr_BioLabMoonScenePink/spr_BioLabMoonScenePink.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_BioLabMoonScenePink","path":"sprites/spr_BioLabMoonScenePink/spr_BioLabMoonScenePink.yy",},"resourceVersion":"1.0","name":"7eb9cf43-a3d6-4aab-9e34-3c91206c8c5f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"Spr_BioLabMoonScenePink","path":"sprites/Spr_BioLabMoonScenePink/Spr_BioLabMoonScenePink.yy",},
+    "spriteId": {"name":"spr_BioLabMoonScenePink","path":"sprites/spr_BioLabMoonScenePink/spr_BioLabMoonScenePink.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 60.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"a17fcad0-41db-4dd3-8a99-6327711c2054","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7eb9cf43-a3d6-4aab-9e34-3c91206c8c5f","path":"sprites/Spr_BioLabMoonScenePink/Spr_BioLabMoonScenePink.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a17fcad0-41db-4dd3-8a99-6327711c2054","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7eb9cf43-a3d6-4aab-9e34-3c91206c8c5f","path":"sprites/spr_BioLabMoonScenePink/spr_BioLabMoonScenePink.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"Spr_BioLabMoonScenePink","path":"sprites/Spr_BioLabMoonScenePink/Spr_BioLabMoonScenePink.yy",},
+    "parent": {"name":"spr_BioLabMoonScenePink","path":"sprites/spr_BioLabMoonScenePink/spr_BioLabMoonScenePink.yy",},
     "resourceVersion": "1.3",
-    "name": "Spr_BioLabMoonScenePink",
+    "name": "spr_BioLabMoonScenePink",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -72,7 +72,7 @@
     "path": "folders/Sprites/Stage Sprites/X4 Old/Split Mushroom.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Spr_BioLabMoonScenePink",
+  "name": "spr_BioLabMoonScenePink",
   "tags": [],
   "resourceType": "GMSprite",
 }

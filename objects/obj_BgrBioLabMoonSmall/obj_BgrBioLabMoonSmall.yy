@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Spr_BioLabMoonSmall",
-    "path": "sprites/Spr_BioLabMoonSmall/Spr_BioLabMoonSmall.yy",
+    "name": "spr_BioLabMoonSmall",
+    "path": "sprites/spr_BioLabMoonSmall/spr_BioLabMoonSmall.yy",
   },
   "solid": false,
   "visible": true,

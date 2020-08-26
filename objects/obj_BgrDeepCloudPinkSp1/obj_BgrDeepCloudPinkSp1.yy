@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Spr_BioLabDeepCloudPinkSp1",
-    "path": "sprites/Spr_BioLabDeepCloudPinkSp1/Spr_BioLabDeepCloudPinkSp1.yy",
+    "name": "spr_BioLabDeepCloudPinkSp1",
+    "path": "sprites/spr_BioLabDeepCloudPinkSp1/spr_BioLabDeepCloudPinkSp1.yy",
   },
   "solid": false,
   "visible": true,

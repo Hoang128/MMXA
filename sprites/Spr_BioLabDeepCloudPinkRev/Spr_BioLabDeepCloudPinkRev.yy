@@ -17,19 +17,19 @@
   "width": 256,
   "height": 240,
   "textureGroupId": {
-    "name": "texBioLab",
-    "path": "texturegroups/texBioLab",
+    "name": "texX4BioLab",
+    "path": "texturegroups/texX4BioLab",
   },
   "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4ec6f11c-c522-4926-a0a9-71713542b90d","path":"sprites/Spr_BioLabDeepCloudPinkRev/Spr_BioLabDeepCloudPinkRev.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4ec6f11c-c522-4926-a0a9-71713542b90d","path":"sprites/Spr_BioLabDeepCloudPinkRev/Spr_BioLabDeepCloudPinkRev.yy",},"LayerId":{"name":"1906375a-56cd-4944-956d-58702d753158","path":"sprites/Spr_BioLabDeepCloudPinkRev/Spr_BioLabDeepCloudPinkRev.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"Spr_BioLabDeepCloudPinkRev","path":"sprites/Spr_BioLabDeepCloudPinkRev/Spr_BioLabDeepCloudPinkRev.yy",},"resourceVersion":"1.0","name":"4ec6f11c-c522-4926-a0a9-71713542b90d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4ec6f11c-c522-4926-a0a9-71713542b90d","path":"sprites/spr_BioLabDeepCloudPinkRev/spr_BioLabDeepCloudPinkRev.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4ec6f11c-c522-4926-a0a9-71713542b90d","path":"sprites/spr_BioLabDeepCloudPinkRev/spr_BioLabDeepCloudPinkRev.yy",},"LayerId":{"name":"1906375a-56cd-4944-956d-58702d753158","path":"sprites/spr_BioLabDeepCloudPinkRev/spr_BioLabDeepCloudPinkRev.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_BioLabDeepCloudPinkRev","path":"sprites/spr_BioLabDeepCloudPinkRev/spr_BioLabDeepCloudPinkRev.yy",},"resourceVersion":"1.0","name":"4ec6f11c-c522-4926-a0a9-71713542b90d","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"Spr_BioLabDeepCloudPinkRev","path":"sprites/Spr_BioLabDeepCloudPinkRev/Spr_BioLabDeepCloudPinkRev.yy",},
+    "spriteId": {"name":"spr_BioLabDeepCloudPinkRev","path":"sprites/spr_BioLabDeepCloudPinkRev/spr_BioLabDeepCloudPinkRev.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 60.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c976caef-b7f5-4512-b593-f7df96f4ab2a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4ec6f11c-c522-4926-a0a9-71713542b90d","path":"sprites/Spr_BioLabDeepCloudPinkRev/Spr_BioLabDeepCloudPinkRev.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c976caef-b7f5-4512-b593-f7df96f4ab2a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4ec6f11c-c522-4926-a0a9-71713542b90d","path":"sprites/spr_BioLabDeepCloudPinkRev/spr_BioLabDeepCloudPinkRev.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"Spr_BioLabDeepCloudPinkRev","path":"sprites/Spr_BioLabDeepCloudPinkRev/Spr_BioLabDeepCloudPinkRev.yy",},
+    "parent": {"name":"spr_BioLabDeepCloudPinkRev","path":"sprites/spr_BioLabDeepCloudPinkRev/spr_BioLabDeepCloudPinkRev.yy",},
     "resourceVersion": "1.3",
-    "name": "Spr_BioLabDeepCloudPinkRev",
+    "name": "spr_BioLabDeepCloudPinkRev",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -72,7 +72,7 @@
     "path": "folders/Sprites/Stage Sprites/X4 Old/Split Mushroom.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Spr_BioLabDeepCloudPinkRev",
+  "name": "spr_BioLabDeepCloudPinkRev",
   "tags": [],
   "resourceType": "GMSprite",
 }
