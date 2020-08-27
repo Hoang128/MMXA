@@ -1,5 +1,4 @@
-function scr_MeeleWeaponDestroy(argument0) {
-	var obj_ImageWeapon = argument0;
+function scr_MeeleWeaponDestroy(obj_ImageWeapon) {
 
 	switch (obj_ImageWeapon)
 	{

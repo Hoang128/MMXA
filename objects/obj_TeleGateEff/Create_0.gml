@@ -9,3 +9,5 @@ image_alpha = 0.7;
 moveSpd = 0.5;
 
 init = false;
+
+image_speed = 0;

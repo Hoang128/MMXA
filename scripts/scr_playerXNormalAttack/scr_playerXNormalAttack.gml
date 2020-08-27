@@ -1,5 +1,4 @@
-function scr_playerXNormalAttack(argument0) {
-	var armorType = argument0;
+function scr_playerXNormalAttack(armorType) {
 
 	if ((sprite_index == sprDuck1) || (sprite_index == sprDuck3) || (sprite_index == sprClimb1) || (sprite_index == sprClimb3))
 		return;

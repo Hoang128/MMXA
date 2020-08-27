@@ -1067,7 +1067,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		
 		if (aState != ActionState.WIRING)
 		{
-			if (atkState < AttackState.A_STRICT_ATTACK)
+			if (atkState < AttackState.A_STRICT_ATTACK_LV4)
 			{
 				if (keyboard_check(global.keyUp))
 				{
@@ -1123,11 +1123,16 @@ if (activateState != ActivateState.DEACTIVATE)
 								}	break;
 							}
 						
+							if (instance_exists(obj_PlayerWeaponMeeleImage))
+							{
+								scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
+							}
 							wirer = instance_create_depth(x, y - yDistanceToWirer, depth - 1, objWire);
 							wirer.core = self;
 							canAirDash = 1;
 							dashPhase = 0;
 							dashTime = 0;
+							atkState = AttackState.A_NONE;
 							vState = VerticalState.V_MOVE_NONE;
 							hState = HorizontalState.H_MOVE_NONE;
 							aState = ActionState.WIRING;
