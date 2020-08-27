@@ -1,0 +1,43 @@
+{
+  "spriteId": {
+    "name": "spr_SparkGunnerCore",
+    "path": "sprites/spr_SparkGunnerCore/spr_SparkGunnerCore.yy",
+  },
+  "solid": false,
+  "visible": true,
+  "spriteMaskId": {
+    "name": "spr_sparkGunner",
+    "path": "sprites/spr_sparkGunner/spr_sparkGunner.yy",
+  },
+  "persistent": false,
+  "parentObjectId": {
+    "name": "obj_E_RealEnemy",
+    "path": "objects/obj_E_RealEnemy/obj_E_RealEnemy.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 1,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_E_SparkGunner","path":"objects/obj_E_SparkGunner/obj_E_SparkGunner.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_E_SparkGunner","path":"objects/obj_E_SparkGunner/obj_E_SparkGunner.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [],
+  "overriddenProperties": [],
+  "parent": {
+    "name": "E",
+    "path": "folders/Objects/Visible/Enemies/Creep/Spark Gunner/E.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "obj_E_SparkGunner",
+  "tags": [],
+  "resourceType": "GMObject",
+}
