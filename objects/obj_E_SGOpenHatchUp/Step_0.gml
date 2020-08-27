@@ -15,7 +15,9 @@ if (instance_exists(core))
 			{
 				if (createBullet == true)
 				{
-					//instance_create_depth(x, y, depth - 1, obj_E_SparkGunnerBullet);
+					var objBullet = instance_create_depth(x + 8*image_xscale, y - 48, depth - 1, obj_E_SparkGunnerBullet);
+					objBullet.yDir = -1;
+					objBullet.image_xscale = image_xscale;
 					createBullet = false;
 				}
 			}

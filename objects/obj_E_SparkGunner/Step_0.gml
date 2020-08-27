@@ -65,12 +65,14 @@ switch (state)
 			objHatchOpen = instance_create_depth(x, y, depth - 1, obj_E_SGOpenHatchDown);
 		}
 		objHatchOpen.core = self;
+		guard = 0;
 		state = 3;
 	}	break;
 	case 3:
 	{
 		if (!instance_exists(objHatchOpen))
 		{
+			guard = 1;
 			state = 1;
 		}
 	}	break;
