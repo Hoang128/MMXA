@@ -319,6 +319,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					instance_create_depth(x, bbox_bottom, depth - 1, obj_solarSlamDownEff);
 					
 					audio_play_sound_on(global.SFX_Emitter, sndLandEff, false, false);
+					audio_play_sound_on(global.SFX_Emitter, snd_XSlamDown, false, false);
 					
 					var obj1 = instance_create_depth(x + 16, bbox_bottom + 2, depth - 1, obj_sideDust);
 					obj1.image_xscale = -1;

@@ -272,3 +272,16 @@ switch (state)
 }
 
 motion_set(direction, speed * DELTA_TIME);
+
+var x_view = X_VIEW;
+var y_view = Y_VIEW;
+if (x_view < 0)
+	x_view = 0;
+if (y_view < 0)
+	y_view = 0;
+
+if (!collision_rectangle(x_view, y_view, x_view + W_VIEW, y_view + H_VIEW, self, false, false))
+{
+	createExplosion = false;
+	instance_destroy();
+}

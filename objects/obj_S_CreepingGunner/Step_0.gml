@@ -2,10 +2,10 @@
 // You can write your code in this editor
 /// @description Handle
 
-var xx = X_VIEW - W_VIEW / 2;
-var yy = Y_VIEW - H_VIEW / 2;
-var ww = W_VIEW * 2;
-var hh = H_VIEW * 2;
+var xx = X_VIEW;
+var yy = Y_VIEW;
+var ww = W_VIEW;
+var hh = H_VIEW;
 
 if (collision_rectangle(xx, yy, xx + ww, yy + hh, self,false, false))
 {

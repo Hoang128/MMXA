@@ -7,11 +7,15 @@ if (phase == 0)
 		timeShot -= myDeltaTime * global.deltaTime;
 		
 		x += image_xscale * moveSpd * DELTA_TIME;
-		if ((distance_to_object(obj_E_RealEnemy) < radius) || (distance_to_object(obj_E_Shield) < radius)) 
+		if ((distance_to_object(obj_E_RealEnemy) < radius) || (distance_to_object(obj_E_Shield) < radius))
+		{
+			audio_play_sound_on(global.SFX_Emitter, snd_SlowTimeEff, false, false);
 			phase = 1;
+		}
 	}
 	else
 	{
+		audio_play_sound_on(global.SFX_Emitter, snd_SlowTimeEff, false, false);
 		phase = 1;
 	}
 }

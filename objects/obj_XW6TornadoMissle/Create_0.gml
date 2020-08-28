@@ -20,7 +20,7 @@ createWindMax = 20;
 createWindTime = createWindMax;
 constBalance = createWindMax * spd;
 
+audio_play_sound_on(global.SFX_Emitter, snd_XW6Eff, 0, 0);
+
 collisionSFX = snd_RWeaponColEnemyEff;
 collisionEff = obj_BusterColEffLv1;
-
-audio_play_sound_on(global.SFX_Emitter, snd_XSkill6TornadoMissleStart, false, false);

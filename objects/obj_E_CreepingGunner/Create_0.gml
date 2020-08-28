@@ -10,7 +10,7 @@ damageRed = 1;
 startDir = 120;
 
 waitTime = 30;
-moveSpd = 3;
+moveSpd = 4;
 speed = moveSpd;
 moveWiseClock = true;
 

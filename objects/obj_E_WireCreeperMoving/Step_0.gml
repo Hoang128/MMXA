@@ -23,9 +23,9 @@ switch (state)
 		{
 			if (sprite_index == spr_WiredCreeperDown)
 			{
-				if (position_meeting(x, y + 124, obj_E_WireCreeperMoving))
+				var tempPair = instance_position(x, y + 124, obj_E_WireCreeperMoving);
+				if (tempPair != noone)
 				{
-					var tempPair = instance_position(x, y + 124, obj_E_WireCreeperMoving);
 					if (tempPair.state == 1)
 					{
 						pairWirer = tempPair;
@@ -36,9 +36,9 @@ switch (state)
 			}
 			else if (sprite_index == spr_WiredCreeperUp)
 			{
-				if (position_meeting(x, y - 124, obj_E_WireCreeperMoving))
+				var tempPair = instance_position(x, y - 124, obj_E_WireCreeperMoving);
+				if (tempPair != noone)
 				{
-					var tempPair = instance_position(x, y - 124, obj_E_WireCreeperMoving);
 					if (tempPair.state == 1)
 					{
 						pairWirer = tempPair;

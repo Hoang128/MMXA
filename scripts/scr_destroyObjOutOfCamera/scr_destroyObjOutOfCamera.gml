@@ -1,4 +1,4 @@
-function scr_destroyObjOutOfCamera(argument0) {
+function scr_destroyObjOutOfCamera(instance) {
 	var x_view = X_VIEW;
 	var y_view = Y_VIEW;
 	if (x_view < 0)
@@ -6,11 +6,8 @@ function scr_destroyObjOutOfCamera(argument0) {
 	if (y_view < 0)
 		y_view = 0;
 
-	if (!collision_rectangle(x_view, y_view, x_view + W_VIEW, y_view + H_VIEW, argument0, false, false))
+	if (!collision_rectangle(x_view, y_view, x_view + W_VIEW, y_view + H_VIEW, instance, false, false))
 	{
-		instance_destroy(argument0);
+		instance_destroy(instance);
 	}
-
-
-
 }

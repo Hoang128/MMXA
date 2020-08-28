@@ -4,6 +4,8 @@ event_inherited();
 
 phase = 1;
 
+audio_play_sound_on(global.SFX_Emitter, snd_SlowTimeEff, false, false);
+
 time = 0;
 timeExist = 600;
 
