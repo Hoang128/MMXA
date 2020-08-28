@@ -7,4 +7,4 @@ hp = 1;
 damage = 2;
 damageRed = 1;
 core = noone;
-canBeExplosion = false;
+createExplosion = false;

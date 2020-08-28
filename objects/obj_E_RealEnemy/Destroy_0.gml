@@ -1,6 +1,6 @@
 /// @description Create explosion
 event_inherited();
-if (canBeExplosion)
+if (createExplosion)
 {
 	var obj = instance_create_depth((bbox_left + bbox_right) / 2, (bbox_top + bbox_bottom) / 2, depth - 1, obj_ExplosionChain);
 	obj.chainMax = destroy_EChain;

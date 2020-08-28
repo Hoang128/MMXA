@@ -10,3 +10,5 @@ damageRed = 1;
 imgSpd = 0.5;
 
 size = 3;
+
+destroyWhenOutOfView = false;

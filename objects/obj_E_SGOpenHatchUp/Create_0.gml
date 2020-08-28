@@ -16,4 +16,4 @@ timeWaitMax = 120;
 timeWait = timeWaitMax;
 createBullet = true;
 core = noone;
-canBeExplosion = false;
+createExplosion = false;

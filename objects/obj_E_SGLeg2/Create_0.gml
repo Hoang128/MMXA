@@ -7,4 +7,4 @@ guard = 2;
 hp = 1;
 damage = 2;
 damageRed = 1;
-canBeExplosion = false;
+createExplosion = false;

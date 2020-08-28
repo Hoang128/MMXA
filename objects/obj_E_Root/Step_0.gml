@@ -6,7 +6,21 @@ if (instance_exists(obj_PlayerWeaponTime))
 		if (myDeltaTime == 1)
 			myDeltaTime *= obj_PlayerWeaponTime.slowRatio;
 	}
-	else myDeltaTime = 1;
+	else
+	{
+		if (object_index == obj_E_WireCreeperMoving)
+		{
+			if (instance_exists(pairWirer))
+			{
+				if (self.pairWirer.myDeltaTime != 1)
+					myDeltaTime = pairWirer.myDeltaTime;
+				else
+					myDeltaTime = 1;
+			}
+			else	myDeltaTime = 1;
+		}
+		else myDeltaTime = 1;
+	}
 }
 else myDeltaTime = 1;
 

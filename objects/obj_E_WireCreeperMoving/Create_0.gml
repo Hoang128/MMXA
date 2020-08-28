@@ -8,6 +8,7 @@ hp = 1;
 damage = 1;
 damageRed = 1;
 guard = 2;
+destroyWhenOutOfView = false;
 
 moveDir = 1;
 moveSpd = 0.5;
@@ -21,4 +22,5 @@ waitTimeMax = 60;
 
 eY = 24;
 eChild = noone;
+pairWirer = noone;
 electric = true;

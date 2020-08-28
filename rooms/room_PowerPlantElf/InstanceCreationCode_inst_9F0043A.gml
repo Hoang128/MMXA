@@ -1,1 +1,1 @@
-darkLevel = 0.2;
+darkLevel = 0.4;

@@ -25,16 +25,26 @@ switch (state)
 			{
 				if (position_meeting(x, y + 124, obj_E_WireCreeperMoving))
 				{
-					eChild = instance_create_depth(x, y + eY, depth - 1, obj_E_ElectricBeam);
-					eChild.image_yscale = 1;
+					var tempPair = instance_position(x, y + 124, obj_E_WireCreeperMoving);
+					if (tempPair.state == 1)
+					{
+						pairWirer = tempPair;
+						eChild = instance_create_depth(x, y + eY, depth - 1, obj_E_ElectricBeam);
+						eChild.image_yscale = 1;
+					}
 				}
 			}
 			else if (sprite_index == spr_WiredCreeperUp)
 			{
 				if (position_meeting(x, y - 124, obj_E_WireCreeperMoving))
 				{
-					eChild = instance_create_depth(x, y - eY, depth - 1, obj_E_ElectricBeam);
-					eChild.image_yscale = -1;
+					var tempPair = instance_position(x, y - 124, obj_E_WireCreeperMoving);
+					if (tempPair.state == 1)
+					{
+						pairWirer = tempPair;
+						eChild = instance_create_depth(x, y - eY, depth - 1, obj_E_ElectricBeam);
+						eChild.image_yscale = -1;
+					}
 				}
 			}
 		}
@@ -69,6 +79,7 @@ switch (state)
 	}	break;
 	case 2:
 	{
+		pairWirer = noone;
 		if (sprite_index == spr_WiredCreeperDown)
 		{
 			sprite_index = spr_WiredCreeperChangeDirUp;
