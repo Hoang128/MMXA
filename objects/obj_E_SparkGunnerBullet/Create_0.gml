@@ -10,4 +10,5 @@ damageRed = 1;
 yDir = 1;
 moveSpd = 4;
 
+glow = 1;
 imgSpd = 0.5;

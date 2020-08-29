@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Mark Points",
-    "path": "folders/Objects/Visible/Common/Stage Object/Mark Points.yy",
+    "path": "folders/Objects/Zones/Mark Points.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_checkpoint",

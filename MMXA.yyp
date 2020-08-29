@@ -1747,7 +1747,7 @@
     {"folderPath":"folders/Objects/Visible/Common/Stage Object/Gates/Common Gate.yy","order":1,"resourceVersion":"1.0","name":"Common Gate","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Visible/Common/Stage Object/Gates/Region Gate.yy","order":2,"resourceVersion":"1.0","name":"Region Gate","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Visible/Common/Stage Object/Gates/Boss Gate.yy","order":3,"resourceVersion":"1.0","name":"Boss Gate","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Objects/Visible/Common/Stage Object/Mark Points.yy","order":2,"resourceVersion":"1.0","name":"Mark Points","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Zones/Mark Points.yy","order":3,"resourceVersion":"1.0","name":"Mark Points","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Visible/Common/Stage Object/Capsule.yy","order":3,"resourceVersion":"1.0","name":"Capsule","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/UI Menu.yy","order":3,"resourceVersion":"1.0","name":"UI Menu","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/UI Menu/Screen effect.yy","order":0,"resourceVersion":"1.0","name":"Screen effect","tags":[],"resourceType":"GMFolder",},

@@ -19,6 +19,7 @@ if (collision_rectangle(X_ACTIVE_BOX, Y_ACTIVE_BOX, X_ACTIVE_BOX + W_ACTIVE_BOX,
 				obj.image_yscale = image_yscale;
 				obj.image_angle = image_angle;
 				obj.moveSpaceMax = moveSpaceMax;
+				obj.moveDir = moveDir;
 				if (childObjectPal != noone)
 				{
 					obj.palette = childObjectPal;
