@@ -9,6 +9,7 @@
     {"id":{"name":"spr_slopeR3","path":"sprites/spr_slopeR3/spr_slopeR3.yy",},"order":6,},
     {"id":{"name":"spr_slopeL3","path":"sprites/spr_slopeL3/spr_slopeL3.yy",},"order":7,},
     {"id":{"name":"spr_ladder","path":"sprites/spr_ladder/spr_ladder.yy",},"order":8,},
+    {"id":{"name":"spr_view","path":"sprites/spr_view/spr_view.yy",},"order":18,},
     {"id":{"name":"spr_testBgr","path":"sprites/spr_testBgr/spr_testBgr.yy",},"order":9,},
     {"id":{"name":"spr_deathZone","path":"sprites/spr_deathZone/spr_deathZone.yy",},"order":10,},
     {"id":{"name":"spr_thinPlatform","path":"sprites/spr_thinPlatform/spr_thinPlatform.yy",},"order":11,},

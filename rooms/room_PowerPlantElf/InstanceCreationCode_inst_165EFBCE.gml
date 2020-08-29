@@ -1,0 +1,1 @@
+horizontalLock = false;

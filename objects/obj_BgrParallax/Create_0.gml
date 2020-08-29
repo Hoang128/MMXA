@@ -17,3 +17,9 @@ imgSpd = 1;
 
 x_spd=0;
 y_spd=0;
+
+visibleInRegion = false;
+x1_region = 0;
+x2_region = 0;
+y1_region = 0;
+y2_region = 0;

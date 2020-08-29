@@ -8,8 +8,9 @@ hp = 1;
 damage = 1;
 damageRed = 1;
 startDir = 120;
+glow = 1;
 
-waitTime = 30;
+waitTime = 60;
 moveSpd = 4;
 speed = moveSpd;
 moveWiseClock = true;

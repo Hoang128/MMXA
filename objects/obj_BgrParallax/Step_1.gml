@@ -1,4 +1,17 @@
 /// @description Position
+if (visibleInRegion)
+{
+	if (instance_exists(obj_view))
+	{
+		if (collision_rectangle(x1_region, y1_region, x2_region, y2_region, obj_view, false, false))
+		{
+			layer_background_visible(bgrTree, 1);
+		}
+		else
+			layer_background_visible(bgrTree, 0);
+	}
+}
+else	layer_background_visible(bgrTree, 1);
 if customDepth==0{
     if bgrLayer!=noone{
         layer_x(bgrLayer, x_Pos + X_VIEW * bgrDepth/10);

@@ -11,6 +11,6 @@ damageRed = 1;
 destroy_EChain = 6;
 
 waitTime = 0;
-waitTimeMax = 120;
+waitTimeMax = 240;
 
 shot = false;

@@ -5,8 +5,9 @@
 event_inherited();
 
 childObjectType = obj_E_CreepingGunner;
+glow = 1;
 
 createTime = 0;
-createTimeMax = 240;
+createTimeMax = 300;
 
 imgSpd = 0.5;
