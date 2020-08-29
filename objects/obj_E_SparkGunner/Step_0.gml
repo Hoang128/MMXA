@@ -8,18 +8,18 @@ switch (state)
 {
 	case 0:
 	{
-		if (place_meeting(x + 4, y, obj_block))
+		if (place_meeting(x + 10, y, obj_block))
 			image_xscale = -1;
-		else if (place_meeting(x - 4, y, obj_block))
+		else if (place_meeting(x - 10, y, obj_block))
 			image_xscale = 1;
 		else
 		{
 			if (instance_exists(obj_gameManager.playerCore))
 			{
-				if ((self.x - obj_gameManager.playerCore.x) == 0)
-					image_xscale = 1;
-				else
+				if ((self.x - obj_gameManager.playerCore.x) >= 0)
 					image_xscale = -1;
+				else
+					image_xscale = 1;
 			}
 			
 		}

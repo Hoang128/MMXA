@@ -7,6 +7,7 @@ event_inherited();
 hp = 8;
 damage = 2;
 damageRed = 1;
+state = 0;
 
 waitTime = 0;
 waitTimeMax = 120;
