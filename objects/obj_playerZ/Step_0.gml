@@ -28,7 +28,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	//Air hike
 	#region
 	
-	if ((vState == VerticalState.V_ON_GROUND) || (aState == ActionState.WALLKICK) || (aState == ActionState.CLIMBING) || (aState == ActionState.SLIDING))
+	if ((vState == VerticalState.V_ON_GROUND) || (aState == ActionState.WIRING) || (aState == ActionState.CLIMBING) || (aState == ActionState.SLIDING))
 	{
 		airHikeTime = airHikeTimeMax;
 	}
@@ -308,15 +308,6 @@ if (activateState != ActivateState.DEACTIVATE)
 	#endregion
 	
 	//Passive Counters
-	#region
-	
-	if (aState == ActionState.WIRING)
-	{
-		if (airHikeTime == 0)
-			airHikeTime = 1;
-	}
-	
-	#endregion
 	
 	//Ex-Skill
 	#region
@@ -330,6 +321,13 @@ if (activateState != ActivateState.DEACTIVATE)
 				image_index = 4;
 			if (image_index >= 4)
 			{
+				if (playSFXUpperSlash == false)
+				{
+					audio_play_sound_on(global.SFX_Emitter, snd_ZSkillIceEff, false, false);
+					audio_play_sound_on(global.SFX_Emitter, snd_VZSlashUp, false, false);
+					
+					playSFXUpperSlash = true;
+				}
 				if (!keyboard_check(global.keyAtk))
 				{
 					upperSlashTime = upperSlashTimeMax;

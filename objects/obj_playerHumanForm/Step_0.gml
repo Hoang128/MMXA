@@ -436,10 +436,11 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if (dashSpd > 0)
 					{
-						hspd = 0;
 						dashSpd = 0;
 						canAirDash = 1;
 					}
+					
+					hspd = 0;
 					
 					sprite_index = sprJump3;
 					image_index = 0;

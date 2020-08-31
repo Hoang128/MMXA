@@ -11,6 +11,7 @@ if (canGetDamage)
 				aState = ActionState.STUNNING;
 				dashPhase = 0;
 				dashSpd = 0;
+				canClimb = true;
 				stunType = other.stunType;
 				switch(stunType)
 				{

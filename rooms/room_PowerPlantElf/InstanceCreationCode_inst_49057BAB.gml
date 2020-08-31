@@ -1,2 +1,2 @@
-moveSpaceMax = 24;
+moveSpaceMax = 64;
 moveDir = -1;
