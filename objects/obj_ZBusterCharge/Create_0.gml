@@ -12,6 +12,7 @@ maxTimmer = 4;
 createEff = false;
 imgSpd = 0.5;
 effWidthNumber = 4;
+barrage = 0;
 effWidthRange = (bbox_bottom - bbox_top) / (effWidthNumber - 1);
 
 timmer = maxTimmer;

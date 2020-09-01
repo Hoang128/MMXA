@@ -222,6 +222,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				aState = ActionState.IDLE;
 				atkState = AttackState.A_NONE;
+				activateState = ActivateState.ACTIVATE;
 				chargeCore = 0;
 				
 				sprite_index = sprStand;
@@ -1269,6 +1270,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					
 					chargeCore = 0;
 					
+					activateState = ActivateState.HALF_ACTIVATE;
 					aState = ActionState.SP_MOVE;
 				}
 			}

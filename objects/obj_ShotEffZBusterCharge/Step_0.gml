@@ -8,7 +8,10 @@ if ((image_index > frameShot - 1) && (image_index < frameShot))
 		var buster = instance_create_depth(x, y, depth - 1, obj_ZBusterCharge);
 		buster.image_xscale = image_xscale;
 		if (barrage == 1)
+		{
 			buster.vMoveSpd = busterVspd;
+			buster.barrage = 1;
+		}
 		bulletCreate = true;
 	}
 }

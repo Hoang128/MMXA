@@ -8,7 +8,7 @@ if (hp <= 0) instance_destroy();
 
 if (destroyWhenOutOfView == true)
 {
-if (parent != noone)
+	if (parent != noone)
 	{
 		if (!collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + W_VIEW, Y_VIEW + H_VIEW, self, false, false))
 		{

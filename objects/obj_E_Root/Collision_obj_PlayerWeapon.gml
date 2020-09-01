@@ -100,6 +100,11 @@ if (damageTimmer <= 0)
 							}
 						}
 					}
+					else if (other.object_index == obj_ZBusterCharge)
+					{
+						if (other.barrage != 1)
+							instance_destroy(other);
+					}
 					else
 						instance_destroy(other);
 				}
