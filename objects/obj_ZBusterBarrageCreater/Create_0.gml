@@ -4,7 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
-busterNumber = 9;
+busterNumber = 5;
 createTimeMax = 5;
 createTime = createTimeMax;
-vspace = 0.5;
+vspace = 0.35;
+lv = 1;
+init = 0;

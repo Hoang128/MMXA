@@ -34,7 +34,7 @@ else
 {
 	//HP animation*************************************************************************************************************************************************
 	#region
-	if (timeChangeHP <= 0)
+	if (timeChangeHP >= 0)
 	{
 		timeChangeHP--;
 	}
@@ -50,7 +50,26 @@ else
 	}
 
 	#endregion
-
+	
+	//WP animation*************************************************************************************************************************************************
+	#region
+	if (timeChangeWP >= 0)
+	{
+		timeChangeWP--;
+	}
+	else
+	{
+		if (indWP != core.wp)
+		{
+			//if (sign(core.wp - indWP) > 0)
+				//audio_play_sound_on(global.SFX_Emitter, snd_gainHp, false, false);
+			indWP += sign(core.wp - indWP);
+		}
+		timeChangeWP = timeChangeWPMax;
+	}
+	
+	#endregion
+	
 	//Unique animation*********************************************************************************************************************************************
 	switch (core.object_index)
 	{

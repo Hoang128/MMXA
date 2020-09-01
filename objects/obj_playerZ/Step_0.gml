@@ -268,6 +268,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		}
 	}
 	
+	//Charge shot 1
 	if (sprite_index == spr_ZShotC1_G || sprite_index == spr_ZShotC1_A)
 	{
 		if (image_index >= 3 && image_index <= 4)
@@ -290,11 +291,13 @@ if (activateState != ActivateState.DEACTIVATE)
 				shotEff.image_xscale = image_xscale;
 				shotEff.busterType = busterType;
 				shotEff.core = self;
+				wp -= cBusterCost;
 				busterType = noone;
 			}
 		}
 	}
 	
+	//Charge shot 2
 	if (sprite_index == spr_ZShotC2_G || sprite_index == spr_ZShotC2_A)
 	{
 		if (image_index >= 3 && image_index <= 4)
@@ -317,6 +320,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				shotEff.image_xscale = image_xscale;
 				shotEff.busterType = busterType;
 				shotEff.core = self;
+				wp -= cBusterCost;
 				busterType = noone;
 			}
 		}
@@ -1003,6 +1007,7 @@ if (activateState != ActivateState.DEACTIVATE)
 								
 								scr_SetIceSlideSpd(hspd, true);
 								
+								wp -= cBusterCost;
 								hspd = 0;
 								if (dashSpd > 0)
 								{
@@ -1027,6 +1032,7 @@ if (activateState != ActivateState.DEACTIVATE)
 								
 								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_CHARGE_COMBO_A, self);
 								
+								wp -= cBusterCost;
 								if (aState != ActionState.JUMPDASHING)
 									aState = ActionState.IDLE;
 								atkState = AttackState.A_STRICT_ATTACK;
@@ -1108,9 +1114,14 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if ((chargeCore > 0) && (chargeCore < chargeCoreLv3Limit))
 					{
-						chargeCore += DELTA_TIME;
+						if (wp >= cBusterCost)
+							chargeCore += DELTA_TIME;
+						else
+							chargeCore = 0;
 						if (chargeCore >= chargeCoreLv1Limit)
 						{
+							if (wp < (cBusterCost * 2))
+								chargeCore = chargeCoreLv1Limit;
 							if (!instance_exists(obj_ZChargeEffLv1))
 							{
 								var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_ZChargeEffLv1);
@@ -1122,6 +1133,8 @@ if (activateState != ActivateState.DEACTIVATE)
 				
 						if ((chargeCore >= chargeCoreLv2Limit) && (chargeCore < chargeCoreLv3Limit))
 						{
+							if (wp < (cBusterCost * 3))
+								chargeCore = chargeCoreLv2Limit;
 							if (!instance_exists(obj_ZChargeEffLv2))
 							{
 								var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_ZChargeEffLv2);
@@ -1159,6 +1172,10 @@ if (activateState != ActivateState.DEACTIVATE)
 						chargeCore += DELTA_TIME;
 						if (chargeCore >= chargeCoreLv1Limit)
 						{
+							if (wp < cBusterBarrage2Cost)
+							{
+								chargeCore = chargeCoreLv1Limit;
+							}
 							if (!instance_exists(obj_ZChargeEffLv1))
 							{
 								var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_ZChargeEffLv1);
@@ -1191,19 +1208,19 @@ if (activateState != ActivateState.DEACTIVATE)
 			{
 				if (sprite_index != spr_ZShotBarrage)
 				{
-					if (chargeCore > chargeCoreLv1Limit)
+					if (chargeCore >= chargeCoreLv1Limit)
 					{
 						if (chargeCore >= chargeCoreLv3Limit)
 						{
 							chargeCoreLv = 3;
 						}
 				
-						if ((chargeCore > chargeCoreLv2Limit) && (chargeCore < chargeCoreLv3Limit))
+						if ((chargeCore >= chargeCoreLv2Limit) && (chargeCore < chargeCoreLv3Limit))
 						{
 							chargeCoreLv = 2;
 						}
 				
-						if ((chargeCore > chargeCoreLv1Limit) && (chargeCore < chargeCoreLv2Limit))
+						if ((chargeCore >= chargeCoreLv1Limit) && (chargeCore < chargeCoreLv2Limit))
 						{
 							chargeCoreLv = 1;
 						}
@@ -1265,6 +1282,20 @@ if (activateState != ActivateState.DEACTIVATE)
 						{
 							var objBusterBarrage = instance_create_depth(x + 24 * image_xscale, y - 31, depth - 1, obj_ZBusterBarrageCreater);
 							objBusterBarrage.image_xscale = image_xscale;
+							objBusterBarrage.lv = 2;
+							
+							wp -= cBusterBarrage2Cost;
+						}
+					}
+					else if (chargeCore >= chargeCoreLv1Limit)
+					{
+						if (!instance_exists(obj_ZBusterBarrageCreater))
+						{
+							var objBusterBarrage = instance_create_depth(x + 24 * image_xscale, y - 31, depth - 1, obj_ZBusterBarrageCreater);
+							objBusterBarrage.image_xscale = image_xscale;
+							objBusterBarrage.lv = 1;
+							
+							wp -= cBusterBarrage1Cost;
 						}
 					}
 					

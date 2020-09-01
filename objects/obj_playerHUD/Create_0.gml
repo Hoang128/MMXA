@@ -17,8 +17,11 @@ indAPXUAProgress = 0;
 indAPXUAImg = 15;
 indAPXUAImgSpd = 0.5;
 
-timeChangeHPMax = 240;
+timeChangeHPMax = 2;
 timeChangeHP = timeChangeHPMax;
+
+timeChangeWPMax = 2;
+timeChangeWP = timeChangeWPMax;
 
 xPlace = 16;
 yPlace = 8;

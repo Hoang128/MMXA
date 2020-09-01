@@ -10,6 +10,6 @@ collisionEff = noone;
 maxTimmer = 5;
 isGuardBreaker = false;
 element = Element.NEUTRAL;
-type = WeaponType.OTHER;
+wpType = WeaponType.OTHER;
 slowTime = false;
 imgSpd = 0.5;

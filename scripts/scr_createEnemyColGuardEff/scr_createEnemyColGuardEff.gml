@@ -5,7 +5,7 @@ function scr_createEnemyColGuardEff() {
 	if (guardEffEnable == true)
 	{
 		var xPlace = clamp(other.x + (abs(other.sprite_width) - abs(other.sprite_xoffset)) * 0.75 * other.image_xscale, bbox_left, bbox_right);
-		if (other.type == WeaponType.SABER)
+		if (other.wpType == WeaponType.SABER)
 			var yPlace = clamp((other.core.bbox_top + other.core.bbox_bottom) / 2, bbox_top, bbox_bottom);
 		else
 			var yPlace = clamp((other.bbox_top + other.bbox_bottom) / 2, bbox_top, bbox_bottom);

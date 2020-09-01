@@ -4,4 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-type = WeaponType.BUSTER;
+wpType = WeaponType.BUSTER;

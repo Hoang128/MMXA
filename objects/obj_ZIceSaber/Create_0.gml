@@ -7,7 +7,7 @@ event_inherited();
 collisionSFX = snd_MWeaponColEnemyEff;
 maxTimmer = 4;
 damage = 1;
-type = WeaponType.SABER;
+wpType = WeaponType.SABER;
 slowTime = true;
 
 createSpikeWait = 0;

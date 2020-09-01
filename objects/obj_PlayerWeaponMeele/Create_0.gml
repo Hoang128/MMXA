@@ -11,4 +11,4 @@ core = noone;
 direction = 0;
 hit = 0;
 
-type = WeaponType.SABER;
+wpType = WeaponType.SABER;

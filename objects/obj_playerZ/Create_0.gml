@@ -18,10 +18,16 @@ slashWaitTime = 2;
 canChargeTimmerMax = 2;
 yDistanceToWirer = 58;
 objWire = obj_ZWirer;
+gainWpPerSlash = 1;
 
+//Buster Core
 chargeCoreLv1Limit = 40;
 chargeCoreLv2Limit = 90;
 chargeCoreLv3Limit = 140;
+
+cBusterCost = 8;
+cBusterBarrage1Cost = 16;
+cBusterBarrage2Cost = 32;
 
 //Initialize parents sprites***************************************************************************************************************************************
 scr_InitSpritePlayerHFormBase(obj_playerZ);

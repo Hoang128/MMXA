@@ -45,7 +45,7 @@ if (damageTimmer <= 0)
 	if (guard == 2)
 		realDamage = 0;
 	
-	if (other.type == WeaponType.SABER)
+	if (other.wpType == WeaponType.SABER)
 	{
 		other.hit++;
 	}
@@ -62,7 +62,21 @@ if (damageTimmer <= 0)
 		
 		scr_createEnemyColDamageEff();
 		
-		if (other.type == WeaponType.BUSTER)
+		if (other.wpType == WeaponType.SABER)
+		{
+			if (other.core.object_index == obj_playerZ)
+			{
+				with (other)
+				{
+					if ((core.wp + core.gainWpPerSlash) <= core.wpMax)
+						core.wp += core.gainWpPerSlash;
+					else
+						core.wp = core.wpMax;
+				}
+			}
+		}
+
+		if (other.wpType == WeaponType.BUSTER)
 		{
 			if (other.object_index == obj_XBusterNormal)
 				instance_destroy(other);
