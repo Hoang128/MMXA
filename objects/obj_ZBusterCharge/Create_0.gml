@@ -7,6 +7,7 @@ collisionSFX = snd_RWeaponColEnemyEff;
 collisionEff = obj_BusterColEffLv2;
 flyTime = 20;
 moveSpd = 8;
+vMoveSpd = 0;
 maxTimmer = 4;
 createEff = false;
 imgSpd = 0.5;

@@ -24,10 +24,12 @@ if (init == false)
 else
 {
 	hspd = moveSpd * image_xscale;
+	vspd = vMoveSpd;
 
 	if (flyTime > 0)
 	{
 		x += hspd * DELTA_TIME;
+		y += vspd * DELTA_TIME;
 		var meetWallLeft = collision_rectangle(bbox_left, (bbox_top + (bbox_bottom + bbox_top) / 2) / 2, bbox_left - 1, (bbox_bottom + (bbox_top + bbox_bottom) / 2) / 2, obj_block, false , true);
 		var meetWallRight = collision_rectangle(bbox_right, (bbox_top + (bbox_bottom + bbox_top) / 2) / 2, bbox_right + 1, (bbox_bottom + (bbox_top + bbox_bottom) / 2) / 2, obj_block, false , true);
 		if (image_xscale == 1 && meetWallRight) || (image_xscale == -1 && meetWallLeft)

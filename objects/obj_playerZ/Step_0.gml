@@ -214,6 +214,22 @@ if (activateState != ActivateState.DEACTIVATE)
 	//Buster
 	#region
 	
+	if (sprite_index == spr_ZShotBarrage)
+	{
+		if (aState == ActionState.SP_MOVE)
+		{
+			if (!instance_exists(obj_ZBusterBarrageCreater))
+			{
+				aState = ActionState.IDLE;
+				atkState = AttackState.A_NONE;
+				chargeCore = 0;
+				
+				sprite_index = sprStand;
+				image_index = 0;
+			}
+		}
+	}
+	
 	//Normal shot
 	if ((sprite_index == spr_ZShotNorG) || (sprite_index == spr_ZShotNorA))
 	{
@@ -889,9 +905,11 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Form attack
 		#region
 		
-		if (keyboard_check_pressed(global.keyGiga))
+		if (global.zCore[2] == ItemState.USING)
 		{
-			if (global.zCore[2] == ItemState.USING)
+			#region
+			
+			if (keyboard_check_pressed(global.keyGiga))
 			{
 				//Z buster
 				switch (chargeCore)
@@ -937,6 +955,31 @@ if (activateState != ActivateState.DEACTIVATE)
 									vState = VerticalState.V_MOVE_FALLING;
 									image_index = 0;
 									busterType = obj_ZBusterNor;
+								}
+							}
+						}
+						
+						if ((keyboard_check(global.keyUp)) && (!keyboard_check(global.keyDown)))
+						{
+							if (vState == VerticalState.V_ON_GROUND)
+							{
+								if (atkState < AttackState.A_FREEZE_ATTACK)
+								{
+									audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo2, 0, 0);
+									scr_MeeleWeaponDestroy(obj_ZSaberImage);
+									sprite_index = spr_ZShotBarrage;
+							
+									scr_SetIceSlideSpd(hspd, true);
+							
+									hspd = 0;
+									if (dashSpd > 0)
+									{
+										dashSpd = 0;
+										dashTime = 0;
+									}
+									aState = ActionState.IDLE;
+									atkState = AttackState.A_FREEZE_ATTACK;
+									image_index = 0;
 								}
 							}
 						}
@@ -1050,133 +1093,191 @@ if (activateState != ActivateState.DEACTIVATE)
 					}	break;
 				}
 			}
-		}
 		
-		if (keyboard_check(global.keyGiga) && (global.zCore[2] == ItemState.USING))
-		{
-			if (chargeCore == 0)
+			if (keyboard_check(global.keyGiga))
 			{
-				if (chargeNormal <= 0)
-					chargeCore += DELTA_TIME;
-				else chargeCore = 0;
-			}
-			
-			if ((chargeCore > 0) && (chargeCore < chargeCoreLv3Limit))
-			{
-				chargeCore += DELTA_TIME;
-				if (chargeCore >= chargeCoreLv1Limit)
+				if (chargeCore == 0)
 				{
-					if (!instance_exists(obj_ZChargeEffLv1))
-					{
-						var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_ZChargeEffLv1);
-						objChargeEff.core = self;
-						objChargeEff.chargeParameter = self.chargeNormal;
-						objChargeEff.coreCharge = 1;
-					}
-				}
-				
-				if ((chargeCore >= chargeCoreLv2Limit) && (chargeCore < chargeCoreLv3Limit))
-				{
-					if (!instance_exists(obj_ZChargeEffLv2))
-					{
-						var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_ZChargeEffLv2);
-						objChargeEff.core = self;
-						objChargeEff.chargeParameter = self.chargeNormal;
-						objChargeEff.coreCharge = 1;
-						objChargeEff.chargeLevel = 2;
-					}
-					
-					if (instance_exists(obj_ZChargeEffLv1))
-						obj_ZChargeEffLv1.chargeLevel = 2;
+					if (chargeNormal <= 0)
+						chargeCore += DELTA_TIME;
+					else chargeCore = 0;
 				}
 
-				if (chargeCore >= chargeCoreLv3Limit)
+				if (atkState != AttackState.A_FREEZE_ATTACK)
 				{
-					if (instance_exists(obj_ZChargeEffLv2))
+					if ((chargeCore > 0) && (chargeCore < chargeCoreLv3Limit))
 					{
-						if (obj_ZChargeEffLv2.chargeLevel == 2)
-							obj_ZChargeEffLv2.chargeLevel = 3;
-					}
+						chargeCore += DELTA_TIME;
+						if (chargeCore >= chargeCoreLv1Limit)
+						{
+							if (!instance_exists(obj_ZChargeEffLv1))
+							{
+								var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_ZChargeEffLv1);
+								objChargeEff.core = self;
+								objChargeEff.chargeParameter = self.chargeNormal;
+								objChargeEff.coreCharge = 1;
+							}
+						}
 				
-					if (instance_exists(obj_ZChargeEffLv1))
+						if ((chargeCore >= chargeCoreLv2Limit) && (chargeCore < chargeCoreLv3Limit))
+						{
+							if (!instance_exists(obj_ZChargeEffLv2))
+							{
+								var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_ZChargeEffLv2);
+								objChargeEff.core = self;
+								objChargeEff.chargeParameter = self.chargeNormal;
+								objChargeEff.coreCharge = 1;
+								objChargeEff.chargeLevel = 2;
+							}
+					
+							if (instance_exists(obj_ZChargeEffLv1))
+								obj_ZChargeEffLv1.chargeLevel = 2;
+						}
+
+						if (chargeCore >= chargeCoreLv3Limit)
+						{
+							if (instance_exists(obj_ZChargeEffLv2))
+							{
+								if (obj_ZChargeEffLv2.chargeLevel == 2)
+									obj_ZChargeEffLv2.chargeLevel = 3;
+							}
+				
+							if (instance_exists(obj_ZChargeEffLv1))
+							{
+								if (obj_ZChargeEffLv1.chargeLevel == 2)
+									obj_ZChargeEffLv1.chargeLevel = 3;
+							}
+						}
+					}
+				}
+				
+				else
+				{
+					if ((chargeCore > 0) && (chargeCore < chargeCoreLv2Limit))
 					{
-						if (obj_ZChargeEffLv1.chargeLevel == 2)
-							obj_ZChargeEffLv1.chargeLevel = 3;
+						chargeCore += DELTA_TIME;
+						if (chargeCore >= chargeCoreLv1Limit)
+						{
+							if (!instance_exists(obj_ZChargeEffLv1))
+							{
+								var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_ZChargeEffLv1);
+								objChargeEff.core = self;
+								objChargeEff.chargeParameter = self.chargeNormal;
+								objChargeEff.coreCharge = 1;
+							}
+						}
+					
+						if (chargeCore >= chargeCoreLv2Limit)
+						{
+							chargeCore = chargeCoreLv2Limit;
+							if (!instance_exists(obj_ZChargeEffLv2))
+							{
+								var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_ZChargeEffLv2);
+								objChargeEff.core = self;
+								objChargeEff.chargeParameter = self.chargeNormal;
+								objChargeEff.coreCharge = 1;
+								objChargeEff.chargeLevel = 2;
+							}
+					
+							if (instance_exists(obj_ZChargeEffLv1))
+								obj_ZChargeEffLv1.chargeLevel = 2;
+						}
 					}
 				}
 			}
+		
+			if (keyboard_check_released(global.keyGiga))
+			{
+				if (sprite_index != spr_ZShotBarrage)
+				{
+					if (chargeCore > chargeCoreLv1Limit)
+					{
+						if (chargeCore >= chargeCoreLv3Limit)
+						{
+							chargeCoreLv = 3;
+						}
+				
+						if ((chargeCore > chargeCoreLv2Limit) && (chargeCore < chargeCoreLv3Limit))
+						{
+							chargeCoreLv = 2;
+						}
+				
+						if ((chargeCore > chargeCoreLv1Limit) && (chargeCore < chargeCoreLv2Limit))
+						{
+							chargeCoreLv = 1;
+						}
+						chargeCore = -1;
+						if (vState == VerticalState.V_ON_GROUND)
+						{
+							if (sprite_index != spr_ZShotC1_G)
+							{
+								sprite_index = spr_ZShotC1_G;
+								image_index = 0;
+								audio_play_sound_on(global.SFX_Emitter, snd_VZShotC1, 0, 0);
+							
+								scr_MeeleWeaponDestroy(obj_ZSaberImage);
+							
+								scr_SetIceSlideSpd(hspd, true);
+							
+								hspd = 0;
+								if (dashSpd > 0)
+								{
+									dashSpd = 0;
+									dashTime = 0;
+								}
+								aState = ActionState.IDLE;
+								atkState = AttackState.A_STRICT_ATTACK_LV3;
+							}
+						}
+						else
+						{
+							if (sprite_index != spr_ZShotC1_A)
+							{
+								sprite_index = spr_ZShotC1_A;
+								image_index = 0;
+								audio_play_sound_on(global.SFX_Emitter, snd_VZShotC1, 0, 0);
+							
+								scr_MeeleWeaponDestroy(obj_ZSaberImage);
+						
+								atkState = AttackState.A_STRICT_ATTACK;
+								if (aState != ActionState.JUMPDASHING)
+									aState = ActionState.IDLE;
+								vState = VerticalState.V_MOVE_FALLING;
+							}
+						}
+						if (chargeCoreLv > 1)
+							chargeCore = -2;
+						else
+						{
+							chargeCoreLv = 0;
+							chargeCore = 0;
+						}
+					}
+					else if (chargeCore > 0) 
+						chargeCore = 0;
+				}
+				else
+				{
+					if (chargeCore >= chargeCoreLv2Limit)
+					{
+						if (!instance_exists(obj_ZBusterBarrageCreater))
+						{
+							var objBusterBarrage = instance_create_depth(x + 24 * image_xscale, y - 31, depth - 1, obj_ZBusterBarrageCreater);
+							objBusterBarrage.image_xscale = image_xscale;
+						}
+					}
+					
+					chargeCore = 0;
+					
+					aState = ActionState.SP_MOVE;
+				}
+			}
+			
+			#endregion
 		}
 		
-		if (keyboard_check_released(global.keyGiga))
+		if (global.zCore[1] == ItemState.USING)
 		{
-			if (global.zCore[2] == ItemState.USING)
-			{
-				if (chargeCore > chargeCoreLv1Limit)
-				{
-					if (chargeCore >= chargeCoreLv3Limit)
-					{
-						chargeCoreLv = 3;
-					}
-				
-					if ((chargeCore > chargeCoreLv2Limit) && (chargeCore < chargeCoreLv3Limit))
-					{
-						chargeCoreLv = 2;
-					}
-				
-					if ((chargeCore > chargeCoreLv1Limit) && (chargeCore < chargeCoreLv2Limit))
-					{
-						chargeCoreLv = 1;
-					}
-					chargeCore = -1;
-					if (vState == VerticalState.V_ON_GROUND)
-					{
-						if (sprite_index != spr_ZShotC1_G)
-						{
-							sprite_index = spr_ZShotC1_G;
-							image_index = 0;
-							audio_play_sound_on(global.SFX_Emitter, snd_VZShotC1, 0, 0);
-							
-							scr_MeeleWeaponDestroy(obj_ZSaberImage);
-							
-							scr_SetIceSlideSpd(hspd, true);
-							
-							hspd = 0;
-							if (dashSpd > 0)
-							{
-								dashSpd = 0;
-								dashTime = 0;
-							}
-							aState = ActionState.IDLE;
-							atkState = AttackState.A_STRICT_ATTACK_LV3;
-						}
-					}
-					else
-					{
-						if (sprite_index != spr_ZShotC1_A)
-						{
-							sprite_index = spr_ZShotC1_A;
-							image_index = 0;
-							audio_play_sound_on(global.SFX_Emitter, snd_VZShotC1, 0, 0);
-							
-							scr_MeeleWeaponDestroy(obj_ZSaberImage);
-						
-							atkState = AttackState.A_STRICT_ATTACK;
-							if (aState != ActionState.JUMPDASHING)
-								aState = ActionState.IDLE;
-							vState = VerticalState.V_MOVE_FALLING;
-						}
-					}
-					if (chargeCoreLv > 1)
-						chargeCore = -2;
-					else
-					{
-						chargeCoreLv = 0;
-						chargeCore = 0;
-					}
-				}
-				else if (chargeCore > 0) 
-					chargeCore = 0;
-			}
 		}
 		
 		#endregion
