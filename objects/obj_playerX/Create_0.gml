@@ -5,10 +5,8 @@ event_inherited();
 
 //Initialize Parameters
 weight = WeighType.MEDIUM;
-hpMax = global.hpMax[0];
-hp = hpMax;
-wpMax = global.wpMax[0];
-wp = wpMax;
+global.currentPlayer = 0;
+
 atkSpriteTimeMax = 20;
 xPlaceDashEff = -25;
 yPlaceDashEff = -4;
@@ -22,6 +20,7 @@ waitShot = 0;
 waitShotSpecial = 0;
 yDistanceToWirer = 44;
 objWire = obj_XWirer;
+charNum = 0;
 
 //Initialize sprite
 scr_InitSpritePlayerHFormBase(obj_playerX);

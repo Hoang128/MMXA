@@ -4,8 +4,6 @@
 event_inherited();
 
 //Initialize Parameter
-hp = 1; //Health point
-hpRed = 0; //Health point red
 runSpd = 2; //Run speed
 dashSpdPhase1 = 1; //Dash speed when start dash
 dashSpdPhase2 = 5; //Dash speed when dash
@@ -51,6 +49,7 @@ wirer = noone;
 wireTimeMax = 10;
 wireTime = 0;
 objWire = noone;
+charNum = -1;
 
 //Default state
 weight = WeighType.MEDIUM;

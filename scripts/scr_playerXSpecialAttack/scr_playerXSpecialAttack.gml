@@ -1,6 +1,9 @@
-function scr_playerXSpecialAttack(argument0) {
-	var XType = argument0;
+function scr_playerXSpecialAttack(XType) {
 
+	var wCost = array_create(9, 0);
+	wCost[6] = 2;
+	wCost[7] = 4;
+	wCost[8] = 2;
 	switch (currentWeapon)
 	{
 		case 0:
@@ -41,15 +44,15 @@ function scr_playerXSpecialAttack(argument0) {
 		}	break;
 		case 6:
 		{
-			scr_XAtk6Tornado();
+			scr_XAtk6Tornado(wCost[6]);
 		}	break;
 		case 7:
 		{
-			scr_XAtk7Time();
+			scr_XAtk7Time(wCost[7]);
 		}	break;
 		case 8:
 		{
-			scr_XAtk8Dark();
+			scr_XAtk8Dark(wCost[8]);
 		}	break;
 		default:	break;
 	}
@@ -60,25 +63,28 @@ function scr_playerXSpecialAttack(argument0) {
 		{
 			if (keyboard_check(global.keySpAtk))
 			{
-				if (chargeWeapon < chargeLv2Limit)
+				if (global.wp[currentWeapon] > wCost[currentWeapon] * 2)
 				{
-					chargeWeapon += DELTA_TIME;
-					if (chargeWeapon >= chargeLv1Limit)
+					if (chargeWeapon < chargeLv2Limit)
 					{
-						if (!instance_exists(obj_XChargeEffSpLv1))
+						chargeWeapon += DELTA_TIME;
+						if (chargeWeapon >= chargeLv1Limit)
 						{
-							var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_XChargeEffSpLv1);
-							objChargeEff.core = self;
+							if (!instance_exists(obj_XChargeEffSpLv1))
+							{
+								var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_XChargeEffSpLv1);
+								objChargeEff.core = self;
+							}
 						}
 					}
-				}
-				else
-				{
-					chargeWeapon = chargeLv2Limit;
-					if (!instance_exists(obj_XChargeEffSpLv2))
+					else
 					{
-						var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_XChargeEffSpLv2);
-						objChargeEff.core = self;
+						chargeWeapon = chargeLv2Limit;
+						if (!instance_exists(obj_XChargeEffSpLv2))
+						{
+							var objChargeEff = instance_create_depth((bbox_right + bbox_left) / 2, (bbox_top + bbox_bottom) / 2, depth - 2, obj_XChargeEffSpLv2);
+							objChargeEff.core = self;
+						}
 					}
 				}
 			}
@@ -87,15 +93,15 @@ function scr_playerXSpecialAttack(argument0) {
 			{
 				case 6:
 				{
-					scr_XAtk6TornadoCharge();
+					scr_XAtk6TornadoCharge(wCost[6] * 2);
 				}	break;
 				case 7:
 				{
-					scr_XAtk7TimeCharge();
+					scr_XAtk7TimeCharge(wCost[7] * 2);
 				}
 				case 8:
 				{
-					scr_XAtk8DarkCharge();
+					scr_XAtk8DarkCharge(wCost[8] * 2);
 				}	break;
 				default:	break;
 			}

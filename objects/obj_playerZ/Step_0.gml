@@ -1,6 +1,9 @@
 /// @description Zero's Actions
 // You can write your code in this editor
 
+//Hp
+scr_playerDeath(self.object_index);
+
 //Inherit the parent event
 event_inherited();
 
@@ -291,7 +294,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				shotEff.image_xscale = image_xscale;
 				shotEff.busterType = busterType;
 				shotEff.core = self;
-				wp -= cBusterCost;
+				global.zp -= cBusterCost;
 				busterType = noone;
 			}
 		}
@@ -320,7 +323,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				shotEff.image_xscale = image_xscale;
 				shotEff.busterType = busterType;
 				shotEff.core = self;
-				wp -= cBusterCost;
+				global.zp -= cBusterCost;
 				busterType = noone;
 			}
 		}
@@ -1007,7 +1010,7 @@ if (activateState != ActivateState.DEACTIVATE)
 								
 								scr_SetIceSlideSpd(hspd, true);
 								
-								wp -= cBusterCost;
+								global.zp -= cBusterCost;
 								hspd = 0;
 								if (dashSpd > 0)
 								{
@@ -1032,7 +1035,7 @@ if (activateState != ActivateState.DEACTIVATE)
 								
 								scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_CHARGE_COMBO_A, self);
 								
-								wp -= cBusterCost;
+								global.zp -= cBusterCost;
 								if (aState != ActionState.JUMPDASHING)
 									aState = ActionState.IDLE;
 								atkState = AttackState.A_STRICT_ATTACK;
@@ -1114,13 +1117,13 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if ((chargeCore > 0) && (chargeCore < chargeCoreLv3Limit))
 					{
-						if (wp >= cBusterCost)
+						if (global.zp >= cBusterCost)
 							chargeCore += DELTA_TIME;
 						else
 							chargeCore = 0;
 						if (chargeCore >= chargeCoreLv1Limit)
 						{
-							if (wp < (cBusterCost * 2))
+							if (global.zp < (cBusterCost * 2))
 								chargeCore = chargeCoreLv1Limit;
 							if (!instance_exists(obj_ZChargeEffLv1))
 							{
@@ -1133,7 +1136,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				
 						if ((chargeCore >= chargeCoreLv2Limit) && (chargeCore < chargeCoreLv3Limit))
 						{
-							if (wp < (cBusterCost * 3))
+							if (global.zp < (cBusterCost * 3))
 								chargeCore = chargeCoreLv2Limit;
 							if (!instance_exists(obj_ZChargeEffLv2))
 							{
@@ -1172,7 +1175,7 @@ if (activateState != ActivateState.DEACTIVATE)
 						chargeCore += DELTA_TIME;
 						if (chargeCore >= chargeCoreLv1Limit)
 						{
-							if (wp < cBusterBarrage2Cost)
+							if (global.zp < cBusterBarrage2Cost)
 							{
 								chargeCore = chargeCoreLv1Limit;
 							}
@@ -1284,7 +1287,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							objBusterBarrage.image_xscale = image_xscale;
 							objBusterBarrage.lv = 2;
 							
-							wp -= cBusterBarrage2Cost;
+							global.zp -= cBusterBarrage2Cost;
 						}
 					}
 					else if (chargeCore >= chargeCoreLv1Limit)
@@ -1295,7 +1298,7 @@ if (activateState != ActivateState.DEACTIVATE)
 							objBusterBarrage.image_xscale = image_xscale;
 							objBusterBarrage.lv = 1;
 							
-							wp -= cBusterBarrage1Cost;
+							global.zp -= cBusterBarrage1Cost;
 						}
 					}
 					

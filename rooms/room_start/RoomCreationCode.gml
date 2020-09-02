@@ -12,6 +12,7 @@ global.isStage = false;
 
 //Default parameter***************************************************************************************
 //Default Lives
+global.currentPlayer = 0;
 lives = 2;
 
 //Default Spawm location
@@ -26,6 +27,14 @@ global.hpMax[2] = 16;
 global.wpMax[0] = 32;
 global.wpMax[1] = 32;
 global.wpMax[2] = 32;
+global.hp[0] = global.hpMax[0];
+global.hp[1] = global.hpMax[1];
+global.hp[2] = global.hpMax[2];
+for (i = 0; i <= 8; i++)
+{
+	global.wp[i] = global.wpMax[0];
+}
+global.zp = global.wpMax[1];
 
 //Default Elves
 for(i = 0; i < 16; i++)
@@ -69,7 +78,7 @@ global.weapon[8] = ItemState.USING;
 
 //Default Zero
 global.zCore[2] = ItemState.USING;
-global.zForm[1] = ItemState.USING;
+global.zForm[2] = ItemState.USING;
 global.zSaber[2] = ItemState.USING;
 
 //Default Key

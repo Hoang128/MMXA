@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//Hp
+scr_playerDeath(self.object_index);
+
 //Inherit the parent event
 event_inherited();
 

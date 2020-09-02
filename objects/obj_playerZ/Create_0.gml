@@ -6,10 +6,8 @@ event_inherited();
 
 //Initialize Parameters********************************************************************************************************************************************
 weight = WeighType.MEDIUM;
-hpMax = global.hpMax[1];
-hp = hpMax;
-wpMax = global.wpMax[1];
-wp = wpMax;
+global.currentPlayer = 1;
+
 atkSpriteTimeMax = 60;
 xPlaceDashEff = -25;
 yPlaceDashEff = -4;
@@ -19,6 +17,7 @@ canChargeTimmerMax = 2;
 yDistanceToWirer = 58;
 objWire = obj_ZWirer;
 gainWpPerSlash = 1;
+charNum = 1;
 
 //Buster Core
 chargeCoreLv1Limit = 40;

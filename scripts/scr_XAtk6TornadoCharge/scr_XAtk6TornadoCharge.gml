@@ -1,11 +1,14 @@
-function scr_XAtk6TornadoCharge() {
+function scr_XAtk6TornadoCharge(manaCost) {
 	if (keyboard_check_released(global.keySpAtk))
 	{
-		if (chargeWeapon >= chargeLv2Limit)
+		if (global.wp[6] >= manaCost)
 		{
-			scr_playerXImpactAttack(180, obj_XW6TornadoCharge);
+			if (chargeWeapon >= chargeLv2Limit)
+			{
+				scr_playerXImpactAttack(180, obj_XW6TornadoCharge, 6, manaCost);
+			}
+			chargeWeapon = 0;
 		}
-		chargeWeapon = 0;
 	}
 
 

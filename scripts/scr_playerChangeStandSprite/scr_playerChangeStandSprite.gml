@@ -1,20 +1,22 @@
 /// @description Intialize player change Sprite: scr_playerChangeStandSprite(object player)
 /// @function Intialize BGM set: scr_playerChangeStandSprite
 /// @param object player
-function scr_playerChangeStandSprite(argument0) {
+function scr_playerChangeStandSprite(objIndex) {
 
 	//--------------------------------------------------
-	switch (argument0)
+	switch (objIndex)
 	{
-		case obj_playerX:	
+		case obj_playerX:
+		case obj_playerXUA:
+		case obj_playerEclipseX:
 		{
-			if (hp <= 4)	sprStand = spr_XDying;
+			if (global.hp[0] <= 4)	sprStand = spr_XDying;
 			else			sprStand = spr_XStand;
 		}	break;
 	
 		case obj_playerZ:	
 		{
-			if (hp <= 4)	sprStand = spr_ZDying;
+			if (global.hp[1] <= 4)	sprStand = spr_ZDying;
 			else			sprStand = spr_ZStand;
 		}	break;
 	}

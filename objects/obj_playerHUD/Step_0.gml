@@ -6,10 +6,24 @@ if (!init)
 	//Initialize Parameters****************************************************************************************************************************************
 	#region
 	
-	indHP = core.hp;
-	indHPMax = core.hpMax;
-	indWP = core.wp;
-	indWPMax = core.wpMax;
+	indHP = global.hp[global.currentPlayer];
+	indHPMax = global.hpMax[global.currentPlayer];
+	
+	switch (core.charNum)
+	{
+		case 0:
+		{
+			indWP = global.wp[core.currentWeapon];
+			indWPMax = global.wpMax[0];
+		}	break;
+		case 1:
+		{
+			indWP = global.zp;
+			indWPMax = global.wpMax[1];
+		}	break;
+	}
+	
+	
 	if (core.object_index == obj_playerXUA || core.object_index == obj_playerEclipseX)
 	{
 		indAP = core.ArmorPoint;
@@ -40,11 +54,11 @@ else
 	}
 	else
 	{
-		if (indHP != core.hp)
+		if (indHP != global.hp[global.currentPlayer])
 		{
-			if (sign(core.hp - indHP) > 0)
+			if (sign(global.hp[global.currentPlayer] - indHP) > 0)
 				audio_play_sound_on(global.SFX_Emitter, snd_gainHp, false, false);
-			indHP += sign(core.hp - indHP);
+			indHP += sign(global.hp[global.currentPlayer] - indHP);
 		}
 		timeChangeHP = timeChangeHPMax;
 	}
@@ -53,19 +67,43 @@ else
 	
 	//WP animation*************************************************************************************************************************************************
 	#region
-	if (timeChangeWP >= 0)
+	
+	switch (global.currentPlayer)
 	{
-		timeChangeWP--;
-	}
-	else
-	{
-		if (indWP != core.wp)
+		case 0:
 		{
-			//if (sign(core.wp - indWP) > 0)
-				//audio_play_sound_on(global.SFX_Emitter, snd_gainHp, false, false);
-			indWP += sign(core.wp - indWP);
-		}
-		timeChangeWP = timeChangeWPMax;
+			if (timeChangeWP >= 0)
+			{
+				timeChangeWP--;
+			}
+			else
+			{
+				if (indWP != global.wp[core.currentWeapon])
+				{
+					//if (sign(core.wp - indWP) > 0)
+						//audio_play_sound_on(global.SFX_Emitter, snd_gainHp, false, false);
+					indWP += sign(global.wp[core.currentWeapon] - indWP);
+				}
+				timeChangeWP = timeChangeWPMax;
+			}
+		}	break;
+		case 1:
+		{
+			if (timeChangeWP >= 0)
+			{
+				timeChangeWP--;
+			}
+			else
+			{
+				if (indWP != global.zp)
+				{
+					//if (sign(core.wp - indWP) > 0)
+						//audio_play_sound_on(global.SFX_Emitter, snd_gainHp, false, false);
+					indWP += sign(global.zp - indWP);
+				}
+				timeChangeWP = timeChangeWPMax;
+			}
+		}	break;
 	}
 	
 	#endregion

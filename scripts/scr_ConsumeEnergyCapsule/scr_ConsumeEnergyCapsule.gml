@@ -1,7 +1,4 @@
-function scr_ConsumeEnergyCapsule(argument0, argument1, argument2) {
-	var hpConsume = argument0;
-	var character = argument1;
-	var capsule = argument2;
+function scr_ConsumeEnergyCapsule(hpConsume, character, capsule) {
 	var charNumber = 0;
 	switch (character)
 	{
@@ -9,15 +6,15 @@ function scr_ConsumeEnergyCapsule(argument0, argument1, argument2) {
 		case obj_playerZ:	charNumber = 1;	break;
 	}
 
-	if (hp + hpConsume > global.hpMax[charNumber])
+	if (global.hp[charNumber] + hpConsume > global.hpMax[charNumber])
 	{
-		hp = global.hpMax[charNumber];
+		global.hp[charNumber] = global.hpMax[charNumber];
 		instance_destroy(capsule);
 		return;
 	}
 	else
 	{
-		hp += hpConsume;
+		global.hp[charNumber] += hpConsume;
 		instance_destroy(capsule);
 		return;
 	}

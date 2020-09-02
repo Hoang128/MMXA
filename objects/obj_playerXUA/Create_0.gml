@@ -5,10 +5,8 @@ event_inherited();
 
 //Initialize Parameters
 weight = WeighType.MEDIUM;
-hpMax = global.hpMax[0];
-hp = hpMax;
-wpMax = global.wpMax[0];
-wp = wpMax;
+global.currentPlayer = 0;
+
 atkSpriteTimeMax = 20;
 xPlaceDashEff = -25;
 yPlaceDashEff = -4;
@@ -40,6 +38,7 @@ novaStrikeSpd = 9;
 novaStrikeEndHspd = 1;
 novaStrikeEndVspd = 1;
 chargeWeapon = 0;
+charNum = 0;
 
 //Initialize sprite
 scr_InitSpritePlayerHFormBase(obj_playerXUA);

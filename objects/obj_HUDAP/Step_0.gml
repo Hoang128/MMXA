@@ -8,5 +8,6 @@ if (instance_exists(core))
 		yPlace = core.yPlace;
 		init = true;
 	}
+	visible = core.visible;
 }
 else	instance_destroy();

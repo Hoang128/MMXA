@@ -68,10 +68,10 @@ if (damageTimmer <= 0)
 			{
 				with (other)
 				{
-					if ((core.wp + core.gainWpPerSlash) <= core.wpMax)
-						core.wp += core.gainWpPerSlash;
+					if ((global.zp + core.gainWpPerSlash) <= global.wpMax[1])
+						global.zp += core.gainWpPerSlash;
 					else
-						core.wp = core.wpMax;
+						global.zp = global.wpMax[1];
 				}
 			}
 		}

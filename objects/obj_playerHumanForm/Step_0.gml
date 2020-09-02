@@ -2,24 +2,6 @@
 
 //Full passive
 
-//Hp
-if (hp <= 0)
-{
-	hp = 0;
-	if (weight < WeighType.MASSIVE)
-	{
-		hspd = 0;
-		vspd = 0;
-		hState = HorizontalState.H_MOVE_NONE;
-		vState = VerticalState.V_MOVE_NONE;
-		aState = ActionState.DYING;
-		activateState = ActivateState.DEACTIVATE;
-		sprite_index = sprStun1;
-		image_index = 0;
-	}
-	else	instance_destroy();
-}
-
 if (activateState != ActivateState.DEACTIVATE)
 {
 	//Passive Before Action************************************************************************************
@@ -205,7 +187,7 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	if (lowHp == true)
 	{
-		if (hp >= 8)
+		if (global.hp[charNum] >= 8)
 			lowHp = false;
 	}
 	

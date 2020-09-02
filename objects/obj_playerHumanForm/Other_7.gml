@@ -7,6 +7,8 @@ switch (sprite_index)
 		{
 			if (!instance_exists(obj_effOpening_Black))
 			{
+				var objHUD = instance_create_depth(x, y, layer_get_depth(obj_gameManager.lHUD), obj_playerHUD);
+				objHUD.core = self;
 				obj_view.state = CameraState.NORMAL;
 				obj_gameManager.playerCore = self;
 				activateState = ActivateState.ACTIVATE;
@@ -161,7 +163,7 @@ switch (sprite_index)
 		{
 			if (lowHp == false)
 			{
-				if (hp < 8)
+				if (global.hp[charNum] < 8)
 				{
 					scr_playerVoiceLowHp(object_index);
 					lowHp = true;
@@ -198,7 +200,7 @@ switch (sprite_index)
 			{
 				if (lowHp == false)
 				{
-					if (hp < 8)
+					if (global.hp[charNum] < 8)
 					{
 						scr_playerVoiceLowHp(object_index);
 						lowHp = true;
@@ -261,6 +263,9 @@ switch (sprite_index)
 			obj_view.state = CameraState.NORMAL;
 			obj_gameManager.playerCore = self;
 		}
+		
+		var objHUD = instance_create_depth(x, y, layer_get_depth(obj_gameManager.lHUD), obj_playerHUD);
+		objHUD.core = self;
 		
 		sprite_index = sprStand;
 		image_index = 0;

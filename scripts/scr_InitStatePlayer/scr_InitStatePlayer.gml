@@ -7,8 +7,6 @@ function scr_InitStatePlayer(argument0) {
 		default:
 		{
 			//Default state
-			var objHUD = instance_create_depth(x, y, layer_get_depth(obj_gameManager.lHUD), obj_playerHUD);
-			objHUD.core = self;
 		
 			vspd = beamSpd;
 			activateState = ActivateState.DEACTIVATE;
@@ -20,11 +18,15 @@ function scr_InitStatePlayer(argument0) {
 				switch(object_index)
 				{
 					case obj_playerX:
-						//Sound Beam-down
-						audio_play_sound_on(global.SFX_Emitter, snd_XBeamDownEff, 0, 0);	break;
+					case obj_playerXUA:
+					case obj_playerEclipseX:
+					{
+						audio_play_sound_on(global.SFX_Emitter, snd_XBeamDownEff, 0, 0);	
+					}	break;
 					case obj_playerZ:
-						//Sound Beam-down
-						audio_play_sound_on(global.SFX_Emitter, snd_ZBeamDownEff, 0, 0);	break;
+					{
+						audio_play_sound_on(global.SFX_Emitter, snd_ZBeamDownEff, 0, 0);	
+					}	break;
 				}
 				vState = VerticalState.V_MOVE_DOWN;
 			}
