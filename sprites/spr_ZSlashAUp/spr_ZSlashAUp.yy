@@ -17,8 +17,8 @@
   "width": 65,
   "height": 66,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "texPlayerZ",
+    "path": "texturegroups/texPlayerZ",
   },
   "swatchColours": null,
   "gridX": 0,

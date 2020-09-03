@@ -234,4 +234,17 @@ switch(sprite_index)
 		hspd = 0;
 		vspd = 0;
 	}	break;
+	
+	case spr_ZEarthGaizer1:
+	case spr_ZEarthGaizer2:
+	{
+		sprite_index = sprStand;
+		image_index = 0;
+		
+		earthGaizerCreateBullets = 0;
+		earthGaizerChargeTime = 0;
+		activateState = ActivateState.ACTIVATE;
+		aState = ActionState.IDLE;
+		atkState = AttackState.A_NONE;
+	}
 }

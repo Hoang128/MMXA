@@ -19,14 +19,18 @@ objWire = obj_ZWirer;
 gainWpPerSlash = 1;
 charNum = 1;
 
+//Earth Gaizer
+earthGaizerChargeMax = 60;
+earthGaizerCost = 8;
+
 //Buster Core
 chargeCoreLv1Limit = 40;
 chargeCoreLv2Limit = 90;
 chargeCoreLv3Limit = 140;
 
-cBusterCost = 8;
-cBusterBarrage1Cost = 16;
-cBusterBarrage2Cost = 32;
+cBusterCost = 4;
+cBusterBarrage1Cost = 8;
+cBusterBarrage2Cost = 16;
 
 //Initialize parents sprites***************************************************************************************************************************************
 scr_InitSpritePlayerHFormBase(obj_playerZ);
@@ -51,6 +55,8 @@ canSlash = 1;
 busterType = noone;
 chargeCore = 0;
 chargeCoreLv = 0;
+earthGaizerChargeTime = 0;
+earthGaizerCreateBullets = 0;
 
 USlashEnable = true;
 DSlashEnable = true;

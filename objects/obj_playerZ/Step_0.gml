@@ -15,6 +15,63 @@ if (activateState != ActivateState.DEACTIVATE)
 	//Key
 	#region
 	
+	if ((sprite_index == spr_ZEarthGaizer1)
+	 || (sprite_index == spr_ZEarthGaizer2))
+	{
+		if (image_index < 1)
+		{
+			if (keyboard_check(global.keyGiga))
+			{
+				if (global.zp > earthGaizerCost * 2)
+				{
+					if (earthGaizerChargeTime < earthGaizerChargeMax)
+					{
+						image_index = 0;
+						earthGaizerChargeTime += DELTA_TIME;
+					}
+					else
+					{
+						if (sprite_index == spr_ZEarthGaizer1)
+							sprite_index = spr_ZEarthGaizer2;
+					}
+				}
+			}
+		}
+		
+		if ((image_index >= 1) && (image_index <= 2))
+		{
+			if (!audio_is_playing(snd_VZRekkoha))
+			{
+				audio_play_sound_on(global.SFX_Emitter, snd_VZRekkoha, 0, 0);
+			}
+		}
+		
+		if ((image_index >= 7) && (image_index <= 8))
+		{
+			if (earthGaizerCreateBullets == 0)
+			{
+				var objBullet;
+				audio_play_sound_on(global.SFX_Emitter, snd_ZEarthGaizer, 0, 0);
+				if (sprite_index == spr_ZEarthGaizer1)
+				{
+					objBullet = obj_EarthGaizerBullet1;
+					global.zp -= earthGaizerCost;
+				}
+				else if (sprite_index == spr_ZEarthGaizer2)
+				{
+					objBullet = obj_EarthGaizerBullet2;
+					global.zp -= earthGaizerCost * 2;
+				}
+				for (var i = 0; i < 8; i++)
+				{
+					var bullet = instance_create_depth(x, y, depth - 1, objBullet);
+					bullet.direction = 11.25 + 22.5 * i;
+				}
+				earthGaizerCreateBullets = 1;
+			}
+		}
+	}
+	
 	if (keyboard_check_released(global.keyGiga))
 	{
 		if (aState == ActionState.STUNNING)
@@ -913,6 +970,33 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Form attack
 		#region
 		
+		//Earth Gaizer
+		if (keyboard_check_pressed(global.keyGiga))
+		{
+			if ((!keyboard_check(global.keyUp)) && (keyboard_check(global.keyDown)))
+			{
+				if (global.zp > earthGaizerCost)
+				{
+					if (vState == VerticalState.V_ON_GROUND)
+					{
+						scr_MeeleWeaponDestroy(obj_ZSaberImage);
+						hspd = 0;
+						if (dashSpd > 0)
+						{
+							dashSpd = 0;
+							dashTime = 0;
+						}
+						aState = ActionState.SP_MOVE;
+						atkState = AttackState.A_FREEZE_ATTACK;
+						activateState = ActivateState.HALF_ACTIVATE;
+					
+						sprite_index = spr_ZEarthGaizer1;
+						image_index = 0;
+					}
+				}
+			}
+		}
+		
 		if (global.zCore[2] == ItemState.USING)
 		{
 			#region
@@ -1314,6 +1398,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		
 		if (global.zCore[1] == ItemState.USING)
 		{
+			
 		}
 		
 		#endregion
