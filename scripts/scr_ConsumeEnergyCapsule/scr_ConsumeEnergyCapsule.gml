@@ -1,23 +1,12 @@
-function scr_ConsumeEnergyCapsule(hpConsume, character, capsule) {
-	var charNumber = 0;
-	switch (character)
+function scr_ConsumeEnergyCapsule(hpConsume, capsule) {
+	if (global.hp[global.currentPlayer] + hpConsume > global.hpMax[global.currentPlayer])
 	{
-		case obj_playerX:	charNumber = 0;	break;
-		case obj_playerZ:	charNumber = 1;	break;
-	}
-
-	if (global.hp[charNumber] + hpConsume > global.hpMax[charNumber])
-	{
-		global.hp[charNumber] = global.hpMax[charNumber];
-		instance_destroy(capsule);
-		return;
+		global.hp[global.currentPlayer] = global.hpMax[global.currentPlayer];
 	}
 	else
 	{
-		global.hp[charNumber] += hpConsume;
-		instance_destroy(capsule);
-		return;
+		global.hp[global.currentPlayer] += hpConsume;
 	}
-
-
+	
+	instance_destroy(capsule);
 }

@@ -2,5 +2,5 @@
 
 if (weight < WeighType.MASSIVE)
 {
-	scr_ConsumeEnergyCapsule(other.wp, object_index, other);
+	scr_ConsumeWeaponCapsule(other.wp, other);
 }

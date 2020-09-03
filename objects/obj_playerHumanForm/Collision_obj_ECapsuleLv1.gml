@@ -2,5 +2,5 @@
 
 if (weight < WeighType.MASSIVE)
 {
-	scr_ConsumeEnergyCapsule(other.hp, object_index, other);
+	scr_ConsumeEnergyCapsule(other.hp, other);
 }

@@ -1,26 +1,35 @@
-function scr_ConsumeWeaponCapsule(argument0, argument1, argument2) {
-	var wpConsume = argument0;
-	var character = argument1;
-	var capsule = argument2;
-	var charNumber = 0;
-	switch (character)
+function scr_ConsumeWeaponCapsule(wpConsume, capsule) {
+	switch (global.currentPlayer)
 	{
-		case obj_playerX:	charNumber = 0;	break;
-		case obj_playerZ:	charNumber = 1;	break;
+		case 0:
+		{
+			if (global.wp[currentWeapon] + wpConsume > global.wpMax[0])
+			{
+				global.wp[currentWeapon] = global.wpMax[0];
+				instance_destroy(capsule);
+				return;
+			}
+			else
+			{
+				global.wp[currentWeapon] += wpConsume;
+				instance_destroy(capsule);
+				return;
+			}
+		}	break;
+		case 1:
+		{
+			if (global.zp + wpConsume > global.wpMax[1])
+			{
+				global.zp = global.wpMax[1];
+				instance_destroy(capsule);
+				return;
+			}
+			else
+			{
+				global.zp += wpConsume;
+				instance_destroy(capsule);
+				return;
+			}
+		}	break;
 	}
-
-	if (wp + wpConsume > global.wpMax[charNumber])
-	{
-		wp = global.wpMax[charNumber];
-		instance_destroy(capsule);
-		return;
-	}
-	else
-	{
-		wp += wpConsume;
-		instance_destroy(capsule);
-		return;
-	}
-
-
 }
