@@ -3,7 +3,7 @@
     "name": "spr_DBlockV",
     "path": "sprites/spr_DBlockV/spr_DBlockV.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
