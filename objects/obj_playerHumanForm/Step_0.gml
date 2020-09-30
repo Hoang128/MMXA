@@ -722,45 +722,69 @@ if (activateState != ActivateState.DEACTIVATE)
 				{
 					if (atkState < AttackState.A_STRICT_ATTACK_LV2)
 					{
-						if (dynamicBlock != noone)
+						if (!instance_exists(obj_PlayerWeaponMeeleImage))
 						{
-							var dynamicBlockIsTopLadder = (dynamicBlock.object_index == obj_ladder && (dynamicBlock.topLadder));
-							var canClimbDown = (dynamicBlock.solid) && (!place_meeting(x, y + 1, obj_block));
-							var xPosCorrect = (abs(self.x - (dynamicBlock.bbox_right + dynamicBlock.bbox_left) / 2) <= minDistanceToLadder);
-						
-							//Climb down from top ladder
-							if (dynamicBlockIsTopLadder && canClimbDown && xPosCorrect)
+							if (dynamicBlock != noone)
 							{
-								sprite_index = sprClimb3;
-								image_index = 3;
+								var dynamicBlockIsTopLadder = (dynamicBlock.object_index == obj_ladder && (dynamicBlock.topLadder));
+								var canClimbDown = (dynamicBlock.solid) && (!place_meeting(x, y + 1, obj_block));
+								var xPosCorrect = (abs(self.x - (dynamicBlock.bbox_right + dynamicBlock.bbox_left) / 2) <= minDistanceToLadder);
 						
-								with(dynamicBlock)
+								//Climb down from top ladder
+								if (dynamicBlockIsTopLadder && canClimbDown && xPosCorrect)
 								{
-									solid = 0;
-									canSolid = 0;
-									dynamicBlock = noone;
-								}
+									sprite_index = sprClimb3;
+									image_index = 3;
+						
+									with(dynamicBlock)
+									{
+										solid = 0;
+										canSolid = 0;
+										dynamicBlock = noone;
+									}
 							
-								self.x = (dynamicBlock.bbox_right + dynamicBlock.bbox_left) / 2;
-								isClimbing = -1;
-								hspd = 0;
-								if (dashSpd > 0)
-								{
-									dashSpd = 0;
-									dashTime = 0;
+									self.x = (dynamicBlock.bbox_right + dynamicBlock.bbox_left) / 2;
+									isClimbing = -1;
+									hspd = 0;
+									if (dashSpd > 0)
+									{
+										dashSpd = 0;
+										dashTime = 0;
+									}
+									hState = HorizontalState.H_MOVE_NONE;
+									vState = VerticalState.V_MOVE_NONE;
+									aState = ActionState.CLIMBING;
+									atkState = AttackState.A_NONE;
 								}
-								hState = HorizontalState.H_MOVE_NONE;
-								vState = VerticalState.V_MOVE_NONE;
-								aState = ActionState.CLIMBING;
-								atkState = AttackState.A_NONE;
-							}
 						
+								//Duck
+								else
+								{
+									sprite_index = sprDuck1;
+									image_index = 0;
+								
+									if (atkState > AttackState.A_NORMAL_ATTACK)
+									{
+										if (instance_exists(obj_PlayerWeaponMeele))
+										{
+											scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
+						
+										}
+										atkState = AttackState.A_NONE;
+									}
+				
+									hspd = 0;
+									dashSpd = 0;
+									hState = HorizontalState.H_MOVE_NONE;
+									aState = ActionState.DUCKING;
+								}
+							}
 							//Duck
 							else
 							{
 								sprite_index = sprDuck1;
 								image_index = 0;
-								
+							
 								if (atkState > AttackState.A_NORMAL_ATTACK)
 								{
 									if (instance_exists(obj_PlayerWeaponMeele))
@@ -770,33 +794,12 @@ if (activateState != ActivateState.DEACTIVATE)
 									}
 									atkState = AttackState.A_NONE;
 								}
-				
+							
 								hspd = 0;
 								dashSpd = 0;
 								hState = HorizontalState.H_MOVE_NONE;
 								aState = ActionState.DUCKING;
 							}
-						}
-						//Duck
-						else
-						{
-							sprite_index = sprDuck1;
-							image_index = 0;
-							
-							if (atkState > AttackState.A_NORMAL_ATTACK)
-							{
-								if (instance_exists(obj_PlayerWeaponMeele))
-								{
-									scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
-						
-								}
-								atkState = AttackState.A_NONE;
-							}
-							
-							hspd = 0;
-							dashSpd = 0;
-							hState = HorizontalState.H_MOVE_NONE;
-							aState = ActionState.DUCKING;
 						}
 					}
 				}

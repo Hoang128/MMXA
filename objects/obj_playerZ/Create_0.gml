@@ -59,6 +59,8 @@ chargeCoreLv = 0;
 earthGaizerChargeTime = 0;
 earthGaizerCreateBullets = 0;
 canCreateThunderDiveWire = true;
+thunderDiveMoveSpd = 1;
+thunderXScale = 1;
 
 USlashEnable = true;
 DSlashEnable = true;

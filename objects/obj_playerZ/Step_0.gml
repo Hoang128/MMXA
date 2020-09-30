@@ -231,8 +231,8 @@ if (activateState != ActivateState.DEACTIVATE)
 			scr_MeeleWeaponDestroy(obj_ZThunderDiveImage);
 			
 			hspd = 0;
-			hState = AttackState.A_NONE;
 			activateState = ActivateState.HALF_ACTIVATE;
+			atkState = AttackState.A_STRICT_ATTACK_LV2;
 		}
 	}
 	
@@ -475,8 +475,18 @@ if (activateState != ActivateState.DEACTIVATE)
 		vspd = 0;
 	}
 	
+	if (sprite_index == spr_ZThrustDown)
+	{
+		chargeNormal = 0;
+		image_xscale = thunderXScale;
+		if (hspd > 0)
+			hspd = hspd / hspd * thunderDiveMoveSpd;
+	}
+	
 	if (sprite_index == spr_ZThrustDownEnd)
 	{
+		chargeNormal = 0;
+		image_xscale = thunderXScale;
 		if ((image_index > 0) && (image_index < 1))
 		{
 			if (canCreateThunderDiveWire)
@@ -486,6 +496,11 @@ if (activateState != ActivateState.DEACTIVATE)
 				canCreateThunderDiveWire = false;
 			}
 		}
+	}
+	else
+	{
+		if (!canCreateThunderDiveWire)
+			canCreateThunderDiveWire = true;
 	}
 	
 	#endregion
@@ -840,8 +855,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				sprite_index = spr_ZSlashUp;
 				image_index = 0;
 			
-				if (instance_exists(obj_PlayerWeaponMeeleImage))
-					scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
+				scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
 				scr_MeeleWeaponCreate(obj_ZIceSaberImage, noone, self);
 			
 				atkState = AttackState.A_STRICT_ATTACK_LV4;
@@ -870,9 +884,11 @@ if (activateState != ActivateState.DEACTIVATE)
 					
 					audio_play_sound_on(global.SFX_Emitter, snd_XSkill7Shot, 0, 0);
 					
+					scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
 					scr_MeeleWeaponCreate(obj_ZThunderDiveImage, noone, self);
 					
-					atkState = AttackState.A_STRICT_ATTACK_LV2;
+					thunderXScale = image_xscale;
+					atkState = AttackState.A_STRICT_ATTACK;
 					aState = ActionState.IDLE;
 					vState = VerticalState.V_MOVE_DOWN;
 					vspd = vspdThrustDown;
@@ -1459,11 +1475,17 @@ if (activateState != ActivateState.DEACTIVATE)
 		//Double Jump
 		#region
 		
+		if (aState == ActionState.JUMPDASHING)
+		{
+			if (airHikeTime != 0)
+				airHikeTime = 0;
+		}
+		
 		if (keyboard_check_pressed(global.keyJump) && (canJump))
 		{
 			if ((aState == ActionState.IDLE) && atkState < (AttackState.A_STRICT_ATTACK_LV4))
 			{
-				if ((vState == VerticalState.V_MOVE_FALLING) && (vspd >= 0))
+				if ((vState != VerticalState.V_ON_GROUND) && (vspd >= 0))
 				{
 					if (airHikeTime > 0)
 					{
@@ -1477,7 +1499,9 @@ if (activateState != ActivateState.DEACTIVATE)
 							else if (randVoiceJump >1) audio_play_sound_on(global.SFX_Emitter, sndVoiceJump2, 0, 0);
 							else audio_play_sound_on(global.SFX_Emitter, sndVoiceJump3, 0, 0);
 						}
-				
+						
+						scr_MeeleWeaponDestroy(obj_PlayerWeaponMeele);
+						vState = VerticalState.V_MOVE_FALLING;
 						atkState = AttackState.A_NONE;
 						canAirDash = 0;
 						vspd = -jumpSpd;
