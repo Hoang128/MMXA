@@ -31,6 +31,16 @@ function scr_MeeleWeaponDestroy(obj_ImageWeapon) {
 				instance_destroy(obj_ZFlameSaber);
 		}
 		break;
+		
+		case obj_ZThunderDiveImage:
+		{
+			if (instance_exists(obj_ZThunderDiveImage))
+				instance_destroy(obj_ZThunderDiveImage);
+		
+			if (instance_exists(obj_ZThunderSaber))
+				instance_destroy(obj_ZThunderSaber);
+		}
+		break;
 	
 		case obj_PlayerWeaponMeeleImage:
 		{

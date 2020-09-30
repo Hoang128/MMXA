@@ -8,9 +8,6 @@ event_inherited();
 0: init
 1: idle move
 2: trans direction
-3.1: open guard
-3.2: close guard
-4: shot
 */
 
 switch (state)
@@ -55,59 +52,6 @@ switch (state)
 				image_index = 0;
 				state = 2;
 			}
-		}
-		if (canShot == true)
-		{
-			if (idleTime < idleTimeMax)
-			{
-				idleTime += DELTA_TIME;
-			}
-			else
-			{
-				if (instance_exists(obj_gameManager.playerCore))
-				{
-					if (distance_to_object(obj_gameManager.playerCore) <= minDistanceToPlayer)
-					{
-						if (sign(obj_gameManager.playerCore.x - self.x) == image_xscale)
-						{
-							if (collision_rectangle(X_VIEW, Y_VIEW, X_VIEW + W_VIEW, Y_VIEW + H_VIEW, self, false, false))
-							{
-								sprite_index = spr_DGuardianOpenGuard;
-								image_index = 0;
-								hspd = 0;
-								state = 3.1;
-							}
-						}
-					}
-				}
-			}
-		}
-	}	break;
-	
-	case 4:
-	{
-		guardDir = 90;
-		if (shotTime <= shotTimeMax)
-		{
-			if (image_index >= 2)
-			{
-				if (createBullet == false)
-				{
-					var bullet = instance_create_depth(x + 16 * image_xscale, y - 11, depth - 1, obj_E_GuardianBullet);
-					bullet.image_xscale = image_xscale;
-					if (instance_exists(obj_gameManager.playerCore) && bullet.image_xscale == sign(obj_gameManager.playerCore.x - self.x))
-						bullet.track = true;
-					else	
-						bullet.track = false;
-					createBullet = true;
-				}
-			}
-		}
-		else
-		{
-			sprite_index = spr_DGuardianCloseGuard;
-			image_index = 0;
-			state = 3.2;
 		}
 	}	break;
 	

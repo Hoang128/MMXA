@@ -17,8 +17,8 @@
   "width": 42,
   "height": 72,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "texMiscellaneous",
+    "path": "texturegroups/texMiscellaneous",
   },
   "swatchColours": null,
   "gridX": 0,

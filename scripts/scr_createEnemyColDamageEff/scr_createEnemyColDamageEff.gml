@@ -31,13 +31,24 @@ function scr_createEnemyColDamageEff() {
 				var objZEff = instance_create_depth(xPlace, yPlace, -10, obj_ZSaberSlashEff);
 				objZEff.image_angle = effAngle;
 			}	break;
+			
+			case obj_ZThunderSaber:
+			{
+				var effAngle = 270;
+				
+				var objColEff = instance_create_depth(xPlace, yPlace, -10, other.collisionEff);
+				objColEff.image_angle = effAngle;
+				
+				var objZEff = instance_create_depth(xPlace, yPlace, -10, obj_ZSaberSlashEff);
+				objZEff.image_angle = effAngle;
+			}	break;
 		
 			default:
 			{
 				var objColEff = instance_create_depth(xPlace, yPlace, other.depth - 1, other.collisionEff);
 				objColEff.image_xscale = other.image_xscale;
 				objColEff.from = other.object_index;
-			}
+			}	break;
 		}
 	#endregion
 	}

@@ -17,8 +17,8 @@
   "width": 46,
   "height": 28,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "texWeaponZ",
+    "path": "texturegroups/texWeaponZ",
   },
   "swatchColours": null,
   "gridX": 0,

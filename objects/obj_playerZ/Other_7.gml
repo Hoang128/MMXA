@@ -246,5 +246,20 @@ switch(sprite_index)
 		activateState = ActivateState.ACTIVATE;
 		aState = ActionState.IDLE;
 		atkState = AttackState.A_NONE;
-	}
+	}	break;
+	
+	case spr_ZThrustDown:
+	{
+		image_index = 2;
+	}	break;
+	
+	case spr_ZThrustDownEnd:
+	{
+		sprite_index = spr_ZSlashEnd_G;
+		image_index = 0;
+		canCreateThunderDiveWire = true;
+		aState = ActionState.IDLE;
+		atkState = AttackState.A_NONE;
+		activateState = ActivateState.ACTIVATE;
+	}	break;
 }

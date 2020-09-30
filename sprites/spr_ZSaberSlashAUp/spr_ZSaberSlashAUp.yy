@@ -17,8 +17,8 @@
   "width": 125,
   "height": 112,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "texZSaber",
+    "path": "texturegroups/texZSaber",
   },
   "swatchColours": null,
   "gridX": 0,

@@ -19,7 +19,8 @@ if (myPalette != noone)
 		case	obj_WPFireEff:				pal = 1;	break;
 		case	obj_ZBusterCharge:
 		case	obj_ZThunderBlaster:
-		case	obj_ZBusterNor:				pal = 2;	break;
+		case	obj_ZBusterNor:
+		case	obj_ZThunderWire:			pal = 2;	break;
 		default:							pal = 0;	break;
 	}
 

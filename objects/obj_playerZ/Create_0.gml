@@ -18,6 +18,7 @@ yDistanceToWirer = 58;
 objWire = obj_ZWirer;
 gainWpPerSlash = 1;
 charNum = 1;
+vspdThrustDown = 4;
 
 //Earth Gaizer
 earthGaizerChargeMax = 60;
@@ -57,6 +58,7 @@ chargeCore = 0;
 chargeCoreLv = 0;
 earthGaizerChargeTime = 0;
 earthGaizerCreateBullets = 0;
+canCreateThunderDiveWire = true;
 
 USlashEnable = true;
 DSlashEnable = true;

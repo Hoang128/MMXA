@@ -219,6 +219,21 @@ if (activateState != ActivateState.DEACTIVATE)
 			hState = AttackState.A_NONE;
 			atkState = AttackState.A_STRICT_ATTACK_LV3;
 		}
+		
+		//Thunder dive
+		if (sprite_index == spr_ZThrustDown)
+		{
+			sprite_index = spr_ZThrustDownEnd;
+			image_index = 0;
+			
+			audio_play_sound_on(global.SFX_Emitter, snd_ZSkillElectEff, 0, 0);
+			
+			scr_MeeleWeaponDestroy(obj_ZThunderDiveImage);
+			
+			hspd = 0;
+			hState = AttackState.A_NONE;
+			activateState = ActivateState.HALF_ACTIVATE;
+		}
 	}
 	
 	#endregion
@@ -458,6 +473,19 @@ if (activateState != ActivateState.DEACTIVATE)
 		chargeNormal = 0;
 		hspd = dashSpdPhase2 * (18 - image_index) / 18 * hDir;
 		vspd = 0;
+	}
+	
+	if (sprite_index == spr_ZThrustDownEnd)
+	{
+		if ((image_index > 0) && (image_index < 1))
+		{
+			if (canCreateThunderDiveWire)
+			{
+				var obj1 = instance_create_depth(x + 16 * image_xscale, y - 3, depth + 1, obj_ZThunderWireCreater);
+				obj1.thunderNumber = 3;
+				canCreateThunderDiveWire = false;
+			}
+		}
 	}
 	
 	#endregion
@@ -828,6 +856,31 @@ if (activateState != ActivateState.DEACTIVATE)
 				vspd = 0;
 				hspd = 0;
 				cmdUSlashFlag = false;
+			}
+		}
+		
+		if (cmdThrustFlag == true)
+		{
+			if (vState == VerticalState.V_MOVE_FALLING)
+			{
+				if (sprite_index != spr_ZThrustDown)
+				{
+					sprite_index = spr_ZThrustDown;
+					image_index = 0;
+					
+					audio_play_sound_on(global.SFX_Emitter, snd_XSkill7Shot, 0, 0);
+					
+					scr_MeeleWeaponCreate(obj_ZThunderDiveImage, noone, self);
+					
+					atkState = AttackState.A_STRICT_ATTACK_LV2;
+					aState = ActionState.IDLE;
+					vState = VerticalState.V_MOVE_DOWN;
+					vspd = vspdThrustDown;
+					cmdThrustFlag = false;
+					canClimb = false;
+					dashSpd = 0;
+					dashTime = 0;
+				}
 			}
 		}
 		

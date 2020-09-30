@@ -1,8 +1,5 @@
-function scr_MeeleWeaponCreate(argument0, argument1, argument2) {
-	var obj_ImageWeapon = argument0;
-	var weaponState = argument1;
-	var core = argument2;
-
+function scr_MeeleWeaponCreate(obj_ImageWeapon, weaponState, core) 
+{
 	switch (obj_ImageWeapon)
 	{
 		case obj_ZSaberImage:
@@ -31,6 +28,15 @@ function scr_MeeleWeaponCreate(argument0, argument1, argument2) {
 			objSaberImage.core = core;
 		
 			var objSaber = instance_create_depth(x, y, depth - 2, obj_ZFlameSaber);
+			objSaber.core = core;
+		}	break;
+		
+		case obj_ZThunderDiveImage:
+		{
+			var objSaberImage = instance_create_depth(x, y, depth - 1, obj_ZThunderDiveImage);
+			objSaberImage.core = core;
+		
+			var objSaber = instance_create_depth(x, y, depth - 2, obj_ZThunderSaber);
 			objSaber.core = core;
 		}	break;
 	}

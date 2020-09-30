@@ -11,34 +11,4 @@ switch (sprite_index)
 		state = 1;
 		break;
 	}
-	case spr_GuardianOpenGuard:
-	{
-		sprite_index = spr_GuardianShot;
-		image_index = 0;
-		shotTime = 0;
-		state = 4;
-	}	break;
-	
-	case spr_GuardianCloseGuard:
-	{
-		sprite_index = spr_Guardian;
-		image_index = 0;
-		idleTime = 0;
-		state = 1;
-	}	break;
-	
-	case spr_GuardianShot:
-	{
-		if (shotTime <= shotTimeMax)
-		{
-			image_index = 0;
-			createBullet = 0;
-			shotTime += DELTA_TIME;
-		}
-		else
-		{
-			sprite_index = spr_GuardianCloseGuard;
-			image_index = 0;
-		}
-	}	break;
 }

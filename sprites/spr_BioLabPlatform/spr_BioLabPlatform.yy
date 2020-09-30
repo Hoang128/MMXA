@@ -17,8 +17,8 @@
   "width": 616,
   "height": 232,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "texX4BioLab",
+    "path": "texturegroups/texX4BioLab",
   },
   "swatchColours": null,
   "gridX": 0,
