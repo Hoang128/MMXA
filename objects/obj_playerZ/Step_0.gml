@@ -477,6 +477,12 @@ if (activateState != ActivateState.DEACTIVATE)
 	
 	if (sprite_index == spr_ZThrustDown)
 	{
+		if (image_index < 2)
+		{
+			vspd = 0;
+		}
+		else
+			vspd = vspdThrustDown;
 		chargeNormal = 0;
 		image_xscale = thunderXScale;
 		if (hspd > 0)
@@ -891,7 +897,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					atkState = AttackState.A_STRICT_ATTACK;
 					aState = ActionState.IDLE;
 					vState = VerticalState.V_MOVE_DOWN;
-					vspd = vspdThrustDown;
+					vspd = 0;
 					cmdThrustFlag = false;
 					canClimb = false;
 					dashSpd = 0;
