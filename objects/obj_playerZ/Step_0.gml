@@ -498,7 +498,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			if (canCreateThunderDiveWire)
 			{
 				var obj1 = instance_create_depth(x + 16 * image_xscale, y - 3, depth + 1, obj_ZThunderWireCreater);
-				obj1.thunderNumber = 3;
+				obj1.thunderNumberMax = 3;
 				canCreateThunderDiveWire = false;
 			}
 		}

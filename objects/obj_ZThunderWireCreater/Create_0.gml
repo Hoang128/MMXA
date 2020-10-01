@@ -2,6 +2,7 @@
 // You can write your code in this editor
 event_inherited();
 
-thunderNumber = 3;
+thunderNumberMax = 3;
+thunderNumber = 0;
 timeWait = 3;
 timeWaitMax = timeWait;
