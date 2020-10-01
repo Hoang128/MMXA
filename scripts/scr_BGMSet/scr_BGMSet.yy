@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Game Manager",
-    "path": "folders/Scripts/Game Manager.yy",
+    "name": "BGM",
+    "path": "folders/Scripts/Game Manager/BGM.yy",
   },
   "resourceVersion": "1.0",
   "name": "scr_BGMSet",

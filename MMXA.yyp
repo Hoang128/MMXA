@@ -1042,6 +1042,7 @@
     {"id":{"name":"snd_GVOpen","path":"sounds/snd_GVOpen/snd_GVOpen.yy",},"order":0,},
     {"id":{"name":"snd_GVShot","path":"sounds/snd_GVShot/snd_GVShot.yy",},"order":1,},
     {"id":{"name":"snd_GVSparkRun","path":"sounds/snd_GVSparkRun/snd_GVSparkRun.yy",},"order":2,},
+    {"id":{"name":"scr_BGMGetByRoom","path":"scripts/scr_BGMGetByRoom/scr_BGMGetByRoom.yy",},"order":2,},
     {"id":{"name":"snd_GVSparkStart","path":"sounds/snd_GVSparkStart/snd_GVSparkStart.yy",},"order":3,},
     {"id":{"name":"bgm_FlameStaggRemix","path":"sounds/bgm_FlameStaggRemix/bgm_FlameStaggRemix.yy",},"order":0,},
     {"id":{"name":"bgm_MMZ3_Prismastic","path":"sounds/bgm_MMZ3_Prismastic/bgm_MMZ3_Prismastic.yy",},"order":1,},
@@ -1457,7 +1458,7 @@
     {"id":{"name":"room_option","path":"rooms/room_option/room_option.yy",},"order":1,},
     {"id":{"name":"room_over","path":"rooms/room_over/room_over.yy",},"order":2,},
     {"id":{"name":"obj_TeleGateEff","path":"objects/obj_TeleGateEff/obj_TeleGateEff.yy",},"order":1,},
-    {"id":{"name":"room_Junkyard","path":"rooms/room_Junkyard/room_Junkyard.yy",},"order":0,},
+    {"id":{"name":"room_JunkYard","path":"rooms/room_JunkYard/room_JunkYard.yy",},"order":0,},
     {"id":{"name":"Read me","path":"notes/Read me/Read me.yy",},"order":0,},
   ],
   "Options": [
@@ -1478,7 +1479,7 @@
     {"name":"room_test","path":"rooms/room_test/room_test.yy",},
     {"name":"room_option","path":"rooms/room_option/room_option.yy",},
     {"name":"room_over","path":"rooms/room_over/room_over.yy",},
-    {"name":"room_Junkyard","path":"rooms/room_Junkyard/room_Junkyard.yy",},
+    {"name":"room_JunkYard","path":"rooms/room_JunkYard/room_JunkYard.yy",},
     {"name":"room_PowerPlant","path":"rooms/room_PowerPlant/room_PowerPlant.yy",},
     {"name":"room_PowerPlantElf","path":"rooms/room_PowerPlantElf/room_PowerPlantElf.yy",},
   ],
@@ -1836,6 +1837,7 @@
     {"folderPath":"folders/Sprites/Player/Zero/Attack/Saber Core.yy","order":2,"resourceVersion":"1.0","name":"Saber Core","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Visible/Player/Character/Z/Weapon/Earth Gaizer.yy","order":3,"resourceVersion":"1.0","name":"Earth Gaizer","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Asset Ungroup.yy","order":14,"resourceVersion":"1.0","name":"Asset Ungroup","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/Game Manager/BGM.yy","order":5,"resourceVersion":"1.0","name":"BGM","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},

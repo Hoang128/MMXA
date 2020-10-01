@@ -7,7 +7,7 @@ if (inviTime == 0)
 	event_inherited();
 	if (damageTimmer = other.maxTimmer)
 	{
-		if (other.type == WeaponType.SABER)
+		if (other.wpType == WeaponType.SABER)
 		{
 			if (other.hit == 2)
 			{

@@ -7,7 +7,7 @@ switch (sprite_index)
 {
 	case spr_GunvoltIdle:
 	{
-		guard = 1;
+		guard = 0;
 		imgSpd = 0.5;	break;
 	}
 	case spr_GunvoltOpenHatchDown:

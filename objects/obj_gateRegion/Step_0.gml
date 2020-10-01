@@ -71,6 +71,8 @@ if (instance_exists(obj_gameManager.playerCore))
 			{
 				state = gateState.UNLOCKING;
 				instance_create_depth(0, 0, depth, obj_effClosing_Black);
+				if (scr_BGMGetByRoom(roomGo) != global.BGM_stage)
+					scr_BGMStop();
 				
 				with (obj_view)	
 					moveMode = 2;

@@ -55,13 +55,26 @@ function scr_BGMSet(BGM, isStageTheme) {
 						global.BGM_intro = 4.75;
 						global.BGM_loop = 103.75;
 					}	break;
+					case noone:
+					{
+						global.BGM_intro = 0;
+						global.BGM_loop = 0;
+					}	break;
 					default:
 					{
 						show_message("BGM is not resigned its intro and loop length in scr_BGMSet() function!");
 					}	break;
 				}
         
-				alarm[0]=1;
+				if (currentBGM != noone)
+				{
+					bgm = audio_play_sound_on(global.BGM_Emitter,currentBGM,0,0);
+					if init init--;
+				}
+				else
+				{
+					scr_BGMStop();
+				}
 			}
 		}
 	}

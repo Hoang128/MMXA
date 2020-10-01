@@ -1,4 +1,2 @@
 /// @description 
-
-audio_stop_sound(currentBGM);
-alarm[0]=1;
+scr_BGMSet(scr_BGMGetByRoom(room), true);

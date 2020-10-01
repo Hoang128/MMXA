@@ -7,7 +7,8 @@ if (phase > 0)
 		if (waitTime <= 80)
 		{
 			instance_create_depth(x, y, -4000, obj_effClosing_Black);
-			scr_BGMStop();
+			if (scr_BGMGetByRoom(roomGo) != global.BGM_stage)
+				scr_BGMStop();
 			phase = 2;
 		}
 	}
