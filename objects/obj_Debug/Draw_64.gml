@@ -126,10 +126,10 @@ else{
 			scr_LOG_INFO("Char In Water State = " + str_inWaterState, debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Horizontal Speed = " + string(obj_playerHumanForm.hspd), debugTextColorF, debugTextColorB);
 			scr_LOG_INFO("Char Vertical Speed = " + string(obj_playerHumanForm.vspd), debugTextColorF, debugTextColorB);
-			if (instance_exists(obj_playerZ))
+			if (instance_exists(obj_playerEclipseX))
 			{
-				scr_LOG_INFO("Charge Core  = " + string(obj_playerZ.chargeCore), debugTextColorF, debugTextColorB);
-				scr_LOG_INFO("Charge Normal = " + string(obj_playerZ.chargeNormal), debugTextColorF, debugTextColorB);
+				scr_LOG_INFO("Solar Dash Time  = " + string(obj_playerEclipseX.solarDashTime), debugTextColorF, debugTextColorB);
+				scr_LOG_INFO("First Time Dash = " + string(obj_playerEclipseX.usedFirstAirDash), debugTextColorF, debugTextColorB);
 			}
 		}
 		#endregion

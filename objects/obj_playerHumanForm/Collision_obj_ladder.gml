@@ -12,7 +12,15 @@ if (activateState == ActivateState.ACTIVATE)
 				{
 					sprite_index = sprClimb1;
 					image_index = 0;
-				
+					
+					if (atkState > AttackState.A_NONE)
+					{
+						if (instance_exists(obj_PlayerWeaponMeeleImage))
+						{
+							atkState = AttackState.A_NONE;
+							scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
+						}
+					}
 					x = (other.bbox_right + other.bbox_left) / 2;
 					if (place_meeting (x, y + 1, obj_block))
 						y -= 3;

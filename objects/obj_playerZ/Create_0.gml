@@ -18,7 +18,7 @@ yDistanceToWirer = 58;
 objWire = obj_ZWirer;
 gainWpPerSlash = 1;
 charNum = 1;
-vspdThrustDown = 5;
+vspdThrustDown = 6;
 
 //Earth Gaizer
 earthGaizerChargeMax = 60;

@@ -1510,6 +1510,8 @@ if (activateState != ActivateState.DEACTIVATE)
 						vState = VerticalState.V_MOVE_FALLING;
 						atkState = AttackState.A_NONE;
 						canAirDash = 0;
+						if (canClimb != true)
+							canClimb = true;
 						vspd = -jumpSpd;
 						airHikeTime -- ;
 					}

@@ -11,9 +11,9 @@ if (thunderNumber < thunderNumberMax)
 		
 		if (thunderNumber == floor((thunderNumberMax - 1) / 2))
 		{
-			var obj3 = instance_create_depth(x + 16 * image_xscale, y - 14, depth + 1, obj_ZThunderOrb);
+			var obj3 = instance_create_depth(x + 16 * image_xscale, y - 8, depth + 1, obj_ZThunderOrb);
 			obj3.direction = 180;
-			var obj4 = instance_create_depth(x + 16 * image_xscale, y - 14, depth + 1, obj_ZThunderOrb);
+			var obj4 = instance_create_depth(x + 16 * image_xscale, y - 8, depth + 1, obj_ZThunderOrb);
 			obj4.direction = 0;
 		}
 		canCreateThunderDiveWire = false;

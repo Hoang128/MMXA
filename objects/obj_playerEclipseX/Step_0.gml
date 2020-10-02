@@ -128,7 +128,10 @@ if (activateState != ActivateState.DEACTIVATE)
 							if (ArmorPoint > 0)
 							{
 								if (canAirDash == 0)
-									canAirDash = 1;
+								{
+									if (solarDashTime != 0)
+										canAirDash = 1;
+								}
 							}	
 							dashed = true;
 						}
