@@ -509,6 +509,27 @@ if (activateState != ActivateState.DEACTIVATE)
 			canCreateThunderDiveWire = true;
 	}
 	
+	if (sprite_index == spr_ZDarkThrust)
+	{
+		hState = HorizontalState.H_MOVE_PASSIVE;
+		if (image_index < numberFrameThrustAccSpd)
+		{
+			hspd = image_xscale * maxThrustFowardSpd / numberFrameThrustAccSpd * image_index;
+		}
+		else if (image_index < (14 - numberFrameThrustAccSpd))
+		{
+			hspd = image_xscale * maxThrustFowardSpd;
+		}
+		else if (image_index < 14)
+		{
+			hspd = image_xscale * maxThrustFowardSpd / numberFrameThrustAccSpd * (numberFrameThrustAccSpd - (image_index - (14 - numberFrameThrustAccSpd)));
+		}
+		else
+		{
+			hspd = 0;
+		}
+	}
+	
 	#endregion
 	
 	#endregion
@@ -626,7 +647,7 @@ if (activateState != ActivateState.DEACTIVATE)
 				//JumpSlash
 				else if (vState == VerticalState.V_MOVE_FALLING)
 				{
-					if ((ThrustEnable == false) && (!keyboard_check(global.keyUp) && keyboard_check(global.keyDown)))
+					if ((ThrustEnable == true) && (!keyboard_check(global.keyUp) && keyboard_check(global.keyDown)))
 					{
 						cmdUSlashFlag = false;
 						cmdDSlashFlag = false;
@@ -899,6 +920,32 @@ if (activateState != ActivateState.DEACTIVATE)
 					vState = VerticalState.V_MOVE_DOWN;
 					vspd = 0;
 					cmdThrustFlag = false;
+					canClimb = false;
+					dashSpd = 0;
+					dashTime = 0;
+				}
+			}
+		}
+		
+		if (cmdFSlashFlag == true)
+		{
+			if (vState == VerticalState.V_ON_GROUND)
+			{
+				if (sprite_index != spr_ZDarkThrust)
+				{
+					sprite_index = spr_ZDarkThrust;
+					image_index = 0;
+					
+					scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
+					scr_MeeleWeaponCreate(obj_ZDarkThurstSaberImage, noone, self);
+					
+					atkState = AttackState.A_STRICT_ATTACK_LV4;
+					aState = ActionState.IDLE;
+					vState = VerticalState.V_MOVE_DOWN;
+					hState = HorizontalState.H_MOVE_PASSIVE;
+					vspd = 0;
+					hspd = 0;
+					cmdFSlashFlag = false;
 					canClimb = false;
 					dashSpd = 0;
 					dashTime = 0;

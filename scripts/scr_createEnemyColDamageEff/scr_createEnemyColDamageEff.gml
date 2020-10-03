@@ -42,6 +42,16 @@ function scr_createEnemyColDamageEff(playerDamageSource) {
 				var objZEff = instance_create_depth(xPlace, yPlace, playerDamageSource.depth - 10, obj_ZSaberSlashEff);
 				objZEff.image_angle = effAngle;
 			}	break;
+			
+			case obj_ZDarkThurstSaberHitbox:
+			{
+				
+				var objColEff = instance_create_depth(xPlace, yPlace, playerDamageSource.depth - 10, playerDamageSource.collisionEff);
+				objColEff.image_xscale = playerDamageSource.image_xscale;
+				
+				var objZEff = instance_create_depth(xPlace, yPlace, playerDamageSource.depth - 10, obj_ZSaberSlashEff);
+				objZEff.image_angle = 0;
+			}	break;
 		
 			default:
 			{

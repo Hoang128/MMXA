@@ -19,6 +19,8 @@ objWire = obj_ZWirer;
 gainWpPerSlash = 1;
 charNum = 1;
 vspdThrustDown = 6;
+maxThrustFowardSpd = 2;
+numberFrameThrustAccSpd = 6;
 
 //Earth Gaizer
 earthGaizerChargeMax = 60;
@@ -64,8 +66,8 @@ thunderXScale = 1;
 
 USlashEnable = true;
 DSlashEnable = true;
-FSlashEnable = false;
-ThrustEnable = false;
+FSlashEnable = true;
+ThrustEnable = true;
 
 cmdUSlashFlag = false;
 cmdDSlashFlag = false;

@@ -96,8 +96,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"208a6e87-5cd6-4539-815c-04f7e4763a8d","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Time",
-    "path": "folders/Sprites/Player/Zero/Weapon/Elemental Weapons/Time.yy",
+    "name": "Time & Dark",
+    "path": "folders/Sprites/Player/Zero/Weapon/Elemental Weapons/Time & Dark.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_ZChrono",

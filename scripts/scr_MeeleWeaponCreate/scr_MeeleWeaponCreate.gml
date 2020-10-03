@@ -39,6 +39,20 @@ function scr_MeeleWeaponCreate(obj_ImageWeapon, weaponState, core)
 			var objSaber = instance_create_depth(x, y, depth - 2, obj_ZThunderSaber);
 			objSaber.core = core;
 		}	break;
+		
+		case obj_ZDarkThurstSaberImage:
+		{
+			var objSaberImage = instance_create_depth(x, y, depth - 1, obj_ZDarkThurstSaberImage);
+			objSaberImage.core = core;
+		
+			var objSaber = instance_create_depth(x, y, depth - 2, obj_ZDarkThurstSaberHitbox);
+			objSaber.core = core;
+		}	break;
+		
+		default:
+		{
+			show_message("ERROR! Can't create instance that isn't meele weapon!");
+		}
 	}
 
 

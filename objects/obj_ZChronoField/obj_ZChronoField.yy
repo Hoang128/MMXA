@@ -34,8 +34,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Time",
-    "path": "folders/Objects/Visible/Player/Character/Z/Weapon/EX-Skill/Time.yy",
+    "name": "Time & Dark",
+    "path": "folders/Objects/Visible/Player/Character/Z/Weapon/EX-Skill/Time & Dark.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_ZChronoField",

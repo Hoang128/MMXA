@@ -262,4 +262,15 @@ switch(sprite_index)
 		atkState = AttackState.A_NONE;
 		activateState = ActivateState.ACTIVATE;
 	}	break;
+	
+	case spr_ZDarkThrust:
+	{
+		sprite_index = spr_ZStand;
+		image_index = 0;
+		aState = ActionState.IDLE;
+		atkState = AttackState.A_NONE;
+		
+		scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
+		
+	}	break;
 }
