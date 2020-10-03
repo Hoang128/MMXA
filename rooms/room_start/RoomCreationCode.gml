@@ -122,9 +122,9 @@ global.keyChangeL = ord("A");
 global.keyChangeR = ord("S");
 
 //Default volume
-global.masterVolume=1;
-global.BGMVolume=1;
-global.SFXVolume=1;
+global.masterVolume=0.5;
+global.BGMVolume=0.5;
+global.SFXVolume=0.5;
 global.BGM_Emitter = audio_emitter_create();
 global.SFX_Emitter = audio_emitter_create();
 
