@@ -8,6 +8,7 @@ if (core != noone)
 		self.y = core.y;
 		self.image_index = core.image_index;
 		self.image_xscale = core.image_xscale;
+		self.depth = core.depth - 10;
 	}
 	else instance_destroy();
 }

@@ -60,7 +60,7 @@ if (damageTimmer <= 0)
 		if (blinkTime == 0)
 			blinkTime = blinkTimeMax;
 		
-		scr_createEnemyColDamageEff();
+		scr_createEnemyColDamageEff(other);
 		
 		if (other.wpType == WeaponType.SABER)
 		{
@@ -159,6 +159,6 @@ if (damageTimmer <= 0)
 		}
 		
 		//Create collision effect
-		scr_createEnemyColGuardEff();
+		scr_createEnemyColGuardEff(other);
 	}
 }

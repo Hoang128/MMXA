@@ -30,7 +30,7 @@ if (damageTimmer <= 0)
 		}
 		
 		//Create collision effect
-		scr_createEnemyColGuardEff();
+		scr_createEnemyColGuardEff(other);
 	}
 	damageTimmer = other.maxTimmer;
 }

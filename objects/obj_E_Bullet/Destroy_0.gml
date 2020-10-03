@@ -5,4 +5,4 @@
 event_inherited();
 
 if (createBulletEff == true)
-	instance_create_depth(x, y, depth - 1, obj_flareSmall);	
+	instance_create_depth(x, y, -10, obj_flareSmall);	

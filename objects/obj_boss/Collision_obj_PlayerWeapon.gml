@@ -29,7 +29,7 @@ if (blinkTime > 0)
 		if (damageTimmer <= 0)
 		{
 			damageTimmer = other.maxTimmer;
-			scr_createEnemyColGuardEff();
+			scr_createEnemyColGuardEff(other);
 		}
 	}
 }

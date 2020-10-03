@@ -1,19 +1,19 @@
-function scr_createEnemyColDamageEff() {
-	if (other.collisionEff != noone)
+function scr_createEnemyColDamageEff(playerDamageSource) {
+	if (playerDamageSource.collisionEff != noone)
 	{
-		if (other.slowTime == true) 
+		if (playerDamageSource.slowTime == true) 
 			scr_setTimeSlowEff(2, 0.2);
 	
 		//Create collision effect
 	#region
 			
-		var xPlace = clamp(other.x + (abs(other.sprite_width) - abs(other.sprite_xoffset)) * 0.75 * other.image_xscale, bbox_left, bbox_right);
-		if (other.wpType == WeaponType.SABER)
-			var yPlace = clamp((other.core.bbox_top + other.core.bbox_bottom) / 2, bbox_top, bbox_bottom);
+		var xPlace = clamp(playerDamageSource.x + (abs(playerDamageSource.sprite_width) - abs(playerDamageSource.sprite_xoffset)) * 0.75 * playerDamageSource.image_xscale, bbox_left, bbox_right);
+		if (playerDamageSource.wpType == WeaponType.SABER)
+			var yPlace = clamp((playerDamageSource.core.bbox_top + playerDamageSource.core.bbox_bottom) / 2, bbox_top, bbox_bottom);
 		else
-			var yPlace = clamp((other.bbox_top + other.bbox_bottom) / 2, bbox_top, bbox_bottom);
+			var yPlace = clamp((playerDamageSource.bbox_top + playerDamageSource.bbox_bottom) / 2, bbox_top, bbox_bottom);
 	
-		switch (other.object_index)
+		switch (playerDamageSource.object_index)
 		{
 			case obj_ZSaber:
 			case obj_ZCrescent:
@@ -24,11 +24,11 @@ function scr_createEnemyColDamageEff() {
 				randomize();
 				var effAngle = random(60) * 3;
 		
-				var objColEff = instance_create_depth(xPlace, yPlace, -10, other.collisionEff);
+				var objColEff = instance_create_depth(xPlace, yPlace, playerDamageSource.depth - 10, playerDamageSource.collisionEff);
 				objColEff.image_angle = effAngle;
-				objColEff.image_xscale = other.image_xscale;
+				objColEff.image_xscale = playerDamageSource.image_xscale;
 			
-				var objZEff = instance_create_depth(xPlace, yPlace, -10, obj_ZSaberSlashEff);
+				var objZEff = instance_create_depth(xPlace, yPlace, playerDamageSource.depth - 10, obj_ZSaberSlashEff);
 				objZEff.image_angle = effAngle;
 			}	break;
 			
@@ -36,23 +36,23 @@ function scr_createEnemyColDamageEff() {
 			{
 				var effAngle = 270;
 				
-				var objColEff = instance_create_depth(xPlace, yPlace, -10, other.collisionEff);
+				var objColEff = instance_create_depth(xPlace, yPlace, playerDamageSource.depth - 10, playerDamageSource.collisionEff);
 				objColEff.image_angle = effAngle;
 				
-				var objZEff = instance_create_depth(xPlace, yPlace, -10, obj_ZSaberSlashEff);
+				var objZEff = instance_create_depth(xPlace, yPlace, playerDamageSource.depth - 10, obj_ZSaberSlashEff);
 				objZEff.image_angle = effAngle;
 			}	break;
 		
 			default:
 			{
-				var objColEff = instance_create_depth(xPlace, yPlace, other.depth - 1, other.collisionEff);
-				objColEff.image_xscale = other.image_xscale;
-				objColEff.from = other.object_index;
+				var objColEff = instance_create_depth(xPlace, yPlace, playerDamageSource.depth - 10, playerDamageSource.collisionEff);
+				objColEff.image_xscale = playerDamageSource.image_xscale;
+				objColEff.from = playerDamageSource.object_index;
 			}	break;
 		}
 	#endregion
 	}
-	audio_play_sound_on(global.SFX_Emitter, other.collisionSFX, 0, 0);
+	audio_play_sound_on(global.SFX_Emitter, playerDamageSource.collisionSFX, 0, 0);
 
 
 }
