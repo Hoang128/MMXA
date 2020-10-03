@@ -265,7 +265,7 @@ switch(sprite_index)
 	
 	case spr_ZDarkThrust:
 	{
-		sprite_index = spr_ZStand;
+		sprite_index = spr_ZSlashEnd_G;
 		image_index = 0;
 		aState = ActionState.IDLE;
 		atkState = AttackState.A_NONE;

@@ -454,7 +454,7 @@ if (activateState != ActivateState.DEACTIVATE)
 			}
 			else if (image_index >= 3)
 			{
-				hspd = (image_index - 3) * upperSlashHspd;
+				hspd = (image_index - 3) * upperSlashHspd * hDir;
 				vspd = (image_index - 3) * upperSlashVspd1Start;
 			}
 		}
@@ -708,7 +708,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					}
 					
 					//Slide Slash
-					if (aState == ActionState.SLIDING)
+					else if (aState == ActionState.SLIDING)
 					{
 						if (sprite_index == sprSlide2)
 						{
@@ -728,7 +728,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					}
 					
 					//Climb Slash
-					if (aState == ActionState.CLIMBING)
+					else if (aState == ActionState.CLIMBING)
 					{
 						if (sprite_index == sprClimb2)
 						{
@@ -751,7 +751,7 @@ if (activateState != ActivateState.DEACTIVATE)
 					}
 					
 					//Wire Slash
-					if (aState == ActionState.WIRING)
+					else if (aState == ActionState.WIRING)
 					{
 						if ((sprite_index != sprWiredStartH) && (sprite_index != sprWiredStartV) && (sprite_index != spr_ZSlashWired))
 						{
@@ -772,6 +772,19 @@ if (activateState != ActivateState.DEACTIVATE)
 							atkState = AttackState.A_STRICT_ATTACK_LV2;
 							
 							scr_MeeleWeaponCreate(obj_ZSaberImage, SaberState.SABER_WIRE_SLASH, self);
+						}
+					}
+					else
+					{
+						if (sprite_index != spr_ZThrustDown)
+						{
+							if ((ThrustEnable == true) && (!keyboard_check(global.keyUp) && keyboard_check(global.keyDown)))
+							{
+								cmdUSlashFlag = false;
+								cmdDSlashFlag = false;
+								cmdFSlashFlag = false;
+								cmdThrustFlag = true;
+							}
 						}
 					}
 				}
@@ -902,7 +915,7 @@ if (activateState != ActivateState.DEACTIVATE)
 		
 		if (cmdThrustFlag == true)
 		{
-			if (vState == VerticalState.V_MOVE_FALLING)
+			if (vState != VerticalState.V_ON_GROUND)
 			{
 				if (sprite_index != spr_ZThrustDown)
 				{
@@ -911,6 +924,8 @@ if (activateState != ActivateState.DEACTIVATE)
 					
 					audio_play_sound_on(global.SFX_Emitter, snd_XSkill7Shot, 0, 0);
 					
+					audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo3, 0, 0);
+					
 					scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
 					scr_MeeleWeaponCreate(obj_ZThunderDiveImage, noone, self);
 					
@@ -918,6 +933,8 @@ if (activateState != ActivateState.DEACTIVATE)
 					atkState = AttackState.A_STRICT_ATTACK;
 					aState = ActionState.IDLE;
 					vState = VerticalState.V_MOVE_DOWN;
+					hState = HorizontalState.H_MOVE_NONE;
+					hspd = 0;
 					vspd = 0;
 					cmdThrustFlag = false;
 					canClimb = false;
@@ -939,7 +956,11 @@ if (activateState != ActivateState.DEACTIVATE)
 					scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
 					scr_MeeleWeaponCreate(obj_ZDarkThurstSaberImage, noone, self);
 					
-					atkState = AttackState.A_STRICT_ATTACK_LV4;
+					audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
+					
+					audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo3, 0, 0);
+					
+					atkState = AttackState.A_STRICT_ATTACK_LV2;
 					aState = ActionState.IDLE;
 					vState = VerticalState.V_MOVE_DOWN;
 					hState = HorizontalState.H_MOVE_PASSIVE;
