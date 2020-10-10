@@ -66,3 +66,4 @@ coolDownAPTime = 0;
 coolDownSpd = coolDownSpdNormal;
 novaTime = 0;
 impactAtkTime = 0;
+waitShotSpecial = 0;

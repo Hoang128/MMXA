@@ -1,5 +1,5 @@
 function scr_playerXChangeShotSprite(obj, attackMode, charge) {
-	switch (obj)
+	switch (obj.object_index)
 	{
 		case obj_playerX:
 		case obj_playerEclipseX:

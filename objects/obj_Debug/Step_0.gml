@@ -111,7 +111,7 @@ if (keyboard_check(ord("Q")))
 		global.ySpawmLocation = 848;
 	}
 	
-	if (keyboard_check_pressed(ord("E")))
+	if (keyboard_check(ord("E")))
 	{
 		if (!instance_exists(obj_changePlayer))
 		{
@@ -119,17 +119,36 @@ if (keyboard_check(ord("Q")))
 			{
 				if (obj_gameManager.playerCore.sprite_index == obj_gameManager.playerCore.sprStand)
 				{
-					instance_destroy(obj_playerHUD);
-					var objChange = instance_create_depth(x, obj_gameManager.playerCore.y, depth, obj_changePlayer);
-					objChange.playerChangeFrom = obj_gameManager.playerCore;
-					if (obj_gameManager.playerCore.object_index == obj_playerEclipseX)
-						objChange.playerChangeTo = obj_playerZ;
-					if (obj_gameManager.playerCore.object_index == obj_playerZ) 
-						objChange.playerChangeTo = obj_playerEclipseX;
-					//if (obj_gameManager.playerCore.object_index == obj_playerEclipseX) 
-					//	objChange.playerChangeTo = obj_playerZ;
-					//if (obj_gameManager.playerCore.object_index == obj_playerZ) 
-					//	objChange.playerChangeTo = obj_playerEclipseX;
+					if (keyboard_check_pressed(vk_numpad1))
+					{
+						if (obj_gameManager.playerCore.object_index != obj_playerEclipseX)
+						{
+							instance_destroy(obj_playerHUD);
+							var objChange = instance_create_depth(x, obj_gameManager.playerCore.y, depth, obj_changePlayer);
+							objChange.playerChangeFrom = obj_gameManager.playerCore;
+							objChange.playerChangeTo = obj_playerEclipseX;
+						}
+					}
+					else if (keyboard_check_pressed(vk_numpad2))
+					{
+						if (obj_gameManager.playerCore.object_index != obj_playerZ)
+						{
+							instance_destroy(obj_playerHUD);
+							var objChange = instance_create_depth(x, obj_gameManager.playerCore.y, depth, obj_changePlayer);
+							objChange.playerChangeFrom = obj_gameManager.playerCore;
+							objChange.playerChangeTo = obj_playerZ;
+						}
+					}
+					else if (keyboard_check_pressed(vk_numpad3))
+					{
+						if (obj_gameManager.playerCore.object_index != obj_playerXUA)
+						{
+							instance_destroy(obj_playerHUD);
+							var objChange = instance_create_depth(x, obj_gameManager.playerCore.y, depth, obj_changePlayer);
+							objChange.playerChangeFrom = obj_gameManager.playerCore;
+							objChange.playerChangeTo = obj_playerXUA;
+						}
+					}
 				}
 			}
 		}

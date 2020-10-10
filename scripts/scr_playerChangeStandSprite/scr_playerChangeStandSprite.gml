@@ -7,11 +7,16 @@ function scr_playerChangeStandSprite(objIndex) {
 	switch (objIndex)
 	{
 		case obj_playerX:
-		case obj_playerXUA:
 		case obj_playerEclipseX:
 		{
 			if (global.hp[0] <= 4)	sprStand = spr_XDying;
 			else			sprStand = spr_XStand;
+		}	break;
+		
+		case obj_playerXUA:
+		{
+			if (global.hp[0] <= 4)	sprStand = spr_XUADying;
+			else			sprStand = spr_XUAStand;
 		}	break;
 	
 		case obj_playerZ:	

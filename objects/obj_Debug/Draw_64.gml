@@ -26,7 +26,9 @@ if (showDebugHelp)
 	scr_LOG_INFO("Press Q + R to restart current room", debugTextColorF, debugTextColorB);
 	scr_LOG_INFO("Press Q + P to turn on player log, Q + W + P to turn off", debugTextColorF, debugTextColorB);
 	scr_LOG_INFO("Press Q + P to turn on sound log, Q + W + P to turn off", debugTextColorF, debugTextColorB);
-	scr_LOG_INFO("Press Q + E to change character", debugTextColorF, debugTextColorB);
+	scr_LOG_INFO("Press Q + E + 1 to change character to X", debugTextColorF, debugTextColorB);
+	scr_LOG_INFO("Press Q + E + 2 to change character to Zero", debugTextColorF, debugTextColorB);
+	scr_LOG_INFO("Press Q + E + 3 to change character to Ultimate Armor X", debugTextColorF, debugTextColorB);
 }
 #endregion
 

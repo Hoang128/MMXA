@@ -1,5 +1,5 @@
-function scr_InitImageSpeedPlayerHFormBase(argument0) {
-	switch argument0
+function scr_InitImageSpeedPlayerHFormBase(spriteIndex) {
+	switch spriteIndex
 	{
 		case obj_playerX:
 		case obj_playerXUA:
