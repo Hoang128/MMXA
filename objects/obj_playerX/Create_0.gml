@@ -23,11 +23,11 @@ objWire = obj_XWirer;
 charNum = 0;
 
 //Initialize sprite
-scr_InitSpritePlayerHFormBase(obj_playerX);
+scr_InitSpritePlayerHFormBase(self);
 
 //Initialize Sound FX
 audio_group_load(grpXSounds);
-scr_InitSoundPlayerHFromBase(obj_playerX);
+scr_InitSoundPlayerHFromBase(self);
 
 //Initialize shader
 scr_PalSwapInitSystem(shd_pal_swapper);

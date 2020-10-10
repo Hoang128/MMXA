@@ -41,11 +41,11 @@ chargeWeapon = 0;
 charNum = 0;
 
 //Initialize sprite
-scr_InitSpritePlayerHFormBase(obj_playerXUA);
+scr_InitSpritePlayerHFormBase(self);
 
 //Initialize Sound FX
 audio_group_load(grpXSounds);
-scr_InitSoundPlayerHFromBase(obj_playerXUA);
+scr_InitSoundPlayerHFromBase(self);
 
 //Initialize shader
 scr_PalSwapInitSystem(shd_pal_swapper);

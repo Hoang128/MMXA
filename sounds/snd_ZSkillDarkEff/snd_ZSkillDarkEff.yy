@@ -7,11 +7,11 @@
   "type": 1,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "grpZSounds",
+    "path": "audiogroups/grpZSounds",
   },
   "soundFile": "snd_ZSkillDarkEff.wav",
-  "duration": 1.04627,
+  "duration": 0.76627,
   "parent": {
     "name": "Weapon",
     "path": "folders/Sounds/SFX/Char/Z/Weapon.yy",

@@ -1,7 +1,8 @@
 function scr_InitSpritePlayerHFormBase(argument0) {
-	switch argument0
+	switch argument0.object_index
 	{
 		case obj_playerX:
+		case obj_playerEclipseX:
 		{
 		#region
 			sprFlash = spr_XFlash;

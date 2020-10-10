@@ -33,12 +33,12 @@ cBusterBarrage1Cost = 8;
 cBusterBarrage2Cost = 16;
 
 //Initialize parents sprites***************************************************************************************************************************************
-scr_InitSpritePlayerHFormBase(obj_playerZ);
+scr_InitSpritePlayerHFormBase(self);
 
 
 //Initialize parents Sound FX**************************************************************************************************************************************
 audio_group_load(grpZSounds);
-scr_InitSoundPlayerHFromBase(obj_playerZ);
+scr_InitSoundPlayerHFromBase(self);
 
 //Initialize shader************************************************************************************************************************************************
 scr_PalSwapInitSystem(shd_pal_swapper);

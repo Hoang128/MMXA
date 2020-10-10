@@ -1,8 +1,9 @@
 function scr_InitSoundPlayerHFromBase(argument0) {
-	switch argument0
+	switch argument0.object_index
 	{
 		case obj_playerX:
 		case obj_playerXUA:
+		case obj_playerEclipseX:
 		{
 		#region
 			sndVoiceDie = snd_VXDie;
