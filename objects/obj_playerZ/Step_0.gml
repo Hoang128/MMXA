@@ -512,17 +512,19 @@ if (activateState != ActivateState.DEACTIVATE)
 	if (sprite_index == spr_ZDarkThrust)
 	{
 		hState = HorizontalState.H_MOVE_PASSIVE;
-		if (image_index < numberFrameThrustAccSpd)
+		if (image_index < startThrustFrames)
+			hspd = 0;
+		else if (image_index < (insSpdThrustFrames + startThrustFrames))
 		{
-			hspd = image_xscale * maxThrustFowardSpd / numberFrameThrustAccSpd * image_index;
+			hspd = image_xscale * maxThrustFowardSpd / insSpdThrustFrames * (image_index - startThrustFrames);
 		}
-		else if (image_index < (14 - numberFrameThrustAccSpd))
+		else if (image_index < (conSpdThrustFrames + insSpdThrustFrames + startThrustFrames))
 		{
 			hspd = image_xscale * maxThrustFowardSpd;
 		}
-		else if (image_index < 14)
+		else if (image_index < (desSpdThrustFrames + conSpdThrustFrames + insSpdThrustFrames + startThrustFrames))
 		{
-			hspd = image_xscale * maxThrustFowardSpd / numberFrameThrustAccSpd * (numberFrameThrustAccSpd - (image_index - (14 - numberFrameThrustAccSpd)));
+			hspd = image_xscale * maxThrustFowardSpd / desSpdThrustFrames * (desSpdThrustFrames - (image_index - insSpdThrustFrames - startThrustFrames - conSpdThrustFrames));
 		}
 		else
 		{
@@ -956,9 +958,14 @@ if (activateState != ActivateState.DEACTIVATE)
 					scr_MeeleWeaponDestroy(obj_PlayerWeaponMeeleImage);
 					scr_MeeleWeaponCreate(obj_ZDarkThurstSaberImage, noone, self);
 					
-					audio_play_sound_on(global.SFX_Emitter, snd_ZSaberSlash1, 0, 0);
+					audio_play_sound_on(global.SFX_Emitter, snd_ZSkillDarkEff, 0, 0);
 					
-					audio_play_sound_on(global.SFX_Emitter, snd_VZSlashCombo3, 0, 0);
+					var voice = random(3);
+					
+					if (voice < 1)
+						audio_play_sound_on(global.SFX_Emitter, snd_VZThrustVoice2, 0, 0);
+					else if (voice < 2)
+						audio_play_sound_on(global.SFX_Emitter, snd_VZThrustVoice1, 0, 0);
 					
 					atkState = AttackState.A_STRICT_ATTACK_LV2;
 					aState = ActionState.IDLE;

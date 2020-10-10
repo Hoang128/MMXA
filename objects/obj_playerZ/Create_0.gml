@@ -18,9 +18,6 @@ yDistanceToWirer = 58;
 objWire = obj_ZWirer;
 gainWpPerSlash = 1;
 charNum = 1;
-vspdThrustDown = 6;
-maxThrustFowardSpd = 2;
-numberFrameThrustAccSpd = 6;
 
 //Earth Gaizer
 earthGaizerChargeMax = 60;
@@ -84,3 +81,12 @@ upperSlashTimeV2R = 0.4;
 upperSlashTimeMax = 40;
 upperSlashTime = 0;
 playSFXUpperSlash = false;
+
+vspdThrustDown = 6;
+
+maxThrustFowardSpd = 2;
+startThrustFrames = 3;
+//sum spd frames = 11
+insSpdThrustFrames = 2;
+conSpdThrustFrames = 4;
+desSpdThrustFrames = 5;

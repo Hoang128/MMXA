@@ -8,6 +8,7 @@ if (global.debugging)
 
 //Init for start room
 instance_create_depth(x, y, depth, obj_effOpening_Black);
+//instance_create_depth(x, y, depth, obj_controller);
 
 //Layer create
 lPlayer = layer_create(0);

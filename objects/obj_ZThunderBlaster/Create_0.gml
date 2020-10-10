@@ -14,4 +14,4 @@ loopTimeMax = 8;
 loopTime = 0;
 core = obj_playerZ;
 imgSpd = 0.5;
-slowTime = true;
+slowTime = false;
