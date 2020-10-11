@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6fa583b6-2b1d-4f62-a5ff-7ae3c63882f5","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Wired Creeper",
-    "path": "folders/Sprites/Enemies/Creep/Wired Creeper.yy",
+    "name": "Horizontal",
+    "path": "folders/Sprites/Enemies/Creep/Wired Creeper/Horizontal.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_ElectricBeam",

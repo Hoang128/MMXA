@@ -7,6 +7,8 @@ if (instance_exists(obj_gameManager.playerCore))
 	y = obj_gameManager.playerCore.y;
 }
 
+if (inited < 1)	inited++;
+
 if (collision_point(x, y, obj_darkZone, false, false))
 {
 	dark = (collision_point(x, y, obj_darkZone, false, false)).darkLevel;
@@ -14,9 +16,14 @@ if (collision_point(x, y, obj_darkZone, false, false))
 else
 	dark = global.glow;
 
-if (abs(glow - dark) >= changeSpd)
-	glow += changeSpd * sign (dark - glow);
-else	
+if (inited == 1)
+{
+	if (abs(glow - dark) >= changeSpd)
+		glow += changeSpd * sign (dark - glow);
+	else	
+		glow = dark;
+}
+else
 	glow = dark;
 
 glowRatio1 = 0.8 * glow;
