@@ -1,0 +1,26 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+// Inherit the parent event
+event_inherited();
+
+hp = 1;
+damage = 1;
+damageRed = 1;
+guard = 2;
+destroyWhenOutOfView = false;
+
+moveDir = 1;
+moveSpd = 0.5;
+
+vspd = 0;
+glow = 1;
+imgSpd = 0.5;
+
+waitTime = 0;
+waitTimeMax = 60;
+
+eY = 24;
+eChild = noone;
+pairWirer = noone;
+electric = true;

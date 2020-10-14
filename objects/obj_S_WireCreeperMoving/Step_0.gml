@@ -6,9 +6,9 @@ event_inherited();
 
 if (!subInit)
 {
-	if (instance_exists(child))
+	if (instance_exists(self.child))
 	{
-		child.sprite_index = self.sprite_index;
+		self.child.sprite_index = self.sprite_index;
 		subInit = true;
 	}
 }
