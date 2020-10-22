@@ -1,1 +1,0 @@
-moveSpaceMax = 64;

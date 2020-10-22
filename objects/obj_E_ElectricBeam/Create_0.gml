@@ -11,4 +11,6 @@ imgSpd = 0.5;
 
 size = 3;
 
+glow = 1;
+
 destroyWhenOutOfView = false;
